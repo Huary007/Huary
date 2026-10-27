@@ -1,0 +1,971 @@
+{
+  "destination": "https://github.com/Huary007/Huary/tree/master/biolit",
+  "assets": [
+    {
+      "asset_id": "baseline_short",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "conclusion",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "confound",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "confound_short",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "fig1",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "fig1a",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "fig1b",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "fig1c",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "fig1d",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "fig1legend",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "fig2",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "fig3",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "fig3axis",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "fig3bottom",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "fig3legend",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "fig3top",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "heat_intro",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "imc_short",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "intro",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "license",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "poisson_short",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "precision_short",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "replicate_rule",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "si1",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+        "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1"
+      ],
+      "scope": "Exact publisher supplementary PDF, OR1–4. Article-specific CC BY4 statement plus official 2026 CC BY publishing-agreement definition includes supplementary information; no separate notice/third-party credit on any of the4 inspected SI pages. Template supplies scope definition, not a claim to possess this paper’s signed agreement.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "si1middle",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+        "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1"
+      ],
+      "scope": "Exact publisher supplementary PDF, OR1–4. Article-specific CC BY4 statement plus official 2026 CC BY publishing-agreement definition includes supplementary information; no separate notice/third-party credit on any of the4 inspected SI pages. Template supplies scope definition, not a claim to possess this paper’s signed agreement.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "si2",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+        "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1"
+      ],
+      "scope": "Exact publisher supplementary PDF, OR1–4. Article-specific CC BY4 statement plus official 2026 CC BY publishing-agreement definition includes supplementary information; no separate notice/third-party credit on any of the4 inspected SI pages. Template supplies scope definition, not a claim to possess this paper’s signed agreement.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "si2a",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+        "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1"
+      ],
+      "scope": "Exact publisher supplementary PDF, OR1–4. Article-specific CC BY4 statement plus official 2026 CC BY publishing-agreement definition includes supplementary information; no separate notice/third-party credit on any of the4 inspected SI pages. Template supplies scope definition, not a claim to possess this paper’s signed agreement.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "si2b",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+        "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1"
+      ],
+      "scope": "Exact publisher supplementary PDF, OR1–4. Article-specific CC BY4 statement plus official 2026 CC BY publishing-agreement definition includes supplementary information; no separate notice/third-party credit on any of the4 inspected SI pages. Template supplies scope definition, not a claim to possess this paper’s signed agreement.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "si2legend",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+        "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1"
+      ],
+      "scope": "Exact publisher supplementary PDF, OR1–4. Article-specific CC BY4 statement plus official 2026 CC BY publishing-agreement definition includes supplementary information; no separate notice/third-party credit on any of the4 inspected SI pages. Template supplies scope definition, not a claim to possess this paper’s signed agreement.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "si3",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+        "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1"
+      ],
+      "scope": "Exact publisher supplementary PDF, OR1–4. Article-specific CC BY4 statement plus official 2026 CC BY publishing-agreement definition includes supplementary information; no separate notice/third-party credit on any of the4 inspected SI pages. Template supplies scope definition, not a claim to possess this paper’s signed agreement.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "si3bottom",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+        "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1"
+      ],
+      "scope": "Exact publisher supplementary PDF, OR1–4. Article-specific CC BY4 statement plus official 2026 CC BY publishing-agreement definition includes supplementary information; no separate notice/third-party credit on any of the4 inspected SI pages. Template supplies scope definition, not a claim to possess this paper’s signed agreement.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "si3notes",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+        "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1"
+      ],
+      "scope": "Exact publisher supplementary PDF, OR1–4. Article-specific CC BY4 statement plus official 2026 CC BY publishing-agreement definition includes supplementary information; no separate notice/third-party credit on any of the4 inspected SI pages. Template supplies scope definition, not a claim to possess this paper’s signed agreement.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "si3spy",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+        "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1"
+      ],
+      "scope": "Exact publisher supplementary PDF, OR1–4. Article-specific CC BY4 statement plus official 2026 CC BY publishing-agreement definition includes supplementary information; no separate notice/third-party credit on any of the4 inspected SI pages. Template supplies scope definition, not a claim to possess this paper’s signed agreement.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "si3top",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+        "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1"
+      ],
+      "scope": "Exact publisher supplementary PDF, OR1–4. Article-specific CC BY4 statement plus official 2026 CC BY publishing-agreement definition includes supplementary information; no separate notice/third-party credit on any of the4 inspected SI pages. Template supplies scope definition, not a claim to possess this paper’s signed agreement.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "si4",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+        "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1"
+      ],
+      "scope": "Exact publisher supplementary PDF, OR1–4. Article-specific CC BY4 statement plus official 2026 CC BY publishing-agreement definition includes supplementary information; no separate notice/third-party credit on any of the4 inspected SI pages. Template supplies scope definition, not a claim to possess this paper’s signed agreement.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "si4body",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+        "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1"
+      ],
+      "scope": "Exact publisher supplementary PDF, OR1–4. Article-specific CC BY4 statement plus official 2026 CC BY publishing-agreement definition includes supplementary information; no separate notice/third-party credit on any of the4 inspected SI pages. Template supplies scope definition, not a claim to possess this paper’s signed agreement.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "statistics",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "table1",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "table1_bottom",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "table1_top",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "table2",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "table3",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "table3_bottom",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "table3_notes",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "table3_top",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "thermal_ref",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "timing_limit",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "validation",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": false,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "BL0078_source_pdf",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf"
+      ],
+      "scope": "Exact publisher article PDF p.8 Open Access statement, copyright on p.1; every figure/table/caption inspected for exclusions, none found.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": true,
+      "source_pdf_sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    },
+    {
+      "asset_id": "BL0078_supplement_pdf",
+      "paper_id": "BL0078",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_url": "https://link.springer.com/article/10.1007/s12247-026-10986-0#rightslink",
+      "supporting_evidence_urls": [
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+        "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1"
+      ],
+      "scope": "Exact publisher supplementary PDF, OR1–4. Article-specific CC BY4 statement plus official 2026 CC BY publishing-agreement definition includes supplementary information; no separate notice/third-party credit on any of the4 inspected SI pages. Template supplies scope definition, not a claim to possess this paper’s signed agreement.",
+      "attribution": "Sioen I, Coenye T. Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test. J Pharm Innov22:107(2027), online2026-08-24. DOI10.1007/s12247-026-10986-0. ©The Author(s)2026; CC BY4.0.",
+      "changes": "Source PDFs unchanged. Evidence images cropped/zoomed only with full-page contexts retained. Chinese explanations and labeled teaching calculations added; no image data edited.",
+      "publish_allowed": true,
+      "include_source_pdf": true,
+      "source_pdf_sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "reviewed_by": "AI source/rights review; not human legal approval",
+      "reviewed_at": "2026-10-27",
+      "blocker": null
+    }
+  ],
+  "publication_status": "accepted_for_public_release_2026-10-27",
+  "review_note": "Article and official supplementary scope reviewed by author, independent AI reviewer and primary AI reviewer; no human legal certification claimed."
+}

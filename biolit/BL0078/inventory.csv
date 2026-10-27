@@ -1,0 +1,22 @@
+unit_id,kind,parent_id,source_locator,slide_ids,status,explanation
+Fig1,figure,,PDF p.5 Fig.1,s19;s20;s21;s22;s23,covered,"Complete view with caption and shared legend, followed by every panel at readable size; axes/threshold/dose/replicates explained."
+Fig1a,subfigure,Fig1,PDF p.5 Fig.1a,s20,covered,"Threshold crossing versus peak, two technical replicates."
+Fig1b,subfigure,Fig1,PDF p.5 Fig.1b,s21,covered,"Narrow peak, continuous recording, 5/6 high-level technical detection in SI."
+Fig1c,subfigure,Fig1,PDF p.5 Fig.1c,s22,covered,Multiphase thermal signal; no unvalidated metabolic/identity inference.
+Fig1d,subfigure,Fig1,PDF p.5 Fig.1d,s23,covered,Low input signal remains below threshold; failed detection and unproven oxygen explanation.
+Fig2,figure,,PDF p.5 Fig.2,s26,covered,"43→19 h and46→28 h; SEM, reported Wilcoxon p<0.001, positive time not negative release time."
+Fig3,figure,,PDF p.7 Fig.3,s32;s33;s34,covered,"Full view, both condition panels, every organism/replicate, SEM and 336h ND readout, two row-group zooms."
+Fig3-left,panel,Fig3,"PDF p.7 Fig.3 left, 100 CFU",s32;s33;s34,covered,"All16 organisms and their three biological replicates; grey comparator and blue IMC, x-axis hours."
+Fig3-right,panel,Fig3,"PDF p.7 Fig.3 right, 5 CFU",s32;s33;s34,covered,All16 organisms including every ND group; ND separated from measured time axis.
+Table1,table,,PDF p.3 Table1,s09;s10;s11,covered,"Full table plus upper/lower readable sections; all16 strains, provenance, culture context and footnotes a–d. Not a biological operating guide."
+Table2,table,,PDF p.4 Table2,s24,covered,Every count/denominator and exact McNemar note; positive yield distinct from sensitivity/specificity.
+Table3,table,,PDF p.6 Table3,s28;s29;s30;s31,covered,"All16 organisms, four time columns, SD, stars and footnote a; missing observations not treated as zero or equivalence."
+OR1,supplementary_table,,Supplement PDF p.1 Online Resource1,s12;s13,covered,"All16 challenge counts, type labels, both groups, n6 technical plate counts and CFU definition."
+OR2,supplementary_item,,Supplement PDF p.2 Online Resource2 Fig.A1,s15;s16;s17,covered,"Entire page figure, both panels, caption and shared replicate legend."
+FigA1,supplementary_figure,OR2,Supplement PDF p.2 Fig.A1,s15;s16;s17,covered,Complete blank baselines with full x/y axes and three traces each.
+FigA1a,supplementary_subfigure,FigA1,Supplement PDF p.2 Fig.A1a,s16,covered,TSB short-term noise0.019μW and drift0.00069μW/h; full curve and start transient.
+FigA1b,supplementary_subfigure,FigA1,Supplement PDF p.2 Fig.A1b,s17,covered,FTM short-term noise0.041μW and drift−0.014μW/h; worked drift conversion.
+OR3,supplementary_table,,Supplement PDF p.3 Online Resource3,s37;s38;s39;s40;s41,covered,"Every organism, ranges, n/6 and all a–d footnotes; source arithmetic inconsistencies retained and flagged, no fabricated corrections."
+OR4,supplementary_table,,Supplement PDF p.4 Online Resource4,s42;s43,covered,"All16 organism RSD pairs, overall means and missing-replicate footnote a."
+No-numbered-equations,equation_inventory,,Main PDF pp.1–9 and Supplement PDF pp.1–4,s05;s06;s35;s36,covered,"Source has no numbered equations; explicit teaching equations for thermal conversion, integral, logical-or probability, Poisson and RSD are marked as derivations/examples."
+SI-completeness,supplement_inventory,,Publisher Supplementary Information link; one four-page file,s47;s48,covered,Official linked single supplementary PDF inspected in full. Contains exactly OR1–4; no other supplementary attachments linked. Additional thermograms on request are not supplied and are not invented.

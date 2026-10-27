@@ -1,0 +1,103 @@
+{
+  "paper_id": "BL0078",
+  "numeric_evidence": [
+    {
+      "concept": "per_level_biological_denominator",
+      "value": 48,
+      "calculation": "16×3",
+      "source": "main p.2–4; Table2"
+    },
+    {
+      "concept": "low_positive_counts",
+      "value": {
+        "compendial": 36,
+        "IMC": 44,
+        "denominator": 48
+      },
+      "source": "main p.4 Table2"
+    },
+    {
+      "concept": "pooled_positive_counts",
+      "value": {
+        "compendial": 84,
+        "IMC": 92,
+        "denominator": 96
+      },
+      "source": "main p.4 Table2"
+    },
+    {
+      "concept": "TTD_group_means_h",
+      "value": {
+        "100CFU": [
+          43,
+          19
+        ],
+        "5CFU": [
+          46,
+          28
+        ]
+      },
+      "error": "SEM on Fig2",
+      "source": "main p.5 Fig2"
+    },
+    {
+      "concept": "threshold",
+      "value": 1,
+      "unit": "μW",
+      "rule": "strictly greater than",
+      "source": "main pp.2–3"
+    },
+    {
+      "concept": "observation_window",
+      "value": 336,
+      "unit": "h",
+      "source": "main p.4 statistics; p.7 Fig3"
+    },
+    {
+      "concept": "noise_SD_uW",
+      "value": {
+        "TSB": 0.019,
+        "FTM": 0.041
+      },
+      "interval": "representative1h",
+      "source": "main p.4; SI p.2"
+    },
+    {
+      "concept": "baseline_drift_uW_per_h",
+      "value": {
+        "TSB": 0.00069,
+        "FTM": -0.014
+      },
+      "source": "main p.4; SI p.2"
+    },
+    {
+      "concept": "reported_mean_RSD_percent",
+      "value": {
+        "repeatability100": 3.71,
+        "repeatability5": 10.24,
+        "ruggedness100": 4.89,
+        "ruggedness5": 10.95
+      },
+      "source": "main pp.5–6; SI pp.3–4",
+      "caveat": "Source arithmetic inconsistencies not repaired"
+    }
+  ],
+  "teaching_calculations": [
+    {
+      "calculation": "0.50W/V×2.4μV=1.2μW; 1.2μW×600s=0.72mJ",
+      "label": "hypothetical"
+    },
+    {
+      "calculation": "1−(1−.8)^2=.96",
+      "label": "hypothetical independent technical repeats"
+    },
+    {
+      "calculation": "exp(-4)=.0183;4exp(-4)=.0733",
+      "label": "Poisson model based on source discussion"
+    },
+    {
+      "calculation": "100sqrt(2)/19=7.44%",
+      "label": "hypothetical18h/20h TTD"
+    }
+  ]
+}

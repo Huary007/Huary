@@ -1,0 +1,75 @@
+{
+  "paper_id": "BL0078",
+  "acceptance_date_utc": "2026-10-27",
+  "status": "accepted",
+  "review_type": "AI review only; no human scientific, legal, clinical or regulatory approval claimed",
+  "pdf_pages": 49,
+  "html_sections": 49,
+  "renderer": "WeasyPrint 70.0; actual HTML print rendering",
+  "not_tested": "Chromium browser DOM/interactive QA",
+  "html_offline_check": {
+    "html_pages": 49,
+    "pdf_pages": 49,
+    "embedded_images": 56,
+    "external_image_sources": 0,
+    "external_css_urls": 0,
+    "no_missing_source_images": true
+  },
+  "coverage": {
+    "main_pdf_pages": 9,
+    "supplement_pdf_pages": 4,
+    "main_figures": 3,
+    "main_tables": 3,
+    "supplementary_items": "Online Resources 1–4 including Fig. A1a–b",
+    "inventory_items": 21,
+    "source_captures": 48
+  },
+  "independent_review": {
+    "status": "pass",
+    "reviewed_at_utc": "2026-10-27T11:55:07.883761+00:00",
+    "pages_covered": 49,
+    "source_pages_covered": 13,
+    "changed_pages_reopened": [
+      5,
+      18,
+      37,
+      39
+    ],
+    "unchanged_page_hashes_verified": true,
+    "final_pdf_png_pixels_match": true
+  },
+  "primary_review": {
+    "status": "pass",
+    "reviewed_at_utc": "2026-10-27T12:03:00Z",
+    "pages_covered": 49,
+    "actual_final_render_pages_individually_viewed": true,
+    "principle_review": "Read main9 andSI4 source pages; personally viewed all49 exact final PNGs, checked heatflow/heat/baseline/RSD/Poisson examples and measurement assumptions, all original figures/tables and negative findings. Verified manufacturer-hosted physics background pp7–8 without importing performance claims. Source caveats and method-comparison confounding retained."
+  },
+  "mechanical_release_gate": {
+    "passed": true,
+    "errors": [],
+    "warnings": [],
+    "rechecked_utc": "2026-10-27T12:05:06Z"
+  },
+  "unresolved_review_findings": [],
+  "source_uncertainties_retained": [
+    "Methods broadly says no statistical analysis for5CFU, but Fig.2 gives low-level Wilcoxon p<0.001; censor handling for aggregate analysis not fully specified.",
+    "OR3 B.contaminans high-level mean0.60% incompatible with range0.30–1.97% under described n3 arithmetic mean.",
+    "OR3 S.pyogenes low-level mean5.10% incompatible with range0.59–5.64% under described n3 arithmetic mean.",
+    "OR3 C.sporogenes high-level5/6 but no missing-pair footnote.",
+    "Method for combining technical TTD into biological-replicate TTD not explicit."
+  ],
+  "accepted_sha256": {
+    "deck.html": "189fae384528c5560353265d5cdbae0cdf3a56204b360e19df4aef83a4bf9111",
+    "render/deck.pdf": "d4e87db63c26ab9c3bd91966adb396a0e0e81da2b3dca560654e2c33e1364d5f",
+    "BL0078_source.pdf": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+    "BL0078_supplement.pdf": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f"
+  },
+  "scope_limits": [
+    "Proof of concept, not established product-matrix validation or regulatory approval.",
+    "Positive proportions are not sensitivity/specificity.",
+    "Earlier positive time to detection does not establish earlier negative sterility release.",
+    "Source numerical and statistical inconsistencies are preserved and disclosed, not silently corrected."
+  ],
+  "public_copy_note": "Accepted HTML/PDF and article/supplement PDFs copied byte-for-byte without rerendering. Source crops are embedded in self-contained HTML; source PDFs supply full original page context. Private working notes and page-level review files are excluded."
+}

@@ -1,0 +1,71 @@
+{
+  "paper_id": "BL0078",
+  "sources": [
+    {
+      "id": "E001",
+      "kind": "publisher_article_pdf",
+      "path": "BL0078_source.pdf",
+      "title": "Evaluation of a Novel Isothermal Microcalorimetry-Based Sterility Test",
+      "doi": "10.1007/s12247-026-10986-0",
+      "sha256": "7436793f0f3ef58d7c327dd03fc33e8d6e09b40fdf21cbe299c624999c036a43",
+      "pages": 9,
+      "url": "https://link.springer.com/content/pdf/10.1007/s12247-026-10986-0.pdf",
+      "online_published": "2026-08-24",
+      "issue_year": 2027,
+      "version": "Publisher version of record",
+      "verification": "Article and supplement inspected by AI author, independent AI reviewer and primary AI reviewer; not human verification."
+    },
+    {
+      "id": "E002",
+      "kind": "publisher_supplementary_pdf",
+      "path": "BL0078_supplement.pdf",
+      "sha256": "739b962814d49ffbbe47fb8d81ad2acd05f05ca34783d96245dcf05bbd46194f",
+      "pages": 4,
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs12247-026-10986-0/MediaObjects/12247_2026_10986_MOESM1_ESM.pdf",
+      "identity_check": "Direct exact-article publisher supplementary link; OR1–4 names and every table/figure match main-paper references, organisms and metrics; 4 pages personally inspected by AI author.",
+      "verification": "Article and supplement inspected by AI author, independent AI reviewer and primary AI reviewer; not human verification."
+    },
+    {
+      "id": "E003",
+      "kind": "publisher_article_record",
+      "url": "https://link.springer.com/article/10.1007/s12247-026-10986-0",
+      "scope": "Identity/date/rights/supplement list/correction notice check",
+      "accessed": "2026-10-27"
+    },
+    {
+      "id": "E004",
+      "kind": "publisher_CC_BY_agreement_scope",
+      "url": "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/27848838/data/v1",
+      "locator": "PDF p.1 licence paragraph and clause1(a)",
+      "scope": "2026 standard agreement explicitly includes supplementary information in Article; paired with exact-paper licence, not treated as signed paper contract",
+      "accessed": "2026-10-27"
+    },
+    {
+      "id": "E005",
+      "kind": "manufacturer_hosted_public_conference_physics",
+      "url": "https://symcel.com/hubfs/Downloadables/14_Vendur_update_Evaluation%20of%20an%20alternative%20microbiological%202.pdf",
+      "title": "Nathalie Vendur. Evaluation of an alternative microbiological technique based on microcalorimetry (2025)",
+      "locator": "PDF pp.7–8",
+      "scope": "Thermopile, heat sink and readout-chain background only; no images or data reproduced, no new performance metrics imported",
+      "accessed": "2026-10-27"
+    },
+    {
+      "id": "E006",
+      "kind": "workflow_software_reference",
+      "url": "https://arxiv.org/abs/2609.00065",
+      "version": "v2, 2026-09-02",
+      "citation": "Kassis T, Agarwal V, He Y, Patel D, Brueckner AM. Scientific Agent Skills (2026). doi:10.48550/arXiv.2609.00065",
+      "scope": "Teaching production methodology, not detection evidence"
+    }
+  ],
+  "correction_retraction_check": "No correction/retraction notice visible on exact publisher article page at2026-10-27; not a claim of exhaustive future-status assurance.",
+  "source_uncertainties": [
+    "Methods broadly says no statistical analysis for5CFU, but Fig.2 gives low-level Wilcoxon p<0.001; censor handling for aggregate analysis not fully specified.",
+    "OR3 B.contaminans high-level mean0.60% incompatible with range0.30–1.97% under described n3 arithmetic mean.",
+    "OR3 S.pyogenes low-level mean5.10% incompatible with range0.59–5.64% under described n3 arithmetic mean.",
+    "OR3 C.sporogenes high-level5/6 but no missing-pair footnote.",
+    "Method for combining technical TTD into biological-replicate TTD not explicit."
+  ],
+  "not_supplied": "Additional thermograms available on request in article p.4 are not published attachments; no raw traces/TTD data or analysis code reconstructed.",
+  "publication_note": "Only the article and exact article-linked supplementary PDFs are redistributed. Manufacturer-hosted background slides are cited only; no manufacturer PDF, images or performance data are included."
+}
