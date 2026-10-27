@@ -1,0 +1,70 @@
+{
+  "paper_id": "BL0060",
+  "sources": [
+    {
+      "id": "E001",
+      "kind": "publisher_article_pdf",
+      "title": "First description of the performance of the VITEK MITUBE device used with MALDI-TOF mass spectrometry to achieve identification of gram-negative bacteria directly from positive blood culture broth",
+      "doi": "10.1128/jcm.00122-25",
+      "path": "BL0060_source.pdf",
+      "sha256": "1e12ab14271b36d965a36c96bacdccbd6d5e7f12ec34b8cbda98c9695286e429",
+      "pages": 8,
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12345195.1/PMC12345195.1.pdf?md5=fcf09b783473ef5bb7b2607acc3c03b3",
+      "version": "Publisher version of record",
+      "online_published": "2025-07-18",
+      "issue_month": "2025-08",
+      "verification": "Source PDF identity and contents checked by AI author, independent AI reviewer and primary AI reviewer; final 34-page PDF passed all-page acceptance. No human review claimed."
+    },
+    {
+      "id": "E002",
+      "kind": "official_PMC_XML",
+      "path": "BL0060_source.xml",
+      "sha256": "00b973c57059455e6570e69ee38f011adbefc58798e1b945bcdd6b9ef6e411e8",
+      "url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12345195.1/PMC12345195.1.xml?md5=c930b7a12a48b4066bcbb7c8fee481a4",
+      "supplementary_material_count": 0,
+      "fig_count": 2,
+      "table_count": 4,
+      "box_count": 1,
+      "permissions": "CC BY 4.0"
+    },
+    {
+      "id": "E003",
+      "kind": "manufacturer_physics_reference",
+      "url": "https://www.ssi.shimadzu.com/service-support/faq/maldi/maldi-basics/index.html",
+      "locator": "I. MALDI Theory and II. TOF MS Analysis",
+      "scope": "General physical explanation only, not VITEK parameter disclosure",
+      "accessed": "2026-10-27"
+    },
+    {
+      "id": "E004",
+      "kind": "manufacturer_algorithm_overview",
+      "url": "https://www.biomerieux.com/us/en/our-offer/clinical-products/vitek-ms.html",
+      "locator": "Advanced Spectra Classifier / Knowledge Base",
+      "scope": "Public general VITEK MS weighted-bin description; not study KB3.3 score/threshold validation",
+      "accessed": "2026-10-27"
+    },
+    {
+      "id": "E005",
+      "kind": "publisher_license_and_supplement_check",
+      "url": "https://journals.asm.org/doi/10.1128/jcm.00122-25",
+      "locator": "Copyright, article figures/tables; no Supplement heading or link",
+      "accessed": "2026-10-27"
+    }
+  ],
+  "skills_read": {
+    "no_ai_slop": [
+      "pipeline/skills/no-ai-slop/SKILL.md",
+      "pipeline/skills/no-ai-slop/eval.md"
+    ],
+    "scientific_writing": [
+      "pipeline/skills/scientific-writing/SKILL.md",
+      "references/evidence_workflow.md",
+      "references/writing_principles.md",
+      "references/figures_tables.md"
+    ],
+    "versions": "no-ai-slop 000650b156983f5159695b441477f4e63b25dc85; Scientific Writing 2.3 a92663a0214b3b9fa1ba6b958284ffd919c00a0c",
+    "software_citation": "Kassis T, Agarwal V, He Y, Patel D, Brueckner AM. Scientific Agent Skills (2026). doi:10.48550/arXiv.2609.00065; arXiv v2 checked 2026-10-27"
+  },
+  "correction_retraction_check": "Publisher full page and PMC record show no correction/retraction notice; PMC Cloud metadata is_retracted=false; checked 2026-10-27",
+  "public_package_note": "This public metadata copy records completed AI acceptance. The accepted HTML, PDF and original source bytes are unchanged."
+}

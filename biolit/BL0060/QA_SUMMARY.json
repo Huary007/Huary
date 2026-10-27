@@ -1,0 +1,63 @@
+{
+  "paper_id": "BL0060",
+  "acceptance_date_utc": "2026-10-27",
+  "status": "accepted",
+  "review_type": "AI review only; no human scientific, legal or clinical approval claimed",
+  "pdf_pages": 34,
+  "html_sections": 34,
+  "renderer": "WeasyPrint 70.0; actual HTML print rendering",
+  "not_tested": "Chromium browser DOM/interactive QA; no claim of human review",
+  "html_self_contained": "33 of 33 images use embedded data URIs; no external script or stylesheet dependency",
+  "coverage": {
+    "main_figures": 2,
+    "main_tables": 4,
+    "boxed_table": 1,
+    "supplements": "No supplementary material listed in official PMC XML or publisher/PMC article pages as checked 2026-10-27"
+  },
+  "independent_review": {
+    "status": "pass",
+    "reviewed_at_utc": "2026-10-27T10:06:30.144245+00:00",
+    "pages_covered": 34,
+    "source_review": "Opened local original PDF text and all8 original-page PNGs, source manifest, provenance, official PMC XML and publisher/PMC full article pages. All2 figures/4tables/Box1 compared; no numbered original equations, no lettered subpanels, no listed supplement.",
+    "resolved_findings": [
+      {
+        "id": "IR-01",
+        "page": 12,
+        "status": "resolved",
+        "resolution": "Reopened revised individual PNG. v is now explicitly drift speed in m/s; all equation symbols/units, ideal assumptions, source locator and teaching-equation notice remain visible. Rechecked derivation against Shimadzu II(1)–(3); no overlap or overflow."
+      },
+      {
+        "id": "IR-02",
+        "page": 15,
+        "status": "resolved",
+        "resolution": "Reopened revised individual PNG. i=1–3, k=A/B, x_i binary peak presence, w_ki candidate-specific hypothetical bin weight and S_k dimensionless teaching score are now defined. Rechecked A=3,B=−1,margin4 and weak-input rejection. All text and source paragraph fit without reduced font or clipping; nonproprietary/nonprobability caveats retained."
+      },
+      {
+        "id": "IR-03",
+        "page": 19,
+        "status": "resolved",
+        "resolution": "Reopened revised individual PNG. Chinese text now explicitly states specimens >16 h after positivity were not tested, and ≤16 h is eligibility rather than turnaround. This agrees with original PDFp2. QC/negative-bottle contamination/KB3.3 exclusions remain; no clipping or overlap."
+      }
+    ]
+  },
+  "primary_review": {
+    "status": "pass",
+    "reviewed_at_utc": "2026-10-27T10:28:51Z",
+    "pages_covered": 34,
+    "actual_final_render_pages_individually_viewed": true,
+    "principle_review": "Read all8 original PDF text pages; checked full figure/table screenshots and all34 actual final rendered pages. Recomputed TOF and classifier examples, all denominators; checked Shimadzu MALDI/TOF and bioMerieux weighted-bin official sources. No unsupported clinical benefit or label-free claim."
+  },
+  "mechanical_release_gate": {
+    "passed": true,
+    "errors": [],
+    "warnings": []
+  },
+  "unresolved_findings": [],
+  "accepted_sha256": {
+    "deck.html": "3aa489f9b7aef7a6c84981ee0b2a58eeca9b68f3a984cc922df893edffb6f6e2",
+    "render/deck.pdf": "140322aa191d04f081d7b51b49cc01dad3a839d845af3919b50578839de12225",
+    "BL0060_source.pdf": "1e12ab14271b36d965a36c96bacdccbd6d5e7f12ec34b8cbda98c9695286e429",
+    "BL0060_source.xml": "00b973c57059455e6570e69ee38f011adbefc58798e1b945bcdd6b9ef6e411e8"
+  },
+  "public_copy_note": "Internal working notes and page-level reviewer identities are not part of this public package. Accepted deck and source files were copied byte-for-byte without rerendering."
+}

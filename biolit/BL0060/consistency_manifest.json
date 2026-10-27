@@ -1,0 +1,91 @@
+{
+  "paper_id": "BL0060",
+  "values": [
+    {
+      "id": "clinical_first",
+      "numerator": 121,
+      "denominator": 125,
+      "percent": 96.8,
+      "locator": "PDFp7 Table4"
+    },
+    {
+      "id": "clinical_final",
+      "numerator": 123,
+      "denominator": 125,
+      "percent": 98.4,
+      "locator": "PDFp5 Table1; p7 Table4"
+    },
+    {
+      "id": "combined_test_correct",
+      "numerator": 343,
+      "denominator": 360,
+      "percent": 95.2777777778,
+      "locator": "PDFp6 Table2 and results"
+    },
+    {
+      "id": "combined_specimen_correct",
+      "numerator": 325,
+      "denominator": 342,
+      "percent": 95.0292397661,
+      "locator": "PDFp6 results"
+    },
+    {
+      "id": "combined_call_rate_derived",
+      "numerator": 344,
+      "denominator": 360,
+      "percent": 95.5555555556,
+      "locator": "Derived from PDFp6 Table2:343correct+1wrong"
+    },
+    {
+      "id": "conditional_correct_derived",
+      "numerator": 343,
+      "denominator": 344,
+      "percent": 99.7093023256,
+      "locator": "Derived from PDFp6 Table2"
+    },
+    {
+      "id": "pvulgaris_failure",
+      "numerator": 13,
+      "denominator": 31,
+      "percent": 41.935483871,
+      "locator": "PDFp6 Table2/Table3"
+    },
+    {
+      "id": "contrived_test_correct",
+      "numerator": 220,
+      "denominator": 235,
+      "percent": 93.6170212766,
+      "locator": "PDFp6 Table3"
+    }
+  ],
+  "teaching_equations": {
+    "tof_assumed": {
+      "U_volts": 20000,
+      "L_meters": 1,
+      "m_Da": 4000,
+      "z": 1,
+      "t_seconds": 3.22e-05,
+      "status": "Hypothetical, not device parameters"
+    },
+    "weighted_bins": {
+      "x": [
+        1,
+        0,
+        1
+      ],
+      "wA": [
+        2,
+        -1,
+        1
+      ],
+      "wB": [
+        -1,
+        2,
+        0
+      ],
+      "SA": 3,
+      "SB": -1,
+      "status": "Hypothetical, not proprietary ASC"
+    }
+  }
+}

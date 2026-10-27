@@ -1,0 +1,11 @@
+unit_id,kind,parent_id,source_locator,slide_ids,status,explanation
+Fig1,figure,,PDF p.2 Fig.1,s04;s04a;s04b;s04c,covered,完整流程图、全部仪器图标、箭头与图注，无字母子图
+Fig2,figure,,PDF p.4 Fig.2,s05;s06,covered,完整装置图及所有部件标签，完整图注另幅放大；无字母子图
+Fig2-components,component_group,Fig2,PDF p.4 Fig.2: Top Cap; Ejector Pin; Shoulder; Layering Aid; Density Cushion; Bottom Cap,s05;s06,covered,逐一解释全部六类标签和分离/回收角色
+Box1,boxed_table,,PDF p.3 Box 1,s14,covered,全部11条名称（10物种）和星号脚注
+Table1,table,,PDF p.5 Table 1,s18,covered,全部行列与脚注，临床123/125最终结果
+Table2,table,,PDF p.6 Table 2,s20;s21;s22,covered,完整表/表体/全部脚注；342标本与360测试，所有失败物种
+Table3,table,,PDF p.6 Table 3,s23;s23a;s24,covered,完整表及脚注和表体放大；217标本235测试，1例误鉴定
+Table4,table,,PDF p.7 Table 4,s19,covered,完整表及脚注；首次121再激发2未鉴定2
+SI-check,supplement_status,,Official PMC XML supplementary-material count=0; publisher/PMC full article pages checked 2026-10-27,s28,covered,无列出的补充文件/补充图表；非下载失败造成排除
+Eq-teaching,teaching_equation,,Teaching only; main paper has no numbered equation; external Shimadzu II(1)-(3),s09;s10;s12,covered,明确假设TOF与简化分箱算例，不冒充原文公式或专有参数
