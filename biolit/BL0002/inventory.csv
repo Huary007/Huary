@@ -1,0 +1,70 @@
+unit_id,kind,parent_id,source_locator,slide_ids,status,explanation
+Fig1,figure,,正文 PDF p.2，Fig1 全图,s05,covered,图1全图：靶向与扩增依靠不同模块
+Fig1A,subfigure,Fig1,正文 PDF p.2，Fig.1A（完整子图）,s06,covered,图1A：不整体熔开双链，也能给聚合酶一个起点
+Fig1B,subfigure,Fig1,正文 PDF p.2，Fig.1B（完整子图）,s07,covered,图1B：能结合，也必须能解离
+Teaching-Exp,teaching_equation,,正文 PDF p.2，Fig.1A（完整子图）,s08,covered,指数放大：教学模型，不是原文拟合方程
+Fig2,figure,,正文 PDF p.2，Fig2 全图,s09,covered,图2全图：能生成目标产物，也会出现背景信号
+Fig2A,subfigure,Fig2,正文 PDF p.2，Fig.2A（完整子图）,s10,covered,图2A：三个位点的阳性与水对照
+Fig2B,subfigure,Fig2,正文 PDF p.2，Fig.2B（完整子图）,s11,covered,图2B：染料读“DNA 增加”，不单独保证目标身份
+Fig2B-inset,subfigure,Fig2B,正文 PDF p.2，Fig.2B 内嵌图（保留全部轴刻度及周边定位）,s12,covered,图2B内嵌图：时间对数关系的含义与边界
+Teaching-Time,teaching_equation,,正文 PDF p.2，Fig.2B 内嵌图（保留全部轴刻度及周边定位）,s12,covered,图2B内嵌图：时间对数关系的含义与边界
+Fig3,figure,,正文 PDF p.3，Fig3 全图,s13,covered,图3全图：第三条识别元件控制信号
+Fig3A,subfigure,Fig3,正文 PDF p.3，Fig.3A（完整子图）；Nfo释义：正文 PDF p.2,s14,covered,图3A：切开探针，分开荧光团与淬灭基团
+Fig3B,subfigure,Fig3,正文 PDF p.3，Fig.3B（完整子图）；缩写：正文 p.1 Abbreviations；靶区：p.3,s15,covered,图3B：共享识别区与内部对照的安排
+Method-optics,method,,正文 PDF p.5（p.1119），Real-time monitoring / 激发、检测和采样,s16,covered,仪器链：激发、滤光、探测与时间采样
+Method-normalization,method,,正文 PDF p.5（p.1119），Real-time monitoring / 激发、检测和采样；正文 PDF p.6（p.1120），Real-time monitoring 续段,s17,covered,从原始强度到图中纵轴
+Fig4,figure,,正文 PDF p.3，Fig4 全图,s18,covered,图4全图：低拷贝检测与时间定量分开判断
+Fig4A,subfigure,Fig4,正文 PDF p.3，Fig.4A（完整曲线与轴；保留相邻B标记）,s19,covered,图4A：两拷贝组有一次无信号
+Fig4B,subfigure,Fig4,正文 PDF p.3，Fig.4B（完整子图及上方定位文字）,s20,covered,图4B：2.5 是该图的信号阈值
+Teaching-Poisson,teaching_equation,,正文 PDF p.3，Fig.4A（完整曲线与轴；保留相邻B标记）,s21,covered,低拷贝概率：即使理想反应，也可能没有模板
+Fig5,figure,,正文 PDF p.4，Fig5 全图,s22,covered,图5全图：目标通道与内部对照通道
+Fig5A,subfigure,Fig5,正文 PDF p.4，Fig.5A（完整曲线与轴；保留相邻B标记）,s23,covered,图5A：近缘阴性对照比空白更有信息
+Fig5B,subfigure,Fig5,正文 PDF p.4，Fig.5B（完整子图及上方定位文字）,s24,covered,图5B：内部对照阳性可排查反应失活
+Fig6,figure,,正文 PDF p.5，Fig6 全图,s25,covered,图6全图：扩增产物也可以用试纸条读出
+Fig6A,subfigure,Fig6,正文 PDF p.5，Fig.6A（完整子图）,s26,covered,图6A：两个标签连接，才会留下检测线
+Fig6B,subfigure,Fig6,正文 PDF p.5，Fig.6B（完整子图）,s27,covered,图6B：试纸信号也受探针识别约束
+Fig6C,subfigure,Fig6,正文 PDF p.5，Fig.6C（完整子图）,s28,covered,图6C：四条试纸的阳性线与流控线
+S1,figure,,补充 Fig.S1 原始 PDF p.1，全图；图注：正文 PDF p.6，Fig.S1,s29,covered,补充图S1全图：组分改变影响终点产物
+S1A,subfigure,S1,补充 Fig.S1A–B 原始 PDF p.1（完整相邻子图）,s30,covered,S1A–B：单链稳定与重组酶装载
+S1B,subfigure,S1,补充 Fig.S1A–B 原始 PDF p.1（完整相邻子图）,s30,covered,S1A–B：单链稳定与重组酶装载
+S1C,subfigure,S1,补充 Fig.S1C–D 原始 PDF p.1（完整相邻子图）,s31,covered,S1C–D：识别复合物与拥挤环境
+S1D,subfigure,S1,补充 Fig.S1C–D 原始 PDF p.1（完整相邻子图）,s31,covered,S1C–D：识别复合物与拥挤环境
+S1E,subfigure,S1,补充 Fig.S1E–F 原始 PDF p.1（完整相邻子图）,s32,covered,S1E–F：供能与链置换合成
+S1F,subfigure,S1,补充 Fig.S1E–F 原始 PDF p.1（完整相邻子图）,s32,covered,S1E–F：供能与链置换合成
+S1G,subfigure,S1,补充 Fig.S1G–H 原始 PDF p.1（完整相邻子图）,s33,covered,S1G–H：抑制条件也属于证据
+S1H,subfigure,S1,补充 Fig.S1G–H 原始 PDF p.1（完整相邻子图）,s33,covered,S1G–H：抑制条件也属于证据
+S2,figure,,补充 Fig.S2 原始 PDF p.1，全图；图注：正文 PDF p.6，Fig.S2,s34,covered,补充图S2：被测试的扩增片段长度
+S2-gel,subfigure,S2,补充 Fig.S2 原始 PDF p.1，全图；图注：正文 PDF p.6，Fig.S2；补充 Fig.S2 原始 PDF p.1，上部电泳图（含全部泳道与标记）,s34;s63,covered,补充图S2：被测试的扩增片段长度；S2放大：长度标记、全部泳道与副产物
+S2-scheme,subfigure,S2,补充 Fig.S2 原始 PDF p.1，全图；图注：正文 PDF p.6，Fig.S2；补充 Fig.S2 原始 PDF p.1，下部引物方向图,s34;s64,covered,补充图S2：被测试的扩增片段长度；S2放大：方向图解释的是跨度，不是复制速度
+S2-negative,subfigure,S2,正文 PDF p.6，Fig.S2 图注,s35,covered,S2的未展示失败不能从结论中删去
+S3,figure,,补充 Fig.S3 原始 PDF p.1，三靶点电泳及方向图（含500/400/300/200 bp完整标尺）；图注：正文 PDF p.6，Fig.S3,s36,covered,补充图S3：短引物没有同样表现
+S3-ApoB,subfigure,S3,补充 Fig.S3 原始 PDF p.1，三靶点电泳及方向图（含500/400/300/200 bp完整标尺）；图注：正文 PDF p.6，Fig.S3,s36,covered,补充图S3：短引物没有同样表现
+S3-D18S51,subfigure,S3,补充 Fig.S3 原始 PDF p.1，三靶点电泳及方向图（含500/400/300/200 bp完整标尺）；图注：正文 PDF p.6，Fig.S3,s36,covered,补充图S3：短引物没有同样表现
+S3-Sry,subfigure,S3,补充 Fig.S3 原始 PDF p.1，三靶点电泳及方向图（含500/400/300/200 bp完整标尺）；图注：正文 PDF p.6，Fig.S3,s36,covered,补充图S3：短引物没有同样表现
+S3-scheme,subfigure,S3,补充 Fig.S3 原始 PDF p.1，三靶点电泳及方向图（含500/400/300/200 bp完整标尺）；图注：正文 PDF p.6，Fig.S3,s36,covered,补充图S3：短引物没有同样表现
+S3-limits,subfigure,S3,正文 PDF p.6，Fig.S3 图注,s37,covered,S3与Protocol：长度条件仍不足以保证好引物
+S4,figure,,补充 Fig.S4 原始 PDF p.1，全部泳道与标记；图注：正文 PDF p.6，Fig.S4,s38,covered,补充图S4：产物身份需要第二种检查
+S4-ApoB,subfigure,S4,补充 Fig.S4 原始 PDF p.1，全部泳道与标记；图注：正文 PDF p.6，Fig.S4,s39,covered,S4的ApoB：保留未切开的混合成分
+S4-Sry,subfigure,S4,补充 Fig.S4 原始 PDF p.1，全部泳道与标记；图注：正文 PDF p.6，Fig.S4,s40,covered,S4的Sry与PBDG：模式匹配的证据强度
+S4-PBDG,subfigure,S4,补充 Fig.S4 原始 PDF p.1，全部泳道与标记；图注：正文 PDF p.6，Fig.S4,s40,covered,S4的Sry与PBDG：模式匹配的证据强度
+S5,figure,,补充 Fig.S5 原始 PDF p.1，全图,s41,covered,补充图S5全图：证明MSSA模板本身可扩增
+S5A,subfigure,S5,补充 Fig.S5A 原始 PDF p.1（完整子图）；图注：正文 PDF p.6，Fig.S5,s42,covered,S5A：反向设置的模板与阴性对照
+S5B,subfigure,S5,补充 Fig.S5B 原始 PDF p.1（完整子图）；图注：正文 PDF p.6，Fig.S5,s43,covered,S5B：另一靶标的时间标定仍有适用范围
+ProtocolS1,supplementary_record,,正文 PDF p.6，Protocol S1 文件说明,s44,covered,Protocol S1：原始补充文件的内容地图
+Protocol-human-table-a,table_segment,Protocol-human-table,原始补充DOC的PDF转换页 p.1，Protocol S1 / 人类靶点引物表，前半,s45,covered,Protocol：人类引物表（1/3）
+Protocol-human-table-b,table_segment,Protocol-human-table,原始补充DOC的PDF转换页 p.1，Protocol S1 / 人类靶点引物表，后半,s46,covered,Protocol：人类引物表（2/3）
+Protocol-human-table-c,table_segment,Protocol-human-table,原始补充DOC的PDF转换页 p.2，Protocol S1 / 人类靶点引物表，续表,s47,covered,Protocol：人类引物表（3/3）
+Protocol-bs-table,table,,原始补充DOC的PDF转换页 p.2，Protocol S1 / B. subtilis SpoB 引物表,s48,covered,Protocol：B. subtilis的识别记录
+Protocol-sa-table,table,,原始补充DOC的PDF转换页 p.2，Protocol S1 / MRSA/MSSA 引物表,s49,covered,Protocol：MRSA/MSSA识别记录
+Protocol-sequence-key,supplementary_record,,原始补充DOC的PDF转换页 p.2，Protocol S1 / 序列格式图例；原始补充DOC的PDF转换页 p.3，Protocol S1 / MSSA 靶序列,s50,covered,Protocol：MSSA靶区及标记含义
+Protocol-MSSA,supplementary_record,,原始补充DOC的PDF转换页 p.2，Protocol S1 / 序列格式图例；原始补充DOC的PDF转换页 p.3，Protocol S1 / MSSA 靶序列,s50,covered,Protocol：MSSA靶区及标记含义
+Protocol-MRSAI,supplementary_record,,原始补充DOC的PDF转换页 p.3，Protocol S1 / MRSAI 靶序列,s51,covered,Protocol：MRSAI靶区
+Protocol-MRSAII,supplementary_record,,原始补充DOC的PDF转换页 p.3，Protocol S1 / MRSAII 靶序列前半；原始补充DOC的PDF转换页 p.4，Protocol S1 / MRSAII 靶序列续,s52,covered,Protocol：MRSAII靶区跨页记录
+Protocol-MRSAIII,supplementary_record,,原始补充DOC的PDF转换页 p.4，Protocol S1 / MRSAIII 靶序列,s53,covered,Protocol：MRSAIII靶区
+Protocol-conditions,supplementary_record,,原始补充DOC的PDF转换页 p.4，Protocol S1 / RPA conditions,s54,covered,Protocol：反应条件的可迁移性有限
+Protocol-primer-requirements,supplementary_record,,原始补充DOC的PDF转换页 p.5，Protocol S1 / Primer requirements,s55,covered,Protocol：作者尚未解决的序列性能问题
+Protocol-control,supplementary_record,,原始补充DOC的PDF转换页 p.5，Protocol S1 / Control DNA,s56,covered,Protocol：控制DNA说明与原文交叉引用疑点
+Fig6A-upper,subfigure,Fig6A,正文 PDF p.5，Fig.6A 上半（完整产物形成链；全图见第25–26页）,s61,covered,图6A放大：识别、切割和双标签连接
+Fig6A-lower,subfigure,Fig6A,正文 PDF p.5，Fig.6A 下半（完整层析条与捕获示意；全图见第25–26页）,s62,covered,图6A放大：检测线与流控线的不同职责
+Method-time,method,,正文 PDF p.4，RPA conditions 开头（实验温度与时长）,s65,covered,扩增用时、观察窗与全流程时间
+Protocol-human-table,table,,原始补充DOC的PDF转换页 p.1，Protocol S1 / 人类靶点引物表，前半；原始补充DOC的PDF转换页 p.1，Protocol S1 / 人类靶点引物表，后半；原始补充DOC的PDF转换页 p.2，Protocol S1 / 人类靶点引物表，续表,s45;s46;s47,covered,Protocol：人类引物表（1/3）；Protocol：人类引物表（2/3）；Protocol：人类引物表（3/3）

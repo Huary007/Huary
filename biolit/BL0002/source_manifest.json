@@ -1,0 +1,166 @@
+{
+  "paper_id": "BL0002",
+  "title": "DNA Detection Using Recombination Proteins",
+  "authors": [
+    "Olaf Piepenburg",
+    "Colin H. Williams",
+    "Derek L. Stemple",
+    "Niall A. Armes"
+  ],
+  "doi": "10.1371/journal.pbio.0040204",
+  "online_published": "2006-06-13",
+  "issue_year": 2006,
+  "issue_month": 7,
+  "journal": "PLOS Biology",
+  "volume": 4,
+  "issue": 7,
+  "article": "e204",
+  "source_page_count": 7,
+  "supplement_files": 6,
+  "sources": [
+    {
+      "evidence_id": "E001",
+      "path": "sources/main.pdf",
+      "download_url": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0040204&type=printable",
+      "sha256": "d2dcfc3ffd0feaa149f7cb9994dbe80361b1866c9f9badfe11d75edefe350131",
+      "bytes": 1262499,
+      "pages": 7,
+      "version": "publisher version of record",
+      "accessed": "2026-10-27",
+      "verification_state": "AI_opened_not_human_verified",
+      "verified_by": "/root/teach_rpa_foundation",
+      "public_reuse_basis": "article explicit CC Attribution statement + PLOS all-works policy; no third-party exception found"
+    },
+    {
+      "evidence_id": "E002",
+      "path": "sources/Figure_S1.pdf",
+      "download_url": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0040204.sg001&type=supplementary",
+      "sha256": "6af46e3152fcd5834cf97336fa010cf3d60d1b5ead699d3e895b6f9c57ac6beb",
+      "bytes": 163083,
+      "pages": 1,
+      "version": "publisher supporting file",
+      "accessed": "2026-10-27",
+      "verification_state": "AI_opened_not_human_verified",
+      "verified_by": "/root/teach_rpa_foundation",
+      "public_reuse_basis": "article explicit CC Attribution statement + PLOS all-works policy; no third-party exception found"
+    },
+    {
+      "evidence_id": "E003",
+      "path": "sources/Figure_S2.pdf",
+      "download_url": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0040204.sg002&type=supplementary",
+      "sha256": "f6b4bcc99e45e59269727f758a6ab1820fd3b8ee38e92888f187821bfe848029",
+      "bytes": 72094,
+      "pages": 1,
+      "version": "publisher supporting file",
+      "accessed": "2026-10-27",
+      "verification_state": "AI_opened_not_human_verified",
+      "verified_by": "/root/teach_rpa_foundation",
+      "public_reuse_basis": "article explicit CC Attribution statement + PLOS all-works policy; no third-party exception found"
+    },
+    {
+      "evidence_id": "E004",
+      "path": "sources/Figure_S3.pdf",
+      "download_url": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0040204.sg003&type=supplementary",
+      "sha256": "5e08b042a132a8333253ace7f940b25b2849074dc9513f9529538184252e7b0c",
+      "bytes": 17776,
+      "pages": 1,
+      "version": "publisher supporting file",
+      "accessed": "2026-10-27",
+      "verification_state": "AI_opened_not_human_verified",
+      "verified_by": "/root/teach_rpa_foundation",
+      "public_reuse_basis": "article explicit CC Attribution statement + PLOS all-works policy; no third-party exception found"
+    },
+    {
+      "evidence_id": "E005",
+      "path": "sources/Figure_S4.pdf",
+      "download_url": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0040204.sg004&type=supplementary",
+      "sha256": "777a18879266715fd560dcca2c3324be90d8d93385a931f74d655df0030eb5c6",
+      "bytes": 94765,
+      "pages": 1,
+      "version": "publisher supporting file",
+      "accessed": "2026-10-27",
+      "verification_state": "AI_opened_not_human_verified",
+      "verified_by": "/root/teach_rpa_foundation",
+      "public_reuse_basis": "article explicit CC Attribution statement + PLOS all-works policy; no third-party exception found"
+    },
+    {
+      "evidence_id": "E006",
+      "path": "sources/Figure_S5.pdf",
+      "download_url": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0040204.sg005&type=supplementary",
+      "sha256": "134225ffcbdbc6797a6aa49e656f2dd33232ee2b58d2e208af58a02a907024cc",
+      "bytes": 55058,
+      "pages": 1,
+      "version": "publisher supporting file",
+      "accessed": "2026-10-27",
+      "verification_state": "AI_opened_not_human_verified",
+      "verified_by": "/root/teach_rpa_foundation",
+      "public_reuse_basis": "article explicit CC Attribution statement + PLOS all-works policy; no third-party exception found"
+    },
+    {
+      "evidence_id": "E007",
+      "path": "sources/Protocol_S1.doc",
+      "download_url": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0040204.sd001&type=supplementary",
+      "sha256": "97ef5c8b793e2f9aaff912c2af0ce28e66fd1e5226f4e3ae9f327fae83ad0c6d",
+      "bytes": 33280,
+      "pages": null,
+      "version": "publisher supporting file",
+      "accessed": "2026-10-27",
+      "verification_state": "AI_opened_not_human_verified",
+      "verified_by": "/root/teach_rpa_foundation",
+      "public_reuse_basis": "article explicit CC Attribution statement + PLOS all-works policy; no third-party exception found"
+    },
+    {
+      "evidence_id": "E008",
+      "path": "sources/Protocol_S1.pdf",
+      "sha256": "26fa19621cd99ef559c8d1a95458bda2119f7c0ce383e9298ae85582233121a2",
+      "bytes": 74899,
+      "pages": 5,
+      "version": "local LibreOffice PDF rendering of publisher DOC",
+      "accessed": "2026-10-27",
+      "verification_state": "AI_opened_not_human_verified",
+      "verified_by": "/root/teach_rpa_foundation",
+      "public_reuse_basis": "article explicit CC Attribution statement + PLOS all-works policy; no third-party exception found",
+      "derived_from": "sources/Protocol_S1.doc",
+      "original_download_url": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0040204.sd001&type=supplementary"
+    }
+  ],
+  "correction_check": {
+    "date": "2026-10-27",
+    "checked": [
+      "publisher article page",
+      "PubMed 16756388",
+      "PMC1475771",
+      "DOI-specific correction/retraction web search"
+    ],
+    "finding": "No linked correction/retraction found in checked primary records; not a guarantee of future absence"
+  },
+  "conversion": {
+    "source": "sources/Protocol_S1.doc",
+    "source_sha256": "97ef5c8b793e2f9aaff912c2af0ce28e66fd1e5226f4e3ae9f327fae83ad0c6d",
+    "output": "sources/Protocol_S1.pdf",
+    "output_sha256": "26fa19621cd99ef559c8d1a95458bda2119f7c0ce383e9298ae85582233121a2",
+    "software": "LibreOfficeDev 26.8.0.0.alpha0",
+    "build": "2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+    "method": "Writer direct DOC import and writer_pdf_Export; not text-extraction reflow",
+    "command": "soffice -env:UserInstallation=file:///tmp/lo-bl0002 --headless --convert-to pdf --outdir sources sources/Protocol_S1.doc",
+    "limitations": "Pagination is rendered locally and may differ from original Word environment; font substitution possible. Retained bold/underline/italic source cues visually inspected in all sequence records. No pixel-faithfulness claim to an unavailable original Word screenshot.",
+    "visible_label": "原始补充DOC的PDF转换页"
+  },
+  "rights_supporting_records": [
+    {
+      "path": "sources/article.html",
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0040204",
+      "sha256": "8b29436053d4be0c4b5fa6e1768498291b025e69690a2a58329482cd8a3085bf"
+    },
+    {
+      "path": "sources/rights-policy.html",
+      "url": "https://journals.plos.org/plosbiology/s/licenses-and-copyright",
+      "sha256": "81319c4e8f06fdf991cc64c3bd350e1e49be14cfb77ab0864d78783904f41a89"
+    },
+    {
+      "path": "sources/supporting-policy.html",
+      "url": "https://journals.plos.org/plosbiology/s/figures",
+      "sha256": "da42461940d4c3709f7547498d3c55ad809382054049428ad50e0ca87d6be102"
+    }
+  ]
+}

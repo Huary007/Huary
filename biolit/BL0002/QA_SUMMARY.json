@@ -1,0 +1,70 @@
+{
+  "paper_id": "BL0002",
+  "title": "重组酶聚合酶扩增的检测链与证据边界",
+  "status": "accepted_for_publication",
+  "accepted_at_utc": "2026-10-27T10:59:00Z",
+  "review_disclosure": "AI-authored teaching material; independent AI review and primary AI review. Not human scientific review or legal certification.",
+  "artifact": {
+    "html_pages": 66,
+    "pdf_pages": 66,
+    "html_sha256": "cc5c68c89a3728bbd0deb5495341206adc278d1cd9f0c21a6e8883461975afd1",
+    "pdf_sha256": "589d32526f8e4a15fc335cbc63c22a1fa332730af46723966ca8a70a8166ad51",
+    "html_bytes": 9762480,
+    "pdf_bytes": 7006406,
+    "render_engine": "WeasyPrint 70.0 (actual HTML print rendering, not Chromium)"
+  },
+  "review": {
+    "independent_ai": {
+      "status": "pass",
+      "reviewed_pages": 66,
+      "completed_at_utc": "2026-10-27T09:51:50.498796+00:00"
+    },
+    "primary_ai": {
+      "status": "pass",
+      "reviewed_pages": 66,
+      "completed_at_utc": "2026-10-27T10:59:00Z"
+    },
+    "unresolved_findings": 0,
+    "review_scope": [
+      "Original article and all supporting figures/protocol",
+      "All 66 final rendered PDF pages",
+      "Every main and supporting evidence unit",
+      "Principles and quantitative teaching examples, including exponential growth, threshold-time relation and Poisson low-copy probability",
+      "Negative controls, low-copy failure, analytical versus clinical scope",
+      "Caption locators, labels, readable layout and source-faithful screenshots"
+    ]
+  },
+  "machine_gate": {
+    "release_gate": true,
+    "passed": true,
+    "errors": [],
+    "warnings": [],
+    "rerun_at_utc": "2026-10-27T11:01:59.083059+00:00"
+  },
+  "coverage": {
+    "inventory_units": 69,
+    "original_article_pages": 7,
+    "supporting_original_files": 6,
+    "supplement_figures": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5"
+    ],
+    "protocol_original": "sources/Protocol_S1.doc",
+    "protocol_local_conversion": "sources/Protocol_S1.pdf"
+  },
+  "rights": {
+    "basis": "Original 2006 article states Creative Commons Attribution without explicit version; no CC BY 4.0 relabeling. Source-specific rights audit retained in rights.json.",
+    "source_and_supplement_hashes_verified": true,
+    "third_party_exceptions_found": false
+  },
+  "limits": [
+    "AI review is not human approval.",
+    "Teaching equations/examples are not new measured results or clinical performance evidence.",
+    "Protocol PDF is a local LibreOffice rendering of the original publisher DOC, not a publisher-issued PDF.",
+    "Published HTML/PDF and original supporting files are byte-identical to the accepted local materials.",
+    "Earlier workflow-stage wording in the preserved source/rights audit is historical; this summary records final acceptance."
+  ]
+}
