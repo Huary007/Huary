@@ -1,0 +1,22 @@
+{
+  "paper_id": "BL0028",
+  "original_filename": "deck.pdf",
+  "original_pdf_bytes": 20693570,
+  "original_pdf_sha256": "9c0503ae6f7ca08734b8c5c7bcf025d98f54f5f04d84775e0b340b1426142153",
+  "pages": 108,
+  "chunks": [
+    {
+      "path": "deck.pdf.part-001",
+      "offset": 0,
+      "bytes": 10485760,
+      "sha256": "577a5ed2edf1fe1e932b1e298c0862e884d0d5496082fd79ec756b2e0edd40d2"
+    },
+    {
+      "path": "deck.pdf.part-002",
+      "offset": 10485760,
+      "bytes": 10207810,
+      "sha256": "025d841badc4b9df43f3905e5136c204912c05a64837047d8a933975517cf478"
+    }
+  ],
+  "byte_identical_reconstruction_verified": true
+}

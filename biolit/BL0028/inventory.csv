@@ -1,0 +1,105 @@
+unit_id,kind,parent_id,source_locator,slide_ids,status,explanation
+Fig1,figure,,"主文 PDF p.3, Fig1",s005,covered,Fig.1｜装置的完整定位
+Fig1a,subfigure,Fig1,"主文 PDF p.3, Fig1a",s006,covered,扫描平台与视场
+Fig1b,subfigure,Fig1,"主文 PDF p.3, Fig1b",s007,covered,实物图不能替代有效面积定义
+Fig1c,subfigure,Fig1,"主文 PDF p.3, Fig1c",s008,covered,同轴全息测量的信号链
+Fig2,figure,,"主文 PDF p.4, Fig2",s022,covered,Fig.2｜完整测量与计算流程
+Fig2a,subfigure,Fig2,"主文 PDF p.4, Fig2a",s023,covered,总测试时间包含样品环节
+Fig2b,subfigure,Fig2,"主文 PDF p.4, Fig2b",s024,covered,Fig.2b｜两级网络的完整路径
+Fig3,figure,,"主文 PDF p.5, Fig3",s048,covered,Fig.3｜整板与局部时间序列
+Fig3a,subfigure,Fig3,"主文 PDF p.5, Fig3a",s049,covered,Fig.3a｜混合板的大视场
+Fig3b,subfigure,Fig3,"主文 PDF p.5, Fig3b",s050,covered,Fig.3b｜幅度和相位的互补线索
+Fig3b-Ecoli,subfigure,Fig3,"主文 PDF p.5, Fig3b-Ecoli",s051,covered,Fig.3b｜E. coli的生长图像
+Fig3b-Kaerogenes,subfigure,Fig3,"主文 PDF p.5, Fig3b-Kaerogenes",s052,covered,Fig.3b｜K. aerogenes的生长图像
+Fig3b-Kpneumoniae,subfigure,Fig3,"主文 PDF p.5, Fig3b-Kpneumoniae",s053,covered,Fig.3b｜K. pneumoniae的生长图像
+Fig4,figure,,"主文 PDF p.6, Fig4",s056,covered,Fig.4｜早期检测与应激对照
+Fig4a,subfigure,Fig4,"主文 PDF p.6, Fig4a",s057,covered,Fig.4｜K. pneumoniae的检测灵敏度
+Fig4b,subfigure,Fig4,"主文 PDF p.6, Fig4b",s058,covered,Fig.4｜E. coli的检测灵敏度
+Fig4c,subfigure,Fig4,"主文 PDF p.6, Fig4c",s059,covered,Fig.4｜K. aerogenes的检测灵敏度
+Fig4d,subfigure,Fig4,"主文 PDF p.6, Fig4d",s060,covered,Fig.4d｜低浓度时的假阳性代价
+Fig4e,subfigure,Fig4,"主文 PDF p.6, Fig4e",s061,covered,Fig.4e｜受应激样本晚出现
+Fig5,figure,,"主文 PDF p.8, Fig5",s063,covered,Fig.5｜系统恢复率与条件分类
+Fig5a,subfigure,Fig5,"主文 PDF p.8, Fig5a",s065,covered,Fig.5｜K. pneumoniae的端到端恢复率
+Fig5b,subfigure,Fig5,"主文 PDF p.8, Fig5b",s066,covered,Fig.5｜E. coli的端到端恢复率
+Fig5c,subfigure,Fig5,"主文 PDF p.8, Fig5c",s067,covered,Fig.5｜K. aerogenes的端到端恢复率
+Fig5d,subfigure,Fig5,"主文 PDF p.8, Fig5d",s068,covered,Fig.5d｜12 h条件混淆矩阵
+Fig6,figure,,"主文 PDF p.9, Fig6",s070,covered,Fig.6｜浓度、总时间与检测限
+Fig6a,subfigure,Fig6,"主文 PDF p.9, Fig6a",s071,covered,Fig.6a｜完整浓度范围及低浓度放大
+Fig6a-wide,subfigure,Fig6,"主文 PDF p.9, Fig6a-wide",s072,covered,Fig.6a左｜预培养改变计数关系
+Fig6a-low,subfigure,Fig6,"主文 PDF p.9, Fig6a-low",s073,covered,Fig.6a右｜低浓度读数
+Fig6b,subfigure,Fig6,"主文 PDF p.9, Fig6b",s074,covered,Fig.6b｜无预培养的负结果
+Fig6c,subfigure,Fig6,"主文 PDF p.9, Fig6c",s075,covered,Fig.6c｜空白与计数阈值
+Fig6d,subfigure,Fig6,"主文 PDF p.9, Fig6d",s076,covered,Fig.6d｜五个总测试时刻
+Fig6d-8.5h,subfigure,Fig6,"主文 PDF p.9, Fig6d-8.5h",s077,covered,Fig.6d｜8.5 h与9 h的区别
+Fig6d-9h,subfigure,Fig6,"主文 PDF p.9, Fig6d-9h",s077,covered,Fig.6d｜8.5 h与9 h的区别
+Fig6d-10h,subfigure,Fig6,"主文 PDF p.9, Fig6d-10h",s078,covered,Fig.6d｜10、11、12 h的后续计数
+Fig6d-11h,subfigure,Fig6,"主文 PDF p.9, Fig6d-11h",s078,covered,Fig.6d｜10、11、12 h的后续计数
+Fig6d-12h,subfigure,Fig6,"主文 PDF p.9, Fig6d-12h",s078,covered,Fig.6d｜10、11、12 h的后续计数
+FigS1,supplementary_figure,,"补充 PDF p.2, Fig.S1",s038,covered,Fig.S1｜检测训练曲线全图
+FigS1-loss,subfigure,FigS1,"补充 PDF p.2, Fig.S1 loss",s039,covered,Fig.S1左｜损失与泛化差距
+FigS1-TPR,subfigure,FigS1,"补充 PDF p.2, Fig.S1 TPR",s040,covered,Fig.S1中｜TPR的训练/验证差别
+FigS1-PPV,subfigure,FigS1,"补充 PDF p.2, Fig.S1 PPV",s041,covered,Fig.S1右｜PPV与正例比例
+FigS2,supplementary_figure,,"补充 PDF p.3, Fig.S2",s043,covered,Fig.S2｜分类学习曲线全图
+FigS2-loss,subfigure,FigS2,"补充 PDF p.3, Fig.S2 loss",s044,covered,Fig.S2左上｜分类损失
+FigS2-Ecoli,subfigure,FigS2,"补充 PDF p.3, Fig.S2 Ecoli",s045,covered,Fig.S2｜E. coli的验证表现
+FigS2-Kaerogenes,subfigure,FigS2,"补充 PDF p.3, Fig.S2 Kaerogenes",s046,covered,Fig.S2｜K. aerogenes的验证表现
+FigS2-Kpneumoniae,subfigure,FigS2,"补充 PDF p.3, Fig.S2 Kpneumoniae",s047,covered,Fig.S2｜K. pneumoniae的验证表现
+FigS3,supplementary_figure,,"补充 PDF p.4, Fig.S3",s079,covered,Fig.S3｜三种比较方法的样品链
+FigS3-Colilert,subfigure,FigS3,"补充 PDF p.4, Fig.S3 Colilert",s079;s080,covered,Fig.S3｜三种比较方法的样品链；Fig.S3｜Colilert比较分支
+FigS3-platecount,subfigure,FigS3,"补充 PDF p.4, Fig.S3 platecount",s079;s081,covered,Fig.S3｜三种比较方法的样品链；Fig.S3｜平板计数比较分支
+FigS3-lensfree,subfigure,FigS3,"补充 PDF p.4, Fig.S3 lensfree",s079;s082,covered,Fig.S3｜三种比较方法的样品链；Fig.S3｜成像分支的时间边界
+FigS4,supplementary_figure,,"补充 PDF p.5, Fig.S4",s083,covered,Fig.S4｜预培养与转移后观察
+FigS4-A,subfigure,FigS4,"补充 PDF p.5, Fig.S4 A",s084,covered,Fig.S4A｜原膜与转移后平板
+FigS4-A-a1,subfigure,FigS4,"补充 PDF p.5, Fig.S4 A-a1",s084,covered,Fig.S4A｜原膜与转移后平板
+FigS4-A-a2,subfigure,FigS4,"补充 PDF p.5, Fig.S4 A-a2",s084,covered,Fig.S4A｜原膜与转移后平板
+FigS4-A-b1,subfigure,FigS4,"补充 PDF p.5, Fig.S4 A-b1",s084,covered,Fig.S4A｜原膜与转移后平板
+FigS4-A-b2,subfigure,FigS4,"补充 PDF p.5, Fig.S4 A-b2",s084,covered,Fig.S4A｜原膜与转移后平板
+FigS4-B,subfigure,FigS4,"补充 PDF p.5, Fig.S4 B",s085,covered,Fig.S4B｜原膜与转移后平板
+FigS4-B-a1,subfigure,FigS4,"补充 PDF p.5, Fig.S4 B-a1",s085,covered,Fig.S4B｜原膜与转移后平板
+FigS4-B-a2,subfigure,FigS4,"补充 PDF p.5, Fig.S4 B-a2",s085,covered,Fig.S4B｜原膜与转移后平板
+FigS4-B-b1,subfigure,FigS4,"补充 PDF p.5, Fig.S4 B-b1",s085,covered,Fig.S4B｜原膜与转移后平板
+FigS4-B-b2,subfigure,FigS4,"补充 PDF p.5, Fig.S4 B-b2",s085,covered,Fig.S4B｜原膜与转移后平板
+FigS5,supplementary_figure,,"补充 PDF p.6, Fig.S5",s086,covered,Fig.S5｜分辨率靶的证据
+FigS5-a,subfigure,FigS5,"补充 PDF p.6, Fig.S5 a",s087,covered,Fig.S5a–b｜聚焦改变可见结构
+FigS5-b,subfigure,FigS5,"补充 PDF p.6, Fig.S5 b",s087,covered,Fig.S5a–b｜聚焦改变可见结构
+FigS5-c,subfigure,FigS5,"补充 PDF p.6, Fig.S5 c",s088,covered,Fig.S5c｜约3.5 μm半节距分辨率
+FigS5-c-profile1,subfigure,FigS5,"补充 PDF p.6, Fig.S5 c-profile1",s088,covered,Fig.S5c｜约3.5 μm半节距分辨率
+FigS5-c-profile2,subfigure,FigS5,"补充 PDF p.6, Fig.S5 c-profile2",s088,covered,Fig.S5c｜约3.5 μm半节距分辨率
+FigS5-c-profile3,subfigure,FigS5,"补充 PDF p.6, Fig.S5 c-profile3",s088,covered,Fig.S5c｜约3.5 μm半节距分辨率
+FigS5-c-profile4,subfigure,FigS5,"补充 PDF p.6, Fig.S5 c-profile4",s088,covered,Fig.S5c｜约3.5 μm半节距分辨率
+FigS6,supplementary_figure,,"补充 PDF p.7, Fig.S6",s089,covered,Fig.S6｜三维培养基中的不同深度
+FigS6-a,subfigure,FigS6,"补充 PDF p.7, Fig.S6 a",s090,covered,Fig.S6a–b｜全板定位对照
+FigS6-b,subfigure,FigS6,"补充 PDF p.7, Fig.S6 b",s090,covered,Fig.S6a–b｜全板定位对照
+FigS6-c,subfigure,FigS6,"补充 PDF p.7, Fig.S6 c",s091,covered,Fig.S6c｜深度与时间分别解释
+FigS6-c-A,subfigure,FigS6,"补充 PDF p.7, Fig.S6 c-A",s091,covered,Fig.S6c｜深度与时间分别解释
+FigS6-c-B,subfigure,FigS6,"补充 PDF p.7, Fig.S6 c-B",s091,covered,Fig.S6c｜深度与时间分别解释
+FigS7,supplementary_figure,,"补充 PDF p.8, Fig.S7",s092,covered,Fig.S7｜上游回收量的变化
+FigS7-chart,subfigure,FigS7,"补充 PDF p.8, Fig.S7 chart",s093,covered,Fig.S7左｜计数对照与误差
+FigS7-photos,subfigure,FigS7,"补充 PDF p.8, Fig.S7 photos",s094,covered,Fig.S7右｜原始平板作为计数依据
+FigS8,supplementary_figure,,"补充 PDF p.9, Fig.S8",s095,covered,Fig.S8｜转移率的条件依赖
+FigS8-A,subfigure,FigS8,"补充 PDF p.9, Fig.S8 A",s095,covered,Fig.S8｜转移率的条件依赖
+FigS8-B,subfigure,FigS8,"补充 PDF p.9, Fig.S8 B",s095,covered,Fig.S8｜转移率的条件依赖
+FigS8-C,subfigure,FigS8,"补充 PDF p.9, Fig.S8 C",s095,covered,Fig.S8｜转移率的条件依赖
+FigS8-D,subfigure,FigS8,"补充 PDF p.9, Fig.S8 D",s095,covered,Fig.S8｜转移率的条件依赖
+FigS8-E,subfigure,FigS8,"补充 PDF p.9, Fig.S8 E",s095,covered,Fig.S8｜转移率的条件依赖
+FigS8-F,subfigure,FigS8,"补充 PDF p.9, Fig.S8 F",s095,covered,Fig.S8｜转移率的条件依赖
+FigS9,supplementary_figure,,"补充 PDF p.10, Fig.S9",s031,covered,Fig.S9｜两套P3D DenseNet
+FigS9-blockA,subfigure,FigS9,"补充 PDF p.10, Fig.S9 blockA",s032,covered,P3D模块如何利用时间
+FigS9-blockB,subfigure,FigS9,"补充 PDF p.10, Fig.S9 blockB",s032,covered,P3D模块如何利用时间
+FigS9-blockC,subfigure,FigS9,"补充 PDF p.10, Fig.S9 blockC",s032,covered,P3D模块如何利用时间
+FigS9-dense,subfigure,FigS9,"补充 PDF p.10, Fig.S9 dense",s033,covered,Dense连接与过渡层
+FigS9-transition,subfigure,FigS9,"补充 PDF p.10, Fig.S9 transition",s033,covered,Dense连接与过渡层
+FigS9-detection,subfigure,FigS9,"补充 PDF p.10, Fig.S9 detection",s034,covered,检测网络｜完整张量流
+FigS9-classification,subfigure,FigS9,"补充 PDF p.10, Fig.S9 classification",s035,covered,分类网络｜完整张量流
+TableS1,supplementary_table,,"补充 PDF p.11, TableS1",s096,covered,Table S1｜全部比较计数
+TableS2,supplementary_table,,"补充 PDF p.11, TableS2",s099,covered,Table S2｜扫描通量比较的全表
+Eq1,equation,,"主文 PDF p.14, 式(1)",s017,covered,拼接｜全局位置协调局部误差
+Eq2,equation,,"主文 PDF p.14, 式(2)",s015,covered,拼接｜相位相关估计局部平移
+Eq3,equation,,"主文 PDF p.14, 式(3)",s010;s012;s013;s014,covered,角谱传播｜输入、算子、输出；角谱传递函数｜原式放大；角谱传播｜一个频率的教学算例；传播频率与相机可采样频带
+Eq4,equation,,"主文 PDF p.14, 式(4)",s019,covered,时间差分｜四帧形成三个间隔
+Eq5,equation,,"主文 PDF p.15, 式(5)",s100,covered,式(5)｜空间带宽积的单位
+TPR,definition,,主文 PDF p.5,s054,covered,检测灵敏度与精确率的分母
+PPV,definition,,主文 PDF p.5,s054,covered,检测灵敏度与精确率的分母
+Recovery,definition,,主文 PDF p.7,s064,covered,Recovery rate同时包含漏检和错分
+LOD,definition,,主文 PDF p.8,s075,covered,Fig.6c｜空白与计数阈值
+SI-file,supplementary_file,,补充 PDF p.1,s031,covered,Fig.S9｜两套P3D DenseNet

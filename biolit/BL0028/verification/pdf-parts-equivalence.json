@@ -1,0 +1,1563 @@
+{
+  "paper_id": "BL0028",
+  "status": "pass",
+  "original_pdf_sha256": "9c0503ae6f7ca08734b8c5c7bcf025d98f54f5f04d84775e0b340b1426142153",
+  "original_pdf_bytes": 20693570,
+  "original_page_count": 108,
+  "all_pages_pixel_identical": true,
+  "method": "PyMuPDF insert_pdf; clean_contents(sanitize=True) prunes unused resources and canonicalizes content-stream floating-point numbers; garbage=4, deflate=True. No image resampling, screenshot replacement, intentional scaling or content omission. All page pixels equal the accepted PNGs at 96 dpi.",
+  "rasterizer": "PyMuPDF 1.26.6",
+  "raster_scale": 1.3333333333333333,
+  "parts": [
+    {
+      "path": "render/deck-pages-001-036.pdf",
+      "source_page_start": 1,
+      "source_page_end": 36,
+      "page_count": 36,
+      "bytes": 6125727,
+      "sha256": "b148a7f336e2fbfbd0949ac89da1bdb7557b3ead01572675f7eb02028f62d20d",
+      "pages": [
+        {
+          "original_page": 1,
+          "output_page": 1,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "5945bb125215d67359ff63522e9df15deb20729d3b6ed7e0751fb637772e568a",
+          "rendered_png_sha256": "5945bb125215d67359ff63522e9df15deb20729d3b6ed7e0751fb637772e568a",
+          "rgb_pixels_sha256": "0e165d34699b9fd074a91273da831e4e0cb235bd6b38fb3a8c9af2861ea6753c",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 2,
+          "output_page": 2,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "cec7ca0d9938da2b218b2e92ff2208786d10e26ebce8301ceebf6c2cbcc08a3f",
+          "rendered_png_sha256": "cec7ca0d9938da2b218b2e92ff2208786d10e26ebce8301ceebf6c2cbcc08a3f",
+          "rgb_pixels_sha256": "15033f3038244edcf246d329681ee7e4bb8ec642aa362ad094403dbba6cb0913",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 3,
+          "output_page": 3,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "747115b5c9478e2c9e315a6b0188f7be23b724150ba621e51136bc4b81dff773",
+          "rendered_png_sha256": "747115b5c9478e2c9e315a6b0188f7be23b724150ba621e51136bc4b81dff773",
+          "rgb_pixels_sha256": "d8bd3699c0c9f7691d656deb4d3bac6cb92e1465ad9f0f84c67dab1226701ce3",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 4,
+          "output_page": 4,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "a7d784ecce4033ae9c2de6e32302da5b2830d00b7384cb72ebccbeb6296897ae",
+          "rendered_png_sha256": "a7d784ecce4033ae9c2de6e32302da5b2830d00b7384cb72ebccbeb6296897ae",
+          "rgb_pixels_sha256": "f7e9e1748869aa0dcf36322aeeda25829dd3cdfcbd20494bbc4ff4bb1b260b87",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 5,
+          "output_page": 5,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "7bd5401c1f4aa828784964f64e870ea06348a592f4a440909ed45b38e64fee58",
+          "rendered_png_sha256": "7bd5401c1f4aa828784964f64e870ea06348a592f4a440909ed45b38e64fee58",
+          "rgb_pixels_sha256": "07149413cc0a6b0f4be5b37dc092cf2f5e1f9051043ef1587896ffc16ed18026",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 6,
+          "output_page": 6,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "5bce22b029f7ca101753450faac94fa9d6c887380a714a87da30e2b0e9d4fc0d",
+          "rendered_png_sha256": "5bce22b029f7ca101753450faac94fa9d6c887380a714a87da30e2b0e9d4fc0d",
+          "rgb_pixels_sha256": "5326cfa652fe1e9049dfb06e117a6c682f48d8df2c75af1a8086d007b7698d21",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 7,
+          "output_page": 7,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "fc8ce57cb71597b9d0180e15f55c92e02fcb3ef1dc6e7d0265f452b8455fec7c",
+          "rendered_png_sha256": "fc8ce57cb71597b9d0180e15f55c92e02fcb3ef1dc6e7d0265f452b8455fec7c",
+          "rgb_pixels_sha256": "dfdde6e70c1c2aa8bf08060422cbf9a9bd813efea69cb758b8f54ddb3c896136",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 8,
+          "output_page": 8,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "00d22ec23acea1dac133c1e3e553c14d5572a1cc0e2798b5a93d2d69952c4bc7",
+          "rendered_png_sha256": "00d22ec23acea1dac133c1e3e553c14d5572a1cc0e2798b5a93d2d69952c4bc7",
+          "rgb_pixels_sha256": "d0e0bf9f3c22a03d7acaa69cf957938cd77d193ed88fbb223742415662e1eb5a",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 9,
+          "output_page": 9,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "a3fbb695ec7feee25baa7066e83b3aa2a35f5d5908e3ea3cc06aeaef6eaf7111",
+          "rendered_png_sha256": "a3fbb695ec7feee25baa7066e83b3aa2a35f5d5908e3ea3cc06aeaef6eaf7111",
+          "rgb_pixels_sha256": "506887541f93014d1c477d36c9bb093f2dd88ba33a01584d6fe0554d277565b4",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 10,
+          "output_page": 10,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "53d7f5e09cd6fe64542c1e8bc325590a3677401922fa558aae1b8a3ba4a1afa5",
+          "rendered_png_sha256": "53d7f5e09cd6fe64542c1e8bc325590a3677401922fa558aae1b8a3ba4a1afa5",
+          "rgb_pixels_sha256": "f4f08b1ccb195df5591e00dbca22e8889681e9d8b66d2cde68a899205bf99432",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 11,
+          "output_page": 11,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "78ab410ad97589a1f8efe335f93c1c25af0e97b879dbc6eab63d8ca86bc590b6",
+          "rendered_png_sha256": "78ab410ad97589a1f8efe335f93c1c25af0e97b879dbc6eab63d8ca86bc590b6",
+          "rgb_pixels_sha256": "58af61a0ac41e89c65f0bb21ce799b29b9aa3993507551614d6128f4d8d31517",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 12,
+          "output_page": 12,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "c3932797c11fd078edbc1512466d8a296d3d15f220da7bbd9a5ec393750196b1",
+          "rendered_png_sha256": "c3932797c11fd078edbc1512466d8a296d3d15f220da7bbd9a5ec393750196b1",
+          "rgb_pixels_sha256": "8755094602eec6e76720d26af93268701f58c4673f2dafadcc252235ce039c0c",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 13,
+          "output_page": 13,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "7a8091e39e16ce099b9b91eb2b77a72b57cc94aea80f7b6b40cf65b20d640568",
+          "rendered_png_sha256": "7a8091e39e16ce099b9b91eb2b77a72b57cc94aea80f7b6b40cf65b20d640568",
+          "rgb_pixels_sha256": "651ee53f0e0535361b905c39aa2e7f62ddb11441a8e058e3d0ed435a71b4ede7",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 14,
+          "output_page": 14,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "ec9d5973de992270b9786eaeeafec6e9d14c0ef83ebc05011638f129f626b4eb",
+          "rendered_png_sha256": "ec9d5973de992270b9786eaeeafec6e9d14c0ef83ebc05011638f129f626b4eb",
+          "rgb_pixels_sha256": "1c119705697869ff64b988ed0e671d2e8bcc608b60e6a52a6a3746fb00ed832d",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 15,
+          "output_page": 15,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "f5446147526d936c594d635bb4a75326b592ee77b7bf4040cf5f3748e73c7629",
+          "rendered_png_sha256": "f5446147526d936c594d635bb4a75326b592ee77b7bf4040cf5f3748e73c7629",
+          "rgb_pixels_sha256": "b38b206c567f97d8dbf2eaa4192247c5f293e3ce9bbcb1e3c6aee50e6b0f2fce",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 16,
+          "output_page": 16,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "9c3e7ca942faa8d731c1129021cda4aecd7a478e15ae81742421c5fba3b1213d",
+          "rendered_png_sha256": "9c3e7ca942faa8d731c1129021cda4aecd7a478e15ae81742421c5fba3b1213d",
+          "rgb_pixels_sha256": "823097edb0c96c9d195fbe02cbcbb1367aac550d8c85af56482694a37b0418de",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 17,
+          "output_page": 17,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "702c671c7c6fbd380f0d52549ce0213b81be3ae4bdfa2a8b141a39d69b4e9157",
+          "rendered_png_sha256": "702c671c7c6fbd380f0d52549ce0213b81be3ae4bdfa2a8b141a39d69b4e9157",
+          "rgb_pixels_sha256": "01e782eb2b8f6e25f3c96614aa04e6a5fb050e464558e6ff0b10a1607206fa06",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 18,
+          "output_page": 18,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "c2b96066bea0f833e6f60a629815e917e365709bb55cfa942d3a98a0a9fa8065",
+          "rendered_png_sha256": "c2b96066bea0f833e6f60a629815e917e365709bb55cfa942d3a98a0a9fa8065",
+          "rgb_pixels_sha256": "5c77f346d73aebb4343c9e62bb43671dc959f586af7f13b1ac83006bdca92a1c",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 19,
+          "output_page": 19,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "0991684e6e7cf9fb3141952958fdf96b5f7db7652d2e85f77c0695fb101d371c",
+          "rendered_png_sha256": "0991684e6e7cf9fb3141952958fdf96b5f7db7652d2e85f77c0695fb101d371c",
+          "rgb_pixels_sha256": "f801ff8e47a6db7ebea6ebaea74d3bffffc399d31d87b131893e56be269049f8",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 20,
+          "output_page": 20,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "7c66a5099979247dbcb8f67d70eea112d2de13b827e83255b0a871d564164db8",
+          "rendered_png_sha256": "7c66a5099979247dbcb8f67d70eea112d2de13b827e83255b0a871d564164db8",
+          "rgb_pixels_sha256": "08baf007f1dd1ecea496e19366f601f89e245a2fa9d80c098be1cbd24aa8a086",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 21,
+          "output_page": 21,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "aa05e5d570634ea143c0902244a8f8a45a22d04e5066c108e8c69ad12d724453",
+          "rendered_png_sha256": "aa05e5d570634ea143c0902244a8f8a45a22d04e5066c108e8c69ad12d724453",
+          "rgb_pixels_sha256": "68eff30313885f550c039ca114e55edb7c9ca3d8708e30c30968209eb728937c",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 22,
+          "output_page": 22,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "618bc8d22500c9d1e890bbc92a454f212841dff16e2a144e32761b6a6b0ddae1",
+          "rendered_png_sha256": "618bc8d22500c9d1e890bbc92a454f212841dff16e2a144e32761b6a6b0ddae1",
+          "rgb_pixels_sha256": "4313bfe6cb815c5ec47ec65dcba68734dcbeb69e595b00b0c37125418a709a82",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 23,
+          "output_page": 23,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "9a78de4e9eadbe1b4ee887ad47bc7b48b720e624ffc2f232884dd6fbd4b25049",
+          "rendered_png_sha256": "9a78de4e9eadbe1b4ee887ad47bc7b48b720e624ffc2f232884dd6fbd4b25049",
+          "rgb_pixels_sha256": "9b506f06c5936eaca1f675e566ea7dc384ba09a9f256d4e14f6ff735716f6999",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 24,
+          "output_page": 24,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "4167f2aa6afaf9d3462309d8a9cd2c886aa79bd98340afad6eef6c193eaaa7b4",
+          "rendered_png_sha256": "4167f2aa6afaf9d3462309d8a9cd2c886aa79bd98340afad6eef6c193eaaa7b4",
+          "rgb_pixels_sha256": "1b130312d531696cafde3db1a07517afc3add3686398c8f0cb7ca6922829d970",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 25,
+          "output_page": 25,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "cd76057c5033e8bdb392760fb7d99dd293eb0355550cc356c9b977c84ad6c7e0",
+          "rendered_png_sha256": "cd76057c5033e8bdb392760fb7d99dd293eb0355550cc356c9b977c84ad6c7e0",
+          "rgb_pixels_sha256": "d05492a80981eedbcd565ec67a7a2d94a5cbb190bda1ce9a35a1a8284e831629",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 26,
+          "output_page": 26,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "b0ab6926e9ef5f8726dea0fb0ba676329c53575849483de20b3e7e754a1b8a28",
+          "rendered_png_sha256": "b0ab6926e9ef5f8726dea0fb0ba676329c53575849483de20b3e7e754a1b8a28",
+          "rgb_pixels_sha256": "4d8c4840a6fd459d930abdb6eec3aafeaec9d0c697c99f106474f28c90046ee6",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 27,
+          "output_page": 27,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "13f36dcf2cd75e5246b810347dd05bba87e0a00bd2bc740ff37528fa849ce615",
+          "rendered_png_sha256": "13f36dcf2cd75e5246b810347dd05bba87e0a00bd2bc740ff37528fa849ce615",
+          "rgb_pixels_sha256": "2cc426aa8130c935b5a66579eedeb4d7523951cd32a628ae2f49e520c2abffde",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 28,
+          "output_page": 28,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "3527abbed0dc14d300fe6a1457b0e64a47137a400e59ffa2e3417b5a9625add4",
+          "rendered_png_sha256": "3527abbed0dc14d300fe6a1457b0e64a47137a400e59ffa2e3417b5a9625add4",
+          "rgb_pixels_sha256": "4190b900d0e571addd38772da7a94bd2dc8ada6cdf9352aa6d7e969e8a5ee07b",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 29,
+          "output_page": 29,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "9ffc006c9baf7d388bb4e0667d31d1bf49a0aa2ba54ced3f93d3f58faf2cd428",
+          "rendered_png_sha256": "9ffc006c9baf7d388bb4e0667d31d1bf49a0aa2ba54ced3f93d3f58faf2cd428",
+          "rgb_pixels_sha256": "da52557a9f0ce114d3771ef970aa965f21601a327addd70f61d61266687404f4",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 30,
+          "output_page": 30,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "f0f50fb618c65f060ae46774c23d5bd8de337b6d84b7c14655e9ac7033571a22",
+          "rendered_png_sha256": "f0f50fb618c65f060ae46774c23d5bd8de337b6d84b7c14655e9ac7033571a22",
+          "rgb_pixels_sha256": "69cc534fe49d70f30d845f21fa07db94531625d7b7095cda6b47042be03c95eb",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 31,
+          "output_page": 31,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "572b9e3cc35503b661edbc24b63d3f0c056b18636ac4277ccb72357257678ac3",
+          "rendered_png_sha256": "572b9e3cc35503b661edbc24b63d3f0c056b18636ac4277ccb72357257678ac3",
+          "rgb_pixels_sha256": "954b66e84cb55e765c09141762f30a3cfdd5082a27146aeb31b33cf4a19ee3bc",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 32,
+          "output_page": 32,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "511626dacee60fa071674c34bfe18b3b790f275030fbaa99d1afe8c5a38e0d2e",
+          "rendered_png_sha256": "511626dacee60fa071674c34bfe18b3b790f275030fbaa99d1afe8c5a38e0d2e",
+          "rgb_pixels_sha256": "03b0b21eb52118f3e8d3c14ecfb3f9153f5d41589774b0f88239d7f23f6bafda",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 33,
+          "output_page": 33,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "575808a65e74c0b7e75089f7c2335411794066b9eda5f2b2347965c2d041d8d3",
+          "rendered_png_sha256": "575808a65e74c0b7e75089f7c2335411794066b9eda5f2b2347965c2d041d8d3",
+          "rgb_pixels_sha256": "dde34426fe9bca3a06adce0e7a1fb9f155a05f5a70ec39c6ab2fa1830458e9b7",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 34,
+          "output_page": 34,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "a3201cb320056798de1a07c8326985ad4e062012c4c0356cc454a139d4f6c7cb",
+          "rendered_png_sha256": "a3201cb320056798de1a07c8326985ad4e062012c4c0356cc454a139d4f6c7cb",
+          "rgb_pixels_sha256": "e13cb5e423374926a4c482f2e7046ab3931fe3106e85410749f4f8d33e82aaf8",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 35,
+          "output_page": 35,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "00bcaef19898bb4a227fd1bc8689df66a3792330afbd98de870b61c68fc4460f",
+          "rendered_png_sha256": "00bcaef19898bb4a227fd1bc8689df66a3792330afbd98de870b61c68fc4460f",
+          "rgb_pixels_sha256": "f2d9398ae31a1e47467a75871952a7c2e9c9b8e9bdf58557c4aaa673e1f1601d",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 36,
+          "output_page": 36,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "85e47b1be87897061bdcf58d5067b1d2a9534b345a85da148324ec2ce74d6b0a",
+          "rendered_png_sha256": "85e47b1be87897061bdcf58d5067b1d2a9534b345a85da148324ec2ce74d6b0a",
+          "rgb_pixels_sha256": "7642d0bffc4c5dfdebc138ac934c7806a25eeb30e365e44dfea28cae597137ae",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        }
+      ]
+    },
+    {
+      "path": "render/deck-pages-037-072.pdf",
+      "source_page_start": 37,
+      "source_page_end": 72,
+      "page_count": 36,
+      "bytes": 4957894,
+      "sha256": "88f098bb29e64fe40170fdd65b7b209a508d7709a6729b233424a1c42a456ea3",
+      "pages": [
+        {
+          "original_page": 37,
+          "output_page": 1,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "26c8a587062f5d55c61edff98f8b8b3a6feb8918f5c76c75c20a902e1aeb67f0",
+          "rendered_png_sha256": "26c8a587062f5d55c61edff98f8b8b3a6feb8918f5c76c75c20a902e1aeb67f0",
+          "rgb_pixels_sha256": "cab8726d3fdb9d7c05efdfd17e00107b2d1326966ec04a1a97917e5ab00b04a6",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 38,
+          "output_page": 2,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "fd21af6c440eaaccf6c3fbad8fb7d9c13192095c0cc0f357391560d6145771b5",
+          "rendered_png_sha256": "fd21af6c440eaaccf6c3fbad8fb7d9c13192095c0cc0f357391560d6145771b5",
+          "rgb_pixels_sha256": "032756c279721ecf6dcb7dc2fc170745f11a4a773a15d8901cc59f5d63cb80d4",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 39,
+          "output_page": 3,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "bbcb27118ad8911718760b247b0a5ad101b7932ea6725fc85bb08323223f4cc2",
+          "rendered_png_sha256": "bbcb27118ad8911718760b247b0a5ad101b7932ea6725fc85bb08323223f4cc2",
+          "rgb_pixels_sha256": "1f672c0b36576534765f07a60ac1c7446f6e03b0268f3005c471a34fd58b6102",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 40,
+          "output_page": 4,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "a767129858b7744b23b315364262f6ca0b899b49499a389fc72add0311f47d57",
+          "rendered_png_sha256": "a767129858b7744b23b315364262f6ca0b899b49499a389fc72add0311f47d57",
+          "rgb_pixels_sha256": "f51ac7e70e9a52c49e13c105eae5ab3a72231e9cb30844220685b3ba6a1f16b1",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 41,
+          "output_page": 5,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "dca67d9d8aae6bd1710762cf211663eaa31509c19747d89dd471880d52c2d4e6",
+          "rendered_png_sha256": "dca67d9d8aae6bd1710762cf211663eaa31509c19747d89dd471880d52c2d4e6",
+          "rgb_pixels_sha256": "dedcae894e0d2ad6af2fcce847608accf4a743c4ec9a1dcbfce780ab7caedc00",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 42,
+          "output_page": 6,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "d4c9d853ef22a0fad6c2181f994c24e128512599979384b53e6255251bbf1655",
+          "rendered_png_sha256": "d4c9d853ef22a0fad6c2181f994c24e128512599979384b53e6255251bbf1655",
+          "rgb_pixels_sha256": "7508c62897da90158304de41a3224ba3cb6f3ea1e5c3c9e08ec2a745304b63e6",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 43,
+          "output_page": 7,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "cb25bca6ba8a2e9d273dd68ae135025704c64f1d27950d0dc3fae008dbf17c8a",
+          "rendered_png_sha256": "cb25bca6ba8a2e9d273dd68ae135025704c64f1d27950d0dc3fae008dbf17c8a",
+          "rgb_pixels_sha256": "2f3886e8b53c5181ef3eb8823120534329ea12e999f4770cdc2d194d48861af2",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 44,
+          "output_page": 8,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "0ba50f9e25f87af0758a731d5d012d895e384f753b62b8e6fad9a81cf234e2dc",
+          "rendered_png_sha256": "0ba50f9e25f87af0758a731d5d012d895e384f753b62b8e6fad9a81cf234e2dc",
+          "rgb_pixels_sha256": "774aa872b54caf2bb9eb8a91fdc0cee12af4eee0b77b5bd1ec4fb0c74d722476",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 45,
+          "output_page": 9,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "dcceaac5d8d3e9db6eb93497e915039d6cc0e7a9124be4a8ad2405c8642449fe",
+          "rendered_png_sha256": "dcceaac5d8d3e9db6eb93497e915039d6cc0e7a9124be4a8ad2405c8642449fe",
+          "rgb_pixels_sha256": "abc6af8c6b135142395bc48e62b8b0761d4ab3eecdb11c7ad75ef0809f26a99a",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 46,
+          "output_page": 10,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "67002e9e4462dd5dc05c082b5b1454959778dab3014bb38cbf45c6fe4f5414e4",
+          "rendered_png_sha256": "67002e9e4462dd5dc05c082b5b1454959778dab3014bb38cbf45c6fe4f5414e4",
+          "rgb_pixels_sha256": "66d9edad0851cc8da530a2d85b48b6480f5ae4ab85621df66a27bcd1e5cfe2f4",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 47,
+          "output_page": 11,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "01b30d1255796c27796a778e3099b54f22de0712a3f3b624bb3494854ffe1ba9",
+          "rendered_png_sha256": "01b30d1255796c27796a778e3099b54f22de0712a3f3b624bb3494854ffe1ba9",
+          "rgb_pixels_sha256": "7c77dcc897e6fe5aa3d2dd5eaa60da022248522286a76a94b44805e219c7a1a5",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 48,
+          "output_page": 12,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "5b371f85c93c5091f6ab84cd3761b4984c8b65024747a7f1081ebe9f2f04a535",
+          "rendered_png_sha256": "5b371f85c93c5091f6ab84cd3761b4984c8b65024747a7f1081ebe9f2f04a535",
+          "rgb_pixels_sha256": "a1f51b33769d50cc5e7e3907442faba4c2b22b404fed30fadddbb33a52bb23d5",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 49,
+          "output_page": 13,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "093eb34b869044387de3975a262252961120d5e6d18b2a4da9d0f7054cb75b67",
+          "rendered_png_sha256": "093eb34b869044387de3975a262252961120d5e6d18b2a4da9d0f7054cb75b67",
+          "rgb_pixels_sha256": "96be56f288ee669531370bd8d0ef7ac9f2f4e228d13b12a1cc44a008ef47861b",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 50,
+          "output_page": 14,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "562afb0c68b2687599219e28bb7ac466110a1feff9229d2a5bc06314c6a36ac8",
+          "rendered_png_sha256": "562afb0c68b2687599219e28bb7ac466110a1feff9229d2a5bc06314c6a36ac8",
+          "rgb_pixels_sha256": "32aea0a31a12fccae40be3838eb97252a87a4d2891545a62d8bb72ca47e13fae",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 51,
+          "output_page": 15,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "453c85cc80001450df1d45a086b3cd48fa3422f6e30d4ad80f3674d5954a34af",
+          "rendered_png_sha256": "453c85cc80001450df1d45a086b3cd48fa3422f6e30d4ad80f3674d5954a34af",
+          "rgb_pixels_sha256": "1479f4534896c404a8647566c5ef7365c4f5c68544f5f43a76b16ce13772f9f7",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 52,
+          "output_page": 16,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "03dda9f7c6551c46f9d82ff4c5253044b5835ef98c2561575f3ce24693444d0c",
+          "rendered_png_sha256": "03dda9f7c6551c46f9d82ff4c5253044b5835ef98c2561575f3ce24693444d0c",
+          "rgb_pixels_sha256": "7f95ae5315f3901fedbeacdf49f07ad96db34218185b9217b9cef96b1ba7f26f",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 53,
+          "output_page": 17,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "38a9321e78b500512d36142bb240aae1537fd24d7ff4e8b7e7eb0df3ac3b47ac",
+          "rendered_png_sha256": "38a9321e78b500512d36142bb240aae1537fd24d7ff4e8b7e7eb0df3ac3b47ac",
+          "rgb_pixels_sha256": "aa6a730e21f09d8d6faa5817a8a706df4c0e454d2ca57158cdb7a079afcf651e",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 54,
+          "output_page": 18,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "3f7f9573c90c2fa1424c64346ace3e86e5e174b9b3bb1c4c7e6a83bafed2a85b",
+          "rendered_png_sha256": "3f7f9573c90c2fa1424c64346ace3e86e5e174b9b3bb1c4c7e6a83bafed2a85b",
+          "rgb_pixels_sha256": "8e13cc9021949347e7f6c793a0252e2265e9ded0ecba877fe09555b0a9c4511b",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 55,
+          "output_page": 19,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "4dc0870d068f34642b3f0b105d73f81a641f90501327d5eec093d7c7fa402917",
+          "rendered_png_sha256": "4dc0870d068f34642b3f0b105d73f81a641f90501327d5eec093d7c7fa402917",
+          "rgb_pixels_sha256": "333e4228222e1d3058306fc2f140d06fe79ebb86a52a32b1340dc184b64d189b",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 56,
+          "output_page": 20,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "caa9fbdec02053266e43c567940af97d660c21e7d3ec4d7a78a98777e8d0bb0e",
+          "rendered_png_sha256": "caa9fbdec02053266e43c567940af97d660c21e7d3ec4d7a78a98777e8d0bb0e",
+          "rgb_pixels_sha256": "9952797210898a3a08a023b63e9edfcb7c40fee04105c7df7d8c8da82fd29bac",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 57,
+          "output_page": 21,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "6e364e4a940b89792ddb0aa1bc53d711423e9ffb97fa84e45d385a8440efed81",
+          "rendered_png_sha256": "6e364e4a940b89792ddb0aa1bc53d711423e9ffb97fa84e45d385a8440efed81",
+          "rgb_pixels_sha256": "21ae9e1364e4b9c9d8c7aa34cd2bdd7ba8916fdf34b6bb5559fc191c2aa98e3f",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 58,
+          "output_page": 22,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "3dbdf138cb8b09e84622af11a21c2814008cef9da42b8fe3ecf6fd9e4effa153",
+          "rendered_png_sha256": "3dbdf138cb8b09e84622af11a21c2814008cef9da42b8fe3ecf6fd9e4effa153",
+          "rgb_pixels_sha256": "e15d38d4aeeed9605f470abeee5bc336efabd03ae199772362d2eb59294c3ff6",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 59,
+          "output_page": 23,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "aa98ba954e88206df9c402a68b630527a3bb2b1e951cba54cab4f8f837b3f830",
+          "rendered_png_sha256": "aa98ba954e88206df9c402a68b630527a3bb2b1e951cba54cab4f8f837b3f830",
+          "rgb_pixels_sha256": "49abbcbd5ed97879ca23a9d154818b41656365bb0fddc6f557eec27532d80a05",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 60,
+          "output_page": 24,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "2b63ffffa3501942602949c439941e8e0527340f566de3954540927854040fb1",
+          "rendered_png_sha256": "2b63ffffa3501942602949c439941e8e0527340f566de3954540927854040fb1",
+          "rgb_pixels_sha256": "b734b0e71ff2ab99698a69155a379454c13eae95e08c6fcbce54c260085f92a1",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 61,
+          "output_page": 25,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "94fcd88151fab56dd5be8400123faafaa7b8ae0f31c0551f0d857f2017430975",
+          "rendered_png_sha256": "94fcd88151fab56dd5be8400123faafaa7b8ae0f31c0551f0d857f2017430975",
+          "rgb_pixels_sha256": "dacc0b62ebd9b4f9f0fa6bd68d28a80cd659dc20829dd36bd2d6bab67bf2a9fa",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 62,
+          "output_page": 26,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "2272a427b8bc6413a97d38f3faa7ec64fc7f88b1350248bcd674aeedda6650f3",
+          "rendered_png_sha256": "2272a427b8bc6413a97d38f3faa7ec64fc7f88b1350248bcd674aeedda6650f3",
+          "rgb_pixels_sha256": "4273e7ca65fa8bdca75d59f5f72826c765303af8596049778186ed0c04db0da2",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 63,
+          "output_page": 27,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "6ae2d913e5054693c719619f8727fa1bbe1cbf196fac27667f07cb2bcbe06ef3",
+          "rendered_png_sha256": "6ae2d913e5054693c719619f8727fa1bbe1cbf196fac27667f07cb2bcbe06ef3",
+          "rgb_pixels_sha256": "83362b049288a53f6201b056cf519ca74b25ea8535382dc3b9b584a516a0afc4",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 64,
+          "output_page": 28,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "a828b0289ee6c2ed03764df9ea3d043b6bc64a63e01a3c78e130583c806edd40",
+          "rendered_png_sha256": "a828b0289ee6c2ed03764df9ea3d043b6bc64a63e01a3c78e130583c806edd40",
+          "rgb_pixels_sha256": "b1117e540449b10c6b1ef4bf7bbcb6496a6ba56ac1c7e568b6e5706a69549edf",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 65,
+          "output_page": 29,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "82fde8587b73c7880c62bc4377eec6044d0849e0e591eaa2aa362c0e17943c1c",
+          "rendered_png_sha256": "82fde8587b73c7880c62bc4377eec6044d0849e0e591eaa2aa362c0e17943c1c",
+          "rgb_pixels_sha256": "f65c93fb82b51b877c9f8f46cb21668e7374985414356d4c6b37396a64030727",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 66,
+          "output_page": 30,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "505df90f2af2984f9f5c51305181c70ea38566ac15c2148b952c457d4942829e",
+          "rendered_png_sha256": "505df90f2af2984f9f5c51305181c70ea38566ac15c2148b952c457d4942829e",
+          "rgb_pixels_sha256": "e78ef8db2f0a09e79f2009b654ad83c50369813b5786702823b0e8eb452bbf91",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 67,
+          "output_page": 31,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "15c6d945875a34cb84cc205871e8b34a58afd35f47536a08c4f96664bbbc7cc2",
+          "rendered_png_sha256": "15c6d945875a34cb84cc205871e8b34a58afd35f47536a08c4f96664bbbc7cc2",
+          "rgb_pixels_sha256": "37ac3f83c5bd02db11d2d0de413cb186d0a41e11df80610d65a04d7d88585fe4",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 68,
+          "output_page": 32,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "4b981c286f55d5ec98955a1480130d029258cbd7bf3ff3941eb30cd2564514b8",
+          "rendered_png_sha256": "4b981c286f55d5ec98955a1480130d029258cbd7bf3ff3941eb30cd2564514b8",
+          "rgb_pixels_sha256": "1dc04c6fc099ff31e357df98ae65fbea7a455ecf5a247f0b4bc9f10efe28c123",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 69,
+          "output_page": 33,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "47537733e54ae05b6768f6b955bec78e54d43a92a2810bfc19e07df4ef2b186c",
+          "rendered_png_sha256": "47537733e54ae05b6768f6b955bec78e54d43a92a2810bfc19e07df4ef2b186c",
+          "rgb_pixels_sha256": "21d744f4678e45294b7d06ab21b340a634842d6fe6f142cdeb160e9c5e30b384",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 70,
+          "output_page": 34,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "75a86ad91bdc11d97f08621d9c64772e5c2340ac8c7d684d841073600be48bc8",
+          "rendered_png_sha256": "75a86ad91bdc11d97f08621d9c64772e5c2340ac8c7d684d841073600be48bc8",
+          "rgb_pixels_sha256": "8694c8ef5fc18c420bc525408992adc6d9e127848c910a118a6e8127f6076a68",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 71,
+          "output_page": 35,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "411877f87c44666251f6a086bfdb85459f30aae398fbd56ca68c9e9af6777413",
+          "rendered_png_sha256": "411877f87c44666251f6a086bfdb85459f30aae398fbd56ca68c9e9af6777413",
+          "rgb_pixels_sha256": "6321583b674725b01d26fee1f7228046dc47a54fe79f0499dc2de195057be3ef",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 72,
+          "output_page": 36,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "a60d57c8e609cef39a0d9cb359a8f20000c3776f04ad90f53443d9c5478501b6",
+          "rendered_png_sha256": "a60d57c8e609cef39a0d9cb359a8f20000c3776f04ad90f53443d9c5478501b6",
+          "rgb_pixels_sha256": "624b78119885242961c2a8f40ced42d4e2ad93fd41cf97254355da1f34f40ae3",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        }
+      ]
+    },
+    {
+      "path": "render/deck-pages-073-108.pdf",
+      "source_page_start": 73,
+      "source_page_end": 108,
+      "page_count": 36,
+      "bytes": 10955696,
+      "sha256": "56fc98434d1eed27714e8cb8f6149abd137d14b526a6c3440eed6075c1ba0b98",
+      "pages": [
+        {
+          "original_page": 73,
+          "output_page": 1,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "4c3d1bebbba7287c52c2637a66de94f5d796ce91d5f11cff891c171a326ffa12",
+          "rendered_png_sha256": "4c3d1bebbba7287c52c2637a66de94f5d796ce91d5f11cff891c171a326ffa12",
+          "rgb_pixels_sha256": "09012b0e2bbcc9dfda4efd038be88fc8a7699bbf4bbf3779f59ea293a2a4ec5c",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 74,
+          "output_page": 2,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "8be6aa0e0388ab6220909d8282a70cf9313fc2201ed0f303ee1cf2738eaee119",
+          "rendered_png_sha256": "8be6aa0e0388ab6220909d8282a70cf9313fc2201ed0f303ee1cf2738eaee119",
+          "rgb_pixels_sha256": "53aaf7911ce9dc79fae614427c120bb06b76c7dba126dd29cc12f28568efc4da",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 75,
+          "output_page": 3,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "3f611c1cd0b956fad442be5b513d5fedee6dfda5ed1b27aba8c19f1b8027f023",
+          "rendered_png_sha256": "3f611c1cd0b956fad442be5b513d5fedee6dfda5ed1b27aba8c19f1b8027f023",
+          "rgb_pixels_sha256": "95dbd182153e5a030f6ee8bc7b806f109d6d27d817004fe3ba1c73c49add7867",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 76,
+          "output_page": 4,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "4105af1c69f6ac0495ca31ebf974e725c4f80b44294d8f56ab868396143cec16",
+          "rendered_png_sha256": "4105af1c69f6ac0495ca31ebf974e725c4f80b44294d8f56ab868396143cec16",
+          "rgb_pixels_sha256": "be22aac95610b3d2681340cbbfaa24ab3082a57e6250b11a99172ee9e043b760",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 77,
+          "output_page": 5,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "0ff06dd1557c55d587723d1b7566cba50d10d60aa9e858c53fc3c71484a863c2",
+          "rendered_png_sha256": "0ff06dd1557c55d587723d1b7566cba50d10d60aa9e858c53fc3c71484a863c2",
+          "rgb_pixels_sha256": "f63578cd668a16e278850c0027ae1d6b9f10ca3ffe34014025fbdbb6c179aa98",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 78,
+          "output_page": 6,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "cffd7aa21336cb6273c5239e5f479b01df6aba74d43c1374332aad5f6185cd47",
+          "rendered_png_sha256": "cffd7aa21336cb6273c5239e5f479b01df6aba74d43c1374332aad5f6185cd47",
+          "rgb_pixels_sha256": "9bc8be4712dc4d07745989f2b6fdbf5b76e0945a24ea94b4a1f46b025f0ece5b",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 79,
+          "output_page": 7,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "f0b4253877a8b39175e0745b20c1e27c9922fa80b1f7e2dc6d25b18afc91b790",
+          "rendered_png_sha256": "f0b4253877a8b39175e0745b20c1e27c9922fa80b1f7e2dc6d25b18afc91b790",
+          "rgb_pixels_sha256": "3606953dfd7f1a0ec258ba8ee70a96cdf35014986224b9b2b16980fac9feb99e",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 80,
+          "output_page": 8,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "7f25cb88871b7aca787c44b2a409a3fb3b80f1ac4a68fcf9f0e2f241555b02d1",
+          "rendered_png_sha256": "7f25cb88871b7aca787c44b2a409a3fb3b80f1ac4a68fcf9f0e2f241555b02d1",
+          "rgb_pixels_sha256": "511314a160d38c944bcaf468271213d9c80f42f6e1fcb37f70d58aacf1b422f8",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 81,
+          "output_page": 9,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "01b883cb0de8d8d2513d20c10c1da051d58e2b58c4fd42565642c25da6a46cc4",
+          "rendered_png_sha256": "01b883cb0de8d8d2513d20c10c1da051d58e2b58c4fd42565642c25da6a46cc4",
+          "rgb_pixels_sha256": "1218f73e6bafffe372ed867a364bdc5695d82a338cbbd40615fa0c5058b36f15",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 82,
+          "output_page": 10,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "a32482730de47229009aecc9c936f227c4fea894f7d10e1140e0862a1f0eaa14",
+          "rendered_png_sha256": "a32482730de47229009aecc9c936f227c4fea894f7d10e1140e0862a1f0eaa14",
+          "rgb_pixels_sha256": "b976507d02decd26501921f867531c60beec522d1251af541a565956ad7eb2aa",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 83,
+          "output_page": 11,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "63e5e14700798f13f4dc398669e23d77fe80a807cb0c005ed07c4cda1361f647",
+          "rendered_png_sha256": "63e5e14700798f13f4dc398669e23d77fe80a807cb0c005ed07c4cda1361f647",
+          "rgb_pixels_sha256": "6c91287e33bdca4ac1cf915f9d21093d227ad6cae31dd787f9cc87401ca909e6",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 84,
+          "output_page": 12,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "201aa7d527b66f5de21c57f0a203d37e54060c4ed11293675414e06a701ede3b",
+          "rendered_png_sha256": "201aa7d527b66f5de21c57f0a203d37e54060c4ed11293675414e06a701ede3b",
+          "rgb_pixels_sha256": "28abc670b5683561ee4d88106f8ded11ac0c552a47ed8adb76821d65e671b589",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 85,
+          "output_page": 13,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "cb08fcbfc34ec0c5dd0bc64ee636b79b9f5554e575aeb006f1ab7d195c334126",
+          "rendered_png_sha256": "cb08fcbfc34ec0c5dd0bc64ee636b79b9f5554e575aeb006f1ab7d195c334126",
+          "rgb_pixels_sha256": "f77298ca8a5bfd910ec220c4c7a873f3045111c411ff59d853f521731947d9fb",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 86,
+          "output_page": 14,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "e108a027d7837ff97fc963334a32e76a5fc3f29b5ca14138d8ed7aae5c7bd99c",
+          "rendered_png_sha256": "e108a027d7837ff97fc963334a32e76a5fc3f29b5ca14138d8ed7aae5c7bd99c",
+          "rgb_pixels_sha256": "1007c491b15c719d8ba05a4c2c1508ce9c9141c9a2ab32c69382bdf308c38c20",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 87,
+          "output_page": 15,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "644f448ce9451ab0d0c284af1f8d24be7625578b6908e3dfdd9905ed21d6a724",
+          "rendered_png_sha256": "644f448ce9451ab0d0c284af1f8d24be7625578b6908e3dfdd9905ed21d6a724",
+          "rgb_pixels_sha256": "5753bf97315a917c09fc4c7a189c12c379427f2bbed9fd53e21b91a7043096e1",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 88,
+          "output_page": 16,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "7ce725fc0d88a1894192245137ec5310169c1f2f210b994e949b33dfea7ded3f",
+          "rendered_png_sha256": "7ce725fc0d88a1894192245137ec5310169c1f2f210b994e949b33dfea7ded3f",
+          "rgb_pixels_sha256": "355406e19c08377ff51e0667a01ced81c788c985de7cee603335079bf5a18850",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 89,
+          "output_page": 17,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "43062afe9747ee41a95680bcca557ffb9e96b0e1710f8594f89b98d9b7af53ff",
+          "rendered_png_sha256": "43062afe9747ee41a95680bcca557ffb9e96b0e1710f8594f89b98d9b7af53ff",
+          "rgb_pixels_sha256": "459a600be6a8fcee6e236e878616f05c5c0424c55b4cba9af57f3e2d2841ca7a",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 90,
+          "output_page": 18,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "e3bda57771ac0de7364142b9b51609b9cdddd4a1263d984a61760db2fdc81e8e",
+          "rendered_png_sha256": "e3bda57771ac0de7364142b9b51609b9cdddd4a1263d984a61760db2fdc81e8e",
+          "rgb_pixels_sha256": "bd75916f18e935e50ada694c62596eeb631aedf438028db10f7131b2ac017274",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 91,
+          "output_page": 19,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "2abd48c745c9f3835869ccc8bcb5672860c714a0fd9ad6177f1590b10592c97e",
+          "rendered_png_sha256": "2abd48c745c9f3835869ccc8bcb5672860c714a0fd9ad6177f1590b10592c97e",
+          "rgb_pixels_sha256": "6a91d3f97a64e7bea09e5e55c9f5ed06e9af15a17e0bc6a68c978d47cd366324",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 92,
+          "output_page": 20,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "a187e482805860a347369afb42e98ab0190c34a853da8cdf7026bd328c92f000",
+          "rendered_png_sha256": "a187e482805860a347369afb42e98ab0190c34a853da8cdf7026bd328c92f000",
+          "rgb_pixels_sha256": "67214d4a68c1b13b7219949ae6a416da3e8ec5f04b07230c3a696172792c6ba7",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 93,
+          "output_page": 21,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "80f2b8af7972311d7ca687e1bb57097b72378f550009ec7b6ce1f8bce32a94fc",
+          "rendered_png_sha256": "80f2b8af7972311d7ca687e1bb57097b72378f550009ec7b6ce1f8bce32a94fc",
+          "rgb_pixels_sha256": "7fc6db80d9239b43160e39a8186f3dd435459f0d8ccb989851761dd5b19b5072",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 94,
+          "output_page": 22,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "907590aa9be6940fa5a9e8ed9fa501f4bb3ff2880e6a4131c25ebb9de112e404",
+          "rendered_png_sha256": "907590aa9be6940fa5a9e8ed9fa501f4bb3ff2880e6a4131c25ebb9de112e404",
+          "rgb_pixels_sha256": "56ac16f6aa23c313e9979c9b0813da9c87d00def75b71cc4bc43218ce0d36331",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 95,
+          "output_page": 23,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "d88027e2aecbc71b3d200e4969ed553538e863c9a1d897d2ede813a4e6ab03ff",
+          "rendered_png_sha256": "d88027e2aecbc71b3d200e4969ed553538e863c9a1d897d2ede813a4e6ab03ff",
+          "rgb_pixels_sha256": "a4123f914dd38f5834918656fb0f10ad1594fd77855c0b1e1434294f2e4e4a65",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 96,
+          "output_page": 24,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "c826abda55ba17d0f7a0d892395b9c335c4638735e26731e9a4ed7bdb42d5649",
+          "rendered_png_sha256": "c826abda55ba17d0f7a0d892395b9c335c4638735e26731e9a4ed7bdb42d5649",
+          "rgb_pixels_sha256": "27b0fbd72326452fa627f3ffb578062f6878e75429e2b751cd6e27431833c09d",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 97,
+          "output_page": 25,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "21c2a3031dee876fec5f929d5583f8552ef1904d0926ed962302d79791611f66",
+          "rendered_png_sha256": "21c2a3031dee876fec5f929d5583f8552ef1904d0926ed962302d79791611f66",
+          "rgb_pixels_sha256": "198669fb61c434fc731e7e33e8b6eb21e69ce2ec9b5d4510899e6911a9feaf3e",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 98,
+          "output_page": 26,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "eba7094894e8c83b2145608838be57a96e120ccb53efdd07ee691f7f01462e7b",
+          "rendered_png_sha256": "eba7094894e8c83b2145608838be57a96e120ccb53efdd07ee691f7f01462e7b",
+          "rgb_pixels_sha256": "4504d08345ce6f496689a6435b27dd8e17059ee06a062ef70535ae7b0aa33f25",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 99,
+          "output_page": 27,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "739a2a89a06348261743979b85e5c101670f98164816e81eb28b0270dde64a91",
+          "rendered_png_sha256": "739a2a89a06348261743979b85e5c101670f98164816e81eb28b0270dde64a91",
+          "rgb_pixels_sha256": "dda82466eee2af97370cd343460d21a7a2d7dbfd3fbfa2e6107a902d32bade6f",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 100,
+          "output_page": 28,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "f49d0552f2f0510f3866455e5da1e09ceef436528b04b3e3ca22b16cf2ac46a1",
+          "rendered_png_sha256": "f49d0552f2f0510f3866455e5da1e09ceef436528b04b3e3ca22b16cf2ac46a1",
+          "rgb_pixels_sha256": "c57c3f5a670d1032af547e08c12a8e9e5b970cbb7eadcfd77fa4d5973deda9b6",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 101,
+          "output_page": 29,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "b28383cf8eb95d6a28723efa3a812a504abb236b7b5847007e1467c788776bf8",
+          "rendered_png_sha256": "b28383cf8eb95d6a28723efa3a812a504abb236b7b5847007e1467c788776bf8",
+          "rgb_pixels_sha256": "0fa48051f82f6eb763a1d29abcbca48bf76e1d1b43eccacb6ccaafe9d727f7bb",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 102,
+          "output_page": 30,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "7b7c166bfd429a4785738613f8b74fd127ba66ddb04e8fe72929c6013301ecd6",
+          "rendered_png_sha256": "7b7c166bfd429a4785738613f8b74fd127ba66ddb04e8fe72929c6013301ecd6",
+          "rgb_pixels_sha256": "f2000ccd00c56c4296b22b4d0cfb2e4645f62ae340788f9c9a13c9a7ff795686",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 103,
+          "output_page": 31,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "166aa346a20d566488b9f8ade02a4c797c0dee5cf967a70ca1de33eee3ce818b",
+          "rendered_png_sha256": "166aa346a20d566488b9f8ade02a4c797c0dee5cf967a70ca1de33eee3ce818b",
+          "rgb_pixels_sha256": "1438019dd291c78f3ce50eaa8386ead8e143861b60e5dcb96ed2b9bff21438ad",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 104,
+          "output_page": 32,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "0062590c82e14538c3a9a33d0bb99963754268d6523bb4c39c1227f1936840c0",
+          "rendered_png_sha256": "0062590c82e14538c3a9a33d0bb99963754268d6523bb4c39c1227f1936840c0",
+          "rgb_pixels_sha256": "e696c1ea9eca8c4f492e24724ca20687795eeae22355d29134546c947510b211",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 105,
+          "output_page": 33,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "21b20c197392fc837c5f4efa69bf9c9d0cd06acf9110037487f634e08b3997bd",
+          "rendered_png_sha256": "21b20c197392fc837c5f4efa69bf9c9d0cd06acf9110037487f634e08b3997bd",
+          "rgb_pixels_sha256": "b4b0e2a7f2205fdc5bf257082fa496bcd6928535ed5fb74429a559f34d2edcb9",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 106,
+          "output_page": 34,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "9aedcc69223722f404419fa263f175f1d561c3420bb6ceff85ab7e1b9968b5e2",
+          "rendered_png_sha256": "9aedcc69223722f404419fa263f175f1d561c3420bb6ceff85ab7e1b9968b5e2",
+          "rgb_pixels_sha256": "781e5effe3ff8479bdc24de1360e786e40622687f944f5587c76f48e0566f653",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 107,
+          "output_page": 35,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "3c6a26ab9fc056fb2a761c6203a84a3239f5a1ded01a2ffce02a5656b5eedb04",
+          "rendered_png_sha256": "3c6a26ab9fc056fb2a761c6203a84a3239f5a1ded01a2ffce02a5656b5eedb04",
+          "rgb_pixels_sha256": "5641261d46fadea4867768af6f508ef97c243c1ccd83fb03b9f0e1f06892fb79",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        },
+        {
+          "original_page": 108,
+          "output_page": 36,
+          "dimensions": [
+            1600,
+            900
+          ],
+          "accepted_png_sha256": "67103fe84e65db88fc2d9835383c768341f811cdbe258d967d875ede11111d48",
+          "rendered_png_sha256": "67103fe84e65db88fc2d9835383c768341f811cdbe258d967d875ede11111d48",
+          "rgb_pixels_sha256": "6426d9e3cbfa62c0f71cbbbd73d04783f3ae0a6d49a2464445a1a066a61a80b8",
+          "pixel_equal": true,
+          "page_box_equal": true,
+          "text_equal": true
+        }
+      ]
+    }
+  ],
+  "content_stream_bytes_preserved": false,
+  "coordinate_normalization": {
+    "observed_across_two_paper_package": true,
+    "maximum_coordinate_difference_pt": 6.103515625e-05,
+    "displayed_image_pixel_dimensions_digest_and_scale_unchanged": true,
+    "all_96dpi_page_pixels_identical": true,
+    "original_complete_pdf_byte_identical_reconstruction_available": "../original_pdf/"
+  }
+}

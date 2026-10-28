@@ -1,0 +1,47 @@
+{
+  "paper_id": "BL0028",
+  "release_status": "passed project AI review and automated release gate",
+  "checked_at_utc": "2026-10-27T10:16:44.025953+00:00",
+  "html_sha256": "96c991190a252241b4e07bb1ba1b13d01b6b74b3a1443780d608eec300517887",
+  "pdf_sha256": "9c0503ae6f7ca08734b8c5c7bcf025d98f54f5f04d84775e0b340b1426142153",
+  "pages": 108,
+  "renderer": "WeasyPrint 70.0 (actual HTML print rendering, not Chromium)",
+  "release_gate": {
+    "passed": true,
+    "errors": [],
+    "warnings": []
+  },
+  "reviews": [
+    {
+      "role": "independent reviewer",
+      "reviewer_type": "AI, not human",
+      "status": "pass",
+      "pdf_sha256": "9c0503ae6f7ca08734b8c5c7bcf025d98f54f5f04d84775e0b340b1426142153",
+      "reviewed_pages": 108,
+      "reviewed_at": "2026-10-27T10:13:59.656127+00:00"
+    },
+    {
+      "role": "primary reviewer",
+      "reviewer_type": "AI, not human",
+      "status": "pass",
+      "pdf_sha256": "9c0503ae6f7ca08734b8c5c7bcf025d98f54f5f04d84775e0b340b1426142153",
+      "reviewed_pages": 108,
+      "reviewed_at": "2026-10-27T10:14:18Z"
+    }
+  ],
+  "review_method": "All 108 initial rendered pages were individually inspected. Six changed final pages were reopened and checked against source materials; the remaining 102 pages were verified byte-identical using their PNG SHA-256 hashes. Final approval is bound to the PDF SHA-256 above.",
+  "unresolved_release_findings": 0,
+  "limitations": [
+    "AI content and visual checks are not human scientific or legal review.",
+    "No experimental replication or independent model-performance validation.",
+    "No browser DOM overflow audit."
+  ],
+  "known_source_discrepancies": [
+    "965 total colonies versus 955 sum of species counts",
+    "E. coli 80% recovery at approximately 8 h versus 8.8 h in Discussion",
+    "Table S2 effective pixels are not directly reproduced by the stated Eq. (5) parameters"
+  ],
+  "source_file_changes": "None",
+  "teaching_changes": "Original PDF crops with separate Chinese teaching explanations and explicitly labeled examples.",
+  "pdf_container_derivative_note": "Readable volumes use resource pruning, lossless stream compression and content-stream floating-point canonicalization. No image resampling; source image pixel sizes/digests/scales, page sizes and extracted text are unchanged. All 96-dpi page pixels exactly match accepted PNGs. Original PDF bytes remain available through verified exact reconstruction."
+}

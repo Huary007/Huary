@@ -1,0 +1,17 @@
+{
+  "paper_id": "BL0028",
+  "status": "pass",
+  "original_html_restored_byte_identically": true,
+  "original_html_sha256": "96c991190a252241b4e07bb1ba1b13d01b6b74b3a1443780d608eec300517887",
+  "original_pdf_restored_byte_identically_from_optional_chunks": true,
+  "original_pdf_sha256": "9c0503ae6f7ca08734b8c5c7bcf025d98f54f5f04d84775e0b340b1426142153",
+  "logical_merge_all_pages_pixel_identical": true,
+  "logical_merge_pages": 108,
+  "logical_merge_is_original_byte_stream": false,
+  "logical_merge_pdf_sha256": "e1a98006906c5465d9276228f1b467fd5c9fb88c82cf8e7ea2e721d89ac529d0",
+  "scripts_tested": [
+    "restore_html.py",
+    "original_pdf/reassemble_pdf.py",
+    "merge_pdf_parts.py"
+  ]
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "main",
+    "path": "sources/Wang2020-main.pdf",
+    "source_url": "https://www.nature.com/articles/s41377-020-00358-9.pdf",
+    "actual_download_url": "https://innovate.ee.ucla.edu/wp-content/uploads/2020/07/s41377-020-00358-9.pdf",
+    "publisher_canonical_pdf_url": "https://www.nature.com/articles/s41377-020-00358-9.pdf",
+    "sha256": "5af107c648e3c224e6711ccc3e071acff9182e476a7259a6c988d4a8d61c58c6",
+    "copy_sha256": "5af107c648e3c224e6711ccc3e071acff9182e476a7259a6c988d4a8d61c58c6",
+    "unchanged": true,
+    "pages": 17,
+    "version": "publisher version of record",
+    "downloaded_at": "2026-10-27"
+  },
+  {
+    "id": "supplement",
+    "path": "sources/Wang2020-supplement.pdf",
+    "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41377-020-00358-9/MediaObjects/41377_2020_358_MOESM1_ESM.pdf",
+    "actual_download_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41377-020-00358-9/MediaObjects/41377_2020_358_MOESM1_ESM.pdf",
+    "publisher_canonical_pdf_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41377-020-00358-9/MediaObjects/41377_2020_358_MOESM1_ESM.pdf",
+    "sha256": "d31ce0e08ad938177a18f4af5e39a83c94df87cdef244539e2511f3b05021eaf",
+    "copy_sha256": "d31ce0e08ad938177a18f4af5e39a83c94df87cdef244539e2511f3b05021eaf",
+    "unchanged": true,
+    "pages": 11,
+    "version": "publisher supplementary information accompanying the version of record",
+    "downloaded_at": "2026-10-27"
+  }
+]
