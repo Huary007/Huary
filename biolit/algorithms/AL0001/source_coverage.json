@@ -1,0 +1,3957 @@
+{
+  "paper": {
+    "title": "Accurate predictions on small data with a tabular foundation model",
+    "doi": "10.1038/s41586-024-08328-6",
+    "publication": "Nature 637, 319–326 (2025)"
+  },
+  "license": "CC BY 4.0. Source figures and screenshots credited to Hollmann et al. (2025); cropped and arranged for teaching. https://creativecommons.org/licenses/by/4.0/",
+  "sources": [
+    {
+      "id": "main",
+      "pages": 23,
+      "description": "Article, Methods and Extended Data",
+      "source_url": "https://doi.org/10.1038/s41586-024-08328-6"
+    },
+    {
+      "id": "supp1",
+      "pages": 4,
+      "description": "Supplementary Information 1",
+      "source_url": "https://doi.org/10.1038/s41586-024-08328-6"
+    },
+    {
+      "id": "supp2",
+      "pages": 2,
+      "description": "Supplementary Information 2",
+      "source_url": "https://doi.org/10.1038/s41586-024-08328-6"
+    }
+  ],
+  "slides": [
+    {
+      "n": 1,
+      "title": "Accurate predictions on small data with a tabular foundation model",
+      "img": "cover_paper_title",
+      "source": "main",
+      "page": 1,
+      "locator": "论文英文原标题（PDF p1）",
+      "coverage": []
+    },
+    {
+      "n": 2,
+      "title": "阅读路线：从输入输出走到可复查证据",
+      "img": null,
+      "source": "main",
+      "page": null,
+      "locator": "目录",
+      "coverage": []
+    },
+    {
+      "n": 3,
+      "title": "论文题录与摘要原文概览",
+      "img": "s001",
+      "source": "main",
+      "page": 1,
+      "locator": "标题、题录与摘要原始区域",
+      "coverage": []
+    },
+    {
+      "n": 4,
+      "title": "摘要中的性能主张需要回到具体比较",
+      "img": "detail_Abstract_254",
+      "source": "main",
+      "page": 1,
+      "locator": "Abstract完整单栏段落",
+      "coverage": []
+    },
+    {
+      "n": 5,
+      "title": "小数据的困难来自异质性和独立任务",
+      "img": "s003",
+      "source": "main",
+      "page": 1,
+      "locator": "主文 p319，动机与适用范围",
+      "coverage": []
+    },
+    {
+      "n": 6,
+      "title": "同一列位置在不同任务中没有固定含义",
+      "img": "detail_p319tabulardatadiversity_255",
+      "source": "main",
+      "page": 1,
+      "locator": "主文p319，tabular-data diversity完整段",
+      "coverage": []
+    },
+    {
+      "n": 7,
+      "title": "异质特征和独立任务限制模型直接复用",
+      "img": "motivation_heterogeneity_large",
+      "source": "main",
+      "page": 1,
+      "locator": "主文p319，异质数据段与传统模型局限",
+      "coverage": []
+    },
+    {
+      "n": 8,
+      "title": "适用范围限定了后续结论",
+      "img": "motivation_scope_large",
+      "source": "main",
+      "page": 1,
+      "pages": [
+        1,
+        10
+      ],
+      "locator": "主文p319适用范围及Methods p10 Target generation",
+      "coverage": []
+    },
+    {
+      "n": 9,
+      "title": "一次离线预训练，多次整表上下文预测",
+      "img": "s004",
+      "source": "main",
+      "page": 2,
+      "locator": "图1a · 流程",
+      "coverage": [
+        "Fig1a"
+      ]
+    },
+    {
+      "n": 10,
+      "title": "输入是一张带已知与未知标签的表",
+      "img": "s005",
+      "source": "main",
+      "page": 2,
+      "locator": "Fig.1b，输入表与输出分布",
+      "coverage": [
+        "Fig1b.input",
+        "Fig1b.output"
+      ]
+    },
+    {
+      "n": 11,
+      "title": "每层依次交换同一行和同一列的信息",
+      "img": "s006",
+      "source": "main",
+      "page": 2,
+      "locator": "图1b · 二维架构",
+      "coverage": [
+        "Fig1b.attention",
+        "Fig1b.MLP",
+        "Fig1b.12layers"
+      ]
+    },
+    {
+      "n": 12,
+      "title": "注意力把相似性变成信息加权",
+      "img": "attention_clean",
+      "source": "main",
+      "page": 9,
+      "locator": "Methods，Details on neural architecture",
+      "coverage": []
+    },
+    {
+      "n": 13,
+      "title": "测试样本只能读取训练样本的状态",
+      "img": "mask_cache_clean",
+      "source": "main",
+      "page": 9,
+      "locator": "Methods，attention mask、feature embeddings、cache",
+      "coverage": []
+    },
+    {
+      "n": 14,
+      "title": "列顺序集成缓解排列敏感性",
+      "img": "permutation_grouping_clean",
+      "source": "main",
+      "page": 11,
+      "pages": [
+        11,
+        9
+      ],
+      "locator": "Methods，Inference details与PDF p9 feature grouping",
+      "coverage": []
+    },
+    {
+      "n": 15,
+      "title": "先验把算法偏好写进合成数据分布",
+      "img": "fixed_9",
+      "source": "main",
+      "page": 3,
+      "locator": "图2a · 数据集级采样",
+      "coverage": [
+        "Fig2a"
+      ]
+    },
+    {
+      "n": 16,
+      "title": "沿计算图生成变量，再选出观测列和目标",
+      "img": "fixed_10",
+      "source": "main",
+      "page": 3,
+      "locator": "图2b · 结构因果模型",
+      "coverage": [
+        "Fig2b.step1",
+        "Fig2b.step2",
+        "Fig2b.step3",
+        "Fig2b.step4",
+        "Fig2b.connectiontypes"
+      ]
+    },
+    {
+      "n": 17,
+      "title": "同一生成框架产生多种决策边界",
+      "img": "fixed_11",
+      "source": "main",
+      "page": 3,
+      "locator": "图2c · 最终数据",
+      "coverage": [
+        "Fig2c"
+      ]
+    },
+    {
+      "n": 18,
+      "title": "结构方程的各项都有明确作用",
+      "img": "scm_complete",
+      "source": "main",
+      "page": 9,
+      "pages": [
+        9,
+        10
+      ],
+      "locator": "Methods，SCM完整定义与先验解释（PDF p9–10）",
+      "coverage": []
+    },
+    {
+      "n": 19,
+      "title": "原型加权混合产生相关样本",
+      "img": "Eq1_correct",
+      "source": "main",
+      "page": 10,
+      "locator": "Methods，Eq.1，相关样本生成；其他后处理见同页",
+      "coverage": [
+        "Eq1"
+      ]
+    },
+    {
+      "n": 20,
+      "title": "类别索引经重新嵌入后继续传播",
+      "img": "detail_MethodsComputationaledgemappings2_211",
+      "source": "main",
+      "page": 10,
+      "locator": "Methods，Computational edge mappings，第2项",
+      "coverage": []
+    },
+    {
+      "n": 21,
+      "title": "后处理模拟分箱、非线性尺度和随机缺失",
+      "img": "detail_MethodsPostprocessing_212",
+      "source": "main",
+      "page": 10,
+      "locator": "Methods，Post-processing完整段",
+      "coverage": []
+    },
+    {
+      "n": 22,
+      "title": "交叉熵让网络逼近先验下的后验预测",
+      "img": "loss_clean",
+      "source": "main",
+      "page": 10,
+      "locator": "Methods，Training details；未编号 PFN loss",
+      "coverage": [
+        "PFN_loss"
+      ]
+    },
+    {
+      "n": 23,
+      "title": "用两个假设演示后验预测的含义",
+      "img": "s015",
+      "source": "main",
+      "page": 2,
+      "locator": "主文 p320，Bayesian posterior predictive explanation",
+      "coverage": []
+    },
+    {
+      "n": 24,
+      "title": "“几秒预测”不包括先前的大规模预训练",
+      "img": "training_clean",
+      "source": "main",
+      "page": 10,
+      "locator": "Methods，Training details",
+      "coverage": []
+    },
+    {
+      "n": 25,
+      "title": "预处理只用训练信息，缺失另加标记",
+      "img": "preprocess_clean",
+      "source": "main",
+      "page": 9,
+      "locator": "Methods，PDF p9输入编码与缺失标记两段",
+      "coverage": []
+    },
+    {
+      "n": 26,
+      "title": "默认预测平均分类4路、回归8路",
+      "img": "detail_MethodsDefaultconfigurationofTabPFN_213",
+      "source": "main",
+      "page": 12,
+      "locator": "Methods，Default configuration of TabPFN完整段",
+      "coverage": []
+    },
+    {
+      "n": 27,
+      "title": "回归头预测分箱概率，并还原目标尺度",
+      "img": "regression_complete",
+      "source": "main",
+      "page": 11,
+      "locator": "Methods，Regression details（PDF p11左栏底部接右栏顶部）",
+      "coverage": []
+    },
+    {
+      "n": 28,
+      "title": "温度改变概率尖锐度，特征乘积补充交互",
+      "img": "eq23_clean",
+      "source": "main",
+      "page": 11,
+      "locator": "Methods，Eq.2–3",
+      "coverage": [
+        "Eq2",
+        "Eq3"
+      ]
+    },
+    {
+      "n": 29,
+      "title": "PHE用验证预测挑选一组互补模型",
+      "img": "phe_correct",
+      "source": "main",
+      "page": 11,
+      "locator": "Methods，TabPFN (PHE)；random forest preprocessing",
+      "coverage": []
+    },
+    {
+      "n": 30,
+      "title": "随机树将训练表分成较小上下文",
+      "img": "detail_MethodsDatagroupingbasedonrandomforest_214",
+      "source": "main",
+      "page": 11,
+      "locator": "Methods，Data grouping based on random forest完整段",
+      "coverage": []
+    },
+    {
+      "n": 31,
+      "title": "先固定实验设计，再看排行榜",
+      "img": "evaluation_splits_clean",
+      "source": "main",
+      "page": 12,
+      "locator": "Methods，Metrics and cross-validation",
+      "coverage": []
+    },
+    {
+      "n": 32,
+      "title": "主测试集包含29个分类和28个回归任务",
+      "img": "detail_Methodsclassificationregressionbenchmark_221",
+      "source": "main",
+      "page": 12,
+      "locator": "Methods，classification与regression benchmark范围",
+      "coverage": []
+    },
+    {
+      "n": 33,
+      "title": "调参预算与硬件共同限定速度比较",
+      "img": "budget_hardware_complete",
+      "source": "main",
+      "page": 12,
+      "pages": [
+        12,
+        13
+      ],
+      "locator": "Methods，HPO预算与硬件，PDF p12–13",
+      "coverage": []
+    },
+    {
+      "n": 34,
+      "title": "归一化平均分不能当成真实AUC或RMSE",
+      "img": "metrics_normalization_clean",
+      "source": "main",
+      "page": 12,
+      "locator": "Methods，normalization；Supplementary Tables1–4",
+      "coverage": []
+    },
+    {
+      "n": 35,
+      "title": "平滑函数考验插值，非光滑函数考验边界",
+      "img": "fixed_23",
+      "source": "main",
+      "page": 4,
+      "locator": "图3a · 前三列",
+      "coverage": [
+        "Fig3a.sin",
+        "Fig3a.square",
+        "Fig3a.abs"
+      ]
+    },
+    {
+      "n": 36,
+      "title": "阶跃与噪声显示不同归纳偏好",
+      "img": "fig3a_right_clean",
+      "source": "main",
+      "page": 4,
+      "locator": "图3a · 后三列",
+      "coverage": [
+        "Fig3a.step",
+        "Fig3a.homoscedastic",
+        "Fig3a.heteroscedastic"
+      ]
+    },
+    {
+      "n": 37,
+      "title": "多峰分布示例：随狭缝宽度改变条纹",
+      "img": "fixed_25",
+      "source": "main",
+      "page": 4,
+      "locator": "图3b · 上排",
+      "coverage": [
+        "Fig3b.width"
+      ]
+    },
+    {
+      "n": 38,
+      "title": "多峰分布示例：随狭缝间距改变条纹",
+      "img": "fig3b_bottom_clean",
+      "source": "main",
+      "page": 4,
+      "locator": "图3b · 下排",
+      "coverage": [
+        "Fig3b.separation"
+      ]
+    },
+    {
+      "n": 39,
+      "title": "分类默认与调优都领先主要单模型",
+      "img": "s027",
+      "source": "main",
+      "page": 5,
+      "locator": "图4a · 分类",
+      "coverage": [
+        "Fig4a.classification.auc",
+        "Fig4a.classification.accuracy"
+      ]
+    },
+    {
+      "n": 40,
+      "title": "回归也提升，但调参收益与分类不同",
+      "img": "s028",
+      "source": "main",
+      "page": 5,
+      "locator": "图4a · 回归",
+      "coverage": [
+        "Fig4a.regression.rmse",
+        "Fig4a.regression.r2"
+      ]
+    },
+    {
+      "n": 41,
+      "title": "平均领先仍允许部分数据集失利",
+      "img": "s029",
+      "source": "main",
+      "page": 5,
+      "locator": "图4b · 分类",
+      "coverage": [
+        "Fig4b.classification.default",
+        "Fig4b.classification.tuned"
+      ]
+    },
+    {
+      "n": 42,
+      "title": "回归的胜负必须回到具体数据集",
+      "img": "s030",
+      "source": "main",
+      "page": 5,
+      "locator": "图4b · 回归",
+      "coverage": [
+        "Fig4b.regression.default",
+        "Fig4b.regression.tuned"
+      ]
+    },
+    {
+      "n": 43,
+      "title": "分类速度比较计入拟合与预测",
+      "img": "s031",
+      "source": "main",
+      "page": 5,
+      "locator": "图4c · 分类",
+      "coverage": [
+        "Fig4c.classification"
+      ]
+    },
+    {
+      "n": 44,
+      "title": "回归默认快，更多预算仍能改善",
+      "img": "s032",
+      "source": "main",
+      "page": 5,
+      "locator": "图4c · 回归",
+      "coverage": [
+        "Fig4c.regression"
+      ]
+    },
+    {
+      "n": 45,
+      "title": "无关特征与离群值的受控扰动",
+      "img": "fig5a_upper_complete",
+      "source": "main",
+      "page": 6,
+      "locator": "图5a · 左上两图",
+      "coverage": [
+        "Fig5a.uninformative",
+        "Fig5a.outlier"
+      ]
+    },
+    {
+      "n": 46,
+      "title": "减少样本与减少特征都会损失信息",
+      "img": "fig5a_lower_complete",
+      "source": "main",
+      "page": 6,
+      "locator": "图5a · 左下两图",
+      "coverage": [
+        "Fig5a.drop_samples",
+        "Fig5a.drop_features"
+      ]
+    },
+    {
+      "n": 47,
+      "title": "类别列和缺失值分组内仍有优势",
+      "img": "fig5b_upper_complete",
+      "source": "main",
+      "page": 6,
+      "locator": "图5b · 上排",
+      "coverage": [
+        "Fig5b.missing",
+        "Fig5b.categorical"
+      ]
+    },
+    {
+      "n": 48,
+      "title": "样本与特征分组仍受评测范围约束",
+      "img": "fig5b_lower_complete",
+      "source": "main",
+      "page": 6,
+      "locator": "图5b · 下排",
+      "coverage": [
+        "Fig5b.samples",
+        "Fig5b.features"
+      ]
+    },
+    {
+      "n": 49,
+      "title": "分类PHE进一步超过AutoGluon",
+      "img": "s037",
+      "source": "main",
+      "page": 6,
+      "locator": "图5c",
+      "coverage": [
+        "Fig5c.winrate",
+        "Fig5c.time"
+      ]
+    },
+    {
+      "n": 50,
+      "title": "回归对集成与调参更敏感",
+      "img": "s038",
+      "source": "main",
+      "page": 6,
+      "locator": "图5d",
+      "coverage": [
+        "Fig5d.winrate",
+        "Fig5d.time"
+      ]
+    },
+    {
+      "n": 51,
+      "title": "密度估计给出样本是否常见的线索",
+      "img": "fixed_39",
+      "source": "main",
+      "page": 7,
+      "locator": "图6a",
+      "coverage": [
+        "Fig6a"
+      ]
+    },
+    {
+      "n": 52,
+      "title": "链式分解将预测器组合为联合密度",
+      "img": "density_equations_clean",
+      "source": "main",
+      "page": 11,
+      "locator": "Methods，Eq.4–5",
+      "coverage": [
+        "Eq4",
+        "Eq5"
+      ]
+    },
+    {
+      "n": 53,
+      "title": "24种列顺序降低密度估计的顺序变异",
+      "img": "density_continuation_complete",
+      "source": "main",
+      "page": 12,
+      "pages": [
+        11,
+        12
+      ],
+      "locator": "Methods，Eq.5续文与Janossy Pooling，p11–12",
+      "coverage": []
+    },
+    {
+      "n": 54,
+      "title": "逐列采样能生成相似表格行",
+      "img": "fixed_41",
+      "source": "main",
+      "page": 7,
+      "locator": "图6b",
+      "coverage": [
+        "Fig6b"
+      ]
+    },
+    {
+      "n": 55,
+      "title": "目标位置的隐藏表示可当作样本嵌入",
+      "img": "s042",
+      "source": "main",
+      "page": 7,
+      "locator": "图6c",
+      "coverage": [
+        "Fig6c.rawPCA",
+        "Fig6c.embeddingPCA"
+      ]
+    },
+    {
+      "n": 56,
+      "title": "相关任务微调可以改变预测偏好",
+      "img": "s043",
+      "source": "main",
+      "page": 7,
+      "locator": "图6d",
+      "coverage": [
+        "Fig6d.train",
+        "Fig6d.default",
+        "Fig6d.finetuned"
+      ]
+    },
+    {
+      "n": 57,
+      "title": "类别数和类平衡对相对表现的影响有限",
+      "img": "ed1_left_clean",
+      "source": "main",
+      "page": 14,
+      "locator": "扩展图1 · 左半",
+      "coverage": [
+        "EDFig1.classes",
+        "EDFig1.balanced"
+      ]
+    },
+    {
+      "n": 58,
+      "title": "目标离群值组的差异更值得复查",
+      "img": "ed1_right_clean",
+      "source": "main",
+      "page": 14,
+      "locator": "扩展图1 · 右半",
+      "coverage": [
+        "EDFig1.feature_sample_ratio",
+        "EDFig1.target_outliers"
+      ]
+    },
+    {
+      "n": 59,
+      "title": "类别特征基准扩展到7个任务",
+      "img": "s046",
+      "source": "main",
+      "page": 15,
+      "locator": "扩展图2a",
+      "coverage": [
+        "EDFig2a"
+      ]
+    },
+    {
+      "n": 60,
+      "title": "数值特征基准扩展到15个任务",
+      "img": "s047",
+      "source": "main",
+      "page": 15,
+      "locator": "扩展图2b",
+      "coverage": [
+        "EDFig2b"
+      ]
+    },
+    {
+      "n": 61,
+      "title": "TabZilla筛选后包含102个任务",
+      "img": "s048",
+      "source": "main",
+      "page": 15,
+      "locator": "扩展图2c",
+      "coverage": [
+        "EDFig2c"
+      ]
+    },
+    {
+      "n": 62,
+      "title": "给树基线GPU没有改变本文排序",
+      "img": "s049",
+      "source": "main",
+      "page": 15,
+      "locator": "扩展图2d",
+      "coverage": [
+        "EDFig2d"
+      ]
+    },
+    {
+      "n": 63,
+      "title": "SHAP示例：信用金额的局部贡献",
+      "img": "s050",
+      "source": "main",
+      "page": 16,
+      "locator": "扩展图3 · 信用金额",
+      "coverage": [
+        "EDFig3.信用金额.logistic",
+        "EDFig3.信用金额.tabpfn",
+        "EDFig3.信用金额.catboost"
+      ]
+    },
+    {
+      "n": 64,
+      "title": "SHAP示例：年龄的局部贡献",
+      "img": "shap_age_labels",
+      "source": "main",
+      "page": 16,
+      "locator": "扩展图3 · 年龄",
+      "coverage": [
+        "EDFig3.年龄.logistic",
+        "EDFig3.年龄.tabpfn",
+        "EDFig3.年龄.catboost"
+      ]
+    },
+    {
+      "n": 65,
+      "title": "SHAP示例：期限的局部贡献",
+      "img": "shap_duration_labels",
+      "source": "main",
+      "page": 16,
+      "locator": "扩展图3 · 期限",
+      "coverage": [
+        "EDFig3.期限.logistic",
+        "EDFig3.期限.tabpfn",
+        "EDFig3.期限.catboost"
+      ]
+    },
+    {
+      "n": 66,
+      "title": "微调分布偏移用二维正弦任务控制",
+      "img": "s053",
+      "source": "main",
+      "page": 17,
+      "locator": "扩展图4a",
+      "coverage": [
+        "EDFig4a.train0",
+        "EDFig4a.trainpi",
+        "EDFig4a.test0",
+        "EDFig4a.testpi"
+      ]
+    },
+    {
+      "n": 67,
+      "title": "50次微调显示相近任务迁移更强",
+      "img": "s054",
+      "source": "main",
+      "page": 17,
+      "locator": "扩展图4b · 损失与分数",
+      "coverage": [
+        "EDFig4b.trainloss",
+        "EDFig4b.testloss",
+        "EDFig4b.accuracy",
+        "EDFig4b.auc"
+      ]
+    },
+    {
+      "n": 68,
+      "title": "扩展表1：29个分类任务的汇总成绩（1/5）",
+      "img": "EDT1_overview1",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；全列、完整连续行段1/5",
+      "coverage": [
+        "EDTable1.overview.rows1"
+      ]
+    },
+    {
+      "n": 69,
+      "title": "扩展表1：29个分类任务的汇总成绩（2/5）",
+      "img": "EDT1_overview2",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；全列、完整连续行段2/5",
+      "coverage": [
+        "EDTable1.overview.rows2"
+      ]
+    },
+    {
+      "n": 70,
+      "title": "扩展表1：29个分类任务的汇总成绩（3/5）",
+      "img": "EDT1_overview3",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；全列、完整连续行段3/5",
+      "coverage": [
+        "EDTable1.overview.rows3"
+      ]
+    },
+    {
+      "n": 71,
+      "title": "扩展表1：29个分类任务的汇总成绩（4/5）",
+      "img": "EDT1_overview4",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；全列、完整连续行段4/5",
+      "coverage": [
+        "EDTable1.overview.rows4"
+      ]
+    },
+    {
+      "n": 72,
+      "title": "扩展表1：29个分类任务的汇总成绩（5/5）",
+      "img": "EDT1_overview5",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；全列、完整连续行段5/5",
+      "coverage": [
+        "EDTable1.overview.rows5"
+      ]
+    },
+    {
+      "n": 73,
+      "title": "扩展表2：28个回归任务的汇总成绩（1/5）",
+      "img": "EDT2_overview1",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；全列、完整连续行段1/5",
+      "coverage": [
+        "EDTable2.overview.rows1"
+      ]
+    },
+    {
+      "n": 74,
+      "title": "扩展表2：28个回归任务的汇总成绩（2/5）",
+      "img": "EDT2_overview2",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；全列、完整连续行段2/5",
+      "coverage": [
+        "EDTable2.overview.rows2"
+      ]
+    },
+    {
+      "n": 75,
+      "title": "扩展表2：28个回归任务的汇总成绩（3/5）",
+      "img": "EDT2_overview3",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；全列、完整连续行段3/5",
+      "coverage": [
+        "EDTable2.overview.rows3"
+      ]
+    },
+    {
+      "n": 76,
+      "title": "扩展表2：28个回归任务的汇总成绩（4/5）",
+      "img": "EDT2_overview4",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；全列、完整连续行段4/5",
+      "coverage": [
+        "EDTable2.overview.rows4"
+      ]
+    },
+    {
+      "n": 77,
+      "title": "扩展表2：28个回归任务的汇总成绩（5/5）",
+      "img": "EDT2_overview5",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；全列、完整连续行段5/5",
+      "coverage": [
+        "EDTable2.overview.rows5"
+      ]
+    },
+    {
+      "n": 78,
+      "title": "扩展表3：分类测试数据清单（1/3）",
+      "img": "EDT3_overview1",
+      "source": "main",
+      "page": 20,
+      "locator": "Extended Data Table3；全列、完整连续行段1/3",
+      "coverage": [
+        "EDTable3.overview.rows1"
+      ]
+    },
+    {
+      "n": 79,
+      "title": "扩展表3：分类测试数据清单（2/3）",
+      "img": "EDT3_overview2",
+      "source": "main",
+      "page": 20,
+      "locator": "Extended Data Table3；全列、完整连续行段2/3",
+      "coverage": [
+        "EDTable3.overview.rows2"
+      ]
+    },
+    {
+      "n": 80,
+      "title": "扩展表3：分类测试数据清单（3/3）",
+      "img": "EDT3_overview3",
+      "source": "main",
+      "page": 20,
+      "locator": "Extended Data Table3；全列、完整连续行段3/3",
+      "coverage": [
+        "EDTable3.overview.rows3"
+      ]
+    },
+    {
+      "n": 81,
+      "title": "扩展表4：回归测试数据清单（1/3）",
+      "img": "EDT4_overview1",
+      "source": "main",
+      "page": 21,
+      "locator": "Extended Data Table4；全列、完整连续行段1/3",
+      "coverage": [
+        "EDTable4.overview.rows1"
+      ]
+    },
+    {
+      "n": 82,
+      "title": "扩展表4：回归测试数据清单（2/3）",
+      "img": "EDT4_overview2",
+      "source": "main",
+      "page": 21,
+      "locator": "Extended Data Table4；全列、完整连续行段2/3",
+      "coverage": [
+        "EDTable4.overview.rows2"
+      ]
+    },
+    {
+      "n": 83,
+      "title": "扩展表4：回归测试数据清单（3/3）",
+      "img": "EDT4_overview3",
+      "source": "main",
+      "page": 21,
+      "locator": "Extended Data Table4；全列、完整连续行段3/3",
+      "coverage": [
+        "EDTable4.overview.rows3"
+      ]
+    },
+    {
+      "n": 84,
+      "title": "TabPFN默认设置与可搜索设置不同（1/2）",
+      "img": "EDT5a_overview1",
+      "source": "main",
+      "page": 22,
+      "locator": "Extended Data Table5a，全列参数行段1/2",
+      "coverage": [
+        "EDTable5a.overview.rows1"
+      ]
+    },
+    {
+      "n": 85,
+      "title": "TabPFN默认设置与可搜索设置不同（2/2）",
+      "img": "EDT5a_overview2",
+      "source": "main",
+      "page": 22,
+      "locator": "Extended Data Table5a，全列参数行段2/2",
+      "coverage": [
+        "EDTable5a.overview.rows2"
+      ]
+    },
+    {
+      "n": 86,
+      "title": "基线搜索空间决定调参预算的含义：MLP与随机森林",
+      "img": "overview_MLP与随机森林",
+      "source": "main",
+      "page": 22,
+      "locator": "Extended Data Table5，MLP与随机森林完整搜索空间",
+      "coverage": [
+        "EDTable5b.MLP",
+        "EDTable5b.RF",
+        "EDTable5b.SVM",
+        "EDTable5b.CatBoost"
+      ]
+    },
+    {
+      "n": 87,
+      "title": "基线搜索空间决定调参预算的含义：SVM与CatBoost",
+      "img": "overview_SVM与CatBoost",
+      "source": "main",
+      "page": 22,
+      "locator": "Extended Data Table5，SVM与CatBoost完整搜索空间",
+      "coverage": [
+        "EDTable5b.MLP",
+        "EDTable5b.RF",
+        "EDTable5b.SVM",
+        "EDTable5b.CatBoost"
+      ]
+    },
+    {
+      "n": 88,
+      "title": "XGBoost与LightGBM也采用随机搜索：XGBoost",
+      "img": "overview_XGBoost",
+      "source": "main",
+      "page": 22,
+      "locator": "Extended Data Table5，XGBoost完整搜索空间",
+      "coverage": [
+        "EDTable5c.XGB",
+        "EDTable5c.LGBM"
+      ]
+    },
+    {
+      "n": 89,
+      "title": "XGBoost与LightGBM也采用随机搜索：LightGBM",
+      "img": "overview_LightGBM",
+      "source": "main",
+      "page": 22,
+      "locator": "Extended Data Table5，LightGBM完整搜索空间",
+      "coverage": [
+        "EDTable5c.XGB",
+        "EDTable5c.LGBM"
+      ]
+    },
+    {
+      "n": 90,
+      "title": "五个Kaggle任务均改善，但比较只含原始数据",
+      "img": "kaggle_table_complete",
+      "source": "main",
+      "page": 23,
+      "locator": "Extended Data Table6，全部5个任务与指标",
+      "coverage": [
+        "EDTable6.all"
+      ]
+    },
+    {
+      "n": 91,
+      "title": "Kaggle比较使用原始数据和默认模型",
+      "img": "kaggle_caption_full",
+      "source": "main",
+      "page": 23,
+      "locator": "Extended Data Table6完整表注",
+      "coverage": []
+    },
+    {
+      "n": 92,
+      "title": "Kaggle表注限定了对照设置与分数口径",
+      "img": "kaggle_caption_enlarged",
+      "source": "main",
+      "page": 23,
+      "locator": "Extended Data Table6完整表注，原文逐行分段重排",
+      "coverage": []
+    },
+    {
+      "n": 93,
+      "title": "补表1：第1–18行，模型组1/4",
+      "img": "ST1_r1_18_g1",
+      "source": "supp1",
+      "page": 1,
+      "locator": "Supplementary Table 1；PDF p1；原文列分组重排，数值未改",
+      "coverage": [
+        "STable1.rows1-18.cols1,2,3"
+      ]
+    },
+    {
+      "n": 94,
+      "title": "补表1：第1–18行，模型组2/4",
+      "img": "ST1_r1_18_g2",
+      "source": "supp1",
+      "page": 1,
+      "locator": "Supplementary Table 1；PDF p1；原文列分组重排，数值未改",
+      "coverage": [
+        "STable1.rows1-18.cols4,5,6"
+      ]
+    },
+    {
+      "n": 95,
+      "title": "补表1：第1–18行，模型组3/4",
+      "img": "ST1_r1_18_g3",
+      "source": "supp1",
+      "page": 1,
+      "locator": "Supplementary Table 1；PDF p1；原文列分组重排，数值未改",
+      "coverage": [
+        "STable1.rows1-18.cols7,8,9"
+      ]
+    },
+    {
+      "n": 96,
+      "title": "补表1：第1–18行，模型组4/4",
+      "img": "ST1_r1_18_g4",
+      "source": "supp1",
+      "page": 1,
+      "locator": "Supplementary Table 1；PDF p1；原文列分组重排，数值未改",
+      "coverage": [
+        "STable1.rows1-18.cols10,11"
+      ]
+    },
+    {
+      "n": 97,
+      "title": "补表1：第19–29行，模型组1/4",
+      "img": "ST1_r19_29_g1",
+      "source": "supp1",
+      "page": 1,
+      "locator": "Supplementary Table 1；PDF p1；原文列分组重排，数值未改",
+      "coverage": [
+        "STable1.rows19-29.cols1,2,3"
+      ]
+    },
+    {
+      "n": 98,
+      "title": "补表1：第19–29行，模型组2/4",
+      "img": "ST1_r19_29_g2",
+      "source": "supp1",
+      "page": 1,
+      "locator": "Supplementary Table 1；PDF p1；原文列分组重排，数值未改",
+      "coverage": [
+        "STable1.rows19-29.cols4,5,6"
+      ]
+    },
+    {
+      "n": 99,
+      "title": "补表1：第19–29行，模型组3/4",
+      "img": "ST1_r19_29_g3",
+      "source": "supp1",
+      "page": 1,
+      "locator": "Supplementary Table 1；PDF p1；原文列分组重排，数值未改",
+      "coverage": [
+        "STable1.rows19-29.cols7,8,9"
+      ]
+    },
+    {
+      "n": 100,
+      "title": "补表1：第19–29行，模型组4/4",
+      "img": "ST1_r19_29_g4",
+      "source": "supp1",
+      "page": 1,
+      "locator": "Supplementary Table 1；PDF p1；原文列分组重排，数值未改",
+      "coverage": [
+        "STable1.rows19-29.cols10,11"
+      ]
+    },
+    {
+      "n": 101,
+      "title": "补表2：第1–18行，模型组1/4",
+      "img": "ST2_r1_18_g1",
+      "source": "supp1",
+      "page": 2,
+      "locator": "Supplementary Table 2；PDF p2；原文列分组重排，数值未改",
+      "coverage": [
+        "STable2.rows1-18.cols1,2,3"
+      ]
+    },
+    {
+      "n": 102,
+      "title": "补表2：第1–18行，模型组2/4",
+      "img": "ST2_r1_18_g2",
+      "source": "supp1",
+      "page": 2,
+      "locator": "Supplementary Table 2；PDF p2；原文列分组重排，数值未改",
+      "coverage": [
+        "STable2.rows1-18.cols4,5,6"
+      ]
+    },
+    {
+      "n": 103,
+      "title": "补表2：第1–18行，模型组3/4",
+      "img": "ST2_r1_18_g3",
+      "source": "supp1",
+      "page": 2,
+      "locator": "Supplementary Table 2；PDF p2；原文列分组重排，数值未改",
+      "coverage": [
+        "STable2.rows1-18.cols7,8,9"
+      ]
+    },
+    {
+      "n": 104,
+      "title": "补表2：第1–18行，模型组4/4",
+      "img": "ST2_r1_18_g4",
+      "source": "supp1",
+      "page": 2,
+      "locator": "Supplementary Table 2；PDF p2；原文列分组重排，数值未改",
+      "coverage": [
+        "STable2.rows1-18.cols10,11"
+      ]
+    },
+    {
+      "n": 105,
+      "title": "补表2：第19–28行，模型组1/4",
+      "img": "ST2_r19_28_g1",
+      "source": "supp1",
+      "page": 2,
+      "locator": "Supplementary Table 2；PDF p2；原文列分组重排，数值未改",
+      "coverage": [
+        "STable2.rows19-28.cols1,2,3"
+      ]
+    },
+    {
+      "n": 106,
+      "title": "补表2：第19–28行，模型组2/4",
+      "img": "ST2_r19_28_g2",
+      "source": "supp1",
+      "page": 2,
+      "locator": "Supplementary Table 2；PDF p2；原文列分组重排，数值未改",
+      "coverage": [
+        "STable2.rows19-28.cols4,5,6"
+      ]
+    },
+    {
+      "n": 107,
+      "title": "补表2：第19–28行，模型组3/4",
+      "img": "ST2_r19_28_g3",
+      "source": "supp1",
+      "page": 2,
+      "locator": "Supplementary Table 2；PDF p2；原文列分组重排，数值未改",
+      "coverage": [
+        "STable2.rows19-28.cols7,8,9"
+      ]
+    },
+    {
+      "n": 108,
+      "title": "补表2：第19–28行，模型组4/4",
+      "img": "ST2_r19_28_g4",
+      "source": "supp1",
+      "page": 2,
+      "locator": "Supplementary Table 2；PDF p2；原文列分组重排，数值未改",
+      "coverage": [
+        "STable2.rows19-28.cols10,11"
+      ]
+    },
+    {
+      "n": 109,
+      "title": "补表3：第1–18行，模型组1/4",
+      "img": "ST3_r1_18_g1",
+      "source": "supp1",
+      "page": 3,
+      "locator": "Supplementary Table 3；PDF p3；原文列分组重排，数值未改",
+      "coverage": [
+        "STable3.rows1-18.cols1,2,3"
+      ]
+    },
+    {
+      "n": 110,
+      "title": "补表3：第1–18行，模型组2/4",
+      "img": "ST3_r1_18_g2",
+      "source": "supp1",
+      "page": 3,
+      "locator": "Supplementary Table 3；PDF p3；原文列分组重排，数值未改",
+      "coverage": [
+        "STable3.rows1-18.cols4,5,6"
+      ]
+    },
+    {
+      "n": 111,
+      "title": "补表3：第1–18行，模型组3/4",
+      "img": "ST3_r1_18_g3",
+      "source": "supp1",
+      "page": 3,
+      "locator": "Supplementary Table 3；PDF p3；原文列分组重排，数值未改",
+      "coverage": [
+        "STable3.rows1-18.cols7,8,9"
+      ]
+    },
+    {
+      "n": 112,
+      "title": "补表3：第1–18行，模型组4/4",
+      "img": "ST3_r1_18_g4",
+      "source": "supp1",
+      "page": 3,
+      "locator": "Supplementary Table 3；PDF p3；原文列分组重排，数值未改",
+      "coverage": [
+        "STable3.rows1-18.cols10,11"
+      ]
+    },
+    {
+      "n": 113,
+      "title": "补表3：第19–22行，模型组1/4",
+      "img": "ST3_r19_22_g1",
+      "source": "supp1",
+      "page": 3,
+      "locator": "Supplementary Table 3；PDF p3；原文列分组重排，数值未改",
+      "coverage": [
+        "STable3.rows19-22.cols1,2,3"
+      ]
+    },
+    {
+      "n": 114,
+      "title": "补表3：第19–22行，模型组2/4",
+      "img": "ST3_r19_22_g2",
+      "source": "supp1",
+      "page": 3,
+      "locator": "Supplementary Table 3；PDF p3；原文列分组重排，数值未改",
+      "coverage": [
+        "STable3.rows19-22.cols4,5,6"
+      ]
+    },
+    {
+      "n": 115,
+      "title": "补表3：第19–22行，模型组3/4",
+      "img": "ST3_r19_22_g3",
+      "source": "supp1",
+      "page": 3,
+      "locator": "Supplementary Table 3；PDF p3；原文列分组重排，数值未改",
+      "coverage": [
+        "STable3.rows19-22.cols7,8,9"
+      ]
+    },
+    {
+      "n": 116,
+      "title": "补表3：第19–22行，模型组4/4",
+      "img": "ST3_r19_22_g4",
+      "source": "supp1",
+      "page": 3,
+      "locator": "Supplementary Table 3；PDF p3；原文列分组重排，数值未改",
+      "coverage": [
+        "STable3.rows19-22.cols10,11"
+      ]
+    },
+    {
+      "n": 117,
+      "title": "补表4：第1–18行，模型组1/4",
+      "img": "ST4_r1_18_g1",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows1-18.cols1,2,3"
+      ]
+    },
+    {
+      "n": 118,
+      "title": "补表4：第1–18行，模型组2/4",
+      "img": "ST4_r1_18_g2",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows1-18.cols4,5,6"
+      ]
+    },
+    {
+      "n": 119,
+      "title": "补表4：第1–18行，模型组3/4",
+      "img": "ST4_r1_18_g3",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows1-18.cols7,8,9"
+      ]
+    },
+    {
+      "n": 120,
+      "title": "补表4：第1–18行，模型组4/4",
+      "img": "ST4_r1_18_g4",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows1-18.cols10,11"
+      ]
+    },
+    {
+      "n": 121,
+      "title": "补表4：第19–36行，模型组1/4",
+      "img": "ST4_r19_36_g1",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows19-36.cols1,2,3"
+      ]
+    },
+    {
+      "n": 122,
+      "title": "补表4：第19–36行，模型组2/4",
+      "img": "ST4_r19_36_g2",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows19-36.cols4,5,6"
+      ]
+    },
+    {
+      "n": 123,
+      "title": "补表4：第19–36行，模型组3/4",
+      "img": "ST4_r19_36_g3",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows19-36.cols7,8,9"
+      ]
+    },
+    {
+      "n": 124,
+      "title": "补表4：第19–36行，模型组4/4",
+      "img": "ST4_r19_36_g4",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows19-36.cols10,11"
+      ]
+    },
+    {
+      "n": 125,
+      "title": "补表4：第37–54行，模型组1/4",
+      "img": "ST4_r37_54_g1",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows37-54.cols1,2,3"
+      ]
+    },
+    {
+      "n": 126,
+      "title": "补表4：第37–54行，模型组2/4",
+      "img": "ST4_r37_54_g2",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows37-54.cols4,5,6"
+      ]
+    },
+    {
+      "n": 127,
+      "title": "补表4：第37–54行，模型组3/4",
+      "img": "ST4_r37_54_g3",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows37-54.cols7,8,9"
+      ]
+    },
+    {
+      "n": 128,
+      "title": "补表4：第37–54行，模型组4/4",
+      "img": "ST4_r37_54_g4",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows37-54.cols10,11"
+      ]
+    },
+    {
+      "n": 129,
+      "title": "补表4：第55–72行，模型组1/4",
+      "img": "ST4_r55_72_g1",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows55-72.cols1,2,3"
+      ]
+    },
+    {
+      "n": 130,
+      "title": "补表4：第55–72行，模型组2/4",
+      "img": "ST4_r55_72_g2",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows55-72.cols4,5,6"
+      ]
+    },
+    {
+      "n": 131,
+      "title": "补表4：第55–72行，模型组3/4",
+      "img": "ST4_r55_72_g3",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows55-72.cols7,8,9"
+      ]
+    },
+    {
+      "n": 132,
+      "title": "补表4：第55–72行，模型组4/4",
+      "img": "ST4_r55_72_g4",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows55-72.cols10,11"
+      ]
+    },
+    {
+      "n": 133,
+      "title": "补表4：第73–90行，模型组1/4",
+      "img": "ST4_r73_90_g1",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows73-90.cols1,2,3"
+      ]
+    },
+    {
+      "n": 134,
+      "title": "补表4：第73–90行，模型组2/4",
+      "img": "ST4_r73_90_g2",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows73-90.cols4,5,6"
+      ]
+    },
+    {
+      "n": 135,
+      "title": "补表4：第73–90行，模型组3/4",
+      "img": "ST4_r73_90_g3",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows73-90.cols7,8,9"
+      ]
+    },
+    {
+      "n": 136,
+      "title": "补表4：第73–90行，模型组4/4",
+      "img": "ST4_r73_90_g4",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows73-90.cols10,11"
+      ]
+    },
+    {
+      "n": 137,
+      "title": "补表4：第91–102行，模型组1/4",
+      "img": "ST4_r91_102_g1",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows91-102.cols1,2,3"
+      ]
+    },
+    {
+      "n": 138,
+      "title": "补表4：第91–102行，模型组2/4",
+      "img": "ST4_r91_102_g2",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows91-102.cols4,5,6"
+      ]
+    },
+    {
+      "n": 139,
+      "title": "补表4：第91–102行，模型组3/4",
+      "img": "ST4_r91_102_g3",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows91-102.cols7,8,9"
+      ]
+    },
+    {
+      "n": 140,
+      "title": "补表4：第91–102行，模型组4/4",
+      "img": "ST4_r91_102_g4",
+      "source": "supp1",
+      "page": 4,
+      "locator": "Supplementary Table 4；PDF p4；原文列分组重排，数值未改",
+      "coverage": [
+        "STable4.rows91-102.cols10,11"
+      ]
+    },
+    {
+      "n": 141,
+      "title": "补表5：开发数据集第1–15行",
+      "img": "ST5_r1_15",
+      "source": "supp2",
+      "page": 1,
+      "locator": "Supplementary Table 5；supp2 PDF p1，印刷页5；原图续表",
+      "coverage": [
+        "STable5.rows1-15"
+      ]
+    },
+    {
+      "n": 142,
+      "title": "补表5：开发数据集第16–30行",
+      "img": "ST5_r16_30",
+      "source": "supp2",
+      "page": 1,
+      "locator": "Supplementary Table 5；supp2 PDF p1，印刷页5；原图续表",
+      "coverage": [
+        "STable5.rows16-30"
+      ]
+    },
+    {
+      "n": 143,
+      "title": "补表5：开发数据集第31–45行",
+      "img": "ST5_r31_45",
+      "source": "supp2",
+      "page": 1,
+      "locator": "Supplementary Table 5；supp2 PDF p1，印刷页5；原图续表",
+      "coverage": [
+        "STable5.rows31-45"
+      ]
+    },
+    {
+      "n": 144,
+      "title": "补表5：开发数据集第46–57行",
+      "img": "ST5_r46_57",
+      "source": "supp2",
+      "page": 1,
+      "locator": "Supplementary Table 5；supp2 PDF p1，印刷页5；原图续表",
+      "coverage": [
+        "STable5.rows46-57"
+      ]
+    },
+    {
+      "n": 145,
+      "title": "补表6：开发数据集第1–15行",
+      "img": "ST6_r1_15",
+      "source": "supp2",
+      "page": 2,
+      "locator": "Supplementary Table 6；supp2 PDF p2，印刷页6；原图续表",
+      "coverage": [
+        "STable6.rows1-15"
+      ]
+    },
+    {
+      "n": 146,
+      "title": "补表6：开发数据集第16–30行",
+      "img": "ST6_r16_30",
+      "source": "supp2",
+      "page": 2,
+      "locator": "Supplementary Table 6；supp2 PDF p2，印刷页6；原图续表",
+      "coverage": [
+        "STable6.rows16-30"
+      ]
+    },
+    {
+      "n": 147,
+      "title": "补表6：开发数据集第31–45行",
+      "img": "ST6_r31_45",
+      "source": "supp2",
+      "page": 2,
+      "locator": "Supplementary Table 6；supp2 PDF p2，印刷页6；原图续表",
+      "coverage": [
+        "STable6.rows31-45"
+      ]
+    },
+    {
+      "n": 148,
+      "title": "补表6：开发数据集第46–54行",
+      "img": "ST6_r46_54",
+      "source": "supp2",
+      "page": 2,
+      "locator": "Supplementary Table 6；supp2 PDF p2，印刷页6；原图续表",
+      "coverage": [
+        "STable6.rows46-54"
+      ]
+    },
+    {
+      "n": 149,
+      "title": "扩展表1放大：归一化指标（行段1/5）",
+      "img": "EDT1_g1_r1",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组1，行段1",
+      "coverage": [
+        "EDTable1.detail.g1.r1"
+      ]
+    },
+    {
+      "n": 150,
+      "title": "扩展表1放大：归一化指标（行段2/5）",
+      "img": "EDT1_g1_r2",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组1，行段2",
+      "coverage": [
+        "EDTable1.detail.g1.r2"
+      ]
+    },
+    {
+      "n": 151,
+      "title": "扩展表1放大：归一化指标（行段3/5）",
+      "img": "EDT1_g1_r3",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组1，行段3",
+      "coverage": [
+        "EDTable1.detail.g1.r3"
+      ]
+    },
+    {
+      "n": 152,
+      "title": "扩展表1放大：归一化指标（行段4/5）",
+      "img": "EDT1_g1_r4",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组1，行段4",
+      "coverage": [
+        "EDTable1.detail.g1.r4"
+      ]
+    },
+    {
+      "n": 153,
+      "title": "扩展表1放大：归一化指标（行段5/5）",
+      "img": "EDT1_g1_r5",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组1，行段5",
+      "coverage": [
+        "EDTable1.detail.g1.r5"
+      ]
+    },
+    {
+      "n": 154,
+      "title": "扩展表1放大：原始均值（行段1/5）",
+      "img": "EDT1_g2_r1",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组2，行段1",
+      "coverage": [
+        "EDTable1.detail.g2.r1"
+      ]
+    },
+    {
+      "n": 155,
+      "title": "扩展表1放大：原始均值（行段2/5）",
+      "img": "EDT1_g2_r2",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组2，行段2",
+      "coverage": [
+        "EDTable1.detail.g2.r2"
+      ]
+    },
+    {
+      "n": 156,
+      "title": "扩展表1放大：原始均值（行段3/5）",
+      "img": "EDT1_g2_r3",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组2，行段3",
+      "coverage": [
+        "EDTable1.detail.g2.r3"
+      ]
+    },
+    {
+      "n": 157,
+      "title": "扩展表1放大：原始均值（行段4/5）",
+      "img": "EDT1_g2_r4",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组2，行段4",
+      "coverage": [
+        "EDTable1.detail.g2.r4"
+      ]
+    },
+    {
+      "n": 158,
+      "title": "扩展表1放大：原始均值（行段5/5）",
+      "img": "EDT1_g2_r5",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组2，行段5",
+      "coverage": [
+        "EDTable1.detail.g2.r5"
+      ]
+    },
+    {
+      "n": 159,
+      "title": "扩展表1放大：获胜次数与耗时（行段1/5）",
+      "img": "EDT1_g3_r1",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组3，行段1",
+      "coverage": [
+        "EDTable1.detail.g3.r1"
+      ]
+    },
+    {
+      "n": 160,
+      "title": "扩展表1放大：获胜次数与耗时（行段2/5）",
+      "img": "EDT1_g3_r2",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组3，行段2",
+      "coverage": [
+        "EDTable1.detail.g3.r2"
+      ]
+    },
+    {
+      "n": 161,
+      "title": "扩展表1放大：获胜次数与耗时（行段3/5）",
+      "img": "EDT1_g3_r3",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组3，行段3",
+      "coverage": [
+        "EDTable1.detail.g3.r3"
+      ]
+    },
+    {
+      "n": 162,
+      "title": "扩展表1放大：获胜次数与耗时（行段4/5）",
+      "img": "EDT1_g3_r4",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组3，行段4",
+      "coverage": [
+        "EDTable1.detail.g3.r4"
+      ]
+    },
+    {
+      "n": 163,
+      "title": "扩展表1放大：获胜次数与耗时（行段5/5）",
+      "img": "EDT1_g3_r5",
+      "source": "main",
+      "page": 18,
+      "locator": "Extended Data Table1；列组3，行段5",
+      "coverage": [
+        "EDTable1.detail.g3.r5"
+      ]
+    },
+    {
+      "n": 164,
+      "title": "扩展表2放大：归一化指标（行段1/5）",
+      "img": "EDT2_g1_r1",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组1，行段1",
+      "coverage": [
+        "EDTable2.detail.g1.r1"
+      ]
+    },
+    {
+      "n": 165,
+      "title": "扩展表2放大：归一化指标（行段2/5）",
+      "img": "EDT2_g1_r2",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组1，行段2",
+      "coverage": [
+        "EDTable2.detail.g1.r2"
+      ]
+    },
+    {
+      "n": 166,
+      "title": "扩展表2放大：归一化指标（行段3/5）",
+      "img": "EDT2_g1_r3",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组1，行段3",
+      "coverage": [
+        "EDTable2.detail.g1.r3"
+      ]
+    },
+    {
+      "n": 167,
+      "title": "扩展表2放大：归一化指标（行段4/5）",
+      "img": "EDT2_g1_r4",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组1，行段4",
+      "coverage": [
+        "EDTable2.detail.g1.r4"
+      ]
+    },
+    {
+      "n": 168,
+      "title": "扩展表2放大：归一化指标（行段5/5）",
+      "img": "EDT2_g1_r5",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组1，行段5",
+      "coverage": [
+        "EDTable2.detail.g1.r5"
+      ]
+    },
+    {
+      "n": 169,
+      "title": "扩展表2放大：Mean列汇总（行段1/5）",
+      "img": "EDT2_g2_r1",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组2，行段1",
+      "coverage": [
+        "EDTable2.detail.g2.r1"
+      ]
+    },
+    {
+      "n": 170,
+      "title": "扩展表2放大：Mean列汇总（行段2/5）",
+      "img": "EDT2_g2_r2",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组2，行段2",
+      "coverage": [
+        "EDTable2.detail.g2.r2"
+      ]
+    },
+    {
+      "n": 171,
+      "title": "扩展表2放大：Mean列汇总（行段3/5）",
+      "img": "EDT2_g2_r3",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组2，行段3",
+      "coverage": [
+        "EDTable2.detail.g2.r3"
+      ]
+    },
+    {
+      "n": 172,
+      "title": "扩展表2放大：Mean列汇总（行段4/5）",
+      "img": "EDT2_g2_r4",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组2，行段4",
+      "coverage": [
+        "EDTable2.detail.g2.r4"
+      ]
+    },
+    {
+      "n": 173,
+      "title": "扩展表2放大：Mean列汇总（行段5/5）",
+      "img": "EDT2_g2_r5",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组2，行段5",
+      "coverage": [
+        "EDTable2.detail.g2.r5"
+      ]
+    },
+    {
+      "n": 174,
+      "title": "扩展表2放大：获胜次数与耗时（行段1/5）",
+      "img": "EDT2_g3_r1",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组3，行段1",
+      "coverage": [
+        "EDTable2.detail.g3.r1"
+      ]
+    },
+    {
+      "n": 175,
+      "title": "扩展表2放大：获胜次数与耗时（行段2/5）",
+      "img": "EDT2_g3_r2",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组3，行段2",
+      "coverage": [
+        "EDTable2.detail.g3.r2"
+      ]
+    },
+    {
+      "n": 176,
+      "title": "扩展表2放大：获胜次数与耗时（行段3/5）",
+      "img": "EDT2_g3_r3",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组3，行段3",
+      "coverage": [
+        "EDTable2.detail.g3.r3"
+      ]
+    },
+    {
+      "n": 177,
+      "title": "扩展表2放大：获胜次数与耗时（行段4/5）",
+      "img": "EDT2_g3_r4",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组3，行段4",
+      "coverage": [
+        "EDTable2.detail.g3.r4"
+      ]
+    },
+    {
+      "n": 178,
+      "title": "扩展表2放大：获胜次数与耗时（行段5/5）",
+      "img": "EDT2_g3_r5",
+      "source": "main",
+      "page": 19,
+      "locator": "Extended Data Table2；列组3，行段5",
+      "coverage": [
+        "EDTable2.detail.g3.r5"
+      ]
+    },
+    {
+      "n": 179,
+      "title": "扩展表3放大：测试集清单（1/3）",
+      "img": "EDT3_detail1",
+      "source": "main",
+      "page": 20,
+      "locator": "Extended Data Table3；连续行段1/3",
+      "coverage": [
+        "EDTable3.detail.r1"
+      ]
+    },
+    {
+      "n": 180,
+      "title": "扩展表3放大：测试集清单（2/3）",
+      "img": "EDT3_detail2",
+      "source": "main",
+      "page": 20,
+      "locator": "Extended Data Table3；连续行段2/3",
+      "coverage": [
+        "EDTable3.detail.r2"
+      ]
+    },
+    {
+      "n": 181,
+      "title": "扩展表3放大：测试集清单（3/3）",
+      "img": "EDT3_detail3",
+      "source": "main",
+      "page": 20,
+      "locator": "Extended Data Table3；连续行段3/3",
+      "coverage": [
+        "EDTable3.detail.r3"
+      ]
+    },
+    {
+      "n": 182,
+      "title": "扩展表4放大：测试集清单（1/3）",
+      "img": "EDT4_detail1",
+      "source": "main",
+      "page": 21,
+      "locator": "Extended Data Table4；连续行段1/3",
+      "coverage": [
+        "EDTable4.detail.r1"
+      ]
+    },
+    {
+      "n": 183,
+      "title": "扩展表4放大：测试集清单（2/3）",
+      "img": "EDT4_detail2",
+      "source": "main",
+      "page": 21,
+      "locator": "Extended Data Table4；连续行段2/3",
+      "coverage": [
+        "EDTable4.detail.r2"
+      ]
+    },
+    {
+      "n": 184,
+      "title": "扩展表4放大：测试集清单（3/3）",
+      "img": "EDT4_detail3",
+      "source": "main",
+      "page": 21,
+      "locator": "Extended Data Table4；连续行段3/3",
+      "coverage": [
+        "EDTable4.detail.r3"
+      ]
+    },
+    {
+      "n": 185,
+      "title": "扩展表5a放大：参数与默认值（1/2）",
+      "img": "EDT5a_g1_r1",
+      "source": "main",
+      "page": 22,
+      "locator": "Extended Data Table5a；列组1，行段1",
+      "coverage": [
+        "EDTable5a.detail.g1.r1"
+      ]
+    },
+    {
+      "n": 186,
+      "title": "扩展表5a放大：参数与默认值（2/2）",
+      "img": "EDT5a_g1_r2",
+      "source": "main",
+      "page": 22,
+      "locator": "Extended Data Table5a；列组1，行段2",
+      "coverage": [
+        "EDTable5a.detail.g1.r2"
+      ]
+    },
+    {
+      "n": 187,
+      "title": "扩展表5a放大：参数与搜索空间（1/2）",
+      "img": "EDT5a_g2_r1",
+      "source": "main",
+      "page": 22,
+      "locator": "Extended Data Table5a；列组2，行段1",
+      "coverage": [
+        "EDTable5a.detail.g2.r1"
+      ]
+    },
+    {
+      "n": 188,
+      "title": "扩展表5a放大：参数与搜索空间（2/2）",
+      "img": "EDT5a_g2_r2",
+      "source": "main",
+      "page": 22,
+      "locator": "Extended Data Table5a；列组2，行段2",
+      "coverage": [
+        "EDTable5a.detail.g2.r2"
+      ]
+    },
+    {
+      "n": 189,
+      "title": "扩展表5放大：MLP与随机森林",
+      "img": "s163",
+      "source": "main",
+      "page": 22,
+      "locator": "扩展表5 · 基线搜索空间",
+      "coverage": [
+        "EDTable5.b.MLP.RF.detail"
+      ]
+    },
+    {
+      "n": 190,
+      "title": "扩展表5放大：SVM与CatBoost",
+      "img": "s164",
+      "source": "main",
+      "page": 22,
+      "locator": "扩展表5 · 基线搜索空间",
+      "coverage": [
+        "EDTable5.b.SVM.CatBoost.detail"
+      ]
+    },
+    {
+      "n": 191,
+      "title": "扩展表5放大：XGBoost",
+      "img": "s165",
+      "source": "main",
+      "page": 22,
+      "locator": "扩展表5 · 基线搜索空间",
+      "coverage": [
+        "EDTable5.c.XGB.detail"
+      ]
+    },
+    {
+      "n": 192,
+      "title": "扩展表5放大：LightGBM",
+      "img": "s166",
+      "source": "main",
+      "page": 22,
+      "locator": "扩展表5 · 基线搜索空间",
+      "coverage": [
+        "EDTable5.c.LGBM.detail"
+      ]
+    },
+    {
+      "n": 193,
+      "title": "负结果说明平均冠军不能替代任务验证",
+      "img": "negative_correct",
+      "source": "supp1",
+      "page": 2,
+      "locator": "Supplementary Table2 energy_efficiency行与对应表头，原截图分列重排",
+      "coverage": []
+    },
+    {
+      "n": 194,
+      "title": "快速拟合与快速在线推理是两项指标",
+      "img": "latency_correct",
+      "source": "main",
+      "page": 9,
+      "locator": "Methods，Limitations；Computational and time requirements",
+      "coverage": []
+    },
+    {
+      "n": 195,
+      "title": "复现要分开核对模型、数据和先验",
+      "img": "s125",
+      "source": "main",
+      "page": 13,
+      "locator": "Data/Code availability；不一致另见p12与EDTable5",
+      "coverage": []
+    },
+    {
+      "n": 196,
+      "title": "小样本研究可以把TabPFN放进嵌套对照",
+      "img": "baselines_correct",
+      "source": "main",
+      "page": 12,
+      "locator": "Methods，Baselines与benchmark；教学对照设计",
+      "coverage": []
+    },
+    {
+      "n": 197,
+      "title": "这篇论文支持哪一步，又留下哪一步",
+      "img": "conclusion_correct",
+      "source": "main",
+      "page": 7,
+      "locator": "主文 Conclusion；future directions",
+      "coverage": []
+    },
+    {
+      "n": 198,
+      "title": "带走这四点",
+      "img": null,
+      "source": "main",
+      "page": null,
+      "locator": "末页",
+      "coverage": []
+    }
+  ],
+  "assets": [
+    {
+      "id": "s001",
+      "source": "main",
+      "pdf_page": 1,
+      "locator": "标题与摘要",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "485a996601648af3c272c6d1ecb8ea3b74e0bab774891f05ccab2225c4d1bc63",
+      "file": "assets/s001.png"
+    },
+    {
+      "id": "s003",
+      "source": "main",
+      "pdf_page": 1,
+      "locator": "主文 p319，动机与适用范围",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "7cb865cbb44838cd82bd69dcc20722c6a5990896bfb04da764bfb53e2c5227d8",
+      "file": "assets/s003.png"
+    },
+    {
+      "id": "s004",
+      "source": "main",
+      "pdf_page": 2,
+      "locator": "图1a · 流程",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "f42348d8b499cb82032023128de040f756e41b51240c408bdec2421c225d4fb2",
+      "file": "assets/s004.png"
+    },
+    {
+      "id": "s005",
+      "source": "main",
+      "pdf_page": 2,
+      "locator": "Fig.1b，输入表与输出分布",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "5a55b2cd7f57ed99e3a42a65eee57c6cb72489fa62a87c76ceeca08880807935",
+      "file": "assets/s005.png"
+    },
+    {
+      "id": "s006",
+      "source": "main",
+      "pdf_page": 2,
+      "locator": "图1b · 二维架构",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "5a55b2cd7f57ed99e3a42a65eee57c6cb72489fa62a87c76ceeca08880807935",
+      "file": "assets/s006.png"
+    },
+    {
+      "id": "s015",
+      "source": "main",
+      "pdf_page": 2,
+      "locator": "主文 p320，Bayesian posterior predictive explanation",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "4db33e2bf8ae8eb7be1fb12edea4613169f857ced84124b97c84b6b30c487cff",
+      "file": "assets/s015.png"
+    },
+    {
+      "id": "s027",
+      "source": "main",
+      "pdf_page": 5,
+      "locator": "图4a · 分类",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "e11e5ee6531d521ac65f676a0c5e41949bee912788cc7a295997b9f8412ca6d7",
+      "file": "assets/s027.png"
+    },
+    {
+      "id": "s028",
+      "source": "main",
+      "pdf_page": 5,
+      "locator": "图4a · 回归",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "2c6969275db286c7ae3aa84048e88987e37668c4b3eafb95382e6f17051320ad",
+      "file": "assets/s028.png"
+    },
+    {
+      "id": "s029",
+      "source": "main",
+      "pdf_page": 5,
+      "locator": "图4b · 分类",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "ba9c3539bf179ae3a6f258cbc71b1b4e36f0e18215c3af593fd64f743ce5796b",
+      "file": "assets/s029.png"
+    },
+    {
+      "id": "s030",
+      "source": "main",
+      "pdf_page": 5,
+      "locator": "图4b · 回归",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "c194c36de4d11b4c472b7b4f24bce6fbc068550a5ad7bd445fe6562601151154",
+      "file": "assets/s030.png"
+    },
+    {
+      "id": "s031",
+      "source": "main",
+      "pdf_page": 5,
+      "locator": "图4c · 分类",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "43714debd10da83d69ce12725fed68828d0aa72a9374de8151e85c83df0bff55",
+      "file": "assets/s031.png"
+    },
+    {
+      "id": "s032",
+      "source": "main",
+      "pdf_page": 5,
+      "locator": "图4c · 回归",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "54c8dbeb34f77fe861a39d994b26419839dcf1f28c12dbcde456ec9ef801893a",
+      "file": "assets/s032.png"
+    },
+    {
+      "id": "s037",
+      "source": "main",
+      "pdf_page": 6,
+      "locator": "图5c",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "503fc34751facfb892bedc0ab0fa93a02ff47b4151e3ca2519e09ea285569c33",
+      "file": "assets/s037.png"
+    },
+    {
+      "id": "s038",
+      "source": "main",
+      "pdf_page": 6,
+      "locator": "图5d",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "01d91f35fd8daf82ac9acaa7f893a129d29fd5be06e5b3f601b6522cd9c1830b",
+      "file": "assets/s038.png"
+    },
+    {
+      "id": "s042",
+      "source": "main",
+      "pdf_page": 7,
+      "locator": "图6c",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "91ed20ea7b051e7536b3856d14886d7a0f3a135c0f2807a03014c1b396938477",
+      "file": "assets/s042.png"
+    },
+    {
+      "id": "s043",
+      "source": "main",
+      "pdf_page": 7,
+      "locator": "图6d",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "cb0b61bbb8235258c88736b50b157b30e9c4f98fd697638d2349d3f09fe088b5",
+      "file": "assets/s043.png"
+    },
+    {
+      "id": "s046",
+      "source": "main",
+      "pdf_page": 15,
+      "locator": "扩展图2a",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "f45079493736ba0f1d7b9b05169c6837be9f804dec8a825fe942bfe9f3af5b8b",
+      "file": "assets/s046.png"
+    },
+    {
+      "id": "s047",
+      "source": "main",
+      "pdf_page": 15,
+      "locator": "扩展图2b",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "08e1e4d5584a0742116eba6d7c3f747ee38545991c47ab0eab212f4e8d7cbc06",
+      "file": "assets/s047.png"
+    },
+    {
+      "id": "s048",
+      "source": "main",
+      "pdf_page": 15,
+      "locator": "扩展图2c",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "be091ce2c45438cccfe083b5fc3281e2f6d558a26e9222ba75280e38c6b9006f",
+      "file": "assets/s048.png"
+    },
+    {
+      "id": "s049",
+      "source": "main",
+      "pdf_page": 15,
+      "locator": "扩展图2d",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "fc095110a0a19f74fd603e8173766a8e003bbe006f2668cf37ee780c357a2fb8",
+      "file": "assets/s049.png"
+    },
+    {
+      "id": "s050",
+      "source": "main",
+      "pdf_page": 16,
+      "locator": "扩展图3 · 信用金额",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "fd712928997cb211e8befac4f8c5a389a979a0d9684f8fd3f84ed5f8675cdd9d",
+      "file": "assets/s050.png"
+    },
+    {
+      "id": "s053",
+      "source": "main",
+      "pdf_page": 17,
+      "locator": "扩展图4a",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "05afbc1096565906c2ea4a0506d51a0e1c61fc94cd2d6a04ec3fbbcd778e83e6",
+      "file": "assets/s053.png"
+    },
+    {
+      "id": "s054",
+      "source": "main",
+      "pdf_page": 17,
+      "locator": "扩展图4b · 损失与分数",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "dd9ca9568aeca8252a5930ee1bda0d4f5949811f430666ab3db8375a541d6112",
+      "file": "assets/s054.png"
+    },
+    {
+      "id": "ST1_r1_18_g1",
+      "source": "supp1",
+      "pdf_page": 1,
+      "locator": "Supplementary Table 1; rows 1–18; columns Dataset Name, Task (Dataset), AutoGluon, CatBoost, KNN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "8325b3d712b5a4d0292d29cc6ec75fc160b6373db3165d439cd68054a329f234",
+      "file": "assets/ST1_r1_18_g1.png"
+    },
+    {
+      "id": "ST1_r1_18_g2",
+      "source": "supp1",
+      "pdf_page": 1,
+      "locator": "Supplementary Table 1; rows 1–18; columns Dataset Name, Task (Dataset), LightGBM, RF, Logistic Regression",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "d3772c115e5171598c03885d9df12a9c17208e021247fe4d02b4636e34a009ab",
+      "file": "assets/ST1_r1_18_g2.png"
+    },
+    {
+      "id": "ST1_r1_18_g3",
+      "source": "supp1",
+      "pdf_page": 1,
+      "locator": "Supplementary Table 1; rows 1–18; columns Dataset Name, Task (Dataset), MLP, SVM, XGB",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "0d6e77169e537b1cfdc6306035f038872fd1a0a7248efb901952f5f16a959d62",
+      "file": "assets/ST1_r1_18_g3.png"
+    },
+    {
+      "id": "ST1_r1_18_g4",
+      "source": "supp1",
+      "pdf_page": 1,
+      "locator": "Supplementary Table 1; rows 1–18; columns Dataset Name, Task (Dataset), TabPFN (PHE), TabPFN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "ff7cf082d42641be33160734839b8e1463610f87316a3906623d0b2a0183efde",
+      "file": "assets/ST1_r1_18_g4.png"
+    },
+    {
+      "id": "ST1_r19_29_g1",
+      "source": "supp1",
+      "pdf_page": 1,
+      "locator": "Supplementary Table 1; rows 19–29; columns Dataset Name, Task (Dataset), AutoGluon, CatBoost, KNN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "2be0d688f19a729893e0baa6e618c4502547cfb042bfe152971cee2e6f56b71f",
+      "file": "assets/ST1_r19_29_g1.png"
+    },
+    {
+      "id": "ST1_r19_29_g2",
+      "source": "supp1",
+      "pdf_page": 1,
+      "locator": "Supplementary Table 1; rows 19–29; columns Dataset Name, Task (Dataset), LightGBM, RF, Logistic Regression",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "e8487754c62fda26a2fbb5d7ef4af0bf21710fcaefc02bd0b7146704e59309f7",
+      "file": "assets/ST1_r19_29_g2.png"
+    },
+    {
+      "id": "ST1_r19_29_g3",
+      "source": "supp1",
+      "pdf_page": 1,
+      "locator": "Supplementary Table 1; rows 19–29; columns Dataset Name, Task (Dataset), MLP, SVM, XGB",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "59e595aa1e3f4defc700694a89b9e927a68f133be7328b93a77c89322af313db",
+      "file": "assets/ST1_r19_29_g3.png"
+    },
+    {
+      "id": "ST1_r19_29_g4",
+      "source": "supp1",
+      "pdf_page": 1,
+      "locator": "Supplementary Table 1; rows 19–29; columns Dataset Name, Task (Dataset), TabPFN (PHE), TabPFN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "74758b6105b51b5bd6b635140c17a9c672047492870545a00b0081487cb6b607",
+      "file": "assets/ST1_r19_29_g4.png"
+    },
+    {
+      "id": "ST2_r1_18_g1",
+      "source": "supp1",
+      "pdf_page": 2,
+      "locator": "Supplementary Table 2; rows 1–18; columns Dataset Name, Task (Dataset), AutoGluon, CatBoost, KNN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "b12a34709208bc80af570834a3cdfa29eb55f804bf81cd3541219e209551a405",
+      "file": "assets/ST2_r1_18_g1.png"
+    },
+    {
+      "id": "ST2_r1_18_g2",
+      "source": "supp1",
+      "pdf_page": 2,
+      "locator": "Supplementary Table 2; rows 1–18; columns Dataset Name, Task (Dataset), LightGBM, RF, Linear Regression",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "66cf1464d6f1f928d4160fc17de3d4de757f5ed386d4812bbabd777be3d5061f",
+      "file": "assets/ST2_r1_18_g2.png"
+    },
+    {
+      "id": "ST2_r1_18_g3",
+      "source": "supp1",
+      "pdf_page": 2,
+      "locator": "Supplementary Table 2; rows 1–18; columns Dataset Name, Task (Dataset), MLP, SVM, XGB",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "d2fe629f80e188c7cb9824ccf2617f4312145d9c08d110218aed82f4c48e19e0",
+      "file": "assets/ST2_r1_18_g3.png"
+    },
+    {
+      "id": "ST2_r1_18_g4",
+      "source": "supp1",
+      "pdf_page": 2,
+      "locator": "Supplementary Table 2; rows 1–18; columns Dataset Name, Task (Dataset), TabPFN (PHE), TabPFN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "9d6c7566915078a81daec6f10314f115b7031d4d6fb3766a0938b92f14e7a9a4",
+      "file": "assets/ST2_r1_18_g4.png"
+    },
+    {
+      "id": "ST2_r19_28_g1",
+      "source": "supp1",
+      "pdf_page": 2,
+      "locator": "Supplementary Table 2; rows 19–28; columns Dataset Name, Task (Dataset), AutoGluon, CatBoost, KNN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "4f852721cc5b447315edc703dc6d78cb137802847e5eb77d0dc090d459ab4d8c",
+      "file": "assets/ST2_r19_28_g1.png"
+    },
+    {
+      "id": "ST2_r19_28_g2",
+      "source": "supp1",
+      "pdf_page": 2,
+      "locator": "Supplementary Table 2; rows 19–28; columns Dataset Name, Task (Dataset), LightGBM, RF, Linear Regression",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "50eb5b14616298743005b5c9a9958fe64a6b82454b1483f4079ec3e2fbbae1e8",
+      "file": "assets/ST2_r19_28_g2.png"
+    },
+    {
+      "id": "ST2_r19_28_g3",
+      "source": "supp1",
+      "pdf_page": 2,
+      "locator": "Supplementary Table 2; rows 19–28; columns Dataset Name, Task (Dataset), MLP, SVM, XGB",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "85d51e964973b22bdb7bc137b48fd0891993e9578eb5425bf0792d1cbfb59b72",
+      "file": "assets/ST2_r19_28_g3.png"
+    },
+    {
+      "id": "ST2_r19_28_g4",
+      "source": "supp1",
+      "pdf_page": 2,
+      "locator": "Supplementary Table 2; rows 19–28; columns Dataset Name, Task (Dataset), TabPFN (PHE), TabPFN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "26c62b365738463a21d78efe6483611f5081137fb7427f17b07d86e1b0add670",
+      "file": "assets/ST2_r19_28_g4.png"
+    },
+    {
+      "id": "ST3_r1_18_g1",
+      "source": "supp1",
+      "pdf_page": 3,
+      "locator": "Supplementary Table 3; rows 1–18; columns Dataset Name, Task (Dataset), AutoGluon, CatBoost, KNN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "d6d7686c2ea4b4594027f8fc8dfbb0f0db5bf20a62064a4722bda4101bb71536",
+      "file": "assets/ST3_r1_18_g1.png"
+    },
+    {
+      "id": "ST3_r1_18_g2",
+      "source": "supp1",
+      "pdf_page": 3,
+      "locator": "Supplementary Table 3; rows 1–18; columns Dataset Name, Task (Dataset), LightGBM, RF, Logistic Regression",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "099d321e04c87b2498a713a3bece608a02ef5d3864cf57d24390569c2f8b3b0d",
+      "file": "assets/ST3_r1_18_g2.png"
+    },
+    {
+      "id": "ST3_r1_18_g3",
+      "source": "supp1",
+      "pdf_page": 3,
+      "locator": "Supplementary Table 3; rows 1–18; columns Dataset Name, Task (Dataset), MLP, SVM, XGB",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "855ebeb8dfcb544c3678d308a64a069d3fa05541ebcc663d907ac3e70007164f",
+      "file": "assets/ST3_r1_18_g3.png"
+    },
+    {
+      "id": "ST3_r1_18_g4",
+      "source": "supp1",
+      "pdf_page": 3,
+      "locator": "Supplementary Table 3; rows 1–18; columns Dataset Name, Task (Dataset), TabPFN (PHE), TabPFN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "dda6178ef8f7cbb063e0aaf9102eae39cd5cc16ed8c2880aecc5032d6c108a1b",
+      "file": "assets/ST3_r1_18_g4.png"
+    },
+    {
+      "id": "ST3_r19_22_g1",
+      "source": "supp1",
+      "pdf_page": 3,
+      "locator": "Supplementary Table 3; rows 19–22; columns Dataset Name, Task (Dataset), AutoGluon, CatBoost, KNN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "935cc55a6b76babbb955b480f9ca5be1df59f2d9867bc701fa598486a0aee52f",
+      "file": "assets/ST3_r19_22_g1.png"
+    },
+    {
+      "id": "ST3_r19_22_g2",
+      "source": "supp1",
+      "pdf_page": 3,
+      "locator": "Supplementary Table 3; rows 19–22; columns Dataset Name, Task (Dataset), LightGBM, RF, Logistic Regression",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "19fd31eeb2df0f2366f78d1413aa9a92e0d3755730486001f6297b5c7b52c927",
+      "file": "assets/ST3_r19_22_g2.png"
+    },
+    {
+      "id": "ST3_r19_22_g3",
+      "source": "supp1",
+      "pdf_page": 3,
+      "locator": "Supplementary Table 3; rows 19–22; columns Dataset Name, Task (Dataset), MLP, SVM, XGB",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "4ab3e3155806fa543706ea8b19b696eed6f7de6b210b51f7c2fa1de3e9c26732",
+      "file": "assets/ST3_r19_22_g3.png"
+    },
+    {
+      "id": "ST3_r19_22_g4",
+      "source": "supp1",
+      "pdf_page": 3,
+      "locator": "Supplementary Table 3; rows 19–22; columns Dataset Name, Task (Dataset), TabPFN (PHE), TabPFN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "874a61e8ee4109f0626f1f63f95bbb7eb8b8fc957fdc58c8b065148f52037f7c",
+      "file": "assets/ST3_r19_22_g4.png"
+    },
+    {
+      "id": "ST4_r1_18_g1",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 1–18; columns Dataset Name, Task (Dataset), AutoGluon, CatBoost, KNN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "202db64f4a452520fbcc2811dc9ffe3f986a623456e78fe350f6a009c1da7d54",
+      "file": "assets/ST4_r1_18_g1.png"
+    },
+    {
+      "id": "ST4_r1_18_g2",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 1–18; columns Dataset Name, Task (Dataset), LightGBM, RF, Linear Regression",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "f15e8434561b72f91cb27c0f03d406c06f678539fc7539681fb6a8f455ba0f23",
+      "file": "assets/ST4_r1_18_g2.png"
+    },
+    {
+      "id": "ST4_r1_18_g3",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 1–18; columns Dataset Name, Task (Dataset), MLP, SVM, XGB",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "b716770588d1a90adbc2ae98730beb411268e46694d6c1a15ca6f7499b3f2766",
+      "file": "assets/ST4_r1_18_g3.png"
+    },
+    {
+      "id": "ST4_r1_18_g4",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 1–18; columns Dataset Name, Task (Dataset), TabPFN (PHE), TabPFN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "a3c8d2c06429cccdb01809ed074d2ca55c02196c6fd3bb5f8c39d72133eb0fde",
+      "file": "assets/ST4_r1_18_g4.png"
+    },
+    {
+      "id": "ST4_r19_36_g1",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 19–36; columns Dataset Name, Task (Dataset), AutoGluon, CatBoost, KNN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "a5280094b682b78f298622d5fb10c4aaabc89bad1e43feae5cd769bfa6d56a11",
+      "file": "assets/ST4_r19_36_g1.png"
+    },
+    {
+      "id": "ST4_r19_36_g2",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 19–36; columns Dataset Name, Task (Dataset), LightGBM, RF, Linear Regression",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "3e8e1cf1ae3bcbc1f47e73270cebbee2d1ac1c095f6f9eb72ae478b8c9f976d2",
+      "file": "assets/ST4_r19_36_g2.png"
+    },
+    {
+      "id": "ST4_r19_36_g3",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 19–36; columns Dataset Name, Task (Dataset), MLP, SVM, XGB",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "9b8fb9b483dfe8f1a1b4fff279c11e2e559df774cdc793636e4cfbcb7da0f1e2",
+      "file": "assets/ST4_r19_36_g3.png"
+    },
+    {
+      "id": "ST4_r19_36_g4",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 19–36; columns Dataset Name, Task (Dataset), TabPFN (PHE), TabPFN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "8d3ffa7b82e7864034257d9f36c935b9b6cd7715672c1329acb1e0ccde65181b",
+      "file": "assets/ST4_r19_36_g4.png"
+    },
+    {
+      "id": "ST4_r37_54_g1",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 37–54; columns Dataset Name, Task (Dataset), AutoGluon, CatBoost, KNN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "bdde0b75f84472a84338c6ccf122bd6c0175d48a83cfccff9d3fc14c99dbb1e5",
+      "file": "assets/ST4_r37_54_g1.png"
+    },
+    {
+      "id": "ST4_r37_54_g2",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 37–54; columns Dataset Name, Task (Dataset), LightGBM, RF, Linear Regression",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "9d2e1b87185337d802e5e09370c72b2c8e52961540f05b03eb4aff6d11c9c764",
+      "file": "assets/ST4_r37_54_g2.png"
+    },
+    {
+      "id": "ST4_r37_54_g3",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 37–54; columns Dataset Name, Task (Dataset), MLP, SVM, XGB",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "b99f2f0738155d0138357173fb56b2c79689f67967b6c33a768e001f52b75f45",
+      "file": "assets/ST4_r37_54_g3.png"
+    },
+    {
+      "id": "ST4_r37_54_g4",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 37–54; columns Dataset Name, Task (Dataset), TabPFN (PHE), TabPFN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "b171e1f28616c3dc230866199726740cbbda8507a17f441bf9acb1008b0f1e41",
+      "file": "assets/ST4_r37_54_g4.png"
+    },
+    {
+      "id": "ST4_r55_72_g1",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 55–72; columns Dataset Name, Task (Dataset), AutoGluon, CatBoost, KNN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "2a5bff7e39b181057557c82a93bd7396977789191f74fbbd01b5d4599fde8ad9",
+      "file": "assets/ST4_r55_72_g1.png"
+    },
+    {
+      "id": "ST4_r55_72_g2",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 55–72; columns Dataset Name, Task (Dataset), LightGBM, RF, Linear Regression",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "8f4292f3a2a0607a2e22f4494c9be4f82c298c482e1538fd93aae75030cf42b3",
+      "file": "assets/ST4_r55_72_g2.png"
+    },
+    {
+      "id": "ST4_r55_72_g3",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 55–72; columns Dataset Name, Task (Dataset), MLP, SVM, XGB",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "bf376c2cc218ea3a6e9ad1b940cb360c22cb0798560f6c0e5935a8002da100ef",
+      "file": "assets/ST4_r55_72_g3.png"
+    },
+    {
+      "id": "ST4_r55_72_g4",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 55–72; columns Dataset Name, Task (Dataset), TabPFN (PHE), TabPFN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "77b2d3444acc1cf8fdc1e06d7993f1e23e6751c158b781d879453276b8409ab3",
+      "file": "assets/ST4_r55_72_g4.png"
+    },
+    {
+      "id": "ST4_r73_90_g1",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 73–90; columns Dataset Name, Task (Dataset), AutoGluon, CatBoost, KNN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "9242acc6b55d020f2f48be577295827ff3363577d923a0ceab903335fcc94317",
+      "file": "assets/ST4_r73_90_g1.png"
+    },
+    {
+      "id": "ST4_r73_90_g2",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 73–90; columns Dataset Name, Task (Dataset), LightGBM, RF, Linear Regression",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "5c99d477cf2a221e3eb619937214972b19736f66eb50bb2495ed73d435580428",
+      "file": "assets/ST4_r73_90_g2.png"
+    },
+    {
+      "id": "ST4_r73_90_g3",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 73–90; columns Dataset Name, Task (Dataset), MLP, SVM, XGB",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "40313b345f4a6785a644c214e9ad34200ab2033a19cc1d29a6277a4c1d70b079",
+      "file": "assets/ST4_r73_90_g3.png"
+    },
+    {
+      "id": "ST4_r73_90_g4",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 73–90; columns Dataset Name, Task (Dataset), TabPFN (PHE), TabPFN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "2bd1b79f27736220f5b7e553f30a06946761432dd5b8be96054934ae53265dd9",
+      "file": "assets/ST4_r73_90_g4.png"
+    },
+    {
+      "id": "ST4_r91_102_g1",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 91–102; columns Dataset Name, Task (Dataset), AutoGluon, CatBoost, KNN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "c31dd9337d74c2912c651e338fb1991cbdde3b3a0f014efa2d7d67395f433cff",
+      "file": "assets/ST4_r91_102_g1.png"
+    },
+    {
+      "id": "ST4_r91_102_g2",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 91–102; columns Dataset Name, Task (Dataset), LightGBM, RF, Linear Regression",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "aebe26f15b0a92069781b005c86e0cf708a475426a7f8cf361a7e8677e8a2040",
+      "file": "assets/ST4_r91_102_g2.png"
+    },
+    {
+      "id": "ST4_r91_102_g3",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 91–102; columns Dataset Name, Task (Dataset), MLP, SVM, XGB",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "05b35e138566bab33ea373aa8f1ba2b7f2d194a11fd98ce21f9b01e6b687f6e8",
+      "file": "assets/ST4_r91_102_g3.png"
+    },
+    {
+      "id": "ST4_r91_102_g4",
+      "source": "supp1",
+      "pdf_page": 4,
+      "locator": "Supplementary Table 4; rows 91–102; columns Dataset Name, Task (Dataset), TabPFN (PHE), TabPFN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "514e71e2de9e61739fa51a02d7fee545ddafbc86738c0aaa6e773dc60bf97281",
+      "file": "assets/ST4_r91_102_g4.png"
+    },
+    {
+      "id": "ST5_r1_15",
+      "source": "supp2",
+      "pdf_page": 1,
+      "locator": "Supplementary Table 5; rows 1–15; all columns",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "608e83544d8e26da21ccb544738f433f387b8328da88dcbf3bf78a371591d18f",
+      "file": "assets/ST5_r1_15.png"
+    },
+    {
+      "id": "ST5_r16_30",
+      "source": "supp2",
+      "pdf_page": 1,
+      "locator": "Supplementary Table 5; rows 16–30; all columns",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "3e45fca19f4cf93b6ee3811cd1be6b95e1e9b1778e62f9eed840695145712b51",
+      "file": "assets/ST5_r16_30.png"
+    },
+    {
+      "id": "ST5_r31_45",
+      "source": "supp2",
+      "pdf_page": 1,
+      "locator": "Supplementary Table 5; rows 31–45; all columns",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "59495dafa980ad05054461c75f81b2d275b60e7e0b515e8ed17b7308c6810c4b",
+      "file": "assets/ST5_r31_45.png"
+    },
+    {
+      "id": "ST5_r46_57",
+      "source": "supp2",
+      "pdf_page": 1,
+      "locator": "Supplementary Table 5; rows 46–57; all columns",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "17f9ea4d23e8d3c315eb4222a8a59e2af5f75c6b05bbbfa714e5875bb63e042e",
+      "file": "assets/ST5_r46_57.png"
+    },
+    {
+      "id": "ST6_r1_15",
+      "source": "supp2",
+      "pdf_page": 2,
+      "locator": "Supplementary Table 6; rows 1–15; all columns",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "3598d71ae701e1be57d1bd807b0f16a3a159870c350e232f26982a6ad17b3abf",
+      "file": "assets/ST6_r1_15.png"
+    },
+    {
+      "id": "ST6_r16_30",
+      "source": "supp2",
+      "pdf_page": 2,
+      "locator": "Supplementary Table 6; rows 16–30; all columns",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "b647d22a0ca20612d6fd9496f876594adbde6f2e1af3bd0a81c541dc4b85cf26",
+      "file": "assets/ST6_r16_30.png"
+    },
+    {
+      "id": "ST6_r31_45",
+      "source": "supp2",
+      "pdf_page": 2,
+      "locator": "Supplementary Table 6; rows 31–45; all columns",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "5d40febf5be2b9eab6d9d7307861b700c7b82d1c58d88defedad5b58be8a104a",
+      "file": "assets/ST6_r31_45.png"
+    },
+    {
+      "id": "ST6_r46_54",
+      "source": "supp2",
+      "pdf_page": 2,
+      "locator": "Supplementary Table 6; rows 46–54; all columns",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "b5fff2c4083649dcdb3ca3182e6f81464cd5f79ab5325711f56ff97d48b8e6fc",
+      "file": "assets/ST6_r46_54.png"
+    },
+    {
+      "id": "s125",
+      "source": "main",
+      "pdf_page": 13,
+      "locator": "Data/Code availability；不一致另见p12与EDTable5",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "3f8213f23c1ee2431993447af78aaed0bfbf27067a4b88e094a0dc7e46955d81",
+      "file": "assets/s125.png"
+    },
+    {
+      "id": "EDT1_g1_r1",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group1, row section1",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "4a84e6a1f1ba9fad8f00167903d5060011450411918367574cbfe3e0c2fc495d",
+      "file": "assets/EDT1_g1_r1.png"
+    },
+    {
+      "id": "EDT1_g1_r2",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group1, row section2",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "92fc116e08c5bbf2d806879e6f728681809ef946ac8d4de6c45b81a79857bf36",
+      "file": "assets/EDT1_g1_r2.png"
+    },
+    {
+      "id": "EDT1_g1_r3",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group1, row section3",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "950e3bec9b02130e9620c72adcdf210a75408d6686c0d19479517e629f0f3d48",
+      "file": "assets/EDT1_g1_r3.png"
+    },
+    {
+      "id": "EDT1_g1_r4",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group1, row section4",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "37ff15a309268074ea09397ea304201f67fc3879b009f6106be46db31ef42955",
+      "file": "assets/EDT1_g1_r4.png"
+    },
+    {
+      "id": "EDT1_g1_r5",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group1, row section5",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "565a39668abffb3e727008f3db60fffdb25897bddec664089a902910aba7bd5f",
+      "file": "assets/EDT1_g1_r5.png"
+    },
+    {
+      "id": "EDT1_g2_r1",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group2, row section1",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "36b00304ac424e054ee7040b40f8dbfb73c223ecba551280368b0b70c4c76358",
+      "file": "assets/EDT1_g2_r1.png"
+    },
+    {
+      "id": "EDT1_g2_r2",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group2, row section2",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "a5d6f5b2d3a1f1f57df67d95e656424c90edebd159e9681f95c9d366b400dfb9",
+      "file": "assets/EDT1_g2_r2.png"
+    },
+    {
+      "id": "EDT1_g2_r3",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group2, row section3",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "b91f0ad1d6816a86df6012ae7ed6a183c14113663ceb2c7aa49c6ba497ec43f5",
+      "file": "assets/EDT1_g2_r3.png"
+    },
+    {
+      "id": "EDT1_g2_r4",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group2, row section4",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "7b4b20108f34f940c39e11092dcccad5d392cd2caf7e81e4208229a648ac57b6",
+      "file": "assets/EDT1_g2_r4.png"
+    },
+    {
+      "id": "EDT1_g2_r5",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group2, row section5",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "641346bfcfaec11c0ffb63480efa61975c55de189dd0ccd90ceeef849fd79044",
+      "file": "assets/EDT1_g2_r5.png"
+    },
+    {
+      "id": "EDT1_g3_r1",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group3, row section1",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "827ad5361b72ce938139b46ebd0af805c2740bb94a22ed715af0f2c19c40df87",
+      "file": "assets/EDT1_g3_r1.png"
+    },
+    {
+      "id": "EDT1_g3_r2",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group3, row section2",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "e5fa739e2741578517622284b5d4155ab017e41ade86dccbd19e6950500947d4",
+      "file": "assets/EDT1_g3_r2.png"
+    },
+    {
+      "id": "EDT1_g3_r3",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group3, row section3",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "310c6a35a4029cbcb0e4aacf252ec8b31217cf1133dfd12e52f71284a7d1ccb0",
+      "file": "assets/EDT1_g3_r3.png"
+    },
+    {
+      "id": "EDT1_g3_r4",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group3, row section4",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "772225725f045b6323b49debb084b3f25e8582611c13d283e19e7fa960821a9e",
+      "file": "assets/EDT1_g3_r4.png"
+    },
+    {
+      "id": "EDT1_g3_r5",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1 columns group3, row section5",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "55509c3a2ce2918c8c17fc0f1b0db1302360788f56e6ff8baff738f5119eab9d",
+      "file": "assets/EDT1_g3_r5.png"
+    },
+    {
+      "id": "EDT2_g1_r1",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group1, row section1",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "c76d42140432075945f98b8393ce02b65a1f282d573350c915605f050a6ca7b9",
+      "file": "assets/EDT2_g1_r1.png"
+    },
+    {
+      "id": "EDT2_g1_r2",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group1, row section2",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "ac8bd13f999a98a11e6773a817bf8af454734b8545bbb6ddd714b1b1d1d37963",
+      "file": "assets/EDT2_g1_r2.png"
+    },
+    {
+      "id": "EDT2_g1_r3",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group1, row section3",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "3d99541a53845165ef47d21b74cf3be398c6e3c54af383fcee002a19c726c117",
+      "file": "assets/EDT2_g1_r3.png"
+    },
+    {
+      "id": "EDT2_g1_r4",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group1, row section4",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "a2105acf0410b94ebce960f6223f39579ee4824602250c2fe6fdaf6626904cfa",
+      "file": "assets/EDT2_g1_r4.png"
+    },
+    {
+      "id": "EDT2_g1_r5",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group1, row section5",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "1e5eb866a986db9c26afabae7b7980a8d42bc85f0216dc9f7fc9c15aa7841bd8",
+      "file": "assets/EDT2_g1_r5.png"
+    },
+    {
+      "id": "EDT2_g2_r1",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group2, row section1",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "0ac8b3e61d5f9ce04ada1fe46952a9921da18660d713805fa07c3751e35ba0b4",
+      "file": "assets/EDT2_g2_r1.png"
+    },
+    {
+      "id": "EDT2_g2_r2",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group2, row section2",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "47d9a37a23c34ecde39ca4025b2139bd4df9fac80106c2ee939f26bbd710097e",
+      "file": "assets/EDT2_g2_r2.png"
+    },
+    {
+      "id": "EDT2_g2_r3",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group2, row section3",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "351def79adddeea6783ddde144f296a80b6859c49621414754940df6b33659ac",
+      "file": "assets/EDT2_g2_r3.png"
+    },
+    {
+      "id": "EDT2_g2_r4",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group2, row section4",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "eaa74674667171859b12b276141e2c518c40a105c008fee14f175db33c173f72",
+      "file": "assets/EDT2_g2_r4.png"
+    },
+    {
+      "id": "EDT2_g2_r5",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group2, row section5",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "440652c817fc8083ffb8aaa01b661c179674fbff40826b1e19d83a8b6fbfe0bf",
+      "file": "assets/EDT2_g2_r5.png"
+    },
+    {
+      "id": "EDT2_g3_r1",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group3, row section1",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "b67167c9bf78fe44b755fa4884a8e5cd56f16926fb8b8f0f23252c0d64bc726f",
+      "file": "assets/EDT2_g3_r1.png"
+    },
+    {
+      "id": "EDT2_g3_r2",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group3, row section2",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "dce23bbf264feb946bef011e39a25ed02df7a838b912bceb0f75b365a2d06d17",
+      "file": "assets/EDT2_g3_r2.png"
+    },
+    {
+      "id": "EDT2_g3_r3",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group3, row section3",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "f58ae9f34c385e431e82e994629ae8028da195edc82e214430f9382e1827f5a5",
+      "file": "assets/EDT2_g3_r3.png"
+    },
+    {
+      "id": "EDT2_g3_r4",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group3, row section4",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "bd6dbb145ff1b187dd488561e0af0909d76b1f926a3a0c7e823e34c624b5d631",
+      "file": "assets/EDT2_g3_r4.png"
+    },
+    {
+      "id": "EDT2_g3_r5",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2 columns group3, row section5",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "18631cacb2bde5cf4d07af6b931e2921b2009f4251ff8cce196bc7d798f8847f",
+      "file": "assets/EDT2_g3_r5.png"
+    },
+    {
+      "id": "EDT3_detail1",
+      "source": "main",
+      "pdf_page": 20,
+      "locator": "EDTable3 all columns row section1",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "32ed0721cfe39e5368ab70be371ede9b5fbc9d0769c782cb787e3dd8b583c0c2",
+      "file": "assets/EDT3_detail1.png"
+    },
+    {
+      "id": "EDT3_detail2",
+      "source": "main",
+      "pdf_page": 20,
+      "locator": "EDTable3 all columns row section2",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "8c71edf61c10abaa1e15b67f548f23c856f71b4cb46ee8b26e8a2d23e0771b4f",
+      "file": "assets/EDT3_detail2.png"
+    },
+    {
+      "id": "EDT3_detail3",
+      "source": "main",
+      "pdf_page": 20,
+      "locator": "EDTable3 all columns row section3",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "3ec85c65b5ee10f9a9468fc1456d64a439d5b614ee053686f87b81abe0c7ecba",
+      "file": "assets/EDT3_detail3.png"
+    },
+    {
+      "id": "EDT4_detail1",
+      "source": "main",
+      "pdf_page": 21,
+      "locator": "EDTable4 all columns row section1",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "089110c9ef720ef7823afd142c861ef3d5a9590bee89a16c48c46ae87597dde5",
+      "file": "assets/EDT4_detail1.png"
+    },
+    {
+      "id": "EDT4_detail2",
+      "source": "main",
+      "pdf_page": 21,
+      "locator": "EDTable4 all columns row section2",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "12d41408a5424f99949be429ece77c45ee292104539d041421ca246f003cf81e",
+      "file": "assets/EDT4_detail2.png"
+    },
+    {
+      "id": "EDT4_detail3",
+      "source": "main",
+      "pdf_page": 21,
+      "locator": "EDTable4 all columns row section3",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "6c7d1c801990d9f54b496c0e2d2ae459e88fd62cef5e93346fa25376ddfac028",
+      "file": "assets/EDT4_detail3.png"
+    },
+    {
+      "id": "EDT5a_g1_r1",
+      "source": "main",
+      "pdf_page": 22,
+      "locator": "EDTable5a column group1 rows part1",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "16e58b5042877719a6d6d2e1979cff01cfe9b1e4864bc9f444952b913ad61620",
+      "file": "assets/EDT5a_g1_r1.png"
+    },
+    {
+      "id": "EDT5a_g1_r2",
+      "source": "main",
+      "pdf_page": 22,
+      "locator": "EDTable5a column group1 rows part2",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "6ab9ee34de44e6910e6405e24aa56bc325c06dcfa742d81200c104ffabec7d75",
+      "file": "assets/EDT5a_g1_r2.png"
+    },
+    {
+      "id": "EDT5a_g2_r1",
+      "source": "main",
+      "pdf_page": 22,
+      "locator": "EDTable5a column group2 rows part1",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "95ba0fc46f3478c8196d3a6f4f5ac2fd6dcd71b73f4c448d8654687fb8f65977",
+      "file": "assets/EDT5a_g2_r1.png"
+    },
+    {
+      "id": "EDT5a_g2_r2",
+      "source": "main",
+      "pdf_page": 22,
+      "locator": "EDTable5a column group2 rows part2",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "67480d0da8d824cdae57114d47aeaaf7dd538d6c8833710f4b15f4aed4865cf6",
+      "file": "assets/EDT5a_g2_r2.png"
+    },
+    {
+      "id": "s163",
+      "source": "main",
+      "pdf_page": 22,
+      "locator": "扩展表5 · 基线搜索空间",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "aa5ea956dc94419efb820e72ff0af29f51973dab2b0a196cb4f6b03b6c7232bd",
+      "file": "assets/s163.png"
+    },
+    {
+      "id": "s164",
+      "source": "main",
+      "pdf_page": 22,
+      "locator": "扩展表5 · 基线搜索空间",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "4b3026e4f5dcdd3b36302d7c3c5f59915de4daffb76ecdd8ccf4ef5cafdd83a3",
+      "file": "assets/s164.png"
+    },
+    {
+      "id": "s165",
+      "source": "main",
+      "pdf_page": 22,
+      "locator": "扩展表5 · 基线搜索空间",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "a08f922d73c91aa2e0159629eb8608fbe1414b8f6cc2bddaa3be313855edcae4",
+      "file": "assets/s165.png"
+    },
+    {
+      "id": "s166",
+      "source": "main",
+      "pdf_page": 22,
+      "locator": "扩展表5 · 基线搜索空间",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "897a49aaeedd67c2b252ec4ca3a2b923858f82a64085affc42240818f1c6b941",
+      "file": "assets/s166.png"
+    },
+    {
+      "id": "Eq1_correct",
+      "source": "main",
+      "pdf_page": 10,
+      "locator": "Eq.1与原型采样说明",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "0d9c5b352826c707260b58a1cf793d0726b4e6138f3d296a8707be4231701fef",
+      "file": "assets/Eq1_correct.png"
+    },
+    {
+      "id": "phe_correct",
+      "source": "main",
+      "pdf_page": 11,
+      "locator": "TabPFN (PHE) 完整段",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "ab975257f791248a24904cc46e5dc3ac11a9f141e201824634e5660d075442ea",
+      "file": "assets/phe_correct.png"
+    },
+    {
+      "id": "negative_correct",
+      "source": "supp1",
+      "pdf_page": 2,
+      "locator": "Supplementary Table2 energy_efficiency，CatBoost/PHE/TabPFN",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "b47d74b145797452f99f073372ce5eefd3d43b9293719a648951d592ce6482cc",
+      "file": "assets/negative_correct.png"
+    },
+    {
+      "id": "latency_correct",
+      "source": "main",
+      "pdf_page": 9,
+      "locator": "Computational and time requirements 完整段",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "972764b4ef287c18c981e5d6010e5788a42208a04f962512e8aa0060ae20072b",
+      "file": "assets/latency_correct.png"
+    },
+    {
+      "id": "baselines_correct",
+      "source": "main",
+      "pdf_page": 12,
+      "locator": "Baselines与benchmark定义",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "2c3835766e177eaf32fc70ec9ea275bc8061a56249192bde745772f4e6b49fbf",
+      "file": "assets/baselines_correct.png"
+    },
+    {
+      "id": "conclusion_correct",
+      "source": "main",
+      "pdf_page": 7,
+      "locator": "Conclusion完整段与未来方向",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "8eb71e5f9514eeaecb1747e4d118890092fdd0d33b2f932cb30ee5d8b6575607",
+      "file": "assets/conclusion_correct.png"
+    },
+    {
+      "id": "fixed_9",
+      "source": "main",
+      "pdf_page": 3,
+      "locator": "图2a · 数据集级采样",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "9742adc602fe225580163e0365e64c24450f05696ac2c95fa551077e8e08cd6e",
+      "file": "assets/fixed_9.png"
+    },
+    {
+      "id": "fixed_10",
+      "source": "main",
+      "pdf_page": 3,
+      "locator": "图2b · 结构因果模型",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "db772df0b26babfb45912c1b320221caef8278a9244a48b74e77fe69ada89870",
+      "file": "assets/fixed_10.png"
+    },
+    {
+      "id": "fixed_11",
+      "source": "main",
+      "pdf_page": 3,
+      "locator": "图2c · 最终数据",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "22c1ed51cf2a19edbc173c1bfc803a010d091b45dd436b1f4d4cdbfa4b9bfb93",
+      "file": "assets/fixed_11.png"
+    },
+    {
+      "id": "fixed_23",
+      "source": "main",
+      "pdf_page": 4,
+      "locator": "图3a · 前三列",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "b2e6ddd96af7e7bdaaec41e649797277082788d4221a411fbe3eb0987c97bf3a",
+      "file": "assets/fixed_23.png"
+    },
+    {
+      "id": "fixed_25",
+      "source": "main",
+      "pdf_page": 4,
+      "locator": "图3b · 上排",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "c258baa6aab5e54d377cf8ce9338a939be23b5b605fb63a237903d00c08263ff",
+      "file": "assets/fixed_25.png"
+    },
+    {
+      "id": "fixed_39",
+      "source": "main",
+      "pdf_page": 7,
+      "locator": "图6a",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "d9e887589d093201d829146e944b20194bfc3d8786db55d959a2a6ecdaf62fea",
+      "file": "assets/fixed_39.png"
+    },
+    {
+      "id": "fixed_41",
+      "source": "main",
+      "pdf_page": 7,
+      "locator": "图6b",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "8f449ffab5ffb7c14a98113be6bf9beb48d018da932140eb55ca510ef05c25d6",
+      "file": "assets/fixed_41.png"
+    },
+    {
+      "id": "shap_age_labels",
+      "source": "main",
+      "pdf_page": 16,
+      "locator": "ED Fig3年龄列，重复原模型/SHAP行标签",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "8a0a45c8cb4dbfebb9b6801cd8be9acd32fba1b0ba6594fe0ec938e7ec270096",
+      "file": "assets/shap_age_labels.png"
+    },
+    {
+      "id": "shap_duration_labels",
+      "source": "main",
+      "pdf_page": 16,
+      "locator": "ED Fig3期限列，重复原模型/SHAP行标签",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "ede5d87587056c4bec2713824e6e352f434c06502283cd4769dbeaed4e9b0e8c",
+      "file": "assets/shap_duration_labels.png"
+    },
+    {
+      "id": "loss_clean",
+      "source": "main",
+      "pdf_page": 10,
+      "locator": "Training details，完整损失定义与后验解释",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "99c62511566fc266aa6c940d4e6e74e879468a59236d155c6921bafa8d8a254b",
+      "file": "assets/loss_clean.png"
+    },
+    {
+      "id": "training_clean",
+      "source": "main",
+      "pdf_page": 10,
+      "locator": "Training details，完整训练规模段落",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "4479eec32af05f5e78b1a1d4f16c3e45a917f9b267756d4685b30238820dba45",
+      "file": "assets/training_clean.png"
+    },
+    {
+      "id": "preprocess_clean",
+      "locator": "Methods p9，完整输入编码段及缺失标记段",
+      "operation": "Consecutive original PDF excerpts stacked, source pixels unchanged",
+      "file_sha256": "ec2f750c2c2afe0fb37b000a4599b3a1ab3171b03f15bb85ac1a35557a827f3e",
+      "file": "assets/preprocess_clean.png"
+    },
+    {
+      "id": "regression_complete",
+      "locator": "Regression details，左栏段落接右栏续文，含半正态尾部",
+      "operation": "Consecutive original PDF excerpts stacked, source pixels unchanged",
+      "file_sha256": "4668491e1e5757c8cae19303e1702e1587f201ab2ecc0ef7d2c14932ad328a2d",
+      "file": "assets/regression_complete.png"
+    },
+    {
+      "id": "eq23_clean",
+      "source": "main",
+      "pdf_page": 11,
+      "locator": "Eq.2–3与完整参数定义",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "3dbb3f2c2b66049595500caf360679b8451002d9a824a262e090039f660b9203",
+      "file": "assets/eq23_clean.png"
+    },
+    {
+      "id": "fig3a_right_clean",
+      "source": "main",
+      "pdf_page": 4,
+      "locator": "Fig3a后三列，完整模型行标签与坐标轴",
+      "operation": "Original PDF regions, repeated labels and clean boundaries; source pixels and values unchanged",
+      "file_sha256": "031784cf6e754748d645a3b88cf76673a6400470310e6e1a5fe97914d2f1ca16",
+      "file": "assets/fig3a_right_clean.png"
+    },
+    {
+      "id": "fig3b_bottom_clean",
+      "source": "main",
+      "pdf_page": 4,
+      "locator": "Fig3b下排与原文模型列标题",
+      "operation": "Original PDF regions, repeated labels and clean boundaries; source pixels and values unchanged",
+      "file_sha256": "21b01969607eea9fb77c63a18c5286bcab2839e176d3c7e4cca298bbd9734e74",
+      "file": "assets/fig3b_bottom_clean.png"
+    },
+    {
+      "id": "fig5a_upper_complete",
+      "source": "main",
+      "pdf_page": 6,
+      "locator": "Fig5a 上排，原文共享纵轴与模型名重复",
+      "operation": "Original PDF regions, repeated labels and clean boundaries; source pixels and values unchanged",
+      "file_sha256": "bf00866a10e0a20230a5c63eacf09a6071afc06157683c099aa5ca2433c99d36",
+      "file": "assets/fig5a_upper_complete.png"
+    },
+    {
+      "id": "fig5a_lower_complete",
+      "source": "main",
+      "pdf_page": 6,
+      "locator": "Fig5a 下排，原文共享纵轴与模型名重复",
+      "operation": "Original PDF regions, repeated labels and clean boundaries; source pixels and values unchanged",
+      "file_sha256": "c51e8d0f7df36d1c31b72948ccb9bbbecb30a96752fc739cfb5f6c4a87607b64",
+      "file": "assets/fig5a_lower_complete.png"
+    },
+    {
+      "id": "fig5b_upper_complete",
+      "source": "main",
+      "pdf_page": 6,
+      "locator": "Fig5b 上排，原文共享纵轴与模型名重复",
+      "operation": "Original PDF regions, repeated labels and clean boundaries; source pixels and values unchanged",
+      "file_sha256": "0d00b79dbf6ebd8d033bb8d8140fa96905e6895f725c1850c245ed3bfbe58eb9",
+      "file": "assets/fig5b_upper_complete.png"
+    },
+    {
+      "id": "fig5b_lower_complete",
+      "source": "main",
+      "pdf_page": 6,
+      "locator": "Fig5b 下排，原文共享纵轴与模型名重复",
+      "operation": "Original PDF regions, repeated labels and clean boundaries; source pixels and values unchanged",
+      "file_sha256": "a41b27db9e4be75b540b0df845d9cc4772e09974173a8759816a907e7726f5fa",
+      "file": "assets/fig5b_lower_complete.png"
+    },
+    {
+      "id": "ed1_left_clean",
+      "source": "main",
+      "pdf_page": 14,
+      "locator": "ED Fig1前两图，完整标题、共享纵轴与模型标签",
+      "operation": "Original PDF regions, repeated labels and clean boundaries; source pixels and values unchanged",
+      "file_sha256": "63a1db39bf78a0c1a8f3911dfb1ec9cc29f0c7a98eae6dd006ef859656084bf6",
+      "file": "assets/ed1_left_clean.png"
+    },
+    {
+      "id": "ed1_right_clean",
+      "source": "main",
+      "pdf_page": 14,
+      "locator": "ED Fig1后两图，完整标题、模型标签与重复共享纵轴",
+      "operation": "Original PDF regions, repeated labels and clean boundaries; source pixels and values unchanged",
+      "file_sha256": "ff720a52b9f54def5b89883d777efe223b68ae3b8b74e2d11d251b2bb9003e99",
+      "file": "assets/ed1_right_clean.png"
+    },
+    {
+      "id": "detail_MethodsComputationaledgemappings2_211",
+      "source": "main",
+      "pdf_page": 10,
+      "locator": "Methods，Computational edge mappings，第2项",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "c14f2f13ec9c4ef4eea54604b9521088b31da0b6958f7f5cf06488372460bd1e",
+      "file": "assets/detail_MethodsComputationaledgemappings2_211.png"
+    },
+    {
+      "id": "detail_MethodsPostprocessing_212",
+      "source": "main",
+      "pdf_page": 10,
+      "locator": "Methods，Post-processing完整段",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "2ee8d0b2b5c7d872fbf6d920ae17138ebbe4173189d60df59c80ada208549024",
+      "file": "assets/detail_MethodsPostprocessing_212.png"
+    },
+    {
+      "id": "detail_MethodsDefaultconfigurationofTabPFN_213",
+      "source": "main",
+      "pdf_page": 12,
+      "locator": "Methods，Default configuration of TabPFN完整段",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "6607172b2e1eb9a3479a0905490e8f55a59eb72de194a631ebf13a6d985a7618",
+      "file": "assets/detail_MethodsDefaultconfigurationofTabPFN_213.png"
+    },
+    {
+      "id": "detail_MethodsDatagroupingbasedonrandomforest_214",
+      "source": "main",
+      "pdf_page": 11,
+      "locator": "Methods，Data grouping based on random forest完整段",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "c7125f0cee0a47e16db9936f2e867354be067df486a21d58fb8efd81407d9c43",
+      "file": "assets/detail_MethodsDatagroupingbasedonrandomforest_214.png"
+    },
+    {
+      "id": "attention_clean",
+      "source": "main",
+      "pdf_page": 9,
+      "locator": "Methods，neural architecture完整开头与二维注意力段",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "38e057b6d57370d01cac81c2b20bedf58954ef1e4a388fa0a3bb43900beb86e4",
+      "file": "assets/attention_clean.png"
+    },
+    {
+      "id": "mask_cache_clean",
+      "source": "main",
+      "pdf_page": 9,
+      "locator": "Methods，完整掩码和键值缓存段",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "a79945139cfc91b33f127afaf47932bc456a79a964a54eb64115ca69caa91f51",
+      "file": "assets/mask_cache_clean.png"
+    },
+    {
+      "id": "permutation_grouping_clean",
+      "locator": "Methods，p11推理顺序集成与p9特征分组",
+      "operation": "Consecutive original PDF excerpts stacked, source pixels unchanged",
+      "file_sha256": "e2e9dc98a677dc30072acdd6a2da295311ec50f5157b2318b650ece93fdd4236",
+      "file": "assets/permutation_grouping_clean.png"
+    },
+    {
+      "id": "scm_complete",
+      "locator": "Methods，SCM定义，p9末段接p10左栏首段",
+      "operation": "Consecutive original PDF excerpts stacked, source pixels unchanged",
+      "file_sha256": "d990a5a084067cf4d1401ad57a88bf062066b995d03e7979381c49d9d1fec2f9",
+      "file": "assets/scm_complete.png"
+    },
+    {
+      "id": "evaluation_splits_clean",
+      "source": "main",
+      "pdf_page": 12,
+      "locator": "Methods，完整重复划分与归一化段",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "940f1a767a9c750478bd9fc5e7e849758e75222f41bbdf9f1126ab9c7f03e02c",
+      "file": "assets/evaluation_splits_clean.png"
+    },
+    {
+      "id": "detail_Methodsclassificationregressionbenchmark_221",
+      "source": "main",
+      "pdf_page": 12,
+      "locator": "Methods，classification与regression benchmark范围",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "0afae8e04b0605238cc4e228b4a0aef704ccf764ee405e515c2ea0a106721735",
+      "file": "assets/detail_Methodsclassificationregressionbenchmark_221.png"
+    },
+    {
+      "id": "budget_hardware_complete",
+      "locator": "Methods，随机搜索与CPU/GPU配置，p12末接p13首",
+      "operation": "Consecutive original PDF excerpts stacked, source pixels unchanged",
+      "file_sha256": "f679d04239895674ef47a7a9e0e45706e0b49e443e6e589093c7eac3b15a22bd",
+      "file": "assets/budget_hardware_complete.png"
+    },
+    {
+      "id": "metrics_normalization_clean",
+      "source": "main",
+      "pdf_page": 12,
+      "locator": "Methods，完整指标定义与归一化说明",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "0c69297b956bccca680a924ec940ed1492d0abd4d549f624d3d8f0cea2e1e96d",
+      "file": "assets/metrics_normalization_clean.png"
+    },
+    {
+      "id": "density_equations_clean",
+      "source": "main",
+      "pdf_page": 11,
+      "locator": "Methods，Density estimation与Eq.4–5完整公式",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "13bc8e4207f23c05290bfd9eee7f89a67a5632022d4da480250ec2e144662f71",
+      "file": "assets/density_equations_clean.png"
+    },
+    {
+      "id": "density_continuation_complete",
+      "locator": "Methods，Eq.5续文、24种排列与首列随机噪声",
+      "operation": "Consecutive original PDF excerpts stacked, source pixels unchanged",
+      "file_sha256": "23b8e461ca17dbcd913fe57b23e407628ad00384d38a6266d7e71bc65208b840",
+      "file": "assets/density_continuation_complete.png"
+    },
+    {
+      "id": "EDT1_overview1",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1，完整连续行段1/5，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "ea63197aa88685234322ec640f2156598fab094f9d1e0479b05e113745b97478",
+      "file": "assets/EDT1_overview1.png"
+    },
+    {
+      "id": "EDT1_overview2",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1，完整连续行段2/5，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "c73a2d2d611f9e52627e40fa467a1e071bd64c7dee853de1f129328554d56276",
+      "file": "assets/EDT1_overview2.png"
+    },
+    {
+      "id": "EDT1_overview3",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1，完整连续行段3/5，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "076712ff7f1c7bbbffcf167ce0f046ec42bf9d2f97708c3a56fd712cfe72251d",
+      "file": "assets/EDT1_overview3.png"
+    },
+    {
+      "id": "EDT1_overview4",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1，完整连续行段4/5，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "2498914a80b532469448572d140b41140c8abe8aa1f5977d75554460c6a791d3",
+      "file": "assets/EDT1_overview4.png"
+    },
+    {
+      "id": "EDT1_overview5",
+      "source": "main",
+      "pdf_page": 18,
+      "locator": "Extended Data Table1，完整连续行段5/5，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "bfef2e46d6eda7507f71ea20fad6f5c5fcc613fe69370c6bac25f001c943edb1",
+      "file": "assets/EDT1_overview5.png"
+    },
+    {
+      "id": "EDT2_overview1",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2，完整连续行段1/5，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "22dd8c3d649c5d341efb58963ba16fd2f9614eaf18f1e112cfe66a2908bf457e",
+      "file": "assets/EDT2_overview1.png"
+    },
+    {
+      "id": "EDT2_overview2",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2，完整连续行段2/5，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "c03414b6a4aa99fdf3b812252ebec34ff6c82888717def91285077e890d521b5",
+      "file": "assets/EDT2_overview2.png"
+    },
+    {
+      "id": "EDT2_overview3",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2，完整连续行段3/5，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "47f18af13e55010d2aa47915016677eac468a8319df7fca232f1a1407ee9af6e",
+      "file": "assets/EDT2_overview3.png"
+    },
+    {
+      "id": "EDT2_overview4",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2，完整连续行段4/5，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "918c44889f93b8b692ad11e71eabc58d09d21ae1cd8319a5d07f414ac8147037",
+      "file": "assets/EDT2_overview4.png"
+    },
+    {
+      "id": "EDT2_overview5",
+      "source": "main",
+      "pdf_page": 19,
+      "locator": "Extended Data Table2，完整连续行段5/5，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "b6c7bebeb3b5280d1d5f2f629dfdca2795208bdde0d9ae8cad1b4942a38c2fed",
+      "file": "assets/EDT2_overview5.png"
+    },
+    {
+      "id": "EDT3_overview1",
+      "source": "main",
+      "pdf_page": 20,
+      "locator": "Extended Data Table3，完整连续行段1/3，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "7c14d96378b61781d8e76363dad61242789cc093d4675d227311079e835e9fd4",
+      "file": "assets/EDT3_overview1.png"
+    },
+    {
+      "id": "EDT3_overview2",
+      "source": "main",
+      "pdf_page": 20,
+      "locator": "Extended Data Table3，完整连续行段2/3，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "99b92a8c3626543749660c2fd5969d03ac7a5e770e2353bf5513868e6d1fff73",
+      "file": "assets/EDT3_overview2.png"
+    },
+    {
+      "id": "EDT3_overview3",
+      "source": "main",
+      "pdf_page": 20,
+      "locator": "Extended Data Table3，完整连续行段3/3，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "ff3189f63129907bac37d61b34e008f85038ed0a1520c0835a17522a5eb2fb6d",
+      "file": "assets/EDT3_overview3.png"
+    },
+    {
+      "id": "EDT4_overview1",
+      "source": "main",
+      "pdf_page": 21,
+      "locator": "Extended Data Table4，完整连续行段1/3，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "67aad3615204300fb0a47a310a92cd74657918cd3dce41422519cdcdeab336a6",
+      "file": "assets/EDT4_overview1.png"
+    },
+    {
+      "id": "EDT4_overview2",
+      "source": "main",
+      "pdf_page": 21,
+      "locator": "Extended Data Table4，完整连续行段2/3，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "f24bcfad064425ac4ae09eb7056a5c9a66bc1d154a8c44c7387fcbe0ee01cf12",
+      "file": "assets/EDT4_overview2.png"
+    },
+    {
+      "id": "EDT4_overview3",
+      "source": "main",
+      "pdf_page": 21,
+      "locator": "Extended Data Table4，完整连续行段3/3，全列",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "a65e6f2262e4a211f09918f6ec81991d07b8c64518faf844a8810e20c2458132",
+      "file": "assets/EDT4_overview3.png"
+    },
+    {
+      "id": "EDT5a_overview1",
+      "source": "main",
+      "pdf_page": 22,
+      "locator": "Extended Data Table5a，全列参数行段1/2",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "ff7e57f39828e6770ccb86e4906a3eea153a3220904eefb87b7c085430a616dc",
+      "file": "assets/EDT5a_overview1.png"
+    },
+    {
+      "id": "EDT5a_overview2",
+      "source": "main",
+      "pdf_page": 22,
+      "locator": "Extended Data Table5a，全列参数行段2/2",
+      "operation": "Original PDF column strips reassembled with repeated header; pixels and values unchanged",
+      "file_sha256": "4ea17cc5be41aaffd791e9ac02b5425245e54e40e9a398033808804faff23efb",
+      "file": "assets/EDT5a_overview2.png"
+    },
+    {
+      "id": "overview_MLP与随机森林",
+      "source": "main",
+      "pdf_page": 22,
+      "locator": "Extended Data Table5，MLP与随机森林完整搜索空间",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "aa5ea956dc94419efb820e72ff0af29f51973dab2b0a196cb4f6b03b6c7232bd",
+      "file": "assets/overview_MLP与随机森林.png"
+    },
+    {
+      "id": "overview_SVM与CatBoost",
+      "source": "main",
+      "pdf_page": 22,
+      "locator": "Extended Data Table5，SVM与CatBoost完整搜索空间",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "4b3026e4f5dcdd3b36302d7c3c5f59915de4daffb76ecdd8ccf4ef5cafdd83a3",
+      "file": "assets/overview_SVM与CatBoost.png"
+    },
+    {
+      "id": "overview_XGBoost",
+      "source": "main",
+      "pdf_page": 22,
+      "locator": "Extended Data Table5，XGBoost完整搜索空间",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "a08f922d73c91aa2e0159629eb8608fbe1414b8f6cc2bddaa3be313855edcae4",
+      "file": "assets/overview_XGBoost.png"
+    },
+    {
+      "id": "overview_LightGBM",
+      "source": "main",
+      "pdf_page": 22,
+      "locator": "Extended Data Table5，LightGBM完整搜索空间",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "897a49aaeedd67c2b252ec4ca3a2b923858f82a64085affc42240818f1c6b941",
+      "file": "assets/overview_LightGBM.png"
+    },
+    {
+      "id": "kaggle_table_complete",
+      "source": "main",
+      "pdf_page": 23,
+      "locator": "Extended Data Table6，完整Kaggle结果表",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "98029f01490e19f70d7e4b19a4e8b55ce57821b2ef6c0a57f85612ec10797605",
+      "file": "assets/kaggle_table_complete.png"
+    },
+    {
+      "id": "cover_paper_title",
+      "source": "main",
+      "pdf_page": 1,
+      "locator": "论文英文原标题",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "87b074b24b4380c8ce913d1a32153b221ca34ff222a661c6c23d7061003e1cee",
+      "file": "assets/cover_paper_title.png"
+    },
+    {
+      "id": "detail_Abstract_254",
+      "source": "main",
+      "pdf_page": 1,
+      "locator": "Abstract完整单栏段落",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "22cd1e61a4095b1ad34ac162f7692e3b300de24d21bacf9947c4939848a9fa0b",
+      "file": "assets/detail_Abstract_254.png"
+    },
+    {
+      "id": "detail_p319tabulardatadiversity_255",
+      "source": "main",
+      "pdf_page": 1,
+      "locator": "主文p319，tabular-data diversity完整段",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "daf329457888dce636107c4fb415cf8c680a89b182c0d91a642b6f7a46e127b3",
+      "file": "assets/detail_p319tabulardatadiversity_255.png"
+    },
+    {
+      "id": "motivation_heterogeneity_large",
+      "locator": "主文p319，左栏底部接右栏顶部，完整两段",
+      "operation": "Consecutive original PDF excerpts stacked, source pixels unchanged",
+      "file_sha256": "d0ebb49cfd4180ce9de4745abe0386ad2e2af92dabd59fb851575f7f2df8aeb1",
+      "file": "assets/motivation_heterogeneity_large.png"
+    },
+    {
+      "id": "motivation_scope_large",
+      "locator": "p1小中规模范围与p10目标生成、原生10类限制",
+      "operation": "Consecutive original PDF excerpts stacked, source pixels unchanged",
+      "file_sha256": "d961646826b1349692c0f1b4398b802794bd100ecd2590032bb28c9f05de123e",
+      "file": "assets/motivation_scope_large.png"
+    },
+    {
+      "id": "kaggle_caption_full",
+      "source": "main",
+      "pdf_page": 23,
+      "locator": "Extended Data Table6完整表注，原版概览",
+      "operation": "PDF region render, no content alteration",
+      "file_sha256": "51e6cf1cf53087acae96a6c25f527c8f463df659533949391c25ba4ccc25c594",
+      "file": "assets/kaggle_caption_full.png"
+    },
+    {
+      "id": "kaggle_caption_enlarged",
+      "locator": "Extended Data Table6完整表注逐行分段放大；原字词与阅读顺序不变",
+      "operation": "Consecutive original PDF excerpts stacked, source pixels unchanged",
+      "file_sha256": "160b40aec997e36c3003eac79465dd6dfb88e27cbb24f35389712adf1a98131d",
+      "file": "assets/kaggle_caption_enlarged.png"
+    }
+  ],
+  "note": "Image references identify exact PNG files in assets/. Source PDFs are not included. Source page numbers refer to the article PDF and its supplements."
+}
