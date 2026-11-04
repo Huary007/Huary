@@ -1,0 +1,41 @@
+{
+  "format": "Byte-exact PNG reconstruction",
+  "original_asset": "assets/display_A_4.png",
+  "original_sha256": "0dfd208aaa19c8a5f7c23cd399f45c487b131cac5c531d510190e3c65220c00d",
+  "original_bytes": 952729,
+  "storage_files": [
+    "assets/display_A_4_bytes_1.js",
+    "assets/display_A_4_bytes_2.js"
+  ],
+  "restore_script": "restore_original_png.py",
+  "restored_output": "restored_display_A_4.png",
+  "validation": {
+    "candidate_html_sha256": "b543c76ffa7097a0efa20100c1a97e4be16bf4ed80cba5debae7555f8a443f5b",
+    "source_byte_exact": true,
+    "reconstructed_bytes": 952729,
+    "reconstructed_sha256": "0dfd208aaa19c8a5f7c23cd399f45c487b131cac5c531d510190e3c65220c00d",
+    "original_sha256": "0dfd208aaa19c8a5f7c23cd399f45c487b131cac5c531d510190e3c65220c00d",
+    "http_preview": "Passed: ready=true, IMG naturalWidth=1420 naturalHeight=1232, no image load errors",
+    "screenshot_comparison": {
+      "area": [
+        0,
+        0,
+        1180,
+        664
+      ],
+      "pixel_exact_equal": true,
+      "different_pixels": 0,
+      "note": "Decoded browser screenshot RGB pixels; same viewport, excludes navigation toolbar."
+    },
+    "navigation": "S236 to S237 and back through actual next/previous controls passed",
+    "after_navigation_pixel_equal": true,
+    "footer_ocr": "236/289",
+    "visual": "Full figure, axes, labels and caption visible. No new seam, crop, distortion or moire versus original.",
+    "other_288_slide_sections_unchanged": true,
+    "original_css_unchanged": true,
+    "shared_assets_unchanged": true,
+    "file_offline": "Not tested: earlier file:// attempt in this same managed browser was explicitly denied by URL security policy. No bypass/retry.",
+    "print_pdf": "Clicked Print PDF after ready. No print UI/export appeared; page remained screen media. Actual PDF/print output unverified.",
+    "public_https": "Not tested; only managed local HTTP preview."
+  }
+}

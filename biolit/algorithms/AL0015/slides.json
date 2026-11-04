@@ -1,0 +1,5631 @@
+[
+  {
+    "title": "From Tables to Time: Extending TabPFN-v2 to Time Series Forecasting",
+    "section": "title",
+    "asset": "core_001",
+    "paras": [
+      "AL0015 · TabPFN-TS：用表格基础模型预测时间序列",
+      "Hoo、Müller、Salinas、Hutter",
+      "固定讲解 arXiv:2501.02945v4，2026-01-26。"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S001",
+    "number": 1,
+    "layout": "title",
+    "original_201_page": 1
+  },
+  {
+    "title": "目录",
+    "section": "toc",
+    "asset": null,
+    "paras": [
+      "1. 预测任务、时间特征与概率输出",
+      "2. 频谱提取、相位机制与逐步手算",
+      "3. 基准对照、消融、失败案例与所有附录图表",
+      "4. 设备与微生物时序研究设计、复现边界"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S002",
+    "number": 2,
+    "layout": "plain",
+    "original_201_page": 2
+  },
+  {
+    "title": "时间戳和外部条件都可以进入回归表",
+    "section": "motivation",
+    "asset": "core_003",
+    "paras": [
+      "序列模型常以目标历史为主要输入。已知节日、价格或控制输入还包含未来变化的信息。",
+      "本文把每个时刻变成一行特征，把观测目标放在标签列。未来行的时间特征已知，标签待预测。",
+      "这使预训练表格回归模型可以直接接收时间和协变量，省去时间序列专用预训练。"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S003",
+    "number": 3,
+    "layout": "split",
+    "original_201_page": 3
+  },
+  {
+    "title": "原文放大 1/2 · 时间戳和外部条件都可以进入回归表",
+    "section": "motivation",
+    "asset": "read201_003_1",
+    "paras": [
+      "对应「时间戳和外部条件都可以进入回归表」（本版第3页，原201版第3页）。来源为PDF第2页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 3,
+    "reading_parent_page": 3,
+    "reading_part": 1,
+    "reading_parts": 2,
+    "id": "S004",
+    "number": 4
+  },
+  {
+    "title": "原文放大 2/2 · 时间戳和外部条件都可以进入回归表",
+    "section": "motivation",
+    "asset": "read201_003_2",
+    "paras": [
+      "对应「时间戳和外部条件都可以进入回归表」（本版第3页，原201版第3页）。来源为PDF第2页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 3,
+    "reading_parent_page": 3,
+    "reading_part": 2,
+    "reading_parts": 2,
+    "id": "S005",
+    "number": 5
+  },
+  {
+    "title": "历史窗口与预测窗口",
+    "section": "principle",
+    "asset": "core_004",
+    "paras": [
+      "C是历史长度，H是预测长度，D是每行特征数。历史标签y₁:C有C个数。",
+      "Xtrain形状为C×D，Xtest为H×D。未来标签yC+1:C+H始终隐藏。",
+      "§2写成yC+1:H，与§3定义不一致。本课件采用§3的C+H终点。"
+    ],
+    "teaching": "教学假设C=32、H=2，并提取到5个不同周期且无协变量，D=28。输入为32×28历史表、32个标签和2×28未来表，输出两个时刻各自的预测分布。",
+    "coverage": [
+      "Eq.input"
+    ],
+    "id": "S006",
+    "number": 6,
+    "layout": "split",
+    "original_201_page": 4
+  },
+  {
+    "title": "原文放大 1/1 · 历史窗口与预测窗口",
+    "section": "principle",
+    "asset": "read201_004_1",
+    "paras": [
+      "对应「历史窗口与预测窗口」（本版第6页，原201版第4页）。来源为PDF第3页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Eq.input"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 4,
+    "reading_parent_page": 6,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S007",
+    "number": 7
+  },
+  {
+    "title": "图3.1｜从时间序列到回归表",
+    "section": "results",
+    "asset": "display_3_1",
+    "paras": [
+      "先看历史、特征矩阵与回归器的连接，再逐块检查信息流。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig3.1"
+    ],
+    "figureview": true,
+    "id": "S008",
+    "number": 8,
+    "layout": "figureview",
+    "original_201_page": 5
+  },
+  {
+    "title": "原文放大 1/1 · 图3.1｜从时间序列到回归表",
+    "section": "results",
+    "asset": "read201_005_1",
+    "paras": [
+      "对应「图3.1｜从时间序列到回归表」（本版第8页，原201版第5页）。来源为PDF第4页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Fig3.1"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 5,
+    "reading_parent_page": 8,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S009",
+    "number": 9
+  },
+  {
+    "title": "图3.1｜历史与预测窗口",
+    "section": "results",
+    "asset": "display_3_1_history",
+    "paras": [
+      "蓝色区域是可观察历史，橙色区域是待预测未来；下方协变量轨迹可在已知时加入。",
+      "窗口划分沿时间进行，不能随机把未来目标混入训练标签。",
+      "历史目标构成训练标签y；同一套时间特征分别为历史窗口生成X_train、为预测窗口生成X_test。图中的未来目标是问号，不能作为特征回填。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig3.1.history"
+    ],
+    "figureview": false,
+    "id": "S010",
+    "number": 10,
+    "layout": "split",
+    "original_201_page": 6
+  },
+  {
+    "title": "图3.1｜特征矩阵",
+    "section": "results",
+    "asset": "display_3_1_table",
+    "paras": [
+      "上半部X_train与历史标签y配对，下半部X_test沿用相同列定义。",
+      "表的每行代表一个时间点，列包含时间信息以及可选协变量。",
+      "时间戳可变成运行索引与周期特征；未来已知的协变量可追加到表中。TabPFN在历史行的条件下，一次预测未来各行。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig3.1.table"
+    ],
+    "figureview": false,
+    "id": "S011",
+    "number": 11,
+    "layout": "split",
+    "original_201_page": 7
+  },
+  {
+    "title": "图3.1｜TabPFN回归接口",
+    "section": "results",
+    "asset": "display_3_1_model",
+    "paras": [
+      "图中先调用fit(X_train,y)，再调用predict(X_test)。",
+      "这里的fit用于建立上下文，不等于针对该时间序列重新做参数训练。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig3.1.model"
+    ],
+    "figureview": false,
+    "id": "S012",
+    "number": 12,
+    "layout": "split",
+    "original_201_page": 8
+  },
+  {
+    "title": "推断时的fit与预训练",
+    "section": "principle",
+    "asset": "core_005",
+    "paras": [
+      "预训练在大量合成表格任务上进行，学习上下文与查询行之间的预测关系。",
+      "推断把(Xtrain,ytrain)交给已有模型作为上下文。图3.1的fit调用不能理解为重新用这条时间序列训练模型参数。",
+      "每个未来行得到条件预测分布。一次预测整个窗口，并不自动证明模型给出了完整的跨时间联合分布。"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S013",
+    "number": 13,
+    "layout": "split",
+    "original_201_page": 9
+  },
+  {
+    "title": "原文放大 1/2 · 推断时的fit与预训练",
+    "section": "principle",
+    "asset": "read201_009_1",
+    "paras": [
+      "对应「推断时的fit与预训练」（本版第13页，原201版第9页）。来源为PDF第3页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 9,
+    "reading_parent_page": 13,
+    "reading_part": 1,
+    "reading_parts": 2,
+    "id": "S014",
+    "number": 14
+  },
+  {
+    "title": "原文放大 2/2 · 推断时的fit与预训练",
+    "section": "principle",
+    "asset": "read201_009_2",
+    "paras": [
+      "对应「推断时的fit与预训练」（本版第13页，原201版第9页）。来源为PDF第3页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 9,
+    "reading_parent_page": 13,
+    "reading_part": 2,
+    "reading_parts": 2,
+    "id": "S015",
+    "number": 15
+  },
+  {
+    "title": "四类特征和总维数",
+    "section": "principle",
+    "asset": "core_006",
+    "paras": [
+      "索引占1维。8类历法分量各用sin/cos两维，另加年份，共17维。",
+      "k个自动季节周期最多占2k维，未来已知协变量占Dz维。",
+      "D=18+2k+Dz。k=5时最多为28+Dz；若去重后不足5个周期，实际季节特征会更少。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Eq.features"
+    ],
+    "id": "S016",
+    "number": 16,
+    "layout": "wide",
+    "original_201_page": 10
+  },
+  {
+    "title": "原文放大 1/1 · 四类特征和总维数",
+    "section": "principle",
+    "asset": "read201_010_1",
+    "paras": [
+      "对应「四类特征和总维数」（本版第16页，原201版第10页）。来源为PDF第4页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Eq.features"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 10,
+    "reading_parent_page": 16,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S017",
+    "number": 17
+  },
+  {
+    "title": "周期4的时间特征手算",
+    "section": "principle",
+    "asset": "core_007",
+    "paras": [
+      "频率f=1/4时，角度为2πt/4，t是等间隔采样索引。",
+      "t=0,1,2,3的(cos,sin)依次为(1,0)、(0,1)、(−1,0)、(0,−1)。",
+      "t=4回到(1,0)，t=5回到(0,1)。未来时刻在相位空间可以回到历史位置。"
+    ],
+    "teaching": "教学序列y=10+2sin(2πt/4)：前四点为10,12,10,8，未来t=4,5为10,12。这是无噪声机制示例，不是论文预测结果。",
+    "coverage": [
+      "Eq.auto"
+    ],
+    "id": "S018",
+    "number": 18,
+    "layout": "split",
+    "original_201_page": 11
+  },
+  {
+    "title": "原文放大 1/1 · 周期4的时间特征手算",
+    "section": "principle",
+    "asset": "read201_011_1",
+    "paras": [
+      "对应「周期4的时间特征手算」（本版第18页，原201版第11页）。来源为PDF第4页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Eq.auto"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 11,
+    "reading_parent_page": 18,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S019",
+    "number": 19
+  },
+  {
+    "title": "未来已知协变量的输入边界",
+    "section": "principle",
+    "asset": "core_008",
+    "paras": [
+      "未来节假日与计划控制量可作为输入，未来实际天气或实际传感器读数通常不可直接获得。",
+      "如果使用天气预报，需要保留预测发布时刻与版本。事后观测天气不是同一种信息条件。",
+      "协变量必须覆盖历史与预测窗口。缺少未来值时，不能照原方法完整条件化。"
+    ],
+    "teaching": "在周期4例子中另设已知控制量z=0,0,1,1,0,1，目标为10+2sin(2πt/4)+3z。未来t=4,5对应10、15，使用的是计划z，而非未来测得的目标。",
+    "coverage": [],
+    "id": "S020",
+    "number": 20,
+    "layout": "split",
+    "original_201_page": 12
+  },
+  {
+    "title": "原文放大 1/1 · 未来已知协变量的输入边界",
+    "section": "principle",
+    "asset": "read201_012_1",
+    "paras": [
+      "对应「未来已知协变量的输入边界」（本版第20页，原201版第12页）。来源为PDF第4页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 12,
+    "reading_parent_page": 20,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S021",
+    "number": 21
+  },
+  {
+    "title": "全窗口预测为何不需要滚动标签",
+    "section": "technical",
+    "asset": "core_009",
+    "paras": [
+      "所有未来时间戳的索引、历法与季节特征可以一次构造。已知协变量也可直接拼接。",
+      "本文不加入移动平均或滞后目标项，避免后续行必须等待前一步预测。",
+      "省去自回归循环不等于推断一定便宜。每条序列仍要单独使用上下文，注意力计算有成本。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Eq.matrix"
+    ],
+    "id": "S022",
+    "number": 22,
+    "layout": "wide",
+    "original_201_page": 13
+  },
+  {
+    "title": "原文放大 1/1 · 全窗口预测为何不需要滚动标签",
+    "section": "technical",
+    "asset": "read201_013_1",
+    "paras": [
+      "对应「全窗口预测为何不需要滚动标签」（本版第22页，原201版第13页）。来源为PDF第5页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Eq.matrix"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 13,
+    "reading_parent_page": 22,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S023",
+    "number": 23
+  },
+  {
+    "title": "算法2完整总览",
+    "section": "technical",
+    "asset": "core_010",
+    "paras": [
+      "输入带时间戳的表，输出年份与16个周期特征。以下两页分别展开周期列表和分母差异。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Alg2"
+    ],
+    "figureview": true,
+    "id": "S024",
+    "number": 24,
+    "layout": "figureview",
+    "original_201_page": 14
+  },
+  {
+    "title": "原文放大 1/3 · 算法2完整总览",
+    "section": "technical",
+    "asset": "read201_014_1",
+    "paras": [
+      "对应「算法2完整总览」（本版第24页，原201版第14页）。来源为PDF第16页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg2"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 14,
+    "reading_parent_page": 24,
+    "reading_part": 1,
+    "reading_parts": 3,
+    "id": "S025",
+    "number": 25
+  },
+  {
+    "title": "原文放大 2/3 · 算法2完整总览",
+    "section": "technical",
+    "asset": "read201_014_2",
+    "paras": [
+      "对应「算法2完整总览」（本版第24页，原201版第14页）。来源为PDF第16页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg2"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 14,
+    "reading_parent_page": 24,
+    "reading_part": 2,
+    "reading_parts": 3,
+    "id": "S026",
+    "number": 26
+  },
+  {
+    "title": "原文放大 3/3 · 算法2完整总览",
+    "section": "technical",
+    "asset": "read201_014_3",
+    "paras": [
+      "对应「算法2完整总览」（本版第24页，原201版第14页）。来源为PDF第16页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg2"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 14,
+    "reading_parent_page": 24,
+    "reading_part": 3,
+    "reading_parts": 3,
+    "id": "S027",
+    "number": 27
+  },
+  {
+    "title": "历法特征的8个周期",
+    "section": "technical",
+    "asset": "core_011",
+    "paras": [
+      "秒、分、小时、星期、月内日、年内日、年内周、月份各提供一对sin/cos。年份单列保留。",
+      "算法列出的P依次为60、60、24、7、30.5、365、52、12。",
+      "月长与闰年变化意味着这些编码是近似的周期表示。具体索引约定会影响相位。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "App.A1",
+      "Alg2.inputs"
+    ],
+    "id": "S028",
+    "number": 28,
+    "layout": "split",
+    "original_201_page": 15
+  },
+  {
+    "title": "原文放大 1/3 · 历法特征的8个周期",
+    "section": "technical",
+    "asset": "read201_015_1",
+    "paras": [
+      "对应「历法特征的8个周期」（本版第28页，原201版第15页）。来源为PDF第16页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "App.A1",
+      "Alg2.inputs"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 15,
+    "reading_parent_page": 28,
+    "reading_part": 1,
+    "reading_parts": 3,
+    "id": "S029",
+    "number": 29
+  },
+  {
+    "title": "原文放大 2/3 · 历法特征的8个周期",
+    "section": "technical",
+    "asset": "read201_015_2",
+    "paras": [
+      "对应「历法特征的8个周期」（本版第28页，原201版第15页）。来源为PDF第16页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "App.A1",
+      "Alg2.inputs"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 15,
+    "reading_parent_page": 28,
+    "reading_part": 2,
+    "reading_parts": 3,
+    "id": "S030",
+    "number": 30
+  },
+  {
+    "title": "原文放大 3/3 · 历法特征的8个周期",
+    "section": "technical",
+    "asset": "read201_015_3",
+    "paras": [
+      "对应「历法特征的8个周期」（本版第28页，原201版第15页）。来源为PDF第16页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "App.A1",
+      "Alg2.inputs"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 15,
+    "reading_parent_page": 28,
+    "reading_part": 3,
+    "reading_parts": 3,
+    "id": "S031",
+    "number": 31
+  },
+  {
+    "title": "正文P与算法2的P−1不一致",
+    "section": "technical",
+    "asset": "core_012",
+    "paras": [
+      "正文公式用2πt/P，算法2先计算P̃=P−1，再用2πf/P̃。",
+      "例如星期索引0和6：用P=7时相位不同，用P−1=6时两者都落在(1,0)。",
+      "因此不能静默把两种写法统一。复现时需核对固定代码提交的具体实现。"
+    ],
+    "teaching": "手算：cos(2π×6/6)=1，sin(2π×6/6)=0；而cos(12π/7)≈0.623、sin(12π/7)≈−0.782。",
+    "coverage": [
+      "Alg2.encoding",
+      "Eq.calendar"
+    ],
+    "id": "S032",
+    "number": 32,
+    "layout": "split",
+    "original_201_page": 16
+  },
+  {
+    "title": "原文放大 1/2 · 正文P与算法2的P−1不一致",
+    "section": "technical",
+    "asset": "read201_016_1",
+    "paras": [
+      "对应「正文P与算法2的P−1不一致」（本版第32页，原201版第16页）。来源为PDF第4页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg2.encoding",
+      "Eq.calendar"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 16,
+    "reading_parent_page": 32,
+    "reading_part": 1,
+    "reading_parts": 2,
+    "id": "S033",
+    "number": 33
+  },
+  {
+    "title": "原文放大 2/2 · 正文P与算法2的P−1不一致",
+    "section": "technical",
+    "asset": "read201_016_2",
+    "paras": [
+      "对应「正文P与算法2的P−1不一致」（本版第32页，原201版第16页）。来源为PDF第16页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg2.encoding",
+      "Eq.calendar"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 16,
+    "reading_parent_page": 32,
+    "reading_part": 2,
+    "reading_parts": 2,
+    "id": "S034",
+    "number": 34
+  },
+  {
+    "title": "算法1：从历史标签提取主周期",
+    "section": "technical",
+    "asset": "core_013",
+    "paras": [
+      "输入只有历史单变量序列、最大周期数k与窗口长度L。先去趋势、Hann处理、补零。",
+      "再算频谱幅值，去除DC分量，找局部峰。把频率取倒数并四舍五入成周期。",
+      "去重并去掉零周期，最后保留幅值最大的k个峰。未来标签不能参与选峰。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Alg1"
+    ],
+    "id": "S035",
+    "number": 35,
+    "layout": "split",
+    "original_201_page": 17
+  },
+  {
+    "title": "原文放大 1/2 · 算法1：从历史标签提取主周期",
+    "section": "technical",
+    "asset": "read201_017_1",
+    "paras": [
+      "对应「算法1：从历史标签提取主周期」（本版第35页，原201版第17页）。来源为PDF第5页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg1"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 17,
+    "reading_parent_page": 35,
+    "reading_part": 1,
+    "reading_parts": 2,
+    "id": "S036",
+    "number": 36
+  },
+  {
+    "title": "原文放大 2/2 · 算法1：从历史标签提取主周期",
+    "section": "technical",
+    "asset": "read201_017_2",
+    "paras": [
+      "对应「算法1：从历史标签提取主周期」（本版第35页，原201版第17页）。来源为PDF第5页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg1"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 17,
+    "reading_parent_page": 35,
+    "reading_part": 2,
+    "reading_parts": 2,
+    "id": "S037",
+    "number": 37
+  },
+  {
+    "title": "算法3完整总览",
+    "section": "technical",
+    "asset": "core_014",
+    "paras": [
+      "输入历史序列、k和L，输出至多k个周期。以下五页逐段说明公式、单位和计算。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Alg3",
+      "App.A2"
+    ],
+    "figureview": true,
+    "id": "S038",
+    "number": 38,
+    "layout": "figureview",
+    "original_201_page": 18
+  },
+  {
+    "title": "原文放大 1/4 · 算法3完整总览",
+    "section": "technical",
+    "asset": "read201_018_1",
+    "paras": [
+      "对应「算法3完整总览」（本版第38页，原201版第18页）。来源为PDF第17页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg3",
+      "App.A2"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 18,
+    "reading_parent_page": 38,
+    "reading_part": 1,
+    "reading_parts": 4,
+    "id": "S039",
+    "number": 39
+  },
+  {
+    "title": "原文放大 2/4 · 算法3完整总览",
+    "section": "technical",
+    "asset": "read201_018_2",
+    "paras": [
+      "对应「算法3完整总览」（本版第38页，原201版第18页）。来源为PDF第17页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg3",
+      "App.A2"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 18,
+    "reading_parent_page": 38,
+    "reading_part": 2,
+    "reading_parts": 4,
+    "id": "S040",
+    "number": 40
+  },
+  {
+    "title": "原文放大 3/4 · 算法3完整总览",
+    "section": "technical",
+    "asset": "read201_018_3",
+    "paras": [
+      "对应「算法3完整总览」（本版第38页，原201版第18页）。来源为PDF第17页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg3",
+      "App.A2"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 18,
+    "reading_parent_page": 38,
+    "reading_part": 3,
+    "reading_parts": 4,
+    "id": "S041",
+    "number": 41
+  },
+  {
+    "title": "原文放大 4/4 · 算法3完整总览",
+    "section": "technical",
+    "asset": "read201_018_4",
+    "paras": [
+      "对应「算法3完整总览」（本版第38页，原201版第18页）。来源为PDF第17页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg3",
+      "App.A2"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 18,
+    "reading_parent_page": 38,
+    "reading_part": 4,
+    "reading_parts": 4,
+    "id": "S042",
+    "number": 42
+  },
+  {
+    "title": "线性去趋势的具体计算",
+    "section": "technical",
+    "asset": "core_015",
+    "paras": [
+      "以t=0,1,2,3，y=1,3,3,5为教学输入，均值t̄=1.5、ȳ=3。",
+      "最小二乘斜率α=Σ(t−t̄)(y−ȳ)/Σ(t−t̄)²=6/5=1.2，截距β=1.2。",
+      "拟合趋势为1.2,2.4,3.6,4.8，残差为−0.2,0.6,−0.6,0.2。频谱分析使用残差。"
+    ],
+    "teaching": "这里只展示去趋势算术。论文推断目标仍是原始目标；去趋势是选季节特征的预处理，不能误说预测后自动加回一个趋势模型。",
+    "coverage": [
+      "Alg3.detrend"
+    ],
+    "id": "S043",
+    "number": 43,
+    "layout": "split",
+    "original_201_page": 19
+  },
+  {
+    "title": "原文放大 1/1 · 线性去趋势的具体计算",
+    "section": "technical",
+    "asset": "read201_019_1",
+    "paras": [
+      "对应「线性去趋势的具体计算」（本版第43页，原201版第19页）。来源为PDF第17页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg3.detrend"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 19,
+    "reading_parent_page": 43,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S044",
+    "number": 44
+  },
+  {
+    "title": "Hann处理与补零",
+    "section": "technical",
+    "asset": "core_016",
+    "paras": [
+      "原文写w(t′)=0.5[1−cos(2πt′/L)]，并明确写conv(x̃,w)。",
+      "这是一种卷积写法，不应擅自改成惯常频谱处理中逐点乘窗。卷积边界与归一化还需对应实现核对。",
+      "随后对称补零到2N。补零使频率采样网格更密，不会创造新的观测信息。"
+    ],
+    "teaching": "L=2时按所列t′=0,1,2得到w=(0,1,0)。这是公式手算；不能据此推断论文实际L或卷积边界模式。",
+    "coverage": [
+      "Alg3.hann",
+      "Alg3.padding"
+    ],
+    "id": "S045",
+    "number": 45,
+    "layout": "split",
+    "original_201_page": 20
+  },
+  {
+    "title": "原文放大 1/1 · Hann处理与补零",
+    "section": "technical",
+    "asset": "read201_020_1",
+    "paras": [
+      "对应「Hann处理与补零」（本版第45页，原201版第20页）。来源为PDF第17页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg3.hann",
+      "Alg3.padding"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 20,
+    "reading_parent_page": 45,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S046",
+    "number": 46
+  },
+  {
+    "title": "FFT、频率与DC分量",
+    "section": "technical",
+    "asset": "core_017",
+    "paras": [
+      "Yk是补零序列与复指数的内积，Ak=|Yk|记录该频率分量幅值。",
+      "公式fk=(k−1)/(2N)以每采样点的周期数为单位。旁注normalized to Nyquist与该数式单位不一致。",
+      "DC对应均值，作者将其幅值置零，避免把常数水平识别成季节变化。"
+    ],
+    "teaching": "若N=8、补零后长16，频率格点间距为1/16。k=5对应f=4/16=1/4，周期为4个采样点。",
+    "coverage": [
+      "Alg3.fft",
+      "Eq.fft"
+    ],
+    "id": "S047",
+    "number": 47,
+    "layout": "split",
+    "original_201_page": 21
+  },
+  {
+    "title": "原文放大 1/1 · FFT、频率与DC分量",
+    "section": "technical",
+    "asset": "read201_021_1",
+    "paras": [
+      "对应「FFT、频率与DC分量」（本版第47页，原201版第21页）。来源为PDF第17页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg3.fft",
+      "Eq.fft"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 21,
+    "reading_parent_page": 47,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S048",
+    "number": 48
+  },
+  {
+    "title": "算法3的符号复用与端点约定",
+    "section": "technical",
+    "asset": "core_018",
+    "paras": [
+      "输入k表示最多保留的周期数，频谱公式又用k作频率索引。频率手算中的k=5指第5个格点，不是取5个周期。",
+      "N表示补零前序列长度。L原先表示Hann窗长度，找峰公式又用L表示峰的索引集合，二者不能混用。",
+      "伪代码列出频率索引1至N，找峰时排除两端。实际实数FFT的端点、返回数组和峰值索引必须按固定实现核对。"
+    ],
+    "teaching": "为便于实现，可把这几个变量分别改名为k_max、j_freq、L_window、I_peaks。这里是教学命名建议，没有改写原论文。",
+    "coverage": [
+      "Alg3.symbols"
+    ],
+    "id": "S049",
+    "number": 49,
+    "layout": "split",
+    "original_201_page": 22
+  },
+  {
+    "title": "原文放大 1/3 · 算法3的符号复用与端点约定",
+    "section": "technical",
+    "asset": "read201_022_1",
+    "paras": [
+      "对应「算法3的符号复用与端点约定」（本版第49页，原201版第22页）。来源为PDF第17页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg3.symbols"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 22,
+    "reading_parent_page": 49,
+    "reading_part": 1,
+    "reading_parts": 3,
+    "id": "S050",
+    "number": 50
+  },
+  {
+    "title": "原文放大 2/3 · 算法3的符号复用与端点约定",
+    "section": "technical",
+    "asset": "read201_022_2",
+    "paras": [
+      "对应「算法3的符号复用与端点约定」（本版第49页，原201版第22页）。来源为PDF第17页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg3.symbols"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 22,
+    "reading_parent_page": 49,
+    "reading_part": 2,
+    "reading_parts": 3,
+    "id": "S051",
+    "number": 51
+  },
+  {
+    "title": "原文放大 3/3 · 算法3的符号复用与端点约定",
+    "section": "technical",
+    "asset": "read201_022_3",
+    "paras": [
+      "对应「算法3的符号复用与端点约定」（本版第49页，原201版第22页）。来源为PDF第17页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg3.symbols"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 22,
+    "reading_parent_page": 49,
+    "reading_part": 3,
+    "reading_parts": 3,
+    "id": "S052",
+    "number": 52
+  },
+  {
+    "title": "峰值、整数周期与去重",
+    "section": "technical",
+    "asset": "core_019",
+    "paras": [
+      "只在局部峰中筛选，不是从所有频率格点直接选最大值。平台峰在实现中取中点。",
+      "先把1/f四舍五入成整数周期，去重后再保留最大k个峰，得到至多k个周期。",
+      "舍入会损失非整数周期精度。k=5是本文固定配置，尚未系统评估所有k。"
+    ],
+    "teaching": "假定检测峰f=(.25,.24,.125)，幅值为(8,6,4)。周期舍入为(4,4,8)，去重后得到4和8。具体重复峰保留规则须核实现。",
+    "coverage": [
+      "Alg3.peaks",
+      "Alg3.return"
+    ],
+    "id": "S053",
+    "number": 53,
+    "layout": "split",
+    "original_201_page": 23
+  },
+  {
+    "title": "原文放大 1/1 · 峰值、整数周期与去重",
+    "section": "technical",
+    "asset": "read201_023_1",
+    "paras": [
+      "对应「峰值、整数周期与去重」（本版第53页，原201版第23页）。来源为PDF第17页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Alg3.peaks",
+      "Alg3.return"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 23,
+    "reading_parent_page": 53,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S054",
+    "number": 54
+  },
+  {
+    "title": "训练与测试特征的防泄漏顺序",
+    "section": "technical",
+    "asset": "core_020",
+    "paras": [
+      "每个预测起点仅用当时可见历史做缺失处理、截取上下文与周期提取。",
+      "删除缺失观测后最多保留最近4096个点。不能把剩余点误当原本连续的时间戳。",
+      "目标不额外做归一化，TabPFN-v2内部进行z归一化。整个测试区间的均值不能提前用于标准化。"
+    ],
+    "teaching": "研究复现应记录“时间戳间隔”和“保留观测顺序”是否一致。缺失使两者分离时，自动频谱对等间隔采样的假设需要单独验证。",
+    "coverage": [
+      "App.A3.preprocessing"
+    ],
+    "id": "S055",
+    "number": 55,
+    "layout": "split",
+    "original_201_page": 24
+  },
+  {
+    "title": "原文放大 1/1 · 训练与测试特征的防泄漏顺序",
+    "section": "technical",
+    "asset": "read201_024_1",
+    "paras": [
+      "对应「训练与测试特征的防泄漏顺序」（本版第55页，原201版第24页）。来源为PDF第18页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "App.A3.preprocessing"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 24,
+    "reading_parent_page": 55,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S056",
+    "number": 56
+  },
+  {
+    "title": "固定检查点与季节数",
+    "section": "technical",
+    "asset": "core_021",
+    "paras": [
+      "检查点是tabpfn-v2-regression-2noar4o2.ckpt，原文给出固定Hugging Face提交链接。",
+      "作者在初步评估后固定这一选择，没有为每个基准任务另行超参数调优。",
+      "自动季节保留top k=5。论文称合理范围内初查较稳定，系统k敏感性分析仍待后续研究。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "App.A3.config"
+    ],
+    "id": "S057",
+    "number": 57,
+    "layout": "split",
+    "original_201_page": 25
+  },
+  {
+    "title": "原文放大 1/2 · 固定检查点与季节数",
+    "section": "technical",
+    "asset": "read201_025_1",
+    "paras": [
+      "对应「固定检查点与季节数」（本版第57页，原201版第25页）。来源为PDF第18页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "App.A3.config"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 25,
+    "reading_parent_page": 57,
+    "reading_part": 1,
+    "reading_parts": 2,
+    "id": "S058",
+    "number": 58
+  },
+  {
+    "title": "原文放大 2/2 · 固定检查点与季节数",
+    "section": "technical",
+    "asset": "read201_025_2",
+    "paras": [
+      "对应「固定检查点与季节数」（本版第57页，原201版第25页）。来源为PDF第18页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "App.A3.config"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 25,
+    "reading_parent_page": 57,
+    "reading_part": 2,
+    "reading_parts": 2,
+    "id": "S059",
+    "number": 59
+  },
+  {
+    "title": "概率网格到均值",
+    "section": "principle",
+    "asset": "core_022",
+    "paras": [
+      "TabPFN-v2给目标数值区间分配概率，形成离散化密度。每个未来行均有自己的分布。",
+      "均值适合平方误差，中位数适合绝对误差，分位数用于概率损失或区间展示。",
+      "概率预测必须评估校准和误差，不能仅凭输出了区间就称其可靠。"
+    ],
+    "teaching": "教学网格[0,1)、[1,2)、[2,3]内均匀，质量(.2,.5,.3)。均值=.2×.5+.5×1.5+.3×2.5=1.6。",
+    "coverage": [
+      "Output.distribution"
+    ],
+    "id": "S060",
+    "number": 60,
+    "layout": "split",
+    "original_201_page": 26
+  },
+  {
+    "title": "原文放大 1/1 · 概率网格到均值",
+    "section": "principle",
+    "asset": "read201_026_1",
+    "paras": [
+      "对应「概率网格到均值」（本版第60页，原201版第26页）。来源为PDF第5页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Output.distribution"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 26,
+    "reading_parent_page": 60,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S061",
+    "number": 61
+  },
+  {
+    "title": "分位数手算与跨时刻限制",
+    "section": "principle",
+    "asset": "core_023",
+    "paras": [
+      "上一页累积质量为0.2、0.7、1。中位数落在第二格：1+(0.5−0.2)/0.5=1.6。",
+      "10%分位数为0.1/0.2=0.5，90%分位数为2+(0.9−0.7)/0.3≈2.667。",
+      "这是单时刻80%中心预测区间。多个时刻各有80%区间，不等于整条路径同时覆盖率也是80%。"
+    ],
+    "teaching": "均匀格内插值是教学简化，不声称这是论文使用的实际网格边界或本次预测数值。",
+    "coverage": [],
+    "id": "S062",
+    "number": 62,
+    "layout": "split",
+    "original_201_page": 27
+  },
+  {
+    "title": "原文放大 1/1 · 分位数手算与跨时刻限制",
+    "section": "principle",
+    "asset": "read201_027_1",
+    "paras": [
+      "对应「分位数手算与跨时刻限制」（本版第62页，原201版第27页）。来源为PDF第5页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 27,
+    "reading_parent_page": 62,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S063",
+    "number": 63
+  },
+  {
+    "title": "sin单特征的相位碰撞",
+    "section": "principle",
+    "asset": "core_024",
+    "paras": [
+      "θ=π/6与5π/6的sin都为1/2。只给sinθ，模型无法区分两个时刻。",
+      "对偶次谐波sin2θ，两个标签分别为√3/2和−√3/2，同一输入对应相反标签。",
+      "奇次谐波满足sin[n(π−θ)]=sin(nθ)，偶次则变号。奇偶差别来自信息丢失。"
+    ],
+    "teaching": "以n=3为例，sin(π/2)=1，sin(5π/2)=1。这个一致性解释奇次可恢复，但不保证有限模型一定无误差。",
+    "coverage": [],
+    "id": "S064",
+    "number": 64,
+    "layout": "split",
+    "original_201_page": 28
+  },
+  {
+    "title": "原文放大 1/1 · sin单特征的相位碰撞",
+    "section": "principle",
+    "asset": "read201_028_1",
+    "paras": [
+      "对应「sin单特征的相位碰撞」（本版第64页，原201版第28页）。来源为PDF第10页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 28,
+    "reading_parent_page": 64,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S065",
+    "number": 65
+  },
+  {
+    "title": "sin/cos对保留模2π的相位",
+    "section": "principle",
+    "asset": "core_025",
+    "paras": [
+      "加入cosθ后，上例两个输入变为(1/2,√3/2)与(1/2,−√3/2)，可以区分。",
+      "sin2θ=2sinθcosθ。因此第二谐波成为输入特征上的确定函数，表格回归能学习这种关系。",
+      "唯一性仅成立于模2π的相位，不是全时间轴的一一对应。周期重复依然发生。"
+    ],
+    "teaching": "高次谐波需要更密的相位采样与更复杂的函数近似。附录A.7的图A.4/A.5确实看到高频误差上升，不能将双特征写成无条件恢复定理。",
+    "coverage": [],
+    "id": "S066",
+    "number": 66,
+    "layout": "split",
+    "original_201_page": 29
+  },
+  {
+    "title": "原文放大 1/1 · sin/cos对保留模2π的相位",
+    "section": "principle",
+    "asset": "read201_029_1",
+    "paras": [
+      "对应「sin/cos对保留模2π的相位」（本版第66页，原201版第29页）。来源为PDF第10页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 29,
+    "reading_parent_page": 66,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S067",
+    "number": 67
+  },
+  {
+    "title": "图5.2｜单正弦与正余弦表示",
+    "section": "results",
+    "asset": "display_5_2",
+    "paras": [
+      "两种时间表示并列，后续按连续频率组覆盖全部48条曲线。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2"
+    ],
+    "figureview": true,
+    "id": "S068",
+    "number": 68,
+    "layout": "figureview",
+    "original_201_page": 30
+  },
+  {
+    "title": "原文放大 1/1 · 图5.2｜单正弦与正余弦表示",
+    "section": "results",
+    "asset": "read201_030_1",
+    "paras": [
+      "对应「图5.2｜单正弦与正余弦表示」（本版第68页，原201版第30页）。来源为PDF第9页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Fig5.2"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 30,
+    "reading_parent_page": 68,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S069",
+    "number": 69
+  },
+  {
+    "title": "图5.2a｜仅sin(t)",
+    "section": "results",
+    "asset": "display_5_2_a",
+    "paras": [
+      "每条曲线依右侧标签表示sin(nt)，由下到上n从1增加至24。",
+      "仅sin(t)时相同输入值可能对应不同相位；增加cos(t)后可在一个周期内区分相位。",
+      "左图仅以sin(t)为输入，偶数谐波在未来段重建失败；右图同时提供sin(t)与cos(t)，1–24阶谐波的重建更完整。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2.a"
+    ],
+    "figureview": false,
+    "id": "S070",
+    "number": 70,
+    "layout": "split",
+    "original_201_page": 31
+  },
+  {
+    "title": "图5.2a｜谐波n=1–4",
+    "section": "results",
+    "asset": "display_5_2_a_n1-4",
+    "paras": [
+      "本组依次包含sin(1t)至sin(4t)，原图通过竖向错开曲线避免覆盖。",
+      "左侧表示仅给sin(t)：本组奇数阶保留振荡，偶数阶重建受损，反映相位歧义。",
+      "纵向位移只是分开展示不同频率，不是信号均值随阶数增长；竖线为训练/测试分界。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2.a.n1",
+      "Fig5.2.a.n2",
+      "Fig5.2.a.n3",
+      "Fig5.2.a.n4"
+    ],
+    "figureview": false,
+    "id": "S071",
+    "number": 71,
+    "layout": "wide",
+    "original_201_page": 32
+  },
+  {
+    "title": "图5.2a｜谐波n=5–8",
+    "section": "results",
+    "asset": "display_5_2_a_n5-8",
+    "paras": [
+      "本组依次包含sin(5t)至sin(8t)，原图通过竖向错开曲线避免覆盖。",
+      "左侧表示仅给sin(t)：本组奇数阶保留振荡，偶数阶重建受损，反映相位歧义。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2.a.n5",
+      "Fig5.2.a.n6",
+      "Fig5.2.a.n7",
+      "Fig5.2.a.n8"
+    ],
+    "figureview": false,
+    "id": "S072",
+    "number": 72,
+    "layout": "wide",
+    "original_201_page": 33
+  },
+  {
+    "title": "图5.2a｜谐波n=9–12",
+    "section": "results",
+    "asset": "display_5_2_a_n9-12",
+    "paras": [
+      "本组依次包含sin(9t)至sin(12t)，原图通过竖向错开曲线避免覆盖。",
+      "左侧表示仅给sin(t)：本组奇数阶保留振荡，偶数阶重建受损，反映相位歧义。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2.a.n9",
+      "Fig5.2.a.n10",
+      "Fig5.2.a.n11",
+      "Fig5.2.a.n12"
+    ],
+    "figureview": false,
+    "id": "S073",
+    "number": 73,
+    "layout": "wide",
+    "original_201_page": 34
+  },
+  {
+    "title": "图5.2a｜谐波n=13–16",
+    "section": "results",
+    "asset": "display_5_2_a_n13-16",
+    "paras": [
+      "本组依次包含sin(13t)至sin(16t)，原图通过竖向错开曲线避免覆盖。",
+      "左侧表示仅给sin(t)：本组奇数阶保留振荡，偶数阶重建受损，反映相位歧义。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2.a.n13",
+      "Fig5.2.a.n14",
+      "Fig5.2.a.n15",
+      "Fig5.2.a.n16"
+    ],
+    "figureview": false,
+    "id": "S074",
+    "number": 74,
+    "layout": "wide",
+    "original_201_page": 35
+  },
+  {
+    "title": "图5.2a｜谐波n=17–20",
+    "section": "results",
+    "asset": "display_5_2_a_n17-20",
+    "paras": [
+      "本组依次包含sin(17t)至sin(20t)，原图通过竖向错开曲线避免覆盖。",
+      "左侧表示仅给sin(t)：本组奇数阶保留振荡，偶数阶重建受损，反映相位歧义。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2.a.n17",
+      "Fig5.2.a.n18",
+      "Fig5.2.a.n19",
+      "Fig5.2.a.n20"
+    ],
+    "figureview": false,
+    "id": "S075",
+    "number": 75,
+    "layout": "wide",
+    "original_201_page": 36
+  },
+  {
+    "title": "图5.2a｜谐波n=21–24",
+    "section": "results",
+    "asset": "display_5_2_a_n21-24",
+    "paras": [
+      "本组依次包含sin(21t)至sin(24t)，原图通过竖向错开曲线避免覆盖。",
+      "左侧表示仅给sin(t)：本组奇数阶保留振荡，偶数阶重建受损，反映相位歧义。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2.a.n21",
+      "Fig5.2.a.n22",
+      "Fig5.2.a.n23",
+      "Fig5.2.a.n24"
+    ],
+    "figureview": false,
+    "id": "S076",
+    "number": 76,
+    "layout": "wide",
+    "original_201_page": 37
+  },
+  {
+    "title": "图5.2b｜sin(t)与cos(t)",
+    "section": "results",
+    "asset": "display_5_2_b",
+    "paras": [
+      "每条曲线依右侧标签表示sin(nt)，由下到上n从1增加至24。",
+      "仅sin(t)时相同输入值可能对应不同相位；增加cos(t)后可在一个周期内区分相位。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2.b"
+    ],
+    "figureview": false,
+    "id": "S077",
+    "number": 77,
+    "layout": "split",
+    "original_201_page": 38
+  },
+  {
+    "title": "图5.2b｜谐波n=1–4",
+    "section": "results",
+    "asset": "display_5_2_b_n1-4",
+    "paras": [
+      "本组依次包含sin(1t)至sin(4t)，原图通过竖向错开曲线避免覆盖。",
+      "正余弦联合表示下，本组未来段保留相应频率的振荡；频率越高，曲线越密，不能由像素重合推断零误差。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2.b.n1",
+      "Fig5.2.b.n2",
+      "Fig5.2.b.n3",
+      "Fig5.2.b.n4"
+    ],
+    "figureview": false,
+    "id": "S078",
+    "number": 78,
+    "layout": "wide",
+    "original_201_page": 39
+  },
+  {
+    "title": "图5.2b｜谐波n=5–8",
+    "section": "results",
+    "asset": "display_5_2_b_n5-8",
+    "paras": [
+      "本组依次包含sin(5t)至sin(8t)，原图通过竖向错开曲线避免覆盖。",
+      "正余弦联合表示下，本组未来段保留相应频率的振荡；频率越高，曲线越密，不能由像素重合推断零误差。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2.b.n5",
+      "Fig5.2.b.n6",
+      "Fig5.2.b.n7",
+      "Fig5.2.b.n8"
+    ],
+    "figureview": false,
+    "id": "S079",
+    "number": 79,
+    "layout": "wide",
+    "original_201_page": 40
+  },
+  {
+    "title": "图5.2b｜谐波n=9–12",
+    "section": "results",
+    "asset": "display_5_2_b_n9-12",
+    "paras": [
+      "本组依次包含sin(9t)至sin(12t)，原图通过竖向错开曲线避免覆盖。",
+      "正余弦联合表示下，本组未来段保留相应频率的振荡；频率越高，曲线越密，不能由像素重合推断零误差。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2.b.n9",
+      "Fig5.2.b.n10",
+      "Fig5.2.b.n11",
+      "Fig5.2.b.n12"
+    ],
+    "figureview": false,
+    "id": "S080",
+    "number": 80,
+    "layout": "wide",
+    "original_201_page": 41
+  },
+  {
+    "title": "图5.2b｜谐波n=13–16",
+    "section": "results",
+    "asset": "display_5_2_b_n13-16",
+    "paras": [
+      "本组依次包含sin(13t)至sin(16t)，原图通过竖向错开曲线避免覆盖。",
+      "正余弦联合表示下，本组未来段保留相应频率的振荡；频率越高，曲线越密，不能由像素重合推断零误差。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2.b.n13",
+      "Fig5.2.b.n14",
+      "Fig5.2.b.n15",
+      "Fig5.2.b.n16"
+    ],
+    "figureview": false,
+    "id": "S081",
+    "number": 81,
+    "layout": "wide",
+    "original_201_page": 42
+  },
+  {
+    "title": "图5.2b｜谐波n=17–20",
+    "section": "results",
+    "asset": "display_5_2_b_n17-20",
+    "paras": [
+      "本组依次包含sin(17t)至sin(20t)，原图通过竖向错开曲线避免覆盖。",
+      "正余弦联合表示下，本组未来段保留相应频率的振荡；频率越高，曲线越密，不能由像素重合推断零误差。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2.b.n17",
+      "Fig5.2.b.n18",
+      "Fig5.2.b.n19",
+      "Fig5.2.b.n20"
+    ],
+    "figureview": false,
+    "id": "S082",
+    "number": 82,
+    "layout": "wide",
+    "original_201_page": 43
+  },
+  {
+    "title": "图5.2b｜谐波n=21–24",
+    "section": "results",
+    "asset": "display_5_2_b_n21-24",
+    "paras": [
+      "本组依次包含sin(21t)至sin(24t)，原图通过竖向错开曲线避免覆盖。",
+      "正余弦联合表示下，本组未来段保留相应频率的振荡；频率越高，曲线越密，不能由像素重合推断零误差。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.2.b.n21",
+      "Fig5.2.b.n22",
+      "Fig5.2.b.n23",
+      "Fig5.2.b.n24"
+    ],
+    "figureview": false,
+    "id": "S083",
+    "number": 83,
+    "layout": "wide",
+    "original_201_page": 44
+  },
+  {
+    "title": "学习到的插值行为不是核回归定理",
+    "section": "principle",
+    "asset": "core_026",
+    "paras": [
+      "作者用“像学习到的核或近邻回归器”解释相位空间行为。",
+      "这些受控合成实验支持一种机制解释，没有识别模型内部每一层实际执行的算法。",
+      "目标超出历史值域时的失败是经验结果，不能改写成输出分布支持严格被历史最小最大值截断的数学定理。"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S084",
+    "number": 84,
+    "layout": "wide",
+    "original_201_page": 45
+  },
+  {
+    "title": "原文放大 1/1 · 学习到的插值行为不是核回归定理",
+    "section": "principle",
+    "asset": "read201_045_1",
+    "paras": [
+      "对应「学习到的插值行为不是核回归定理」（本版第84页，原201版第45页）。来源为PDF第10页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 45,
+    "reading_parent_page": 84,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S085",
+    "number": 85
+  },
+  {
+    "title": "GIFT-Eval的数据与统计分母",
+    "section": "results",
+    "asset": "core_027",
+    "paras": [
+      "23个数据集、超过14.4万条序列、1.77亿数据点，覆盖7个领域、10类采样频率。",
+      "数据集×频率×预测窗口组成97个有效任务。97不等于97条独立序列。",
+      "骨干比较只用78任务，特征消融只用81个较小任务。不同图的聚合值不能直接拼成同一排名。"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S086",
+    "number": 86,
+    "layout": "split",
+    "original_201_page": 46
+  },
+  {
+    "title": "原文放大 1/3 · GIFT-Eval的数据与统计分母",
+    "section": "results",
+    "asset": "read201_046_1",
+    "paras": [
+      "对应「GIFT-Eval的数据与统计分母」（本版第86页，原201版第46页）。来源为PDF第6页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 46,
+    "reading_parent_page": 86,
+    "reading_part": 1,
+    "reading_parts": 3,
+    "id": "S087",
+    "number": 87
+  },
+  {
+    "title": "原文放大 2/3 · GIFT-Eval的数据与统计分母",
+    "section": "results",
+    "asset": "read201_046_2",
+    "paras": [
+      "对应「GIFT-Eval的数据与统计分母」（本版第86页，原201版第46页）。来源为PDF第11页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 46,
+    "reading_parent_page": 86,
+    "reading_part": 2,
+    "reading_parts": 3,
+    "id": "S088",
+    "number": 88
+  },
+  {
+    "title": "原文放大 3/3 · GIFT-Eval的数据与统计分母",
+    "section": "results",
+    "asset": "read201_046_3",
+    "paras": [
+      "对应「GIFT-Eval的数据与统计分母」（本版第86页，原201版第46页）。来源为PDF第12页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 46,
+    "reading_parent_page": 86,
+    "reading_part": 3,
+    "reading_parts": 3,
+    "id": "S089",
+    "number": 89
+  },
+  {
+    "title": "基线与信息条件",
+    "section": "results",
+    "asset": "core_028",
+    "paras": [
+      "对照包括统计模型、逐数据集训练的深度模型与预训练时间序列模型。图4.1保留实际展示的全部模型。",
+      "基线公开可用截止时间为2025年9月。论文未纳入当时不可公开使用的ChronosX和COSMIC。",
+      "因此排名描述的是指定版本、任务与可用模型集合，不能当作今天所有方法的总榜。"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S090",
+    "number": 90,
+    "layout": "wide",
+    "original_201_page": 47
+  },
+  {
+    "title": "原文放大 1/3 · 基线与信息条件",
+    "section": "results",
+    "asset": "read201_047_1",
+    "paras": [
+      "对应「基线与信息条件」（本版第90页，原201版第47页）。来源为PDF第6页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 47,
+    "reading_parent_page": 90,
+    "reading_part": 1,
+    "reading_parts": 3,
+    "id": "S091",
+    "number": 91
+  },
+  {
+    "title": "原文放大 2/3 · 基线与信息条件",
+    "section": "results",
+    "asset": "read201_047_2",
+    "paras": [
+      "对应「基线与信息条件」（本版第90页，原201版第47页）。来源为PDF第6页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 47,
+    "reading_parent_page": 90,
+    "reading_part": 2,
+    "reading_parts": 3,
+    "id": "S092",
+    "number": 92
+  },
+  {
+    "title": "原文放大 3/3 · 基线与信息条件",
+    "section": "results",
+    "asset": "read201_047_3",
+    "paras": [
+      "对应「基线与信息条件」（本版第90页，原201版第47页）。来源为PDF第3页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 47,
+    "reading_parent_page": 90,
+    "reading_part": 3,
+    "reading_parts": 3,
+    "id": "S093",
+    "number": 93
+  },
+  {
+    "title": "MASE的定义和手算",
+    "section": "results",
+    "asset": "core_029",
+    "paras": [
+      "MASE把预测绝对误差除以历史季节朴素误差。季节周期m决定分母使用|yt−yt−m|。",
+      "跨量纲比较更方便，但历史分母接近零时会非常敏感。实现应核对零分母的处理。",
+      "论文用中位数进行绝对误差评价，避免混淆均值预测与MASE。"
+    ],
+    "teaching": "教学：历史为1,2,3,4，m=1时分母=1。未来真实5,6，预测4,5，平均绝对误差=1，所以MASE=1。此公式说明指标，不是论文数据。",
+    "coverage": [],
+    "id": "S094",
+    "number": 94,
+    "layout": "split",
+    "original_201_page": 48
+  },
+  {
+    "title": "原文放大 1/1 · MASE的定义和手算",
+    "section": "results",
+    "asset": "read201_048_1",
+    "paras": [
+      "对应「MASE的定义和手算」（本版第94页，原201版第48页）。来源为PDF第6页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 48,
+    "reading_parent_page": 94,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S095",
+    "number": 95
+  },
+  {
+    "title": "WQL的分位损失手算",
+    "section": "results",
+    "asset": "core_030",
+    "paras": [
+      "分位损失ρq(y−ŷq)在低估时乘q，高估时乘1−q，因此高分位更惩罚低估。",
+      "本文按GIFT-Eval使用0.1到0.9的9个分位数，并按真实值尺度归一化聚合。",
+      "WQL同时受区间位置与宽度影响。较低WQL不能单独证明所有条件下都达到正确覆盖率。"
+    ],
+    "teaching": "y=10、q=.9：若预测8，ρ=.9×2=1.8；若预测12，ρ=.1×2=.2。常见WQL再乘2并按目标绝对值总量归一化。论文正文未展开全部实现细节，复现以基准代码为准。",
+    "coverage": [],
+    "id": "S096",
+    "number": 96,
+    "layout": "split",
+    "original_201_page": 49
+  },
+  {
+    "title": "原文放大 1/1 · WQL的分位损失手算",
+    "section": "results",
+    "asset": "read201_049_1",
+    "paras": [
+      "对应「WQL的分位损失手算」（本版第96页，原201版第49页）。来源为PDF第6页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 49,
+    "reading_parent_page": 96,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S097",
+    "number": 97
+  },
+  {
+    "title": "相对分数与几何平均",
+    "section": "results",
+    "asset": "core_031",
+    "paras": [
+      "各任务分数相对Seasonal Naive归一化，参考值为1，再用几何平均聚合。",
+      "WQL平均名次只利用相对排序，不等于平均误差大小。图4.1报告95%置信区间。",
+      "误差条重叠与否不能替代原文未报告的配对显著性检验。"
+    ],
+    "teaching": "两个任务相对误差0.5与2，几何平均√(0.5×2)=1；算术平均=1.25。两种聚合回答不同问题。",
+    "coverage": [],
+    "id": "S098",
+    "number": 98,
+    "layout": "split",
+    "original_201_page": 50
+  },
+  {
+    "title": "原文放大 1/2 · 相对分数与几何平均",
+    "section": "results",
+    "asset": "read201_050_1",
+    "paras": [
+      "对应「相对分数与几何平均」（本版第98页，原201版第50页）。来源为PDF第6页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 50,
+    "reading_parent_page": 98,
+    "reading_part": 1,
+    "reading_parts": 2,
+    "id": "S099",
+    "number": 99
+  },
+  {
+    "title": "原文放大 2/2 · 相对分数与几何平均",
+    "section": "results",
+    "asset": "read201_050_2",
+    "paras": [
+      "对应「相对分数与几何平均」（本版第98页，原201版第50页）。来源为PDF第6页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 50,
+    "reading_parent_page": 98,
+    "reading_part": 2,
+    "reading_parts": 2,
+    "id": "S100",
+    "number": 100
+  },
+  {
+    "title": "fev任务筛选与超时排除",
+    "section": "results",
+    "asset": "core_032",
+    "paras": [
+      "fev-bench有100任务，42项含协变量，30项同时具备历史和未来协变量。",
+      "其中2项TabPFN-TS超过6小时限制，最终报告28项。超时任务未列入最终分数。",
+      "这可能改变可完成任务的组成，报告性能时必须保留超时与28任务分母。"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S101",
+    "number": 101,
+    "layout": "wide",
+    "original_201_page": 51
+  },
+  {
+    "title": "原文放大 1/1 · fev任务筛选与超时排除",
+    "section": "results",
+    "asset": "read201_051_1",
+    "paras": [
+      "对应「fev任务筛选与超时排除」（本版第101页，原201版第51页）。来源为PDF第7页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 51,
+    "reading_parent_page": 101,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S102",
+    "number": 102
+  },
+  {
+    "title": "协变量排名不能隔离架构贡献",
+    "section": "results",
+    "asset": "core_033",
+    "paras": [
+      "图注明确TabPFN-TS是这些对照中唯一直接使用协变量输入的模型。",
+      "因此胜出支持“表格化方法能够利用已知外部信息”，不能证明等信息条件下架构本身全面更强。",
+      "同一TabPFN-TS开关协变量的合成实验更接近隔离协变量的增量贡献。"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S103",
+    "number": 103,
+    "layout": "wide",
+    "original_201_page": 52
+  },
+  {
+    "title": "原文放大 1/1 · 协变量排名不能隔离架构贡献",
+    "section": "results",
+    "asset": "read201_052_1",
+    "paras": [
+      "对应「协变量排名不能隔离架构贡献」（本版第103页，原201版第52页）。来源为PDF第7页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 52,
+    "reading_parent_page": 103,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S104",
+    "number": 104
+  },
+  {
+    "title": "噪声、趋势与季节实验的固定窗口",
+    "section": "results",
+    "asset": "core_034",
+    "paras": [
+      "这组受控定性实验以前800个点为上下文，预测接下来200个点。",
+      "噪声、线性/指数趋势、周期结构及其加法/乘法组合帮助区分模型能处理的时间模式。",
+      "800/200只对应§5.1的这组实验，不能据此推定所有真实基准或协变量实验也使用相同窗口。"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S105",
+    "number": 105,
+    "layout": "wide",
+    "original_201_page": 53
+  },
+  {
+    "title": "原文放大 1/1 · 噪声、趋势与季节实验的固定窗口",
+    "section": "results",
+    "asset": "read201_053_1",
+    "paras": [
+      "对应「噪声、趋势与季节实验的固定窗口」（本版第105页，原201版第53页）。来源为PDF第8页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 53,
+    "reading_parent_page": 105,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S106",
+    "number": 106
+  },
+  {
+    "title": "受控合成实验的变量",
+    "section": "results",
+    "asset": "core_035",
+    "paras": [
+      "基础过程由随机幅值、相位、周期的正弦信号相加。外部变量包括线性趋势、脉冲、斜坡、随机游走和复合。",
+      "每种外部变量分别加性或乘性作用，共10类。固定模型，比较只用时间特征与追加协变量。",
+      "这个对照隔离输入信息差异。不能把人工构造的依赖当作真实应用中的因果效应证据。"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S107",
+    "number": 107,
+    "layout": "wide",
+    "original_201_page": 54
+  },
+  {
+    "title": "原文放大 1/1 · 受控合成实验的变量",
+    "section": "results",
+    "asset": "read201_054_1",
+    "paras": [
+      "对应「受控合成实验的变量」（本版第107页，原201版第54页）。来源为PDF第10页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 54,
+    "reading_parent_page": 107,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S108",
+    "number": 108
+  },
+  {
+    "title": "趋势外推的失败边界",
+    "section": "results",
+    "asset": "core_036",
+    "paras": [
+      "作者把趋势失败联系到合成预训练中随机分割上下文与查询的插值倾向。",
+      "真实趋势的未来查询可能离开历史特征与目标范围，模型没有受到同样的系统外推训练。",
+      "这是作者提出的解释。本文没有单独改变预训练分割方式来证明这一因果机制。"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S109",
+    "number": 109,
+    "layout": "split",
+    "original_201_page": 55
+  },
+  {
+    "title": "原文放大 1/2 · 趋势外推的失败边界",
+    "section": "results",
+    "asset": "read201_055_1",
+    "paras": [
+      "对应「趋势外推的失败边界」（本版第109页，原201版第55页）。来源为PDF第12页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 55,
+    "reading_parent_page": 109,
+    "reading_part": 1,
+    "reading_parts": 2,
+    "id": "S110",
+    "number": 110
+  },
+  {
+    "title": "原文放大 2/2 · 趋势外推的失败边界",
+    "section": "results",
+    "asset": "read201_055_2",
+    "paras": [
+      "对应「趋势外推的失败边界」（本版第109页，原201版第55页）。来源为PDF第13页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 55,
+    "reading_parent_page": 109,
+    "reading_part": 2,
+    "reading_parts": 2,
+    "id": "S111",
+    "number": 111
+  },
+  {
+    "title": "小参数量与高推断成本并存",
+    "section": "results",
+    "asset": "core_037",
+    "paras": [
+      "TabPFN-TS骨干仅11M参数，但每条序列都要建立独立上下文并执行一次预测。",
+      "论文讨论全注意力对序列长度L的O(L²)成本。其他时间序列模型可采用patch或轻量解码并批处理。",
+      "图6.1按GPU数折算，约30倍推断时间。四卡提高吞吐，不代表单序列成本消失。"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S112",
+    "number": 112,
+    "layout": "split",
+    "original_201_page": 56
+  },
+  {
+    "title": "原文放大 1/3 · 小参数量与高推断成本并存",
+    "section": "results",
+    "asset": "read201_056_1",
+    "paras": [
+      "对应「小参数量与高推断成本并存」（本版第112页，原201版第56页）。来源为PDF第13页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 56,
+    "reading_parent_page": 112,
+    "reading_part": 1,
+    "reading_parts": 3,
+    "id": "S113",
+    "number": 113
+  },
+  {
+    "title": "原文放大 2/3 · 小参数量与高推断成本并存",
+    "section": "results",
+    "asset": "read201_056_2",
+    "paras": [
+      "对应「小参数量与高推断成本并存」（本版第112页，原201版第56页）。来源为PDF第13页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 56,
+    "reading_parent_page": 112,
+    "reading_part": 2,
+    "reading_parts": 3,
+    "id": "S114",
+    "number": 114
+  },
+  {
+    "title": "原文放大 3/3 · 小参数量与高推断成本并存",
+    "section": "results",
+    "asset": "read201_056_3",
+    "paras": [
+      "对应「小参数量与高推断成本并存」（本版第112页，原201版第56页）。来源为PDF第13页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 56,
+    "reading_parent_page": 112,
+    "reading_part": 3,
+    "reading_parts": 3,
+    "id": "S115",
+    "number": 115
+  },
+  {
+    "title": "图4.1｜GIFT-Eval单变量基准",
+    "section": "results",
+    "asset": "display_4_1",
+    "paras": [
+      "三个指标共同评价单变量预测，后续逐面板读取排名与误差。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig4.1"
+    ],
+    "figureview": true,
+    "id": "S116",
+    "number": 116,
+    "layout": "figureview",
+    "original_201_page": 57
+  },
+  {
+    "title": "原文放大 1/1 · 图4.1｜GIFT-Eval单变量基准",
+    "section": "results",
+    "asset": "read201_057_1",
+    "paras": [
+      "对应「图4.1｜GIFT-Eval单变量基准」（本版第116页，原201版第57页）。来源为PDF第6页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Fig4.1"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 57,
+    "reading_parent_page": 116,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S117",
+    "number": 117
+  },
+  {
+    "title": "图4.1｜WQL平均名次",
+    "section": "results",
+    "asset": "display_4_1_1",
+    "paras": [
+      "TabPFN-TS平均名次为5.392；TiRex为2.515，Toto-1.0为4.237，Moirai-2为4.464。",
+      "平均名次评价跨任务的排序，不能等同于误差减少的百分比。",
+      "三个面板分别给出WQL平均名次、相对WQL与相对MASE，均为越低越好；颜色区分四类模型。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig4.1.1"
+    ],
+    "figureview": false,
+    "id": "S118",
+    "number": 118,
+    "layout": "split",
+    "original_201_page": 58
+  },
+  {
+    "title": "图4.1｜相对WQL",
+    "section": "results",
+    "asset": "display_4_1_2",
+    "paras": [
+      "TabPFN-TS为0.460，低于季节朴素基线1.000；TiRex为0.413。",
+      "TabPFN-TS与TimesFM-2.0的0.465较接近，这不表示二者每个数据集上都同样好。",
+      "TabPFN-TS在该基准上有竞争力，但三项指标均不是最优。误差棒按图注表示95%置信区间，不能仅凭相近条长宣布显著差异。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig4.1.2"
+    ],
+    "figureview": false,
+    "id": "S119",
+    "number": 119,
+    "layout": "split",
+    "original_201_page": 59
+  },
+  {
+    "title": "图4.1｜相对MASE",
+    "section": "results",
+    "asset": "display_4_1_3",
+    "paras": [
+      "TabPFN-TS为0.692；TiRex为0.642，Moirai-2为0.654。",
+      "概率误差与点误差的模型次序并不完全一致，应分开报告。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig4.1.3"
+    ],
+    "figureview": false,
+    "id": "S120",
+    "number": 120,
+    "layout": "split",
+    "original_201_page": 60
+  },
+  {
+    "title": "图4.2｜已知协变量任务上的结果",
+    "section": "results",
+    "asset": "display_4_2",
+    "paras": [
+      "28项已知协变量任务的汇总，后续分别读取概率与点预测指标。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig4.2"
+    ],
+    "figureview": true,
+    "id": "S121",
+    "number": 121,
+    "layout": "figureview",
+    "original_201_page": 61
+  },
+  {
+    "title": "原文放大 1/1 · 图4.2｜已知协变量任务上的结果",
+    "section": "results",
+    "asset": "read201_061_1",
+    "paras": [
+      "对应「图4.2｜已知协变量任务上的结果」（本版第121页，原201版第61页）。来源为PDF第7页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Fig4.2"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 61,
+    "reading_parent_page": 121,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S122",
+    "number": 122
+  },
+  {
+    "title": "图4.2｜相对WQL",
+    "section": "results",
+    "asset": "display_4_2_WQL",
+    "paras": [
+      "TabPFN-TS为0.503，TiRex为0.597；相对基线1.000，两者均有改善。",
+      "该比较支持在这一筛选任务集合上使用已知协变量，不宜直接扩展为所有时间序列上的优势。",
+      "28项fev-bench任务中，TabPFN-TS的相对WQL与相对MASE在图示模型中最低。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig4.2.WQL"
+    ],
+    "figureview": false,
+    "id": "S123",
+    "number": 123,
+    "layout": "split",
+    "original_201_page": 62
+  },
+  {
+    "title": "图4.2｜相对MASE",
+    "section": "results",
+    "asset": "display_4_2_MASE",
+    "paras": [
+      "TabPFN-TS为0.666，TiRex为0.749，Chronos-Bolt为0.758。",
+      "点预测指标与概率指标均支持TabPFN-TS在这组任务上的领先。",
+      "此处的协变量在历史和未来窗口均可用；这不是对未知未来外生变量的预测能力测试。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig4.2.MASE"
+    ],
+    "figureview": false,
+    "id": "S124",
+    "number": 124,
+    "layout": "split",
+    "original_201_page": 63
+  },
+  {
+    "title": "图5.1｜噪声、趋势与季节性的边界",
+    "section": "results",
+    "asset": "display_5_1",
+    "paras": [
+      "八个合成实例并列呈现，后续逐图检查噪声、趋势和季节性。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.1"
+    ],
+    "figureview": true,
+    "id": "S125",
+    "number": 125,
+    "layout": "figureview",
+    "original_201_page": 64
+  },
+  {
+    "title": "原文放大 1/1 · 图5.1｜噪声、趋势与季节性的边界",
+    "section": "results",
+    "asset": "read201_064_1",
+    "paras": [
+      "对应「图5.1｜噪声、趋势与季节性的边界」（本版第125页，原201版第64页）。来源为PDF第8页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Fig5.1"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 64,
+    "reading_parent_page": 125,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S126",
+    "number": 126
+  },
+  {
+    "title": "图5.1｜小时噪声",
+    "section": "results",
+    "asset": "display_5_1_a1",
+    "paras": [
+      "预测均值接近零，未沿历史噪声的逐点起伏继续摆动。",
+      "灰带描述未来随机性；平坦的均值不意味着模型漏掉了可预测趋势。该组实验使用前800点预测后200点。",
+      "八个小图覆盖两类噪声、线性和指数趋势、两类季节模式，以及趋势与季节的两种组合。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.1.a1"
+    ],
+    "figureview": false,
+    "id": "S127",
+    "number": 127,
+    "layout": "split",
+    "original_201_page": 65
+  },
+  {
+    "title": "图5.1｜周频噪声",
+    "section": "results",
+    "asset": "display_5_1_a2",
+    "paras": [
+      "预测均值位于约100附近，未来蓝线仍围绕该水平随机波动。",
+      "与上图的零均值噪声相比，模型保留了不同的水平，纵轴不能直接叠比。",
+      "蓝线为真实值，橙线为均值预测，灰带为0.1–0.9分位范围，红色虚线分开历史与未来。不同子图纵轴尺度不同。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.1.a2"
+    ],
+    "figureview": false,
+    "id": "S128",
+    "number": 128,
+    "layout": "split",
+    "original_201_page": 66
+  },
+  {
+    "title": "图5.1｜线性趋势",
+    "section": "results",
+    "asset": "display_5_1_b1",
+    "paras": [
+      "真实序列持续上升，预测线在历史末端附近趋平。",
+      "灰带明显不对称；该实例暴露超出历史目标范围的外推不足。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.1.b1"
+    ],
+    "figureview": false,
+    "id": "S129",
+    "number": 129,
+    "layout": "split",
+    "original_201_page": 67
+  },
+  {
+    "title": "图5.1｜指数趋势",
+    "section": "results",
+    "asset": "display_5_1_b2",
+    "paras": [
+      "真实值在未来继续加速上升，预测均值上升较慢并低于真实线。",
+      "趋势形状超出训练目标范围时，单靠时间索引不足以保证正确外推。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.1.b2"
+    ],
+    "figureview": false,
+    "id": "S130",
+    "number": 130,
+    "layout": "split",
+    "original_201_page": 68
+  },
+  {
+    "title": "图5.1｜单周期季节性",
+    "section": "results",
+    "asset": "display_5_1_c1",
+    "paras": [
+      "未来橙线延续周期振荡，峰谷与蓝线基本重合。",
+      "重复相位在历史中已有参照，模型可借周期表示进行条件插值。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.1.c1"
+    ],
+    "figureview": false,
+    "id": "S131",
+    "number": 131,
+    "layout": "split",
+    "original_201_page": 69
+  },
+  {
+    "title": "图5.1｜复合季节性",
+    "section": "results",
+    "asset": "display_5_1_c2",
+    "paras": [
+      "未来段保留多个频率叠加形成的非单一正弦形状。",
+      "这些是合成信号的定性例子，不能从重合程度反推出未报告的误差值。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.1.c2"
+    ],
+    "figureview": false,
+    "id": "S132",
+    "number": 132,
+    "layout": "wide",
+    "original_201_page": 70
+  },
+  {
+    "title": "图5.1｜趋势与季节相加",
+    "section": "results",
+    "asset": "display_5_1_d1",
+    "paras": [
+      "预测仍有小幅周期起伏，但均值没有跟上持续上升的真实水平。",
+      "周期成分可恢复，趋势外推仍受限，两者可以同时出现。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.1.d1"
+    ],
+    "figureview": false,
+    "id": "S133",
+    "number": 133,
+    "layout": "wide",
+    "original_201_page": 71
+  },
+  {
+    "title": "图5.1｜趋势与季节相乘",
+    "section": "results",
+    "asset": "display_5_1_d2",
+    "paras": [
+      "未来橙线维持较强振荡，与真值的主要周期相符。",
+      "此处仍应检查包络幅度的变化；一个成功例子不抵消线性和指数趋势中的失败。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.1.d2"
+    ],
+    "figureview": false,
+    "id": "S134",
+    "number": 134,
+    "layout": "wide",
+    "original_201_page": 72
+  },
+  {
+    "title": "图5.3｜协变量条件下的三个预测实例",
+    "section": "results",
+    "asset": "display_5_3",
+    "paras": [
+      "三个目标/协变量配对实例，后续分别比较红绿预测。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.3"
+    ],
+    "figureview": true,
+    "id": "S135",
+    "number": 135,
+    "layout": "figureview",
+    "original_201_page": 73
+  },
+  {
+    "title": "原文放大 1/1 · 图5.3｜协变量条件下的三个预测实例",
+    "section": "results",
+    "asset": "read201_073_1",
+    "paras": [
+      "对应「图5.3｜协变量条件下的三个预测实例」（本版第135页，原201版第73页）。来源为PDF第10页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Fig5.3"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 73,
+    "reading_parent_page": 135,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S136",
+    "number": 136
+  },
+  {
+    "title": "图5.3｜斜坡协变量",
+    "section": "results",
+    "asset": "display_5_3_a",
+    "paras": [
+      "红线为使用协变量的中位数预测，可追随未来斜坡导致的目标水平抬升与回落；绿线主要保留基础振荡。",
+      "协变量在未来重置时，红线也发生相应变化，不能只比较整体均值。",
+      "每列上方是目标序列，下方是对应协变量；红线使用协变量，绿线不使用。共享图例完整保留。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.3.a"
+    ],
+    "figureview": false,
+    "id": "S137",
+    "number": 137,
+    "layout": "wide",
+    "original_201_page": 74
+  },
+  {
+    "title": "图5.3｜随机游走协变量",
+    "section": "results",
+    "asset": "display_5_3_b",
+    "paras": [
+      "红线跟随目标的缓慢水平变化，绿线对该低频变化的跟随较弱。",
+      "比较的是同一时段、同一目标有无协变量的预测，不是两个不同数据集。",
+      "蓝线是真值，虚线是分界，阴影为第10–90百分位。三个实例展示斜坡、随机游走及复合协变量。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.3.b"
+    ],
+    "figureview": false,
+    "id": "S138",
+    "number": 138,
+    "layout": "wide",
+    "original_201_page": 75
+  },
+  {
+    "title": "图5.3｜复合协变量",
+    "section": "results",
+    "asset": "display_5_3_c",
+    "paras": [
+      "下方包含多个形态不同的协变量，红色预测较好保留未来目标波形。",
+      "绿色预测及阴影与红色存在差异；单例可解释使用方式，平均收益见图5.4。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.3.c"
+    ],
+    "figureview": false,
+    "id": "S139",
+    "number": 139,
+    "layout": "wide",
+    "original_201_page": 76
+  },
+  {
+    "title": "图5.4｜协变量增益的分布",
+    "section": "results",
+    "asset": "display_5_4",
+    "paras": [
+      "两种耦合关系下的改善分布，后续分别查看箱体与零改善线。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.4"
+    ],
+    "figureview": true,
+    "id": "S140",
+    "number": 140,
+    "layout": "figureview",
+    "original_201_page": 77
+  },
+  {
+    "title": "原文放大 1/1 · 图5.4｜协变量增益的分布",
+    "section": "results",
+    "asset": "read201_077_1",
+    "paras": [
+      "对应「图5.4｜协变量增益的分布」（本版第140页，原201版第77页）。来源为PDF第11页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Fig5.4"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 77,
+    "reading_parent_page": 140,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S141",
+    "number": 141
+  },
+  {
+    "title": "图5.4｜加法关系",
+    "section": "results",
+    "asset": "display_5_4_a",
+    "paras": [
+      "脉冲、斜坡、随机游走及复合类的箱体均远高于零；线性趋势类围绕零，且有负改善。",
+      "蓝色代表MASE，红色代表WQL；箱体与离群点描述分布，不能把视觉中位数当作论文未列出的精确平均改善率。正文未给出每类重复次数。",
+      "左为加法耦合，右为乘法耦合；每类分别报告MASE和WQL相对改善率的箱线图。红虚线是零改善。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.4.a"
+    ],
+    "figureview": false,
+    "id": "S142",
+    "number": 142,
+    "layout": "split",
+    "original_201_page": 78
+  },
+  {
+    "title": "图5.4｜乘法关系",
+    "section": "results",
+    "asset": "display_5_4_b",
+    "paras": [
+      "线性趋势类中心低于零；脉冲类改善有较大离散，斜坡类高且集中，随机游走类分散更大。",
+      "蓝色代表MASE，红色代表WQL；箱体与离群点描述分布，不能把视觉中位数当作论文未列出的精确平均改善率。",
+      "斜坡、随机游走和复合类总体获益；线性趋势附近的箱体接近零或落在零以下，说明协变量并不能消除外推限制。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.4.b"
+    ],
+    "figureview": false,
+    "id": "S143",
+    "number": 143,
+    "layout": "split",
+    "original_201_page": 79
+  },
+  {
+    "title": "图5.5｜换成TabDPT后会怎样",
+    "section": "results",
+    "asset": "display_5_5",
+    "paras": [
+      "替换回归骨干后的78任务对比，下一页放大读取证据。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.5"
+    ],
+    "figureview": true,
+    "id": "S144",
+    "number": 144,
+    "layout": "figureview",
+    "original_201_page": 80
+  },
+  {
+    "title": "原文放大 1/1 · 图5.5｜换成TabDPT后会怎样",
+    "section": "results",
+    "asset": "read201_080_1",
+    "paras": [
+      "对应「图5.5｜换成TabDPT后会怎样」（本版第144页，原201版第80页）。来源为PDF第11页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Fig5.5"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 80,
+    "reading_parent_page": 144,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S145",
+    "number": 145
+  },
+  {
+    "title": "图5.5｜换成TabDPT后会怎样｜放大解读",
+    "section": "results",
+    "asset": "display_5_5_detail",
+    "paras": [
+      "在78项可完成计算的GIFT-Eval任务上，TabDPT-TS的相对MASE为0.755，TabPFN-TS为0.662。",
+      "TabDPT-TS与Chronos-Bolt-Tiny的0.758接近，表明时间特征方案可以迁移，但回归骨干仍影响准确率。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.5.detail"
+    ],
+    "figureview": false,
+    "id": "S146",
+    "number": 146,
+    "layout": "split",
+    "original_201_page": 81
+  },
+  {
+    "title": "图5.6｜时间特征消融",
+    "section": "results",
+    "asset": "display_5_6",
+    "paras": [
+      "81项任务上的特征消融，后续分别检查WQL与MASE。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.6"
+    ],
+    "figureview": true,
+    "id": "S147",
+    "number": 147,
+    "layout": "figureview",
+    "original_201_page": 82
+  },
+  {
+    "title": "原文放大 1/1 · 图5.6｜时间特征消融",
+    "section": "results",
+    "asset": "read201_082_1",
+    "paras": [
+      "对应「图5.6｜时间特征消融」（本版第147页，原201版第82页）。来源为PDF第12页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Fig5.6"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 82,
+    "reading_parent_page": 147,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S148",
+    "number": 148
+  },
+  {
+    "title": "图5.6｜相对WQL",
+    "section": "results",
+    "asset": "display_5_6_WQL",
+    "paras": [
+      "三类特征一起使用为0.443，索引加日历为0.452，索引加自动季节为0.456；仅索引为0.663。",
+      "日历特征与自动季节特征提供不同周期信息；图示结论限定于这些配置与该任务子集。",
+      "组合运行索引、自动季节特征和日历特征的配置，在图示WQL与MASE上均最优。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.6.WQL"
+    ],
+    "figureview": false,
+    "id": "S149",
+    "number": 149,
+    "layout": "split",
+    "original_201_page": 83
+  },
+  {
+    "title": "图5.6｜相对MASE",
+    "section": "results",
+    "asset": "display_5_6_MASE",
+    "paras": [
+      "全特征为0.668；仅自动季节为0.964，仅索引为1.014，后者略高于季节朴素基线。",
+      "日历特征与自动季节特征提供不同周期信息；图示结论限定于这些配置与该任务子集。",
+      "此处使用81项较小任务，不能把数值与97项完整基准直接相减。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig5.6.MASE"
+    ],
+    "figureview": false,
+    "id": "S150",
+    "number": 150,
+    "layout": "split",
+    "original_201_page": 84
+  },
+  {
+    "title": "图6.1｜推理耗时的代价",
+    "section": "results",
+    "asset": "display_6_1",
+    "paras": [
+      "97项任务的单GPU等效耗时，下一页放大读取对数轴。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig6.1"
+    ],
+    "figureview": true,
+    "id": "S151",
+    "number": 151,
+    "layout": "figureview",
+    "original_201_page": 85
+  },
+  {
+    "title": "原文放大 1/1 · 图6.1｜推理耗时的代价",
+    "section": "results",
+    "asset": "read201_085_1",
+    "paras": [
+      "对应「图6.1｜推理耗时的代价」（本版第151页，原201版第85页）。来源为PDF第13页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Fig6.1"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 85,
+    "reading_parent_page": 151,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S152",
+    "number": 152
+  },
+  {
+    "title": "图6.1｜推理耗时的代价｜放大解读",
+    "section": "results",
+    "asset": "display_6_1_detail",
+    "paras": [
+      "横轴为秒且使用对数刻度；TabPFN-TS的箱体整体位于Chronos-Bolt-Base与TimesFM-2.0右侧。",
+      "图示汇总97项任务，TabPFN-TS的四张T4用时归一化为单GPU等效时间。正文概括其耗时约为对照模型的30倍，非每一任务的固定倍率。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Fig6.1.detail"
+    ],
+    "figureview": false,
+    "id": "S153",
+    "number": 153,
+    "layout": "split",
+    "original_201_page": 86
+  },
+  {
+    "title": "表1｜GIFT-Eval数据集全表",
+    "section": "results",
+    "asset": "display_Table1",
+    "paras": [
+      "GIFT-Eval数据集统计全表，后续逐组保留全部55行及表头。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1"
+    ],
+    "figureview": true,
+    "id": "S154",
+    "number": 154,
+    "layout": "figureview",
+    "original_201_page": 87
+  },
+  {
+    "title": "原文放大 1/1 · 表1｜GIFT-Eval数据集全表",
+    "section": "results",
+    "asset": "read201_087_1",
+    "paras": [
+      "对应「表1｜GIFT-Eval数据集全表」（本版第154页，原201版第87页）。来源为PDF第19页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Table1"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 87,
+    "reading_parent_page": 154,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S155",
+    "number": 155
+  },
+  {
+    "title": "表1｜第1–7行：Jena Weather至BizITObs-L2C",
+    "section": "results",
+    "asset": "display_Table1_rows1-7",
+    "paras": [
+      "同一数据集可因采样频率不同形成不同任务，Jena Weather的10T、H、D必须分别读。",
+      "BizITObs各行的目标维度与监控来源不同，序列数不能与目标变量数混为一谈。",
+      "表按数据集与采样频率列出序列数、长度、观测数、目标维度及不同预测期的长度和窗口数。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row1",
+      "Table1.row2",
+      "Table1.row3",
+      "Table1.row4",
+      "Table1.row5",
+      "Table1.row6",
+      "Table1.row7"
+    ],
+    "figureview": false,
+    "id": "S156",
+    "number": 156,
+    "layout": "wide",
+    "original_201_page": 88
+  },
+  {
+    "title": "表1｜第1–7行：数据集、领域、频率与序列数",
+    "section": "results",
+    "asset": "display_Table1_rows1-7_identity",
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row1.identity",
+      "Table1.row2.identity",
+      "Table1.row3.identity",
+      "Table1.row4.identity",
+      "Table1.row5.identity",
+      "Table1.row6.identity",
+      "Table1.row7.identity"
+    ],
+    "figureview": false,
+    "id": "S157",
+    "number": 157,
+    "layout": "split",
+    "original_201_page": 89
+  },
+  {
+    "title": "表1｜第1–7行：长度、观测数与目标维数",
+    "section": "results",
+    "asset": "display_Table1_rows1-7_size",
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row1.size",
+      "Table1.row2.size",
+      "Table1.row3.size",
+      "Table1.row4.size",
+      "Table1.row5.size",
+      "Table1.row6.size",
+      "Table1.row7.size"
+    ],
+    "figureview": false,
+    "id": "S158",
+    "number": 158,
+    "layout": "wide",
+    "original_201_page": 90
+  },
+  {
+    "title": "表1｜第1–7行：短期与中期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows1-7_short_medium",
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row1.short_medium",
+      "Table1.row2.short_medium",
+      "Table1.row3.short_medium",
+      "Table1.row4.short_medium",
+      "Table1.row5.short_medium",
+      "Table1.row6.short_medium",
+      "Table1.row7.short_medium"
+    ],
+    "figureview": false,
+    "id": "S159",
+    "number": 159,
+    "layout": "wide",
+    "original_201_page": 91
+  },
+  {
+    "title": "表1｜第1–7行：长期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows1-7_long",
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row1.long",
+      "Table1.row2.long",
+      "Table1.row3.long",
+      "Table1.row4.long",
+      "Table1.row5.long",
+      "Table1.row6.long",
+      "Table1.row7.long"
+    ],
+    "figureview": false,
+    "id": "S160",
+    "number": 160,
+    "layout": "split",
+    "original_201_page": 92
+  },
+  {
+    "title": "表1｜第8–14行：Bitbrains至ETT1小时",
+    "section": "results",
+    "asset": "display_Table1_rows8-14",
+    "paras": [
+      "Bitbrains的多个存储任务包含数百至上千条序列，Restaurant有807条序列。",
+      "ETT1的15T和H有短、中、长期任务，而采样频率决定这些预测步数对应的实际时间。",
+      "带星号的数据因规模较大被消融实验排除；空白预测期单元格表示该组合未列出任务，不应擅自补零。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row8",
+      "Table1.row9",
+      "Table1.row10",
+      "Table1.row11",
+      "Table1.row12",
+      "Table1.row13",
+      "Table1.row14"
+    ],
+    "figureview": false,
+    "id": "S161",
+    "number": 161,
+    "layout": "wide",
+    "original_201_page": 93
+  },
+  {
+    "title": "表1｜第8–14行：数据集、领域、频率与序列数",
+    "section": "results",
+    "asset": "display_Table1_rows8-14_identity",
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row8.identity",
+      "Table1.row9.identity",
+      "Table1.row10.identity",
+      "Table1.row11.identity",
+      "Table1.row12.identity",
+      "Table1.row13.identity",
+      "Table1.row14.identity"
+    ],
+    "figureview": false,
+    "id": "S162",
+    "number": 162,
+    "layout": "split",
+    "original_201_page": 94
+  },
+  {
+    "title": "表1｜第8–14行：长度、观测数与目标维数",
+    "section": "results",
+    "asset": "display_Table1_rows8-14_size",
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row8.size",
+      "Table1.row9.size",
+      "Table1.row10.size",
+      "Table1.row11.size",
+      "Table1.row12.size",
+      "Table1.row13.size",
+      "Table1.row14.size"
+    ],
+    "figureview": false,
+    "id": "S163",
+    "number": 163,
+    "layout": "wide",
+    "original_201_page": 95
+  },
+  {
+    "title": "表1｜第8–14行：短期与中期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows8-14_short_medium",
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row8.short_medium",
+      "Table1.row9.short_medium",
+      "Table1.row10.short_medium",
+      "Table1.row11.short_medium",
+      "Table1.row12.short_medium",
+      "Table1.row13.short_medium",
+      "Table1.row14.short_medium"
+    ],
+    "figureview": false,
+    "id": "S164",
+    "number": 164,
+    "layout": "wide",
+    "original_201_page": 96
+  },
+  {
+    "title": "表1｜第8–14行：长期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows8-14_long",
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row8.long",
+      "Table1.row9.long",
+      "Table1.row10.long",
+      "Table1.row11.long",
+      "Table1.row12.long",
+      "Table1.row13.long",
+      "Table1.row14.long"
+    ],
+    "figureview": false,
+    "id": "S165",
+    "number": 165,
+    "layout": "split",
+    "original_201_page": 97
+  },
+  {
+    "title": "表1｜第15–21行：ETT1日频至Loop Seattle 5T",
+    "section": "results",
+    "asset": "display_Table1_rows15-21",
+    "paras": [
+      "ETT1的日频与周频、ETT2的四种频率在此连续列出；日频与周频行只列短期配置。",
+      "本组末行是Loop Seattle 5T，带星号且规模较大，在消融实验中被排除。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row15",
+      "Table1.row16",
+      "Table1.row17",
+      "Table1.row18",
+      "Table1.row19",
+      "Table1.row20",
+      "Table1.row21"
+    ],
+    "figureview": false,
+    "id": "S166",
+    "number": 166,
+    "layout": "wide",
+    "original_201_page": 98
+  },
+  {
+    "title": "表1｜第15–21行：数据集、领域、频率与序列数",
+    "section": "results",
+    "asset": "display_Table1_rows15-21_identity",
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row15.identity",
+      "Table1.row16.identity",
+      "Table1.row17.identity",
+      "Table1.row18.identity",
+      "Table1.row19.identity",
+      "Table1.row20.identity",
+      "Table1.row21.identity"
+    ],
+    "figureview": false,
+    "id": "S167",
+    "number": 167,
+    "layout": "split",
+    "original_201_page": 99
+  },
+  {
+    "title": "表1｜第15–21行：长度、观测数与目标维数",
+    "section": "results",
+    "asset": "display_Table1_rows15-21_size",
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row15.size",
+      "Table1.row16.size",
+      "Table1.row17.size",
+      "Table1.row18.size",
+      "Table1.row19.size",
+      "Table1.row20.size",
+      "Table1.row21.size"
+    ],
+    "figureview": false,
+    "id": "S168",
+    "number": 168,
+    "layout": "wide",
+    "original_201_page": 100
+  },
+  {
+    "title": "表1｜第15–21行：短期与中期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows15-21_short_medium",
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row15.short_medium",
+      "Table1.row16.short_medium",
+      "Table1.row17.short_medium",
+      "Table1.row18.short_medium",
+      "Table1.row19.short_medium",
+      "Table1.row20.short_medium",
+      "Table1.row21.short_medium"
+    ],
+    "figureview": false,
+    "id": "S169",
+    "number": 169,
+    "layout": "wide",
+    "original_201_page": 101
+  },
+  {
+    "title": "表1｜第15–21行：长期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows15-21_long",
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row15.long",
+      "Table1.row16.long",
+      "Table1.row17.long",
+      "Table1.row18.long",
+      "Table1.row19.long",
+      "Table1.row20.long",
+      "Table1.row21.long"
+    ],
+    "figureview": false,
+    "id": "S170",
+    "number": 170,
+    "layout": "split",
+    "original_201_page": 102
+  },
+  {
+    "title": "表1｜第22–28行：Loop Seattle小时至Solar 10T",
+    "section": "results",
+    "asset": "display_Table1_rows22-28",
+    "paras": [
+      "交通类包括Loop Seattle小时与日频、SZ-Taxi两种频率、M_DENSE两种频率，各行序列数不同。",
+      "末行Solar 10T有137条序列；同为48个预测点，实际时间跨度仍取决于采样频率。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row22",
+      "Table1.row23",
+      "Table1.row24",
+      "Table1.row25",
+      "Table1.row26",
+      "Table1.row27",
+      "Table1.row28"
+    ],
+    "figureview": false,
+    "id": "S171",
+    "number": 171,
+    "layout": "wide",
+    "original_201_page": 103
+  },
+  {
+    "title": "表1｜第22–28行：数据集、领域、频率与序列数",
+    "section": "results",
+    "asset": "display_Table1_rows22-28_identity",
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row22.identity",
+      "Table1.row23.identity",
+      "Table1.row24.identity",
+      "Table1.row25.identity",
+      "Table1.row26.identity",
+      "Table1.row27.identity",
+      "Table1.row28.identity"
+    ],
+    "figureview": false,
+    "id": "S172",
+    "number": 172,
+    "layout": "split",
+    "original_201_page": 104
+  },
+  {
+    "title": "表1｜第22–28行：长度、观测数与目标维数",
+    "section": "results",
+    "asset": "display_Table1_rows22-28_size",
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row22.size",
+      "Table1.row23.size",
+      "Table1.row24.size",
+      "Table1.row25.size",
+      "Table1.row26.size",
+      "Table1.row27.size",
+      "Table1.row28.size"
+    ],
+    "figureview": false,
+    "id": "S173",
+    "number": 173,
+    "layout": "wide",
+    "original_201_page": 105
+  },
+  {
+    "title": "表1｜第22–28行：短期与中期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows22-28_short_medium",
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row22.short_medium",
+      "Table1.row23.short_medium",
+      "Table1.row24.short_medium",
+      "Table1.row25.short_medium",
+      "Table1.row26.short_medium",
+      "Table1.row27.short_medium",
+      "Table1.row28.short_medium"
+    ],
+    "figureview": false,
+    "id": "S174",
+    "number": 174,
+    "layout": "wide",
+    "original_201_page": 106
+  },
+  {
+    "title": "表1｜第22–28行：长期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows22-28_long",
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row22.long",
+      "Table1.row23.long",
+      "Table1.row24.long",
+      "Table1.row25.long",
+      "Table1.row26.long",
+      "Table1.row27.long",
+      "Table1.row28.long"
+    ],
+    "figureview": false,
+    "id": "S175",
+    "number": 175,
+    "layout": "split",
+    "original_201_page": 107
+  },
+  {
+    "title": "表1｜第29–35行：Solar小时至M4季度",
+    "section": "results",
+    "asset": "display_Table1_rows29-35",
+    "paras": [
+      "Solar的小时、日频和周频、Hierarchical Sales的日频与周频，以及M4年度和季度任务按原顺序列出。",
+      "M4年度和季度的序列长度差异较大，不能把平均长度看成每条序列的固定长度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row29",
+      "Table1.row30",
+      "Table1.row31",
+      "Table1.row32",
+      "Table1.row33",
+      "Table1.row34",
+      "Table1.row35"
+    ],
+    "figureview": false,
+    "id": "S176",
+    "number": 176,
+    "layout": "wide",
+    "original_201_page": 108
+  },
+  {
+    "title": "表1｜第29–35行：数据集、领域、频率与序列数",
+    "section": "results",
+    "asset": "display_Table1_rows29-35_identity",
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row29.identity",
+      "Table1.row30.identity",
+      "Table1.row31.identity",
+      "Table1.row32.identity",
+      "Table1.row33.identity",
+      "Table1.row34.identity",
+      "Table1.row35.identity"
+    ],
+    "figureview": false,
+    "id": "S177",
+    "number": 177,
+    "layout": "split",
+    "original_201_page": 109
+  },
+  {
+    "title": "表1｜第29–35行：长度、观测数与目标维数",
+    "section": "results",
+    "asset": "display_Table1_rows29-35_size",
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row29.size",
+      "Table1.row30.size",
+      "Table1.row31.size",
+      "Table1.row32.size",
+      "Table1.row33.size",
+      "Table1.row34.size",
+      "Table1.row35.size"
+    ],
+    "figureview": false,
+    "id": "S178",
+    "number": 178,
+    "layout": "wide",
+    "original_201_page": 110
+  },
+  {
+    "title": "表1｜第29–35行：短期与中期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows29-35_short_medium",
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row29.short_medium",
+      "Table1.row30.short_medium",
+      "Table1.row31.short_medium",
+      "Table1.row32.short_medium",
+      "Table1.row33.short_medium",
+      "Table1.row34.short_medium",
+      "Table1.row35.short_medium"
+    ],
+    "figureview": false,
+    "id": "S179",
+    "number": 179,
+    "layout": "wide",
+    "original_201_page": 111
+  },
+  {
+    "title": "表1｜第29–35行：长期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows29-35_long",
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row29.long",
+      "Table1.row30.long",
+      "Table1.row31.long",
+      "Table1.row32.long",
+      "Table1.row33.long",
+      "Table1.row34.long",
+      "Table1.row35.long"
+    ],
+    "figureview": false,
+    "id": "S180",
+    "number": 180,
+    "layout": "split",
+    "original_201_page": 112
+  },
+  {
+    "title": "表1｜第36–42行：M4月频至US Births日频",
+    "section": "results",
+    "asset": "display_Table1_rows36-42",
+    "paras": [
+      "本组从M4月频开始，继续列周、日、小时、Hospital、COVID Deaths与US Births日频。",
+      "US Births日频有多个评估窗口，与只列一个窗口的部分任务在评价设置上不同。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row36",
+      "Table1.row37",
+      "Table1.row38",
+      "Table1.row39",
+      "Table1.row40",
+      "Table1.row41",
+      "Table1.row42"
+    ],
+    "figureview": false,
+    "id": "S181",
+    "number": 181,
+    "layout": "wide",
+    "original_201_page": 113
+  },
+  {
+    "title": "表1｜第36–42行：数据集、领域、频率与序列数",
+    "section": "results",
+    "asset": "display_Table1_rows36-42_identity",
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row36.identity",
+      "Table1.row37.identity",
+      "Table1.row38.identity",
+      "Table1.row39.identity",
+      "Table1.row40.identity",
+      "Table1.row41.identity",
+      "Table1.row42.identity"
+    ],
+    "figureview": false,
+    "id": "S182",
+    "number": 182,
+    "layout": "split",
+    "original_201_page": 114
+  },
+  {
+    "title": "表1｜第36–42行：长度、观测数与目标维数",
+    "section": "results",
+    "asset": "display_Table1_rows36-42_size",
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row36.size",
+      "Table1.row37.size",
+      "Table1.row38.size",
+      "Table1.row39.size",
+      "Table1.row40.size",
+      "Table1.row41.size",
+      "Table1.row42.size"
+    ],
+    "figureview": false,
+    "id": "S183",
+    "number": 183,
+    "layout": "wide",
+    "original_201_page": 115
+  },
+  {
+    "title": "表1｜第36–42行：短期与中期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows36-42_short_medium",
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row36.short_medium",
+      "Table1.row37.short_medium",
+      "Table1.row38.short_medium",
+      "Table1.row39.short_medium",
+      "Table1.row40.short_medium",
+      "Table1.row41.short_medium",
+      "Table1.row42.short_medium"
+    ],
+    "figureview": false,
+    "id": "S184",
+    "number": 184,
+    "layout": "wide",
+    "original_201_page": 116
+  },
+  {
+    "title": "表1｜第36–42行：长期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows36-42_long",
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row36.long",
+      "Table1.row37.long",
+      "Table1.row38.long",
+      "Table1.row39.long",
+      "Table1.row40.long",
+      "Table1.row41.long",
+      "Table1.row42.long"
+    ],
+    "figureview": false,
+    "id": "S185",
+    "number": 185,
+    "layout": "split",
+    "original_201_page": 117
+  },
+  {
+    "title": "表1｜第43–49行：US Births周频至KDD小时",
+    "section": "results",
+    "asset": "display_Table1_rows43-49",
+    "paras": [
+      "US Births与Saugeen继续按频率分行，Temperature Rain带有排除标记。",
+      "原表中Saugeen/Temperature Rain附近的观测数位置需按原像素审阅；本课件不自行修正或补算原表。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row43",
+      "Table1.row44",
+      "Table1.row45",
+      "Table1.row46",
+      "Table1.row47",
+      "Table1.row48",
+      "Table1.row49"
+    ],
+    "figureview": false,
+    "id": "S186",
+    "number": 186,
+    "layout": "wide",
+    "original_201_page": 118
+  },
+  {
+    "title": "表1｜第43–49行：数据集、领域、频率与序列数",
+    "section": "results",
+    "asset": "display_Table1_rows43-49_identity",
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row43.identity",
+      "Table1.row44.identity",
+      "Table1.row45.identity",
+      "Table1.row46.identity",
+      "Table1.row47.identity",
+      "Table1.row48.identity",
+      "Table1.row49.identity"
+    ],
+    "figureview": false,
+    "id": "S187",
+    "number": 187,
+    "layout": "split",
+    "original_201_page": 119
+  },
+  {
+    "title": "表1｜第43–49行：长度、观测数与目标维数",
+    "section": "results",
+    "asset": "display_Table1_rows43-49_size",
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row43.size",
+      "Table1.row44.size",
+      "Table1.row45.size",
+      "Table1.row46.size",
+      "Table1.row47.size",
+      "Table1.row48.size",
+      "Table1.row49.size"
+    ],
+    "figureview": false,
+    "id": "S188",
+    "number": 188,
+    "layout": "wide",
+    "original_201_page": 120
+  },
+  {
+    "title": "表1｜第43–49行：短期与中期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows43-49_short_medium",
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row43.short_medium",
+      "Table1.row44.short_medium",
+      "Table1.row45.short_medium",
+      "Table1.row46.short_medium",
+      "Table1.row47.short_medium",
+      "Table1.row48.short_medium",
+      "Table1.row49.short_medium"
+    ],
+    "figureview": false,
+    "id": "S189",
+    "number": 189,
+    "layout": "wide",
+    "original_201_page": 121
+  },
+  {
+    "title": "表1｜第43–49行：长期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows43-49_long",
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row43.long",
+      "Table1.row44.long",
+      "Table1.row45.long",
+      "Table1.row46.long",
+      "Table1.row47.long",
+      "Table1.row48.long",
+      "Table1.row49.long"
+    ],
+    "figureview": false,
+    "id": "S190",
+    "number": 190,
+    "layout": "split",
+    "original_201_page": 122
+  },
+  {
+    "title": "表1｜第50–55行：KDD日频至Electricity周频",
+    "section": "results",
+    "asset": "display_Table1_rows50-55",
+    "paras": [
+      "末组包括KDD日频、Car Parts和Electricity的四种频率。",
+      "Electricity的15T行带星号；不同频率的中长期窗口数不同，结论应按实际任务组合解释。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row50",
+      "Table1.row51",
+      "Table1.row52",
+      "Table1.row53",
+      "Table1.row54",
+      "Table1.row55"
+    ],
+    "figureview": false,
+    "id": "S191",
+    "number": 191,
+    "layout": "wide",
+    "original_201_page": 123
+  },
+  {
+    "title": "表1｜第50–55行：数据集、领域、频率与序列数",
+    "section": "results",
+    "asset": "display_Table1_rows50-55_identity",
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row50.identity",
+      "Table1.row51.identity",
+      "Table1.row52.identity",
+      "Table1.row53.identity",
+      "Table1.row54.identity",
+      "Table1.row55.identity"
+    ],
+    "figureview": false,
+    "id": "S192",
+    "number": 192,
+    "layout": "split",
+    "original_201_page": 124
+  },
+  {
+    "title": "表1｜第50–55行：长度、观测数与目标维数",
+    "section": "results",
+    "asset": "display_Table1_rows50-55_size",
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row50.size",
+      "Table1.row51.size",
+      "Table1.row52.size",
+      "Table1.row53.size",
+      "Table1.row54.size",
+      "Table1.row55.size"
+    ],
+    "figureview": false,
+    "id": "S193",
+    "number": 193,
+    "layout": "wide",
+    "original_201_page": 125
+  },
+  {
+    "title": "表1｜第50–55行：短期与中期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows50-55_short_medium",
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row50.short_medium",
+      "Table1.row51.short_medium",
+      "Table1.row52.short_medium",
+      "Table1.row53.short_medium",
+      "Table1.row54.short_medium",
+      "Table1.row55.short_medium"
+    ],
+    "figureview": false,
+    "id": "S194",
+    "number": 194,
+    "layout": "wide",
+    "original_201_page": 126
+  },
+  {
+    "title": "表1｜第50–55行：长期预测设置",
+    "section": "results",
+    "asset": "display_Table1_rows50-55_long",
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table1.row50.long",
+      "Table1.row51.long",
+      "Table1.row52.long",
+      "Table1.row53.long",
+      "Table1.row54.long",
+      "Table1.row55.long"
+    ],
+    "figureview": false,
+    "id": "S195",
+    "number": 195,
+    "layout": "split",
+    "original_201_page": 127
+  },
+  {
+    "title": "图A.1｜短期预测的14个实例",
+    "section": "results",
+    "asset": "display_A_1",
+    "paras": [
+      "14个短期预测实例全貌，后续逐个面板检查。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1"
+    ],
+    "figureview": true,
+    "id": "S196",
+    "number": 196,
+    "layout": "figureview",
+    "original_201_page": 128
+  },
+  {
+    "title": "原文放大 1/1 · 图A.1｜短期预测的14个实例",
+    "section": "results",
+    "asset": "read201_128_1",
+    "paras": [
+      "对应「图A.1｜短期预测的14个实例」（本版第196页，原201版第128页）。来源为PDF第20页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "FigA.1"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 128,
+    "reading_parent_page": 196,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S197",
+    "number": 197
+  },
+  {
+    "title": "图A.1｜solar/W/short",
+    "section": "results",
+    "asset": "display_A_1_1",
+    "paras": [
+      "周频太阳能在历史末端下降，橙线在未来继续下行，与蓝线的大体方向一致。",
+      "未来蓝线局部有起伏；灰带扩大，不应把点预测方向一致解释为逐点命中。",
+      "本图保留14个随机选取的短期任务实例。红色虚线之后，橙色预测与蓝色真值可直接比较，灰带表示预测不确定性。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1.1"
+    ],
+    "figureview": false,
+    "id": "S198",
+    "number": 198,
+    "layout": "wide",
+    "original_201_page": 129
+  },
+  {
+    "title": "图A.1｜covid_deaths/short",
+    "section": "results",
+    "asset": "display_A_1_2",
+    "paras": [
+      "历史曲线在末端快速上升，未来橙线较平缓，蓝线也逐渐放缓。",
+      "灰带向未来明显扩张；该面板不能用来给出区间覆盖率的总体估计。",
+      "各面板的单位、纵轴范围与预测长度不同；这些实例展示行为，不能替代跨任务汇总评价。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1.2"
+    ],
+    "figureview": false,
+    "id": "S199",
+    "number": 199,
+    "layout": "wide",
+    "original_201_page": 130
+  },
+  {
+    "title": "图A.1｜m4_quarterly/short",
+    "section": "results",
+    "asset": "display_A_1_3",
+    "paras": [
+      "历史由高位回落后略有回升，橙色未来预测较明显向上。",
+      "未来真值的升幅较小，末端低于点预测，提示趋势方向与幅度应分别检查。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1.3"
+    ],
+    "figureview": false,
+    "id": "S200",
+    "number": 200,
+    "layout": "wide",
+    "original_201_page": 131
+  },
+  {
+    "title": "图A.1｜m4_yearly/short",
+    "section": "results",
+    "asset": "display_A_1_4",
+    "paras": [
+      "历史长期上升，但预测区间内橙线转为下降，蓝线则再次回升。",
+      "这是定性失败实例；宽灰带不能替代准确的点预测。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1.4"
+    ],
+    "figureview": false,
+    "id": "S201",
+    "number": 201,
+    "layout": "wide",
+    "original_201_page": 132
+  },
+  {
+    "title": "图A.1｜ett1/W/short",
+    "section": "results",
+    "asset": "display_A_1_5",
+    "paras": [
+      "历史波动剧烈且没有固定单调趋势，橙线未来保持局部起伏。",
+      "未来蓝线有下探和反弹，点预测未重现全部振幅，灰带较宽。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1.5"
+    ],
+    "figureview": false,
+    "id": "S202",
+    "number": 202,
+    "layout": "wide",
+    "original_201_page": 133
+  },
+  {
+    "title": "图A.1｜jena_weather/D/short",
+    "section": "results",
+    "asset": "display_A_1_6",
+    "paras": [
+      "日频天气序列在未来段继续起伏，橙线主要围绕历史末端的局部水平。",
+      "点预测比真实日间变化平滑；比较前应保留原纵轴，避免把微小范围看成大幅变化。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1.6"
+    ],
+    "figureview": false,
+    "id": "S203",
+    "number": 203,
+    "layout": "wide",
+    "original_201_page": 134
+  },
+  {
+    "title": "图A.1｜m4_hourly/short",
+    "section": "results",
+    "asset": "display_A_1_7",
+    "paras": [
+      "历史有规则的重复周期，橙线在未来延续峰谷。",
+      "这是季节特征适用的清晰例子，预测周期比长期趋势更容易从历史找到对应相位。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1.7"
+    ],
+    "figureview": false,
+    "id": "S204",
+    "number": 204,
+    "layout": "wide",
+    "original_201_page": 135
+  },
+  {
+    "title": "图A.1｜us_births/M/short",
+    "section": "results",
+    "asset": "display_A_1_8",
+    "paras": [
+      "月频出生数同时有长期水平变化和短周期波动，未来橙线保持季节起伏。",
+      "预测窗很短，不能从该实例判定长期水平外推是否成功。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1.8"
+    ],
+    "figureview": false,
+    "id": "S205",
+    "number": 205,
+    "layout": "wide",
+    "original_201_page": 136
+  },
+  {
+    "title": "图A.1｜ett2/D/short",
+    "section": "results",
+    "asset": "display_A_1_9",
+    "paras": [
+      "历史含突出的异常峰与水平变化，未来橙线留在近期较低水平附近。",
+      "灰带越往后越宽，真实未来的急剧下探并未完全由点预测重现。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1.9"
+    ],
+    "figureview": false,
+    "id": "S206",
+    "number": 206,
+    "layout": "wide",
+    "original_201_page": 137
+  },
+  {
+    "title": "图A.1｜m4_monthly/short",
+    "section": "results",
+    "asset": "display_A_1_10",
+    "paras": [
+      "月频序列在历史末端频繁波动，橙色未来预测也显示明显起伏。",
+      "该图不存在像m4_hourly一样规则的单一周期，应逐点查看峰谷而非只看平均水平。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1.10"
+    ],
+    "figureview": false,
+    "id": "S207",
+    "number": 207,
+    "layout": "wide",
+    "original_201_page": 138
+  },
+  {
+    "title": "图A.1｜restaurant/short",
+    "section": "results",
+    "asset": "display_A_1_11",
+    "paras": [
+      "餐饮序列长期包含密集尖峰，未来预测保留重复波动。",
+      "尖峰高度变化较大；一次短窗口内的重合不能推广为稳定覆盖每次需求峰。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1.11"
+    ],
+    "figureview": false,
+    "id": "S208",
+    "number": 208,
+    "layout": "wide",
+    "original_201_page": 139
+  },
+  {
+    "title": "图A.1｜solar/D/short",
+    "section": "results",
+    "asset": "display_A_1_12",
+    "paras": [
+      "日频太阳能在历史中段较高、末端下降，橙线未来较平。",
+      "未来蓝线有明显下降与反弹，预测区间随距离增大而变宽。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1.12"
+    ],
+    "figureview": false,
+    "id": "S209",
+    "number": 209,
+    "layout": "wide",
+    "original_201_page": 140
+  },
+  {
+    "title": "图A.1｜M_DENSE/D/short",
+    "section": "results",
+    "asset": "display_A_1_13",
+    "paras": [
+      "交通序列含周期性低谷与局部水平突变，未来橙线延续近期重复模式。",
+      "历史结构变化提醒我们，季节预测的条件是最近上下文仍能代表未来。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1.13"
+    ],
+    "figureview": false,
+    "id": "S210",
+    "number": 210,
+    "layout": "wide",
+    "original_201_page": 141
+  },
+  {
+    "title": "图A.1｜SZ_TAXI/15T/short",
+    "section": "results",
+    "asset": "display_A_1_14",
+    "paras": [
+      "出租车序列在较早位置发生明显水平下移，预测窗口接近较低的新水平。",
+      "未来橙线有短周期波动；模型并未把早期高水平整体延续到未来。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.1.14"
+    ],
+    "figureview": false,
+    "id": "S211",
+    "number": 211,
+    "layout": "wide",
+    "original_201_page": 142
+  },
+  {
+    "title": "图A.2｜中期预测的8个实例",
+    "section": "results",
+    "asset": "display_A_2",
+    "paras": [
+      "8个中期面板全貌，后续保留并说明原图中的重复标题。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.2"
+    ],
+    "figureview": true,
+    "id": "S212",
+    "number": 212,
+    "layout": "figureview",
+    "original_201_page": 143
+  },
+  {
+    "title": "原文放大 1/1 · 图A.2｜中期预测的8个实例",
+    "section": "results",
+    "asset": "read201_143_1",
+    "paras": [
+      "对应「图A.2｜中期预测的8个实例」（本版第212页，原201版第143页）。来源为PDF第21页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "FigA.2"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 143,
+    "reading_parent_page": 212,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S213",
+    "number": 213
+  },
+  {
+    "title": "图A.2｜bizitobs_l2c/H/medium",
+    "section": "results",
+    "asset": "display_A_2_1",
+    "paras": [
+      "小时L2C曲线呈周期性抬升与重置，未来橙线延续这一锯齿式模式。",
+      "历史中有个别尖峰，预测未把它当作每周期必然发生的事件。",
+      "中期图含两个L2C面板（原图重复）、两个BizITObs脉冲面板、两个天气频率面板，以及KDD空气质量和深圳出租车。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.2.1"
+    ],
+    "figureview": false,
+    "id": "S214",
+    "number": 214,
+    "layout": "wide",
+    "original_201_page": 144
+  },
+  {
+    "title": "图A.2｜bizitobs_l2c/H/medium（右上）",
+    "section": "results",
+    "asset": "display_A_2_2",
+    "paras": [
+      "原图左右首面板均标为bizitobs_l2c/H/medium，轨迹也高度相似；此处保留原图，不虚构第二种频率。",
+      "未来段延续周期抬升与重置，灰带较历史轨迹宽。重复面板不能当成两份独立成功证据。",
+      "比短期图更应关注灰带随预测距离的变化，以及未来峰谷的幅度与相位。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.2.2"
+    ],
+    "figureview": false,
+    "id": "S215",
+    "number": 215,
+    "layout": "wide",
+    "original_201_page": 145
+  },
+  {
+    "title": "图A.2｜bizitobs_application/medium",
+    "section": "results",
+    "asset": "display_A_2_3",
+    "paras": [
+      "应用监控序列反复出现窄而高的脉冲，橙线对未来脉冲时间有明确预期。",
+      "大部分非峰值时段接近较低平台；只评估平台可能掩盖峰值偏差。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.2.3"
+    ],
+    "figureview": false,
+    "id": "S216",
+    "number": 216,
+    "layout": "wide",
+    "original_201_page": 146
+  },
+  {
+    "title": "图A.2｜bizitobs_service/medium",
+    "section": "results",
+    "asset": "display_A_2_4",
+    "paras": [
+      "服务监控同样呈尖脉冲，但纵轴量级与应用任务不同。",
+      "未来尖峰附近的不确定性较显著，不宜把两个任务的绝对误差直接比较。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.2.4"
+    ],
+    "figureview": false,
+    "id": "S217",
+    "number": 217,
+    "layout": "wide",
+    "original_201_page": 147
+  },
+  {
+    "title": "图A.2｜jena_weather/H/medium",
+    "section": "results",
+    "asset": "display_A_2_5",
+    "paras": [
+      "小时天气未来先降低后回升，橙线主要描述较平滑的局部变化。",
+      "灰带包含高频波动的不确定性，点预测不是逐点复制天气噪声。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.2.5"
+    ],
+    "figureview": false,
+    "id": "S218",
+    "number": 218,
+    "layout": "wide",
+    "original_201_page": 148
+  },
+  {
+    "title": "图A.2｜jena_weather/10T/medium",
+    "section": "results",
+    "asset": "display_A_2_6",
+    "paras": [
+      "10分钟天气序列的未来窗口相对整段历史较短，橙色预测集中在末端。",
+      "高采样频率不等同于更长的日历预测跨度，应同时读频率与横轴日期。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.2.6"
+    ],
+    "figureview": false,
+    "id": "S219",
+    "number": 219,
+    "layout": "wide",
+    "original_201_page": 149
+  },
+  {
+    "title": "图A.2｜kdd_cup_2018_with_missing/H/medium",
+    "section": "results",
+    "asset": "display_A_2_7",
+    "paras": [
+      "历史大部分值较低但夹杂高尖峰，未来预测也围绕低水平而非历史最大值。",
+      "该标题含with_missing，图中未显示缺失值处理细节，不能从曲线推断插补方法。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.2.7"
+    ],
+    "figureview": false,
+    "id": "S220",
+    "number": 220,
+    "layout": "wide",
+    "original_201_page": 150
+  },
+  {
+    "title": "图A.2｜SZ_TAXI/15T/medium",
+    "section": "results",
+    "asset": "display_A_2_8",
+    "paras": [
+      "在较低新水平上预测重复波动，未来灰带明显拓宽。",
+      "点预测较平稳，没有回到历史前半段的高平台。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.2.8"
+    ],
+    "figureview": false,
+    "id": "S221",
+    "number": 221,
+    "layout": "wide",
+    "original_201_page": 151
+  },
+  {
+    "title": "图A.3｜长期预测的6个实例",
+    "section": "results",
+    "asset": "display_A_3",
+    "paras": [
+      "6个长期预测实例全貌，后续逐个面板检查。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.3"
+    ],
+    "figureview": true,
+    "id": "S222",
+    "number": 222,
+    "layout": "figureview",
+    "original_201_page": 152
+  },
+  {
+    "title": "原文放大 1/1 · 图A.3｜长期预测的6个实例",
+    "section": "results",
+    "asset": "read201_152_1",
+    "paras": [
+      "对应「图A.3｜长期预测的6个实例」（本版第222页，原201版第152页）。来源为PDF第21页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "FigA.3"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 152,
+    "reading_parent_page": 222,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S223",
+    "number": 223
+  },
+  {
+    "title": "图A.3｜bizitobs_application/long",
+    "section": "results",
+    "asset": "display_A_3_1",
+    "paras": [
+      "长期未来仍出现规则窄脉冲，预测试图延续其时序结构。",
+      "应同时检查尖峰时刻及峰高；平台附近的重合无法说明尖峰预测完全正确。",
+      "长期图包括监控、能源、天气和交通实例；重复模式仍可见，但预测区间更长。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.3.1"
+    ],
+    "figureview": false,
+    "id": "S224",
+    "number": 224,
+    "layout": "wide",
+    "original_201_page": 153
+  },
+  {
+    "title": "图A.3｜bizitobs_l2c/H/long",
+    "section": "results",
+    "asset": "display_A_3_2",
+    "paras": [
+      "未来段保留周期起落，但橙色轨迹较历史锯齿平滑。",
+      "灰带随长期窗口扩大，周期形状与幅值的不确定性同时增加。",
+      "不确定性随距离扩张并不保证实际校准，校准需要跨实例统计而非单图观感。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.3.2"
+    ],
+    "figureview": false,
+    "id": "S225",
+    "number": 225,
+    "layout": "wide",
+    "original_201_page": 154
+  },
+  {
+    "title": "图A.3｜ett2/H/long",
+    "section": "results",
+    "asset": "display_A_3_3",
+    "paras": [
+      "小时能源序列在未来保持近期较低水平，橙线的波动幅度较小。",
+      "此前历史异常峰并未在每个未来周期机械重复。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.3.3"
+    ],
+    "figureview": false,
+    "id": "S226",
+    "number": 226,
+    "layout": "wide",
+    "original_201_page": 155
+  },
+  {
+    "title": "图A.3｜jena_weather/H/long",
+    "section": "results",
+    "asset": "display_A_3_4",
+    "paras": [
+      "橙线在预测段附近较平滑，未来蓝线继续快速起伏。",
+      "长窗口中灰带显著扩张，应区分点预测与具体天气轨迹。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.3.4"
+    ],
+    "figureview": false,
+    "id": "S227",
+    "number": 227,
+    "layout": "wide",
+    "original_201_page": 156
+  },
+  {
+    "title": "图A.3｜SZ_TAXI/15T/long",
+    "section": "results",
+    "asset": "display_A_3_5",
+    "paras": [
+      "长期预测围绕近期低平台并带有重复波动。",
+      "灰色区间覆盖较宽的未来可能范围，但图中不能读出严格的经验覆盖率。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.3.5"
+    ],
+    "figureview": false,
+    "id": "S228",
+    "number": 228,
+    "layout": "wide",
+    "original_201_page": 157
+  },
+  {
+    "title": "图A.3｜electricity/H/long",
+    "section": "results",
+    "asset": "display_A_3_6",
+    "paras": [
+      "电力曲线在历史中有长时间低负荷和高负荷阶段，未来预测处于末端较活跃的阶段。",
+      "这种状态切换不能仅靠规则季节模式解释，单例展示了上下文选择的重要性。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.3.6"
+    ],
+    "figureview": false,
+    "id": "S229",
+    "number": 229,
+    "layout": "wide",
+    "original_201_page": 158
+  },
+  {
+    "title": "表2｜fev-bench的28项任务",
+    "section": "results",
+    "asset": "display_Table2",
+    "paras": [
+      "fev-bench的28项任务全表，后续按原序号逐组放大。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table2"
+    ],
+    "figureview": true,
+    "id": "S230",
+    "number": 230,
+    "layout": "figureview",
+    "original_201_page": 159
+  },
+  {
+    "title": "原文放大 1/1 · 表2｜fev-bench的28项任务",
+    "section": "results",
+    "asset": "read201_159_1",
+    "paras": [
+      "对应「表2｜fev-bench的28项任务」（本版第230页，原201版第159页）。来源为PDF第22页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "Table2"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 159,
+    "reading_parent_page": 230,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S231",
+    "number": 231
+  },
+  {
+    "title": "表2｜第1–7项：能源、订单与销售",
+    "section": "results",
+    "asset": "display_Table2_rows1-7",
+    "paras": [
+      "第1–3行为proenfo_gfc12、gfc14、gfc17，第4–6行为rohlik订单与销售，第7行为entsoe_15T。",
+      "1D与1W等后缀区分时间聚合频率；同一业务来源的多个任务不能合并成一条结果。",
+      "表列出用于协变量条件预测的28个任务，序号连续；名称中的后缀区分采样频率。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table2.row1",
+      "Table2.row2",
+      "Table2.row3",
+      "Table2.row4",
+      "Table2.row5",
+      "Table2.row6",
+      "Table2.row7"
+    ],
+    "figureview": false,
+    "id": "S232",
+    "number": 232,
+    "layout": "split",
+    "original_201_page": 160
+  },
+  {
+    "title": "表2｜第8–14项：电力与价格",
+    "section": "results",
+    "asset": "display_Table2_rows8-14",
+    "paras": [
+      "第8–9行为entsoe的30T和1H，第10–14行为epf_be、epf_de、epf_fr、epf_np、epf_pjm。",
+      "任务名对应不同电力市场或时间尺度；清单本身没有给出使用协变量的数量。",
+      "该表只是任务清单，不包含每项任务的误差、序列数或协变量数量，不能据此推断这些未报告信息。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table2.row8",
+      "Table2.row9",
+      "Table2.row10",
+      "Table2.row11",
+      "Table2.row12",
+      "Table2.row13",
+      "Table2.row14"
+    ],
+    "figureview": false,
+    "id": "S233",
+    "number": 233,
+    "layout": "split",
+    "original_201_page": 161
+  },
+  {
+    "title": "表2｜第15–21项：零售与物流",
+    "section": "results",
+    "asset": "display_Table2_rows15-21",
+    "paras": [
+      "第15–21行为rossmann两种频率、hermes、walmart、m5两种频率与favorita_stores_1D。",
+      "同类零售任务仍可能有不同预测目标和频率，图4.2是它们与其他任务的汇总结果。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table2.row15",
+      "Table2.row16",
+      "Table2.row17",
+      "Table2.row18",
+      "Table2.row19",
+      "Table2.row20",
+      "Table2.row21"
+    ],
+    "figureview": false,
+    "id": "S234",
+    "number": 234,
+    "layout": "split",
+    "original_201_page": 162
+  },
+  {
+    "title": "表2｜第22–28项：门店、太阳能与空气质量",
+    "section": "results",
+    "asset": "display_Table2_rows22-28",
+    "paras": [
+      "第22–28行包括favorita门店与交易、带天气的太阳能，以及uci_air_quality两种频率。",
+      "solar_with_weather任务名提示有天气信息，但未来协变量是否可用由实验筛选协议保证，不能仅凭名字推定。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "Table2.row22",
+      "Table2.row23",
+      "Table2.row24",
+      "Table2.row25",
+      "Table2.row26",
+      "Table2.row27",
+      "Table2.row28"
+    ],
+    "figureview": false,
+    "id": "S235",
+    "number": 235,
+    "layout": "split",
+    "original_201_page": 163
+  },
+  {
+    "title": "图A.4｜1–64阶谐波重建",
+    "section": "results",
+    "asset": "display_A_4",
+    "paras": [
+      "1–64阶谐波重建全貌，后续连续分组放大每条曲线。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.4"
+    ],
+    "figureview": true,
+    "id": "S236",
+    "number": 236,
+    "layout": "figureview",
+    "original_201_page": 164
+  },
+  {
+    "title": "原文放大 1/1 · 图A.4｜1–64阶谐波重建",
+    "section": "results",
+    "asset": "read201_164_1",
+    "paras": [
+      "对应「图A.4｜1–64阶谐波重建」（本版第236页，原201版第164页）。来源为PDF第23页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "FigA.4"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 164,
+    "reading_parent_page": 236,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S237",
+    "number": 237
+  },
+  {
+    "title": "图A.4｜谐波n=1–8",
+    "section": "results",
+    "asset": "display_A_4_n1-8",
+    "paras": [
+      "本组完整保留第1至第8阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "低频曲线的预测段保持平滑振荡，与灰色参考形状较一致。",
+      "输入为sin(t)和cos(t)，下至上依次显示1–64阶正弦信号，竖线分开历史和预测。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.4.n1",
+      "FigA.4.n2",
+      "FigA.4.n3",
+      "FigA.4.n4",
+      "FigA.4.n5",
+      "FigA.4.n6",
+      "FigA.4.n7",
+      "FigA.4.n8"
+    ],
+    "figureview": false,
+    "id": "S238",
+    "number": 238,
+    "layout": "wide",
+    "original_201_page": 165
+  },
+  {
+    "title": "图A.4｜谐波n=9–16",
+    "section": "results",
+    "asset": "display_A_4_n9-16",
+    "paras": [
+      "本组完整保留第9至第16阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "低频曲线的预测段保持平滑振荡，与灰色参考形状较一致。",
+      "低中频重建较好，高频逐渐出现误差；频率越高，相邻相位越难在有限采样密度下区分。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.4.n9",
+      "FigA.4.n10",
+      "FigA.4.n11",
+      "FigA.4.n12",
+      "FigA.4.n13",
+      "FigA.4.n14",
+      "FigA.4.n15",
+      "FigA.4.n16"
+    ],
+    "figureview": false,
+    "id": "S239",
+    "number": 239,
+    "layout": "wide",
+    "original_201_page": 166
+  },
+  {
+    "title": "图A.4｜谐波n=17–24",
+    "section": "results",
+    "asset": "display_A_4_n17-24",
+    "paras": [
+      "本组完整保留第17至第24阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "低频曲线的预测段保持平滑振荡，与灰色参考形状较一致。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.4.n17",
+      "FigA.4.n18",
+      "FigA.4.n19",
+      "FigA.4.n20",
+      "FigA.4.n21",
+      "FigA.4.n22",
+      "FigA.4.n23",
+      "FigA.4.n24"
+    ],
+    "figureview": false,
+    "id": "S240",
+    "number": 240,
+    "layout": "wide",
+    "original_201_page": 167
+  },
+  {
+    "title": "图A.4｜谐波n=25–32",
+    "section": "results",
+    "asset": "display_A_4_n25-32",
+    "paras": [
+      "本组完整保留第25至第32阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "随着频率增加，预测段的周期更密，局部峰谷形状出现偏离；定量误差应结合图A.5，而非从线宽估算。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.4.n25",
+      "FigA.4.n26",
+      "FigA.4.n27",
+      "FigA.4.n28",
+      "FigA.4.n29",
+      "FigA.4.n30",
+      "FigA.4.n31",
+      "FigA.4.n32"
+    ],
+    "figureview": false,
+    "id": "S241",
+    "number": 241,
+    "layout": "wide",
+    "original_201_page": 168
+  },
+  {
+    "title": "图A.4｜谐波n=33–40",
+    "section": "results",
+    "asset": "display_A_4_n33-40",
+    "paras": [
+      "本组完整保留第33至第40阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "随着频率增加，预测段的周期更密，局部峰谷形状出现偏离；定量误差应结合图A.5，而非从线宽估算。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.4.n33",
+      "FigA.4.n34",
+      "FigA.4.n35",
+      "FigA.4.n36",
+      "FigA.4.n37",
+      "FigA.4.n38",
+      "FigA.4.n39",
+      "FigA.4.n40"
+    ],
+    "figureview": false,
+    "id": "S242",
+    "number": 242,
+    "layout": "wide",
+    "original_201_page": 169
+  },
+  {
+    "title": "图A.4｜谐波n=41–48",
+    "section": "results",
+    "asset": "display_A_4_n41-48",
+    "paras": [
+      "本组完整保留第41至第48阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "随着频率增加，预测段的周期更密，局部峰谷形状出现偏离；定量误差应结合图A.5，而非从线宽估算。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.4.n41",
+      "FigA.4.n42",
+      "FigA.4.n43",
+      "FigA.4.n44",
+      "FigA.4.n45",
+      "FigA.4.n46",
+      "FigA.4.n47",
+      "FigA.4.n48"
+    ],
+    "figureview": false,
+    "id": "S243",
+    "number": 243,
+    "layout": "wide",
+    "original_201_page": 170
+  },
+  {
+    "title": "图A.4｜谐波n=49–56",
+    "section": "results",
+    "asset": "display_A_4_n49-56",
+    "paras": [
+      "本组完整保留第49至第56阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "随着频率增加，预测段的周期更密，局部峰谷形状出现偏离；定量误差应结合图A.5，而非从线宽估算。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.4.n49",
+      "FigA.4.n50",
+      "FigA.4.n51",
+      "FigA.4.n52",
+      "FigA.4.n53",
+      "FigA.4.n54",
+      "FigA.4.n55",
+      "FigA.4.n56"
+    ],
+    "figureview": false,
+    "id": "S244",
+    "number": 244,
+    "layout": "wide",
+    "original_201_page": 171
+  },
+  {
+    "title": "图A.4｜谐波n=57–64",
+    "section": "results",
+    "asset": "display_A_4_n57-64",
+    "paras": [
+      "本组完整保留第57至第64阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "随着频率增加，预测段的周期更密，局部峰谷形状出现偏离；定量误差应结合图A.5，而非从线宽估算。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.4.n57",
+      "FigA.4.n58",
+      "FigA.4.n59",
+      "FigA.4.n60",
+      "FigA.4.n61",
+      "FigA.4.n62",
+      "FigA.4.n63",
+      "FigA.4.n64"
+    ],
+    "figureview": false,
+    "id": "S245",
+    "number": 245,
+    "layout": "wide",
+    "original_201_page": 172
+  },
+  {
+    "title": "图A.5｜对称平均绝对百分比误差（sMAPE）",
+    "section": "results",
+    "asset": "display_A_5",
+    "paras": [
+      "64个频率的sMAPE全貌，后续分组读取误差和5%阈值。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.5"
+    ],
+    "figureview": true,
+    "id": "S246",
+    "number": 246,
+    "layout": "figureview",
+    "original_201_page": 173
+  },
+  {
+    "title": "原文放大 1/1 · 图A.5｜对称平均绝对百分比误差（sMAPE）",
+    "section": "results",
+    "asset": "read201_173_1",
+    "paras": [
+      "对应「图A.5｜对称平均绝对百分比误差（sMAPE）」（本版第246页，原201版第173页）。来源为PDF第23页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "FigA.5"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 173,
+    "reading_parent_page": 246,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S247",
+    "number": 247
+  },
+  {
+    "title": "图A.5｜频率1–16的误差",
+    "section": "results",
+    "asset": "display_A_5_n1-16",
+    "paras": [
+      "重点读取第1–16阶；边缘保留相邻完整柱作参照，避免截断倾斜刻度。原纵轴拼接在左侧，未改变柱高。",
+      "这一组大多处于5%阈值下方，误差较低。正弦过零点附近相对误差敏感，原文未给出零分母实现。",
+      "横轴为谐波频率倍数，纵轴为sMAPE百分比，红虚线标出5%阈值。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.5.n1",
+      "FigA.5.n2",
+      "FigA.5.n3",
+      "FigA.5.n4",
+      "FigA.5.n5",
+      "FigA.5.n6",
+      "FigA.5.n7",
+      "FigA.5.n8",
+      "FigA.5.n9",
+      "FigA.5.n10",
+      "FigA.5.n11",
+      "FigA.5.n12",
+      "FigA.5.n13",
+      "FigA.5.n14",
+      "FigA.5.n15",
+      "FigA.5.n16"
+    ],
+    "figureview": false,
+    "id": "S248",
+    "number": 248,
+    "layout": "split",
+    "original_201_page": 174
+  },
+  {
+    "title": "图A.5｜频率17–32的误差",
+    "section": "results",
+    "asset": "display_A_5_n17-32",
+    "paras": [
+      "重点读取第17–32阶；边缘保留相邻完整柱作参照，避免截断倾斜刻度。原纵轴拼接在左侧，未改变柱高。",
+      "应逐柱比较与5%红虚线的位置；误差随频率的变化有局部起伏，不是每增一阶都更差。",
+      "误差总体随频率升高而增大，但不是严格单调；高频端存在显著波动，不能据此宣称一个普适的硬截止频率。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.5.n17",
+      "FigA.5.n18",
+      "FigA.5.n19",
+      "FigA.5.n20",
+      "FigA.5.n21",
+      "FigA.5.n22",
+      "FigA.5.n23",
+      "FigA.5.n24",
+      "FigA.5.n25",
+      "FigA.5.n26",
+      "FigA.5.n27",
+      "FigA.5.n28",
+      "FigA.5.n29",
+      "FigA.5.n30",
+      "FigA.5.n31",
+      "FigA.5.n32"
+    ],
+    "figureview": false,
+    "id": "S249",
+    "number": 249,
+    "layout": "split",
+    "original_201_page": 175
+  },
+  {
+    "title": "图A.5｜频率33–48的误差",
+    "section": "results",
+    "asset": "display_A_5_n33-48",
+    "paras": [
+      "重点读取第33–48阶；边缘保留相邻完整柱作参照，避免截断倾斜刻度。原纵轴拼接在左侧，未改变柱高。",
+      "应逐柱比较与5%红虚线的位置；误差随频率的变化有局部起伏，不是每增一阶都更差。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.5.n33",
+      "FigA.5.n34",
+      "FigA.5.n35",
+      "FigA.5.n36",
+      "FigA.5.n37",
+      "FigA.5.n38",
+      "FigA.5.n39",
+      "FigA.5.n40",
+      "FigA.5.n41",
+      "FigA.5.n42",
+      "FigA.5.n43",
+      "FigA.5.n44",
+      "FigA.5.n45",
+      "FigA.5.n46",
+      "FigA.5.n47",
+      "FigA.5.n48"
+    ],
+    "figureview": false,
+    "id": "S250",
+    "number": 250,
+    "layout": "split",
+    "original_201_page": 176
+  },
+  {
+    "title": "图A.5｜频率49–64的误差",
+    "section": "results",
+    "asset": "display_A_5_n49-64",
+    "paras": [
+      "重点读取第49–64阶；边缘保留相邻完整柱作参照，避免截断倾斜刻度。原纵轴拼接在左侧，未改变柱高。",
+      "应逐柱比较与5%红虚线的位置；误差随频率的变化有局部起伏，不是每增一阶都更差。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.5.n49",
+      "FigA.5.n50",
+      "FigA.5.n51",
+      "FigA.5.n52",
+      "FigA.5.n53",
+      "FigA.5.n54",
+      "FigA.5.n55",
+      "FigA.5.n56",
+      "FigA.5.n57",
+      "FigA.5.n58",
+      "FigA.5.n59",
+      "FigA.5.n60",
+      "FigA.5.n61",
+      "FigA.5.n62",
+      "FigA.5.n63",
+      "FigA.5.n64"
+    ],
+    "figureview": false,
+    "id": "S251",
+    "number": 251,
+    "layout": "split",
+    "original_201_page": 177
+  },
+  {
+    "title": "图A.6｜复合正弦波的重建",
+    "section": "results",
+    "asset": "display_A_6",
+    "paras": [
+      "十条复合正弦波及完整图例，后续两条一组放大。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.6"
+    ],
+    "figureview": true,
+    "id": "S252",
+    "number": 252,
+    "layout": "figureview",
+    "original_201_page": 178
+  },
+  {
+    "title": "原文放大 1/1 · 图A.6｜复合正弦波的重建",
+    "section": "results",
+    "asset": "read201_178_1",
+    "paras": [
+      "对应「图A.6｜复合正弦波的重建」（本版第252页，原201版第178页）。来源为PDF第24页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "FigA.6"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 178,
+    "reading_parent_page": 252,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S253",
+    "number": 253
+  },
+  {
+    "title": "图A.6｜复合波1–2",
+    "section": "results",
+    "asset": "display_A_6_wave1-2",
+    "paras": [
+      "第1条含9个分量，第2条含8个分量；两条的起伏不只是单一正弦。",
+      "放大部分历史与完整预测段，主图和时间轴均从同一横坐标裁取。图例另外完整保留；未来彩线延续多频率组合，不能由重合度推断零误差。",
+      "十条复合信号各由3–10个随机频率、幅度和相位的正弦分量相加形成；左下角图例给出每条的分量数。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.6.wave1",
+      "FigA.6.wave2"
+    ],
+    "figureview": false,
+    "id": "S254",
+    "number": 254,
+    "layout": "wide",
+    "original_201_page": 179
+  },
+  {
+    "title": "原图清晰放大 · 图A.6｜复合波1–2",
+    "section": "results",
+    "asset": "read201_plot_A6_wave1-2_context",
+    "paras": [
+      "波1与波2分别包含9、8个正弦分量。十条复合波在原图中纵向错开，分界线之后为预测区间；本页保留整体位置和图例，供前页细节对照。 对应原201版第179页（本版第254页）。"
+    ],
+    "coverage": [
+      "FigA.6.wave1",
+      "FigA.6.wave2"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 179,
+    "reading_parent_page": 254,
+    "id": "S255",
+    "number": 255
+  },
+  {
+    "title": "图A.6｜复合波3–4",
+    "section": "results",
+    "asset": "display_A_6_wave3-4",
+    "paras": [
+      "第3条含8个分量，第4条含3个分量；两条起伏都由多个正弦叠加，不是单一正弦。",
+      "放大部分历史与完整预测段，主图和时间轴均从同一横坐标裁取。图例另外完整保留；未来彩线延续多频率组合，不能由重合度推断零误差。",
+      "正余弦时间表示支持重建较复杂的波形，未来彩线能继续多频率组合；该实验仍属于合成信号。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.6.wave3",
+      "FigA.6.wave4"
+    ],
+    "figureview": false,
+    "id": "S256",
+    "number": 256,
+    "layout": "wide",
+    "original_201_page": 180
+  },
+  {
+    "title": "原图清晰放大 · 图A.6｜复合波3–4",
+    "section": "results",
+    "asset": "read201_plot_A6_wave3-4_context",
+    "paras": [
+      "波3与波4分别包含8、3个正弦分量。十条复合波在原图中纵向错开，分界线之后为预测区间；本页保留整体位置和图例，供前页细节对照。 对应原201版第180页（本版第256页）。"
+    ],
+    "coverage": [
+      "FigA.6.wave3",
+      "FigA.6.wave4"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 180,
+    "reading_parent_page": 256,
+    "id": "S257",
+    "number": 257
+  },
+  {
+    "title": "图A.6｜复合波5–6",
+    "section": "results",
+    "asset": "display_A_6_wave5-6",
+    "paras": [
+      "第5条含4个分量，第6条含3个分量；两条的起伏不只是单一正弦。",
+      "放大部分历史与完整预测段，主图和时间轴均从同一横坐标裁取。图例另外完整保留；未来彩线延续多频率组合，不能由重合度推断零误差。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.6.wave5",
+      "FigA.6.wave6"
+    ],
+    "figureview": false,
+    "id": "S258",
+    "number": 258,
+    "layout": "wide",
+    "original_201_page": 181
+  },
+  {
+    "title": "原图清晰放大 · 图A.6｜复合波5–6",
+    "section": "results",
+    "asset": "read201_plot_A6_wave5-6_context",
+    "paras": [
+      "波5与波6分别包含4、3个正弦分量。十条复合波在原图中纵向错开，分界线之后为预测区间；本页保留整体位置和图例，供前页细节对照。 对应原201版第181页（本版第258页）。"
+    ],
+    "coverage": [
+      "FigA.6.wave5",
+      "FigA.6.wave6"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 181,
+    "reading_parent_page": 258,
+    "id": "S259",
+    "number": 259
+  },
+  {
+    "title": "图A.6｜复合波7–8",
+    "section": "results",
+    "asset": "display_A_6_wave7-8",
+    "paras": [
+      "第7条含9个分量，第8条含3个分量；两条的起伏不只是单一正弦。",
+      "放大部分历史与完整预测段，主图和时间轴均从同一横坐标裁取。图例另外完整保留；未来彩线延续多频率组合，不能由重合度推断零误差。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.6.wave7",
+      "FigA.6.wave8"
+    ],
+    "figureview": false,
+    "id": "S260",
+    "number": 260,
+    "layout": "wide",
+    "original_201_page": 182
+  },
+  {
+    "title": "原图清晰放大 · 图A.6｜复合波7–8",
+    "section": "results",
+    "asset": "read201_plot_A6_wave7-8_context",
+    "paras": [
+      "波7与波8分别包含9、3个正弦分量。十条复合波在原图中纵向错开，分界线之后为预测区间；本页保留整体位置和图例，供前页细节对照。 对应原201版第182页（本版第260页）。"
+    ],
+    "coverage": [
+      "FigA.6.wave7",
+      "FigA.6.wave8"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 182,
+    "reading_parent_page": 260,
+    "id": "S261",
+    "number": 261
+  },
+  {
+    "title": "图A.6｜复合波9–10",
+    "section": "results",
+    "asset": "display_A_6_wave9-10",
+    "paras": [
+      "第9条含7个分量，第10条含7个分量；两条的起伏不只是单一正弦。",
+      "放大部分历史与完整预测段，主图和时间轴均从同一横坐标裁取。图例另外完整保留；未来彩线延续多频率组合，不能由重合度推断零误差。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.6.wave9",
+      "FigA.6.wave10"
+    ],
+    "figureview": false,
+    "id": "S262",
+    "number": 262,
+    "layout": "wide",
+    "original_201_page": 183
+  },
+  {
+    "title": "原图清晰放大 · 图A.6｜复合波9–10",
+    "section": "results",
+    "asset": "read201_plot_A6_wave9-10_clean_detail",
+    "paras": [
+      "波9与波10各由7个正弦分量组成。本页放大两条波的完整历史与预测区间；另附相同横坐标范围的时间轴及原始图例。 对应原201版第183页（本版第262页）。"
+    ],
+    "coverage": [
+      "FigA.6.wave9",
+      "FigA.6.wave10"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 183,
+    "reading_parent_page": 262,
+    "id": "S263",
+    "number": 263
+  },
+  {
+    "title": "图A.7｜十类合成协变量实验",
+    "section": "results",
+    "asset": "display_A_7",
+    "paras": [
+      "十类合成协变量实验全貌，后续逐个目标/协变量面板解读。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.7"
+    ],
+    "figureview": true,
+    "id": "S264",
+    "number": 264,
+    "layout": "figureview",
+    "original_201_page": 184
+  },
+  {
+    "title": "原文放大 1/1 · 图A.7｜十类合成协变量实验",
+    "section": "results",
+    "asset": "read201_184_1",
+    "paras": [
+      "对应「图A.7｜十类合成协变量实验」（本版第264页，原201版第184页）。来源为PDF第25页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "FigA.7"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 184,
+    "reading_parent_page": 264,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S265",
+    "number": 265
+  },
+  {
+    "title": "图A.7｜Additive, LinearTrend",
+    "section": "results",
+    "asset": "display_A_7_1",
+    "paras": [
+      "线性下降协变量使目标水平持续下移，但红色预测在未来段趋平。",
+      "加入协变量未恢复持续下降的趋势，模型仍受历史目标范围限制。",
+      "五类协变量分别以加法和乘法与基础信号结合，得到十种合成类别；每格上面是目标，下面是协变量。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.7.1.target",
+      "FigA.7.1.covariate"
+    ],
+    "figureview": false,
+    "id": "S266",
+    "number": 266,
+    "layout": "wide",
+    "original_201_page": 185
+  },
+  {
+    "title": "图A.7｜Multiplicative, LinearTrend",
+    "section": "results",
+    "asset": "display_A_7_2",
+    "paras": [
+      "线性趋势调制振幅，未来真值的振荡幅度继续增大。",
+      "红色预测虽保留振荡，却没有完整延续真实振幅增长，符合图5.4中线性趋势获益不足。",
+      "蓝线为真值、红线为使用协变量的预测、绿线为未使用协变量的预测，阴影为不确定性。线性趋势类仍暴露外推限制。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.7.2.target",
+      "FigA.7.2.covariate"
+    ],
+    "figureview": false,
+    "id": "S267",
+    "number": 267,
+    "layout": "wide",
+    "original_201_page": 186
+  },
+  {
+    "title": "图A.7｜Additive, Pulses",
+    "section": "results",
+    "asset": "display_A_7_3",
+    "paras": [
+      "下方窄脉冲与目标中的向上尖峰对应；红色预测在未来脉冲时刻出现尖峰。",
+      "绿色预测对外部触发峰的响应较弱，已知协变量提供了峰出现的时间线索。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.7.3.target",
+      "FigA.7.3.covariate"
+    ],
+    "figureview": false,
+    "id": "S268",
+    "number": 268,
+    "layout": "wide",
+    "original_201_page": 187
+  },
+  {
+    "title": "图A.7｜Multiplicative, Pulses",
+    "section": "results",
+    "asset": "display_A_7_4",
+    "paras": [
+      "同样的脉冲经乘法耦合后，可表现为正负方向和幅度各异的尖峰。",
+      "未来红线响应脉冲，收益不只取决于脉冲是否发生，还取决于基础信号当时的相位。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.7.4.target",
+      "FigA.7.4.covariate"
+    ],
+    "figureview": false,
+    "id": "S269",
+    "number": 269,
+    "layout": "wide",
+    "original_201_page": 188
+  },
+  {
+    "title": "图A.7｜Additive, Ramps",
+    "section": "results",
+    "asset": "display_A_7_5",
+    "paras": [
+      "下方斜坡累积后重置，上方目标相应抬升后回落。",
+      "红线能追随未来斜坡的水平效应；绿线主要保留原有周期，偏离更明显。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.7.5.target",
+      "FigA.7.5.covariate"
+    ],
+    "figureview": false,
+    "id": "S270",
+    "number": 270,
+    "layout": "wide",
+    "original_201_page": 189
+  },
+  {
+    "title": "图A.7｜Multiplicative, Ramps",
+    "section": "results",
+    "asset": "display_A_7_6",
+    "paras": [
+      "斜坡调制目标振幅，而不是简单抬高基线。",
+      "红线随协变量变化调整振荡幅度，绿线对同一变化的响应较弱。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.7.6.target",
+      "FigA.7.6.covariate"
+    ],
+    "figureview": false,
+    "id": "S271",
+    "number": 271,
+    "layout": "wide",
+    "original_201_page": 190
+  },
+  {
+    "title": "图A.7｜Additive, RandomWalk",
+    "section": "results",
+    "asset": "display_A_7_7",
+    "paras": [
+      "随机游走带来缓慢变化的基线，未来红线较绿线更贴近蓝色目标。",
+      "图中红色区间仍不窄，使用协变量并不意味着所有不确定性消失。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.7.7.target",
+      "FigA.7.7.covariate"
+    ],
+    "figureview": false,
+    "id": "S272",
+    "number": 272,
+    "layout": "wide",
+    "original_201_page": 191
+  },
+  {
+    "title": "图A.7｜Multiplicative, RandomWalk",
+    "section": "results",
+    "asset": "display_A_7_8",
+    "paras": [
+      "随机游走调制未来目标振幅，红色预测保留较大的周期波动。",
+      "绿色预测的幅度与真值存在偏离，协变量信息改变了条件分布。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.7.8.target",
+      "FigA.7.8.covariate"
+    ],
+    "figureview": false,
+    "id": "S273",
+    "number": 273,
+    "layout": "wide",
+    "original_201_page": 192
+  },
+  {
+    "title": "图A.7｜Additive, Composite",
+    "section": "results",
+    "asset": "display_A_7_9",
+    "paras": [
+      "多个协变量以加法组合，未来红线较好跟随真值的细节变化。",
+      "下方保留多条协变量曲线，不能把该面板解释成只含一个驱动因素。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.7.9.target",
+      "FigA.7.9.covariate"
+    ],
+    "figureview": false,
+    "id": "S274",
+    "number": 274,
+    "layout": "wide",
+    "original_201_page": 193
+  },
+  {
+    "title": "图A.7｜Multiplicative, Composite",
+    "section": "results",
+    "asset": "display_A_7_10",
+    "paras": [
+      "多变量组合以乘法影响目标，未来波形与加法面板明显不同。",
+      "红线较好保留未来起伏，绿色预测仍有幅度或相位偏差；效果需与图5.4的分布一起读。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.7.10.target",
+      "FigA.7.10.covariate"
+    ],
+    "figureview": false,
+    "id": "S275",
+    "number": 275,
+    "layout": "wide",
+    "original_201_page": 194
+  },
+  {
+    "title": "图A.8｜上下文长度与误差",
+    "section": "results",
+    "asset": "display_A_8",
+    "paras": [
+      "四种上下文长度全貌，后续分别检查WQL和MASE。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.8"
+    ],
+    "figureview": true,
+    "id": "S276",
+    "number": 276,
+    "layout": "figureview",
+    "original_201_page": 195
+  },
+  {
+    "title": "原文放大 1/1 · 图A.8｜上下文长度与误差",
+    "section": "results",
+    "asset": "read201_195_1",
+    "paras": [
+      "对应「图A.8｜上下文长度与误差」（本版第276页，原201版第195页）。来源为PDF第26页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [
+      "FigA.8"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 195,
+    "reading_parent_page": 276,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S277",
+    "number": 277
+  },
+  {
+    "title": "图A.8｜概率预测",
+    "section": "results",
+    "asset": "display_A_8_WQL",
+    "paras": [
+      "WQL依次为0.462、0.444、0.440、0.451，4096最低，增加至10000后略升。",
+      "误差棒有重叠；仅根据该图不能宣称所有相邻长度之间均有统计显著差异。",
+      "比较1024、2048、4096和10000个历史点；更长上下文对MASE持续有益，对WQL并非严格单调。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.8.WQL"
+    ],
+    "figureview": false,
+    "id": "S278",
+    "number": 278,
+    "layout": "split",
+    "original_201_page": 196
+  },
+  {
+    "title": "原图清晰放大 · 图A.8｜概率预测",
+    "section": "results",
+    "asset": "read201_plot_A8_WQL_complete",
+    "paras": [
+      "1024、2048、4096、10000点上下文的相对WQL依次为0.462、0.444、0.440、0.451。横轴从0到1.2，分数越低越好；10000点没有继续改善WQL。 对应原201版第196页（本版第278页）。"
+    ],
+    "coverage": [
+      "FigA.8.WQL"
+    ],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 196,
+    "reading_parent_page": 278,
+    "id": "S279",
+    "number": 279
+  },
+  {
+    "title": "图A.8｜点预测",
+    "section": "results",
+    "asset": "display_A_8_MASE",
+    "paras": [
+      "MASE依次为0.715、0.681、0.666、0.654，随这四种长度增加而降低。",
+      "误差棒有重叠；仅根据该图不能宣称所有相邻长度之间均有统计显著差异。附录A.9未重述任务数。",
+      "最长长度匹配TabPFN-v2预训练的最大数据集规模。两种评价目标对上下文长度的偏好可以不同。"
+    ],
+    "teaching": null,
+    "coverage": [
+      "FigA.8.MASE"
+    ],
+    "figureview": false,
+    "id": "S280",
+    "number": 280,
+    "layout": "split",
+    "original_201_page": 197
+  },
+  {
+    "title": "设备时序的可验证实验",
+    "section": "summary",
+    "asset": "core_198",
+    "paras": [
+      "可把设备信号历史作为y，把采样时刻、计划流量或温控程序作为未来已知特征。",
+      "按设备、日期或实验批次留出，所有周期提取仅看训练窗口。对比季节朴素、表格模型与序列模型。",
+      "在相同未来信息下比较，再单独测试增加协变量的收益。记录概率覆盖率、MASE/WQL与推断成本。"
+    ],
+    "teaching": "研究设想，非论文实测：先用稳定周期工况检验可行性，再加入漂移、突变与缺失。若未来控制量由操作员临时更改，应按实际可用的信息版本评估。",
+    "coverage": [],
+    "id": "S281",
+    "number": 281,
+    "layout": "split",
+    "original_201_page": 198
+  },
+  {
+    "title": "原文放大 1/1 · 设备时序的可验证实验",
+    "section": "summary",
+    "asset": "read201_198_1",
+    "paras": [
+      "对应「设备时序的可验证实验」（本版第281页，原201版第198页）。来源为PDF第14页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 198,
+    "reading_parent_page": 281,
+    "reading_part": 1,
+    "reading_parts": 1,
+    "id": "S282",
+    "number": 282
+  },
+  {
+    "title": "微生物检测不能跳过外推压力测试",
+    "section": "summary",
+    "asset": "core_199",
+    "paras": [
+      "培养或反应轨迹可能持续增长，未来目标离开历史值域，正对应本文失败情形。",
+      "可以比较原始TabPFN-TS与显式趋势模型加残差预测，但这属于新的研究变体。",
+      "测试集保留低浓度、批次偏移、阴性与失败样本，不能只挑周期明显或容易预测的轨迹。"
+    ],
+    "teaching": "拟议对照：固定可见历史长度和未来协变量，比较检出时间误差、漏检率及区间覆盖。趋势拆分也必须只在历史拟合，禁止用完整轨迹估计趋势。",
+    "coverage": [],
+    "id": "S283",
+    "number": 283,
+    "layout": "split",
+    "original_201_page": 199
+  },
+  {
+    "title": "原文放大 1/2 · 微生物检测不能跳过外推压力测试",
+    "section": "summary",
+    "asset": "read201_199_1",
+    "paras": [
+      "对应「微生物检测不能跳过外推压力测试」（本版第283页，原201版第199页）。来源为PDF第12页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 199,
+    "reading_parent_page": 283,
+    "reading_part": 1,
+    "reading_parts": 2,
+    "id": "S284",
+    "number": 284
+  },
+  {
+    "title": "原文放大 2/2 · 微生物检测不能跳过外推压力测试",
+    "section": "summary",
+    "asset": "read201_199_2",
+    "paras": [
+      "对应「微生物检测不能跳过外推压力测试」（本版第283页，原201版第199页）。来源为PDF第13页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 199,
+    "reading_parent_page": 283,
+    "reading_part": 2,
+    "reading_parts": 2,
+    "id": "S285",
+    "number": 285
+  },
+  {
+    "title": "复现与解释中仍需核对的细节",
+    "section": "summary",
+    "asset": "core_200",
+    "paras": [
+      "锁定论文v4、代码提交、检查点、基准任务及依赖版本，不能拿最新默认参数冒充复现。",
+      "正文P与算法P−1、Hann卷积模式、频率单位旁注均需查固定实现，保留论文原文差异。",
+      "本课件提供解释与设计，没有执行论文训练或基准复现实验。"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S286",
+    "number": 286,
+    "layout": "split",
+    "original_201_page": 200
+  },
+  {
+    "title": "原文放大 1/2 · 复现与解释中仍需核对的细节",
+    "section": "summary",
+    "asset": "read201_200_1",
+    "paras": [
+      "对应「复现与解释中仍需核对的细节」（本版第286页，原201版第200页）。来源为PDF第17页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 200,
+    "reading_parent_page": 286,
+    "reading_part": 1,
+    "reading_parts": 2,
+    "id": "S287",
+    "number": 287
+  },
+  {
+    "title": "原文放大 2/2 · 复现与解释中仍需核对的细节",
+    "section": "summary",
+    "asset": "read201_200_2",
+    "paras": [
+      "对应「复现与解释中仍需核对的细节」（本版第286页，原201版第200页）。来源为PDF第17页；保留原文顺序，重叠行供连续阅读。"
+    ],
+    "coverage": [],
+    "teaching": null,
+    "layout": "reading",
+    "reading_parent_original": 200,
+    "reading_parent_page": 286,
+    "reading_part": 2,
+    "reading_parts": 2,
+    "id": "S288",
+    "number": 288
+  },
+  {
+    "title": "末页摘要",
+    "section": "final",
+    "asset": null,
+    "paras": [
+      "时间特征把预测变为回归",
+      "协变量须未来已知",
+      "季节有效，趋势外推受限",
+      "公平对照并核算成本"
+    ],
+    "teaching": null,
+    "coverage": [],
+    "id": "S289",
+    "number": 289,
+    "layout": "plain final",
+    "original_201_page": 201
+  }
+]

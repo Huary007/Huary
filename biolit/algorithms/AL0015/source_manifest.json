@@ -1,0 +1,21 @@
+{
+  "paper_title": "From Tables to Time: Extending TabPFN-v2 to Time Series Forecasting",
+  "authors": [
+    "Shi Bin Hoo",
+    "Samuel Müller",
+    "David Salinas",
+    "Frank Hutter"
+  ],
+  "version": "arXiv:2501.02945v4",
+  "date": "2026-01-26",
+  "pages": 26,
+  "source_pdf": "source/arxiv.pdf",
+  "source_sha256": "f5810a42f0f490980eb38508602d801eb407109fc53976e5a300357f67279837",
+  "source_url": "https://arxiv.org/abs/2501.02945v4",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "formal_publication": "TMLR, July 2026",
+  "formal_source": "https://openreview.net/forum?id=KIkQj8VOUY",
+  "formal_diff_status": "Not checked: browser verification blocked final PDF access",
+  "upstream_table1": "https://arxiv.org/abs/2410.10393v1"
+}

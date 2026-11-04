@@ -1,0 +1,5978 @@
+[
+  {
+    "title": "图3.1｜从时间序列到回归表",
+    "page": 4,
+    "locator": "Fig3.1",
+    "asset": "assets/display_3_1.png",
+    "rectangles": [
+      [
+        69.318,
+        78.7,
+        542.057,
+        259.211
+      ]
+    ],
+    "pixels": [
+      1420,
+      542
+    ],
+    "paras": [
+      "先看历史、特征矩阵与回归器的连接，再逐块检查信息流。"
+    ],
+    "coverage": [
+      "Fig3.1"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图3.1｜历史与预测窗口",
+    "page": 4,
+    "locator": "Fig3.1.history",
+    "asset": "assets/display_3_1_history.png",
+    "rectangles": [
+      [
+        96.796,
+        90.0,
+        262.286,
+        199.874
+      ]
+    ],
+    "pixels": [
+      509,
+      354
+    ],
+    "paras": [
+      "蓝色区域是可观察历史，橙色区域是待预测未来；下方协变量轨迹可在已知时加入。",
+      "窗口划分沿时间进行，不能随机把未来目标混入训练标签。",
+      "历史目标构成训练标签y；同一套时间特征分别为历史窗口生成X_train、为预测窗口生成X_test。图中的未来目标是问号，不能作为特征回填。"
+    ],
+    "coverage": [
+      "Fig3.1.history"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图3.1｜特征矩阵",
+    "page": 4,
+    "locator": "Fig3.1.table",
+    "asset": "assets/display_3_1_table.png",
+    "rectangles": [
+      [
+        262.91,
+        91.0,
+        374.694,
+        185.5
+      ]
+    ],
+    "pixels": [
+      349,
+      308
+    ],
+    "paras": [
+      "上半部X_train与历史标签y配对，下半部X_test沿用相同列定义。",
+      "表的每行代表一个时间点，列包含时间信息以及可选协变量。",
+      "时间戳可变成运行索引与周期特征；未来已知的协变量可追加到表中。TabPFN在历史行的条件下，一次预测未来各行。"
+    ],
+    "coverage": [
+      "Fig3.1.table"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图3.1｜TabPFN回归接口",
+    "page": 4,
+    "locator": "Fig3.1.model",
+    "asset": "assets/display_3_1_model.png",
+    "rectangles": [
+      [
+        373.445,
+        100.562,
+        513.331,
+        178.637
+      ]
+    ],
+    "pixels": [
+      420,
+      235
+    ],
+    "paras": [
+      "图中先调用fit(X_train,y)，再调用predict(X_test)。",
+      "这里的fit用于建立上下文，不等于针对该时间序列重新做参数训练。"
+    ],
+    "coverage": [
+      "Fig3.1.model"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图4.1｜GIFT-Eval单变量基准",
+    "page": 6,
+    "locator": "Fig4.1",
+    "asset": "assets/display_4_1.png",
+    "rectangles": [
+      [
+        69.318,
+        81.199,
+        542.057,
+        321.047
+      ]
+    ],
+    "pixels": [
+      1420,
+      721
+    ],
+    "paras": [
+      "三个指标共同评价单变量预测，后续逐面板读取排名与误差。"
+    ],
+    "coverage": [
+      "Fig4.1"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图4.1｜WQL平均名次",
+    "page": 6,
+    "locator": "Fig4.1.1",
+    "asset": "assets/display_4_1_1.png",
+    "rectangles": [
+      [
+        81.184,
+        103.06,
+        264.159,
+        251.091
+      ],
+      [
+        186.722,
+        81.199,
+        425.278,
+        101.186
+      ]
+    ],
+    "pixels": [
+      716,
+      518
+    ],
+    "paras": [
+      "TabPFN-TS平均名次为5.392；TiRex为2.515，Toto-1.0为4.237，Moirai-2为4.464。",
+      "平均名次评价跨任务的排序，不能等同于误差减少的百分比。",
+      "三个面板分别给出WQL平均名次、相对WQL与相对MASE，均为越低越好；颜色区分四类模型。"
+    ],
+    "coverage": [
+      "Fig4.1.1"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图4.1｜相对WQL",
+    "page": 6,
+    "locator": "Fig4.1.2",
+    "asset": "assets/display_4_1_2.png",
+    "rectangles": [
+      [
+        81.184,
+        103.06,
+        135.4,
+        235.0
+      ],
+      [
+        265.408,
+        103.06,
+        397.8,
+        251.091
+      ],
+      [
+        186.722,
+        81.199,
+        425.278,
+        101.186
+      ]
+    ],
+    "pixels": [
+      728,
+      542
+    ],
+    "paras": [
+      "TabPFN-TS为0.460，低于季节朴素基线1.000；TiRex为0.413。",
+      "TabPFN-TS与TimesFM-2.0的0.465较接近，这不表示二者每个数据集上都同样好。",
+      "TabPFN-TS在该基准上有竞争力，但三项指标均不是最优。误差棒按图注表示95%置信区间，不能仅凭相近条长宣布显著差异。"
+    ],
+    "coverage": [
+      "Fig4.1.2"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图4.1｜相对MASE",
+    "page": 6,
+    "locator": "Fig4.1.3",
+    "asset": "assets/display_4_1_3.png",
+    "rectangles": [
+      [
+        81.184,
+        103.06,
+        135.4,
+        235.0
+      ],
+      [
+        396.5,
+        103.06,
+        531.441,
+        251.091
+      ],
+      [
+        186.722,
+        81.199,
+        425.278,
+        101.186
+      ]
+    ],
+    "pixels": [
+      728,
+      542
+    ],
+    "paras": [
+      "TabPFN-TS为0.692；TiRex为0.642，Moirai-2为0.654。",
+      "概率误差与点误差的模型次序并不完全一致，应分开报告。"
+    ],
+    "coverage": [
+      "Fig4.1.3"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图4.2｜已知协变量任务上的结果",
+    "page": 7,
+    "locator": "Fig4.2",
+    "asset": "assets/display_4_2.png",
+    "rectangles": [
+      [
+        69.318,
+        81.199,
+        542.057,
+        300.435
+      ]
+    ],
+    "pixels": [
+      1420,
+      659
+    ],
+    "paras": [
+      "28项已知协变量任务的汇总，后续分别读取概率与点预测指标。"
+    ],
+    "coverage": [
+      "Fig4.2"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图4.2｜相对WQL",
+    "page": 7,
+    "locator": "Fig4.2.WQL",
+    "asset": "assets/display_4_2_WQL.png",
+    "rectangles": [
+      [
+        90.551,
+        102.435,
+        327.857,
+        243.596
+      ],
+      [
+        212.327,
+        81.199,
+        400.298,
+        101.186
+      ]
+    ],
+    "pixels": [
+      713,
+      497
+    ],
+    "paras": [
+      "TabPFN-TS为0.503，TiRex为0.597；相对基线1.000，两者均有改善。",
+      "该比较支持在这一筛选任务集合上使用已知协变量，不宜直接扩展为所有时间序列上的优势。",
+      "28项fev-bench任务中，TabPFN-TS的相对WQL与相对MASE在图示模型中最低。"
+    ],
+    "coverage": [
+      "Fig4.2.WQL"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图4.2｜相对MASE",
+    "page": 7,
+    "locator": "Fig4.2.MASE",
+    "asset": "assets/display_4_2_MASE.png",
+    "rectangles": [
+      [
+        90.551,
+        102.435,
+        144.257,
+        224.0
+      ],
+      [
+        328.0,
+        102.435,
+        521.449,
+        243.596
+      ],
+      [
+        212.327,
+        81.199,
+        400.298,
+        101.186
+      ]
+    ],
+    "pixels": [
+      755,
+      521
+    ],
+    "paras": [
+      "TabPFN-TS为0.666，TiRex为0.749，Chronos-Bolt为0.758。",
+      "点预测指标与概率指标均支持TabPFN-TS在这组任务上的领先。",
+      "此处的协变量在历史和未来窗口均可用；这不是对未知未来外生变量的预测能力测试。"
+    ],
+    "coverage": [
+      "Fig4.2.MASE"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.1｜噪声、趋势与季节性的边界",
+    "page": 8,
+    "locator": "Fig5.1",
+    "asset": "assets/display_5_1.png",
+    "rectangles": [
+      [
+        69.318,
+        79.325,
+        542.057,
+        424.732
+      ]
+    ],
+    "pixels": [
+      1420,
+      1038
+    ],
+    "paras": [
+      "八个合成实例并列呈现，后续逐图检查噪声、趋势和季节性。"
+    ],
+    "coverage": [
+      "Fig5.1"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图5.1｜小时噪声",
+    "page": 8,
+    "locator": "Fig5.1.a1",
+    "asset": "assets/display_5_1_a1.png",
+    "rectangles": [
+      [
+        96.796,
+        79.0,
+        293.51,
+        146.5
+      ]
+    ],
+    "pixels": [
+      603,
+      227
+    ],
+    "paras": [
+      "预测均值接近零，未沿历史噪声的逐点起伏继续摆动。",
+      "灰带描述未来随机性；平坦的均值不意味着模型漏掉了可预测趋势。该组实验使用前800点预测后200点。",
+      "八个小图覆盖两类噪声、线性和指数趋势、两类季节模式，以及趋势与季节的两种组合。"
+    ],
+    "coverage": [
+      "Fig5.1.a1"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.1｜周频噪声",
+    "page": 8,
+    "locator": "Fig5.1.a2",
+    "asset": "assets/display_5_1_a2.png",
+    "rectangles": [
+      [
+        96.796,
+        146.5,
+        293.51,
+        215.0
+      ]
+    ],
+    "pixels": [
+      603,
+      230
+    ],
+    "paras": [
+      "预测均值位于约100附近，未来蓝线仍围绕该水平随机波动。",
+      "与上图的零均值噪声相比，模型保留了不同的水平，纵轴不能直接叠比。",
+      "蓝线为真实值，橙线为均值预测，灰带为0.1–0.9分位范围，红色虚线分开历史与未来。不同子图纵轴尺度不同。"
+    ],
+    "coverage": [
+      "Fig5.1.a2"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.1｜线性趋势",
+    "page": 8,
+    "locator": "Fig5.1.b1",
+    "asset": "assets/display_5_1_b1.png",
+    "rectangles": [
+      [
+        318.49,
+        79.0,
+        518.327,
+        147.4
+      ]
+    ],
+    "pixels": [
+      612,
+      230
+    ],
+    "paras": [
+      "真实序列持续上升，预测线在历史末端附近趋平。",
+      "灰带明显不对称；该实例暴露超出历史目标范围的外推不足。"
+    ],
+    "coverage": [
+      "Fig5.1.b1"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.1｜指数趋势",
+    "page": 8,
+    "locator": "Fig5.1.b2",
+    "asset": "assets/display_5_1_b2.png",
+    "rectangles": [
+      [
+        318.49,
+        147.4,
+        518.327,
+        215.0
+      ]
+    ],
+    "pixels": [
+      612,
+      227
+    ],
+    "paras": [
+      "真实值在未来继续加速上升，预测均值上升较慢并低于真实线。",
+      "趋势形状超出训练目标范围时，单靠时间索引不足以保证正确外推。"
+    ],
+    "coverage": [
+      "Fig5.1.b2"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.1｜单周期季节性",
+    "page": 8,
+    "locator": "Fig5.1.c1",
+    "asset": "assets/display_5_1_c1.png",
+    "rectangles": [
+      [
+        96.796,
+        232.0,
+        293.51,
+        298.5
+      ]
+    ],
+    "pixels": [
+      603,
+      224
+    ],
+    "paras": [
+      "未来橙线延续周期振荡，峰谷与蓝线基本重合。",
+      "重复相位在历史中已有参照，模型可借周期表示进行条件插值。"
+    ],
+    "coverage": [
+      "Fig5.1.c1"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.1｜复合季节性",
+    "page": 8,
+    "locator": "Fig5.1.c2",
+    "asset": "assets/display_5_1_c2.png",
+    "rectangles": [
+      [
+        96.796,
+        298.5,
+        293.51,
+        364.0
+      ]
+    ],
+    "pixels": [
+      603,
+      221
+    ],
+    "paras": [
+      "未来段保留多个频率叠加形成的非单一正弦形状。",
+      "这些是合成信号的定性例子，不能从重合程度反推出未报告的误差值。"
+    ],
+    "coverage": [
+      "Fig5.1.c2"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.1｜趋势与季节相加",
+    "page": 8,
+    "locator": "Fig5.1.d1",
+    "asset": "assets/display_5_1_d1.png",
+    "rectangles": [
+      [
+        318.49,
+        230.0,
+        518.327,
+        297.0
+      ]
+    ],
+    "pixels": [
+      612,
+      225
+    ],
+    "paras": [
+      "预测仍有小幅周期起伏，但均值没有跟上持续上升的真实水平。",
+      "周期成分可恢复，趋势外推仍受限，两者可以同时出现。"
+    ],
+    "coverage": [
+      "Fig5.1.d1"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.1｜趋势与季节相乘",
+    "page": 8,
+    "locator": "Fig5.1.d2",
+    "asset": "assets/display_5_1_d2.png",
+    "rectangles": [
+      [
+        318.49,
+        297.0,
+        518.327,
+        364.0
+      ]
+    ],
+    "pixels": [
+      612,
+      225
+    ],
+    "paras": [
+      "未来橙线维持较强振荡，与真值的主要周期相符。",
+      "此处仍应检查包络幅度的变化；一个成功例子不抵消线性和指数趋势中的失败。"
+    ],
+    "coverage": [
+      "Fig5.1.d2"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.2｜单正弦与正余弦表示",
+    "page": 9,
+    "locator": "Fig5.2",
+    "asset": "assets/display_5_2.png",
+    "rectangles": [
+      [
+        69.318,
+        79.95,
+        543.306,
+        352.902
+      ]
+    ],
+    "pixels": [
+      1423,
+      820
+    ],
+    "paras": [
+      "两种时间表示并列，后续按连续频率组覆盖全部48条曲线。"
+    ],
+    "coverage": [
+      "Fig5.2"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图5.2a｜仅sin(t)",
+    "page": 9,
+    "locator": "Fig5.2.a",
+    "asset": "assets/display_5_2_a.png",
+    "rectangles": [
+      [
+        69.318,
+        79.95,
+        299.755,
+        269.83
+      ]
+    ],
+    "pixels": [
+      693,
+      571
+    ],
+    "paras": [
+      "每条曲线依右侧标签表示sin(nt)，由下到上n从1增加至24。",
+      "仅sin(t)时相同输入值可能对应不同相位；增加cos(t)后可在一个周期内区分相位。",
+      "左图仅以sin(t)为输入，偶数谐波在未来段重建失败；右图同时提供sin(t)与cos(t)，1–24阶谐波的重建更完整。"
+    ],
+    "coverage": [
+      "Fig5.2.a"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.2a｜谐波n=1–4",
+    "page": 9,
+    "locator": "Fig5.2.a.n1-4",
+    "asset": "assets/display_5_2_a_n1-4.png",
+    "rectangles": [
+      [
+        69.318,
+        207.579,
+        280.396,
+        239.519
+      ],
+      [
+        280.396,
+        211.117,
+        299.755,
+        235.476
+      ],
+      [
+        69.318,
+        237.975,
+        299.755,
+        254.215
+      ]
+    ],
+    "pixels": [
+      693,
+      159
+    ],
+    "paras": [
+      "本组依次包含sin(1t)至sin(4t)，原图通过竖向错开曲线避免覆盖。",
+      "左侧表示仅给sin(t)：本组奇数阶保留振荡，偶数阶重建受损，反映相位歧义。",
+      "纵向位移只是分开展示不同频率，不是信号均值随阶数增长；竖线为训练/测试分界。"
+    ],
+    "coverage": [
+      "Fig5.2.a.n1",
+      "Fig5.2.a.n2",
+      "Fig5.2.a.n3",
+      "Fig5.2.a.n4"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.2a｜谐波n=5–8",
+    "page": 9,
+    "locator": "Fig5.2.a.n5-8",
+    "asset": "assets/display_5_2_a_n5-8.png",
+    "rectangles": [
+      [
+        69.318,
+        183.315,
+        280.396,
+        215.255
+      ],
+      [
+        280.396,
+        187.382,
+        299.755,
+        211.117
+      ],
+      [
+        69.318,
+        237.975,
+        299.755,
+        254.215
+      ]
+    ],
+    "pixels": [
+      693,
+      159
+    ],
+    "paras": [
+      "本组依次包含sin(5t)至sin(8t)，原图通过竖向错开曲线避免覆盖。",
+      "左侧表示仅给sin(t)：本组奇数阶保留振荡，偶数阶重建受损，反映相位歧义。"
+    ],
+    "coverage": [
+      "Fig5.2.a.n5",
+      "Fig5.2.a.n6",
+      "Fig5.2.a.n7",
+      "Fig5.2.a.n8"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.2a｜谐波n=9–12",
+    "page": 9,
+    "locator": "Fig5.2.a.n9-12",
+    "asset": "assets/display_5_2_a_n9-12.png",
+    "rectangles": [
+      [
+        69.318,
+        159.051,
+        280.396,
+        190.99
+      ],
+      [
+        280.396,
+        163.022,
+        299.755,
+        187.382
+      ],
+      [
+        69.318,
+        237.975,
+        299.755,
+        254.215
+      ]
+    ],
+    "pixels": [
+      693,
+      158
+    ],
+    "paras": [
+      "本组依次包含sin(9t)至sin(12t)，原图通过竖向错开曲线避免覆盖。",
+      "左侧表示仅给sin(t)：本组奇数阶保留振荡，偶数阶重建受损，反映相位歧义。"
+    ],
+    "coverage": [
+      "Fig5.2.a.n9",
+      "Fig5.2.a.n10",
+      "Fig5.2.a.n11",
+      "Fig5.2.a.n12"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.2a｜谐波n=13–16",
+    "page": 9,
+    "locator": "Fig5.2.a.n13-16",
+    "asset": "assets/display_5_2_a_n13-16.png",
+    "rectangles": [
+      [
+        69.318,
+        134.787,
+        280.396,
+        166.726
+      ],
+      [
+        280.396,
+        138.662,
+        299.755,
+        163.022
+      ],
+      [
+        69.318,
+        237.975,
+        299.755,
+        254.215
+      ]
+    ],
+    "pixels": [
+      693,
+      159
+    ],
+    "paras": [
+      "本组依次包含sin(13t)至sin(16t)，原图通过竖向错开曲线避免覆盖。",
+      "左侧表示仅给sin(t)：本组奇数阶保留振荡，偶数阶重建受损，反映相位歧义。"
+    ],
+    "coverage": [
+      "Fig5.2.a.n13",
+      "Fig5.2.a.n14",
+      "Fig5.2.a.n15",
+      "Fig5.2.a.n16"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.2a｜谐波n=17–20",
+    "page": 9,
+    "locator": "Fig5.2.a.n17-20",
+    "asset": "assets/display_5_2_a_n17-20.png",
+    "rectangles": [
+      [
+        69.318,
+        110.523,
+        280.396,
+        142.462
+      ],
+      [
+        280.396,
+        114.303,
+        299.755,
+        138.662
+      ],
+      [
+        69.318,
+        237.975,
+        299.755,
+        254.215
+      ]
+    ],
+    "pixels": [
+      693,
+      159
+    ],
+    "paras": [
+      "本组依次包含sin(17t)至sin(20t)，原图通过竖向错开曲线避免覆盖。",
+      "左侧表示仅给sin(t)：本组奇数阶保留振荡，偶数阶重建受损，反映相位歧义。"
+    ],
+    "coverage": [
+      "Fig5.2.a.n17",
+      "Fig5.2.a.n18",
+      "Fig5.2.a.n19",
+      "Fig5.2.a.n20"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.2a｜谐波n=21–24",
+    "page": 9,
+    "locator": "Fig5.2.a.n21-24",
+    "asset": "assets/display_5_2_a_n21-24.png",
+    "rectangles": [
+      [
+        69.318,
+        86.259,
+        280.396,
+        118.198
+      ],
+      [
+        280.396,
+        89.943,
+        299.755,
+        114.303
+      ],
+      [
+        69.318,
+        237.975,
+        299.755,
+        254.215
+      ]
+    ],
+    "pixels": [
+      693,
+      159
+    ],
+    "paras": [
+      "本组依次包含sin(21t)至sin(24t)，原图通过竖向错开曲线避免覆盖。",
+      "左侧表示仅给sin(t)：本组奇数阶保留振荡，偶数阶重建受损，反映相位歧义。"
+    ],
+    "coverage": [
+      "Fig5.2.a.n21",
+      "Fig5.2.a.n22",
+      "Fig5.2.a.n23",
+      "Fig5.2.a.n24"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.2b｜sin(t)与cos(t)",
+    "page": 9,
+    "locator": "Fig5.2.b",
+    "asset": "assets/display_5_2_b.png",
+    "rectangles": [
+      [
+        307.249,
+        79.95,
+        543.306,
+        269.83
+      ]
+    ],
+    "pixels": [
+      709,
+      571
+    ],
+    "paras": [
+      "每条曲线依右侧标签表示sin(nt)，由下到上n从1增加至24。",
+      "仅sin(t)时相同输入值可能对应不同相位；增加cos(t)后可在一个周期内区分相位。"
+    ],
+    "coverage": [
+      "Fig5.2.b"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.2b｜谐波n=1–4",
+    "page": 9,
+    "locator": "Fig5.2.b.n1-4",
+    "asset": "assets/display_5_2_b_n1-4.png",
+    "rectangles": [
+      [
+        307.249,
+        207.578,
+        518.951,
+        239.516
+      ],
+      [
+        518.951,
+        211.117,
+        543.306,
+        235.476
+      ],
+      [
+        307.249,
+        237.975,
+        543.306,
+        254.215
+      ]
+    ],
+    "pixels": [
+      709,
+      159
+    ],
+    "paras": [
+      "本组依次包含sin(1t)至sin(4t)，原图通过竖向错开曲线避免覆盖。",
+      "正余弦联合表示下，本组未来段保留相应频率的振荡；频率越高，曲线越密，不能由像素重合推断零误差。"
+    ],
+    "coverage": [
+      "Fig5.2.b.n1",
+      "Fig5.2.b.n2",
+      "Fig5.2.b.n3",
+      "Fig5.2.b.n4"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.2b｜谐波n=5–8",
+    "page": 9,
+    "locator": "Fig5.2.b.n5-8",
+    "asset": "assets/display_5_2_b_n5-8.png",
+    "rectangles": [
+      [
+        307.249,
+        183.314,
+        518.951,
+        215.253
+      ],
+      [
+        518.951,
+        187.382,
+        543.306,
+        211.117
+      ],
+      [
+        307.249,
+        237.975,
+        543.306,
+        254.215
+      ]
+    ],
+    "pixels": [
+      709,
+      159
+    ],
+    "paras": [
+      "本组依次包含sin(5t)至sin(8t)，原图通过竖向错开曲线避免覆盖。",
+      "正余弦联合表示下，本组未来段保留相应频率的振荡；频率越高，曲线越密，不能由像素重合推断零误差。"
+    ],
+    "coverage": [
+      "Fig5.2.b.n5",
+      "Fig5.2.b.n6",
+      "Fig5.2.b.n7",
+      "Fig5.2.b.n8"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.2b｜谐波n=9–12",
+    "page": 9,
+    "locator": "Fig5.2.b.n9-12",
+    "asset": "assets/display_5_2_b_n9-12.png",
+    "rectangles": [
+      [
+        307.249,
+        159.051,
+        518.951,
+        190.99
+      ],
+      [
+        518.951,
+        163.022,
+        543.306,
+        187.382
+      ],
+      [
+        307.249,
+        237.975,
+        543.306,
+        254.215
+      ]
+    ],
+    "pixels": [
+      709,
+      158
+    ],
+    "paras": [
+      "本组依次包含sin(9t)至sin(12t)，原图通过竖向错开曲线避免覆盖。",
+      "正余弦联合表示下，本组未来段保留相应频率的振荡；频率越高，曲线越密，不能由像素重合推断零误差。"
+    ],
+    "coverage": [
+      "Fig5.2.b.n9",
+      "Fig5.2.b.n10",
+      "Fig5.2.b.n11",
+      "Fig5.2.b.n12"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.2b｜谐波n=13–16",
+    "page": 9,
+    "locator": "Fig5.2.b.n13-16",
+    "asset": "assets/display_5_2_b_n13-16.png",
+    "rectangles": [
+      [
+        307.249,
+        134.787,
+        518.951,
+        166.726
+      ],
+      [
+        518.951,
+        138.662,
+        543.306,
+        163.022
+      ],
+      [
+        307.249,
+        237.975,
+        543.306,
+        254.215
+      ]
+    ],
+    "pixels": [
+      709,
+      159
+    ],
+    "paras": [
+      "本组依次包含sin(13t)至sin(16t)，原图通过竖向错开曲线避免覆盖。",
+      "正余弦联合表示下，本组未来段保留相应频率的振荡；频率越高，曲线越密，不能由像素重合推断零误差。"
+    ],
+    "coverage": [
+      "Fig5.2.b.n13",
+      "Fig5.2.b.n14",
+      "Fig5.2.b.n15",
+      "Fig5.2.b.n16"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.2b｜谐波n=17–20",
+    "page": 9,
+    "locator": "Fig5.2.b.n17-20",
+    "asset": "assets/display_5_2_b_n17-20.png",
+    "rectangles": [
+      [
+        307.249,
+        110.524,
+        518.951,
+        142.463
+      ],
+      [
+        518.951,
+        114.303,
+        543.306,
+        138.662
+      ],
+      [
+        307.249,
+        237.975,
+        543.306,
+        254.215
+      ]
+    ],
+    "pixels": [
+      709,
+      159
+    ],
+    "paras": [
+      "本组依次包含sin(17t)至sin(20t)，原图通过竖向错开曲线避免覆盖。",
+      "正余弦联合表示下，本组未来段保留相应频率的振荡；频率越高，曲线越密，不能由像素重合推断零误差。"
+    ],
+    "coverage": [
+      "Fig5.2.b.n17",
+      "Fig5.2.b.n18",
+      "Fig5.2.b.n19",
+      "Fig5.2.b.n20"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.2b｜谐波n=21–24",
+    "page": 9,
+    "locator": "Fig5.2.b.n21-24",
+    "asset": "assets/display_5_2_b_n21-24.png",
+    "rectangles": [
+      [
+        307.249,
+        86.26,
+        518.951,
+        118.199
+      ],
+      [
+        518.951,
+        89.943,
+        543.306,
+        114.303
+      ],
+      [
+        307.249,
+        237.975,
+        543.306,
+        254.215
+      ]
+    ],
+    "pixels": [
+      709,
+      159
+    ],
+    "paras": [
+      "本组依次包含sin(21t)至sin(24t)，原图通过竖向错开曲线避免覆盖。",
+      "正余弦联合表示下，本组未来段保留相应频率的振荡；频率越高，曲线越密，不能由像素重合推断零误差。"
+    ],
+    "coverage": [
+      "Fig5.2.b.n21",
+      "Fig5.2.b.n22",
+      "Fig5.2.b.n23",
+      "Fig5.2.b.n24"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.3｜协变量条件下的三个预测实例",
+    "page": 10,
+    "locator": "Fig5.3",
+    "asset": "assets/display_5_3.png",
+    "rectangles": [
+      [
+        68.694,
+        79.95,
+        542.057,
+        221.735
+      ]
+    ],
+    "pixels": [
+      1421,
+      427
+    ],
+    "paras": [
+      "三个目标/协变量配对实例，后续分别比较红绿预测。"
+    ],
+    "coverage": [
+      "Fig5.3"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图5.3｜斜坡协变量",
+    "page": 10,
+    "locator": "Fig5.3.a",
+    "asset": "assets/display_5_3_a.png",
+    "rectangles": [
+      [
+        69.318,
+        79.95,
+        231.5,
+        155.85
+      ],
+      [
+        69.318,
+        155.85,
+        236.35,
+        165.3
+      ],
+      [
+        173.608,
+        163.647,
+        497.094,
+        178.637
+      ]
+    ],
+    "pixels": [
+      984,
+      340
+    ],
+    "paras": [
+      "红线为使用协变量的中位数预测，可追随未来斜坡导致的目标水平抬升与回落；绿线主要保留基础振荡。",
+      "协变量在未来重置时，红线也发生相应变化，不能只比较整体均值。",
+      "每列上方是目标序列，下方是对应协变量；红线使用协变量，绿线不使用。共享图例完整保留。"
+    ],
+    "coverage": [
+      "Fig5.3.a"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.3｜随机游走协变量",
+    "page": 10,
+    "locator": "Fig5.3.b",
+    "asset": "assets/display_5_3_b.png",
+    "rectangles": [
+      [
+        231.8,
+        79.95,
+        382.5,
+        155.85
+      ],
+      [
+        241.0,
+        155.85,
+        387.35,
+        165.3
+      ],
+      [
+        173.608,
+        163.647,
+        497.094,
+        178.637
+      ]
+    ],
+    "pixels": [
+      984,
+      340
+    ],
+    "paras": [
+      "红线跟随目标的缓慢水平变化，绿线对该低频变化的跟随较弱。",
+      "比较的是同一时段、同一目标有无协变量的预测，不是两个不同数据集。",
+      "蓝线是真值，虚线是分界，阴影为第10–90百分位。三个实例展示斜坡、随机游走及复合协变量。"
+    ],
+    "coverage": [
+      "Fig5.3.b"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.3｜复合协变量",
+    "page": 10,
+    "locator": "Fig5.3.c",
+    "asset": "assets/display_5_3_c.png",
+    "rectangles": [
+      [
+        382.8,
+        79.95,
+        540,
+        155.85
+      ],
+      [
+        392.0,
+        155.85,
+        540,
+        165.3
+      ],
+      [
+        173.608,
+        163.647,
+        497.094,
+        178.637
+      ]
+    ],
+    "pixels": [
+      984,
+      340
+    ],
+    "paras": [
+      "下方包含多个形态不同的协变量，红色预测较好保留未来目标波形。",
+      "绿色预测及阴影与红色存在差异；单例可解释使用方式，平均收益见图5.4。"
+    ],
+    "coverage": [
+      "Fig5.3.c"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.4｜协变量增益的分布",
+    "page": 11,
+    "locator": "Fig5.4",
+    "asset": "assets/display_5_4.png",
+    "rectangles": [
+      [
+        69.318,
+        79.95,
+        542.057,
+        300.435
+      ]
+    ],
+    "pixels": [
+      1420,
+      663
+    ],
+    "paras": [
+      "两种耦合关系下的改善分布，后续分别查看箱体与零改善线。"
+    ],
+    "coverage": [
+      "Fig5.4"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图5.4｜加法关系",
+    "page": 11,
+    "locator": "Fig5.4.a",
+    "asset": "assets/display_5_4_a.png",
+    "rectangles": [
+      [
+        95.547,
+        79.95,
+        316.616,
+        208.5
+      ],
+      [
+        186.7,
+        208.5,
+        246.4,
+        219.0
+      ],
+      [
+        267.0,
+        216.0,
+        345.0,
+        229.5
+      ]
+    ],
+    "pixels": [
+      676,
+      496
+    ],
+    "paras": [
+      "脉冲、斜坡、随机游走及复合类的箱体均远高于零；线性趋势类围绕零，且有负改善。",
+      "蓝色代表MASE，红色代表WQL；箱体与离群点描述分布，不能把视觉中位数当作论文未列出的精确平均改善率。正文未给出每类重复次数。",
+      "左为加法耦合，右为乘法耦合；每类分别报告MASE和WQL相对改善率的箱线图。红虚线是零改善。"
+    ],
+    "coverage": [
+      "Fig5.4.a"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.4｜乘法关系",
+    "page": 11,
+    "locator": "Fig5.4.b",
+    "asset": "assets/display_5_4_b.png",
+    "rectangles": [
+      [
+        95.547,
+        79.95,
+        117.5,
+        199.5
+      ],
+      [
+        315.992,
+        79.95,
+        516.453,
+        208.5
+      ],
+      [
+        377.9,
+        208.5,
+        455.3,
+        219.0
+      ],
+      [
+        267.0,
+        216.0,
+        345.0,
+        229.5
+      ]
+    ],
+    "pixels": [
+      682,
+      496
+    ],
+    "paras": [
+      "线性趋势类中心低于零；脉冲类改善有较大离散，斜坡类高且集中，随机游走类分散更大。",
+      "蓝色代表MASE，红色代表WQL；箱体与离群点描述分布，不能把视觉中位数当作论文未列出的精确平均改善率。",
+      "斜坡、随机游走和复合类总体获益；线性趋势附近的箱体接近零或落在零以下，说明协变量并不能消除外推限制。"
+    ],
+    "coverage": [
+      "Fig5.4.b"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.5｜换成TabDPT后会怎样",
+    "page": 11,
+    "locator": "Fig5.5",
+    "asset": "assets/display_5_5.png",
+    "rectangles": [
+      [
+        353.461,
+        467.205,
+        542.057,
+        703.306
+      ]
+    ],
+    "pixels": [
+      567,
+      709
+    ],
+    "paras": [
+      "替换回归骨干后的78任务对比，下一页放大读取证据。"
+    ],
+    "coverage": [
+      "Fig5.5"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图5.5｜换成TabDPT后会怎样｜放大解读",
+    "page": 11,
+    "locator": "Fig5.5.detail",
+    "asset": "assets/display_5_5_detail.png",
+    "rectangles": [
+      [
+        353.461,
+        467.205,
+        539.559,
+        657.085
+      ]
+    ],
+    "pixels": [
+      559,
+      571
+    ],
+    "paras": [
+      "在78项可完成计算的GIFT-Eval任务上，TabDPT-TS的相对MASE为0.755，TabPFN-TS为0.662。",
+      "TabDPT-TS与Chronos-Bolt-Tiny的0.758接近，表明时间特征方案可以迁移，但回归骨干仍影响准确率。"
+    ],
+    "coverage": [
+      "Fig5.5.detail"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.6｜时间特征消融",
+    "page": 12,
+    "locator": "Fig5.6",
+    "asset": "assets/display_5_6.png",
+    "rectangles": [
+      [
+        69.318,
+        80.574,
+        542.057,
+        262.334
+      ]
+    ],
+    "pixels": [
+      1420,
+      547
+    ],
+    "paras": [
+      "81项任务上的特征消融，后续分别检查WQL与MASE。"
+    ],
+    "coverage": [
+      "Fig5.6"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图5.6｜相对WQL",
+    "page": 12,
+    "locator": "Fig5.6.WQL",
+    "asset": "assets/display_5_6_WQL.png",
+    "rectangles": [
+      [
+        116.155,
+        80.574,
+        360.331,
+        204.871
+      ]
+    ],
+    "pixels": [
+      733,
+      374
+    ],
+    "paras": [
+      "三类特征一起使用为0.443，索引加日历为0.452，索引加自动季节为0.456；仅索引为0.663。",
+      "日历特征与自动季节特征提供不同周期信息；图示结论限定于这些配置与该任务子集。",
+      "组合运行索引、自动季节特征和日历特征的配置，在图示WQL与MASE上均最优。"
+    ],
+    "coverage": [
+      "Fig5.6.WQL"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图5.6｜相对MASE",
+    "page": 12,
+    "locator": "Fig5.6.MASE",
+    "asset": "assets/display_5_6_MASE.png",
+    "rectangles": [
+      [
+        116.155,
+        80.574,
+        227.8,
+        188.0
+      ],
+      [
+        358.5,
+        80.574,
+        497.094,
+        204.871
+      ]
+    ],
+    "pixels": [
+      765,
+      398
+    ],
+    "paras": [
+      "全特征为0.668；仅自动季节为0.964，仅索引为1.014，后者略高于季节朴素基线。",
+      "日历特征与自动季节特征提供不同周期信息；图示结论限定于这些配置与该任务子集。",
+      "此处使用81项较小任务，不能把数值与97项完整基准直接相减。"
+    ],
+    "coverage": [
+      "Fig5.6.MASE"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图6.1｜推理耗时的代价",
+    "page": 13,
+    "locator": "Fig6.1",
+    "asset": "assets/display_6_1.png",
+    "rectangles": [
+      [
+        352.837,
+        224.858,
+        542.057,
+        380.385
+      ]
+    ],
+    "pixels": [
+      569,
+      468
+    ],
+    "paras": [
+      "97项任务的单GPU等效耗时，下一页放大读取对数轴。"
+    ],
+    "coverage": [
+      "Fig6.1"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图6.1｜推理耗时的代价｜放大解读",
+    "page": 13,
+    "locator": "Fig6.1.detail",
+    "asset": "assets/display_6_1_detail.png",
+    "rectangles": [
+      [
+        368.449,
+        224.858,
+        523.947,
+        301.06
+      ]
+    ],
+    "pixels": [
+      467,
+      230
+    ],
+    "paras": [
+      "横轴为秒且使用对数刻度；TabPFN-TS的箱体整体位于Chronos-Bolt-Base与TimesFM-2.0右侧。",
+      "图示汇总97项任务，TabPFN-TS的四张T4用时归一化为单GPU等效时间。正文概括其耗时约为对照模型的30倍，非每一任务的固定倍率。"
+    ],
+    "coverage": [
+      "Fig6.1.detail"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜GIFT-Eval数据集全表",
+    "page": 19,
+    "locator": "Table1",
+    "asset": "assets/display_Table1.png",
+    "rectangles": [
+      [
+        69.318,
+        208.618,
+        542.057,
+        584.631
+      ]
+    ],
+    "pixels": [
+      1420,
+      1129
+    ],
+    "paras": [
+      "GIFT-Eval数据集统计全表，后续逐组保留全部55行及表头。"
+    ],
+    "coverage": [
+      "Table1"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "表1｜第1–7行：Jena Weather至BizITObs-L2C",
+    "page": 19,
+    "locator": "Table1.rows1-7",
+    "asset": "assets/display_Table1_rows1-7.png",
+    "rectangles": [
+      [
+        69.318,
+        255.464,
+        542.057,
+        273.577
+      ],
+      [
+        69.318,
+        274.32,
+        542.057,
+        313.05
+      ]
+    ],
+    "pixels": [
+      1420,
+      185
+    ],
+    "paras": [
+      "同一数据集可因采样频率不同形成不同任务，Jena Weather的10T、H、D必须分别读。",
+      "BizITObs各行的目标维度与监控来源不同，序列数不能与目标变量数混为一谈。",
+      "表按数据集与采样频率列出序列数、长度、观测数、目标维度及不同预测期的长度和窗口数。"
+    ],
+    "coverage": [
+      "Table1.row1",
+      "Table1.row2",
+      "Table1.row3",
+      "Table1.row4",
+      "Table1.row5",
+      "Table1.row6",
+      "Table1.row7"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第1–7行：数据集、领域、频率与序列数",
+    "page": 19,
+    "locator": "Table1.rows1-7.identity",
+    "asset": "assets/display_Table1_rows1-7_identity.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        219.0,
+        273.577
+      ],
+      [
+        72.0,
+        274.32,
+        219.0,
+        313.05
+      ]
+    ],
+    "pixels": [
+      441,
+      185
+    ],
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "coverage": [
+      "Table1.row1.identity",
+      "Table1.row2.identity",
+      "Table1.row3.identity",
+      "Table1.row4.identity",
+      "Table1.row5.identity",
+      "Table1.row6.identity",
+      "Table1.row7.identity"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第1–7行：长度、观测数与目标维数",
+    "page": 19,
+    "locator": "Table1.rows1-7.size",
+    "asset": "assets/display_Table1_rows1-7_size.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        219.0,
+        255.464,
+        354.0,
+        273.577
+      ],
+      [
+        72.0,
+        274.32,
+        126.0,
+        313.05
+      ],
+      [
+        162.0,
+        274.32,
+        193.0,
+        313.05
+      ],
+      [
+        219.0,
+        274.32,
+        354.0,
+        313.05
+      ]
+    ],
+    "pixels": [
+      660,
+      185
+    ],
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "coverage": [
+      "Table1.row1.size",
+      "Table1.row2.size",
+      "Table1.row3.size",
+      "Table1.row4.size",
+      "Table1.row5.size",
+      "Table1.row6.size",
+      "Table1.row7.size"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第1–7行：短期与中期预测设置",
+    "page": 19,
+    "locator": "Table1.rows1-7.short_medium",
+    "asset": "assets/display_Table1_rows1-7_short_medium.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        354.0,
+        255.464,
+        478.0,
+        273.577
+      ],
+      [
+        72.0,
+        274.32,
+        126.0,
+        313.05
+      ],
+      [
+        162.0,
+        274.32,
+        193.0,
+        313.05
+      ],
+      [
+        354.0,
+        274.32,
+        478.0,
+        313.05
+      ]
+    ],
+    "pixels": [
+      627,
+      185
+    ],
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "coverage": [
+      "Table1.row1.short_medium",
+      "Table1.row2.short_medium",
+      "Table1.row3.short_medium",
+      "Table1.row4.short_medium",
+      "Table1.row5.short_medium",
+      "Table1.row6.short_medium",
+      "Table1.row7.short_medium"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第1–7行：长期预测设置",
+    "page": 19,
+    "locator": "Table1.rows1-7.long",
+    "asset": "assets/display_Table1_rows1-7_long.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        478.0,
+        255.464,
+        540.0,
+        273.577
+      ],
+      [
+        72.0,
+        274.32,
+        126.0,
+        313.05
+      ],
+      [
+        162.0,
+        274.32,
+        193.0,
+        313.05
+      ],
+      [
+        478.0,
+        274.32,
+        540.0,
+        313.05
+      ]
+    ],
+    "pixels": [
+      441,
+      185
+    ],
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "coverage": [
+      "Table1.row1.long",
+      "Table1.row2.long",
+      "Table1.row3.long",
+      "Table1.row4.long",
+      "Table1.row5.long",
+      "Table1.row6.long",
+      "Table1.row7.long"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第8–14行：Bitbrains至ETT1小时",
+    "page": 19,
+    "locator": "Table1.rows8-14",
+    "asset": "assets/display_Table1_rows8-14.png",
+    "rectangles": [
+      [
+        69.318,
+        255.464,
+        542.057,
+        273.577
+      ],
+      [
+        69.318,
+        313.205,
+        542.057,
+        351.935
+      ]
+    ],
+    "pixels": [
+      1420,
+      184
+    ],
+    "paras": [
+      "Bitbrains的多个存储任务包含数百至上千条序列，Restaurant有807条序列。",
+      "ETT1的15T和H有短、中、长期任务，而采样频率决定这些预测步数对应的实际时间。",
+      "带星号的数据因规模较大被消融实验排除；空白预测期单元格表示该组合未列出任务，不应擅自补零。"
+    ],
+    "coverage": [
+      "Table1.row8",
+      "Table1.row9",
+      "Table1.row10",
+      "Table1.row11",
+      "Table1.row12",
+      "Table1.row13",
+      "Table1.row14"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第8–14行：数据集、领域、频率与序列数",
+    "page": 19,
+    "locator": "Table1.rows8-14.identity",
+    "asset": "assets/display_Table1_rows8-14_identity.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        219.0,
+        273.577
+      ],
+      [
+        72.0,
+        313.205,
+        219.0,
+        351.935
+      ]
+    ],
+    "pixels": [
+      441,
+      184
+    ],
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "coverage": [
+      "Table1.row8.identity",
+      "Table1.row9.identity",
+      "Table1.row10.identity",
+      "Table1.row11.identity",
+      "Table1.row12.identity",
+      "Table1.row13.identity",
+      "Table1.row14.identity"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第8–14行：长度、观测数与目标维数",
+    "page": 19,
+    "locator": "Table1.rows8-14.size",
+    "asset": "assets/display_Table1_rows8-14_size.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        219.0,
+        255.464,
+        354.0,
+        273.577
+      ],
+      [
+        72.0,
+        313.205,
+        126.0,
+        351.935
+      ],
+      [
+        162.0,
+        313.205,
+        193.0,
+        351.935
+      ],
+      [
+        219.0,
+        313.205,
+        354.0,
+        351.935
+      ]
+    ],
+    "pixels": [
+      660,
+      184
+    ],
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "coverage": [
+      "Table1.row8.size",
+      "Table1.row9.size",
+      "Table1.row10.size",
+      "Table1.row11.size",
+      "Table1.row12.size",
+      "Table1.row13.size",
+      "Table1.row14.size"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第8–14行：短期与中期预测设置",
+    "page": 19,
+    "locator": "Table1.rows8-14.short_medium",
+    "asset": "assets/display_Table1_rows8-14_short_medium.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        354.0,
+        255.464,
+        478.0,
+        273.577
+      ],
+      [
+        72.0,
+        313.205,
+        126.0,
+        351.935
+      ],
+      [
+        162.0,
+        313.205,
+        193.0,
+        351.935
+      ],
+      [
+        354.0,
+        313.205,
+        478.0,
+        351.935
+      ]
+    ],
+    "pixels": [
+      627,
+      184
+    ],
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "coverage": [
+      "Table1.row8.short_medium",
+      "Table1.row9.short_medium",
+      "Table1.row10.short_medium",
+      "Table1.row11.short_medium",
+      "Table1.row12.short_medium",
+      "Table1.row13.short_medium",
+      "Table1.row14.short_medium"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第8–14行：长期预测设置",
+    "page": 19,
+    "locator": "Table1.rows8-14.long",
+    "asset": "assets/display_Table1_rows8-14_long.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        478.0,
+        255.464,
+        540.0,
+        273.577
+      ],
+      [
+        72.0,
+        313.205,
+        126.0,
+        351.935
+      ],
+      [
+        162.0,
+        313.205,
+        193.0,
+        351.935
+      ],
+      [
+        478.0,
+        313.205,
+        540.0,
+        351.935
+      ]
+    ],
+    "pixels": [
+      441,
+      184
+    ],
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "coverage": [
+      "Table1.row8.long",
+      "Table1.row9.long",
+      "Table1.row10.long",
+      "Table1.row11.long",
+      "Table1.row12.long",
+      "Table1.row13.long",
+      "Table1.row14.long"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第15–21行：ETT1日频至Loop Seattle 5T",
+    "page": 19,
+    "locator": "Table1.rows15-21",
+    "asset": "assets/display_Table1_rows15-21.png",
+    "rectangles": [
+      [
+        69.318,
+        255.464,
+        542.057,
+        273.577
+      ],
+      [
+        69.318,
+        352.09,
+        542.057,
+        390.82
+      ]
+    ],
+    "pixels": [
+      1420,
+      184
+    ],
+    "paras": [
+      "ETT1的日频与周频、ETT2的四种频率在此连续列出；日频与周频行只列短期配置。",
+      "本组末行是Loop Seattle 5T，带星号且规模较大，在消融实验中被排除。"
+    ],
+    "coverage": [
+      "Table1.row15",
+      "Table1.row16",
+      "Table1.row17",
+      "Table1.row18",
+      "Table1.row19",
+      "Table1.row20",
+      "Table1.row21"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第15–21行：数据集、领域、频率与序列数",
+    "page": 19,
+    "locator": "Table1.rows15-21.identity",
+    "asset": "assets/display_Table1_rows15-21_identity.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        219.0,
+        273.577
+      ],
+      [
+        72.0,
+        352.09,
+        219.0,
+        390.82
+      ]
+    ],
+    "pixels": [
+      441,
+      184
+    ],
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "coverage": [
+      "Table1.row15.identity",
+      "Table1.row16.identity",
+      "Table1.row17.identity",
+      "Table1.row18.identity",
+      "Table1.row19.identity",
+      "Table1.row20.identity",
+      "Table1.row21.identity"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第15–21行：长度、观测数与目标维数",
+    "page": 19,
+    "locator": "Table1.rows15-21.size",
+    "asset": "assets/display_Table1_rows15-21_size.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        219.0,
+        255.464,
+        354.0,
+        273.577
+      ],
+      [
+        72.0,
+        352.09,
+        126.0,
+        390.82
+      ],
+      [
+        162.0,
+        352.09,
+        193.0,
+        390.82
+      ],
+      [
+        219.0,
+        352.09,
+        354.0,
+        390.82
+      ]
+    ],
+    "pixels": [
+      660,
+      184
+    ],
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "coverage": [
+      "Table1.row15.size",
+      "Table1.row16.size",
+      "Table1.row17.size",
+      "Table1.row18.size",
+      "Table1.row19.size",
+      "Table1.row20.size",
+      "Table1.row21.size"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第15–21行：短期与中期预测设置",
+    "page": 19,
+    "locator": "Table1.rows15-21.short_medium",
+    "asset": "assets/display_Table1_rows15-21_short_medium.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        354.0,
+        255.464,
+        478.0,
+        273.577
+      ],
+      [
+        72.0,
+        352.09,
+        126.0,
+        390.82
+      ],
+      [
+        162.0,
+        352.09,
+        193.0,
+        390.82
+      ],
+      [
+        354.0,
+        352.09,
+        478.0,
+        390.82
+      ]
+    ],
+    "pixels": [
+      627,
+      184
+    ],
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "coverage": [
+      "Table1.row15.short_medium",
+      "Table1.row16.short_medium",
+      "Table1.row17.short_medium",
+      "Table1.row18.short_medium",
+      "Table1.row19.short_medium",
+      "Table1.row20.short_medium",
+      "Table1.row21.short_medium"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第15–21行：长期预测设置",
+    "page": 19,
+    "locator": "Table1.rows15-21.long",
+    "asset": "assets/display_Table1_rows15-21_long.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        478.0,
+        255.464,
+        540.0,
+        273.577
+      ],
+      [
+        72.0,
+        352.09,
+        126.0,
+        390.82
+      ],
+      [
+        162.0,
+        352.09,
+        193.0,
+        390.82
+      ],
+      [
+        478.0,
+        352.09,
+        540.0,
+        390.82
+      ]
+    ],
+    "pixels": [
+      441,
+      184
+    ],
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "coverage": [
+      "Table1.row15.long",
+      "Table1.row16.long",
+      "Table1.row17.long",
+      "Table1.row18.long",
+      "Table1.row19.long",
+      "Table1.row20.long",
+      "Table1.row21.long"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第22–28行：Loop Seattle小时至Solar 10T",
+    "page": 19,
+    "locator": "Table1.rows22-28",
+    "asset": "assets/display_Table1_rows22-28.png",
+    "rectangles": [
+      [
+        69.318,
+        255.464,
+        542.057,
+        273.577
+      ],
+      [
+        69.318,
+        390.975,
+        542.057,
+        429.705
+      ]
+    ],
+    "pixels": [
+      1420,
+      185
+    ],
+    "paras": [
+      "交通类包括Loop Seattle小时与日频、SZ-Taxi两种频率、M_DENSE两种频率，各行序列数不同。",
+      "末行Solar 10T有137条序列；同为48个预测点，实际时间跨度仍取决于采样频率。"
+    ],
+    "coverage": [
+      "Table1.row22",
+      "Table1.row23",
+      "Table1.row24",
+      "Table1.row25",
+      "Table1.row26",
+      "Table1.row27",
+      "Table1.row28"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第22–28行：数据集、领域、频率与序列数",
+    "page": 19,
+    "locator": "Table1.rows22-28.identity",
+    "asset": "assets/display_Table1_rows22-28_identity.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        219.0,
+        273.577
+      ],
+      [
+        72.0,
+        390.975,
+        219.0,
+        429.705
+      ]
+    ],
+    "pixels": [
+      441,
+      185
+    ],
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "coverage": [
+      "Table1.row22.identity",
+      "Table1.row23.identity",
+      "Table1.row24.identity",
+      "Table1.row25.identity",
+      "Table1.row26.identity",
+      "Table1.row27.identity",
+      "Table1.row28.identity"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第22–28行：长度、观测数与目标维数",
+    "page": 19,
+    "locator": "Table1.rows22-28.size",
+    "asset": "assets/display_Table1_rows22-28_size.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        219.0,
+        255.464,
+        354.0,
+        273.577
+      ],
+      [
+        72.0,
+        390.975,
+        126.0,
+        429.705
+      ],
+      [
+        162.0,
+        390.975,
+        193.0,
+        429.705
+      ],
+      [
+        219.0,
+        390.975,
+        354.0,
+        429.705
+      ]
+    ],
+    "pixels": [
+      660,
+      185
+    ],
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "coverage": [
+      "Table1.row22.size",
+      "Table1.row23.size",
+      "Table1.row24.size",
+      "Table1.row25.size",
+      "Table1.row26.size",
+      "Table1.row27.size",
+      "Table1.row28.size"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第22–28行：短期与中期预测设置",
+    "page": 19,
+    "locator": "Table1.rows22-28.short_medium",
+    "asset": "assets/display_Table1_rows22-28_short_medium.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        354.0,
+        255.464,
+        478.0,
+        273.577
+      ],
+      [
+        72.0,
+        390.975,
+        126.0,
+        429.705
+      ],
+      [
+        162.0,
+        390.975,
+        193.0,
+        429.705
+      ],
+      [
+        354.0,
+        390.975,
+        478.0,
+        429.705
+      ]
+    ],
+    "pixels": [
+      627,
+      185
+    ],
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "coverage": [
+      "Table1.row22.short_medium",
+      "Table1.row23.short_medium",
+      "Table1.row24.short_medium",
+      "Table1.row25.short_medium",
+      "Table1.row26.short_medium",
+      "Table1.row27.short_medium",
+      "Table1.row28.short_medium"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第22–28行：长期预测设置",
+    "page": 19,
+    "locator": "Table1.rows22-28.long",
+    "asset": "assets/display_Table1_rows22-28_long.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        478.0,
+        255.464,
+        540.0,
+        273.577
+      ],
+      [
+        72.0,
+        390.975,
+        126.0,
+        429.705
+      ],
+      [
+        162.0,
+        390.975,
+        193.0,
+        429.705
+      ],
+      [
+        478.0,
+        390.975,
+        540.0,
+        429.705
+      ]
+    ],
+    "pixels": [
+      441,
+      185
+    ],
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "coverage": [
+      "Table1.row22.long",
+      "Table1.row23.long",
+      "Table1.row24.long",
+      "Table1.row25.long",
+      "Table1.row26.long",
+      "Table1.row27.long",
+      "Table1.row28.long"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第29–35行：Solar小时至M4季度",
+    "page": 19,
+    "locator": "Table1.rows29-35",
+    "asset": "assets/display_Table1_rows29-35.png",
+    "rectangles": [
+      [
+        69.318,
+        255.464,
+        542.057,
+        273.577
+      ],
+      [
+        69.318,
+        429.86,
+        542.057,
+        468.59
+      ]
+    ],
+    "pixels": [
+      1420,
+      184
+    ],
+    "paras": [
+      "Solar的小时、日频和周频、Hierarchical Sales的日频与周频，以及M4年度和季度任务按原顺序列出。",
+      "M4年度和季度的序列长度差异较大，不能把平均长度看成每条序列的固定长度。"
+    ],
+    "coverage": [
+      "Table1.row29",
+      "Table1.row30",
+      "Table1.row31",
+      "Table1.row32",
+      "Table1.row33",
+      "Table1.row34",
+      "Table1.row35"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第29–35行：数据集、领域、频率与序列数",
+    "page": 19,
+    "locator": "Table1.rows29-35.identity",
+    "asset": "assets/display_Table1_rows29-35_identity.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        219.0,
+        273.577
+      ],
+      [
+        72.0,
+        429.86,
+        219.0,
+        468.59
+      ]
+    ],
+    "pixels": [
+      441,
+      184
+    ],
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "coverage": [
+      "Table1.row29.identity",
+      "Table1.row30.identity",
+      "Table1.row31.identity",
+      "Table1.row32.identity",
+      "Table1.row33.identity",
+      "Table1.row34.identity",
+      "Table1.row35.identity"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第29–35行：长度、观测数与目标维数",
+    "page": 19,
+    "locator": "Table1.rows29-35.size",
+    "asset": "assets/display_Table1_rows29-35_size.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        219.0,
+        255.464,
+        354.0,
+        273.577
+      ],
+      [
+        72.0,
+        429.86,
+        126.0,
+        468.59
+      ],
+      [
+        162.0,
+        429.86,
+        193.0,
+        468.59
+      ],
+      [
+        219.0,
+        429.86,
+        354.0,
+        468.59
+      ]
+    ],
+    "pixels": [
+      660,
+      184
+    ],
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "coverage": [
+      "Table1.row29.size",
+      "Table1.row30.size",
+      "Table1.row31.size",
+      "Table1.row32.size",
+      "Table1.row33.size",
+      "Table1.row34.size",
+      "Table1.row35.size"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第29–35行：短期与中期预测设置",
+    "page": 19,
+    "locator": "Table1.rows29-35.short_medium",
+    "asset": "assets/display_Table1_rows29-35_short_medium.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        354.0,
+        255.464,
+        478.0,
+        273.577
+      ],
+      [
+        72.0,
+        429.86,
+        126.0,
+        468.59
+      ],
+      [
+        162.0,
+        429.86,
+        193.0,
+        468.59
+      ],
+      [
+        354.0,
+        429.86,
+        478.0,
+        468.59
+      ]
+    ],
+    "pixels": [
+      627,
+      184
+    ],
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "coverage": [
+      "Table1.row29.short_medium",
+      "Table1.row30.short_medium",
+      "Table1.row31.short_medium",
+      "Table1.row32.short_medium",
+      "Table1.row33.short_medium",
+      "Table1.row34.short_medium",
+      "Table1.row35.short_medium"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第29–35行：长期预测设置",
+    "page": 19,
+    "locator": "Table1.rows29-35.long",
+    "asset": "assets/display_Table1_rows29-35_long.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        478.0,
+        255.464,
+        540.0,
+        273.577
+      ],
+      [
+        72.0,
+        429.86,
+        126.0,
+        468.59
+      ],
+      [
+        162.0,
+        429.86,
+        193.0,
+        468.59
+      ],
+      [
+        478.0,
+        429.86,
+        540.0,
+        468.59
+      ]
+    ],
+    "pixels": [
+      441,
+      184
+    ],
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "coverage": [
+      "Table1.row29.long",
+      "Table1.row30.long",
+      "Table1.row31.long",
+      "Table1.row32.long",
+      "Table1.row33.long",
+      "Table1.row34.long",
+      "Table1.row35.long"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第36–42行：M4月频至US Births日频",
+    "page": 19,
+    "locator": "Table1.rows36-42",
+    "asset": "assets/display_Table1_rows36-42.png",
+    "rectangles": [
+      [
+        69.318,
+        255.464,
+        542.057,
+        273.577
+      ],
+      [
+        69.318,
+        468.745,
+        542.057,
+        507.475
+      ]
+    ],
+    "pixels": [
+      1420,
+      184
+    ],
+    "paras": [
+      "本组从M4月频开始，继续列周、日、小时、Hospital、COVID Deaths与US Births日频。",
+      "US Births日频有多个评估窗口，与只列一个窗口的部分任务在评价设置上不同。"
+    ],
+    "coverage": [
+      "Table1.row36",
+      "Table1.row37",
+      "Table1.row38",
+      "Table1.row39",
+      "Table1.row40",
+      "Table1.row41",
+      "Table1.row42"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第36–42行：数据集、领域、频率与序列数",
+    "page": 19,
+    "locator": "Table1.rows36-42.identity",
+    "asset": "assets/display_Table1_rows36-42_identity.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        219.0,
+        273.577
+      ],
+      [
+        72.0,
+        468.745,
+        219.0,
+        507.475
+      ]
+    ],
+    "pixels": [
+      441,
+      184
+    ],
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "coverage": [
+      "Table1.row36.identity",
+      "Table1.row37.identity",
+      "Table1.row38.identity",
+      "Table1.row39.identity",
+      "Table1.row40.identity",
+      "Table1.row41.identity",
+      "Table1.row42.identity"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第36–42行：长度、观测数与目标维数",
+    "page": 19,
+    "locator": "Table1.rows36-42.size",
+    "asset": "assets/display_Table1_rows36-42_size.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        219.0,
+        255.464,
+        354.0,
+        273.577
+      ],
+      [
+        72.0,
+        468.745,
+        126.0,
+        507.475
+      ],
+      [
+        162.0,
+        468.745,
+        193.0,
+        507.475
+      ],
+      [
+        219.0,
+        468.745,
+        354.0,
+        507.475
+      ]
+    ],
+    "pixels": [
+      660,
+      184
+    ],
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "coverage": [
+      "Table1.row36.size",
+      "Table1.row37.size",
+      "Table1.row38.size",
+      "Table1.row39.size",
+      "Table1.row40.size",
+      "Table1.row41.size",
+      "Table1.row42.size"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第36–42行：短期与中期预测设置",
+    "page": 19,
+    "locator": "Table1.rows36-42.short_medium",
+    "asset": "assets/display_Table1_rows36-42_short_medium.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        354.0,
+        255.464,
+        478.0,
+        273.577
+      ],
+      [
+        72.0,
+        468.745,
+        126.0,
+        507.475
+      ],
+      [
+        162.0,
+        468.745,
+        193.0,
+        507.475
+      ],
+      [
+        354.0,
+        468.745,
+        478.0,
+        507.475
+      ]
+    ],
+    "pixels": [
+      627,
+      184
+    ],
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "coverage": [
+      "Table1.row36.short_medium",
+      "Table1.row37.short_medium",
+      "Table1.row38.short_medium",
+      "Table1.row39.short_medium",
+      "Table1.row40.short_medium",
+      "Table1.row41.short_medium",
+      "Table1.row42.short_medium"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第36–42行：长期预测设置",
+    "page": 19,
+    "locator": "Table1.rows36-42.long",
+    "asset": "assets/display_Table1_rows36-42_long.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        478.0,
+        255.464,
+        540.0,
+        273.577
+      ],
+      [
+        72.0,
+        468.745,
+        126.0,
+        507.475
+      ],
+      [
+        162.0,
+        468.745,
+        193.0,
+        507.475
+      ],
+      [
+        478.0,
+        468.745,
+        540.0,
+        507.475
+      ]
+    ],
+    "pixels": [
+      441,
+      184
+    ],
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "coverage": [
+      "Table1.row36.long",
+      "Table1.row37.long",
+      "Table1.row38.long",
+      "Table1.row39.long",
+      "Table1.row40.long",
+      "Table1.row41.long",
+      "Table1.row42.long"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第43–49行：US Births周频至KDD小时",
+    "page": 19,
+    "locator": "Table1.rows43-49",
+    "asset": "assets/display_Table1_rows43-49.png",
+    "rectangles": [
+      [
+        69.318,
+        255.464,
+        542.057,
+        273.577
+      ],
+      [
+        69.318,
+        507.63,
+        542.057,
+        546.36
+      ]
+    ],
+    "pixels": [
+      1420,
+      185
+    ],
+    "paras": [
+      "US Births与Saugeen继续按频率分行，Temperature Rain带有排除标记。",
+      "原表中Saugeen/Temperature Rain附近的观测数位置需按原像素审阅；本课件不自行修正或补算原表。"
+    ],
+    "coverage": [
+      "Table1.row43",
+      "Table1.row44",
+      "Table1.row45",
+      "Table1.row46",
+      "Table1.row47",
+      "Table1.row48",
+      "Table1.row49"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第43–49行：数据集、领域、频率与序列数",
+    "page": 19,
+    "locator": "Table1.rows43-49.identity",
+    "asset": "assets/display_Table1_rows43-49_identity.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        219.0,
+        273.577
+      ],
+      [
+        72.0,
+        507.63,
+        219.0,
+        546.36
+      ]
+    ],
+    "pixels": [
+      441,
+      185
+    ],
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "coverage": [
+      "Table1.row43.identity",
+      "Table1.row44.identity",
+      "Table1.row45.identity",
+      "Table1.row46.identity",
+      "Table1.row47.identity",
+      "Table1.row48.identity",
+      "Table1.row49.identity"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第43–49行：长度、观测数与目标维数",
+    "page": 19,
+    "locator": "Table1.rows43-49.size",
+    "asset": "assets/display_Table1_rows43-49_size.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        219.0,
+        255.464,
+        354.0,
+        273.577
+      ],
+      [
+        72.0,
+        507.63,
+        126.0,
+        546.36
+      ],
+      [
+        162.0,
+        507.63,
+        193.0,
+        546.36
+      ],
+      [
+        219.0,
+        507.63,
+        354.0,
+        546.36
+      ]
+    ],
+    "pixels": [
+      660,
+      185
+    ],
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "coverage": [
+      "Table1.row43.size",
+      "Table1.row44.size",
+      "Table1.row45.size",
+      "Table1.row46.size",
+      "Table1.row47.size",
+      "Table1.row48.size",
+      "Table1.row49.size"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第43–49行：短期与中期预测设置",
+    "page": 19,
+    "locator": "Table1.rows43-49.short_medium",
+    "asset": "assets/display_Table1_rows43-49_short_medium.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        354.0,
+        255.464,
+        478.0,
+        273.577
+      ],
+      [
+        72.0,
+        507.63,
+        126.0,
+        546.36
+      ],
+      [
+        162.0,
+        507.63,
+        193.0,
+        546.36
+      ],
+      [
+        354.0,
+        507.63,
+        478.0,
+        546.36
+      ]
+    ],
+    "pixels": [
+      627,
+      185
+    ],
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "coverage": [
+      "Table1.row43.short_medium",
+      "Table1.row44.short_medium",
+      "Table1.row45.short_medium",
+      "Table1.row46.short_medium",
+      "Table1.row47.short_medium",
+      "Table1.row48.short_medium",
+      "Table1.row49.short_medium"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第43–49行：长期预测设置",
+    "page": 19,
+    "locator": "Table1.rows43-49.long",
+    "asset": "assets/display_Table1_rows43-49_long.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        478.0,
+        255.464,
+        540.0,
+        273.577
+      ],
+      [
+        72.0,
+        507.63,
+        126.0,
+        546.36
+      ],
+      [
+        162.0,
+        507.63,
+        193.0,
+        546.36
+      ],
+      [
+        478.0,
+        507.63,
+        540.0,
+        546.36
+      ]
+    ],
+    "pixels": [
+      441,
+      185
+    ],
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "coverage": [
+      "Table1.row43.long",
+      "Table1.row44.long",
+      "Table1.row45.long",
+      "Table1.row46.long",
+      "Table1.row47.long",
+      "Table1.row48.long",
+      "Table1.row49.long"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第50–55行：KDD日频至Electricity周频",
+    "page": 19,
+    "locator": "Table1.rows50-55",
+    "asset": "assets/display_Table1_rows50-55.png",
+    "rectangles": [
+      [
+        69.318,
+        255.464,
+        542.057,
+        273.577
+      ],
+      [
+        69.318,
+        546.515,
+        542.057,
+        579.69
+      ]
+    ],
+    "pixels": [
+      1420,
+      168
+    ],
+    "paras": [
+      "末组包括KDD日频、Car Parts和Electricity的四种频率。",
+      "Electricity的15T行带星号；不同频率的中长期窗口数不同，结论应按实际任务组合解释。"
+    ],
+    "coverage": [
+      "Table1.row50",
+      "Table1.row51",
+      "Table1.row52",
+      "Table1.row53",
+      "Table1.row54",
+      "Table1.row55"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第50–55行：数据集、领域、频率与序列数",
+    "page": 19,
+    "locator": "Table1.rows50-55.identity",
+    "asset": "assets/display_Table1_rows50-55_identity.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        219.0,
+        273.577
+      ],
+      [
+        72.0,
+        546.515,
+        219.0,
+        579.69
+      ]
+    ],
+    "pixels": [
+      441,
+      168
+    ],
+    "paras": [
+      "这一栏保留数据集、领域、频率和序列数量；同名数据集的不同频率应分行读取。",
+      "序列数与目标变量数不是同一个量；下一栏继续给出长度、观测数和目标维数。"
+    ],
+    "coverage": [
+      "Table1.row50.identity",
+      "Table1.row51.identity",
+      "Table1.row52.identity",
+      "Table1.row53.identity",
+      "Table1.row54.identity",
+      "Table1.row55.identity"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第50–55行：长度、观测数与目标维数",
+    "page": 19,
+    "locator": "Table1.rows50-55.size",
+    "asset": "assets/display_Table1_rows50-55_size.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        219.0,
+        255.464,
+        354.0,
+        273.577
+      ],
+      [
+        72.0,
+        546.515,
+        126.0,
+        579.69
+      ],
+      [
+        162.0,
+        546.515,
+        193.0,
+        579.69
+      ],
+      [
+        219.0,
+        546.515,
+        354.0,
+        579.69
+      ]
+    ],
+    "pixels": [
+      660,
+      168
+    ],
+    "paras": [
+      "左侧重复数据集和频率以对应原行，右侧保留平均/最短/最长序列长度、观测数与目标维数。",
+      "这些列描述数据规模，不是预测误差；数值均取自原表像素，未重新计算。"
+    ],
+    "coverage": [
+      "Table1.row50.size",
+      "Table1.row51.size",
+      "Table1.row52.size",
+      "Table1.row53.size",
+      "Table1.row54.size",
+      "Table1.row55.size"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第50–55行：短期与中期预测设置",
+    "page": 19,
+    "locator": "Table1.rows50-55.short_medium",
+    "asset": "assets/display_Table1_rows50-55_short_medium.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        354.0,
+        255.464,
+        478.0,
+        273.577
+      ],
+      [
+        72.0,
+        546.515,
+        126.0,
+        579.69
+      ],
+      [
+        162.0,
+        546.515,
+        193.0,
+        579.69
+      ],
+      [
+        354.0,
+        546.515,
+        478.0,
+        579.69
+      ]
+    ],
+    "pixels": [
+      627,
+      168
+    ],
+    "paras": [
+      "重复身份列后，连续保留短期和中期的预测长度与评估窗口数。",
+      "空白单元格表示原表未列出该任务组合；预测长度是步数，需结合左侧频率解释日历跨度。"
+    ],
+    "coverage": [
+      "Table1.row50.short_medium",
+      "Table1.row51.short_medium",
+      "Table1.row52.short_medium",
+      "Table1.row53.short_medium",
+      "Table1.row54.short_medium",
+      "Table1.row55.short_medium"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表1｜第50–55行：长期预测设置",
+    "page": 19,
+    "locator": "Table1.rows50-55.long",
+    "asset": "assets/display_Table1_rows50-55_long.png",
+    "rectangles": [
+      [
+        72.0,
+        255.464,
+        126.0,
+        273.577
+      ],
+      [
+        162.0,
+        255.464,
+        193.0,
+        273.577
+      ],
+      [
+        478.0,
+        255.464,
+        540.0,
+        273.577
+      ],
+      [
+        72.0,
+        546.515,
+        126.0,
+        579.69
+      ],
+      [
+        162.0,
+        546.515,
+        193.0,
+        579.69
+      ],
+      [
+        478.0,
+        546.515,
+        540.0,
+        579.69
+      ]
+    ],
+    "pixels": [
+      441,
+      168
+    ],
+    "paras": [
+      "左侧身份列与右侧长期预测长度、窗口数逐行对应。",
+      "保留原表空白，不把缺少长期任务的行改成零误差或零预测长度。"
+    ],
+    "coverage": [
+      "Table1.row50.long",
+      "Table1.row51.long",
+      "Table1.row52.long",
+      "Table1.row53.long",
+      "Table1.row54.long",
+      "Table1.row55.long"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.1｜短期预测的14个实例",
+    "page": 20,
+    "locator": "FigA.1",
+    "asset": "assets/display_A_1.png",
+    "rectangles": [
+      [
+        68.694,
+        218.612,
+        542.057,
+        732.038
+      ]
+    ],
+    "pixels": [
+      1421,
+      1542
+    ],
+    "paras": [
+      "14个短期预测实例全貌，后续逐个面板检查。"
+    ],
+    "coverage": [
+      "FigA.1"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图A.1｜solar/W/short",
+    "page": 20,
+    "locator": "FigA.1.1",
+    "asset": "assets/display_A_1_1.png",
+    "rectangles": [
+      [
+        68.694,
+        218.612,
+        298.506,
+        283.571
+      ]
+    ],
+    "pixels": [
+      690,
+      196
+    ],
+    "paras": [
+      "周频太阳能在历史末端下降，橙线在未来继续下行，与蓝线的大体方向一致。",
+      "未来蓝线局部有起伏；灰带扩大，不应把点预测方向一致解释为逐点命中。",
+      "本图保留14个随机选取的短期任务实例。红色虚线之后，橙色预测与蓝色真值可直接比较，灰带表示预测不确定性。"
+    ],
+    "coverage": [
+      "FigA.1.1"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.1｜covid_deaths/short",
+    "page": 20,
+    "locator": "FigA.1.2",
+    "asset": "assets/display_A_1_2.png",
+    "rectangles": [
+      [
+        312.245,
+        218.612,
+        542.057,
+        283.571
+      ]
+    ],
+    "pixels": [
+      691,
+      196
+    ],
+    "paras": [
+      "历史曲线在末端快速上升，未来橙线较平缓，蓝线也逐渐放缓。",
+      "灰带向未来明显扩张；该面板不能用来给出区间覆盖率的总体估计。",
+      "各面板的单位、纵轴范围与预测长度不同；这些实例展示行为，不能替代跨任务汇总评价。"
+    ],
+    "coverage": [
+      "FigA.1.2"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.1｜m4_quarterly/short",
+    "page": 20,
+    "locator": "FigA.1.3",
+    "asset": "assets/display_A_1_3.png",
+    "rectangles": [
+      [
+        68.694,
+        289.192,
+        298.506,
+        354.151
+      ]
+    ],
+    "pixels": [
+      690,
+      196
+    ],
+    "paras": [
+      "历史由高位回落后略有回升，橙色未来预测较明显向上。",
+      "未来真值的升幅较小，末端低于点预测，提示趋势方向与幅度应分别检查。"
+    ],
+    "coverage": [
+      "FigA.1.3"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.1｜m4_yearly/short",
+    "page": 20,
+    "locator": "FigA.1.4",
+    "asset": "assets/display_A_1_4.png",
+    "rectangles": [
+      [
+        312.245,
+        289.192,
+        542.057,
+        354.151
+      ]
+    ],
+    "pixels": [
+      691,
+      196
+    ],
+    "paras": [
+      "历史长期上升，但预测区间内橙线转为下降，蓝线则再次回升。",
+      "这是定性失败实例；宽灰带不能替代准确的点预测。"
+    ],
+    "coverage": [
+      "FigA.1.4"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.1｜ett1/W/short",
+    "page": 20,
+    "locator": "FigA.1.5",
+    "asset": "assets/display_A_1_5.png",
+    "rectangles": [
+      [
+        68.694,
+        359.773,
+        298.506,
+        424.732
+      ]
+    ],
+    "pixels": [
+      690,
+      196
+    ],
+    "paras": [
+      "历史波动剧烈且没有固定单调趋势，橙线未来保持局部起伏。",
+      "未来蓝线有下探和反弹，点预测未重现全部振幅，灰带较宽。"
+    ],
+    "coverage": [
+      "FigA.1.5"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.1｜jena_weather/D/short",
+    "page": 20,
+    "locator": "FigA.1.6",
+    "asset": "assets/display_A_1_6.png",
+    "rectangles": [
+      [
+        312.245,
+        359.773,
+        542.057,
+        424.732
+      ]
+    ],
+    "pixels": [
+      691,
+      196
+    ],
+    "paras": [
+      "日频天气序列在未来段继续起伏，橙线主要围绕历史末端的局部水平。",
+      "点预测比真实日间变化平滑；比较前应保留原纵轴，避免把微小范围看成大幅变化。"
+    ],
+    "coverage": [
+      "FigA.1.6"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.1｜m4_hourly/short",
+    "page": 20,
+    "locator": "FigA.1.7",
+    "asset": "assets/display_A_1_7.png",
+    "rectangles": [
+      [
+        68.694,
+        430.353,
+        298.506,
+        495.312
+      ]
+    ],
+    "pixels": [
+      690,
+      195
+    ],
+    "paras": [
+      "历史有规则的重复周期，橙线在未来延续峰谷。",
+      "这是季节特征适用的清晰例子，预测周期比长期趋势更容易从历史找到对应相位。"
+    ],
+    "coverage": [
+      "FigA.1.7"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.1｜us_births/M/short",
+    "page": 20,
+    "locator": "FigA.1.8",
+    "asset": "assets/display_A_1_8.png",
+    "rectangles": [
+      [
+        312.245,
+        430.353,
+        542.057,
+        495.312
+      ]
+    ],
+    "pixels": [
+      691,
+      195
+    ],
+    "paras": [
+      "月频出生数同时有长期水平变化和短周期波动，未来橙线保持季节起伏。",
+      "预测窗很短，不能从该实例判定长期水平外推是否成功。"
+    ],
+    "coverage": [
+      "FigA.1.8"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.1｜ett2/D/short",
+    "page": 20,
+    "locator": "FigA.1.9",
+    "asset": "assets/display_A_1_9.png",
+    "rectangles": [
+      [
+        68.694,
+        500.934,
+        298.506,
+        565.893
+      ]
+    ],
+    "pixels": [
+      690,
+      196
+    ],
+    "paras": [
+      "历史含突出的异常峰与水平变化，未来橙线留在近期较低水平附近。",
+      "灰带越往后越宽，真实未来的急剧下探并未完全由点预测重现。"
+    ],
+    "coverage": [
+      "FigA.1.9"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.1｜m4_monthly/short",
+    "page": 20,
+    "locator": "FigA.1.10",
+    "asset": "assets/display_A_1_10.png",
+    "rectangles": [
+      [
+        312.245,
+        500.934,
+        542.057,
+        565.893
+      ]
+    ],
+    "pixels": [
+      691,
+      196
+    ],
+    "paras": [
+      "月频序列在历史末端频繁波动，橙色未来预测也显示明显起伏。",
+      "该图不存在像m4_hourly一样规则的单一周期，应逐点查看峰谷而非只看平均水平。"
+    ],
+    "coverage": [
+      "FigA.1.10"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.1｜restaurant/short",
+    "page": 20,
+    "locator": "FigA.1.11",
+    "asset": "assets/display_A_1_11.png",
+    "rectangles": [
+      [
+        68.694,
+        571.514,
+        298.506,
+        636.473
+      ]
+    ],
+    "pixels": [
+      690,
+      196
+    ],
+    "paras": [
+      "餐饮序列长期包含密集尖峰，未来预测保留重复波动。",
+      "尖峰高度变化较大；一次短窗口内的重合不能推广为稳定覆盖每次需求峰。"
+    ],
+    "coverage": [
+      "FigA.1.11"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.1｜solar/D/short",
+    "page": 20,
+    "locator": "FigA.1.12",
+    "asset": "assets/display_A_1_12.png",
+    "rectangles": [
+      [
+        312.245,
+        571.514,
+        542.057,
+        636.473
+      ]
+    ],
+    "pixels": [
+      691,
+      196
+    ],
+    "paras": [
+      "日频太阳能在历史中段较高、末端下降，橙线未来较平。",
+      "未来蓝线有明显下降与反弹，预测区间随距离增大而变宽。"
+    ],
+    "coverage": [
+      "FigA.1.12"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.1｜M_DENSE/D/short",
+    "page": 20,
+    "locator": "FigA.1.13",
+    "asset": "assets/display_A_1_13.png",
+    "rectangles": [
+      [
+        68.694,
+        642.095,
+        298.506,
+        707.054
+      ]
+    ],
+    "pixels": [
+      690,
+      196
+    ],
+    "paras": [
+      "交通序列含周期性低谷与局部水平突变，未来橙线延续近期重复模式。",
+      "历史结构变化提醒我们，季节预测的条件是最近上下文仍能代表未来。"
+    ],
+    "coverage": [
+      "FigA.1.13"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.1｜SZ_TAXI/15T/short",
+    "page": 20,
+    "locator": "FigA.1.14",
+    "asset": "assets/display_A_1_14.png",
+    "rectangles": [
+      [
+        312.245,
+        642.095,
+        542.057,
+        707.054
+      ]
+    ],
+    "pixels": [
+      691,
+      196
+    ],
+    "paras": [
+      "出租车序列在较早位置发生明显水平下移，预测窗口接近较低的新水平。",
+      "未来橙线有短周期波动；模型并未把早期高水平整体延续到未来。"
+    ],
+    "coverage": [
+      "FigA.1.14"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.2｜中期预测的8个实例",
+    "page": 21,
+    "locator": "FigA.2",
+    "asset": "assets/display_A_2.png",
+    "rectangles": [
+      [
+        68.694,
+        82.448,
+        542.057,
+        396.625
+      ]
+    ],
+    "pixels": [
+      1421,
+      943
+    ],
+    "paras": [
+      "8个中期面板全貌，后续保留并说明原图中的重复标题。"
+    ],
+    "coverage": [
+      "FigA.2"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图A.2｜bizitobs_l2c/H/medium",
+    "page": 21,
+    "locator": "FigA.2.1",
+    "asset": "assets/display_A_2_1.png",
+    "rectangles": [
+      [
+        68.694,
+        82.448,
+        298.506,
+        151.155
+      ]
+    ],
+    "pixels": [
+      690,
+      207
+    ],
+    "paras": [
+      "小时L2C曲线呈周期性抬升与重置，未来橙线延续这一锯齿式模式。",
+      "历史中有个别尖峰，预测未把它当作每周期必然发生的事件。",
+      "中期图含两个L2C面板（原图重复）、两个BizITObs脉冲面板、两个天气频率面板，以及KDD空气质量和深圳出租车。"
+    ],
+    "coverage": [
+      "FigA.2.1"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.2｜bizitobs_l2c/H/medium（右上）",
+    "page": 21,
+    "locator": "FigA.2.2",
+    "asset": "assets/display_A_2_2.png",
+    "rectangles": [
+      [
+        312.245,
+        82.448,
+        542.057,
+        151.155
+      ]
+    ],
+    "pixels": [
+      691,
+      207
+    ],
+    "paras": [
+      "原图左右首面板均标为bizitobs_l2c/H/medium，轨迹也高度相似；此处保留原图，不虚构第二种频率。",
+      "未来段延续周期抬升与重置，灰带较历史轨迹宽。重复面板不能当成两份独立成功证据。",
+      "比短期图更应关注灰带随预测距离的变化，以及未来峰谷的幅度与相位。"
+    ],
+    "coverage": [
+      "FigA.2.2"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.2｜bizitobs_application/medium",
+    "page": 21,
+    "locator": "FigA.2.3",
+    "asset": "assets/display_A_2_3.png",
+    "rectangles": [
+      [
+        68.694,
+        153.028,
+        298.506,
+        221.735
+      ]
+    ],
+    "pixels": [
+      690,
+      207
+    ],
+    "paras": [
+      "应用监控序列反复出现窄而高的脉冲，橙线对未来脉冲时间有明确预期。",
+      "大部分非峰值时段接近较低平台；只评估平台可能掩盖峰值偏差。"
+    ],
+    "coverage": [
+      "FigA.2.3"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.2｜bizitobs_service/medium",
+    "page": 21,
+    "locator": "FigA.2.4",
+    "asset": "assets/display_A_2_4.png",
+    "rectangles": [
+      [
+        312.245,
+        153.028,
+        542.057,
+        221.735
+      ]
+    ],
+    "pixels": [
+      691,
+      207
+    ],
+    "paras": [
+      "服务监控同样呈尖脉冲，但纵轴量级与应用任务不同。",
+      "未来尖峰附近的不确定性较显著，不宜把两个任务的绝对误差直接比较。"
+    ],
+    "coverage": [
+      "FigA.2.4"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.2｜jena_weather/H/medium",
+    "page": 21,
+    "locator": "FigA.2.5",
+    "asset": "assets/display_A_2_5.png",
+    "rectangles": [
+      [
+        68.694,
+        223.609,
+        298.506,
+        292.315
+      ]
+    ],
+    "pixels": [
+      690,
+      207
+    ],
+    "paras": [
+      "小时天气未来先降低后回升，橙线主要描述较平滑的局部变化。",
+      "灰带包含高频波动的不确定性，点预测不是逐点复制天气噪声。"
+    ],
+    "coverage": [
+      "FigA.2.5"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.2｜jena_weather/10T/medium",
+    "page": 21,
+    "locator": "FigA.2.6",
+    "asset": "assets/display_A_2_6.png",
+    "rectangles": [
+      [
+        312.245,
+        223.609,
+        542.057,
+        292.315
+      ]
+    ],
+    "pixels": [
+      691,
+      207
+    ],
+    "paras": [
+      "10分钟天气序列的未来窗口相对整段历史较短，橙色预测集中在末端。",
+      "高采样频率不等同于更长的日历预测跨度，应同时读频率与横轴日期。"
+    ],
+    "coverage": [
+      "FigA.2.6"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.2｜kdd_cup_2018_with_missing/H/medium",
+    "page": 21,
+    "locator": "FigA.2.7",
+    "asset": "assets/display_A_2_7.png",
+    "rectangles": [
+      [
+        68.694,
+        294.189,
+        298.506,
+        362.896
+      ]
+    ],
+    "pixels": [
+      690,
+      207
+    ],
+    "paras": [
+      "历史大部分值较低但夹杂高尖峰，未来预测也围绕低水平而非历史最大值。",
+      "该标题含with_missing，图中未显示缺失值处理细节，不能从曲线推断插补方法。"
+    ],
+    "coverage": [
+      "FigA.2.7"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.2｜SZ_TAXI/15T/medium",
+    "page": 21,
+    "locator": "FigA.2.8",
+    "asset": "assets/display_A_2_8.png",
+    "rectangles": [
+      [
+        312.245,
+        294.189,
+        542.057,
+        362.896
+      ]
+    ],
+    "pixels": [
+      691,
+      207
+    ],
+    "paras": [
+      "在较低新水平上预测重复波动，未来灰带明显拓宽。",
+      "点预测较平稳，没有回到历史前半段的高平台。"
+    ],
+    "coverage": [
+      "FigA.2.8"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.3｜长期预测的6个实例",
+    "page": 21,
+    "locator": "FigA.3",
+    "asset": "assets/display_A_3.png",
+    "rectangles": [
+      [
+        68.694,
+        482.82,
+        542.057,
+        715.798
+      ]
+    ],
+    "pixels": [
+      1421,
+      700
+    ],
+    "paras": [
+      "6个长期预测实例全貌，后续逐个面板检查。"
+    ],
+    "coverage": [
+      "FigA.3"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图A.3｜bizitobs_application/long",
+    "page": 21,
+    "locator": "FigA.3.1",
+    "asset": "assets/display_A_3_1.png",
+    "rectangles": [
+      [
+        68.694,
+        482.82,
+        298.506,
+        549.028
+      ]
+    ],
+    "pixels": [
+      690,
+      200
+    ],
+    "paras": [
+      "长期未来仍出现规则窄脉冲，预测试图延续其时序结构。",
+      "应同时检查尖峰时刻及峰高；平台附近的重合无法说明尖峰预测完全正确。",
+      "长期图包括监控、能源、天气和交通实例；重复模式仍可见，但预测区间更长。"
+    ],
+    "coverage": [
+      "FigA.3.1"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.3｜bizitobs_l2c/H/long",
+    "page": 21,
+    "locator": "FigA.3.2",
+    "asset": "assets/display_A_3_2.png",
+    "rectangles": [
+      [
+        312.245,
+        482.82,
+        542.057,
+        549.028
+      ]
+    ],
+    "pixels": [
+      691,
+      200
+    ],
+    "paras": [
+      "未来段保留周期起落，但橙色轨迹较历史锯齿平滑。",
+      "灰带随长期窗口扩大，周期形状与幅值的不确定性同时增加。",
+      "不确定性随距离扩张并不保证实际校准，校准需要跨实例统计而非单图观感。"
+    ],
+    "coverage": [
+      "FigA.3.2"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.3｜ett2/H/long",
+    "page": 21,
+    "locator": "FigA.3.3",
+    "asset": "assets/display_A_3_3.png",
+    "rectangles": [
+      [
+        68.694,
+        553.401,
+        298.506,
+        619.609
+      ]
+    ],
+    "pixels": [
+      690,
+      199
+    ],
+    "paras": [
+      "小时能源序列在未来保持近期较低水平，橙线的波动幅度较小。",
+      "此前历史异常峰并未在每个未来周期机械重复。"
+    ],
+    "coverage": [
+      "FigA.3.3"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.3｜jena_weather/H/long",
+    "page": 21,
+    "locator": "FigA.3.4",
+    "asset": "assets/display_A_3_4.png",
+    "rectangles": [
+      [
+        312.245,
+        553.401,
+        542.057,
+        619.609
+      ]
+    ],
+    "pixels": [
+      691,
+      199
+    ],
+    "paras": [
+      "橙线在预测段附近较平滑，未来蓝线继续快速起伏。",
+      "长窗口中灰带显著扩张，应区分点预测与具体天气轨迹。"
+    ],
+    "coverage": [
+      "FigA.3.4"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.3｜SZ_TAXI/15T/long",
+    "page": 21,
+    "locator": "FigA.3.5",
+    "asset": "assets/display_A_3_5.png",
+    "rectangles": [
+      [
+        68.694,
+        623.981,
+        298.506,
+        690.189
+      ]
+    ],
+    "pixels": [
+      690,
+      200
+    ],
+    "paras": [
+      "长期预测围绕近期低平台并带有重复波动。",
+      "灰色区间覆盖较宽的未来可能范围，但图中不能读出严格的经验覆盖率。"
+    ],
+    "coverage": [
+      "FigA.3.5"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.3｜electricity/H/long",
+    "page": 21,
+    "locator": "FigA.3.6",
+    "asset": "assets/display_A_3_6.png",
+    "rectangles": [
+      [
+        312.245,
+        623.981,
+        542.057,
+        690.189
+      ]
+    ],
+    "pixels": [
+      691,
+      200
+    ],
+    "paras": [
+      "电力曲线在历史中有长时间低负荷和高负荷阶段，未来预测处于末端较活跃的阶段。",
+      "这种状态切换不能仅靠规则季节模式解释，单例展示了上下文选择的重要性。"
+    ],
+    "coverage": [
+      "FigA.3.6"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表2｜fev-bench的28项任务",
+    "page": 22,
+    "locator": "Table2",
+    "asset": "assets/display_Table2.png",
+    "rectangles": [
+      [
+        69.318,
+        274.202,
+        542.057,
+        652.713
+      ]
+    ],
+    "pixels": [
+      1420,
+      1137
+    ],
+    "paras": [
+      "fev-bench的28项任务全表，后续按原序号逐组放大。"
+    ],
+    "coverage": [
+      "Table2"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "表2｜第1–7项：能源、订单与销售",
+    "page": 22,
+    "locator": "Table2.rows1-7",
+    "asset": "assets/display_Table2_rows1-7.png",
+    "rectangles": [
+      [
+        234.808,
+        275.451,
+        377.816,
+        294.814
+      ],
+      [
+        234.808,
+        297.312,
+        377.816,
+        374.439
+      ]
+    ],
+    "pixels": [
+      430,
+      304
+    ],
+    "paras": [
+      "第1–3行为proenfo_gfc12、gfc14、gfc17，第4–6行为rohlik订单与销售，第7行为entsoe_15T。",
+      "1D与1W等后缀区分时间聚合频率；同一业务来源的多个任务不能合并成一条结果。",
+      "表列出用于协变量条件预测的28个任务，序号连续；名称中的后缀区分采样频率。"
+    ],
+    "coverage": [
+      "Table2.row1",
+      "Table2.row2",
+      "Table2.row3",
+      "Table2.row4",
+      "Table2.row5",
+      "Table2.row6",
+      "Table2.row7"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表2｜第8–14项：电力与价格",
+    "page": 22,
+    "locator": "Table2.rows8-14",
+    "asset": "assets/display_Table2_rows8-14.png",
+    "rectangles": [
+      [
+        234.808,
+        275.451,
+        377.816,
+        294.814
+      ],
+      [
+        234.808,
+        374.176,
+        377.816,
+        451.303
+      ]
+    ],
+    "pixels": [
+      430,
+      303
+    ],
+    "paras": [
+      "第8–9行为entsoe的30T和1H，第10–14行为epf_be、epf_de、epf_fr、epf_np、epf_pjm。",
+      "任务名对应不同电力市场或时间尺度；清单本身没有给出使用协变量的数量。",
+      "该表只是任务清单，不包含每项任务的误差、序列数或协变量数量，不能据此推断这些未报告信息。"
+    ],
+    "coverage": [
+      "Table2.row8",
+      "Table2.row9",
+      "Table2.row10",
+      "Table2.row11",
+      "Table2.row12",
+      "Table2.row13",
+      "Table2.row14"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表2｜第15–21项：零售与物流",
+    "page": 22,
+    "locator": "Table2.rows15-21",
+    "asset": "assets/display_Table2_rows15-21.png",
+    "rectangles": [
+      [
+        234.808,
+        275.451,
+        377.816,
+        294.814
+      ],
+      [
+        234.808,
+        451.04,
+        377.816,
+        528.167
+      ]
+    ],
+    "pixels": [
+      430,
+      303
+    ],
+    "paras": [
+      "第15–21行为rossmann两种频率、hermes、walmart、m5两种频率与favorita_stores_1D。",
+      "同类零售任务仍可能有不同预测目标和频率，图4.2是它们与其他任务的汇总结果。"
+    ],
+    "coverage": [
+      "Table2.row15",
+      "Table2.row16",
+      "Table2.row17",
+      "Table2.row18",
+      "Table2.row19",
+      "Table2.row20",
+      "Table2.row21"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "表2｜第22–28项：门店、太阳能与空气质量",
+    "page": 22,
+    "locator": "Table2.rows22-28",
+    "asset": "assets/display_Table2_rows22-28.png",
+    "rectangles": [
+      [
+        234.808,
+        275.451,
+        377.816,
+        294.814
+      ],
+      [
+        234.808,
+        527.904,
+        377.816,
+        605.031
+      ]
+    ],
+    "pixels": [
+      430,
+      304
+    ],
+    "paras": [
+      "第22–28行包括favorita门店与交易、带天气的太阳能，以及uci_air_quality两种频率。",
+      "solar_with_weather任务名提示有天气信息，但未来协变量是否可用由实验筛选协议保证，不能仅凭名字推定。"
+    ],
+    "coverage": [
+      "Table2.row22",
+      "Table2.row23",
+      "Table2.row24",
+      "Table2.row25",
+      "Table2.row26",
+      "Table2.row27",
+      "Table2.row28"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.4｜1–64阶谐波重建",
+    "page": 23,
+    "locator": "FigA.4",
+    "asset": "assets/display_A_4.png",
+    "rectangles": [
+      [
+        69.318,
+        108.057,
+        542.057,
+        518.423
+      ]
+    ],
+    "pixels": [
+      1420,
+      1232
+    ],
+    "paras": [
+      "1–64阶谐波重建全貌，后续连续分组放大每条曲线。"
+    ],
+    "coverage": [
+      "FigA.4"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图A.4｜谐波n=1–8",
+    "page": 23,
+    "locator": "FigA.4.n1-8",
+    "asset": "assets/display_A_4_n1-8.png",
+    "rectangles": [
+      [
+        69.318,
+        389.783,
+        518.327,
+        436.977
+      ],
+      [
+        518.327,
+        394.126,
+        542.057,
+        432.227
+      ],
+      [
+        69.318,
+        442.221,
+        542.057,
+        460.959
+      ]
+    ],
+    "pixels": [
+      1420,
+      211
+    ],
+    "paras": [
+      "本组完整保留第1至第8阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "低频曲线的预测段保持平滑振荡，与灰色参考形状较一致。",
+      "输入为sin(t)和cos(t)，下至上依次显示1–64阶正弦信号，竖线分开历史和预测。"
+    ],
+    "coverage": [
+      "FigA.4.n1",
+      "FigA.4.n2",
+      "FigA.4.n3",
+      "FigA.4.n4",
+      "FigA.4.n5",
+      "FigA.4.n6",
+      "FigA.4.n7",
+      "FigA.4.n8"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.4｜谐波n=9–16",
+    "page": 23,
+    "locator": "FigA.4.n9-16",
+    "asset": "assets/display_A_4_n9-16.png",
+    "rectangles": [
+      [
+        69.318,
+        351.552,
+        518.327,
+        398.746
+      ],
+      [
+        518.327,
+        356.025,
+        542.057,
+        394.126
+      ],
+      [
+        69.318,
+        442.221,
+        542.057,
+        460.959
+      ]
+    ],
+    "pixels": [
+      1420,
+      212
+    ],
+    "paras": [
+      "本组完整保留第9至第16阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "低频曲线的预测段保持平滑振荡，与灰色参考形状较一致。",
+      "低中频重建较好，高频逐渐出现误差；频率越高，相邻相位越难在有限采样密度下区分。"
+    ],
+    "coverage": [
+      "FigA.4.n9",
+      "FigA.4.n10",
+      "FigA.4.n11",
+      "FigA.4.n12",
+      "FigA.4.n13",
+      "FigA.4.n14",
+      "FigA.4.n15",
+      "FigA.4.n16"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.4｜谐波n=17–24",
+    "page": 23,
+    "locator": "FigA.4.n17-24",
+    "asset": "assets/display_A_4_n17-24.png",
+    "rectangles": [
+      [
+        69.318,
+        313.32,
+        518.327,
+        360.514
+      ],
+      [
+        518.327,
+        317.924,
+        542.057,
+        356.025
+      ],
+      [
+        69.318,
+        442.221,
+        542.057,
+        460.959
+      ]
+    ],
+    "pixels": [
+      1420,
+      212
+    ],
+    "paras": [
+      "本组完整保留第17至第24阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "低频曲线的预测段保持平滑振荡，与灰色参考形状较一致。"
+    ],
+    "coverage": [
+      "FigA.4.n17",
+      "FigA.4.n18",
+      "FigA.4.n19",
+      "FigA.4.n20",
+      "FigA.4.n21",
+      "FigA.4.n22",
+      "FigA.4.n23",
+      "FigA.4.n24"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.4｜谐波n=25–32",
+    "page": 23,
+    "locator": "FigA.4.n25-32",
+    "asset": "assets/display_A_4_n25-32.png",
+    "rectangles": [
+      [
+        69.318,
+        275.089,
+        518.327,
+        322.283
+      ],
+      [
+        518.327,
+        279.199,
+        542.057,
+        317.924
+      ],
+      [
+        69.318,
+        442.221,
+        542.057,
+        460.959
+      ]
+    ],
+    "pixels": [
+      1420,
+      211
+    ],
+    "paras": [
+      "本组完整保留第25至第32阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "随着频率增加，预测段的周期更密，局部峰谷形状出现偏离；定量误差应结合图A.5，而非从线宽估算。"
+    ],
+    "coverage": [
+      "FigA.4.n25",
+      "FigA.4.n26",
+      "FigA.4.n27",
+      "FigA.4.n28",
+      "FigA.4.n29",
+      "FigA.4.n30",
+      "FigA.4.n31",
+      "FigA.4.n32"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.4｜谐波n=33–40",
+    "page": 23,
+    "locator": "FigA.4.n33-40",
+    "asset": "assets/display_A_4_n33-40.png",
+    "rectangles": [
+      [
+        69.318,
+        236.858,
+        518.327,
+        284.051
+      ],
+      [
+        518.327,
+        241.098,
+        542.057,
+        279.199
+      ],
+      [
+        69.318,
+        442.221,
+        542.057,
+        460.959
+      ]
+    ],
+    "pixels": [
+      1420,
+      212
+    ],
+    "paras": [
+      "本组完整保留第33至第40阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "随着频率增加，预测段的周期更密，局部峰谷形状出现偏离；定量误差应结合图A.5，而非从线宽估算。"
+    ],
+    "coverage": [
+      "FigA.4.n33",
+      "FigA.4.n34",
+      "FigA.4.n35",
+      "FigA.4.n36",
+      "FigA.4.n37",
+      "FigA.4.n38",
+      "FigA.4.n39",
+      "FigA.4.n40"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.4｜谐波n=41–48",
+    "page": 23,
+    "locator": "FigA.4.n41-48",
+    "asset": "assets/display_A_4_n41-48.png",
+    "rectangles": [
+      [
+        69.318,
+        198.626,
+        518.327,
+        245.82
+      ],
+      [
+        518.327,
+        202.997,
+        542.057,
+        241.098
+      ],
+      [
+        69.318,
+        442.221,
+        542.057,
+        460.959
+      ]
+    ],
+    "pixels": [
+      1420,
+      212
+    ],
+    "paras": [
+      "本组完整保留第41至第48阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "随着频率增加，预测段的周期更密，局部峰谷形状出现偏离；定量误差应结合图A.5，而非从线宽估算。"
+    ],
+    "coverage": [
+      "FigA.4.n41",
+      "FigA.4.n42",
+      "FigA.4.n43",
+      "FigA.4.n44",
+      "FigA.4.n45",
+      "FigA.4.n46",
+      "FigA.4.n47",
+      "FigA.4.n48"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.4｜谐波n=49–56",
+    "page": 23,
+    "locator": "FigA.4.n49-56",
+    "asset": "assets/display_A_4_n49-56.png",
+    "rectangles": [
+      [
+        69.318,
+        160.395,
+        518.327,
+        207.589
+      ],
+      [
+        518.327,
+        164.896,
+        542.057,
+        202.997
+      ],
+      [
+        69.318,
+        442.221,
+        542.057,
+        460.959
+      ]
+    ],
+    "pixels": [
+      1420,
+      211
+    ],
+    "paras": [
+      "本组完整保留第49至第56阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "随着频率增加，预测段的周期更密，局部峰谷形状出现偏离；定量误差应结合图A.5，而非从线宽估算。"
+    ],
+    "coverage": [
+      "FigA.4.n49",
+      "FigA.4.n50",
+      "FigA.4.n51",
+      "FigA.4.n52",
+      "FigA.4.n53",
+      "FigA.4.n54",
+      "FigA.4.n55",
+      "FigA.4.n56"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.4｜谐波n=57–64",
+    "page": 23,
+    "locator": "FigA.4.n57-64",
+    "asset": "assets/display_A_4_n57-64.png",
+    "rectangles": [
+      [
+        69.318,
+        122.164,
+        518.327,
+        169.357
+      ],
+      [
+        518.327,
+        126.795,
+        542.057,
+        164.896
+      ],
+      [
+        69.318,
+        442.221,
+        542.057,
+        460.959
+      ]
+    ],
+    "pixels": [
+      1420,
+      212
+    ],
+    "paras": [
+      "本组完整保留第57至第64阶曲线及右侧频率标签，所有曲线沿用原来的训练/测试分界。",
+      "随着频率增加，预测段的周期更密，局部峰谷形状出现偏离；定量误差应结合图A.5，而非从线宽估算。"
+    ],
+    "coverage": [
+      "FigA.4.n57",
+      "FigA.4.n58",
+      "FigA.4.n59",
+      "FigA.4.n60",
+      "FigA.4.n61",
+      "FigA.4.n62",
+      "FigA.4.n63",
+      "FigA.4.n64"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.5｜对称平均绝对百分比误差（sMAPE）",
+    "page": 23,
+    "locator": "FigA.5",
+    "asset": "assets/display_A_5.png",
+    "rectangles": [
+      [
+        68.694,
+        540.284,
+        542.057,
+        728.915
+      ]
+    ],
+    "pixels": [
+      1421,
+      567
+    ],
+    "paras": [
+      "64个频率的sMAPE全貌，后续分组读取误差和5%阈值。"
+    ],
+    "coverage": [
+      "FigA.5"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图A.5｜频率1–16的误差",
+    "page": 23,
+    "locator": "FigA.5.n1-16",
+    "asset": "assets/display_A_5_n1-16.png",
+    "rectangles": [
+      [
+        68.694,
+        540.284,
+        93.673,
+        674.574
+      ],
+      [
+        93.673,
+        540.284,
+        221.85,
+        674.574
+      ],
+      [
+        256.665,
+        674.574,
+        374.694,
+        687.066
+      ]
+    ],
+    "pixels": [
+      461,
+      455
+    ],
+    "paras": [
+      "重点读取第1–16阶；边缘保留相邻完整柱作参照，避免截断倾斜刻度。原纵轴拼接在左侧，未改变柱高。",
+      "这一组大多处于5%阈值下方，误差较低。正弦过零点附近相对误差敏感，原文未给出零分母实现。",
+      "横轴为谐波频率倍数，纵轴为sMAPE百分比，红虚线标出5%阈值。"
+    ],
+    "coverage": [
+      "FigA.5.n1",
+      "FigA.5.n2",
+      "FigA.5.n3",
+      "FigA.5.n4",
+      "FigA.5.n5",
+      "FigA.5.n6",
+      "FigA.5.n7",
+      "FigA.5.n8",
+      "FigA.5.n9",
+      "FigA.5.n10",
+      "FigA.5.n11",
+      "FigA.5.n12",
+      "FigA.5.n13",
+      "FigA.5.n14",
+      "FigA.5.n15",
+      "FigA.5.n16"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.5｜频率17–32的误差",
+    "page": 23,
+    "locator": "FigA.5.n17-32",
+    "asset": "assets/display_A_5_n17-32.png",
+    "rectangles": [
+      [
+        68.694,
+        540.284,
+        93.673,
+        674.574
+      ],
+      [
+        207.442,
+        540.284,
+        323.256,
+        674.574
+      ],
+      [
+        256.665,
+        674.574,
+        374.694,
+        687.066
+      ]
+    ],
+    "pixels": [
+      424,
+      455
+    ],
+    "paras": [
+      "重点读取第17–32阶；边缘保留相邻完整柱作参照，避免截断倾斜刻度。原纵轴拼接在左侧，未改变柱高。",
+      "应逐柱比较与5%红虚线的位置；误差随频率的变化有局部起伏，不是每增一阶都更差。",
+      "误差总体随频率升高而增大，但不是严格单调；高频端存在显著波动，不能据此宣称一个普适的硬截止频率。"
+    ],
+    "coverage": [
+      "FigA.5.n17",
+      "FigA.5.n18",
+      "FigA.5.n19",
+      "FigA.5.n20",
+      "FigA.5.n21",
+      "FigA.5.n22",
+      "FigA.5.n23",
+      "FigA.5.n24",
+      "FigA.5.n25",
+      "FigA.5.n26",
+      "FigA.5.n27",
+      "FigA.5.n28",
+      "FigA.5.n29",
+      "FigA.5.n30",
+      "FigA.5.n31",
+      "FigA.5.n32"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.5｜频率33–48的误差",
+    "page": 23,
+    "locator": "FigA.5.n33-48",
+    "asset": "assets/display_A_5_n33-48.png",
+    "rectangles": [
+      [
+        68.694,
+        540.284,
+        93.673,
+        674.574
+      ],
+      [
+        302.8,
+        540.284,
+        424.661,
+        674.574
+      ],
+      [
+        256.665,
+        674.574,
+        374.694,
+        687.066
+      ]
+    ],
+    "pixels": [
+      454,
+      479
+    ],
+    "paras": [
+      "重点读取第33–48阶；边缘保留相邻完整柱作参照，避免截断倾斜刻度。原纵轴拼接在左侧，未改变柱高。",
+      "应逐柱比较与5%红虚线的位置；误差随频率的变化有局部起伏，不是每增一阶都更差。"
+    ],
+    "coverage": [
+      "FigA.5.n33",
+      "FigA.5.n34",
+      "FigA.5.n35",
+      "FigA.5.n36",
+      "FigA.5.n37",
+      "FigA.5.n38",
+      "FigA.5.n39",
+      "FigA.5.n40",
+      "FigA.5.n41",
+      "FigA.5.n42",
+      "FigA.5.n43",
+      "FigA.5.n44",
+      "FigA.5.n45",
+      "FigA.5.n46",
+      "FigA.5.n47",
+      "FigA.5.n48"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.5｜频率49–64的误差",
+    "page": 23,
+    "locator": "FigA.5.n49-64",
+    "asset": "assets/display_A_5_n49-64.png",
+    "rectangles": [
+      [
+        68.694,
+        540.284,
+        93.673,
+        674.574
+      ],
+      [
+        410.253,
+        540.284,
+        519.728,
+        674.574
+      ],
+      [
+        256.665,
+        674.574,
+        374.694,
+        687.066
+      ]
+    ],
+    "pixels": [
+      406,
+      455
+    ],
+    "paras": [
+      "重点读取第49–64阶；边缘保留相邻完整柱作参照，避免截断倾斜刻度。原纵轴拼接在左侧，未改变柱高。",
+      "应逐柱比较与5%红虚线的位置；误差随频率的变化有局部起伏，不是每增一阶都更差。"
+    ],
+    "coverage": [
+      "FigA.5.n49",
+      "FigA.5.n50",
+      "FigA.5.n51",
+      "FigA.5.n52",
+      "FigA.5.n53",
+      "FigA.5.n54",
+      "FigA.5.n55",
+      "FigA.5.n56",
+      "FigA.5.n57",
+      "FigA.5.n58",
+      "FigA.5.n59",
+      "FigA.5.n60",
+      "FigA.5.n61",
+      "FigA.5.n62",
+      "FigA.5.n63",
+      "FigA.5.n64"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.6｜复合正弦波的重建",
+    "page": 24,
+    "locator": "FigA.6",
+    "asset": "assets/display_A_6.png",
+    "rectangles": [
+      [
+        69.943,
+        81.199,
+        542.057,
+        282.946
+      ]
+    ],
+    "pixels": [
+      1418,
+      606
+    ],
+    "paras": [
+      "十条复合正弦波及完整图例，后续两条一组放大。"
+    ],
+    "coverage": [
+      "FigA.6"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图A.6｜复合波1–2",
+    "page": 24,
+    "locator": "FigA.6.wave1-2",
+    "asset": "assets/display_A_6_wave1-2.png",
+    "rectangles": [
+      [
+        183.6,
+        178.95,
+        540.808,
+        206.744
+      ],
+      [
+        183.6,
+        207.994,
+        540.808,
+        225.483
+      ],
+      [
+        87.429,
+        138.662,
+        182.976,
+        209.243
+      ]
+    ],
+    "pixels": [
+      1073,
+      376
+    ],
+    "paras": [
+      "第1条含9个分量，第2条含8个分量；两条的起伏不只是单一正弦。",
+      "放大部分历史与完整预测段，主图和时间轴均从同一横坐标裁取。图例另外完整保留；未来彩线延续多频率组合，不能由重合度推断零误差。",
+      "十条复合信号各由3–10个随机频率、幅度和相位的正弦分量相加形成；左下角图例给出每条的分量数。"
+    ],
+    "coverage": [
+      "FigA.6.wave1",
+      "FigA.6.wave2"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.6｜复合波3–4",
+    "page": 24,
+    "locator": "FigA.6.wave3-4",
+    "asset": "assets/display_A_6_wave3-4.png",
+    "rectangles": [
+      [
+        183.6,
+        155.839,
+        540.808,
+        183.634
+      ],
+      [
+        183.6,
+        207.994,
+        540.808,
+        225.483
+      ],
+      [
+        87.429,
+        138.662,
+        182.976,
+        209.243
+      ]
+    ],
+    "pixels": [
+      1073,
+      375
+    ],
+    "paras": [
+      "第3条含8个分量，第4条含3个分量；两条起伏都由多个正弦叠加，不是单一正弦。",
+      "放大部分历史与完整预测段，主图和时间轴均从同一横坐标裁取。图例另外完整保留；未来彩线延续多频率组合，不能由重合度推断零误差。",
+      "正余弦时间表示支持重建较复杂的波形，未来彩线能继续多频率组合；该实验仍属于合成信号。"
+    ],
+    "coverage": [
+      "FigA.6.wave3",
+      "FigA.6.wave4"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.6｜复合波5–6",
+    "page": 24,
+    "locator": "FigA.6.wave5-6",
+    "asset": "assets/display_A_6_wave5-6.png",
+    "rectangles": [
+      [
+        183.6,
+        132.729,
+        540.808,
+        160.524
+      ],
+      [
+        183.6,
+        207.994,
+        540.808,
+        225.483
+      ],
+      [
+        87.429,
+        138.662,
+        182.976,
+        209.243
+      ]
+    ],
+    "pixels": [
+      1073,
+      375
+    ],
+    "paras": [
+      "第5条含4个分量，第6条含3个分量；两条的起伏不只是单一正弦。",
+      "放大部分历史与完整预测段，主图和时间轴均从同一横坐标裁取。图例另外完整保留；未来彩线延续多频率组合，不能由重合度推断零误差。"
+    ],
+    "coverage": [
+      "FigA.6.wave5",
+      "FigA.6.wave6"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.6｜复合波7–8",
+    "page": 24,
+    "locator": "FigA.6.wave7-8",
+    "asset": "assets/display_A_6_wave7-8.png",
+    "rectangles": [
+      [
+        183.6,
+        109.618,
+        540.808,
+        137.413
+      ],
+      [
+        183.6,
+        207.994,
+        540.808,
+        225.483
+      ],
+      [
+        87.429,
+        138.662,
+        182.976,
+        209.243
+      ]
+    ],
+    "pixels": [
+      1073,
+      376
+    ],
+    "paras": [
+      "第7条含9个分量，第8条含3个分量；两条的起伏不只是单一正弦。",
+      "放大部分历史与完整预测段，主图和时间轴均从同一横坐标裁取。图例另外完整保留；未来彩线延续多频率组合，不能由重合度推断零误差。"
+    ],
+    "coverage": [
+      "FigA.6.wave7",
+      "FigA.6.wave8"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.6｜复合波9–10",
+    "page": 24,
+    "locator": "FigA.6.wave9-10",
+    "asset": "assets/display_A_6_wave9-10.png",
+    "rectangles": [
+      [
+        183.6,
+        86.508,
+        540.808,
+        114.303
+      ],
+      [
+        183.6,
+        207.994,
+        540.808,
+        225.483
+      ],
+      [
+        87.429,
+        138.662,
+        182.976,
+        209.243
+      ]
+    ],
+    "pixels": [
+      1073,
+      375
+    ],
+    "paras": [
+      "第9条含7个分量，第10条含7个分量；两条的起伏不只是单一正弦。",
+      "放大部分历史与完整预测段，主图和时间轴均从同一横坐标裁取。图例另外完整保留；未来彩线延续多频率组合，不能由重合度推断零误差。"
+    ],
+    "coverage": [
+      "FigA.6.wave9",
+      "FigA.6.wave10"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.7｜十类合成协变量实验",
+    "page": 25,
+    "locator": "FigA.7",
+    "asset": "assets/display_A_7.png",
+    "rectangles": [
+      [
+        69.318,
+        108.057,
+        542.057,
+        720.17
+      ]
+    ],
+    "pixels": [
+      1420,
+      1837
+    ],
+    "paras": [
+      "十类合成协变量实验全貌，后续逐个目标/协变量面板解读。"
+    ],
+    "coverage": [
+      "FigA.7"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图A.7｜Additive, LinearTrend",
+    "page": 25,
+    "locator": "FigA.7.1",
+    "asset": "assets/display_A_7_1.png",
+    "rectangles": [
+      [
+        79.935,
+        108.057,
+        303.502,
+        202.372
+      ],
+      [
+        126.147,
+        628.353,
+        487.727,
+        648.965
+      ]
+    ],
+    "pixels": [
+      1086,
+      358
+    ],
+    "paras": [
+      "线性下降协变量使目标水平持续下移，但红色预测在未来段趋平。",
+      "加入协变量未恢复持续下降的趋势，模型仍受历史目标范围限制。",
+      "五类协变量分别以加法和乘法与基础信号结合，得到十种合成类别；每格上面是目标，下面是协变量。"
+    ],
+    "coverage": [
+      "FigA.7.1.target",
+      "FigA.7.1.covariate"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.7｜Multiplicative, LinearTrend",
+    "page": 25,
+    "locator": "FigA.7.2",
+    "asset": "assets/display_A_7_2.png",
+    "rectangles": [
+      [
+        315.992,
+        108.057,
+        533.314,
+        202.372
+      ],
+      [
+        126.147,
+        628.353,
+        487.727,
+        648.965
+      ]
+    ],
+    "pixels": [
+      1086,
+      358
+    ],
+    "paras": [
+      "线性趋势调制振幅，未来真值的振荡幅度继续增大。",
+      "红色预测虽保留振荡，却没有完整延续真实振幅增长，符合图5.4中线性趋势获益不足。",
+      "蓝线为真值、红线为使用协变量的预测、绿线为未使用协变量的预测，阴影为不确定性。线性趋势类仍暴露外推限制。"
+    ],
+    "coverage": [
+      "FigA.7.2.target",
+      "FigA.7.2.covariate"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.7｜Additive, Pulses",
+    "page": 25,
+    "locator": "FigA.7.3",
+    "asset": "assets/display_A_7_3.png",
+    "rectangles": [
+      [
+        79.935,
+        210.492,
+        303.502,
+        304.808
+      ],
+      [
+        126.147,
+        628.353,
+        487.727,
+        648.965
+      ]
+    ],
+    "pixels": [
+      1086,
+      358
+    ],
+    "paras": [
+      "下方窄脉冲与目标中的向上尖峰对应；红色预测在未来脉冲时刻出现尖峰。",
+      "绿色预测对外部触发峰的响应较弱，已知协变量提供了峰出现的时间线索。"
+    ],
+    "coverage": [
+      "FigA.7.3.target",
+      "FigA.7.3.covariate"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.7｜Multiplicative, Pulses",
+    "page": 25,
+    "locator": "FigA.7.4",
+    "asset": "assets/display_A_7_4.png",
+    "rectangles": [
+      [
+        315.992,
+        210.492,
+        533.314,
+        304.808
+      ],
+      [
+        126.147,
+        628.353,
+        487.727,
+        648.965
+      ]
+    ],
+    "pixels": [
+      1086,
+      358
+    ],
+    "paras": [
+      "同样的脉冲经乘法耦合后，可表现为正负方向和幅度各异的尖峰。",
+      "未来红线响应脉冲，收益不只取决于脉冲是否发生，还取决于基础信号当时的相位。"
+    ],
+    "coverage": [
+      "FigA.7.4.target",
+      "FigA.7.4.covariate"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.7｜Additive, Ramps",
+    "page": 25,
+    "locator": "FigA.7.5",
+    "asset": "assets/display_A_7_5.png",
+    "rectangles": [
+      [
+        79.935,
+        312.927,
+        303.502,
+        407.243
+      ],
+      [
+        126.147,
+        628.353,
+        487.727,
+        648.965
+      ]
+    ],
+    "pixels": [
+      1086,
+      358
+    ],
+    "paras": [
+      "下方斜坡累积后重置，上方目标相应抬升后回落。",
+      "红线能追随未来斜坡的水平效应；绿线主要保留原有周期，偏离更明显。"
+    ],
+    "coverage": [
+      "FigA.7.5.target",
+      "FigA.7.5.covariate"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.7｜Multiplicative, Ramps",
+    "page": 25,
+    "locator": "FigA.7.6",
+    "asset": "assets/display_A_7_6.png",
+    "rectangles": [
+      [
+        315.992,
+        312.927,
+        533.314,
+        407.243
+      ],
+      [
+        126.147,
+        628.353,
+        487.727,
+        648.965
+      ]
+    ],
+    "pixels": [
+      1086,
+      358
+    ],
+    "paras": [
+      "斜坡调制目标振幅，而不是简单抬高基线。",
+      "红线随协变量变化调整振荡幅度，绿线对同一变化的响应较弱。"
+    ],
+    "coverage": [
+      "FigA.7.6.target",
+      "FigA.7.6.covariate"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.7｜Additive, RandomWalk",
+    "page": 25,
+    "locator": "FigA.7.7",
+    "asset": "assets/display_A_7_7.png",
+    "rectangles": [
+      [
+        79.935,
+        415.363,
+        303.502,
+        509.678
+      ],
+      [
+        126.147,
+        628.353,
+        487.727,
+        648.965
+      ]
+    ],
+    "pixels": [
+      1086,
+      358
+    ],
+    "paras": [
+      "随机游走带来缓慢变化的基线，未来红线较绿线更贴近蓝色目标。",
+      "图中红色区间仍不窄，使用协变量并不意味着所有不确定性消失。"
+    ],
+    "coverage": [
+      "FigA.7.7.target",
+      "FigA.7.7.covariate"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.7｜Multiplicative, RandomWalk",
+    "page": 25,
+    "locator": "FigA.7.8",
+    "asset": "assets/display_A_7_8.png",
+    "rectangles": [
+      [
+        315.992,
+        415.363,
+        533.314,
+        509.678
+      ],
+      [
+        126.147,
+        628.353,
+        487.727,
+        648.965
+      ]
+    ],
+    "pixels": [
+      1086,
+      358
+    ],
+    "paras": [
+      "随机游走调制未来目标振幅，红色预测保留较大的周期波动。",
+      "绿色预测的幅度与真值存在偏离，协变量信息改变了条件分布。"
+    ],
+    "coverage": [
+      "FigA.7.8.target",
+      "FigA.7.8.covariate"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.7｜Additive, Composite",
+    "page": 25,
+    "locator": "FigA.7.9",
+    "asset": "assets/display_A_7_9.png",
+    "rectangles": [
+      [
+        79.935,
+        517.798,
+        303.502,
+        612.114
+      ],
+      [
+        126.147,
+        628.353,
+        487.727,
+        648.965
+      ]
+    ],
+    "pixels": [
+      1086,
+      358
+    ],
+    "paras": [
+      "多个协变量以加法组合，未来红线较好跟随真值的细节变化。",
+      "下方保留多条协变量曲线，不能把该面板解释成只含一个驱动因素。"
+    ],
+    "coverage": [
+      "FigA.7.9.target",
+      "FigA.7.9.covariate"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.7｜Multiplicative, Composite",
+    "page": 25,
+    "locator": "FigA.7.10",
+    "asset": "assets/display_A_7_10.png",
+    "rectangles": [
+      [
+        315.992,
+        517.798,
+        533.314,
+        612.114
+      ],
+      [
+        126.147,
+        628.353,
+        487.727,
+        648.965
+      ]
+    ],
+    "pixels": [
+      1086,
+      358
+    ],
+    "paras": [
+      "多变量组合以乘法影响目标，未来波形与加法面板明显不同。",
+      "红线较好保留未来起伏，绿色预测仍有幅度或相位偏差；效果需与图5.4的分布一起读。"
+    ],
+    "coverage": [
+      "FigA.7.10.target",
+      "FigA.7.10.covariate"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.8｜上下文长度与误差",
+    "page": 26,
+    "locator": "FigA.8",
+    "asset": "assets/display_A_8.png",
+    "rectangles": [
+      [
+        69.943,
+        159.899,
+        542.057,
+        339.785
+      ]
+    ],
+    "pixels": [
+      1418,
+      541
+    ],
+    "paras": [
+      "四种上下文长度全貌，后续分别检查WQL和MASE。"
+    ],
+    "coverage": [
+      "FigA.8"
+    ],
+    "figureview": true
+  },
+  {
+    "title": "图A.8｜概率预测",
+    "page": 26,
+    "locator": "FigA.8.WQL",
+    "asset": "assets/display_A_8_WQL.png",
+    "rectangles": [
+      [
+        69.943,
+        159.899,
+        330.355,
+        318.549
+      ]
+    ],
+    "pixels": [
+      783,
+      477
+    ],
+    "paras": [
+      "WQL依次为0.462、0.444、0.440、0.451，4096最低，增加至10000后略升。",
+      "误差棒有重叠；仅根据该图不能宣称所有相邻长度之间均有统计显著差异。",
+      "比较1024、2048、4096和10000个历史点；更长上下文对MASE持续有益，对WQL并非严格单调。"
+    ],
+    "coverage": [
+      "FigA.8.WQL"
+    ],
+    "figureview": false
+  },
+  {
+    "title": "图A.8｜点预测",
+    "page": 26,
+    "locator": "FigA.8.MASE",
+    "asset": "assets/display_A_8_MASE.png",
+    "rectangles": [
+      [
+        69.943,
+        159.899,
+        138.637,
+        290.0
+      ],
+      [
+        336.0,
+        159.899,
+        538.5,
+        318.549
+      ]
+    ],
+    "pixels": [
+      827,
+      501
+    ],
+    "paras": [
+      "MASE依次为0.715、0.681、0.666、0.654，随这四种长度增加而降低。",
+      "误差棒有重叠；仅根据该图不能宣称所有相邻长度之间均有统计显著差异。附录A.9未重述任务数。",
+      "最长长度匹配TabPFN-v2预训练的最大数据集规模。两种评价目标对上下文长度的偏好可以不同。"
+    ],
+    "coverage": [
+      "FigA.8.MASE"
+    ],
+    "figureview": false
+  }
+]
