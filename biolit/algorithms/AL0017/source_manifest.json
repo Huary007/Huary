@@ -1,0 +1,32 @@
+{
+  "title": "AL0017 Bayes’ Power 中文教学课件",
+  "paper_version": "arXiv:2410.01565v1",
+  "checked_at": "2026-11-04",
+  "paper_url": "https://arxiv.org/abs/2410.01565",
+  "pdf_url": "https://arxiv.org/pdf/2410.01565v1",
+  "authors": [
+    "Samuel Müller",
+    "Noah Hollmann",
+    "Frank Hutter"
+  ],
+  "paper_license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "code_url": "https://github.com/SamuelGabriel/BayesGeneralizations",
+  "code_license": "Apache-2.0",
+  "source_pdf_pages": 12,
+  "numbered_figures": 12,
+  "spatial_panels": 51,
+  "numbered_tables": 0,
+  "slides": 163,
+  "change_notice": "保留原103页内容与原画布字号；仅目录补充页码。新增60页原文分段放大，跨页句子同页接续；界面增加等比适配、原尺寸滚动、全屏。中文释义、教学计算与DMD研究建议为新增内容。论文截图仅裁切和放大。",
+  "revision": "readability-and-responsive",
+  "original_slides": 103,
+  "added_zoom_slides": 60,
+  "source_screenshots_unchanged": true,
+  "interaction_revision": "Scroll and viewport changes preserve current page and relative reading position; page number, title and URL stay synchronized. Content, CSS and all156 images unchanged from reviewed163-page content.",
+  "review_status": "accepted_content_and_browser_interactions",
+  "release_status": "accepted_distribution_artifact",
+  "source_pdf_sha256": "02ea0b93c4c0e55b1b0de4c8e98ef82c8fd2e2e4455239a283b60b4c08326df4",
+  "html_sha256": "46531650dfa76bce2e1fc9c67657470946ecc2c0d3354225352409d503e6b269",
+  "changes": "中文教学解释、教学计算、DMD研究建议；对原文PDF直接截图、裁切、放大并编排；新增交互式目录、翻页、等比布局、全屏和手动滚动页码同步。所有原文图表均保留原内容，不改变实验数值或曲线。"
+}

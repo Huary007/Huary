@@ -1,0 +1,26 @@
+{
+  "paper_title": "Bayes’ Power for Explaining In-Context Learning Generalizations",
+  "authors": [
+    "Samuel Müller",
+    "Noah Hollmann",
+    "Frank Hutter"
+  ],
+  "paper_version": "arXiv:2410.01565v1",
+  "paper_date": "2024-10-02",
+  "source_url": "https://arxiv.org/abs/2410.01565v1",
+  "pdf_url": "https://arxiv.org/pdf/2410.01565v1",
+  "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "Samuel Müller, Noah Hollmann and Frank Hutter (2024), Bayes’ Power for Explaining In-Context Learning Generalizations, arXiv:2410.01565v1. 原论文材料按 CC BY 4.0 使用。",
+  "covered_material": [
+    "source/paper.pdf",
+    "source/paper.txt",
+    "assets/*.png中的论文截图"
+  ],
+  "modifications": "中文教学解释、教学计算、DMD研究建议；对原文PDF直接截图、裁切、放大并编排；新增交互式目录、翻页、等比布局、全屏和手动滚动页码同步。所有原文图表均保留原内容，不改变实验数值或曲线。",
+  "notice": "新增中文释义与教学示意不是论文原始结果；不表示原作者认可本课件。原论文许可与作者代码许可分开记录。",
+  "author_code_url": "https://github.com/SamuelGabriel/BayesGeneralizations",
+  "author_code_license": "Apache-2.0",
+  "author_code_included": false,
+  "verification_date": "2026-11-04"
+}

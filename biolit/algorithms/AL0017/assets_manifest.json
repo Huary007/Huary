@@ -1,0 +1,1718 @@
+[
+  {
+    "file": "assets/figure_01.png",
+    "pdf_page": 3,
+    "bbox": [
+      108,
+      80,
+      504,
+      225
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/figure_02.png",
+    "pdf_page": 4,
+    "bbox": [
+      108,
+      80,
+      504,
+      246
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/figure_03.png",
+    "pdf_page": 5,
+    "bbox": [
+      108,
+      80,
+      504,
+      235
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/figure_04.png",
+    "pdf_page": 5,
+    "bbox": [
+      108,
+      480,
+      504,
+      723
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/figure_05.png",
+    "pdf_page": 6,
+    "bbox": [
+      108,
+      150,
+      504,
+      314
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/figure_06.png",
+    "pdf_page": 6,
+    "bbox": [
+      108,
+      570,
+      504,
+      733
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/figure_07.png",
+    "pdf_page": 8,
+    "bbox": [
+      108,
+      80,
+      504,
+      242
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/figure_08.png",
+    "pdf_page": 8,
+    "bbox": [
+      108,
+      249,
+      504,
+      415
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/figure_09.png",
+    "pdf_page": 9,
+    "bbox": [
+      108,
+      80,
+      504,
+      247
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/figure_10.png",
+    "pdf_page": 11,
+    "bbox": [
+      108,
+      368,
+      504,
+      603
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/figure_11.png",
+    "pdf_page": 12,
+    "bbox": [
+      108,
+      130,
+      504,
+      297
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/figure_12.png",
+    "pdf_page": 12,
+    "bbox": [
+      108,
+      400,
+      504,
+      684
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/f01_p01.png",
+    "pdf_page": 3,
+    "bbox": [
+      112,
+      80,
+      219,
+      168
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f01_p02.png",
+    "pdf_page": 3,
+    "bbox": [
+      219,
+      80,
+      314,
+      168
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f01_p03.png",
+    "pdf_page": 3,
+    "bbox": [
+      314,
+      80,
+      409,
+      168
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f01_p04.png",
+    "pdf_page": 3,
+    "bbox": [
+      409,
+      80,
+      503,
+      168
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f02_p01.png",
+    "pdf_page": 4,
+    "bbox": [
+      112,
+      80,
+      221,
+      168
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f02_p02.png",
+    "pdf_page": 4,
+    "bbox": [
+      221,
+      80,
+      315,
+      168
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f02_p03.png",
+    "pdf_page": 4,
+    "bbox": [
+      315,
+      80,
+      409,
+      168
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f02_p04.png",
+    "pdf_page": 4,
+    "bbox": [
+      409,
+      80,
+      503,
+      168
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f03_p01.png",
+    "pdf_page": 5,
+    "bbox": [
+      112,
+      80,
+      208,
+      168
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f03_p02.png",
+    "pdf_page": 5,
+    "bbox": [
+      208,
+      80,
+      313,
+      168
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f03_p03.png",
+    "pdf_page": 5,
+    "bbox": [
+      313,
+      80,
+      412,
+      168
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f03_p04.png",
+    "pdf_page": 5,
+    "bbox": [
+      412,
+      80,
+      503,
+      168
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f04_p01.png",
+    "pdf_page": 5,
+    "bbox": [
+      112,
+      480,
+      223,
+      568
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f04_p02.png",
+    "pdf_page": 5,
+    "bbox": [
+      223,
+      480,
+      317,
+      568
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f04_p03.png",
+    "pdf_page": 5,
+    "bbox": [
+      317,
+      480,
+      410,
+      568
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f04_p04.png",
+    "pdf_page": 5,
+    "bbox": [
+      410,
+      480,
+      503,
+      568
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f04_p05.png",
+    "pdf_page": 5,
+    "bbox": [
+      112,
+      568,
+      223,
+      654
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f04_p06.png",
+    "pdf_page": 5,
+    "bbox": [
+      223,
+      568,
+      317,
+      654
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f04_p07.png",
+    "pdf_page": 5,
+    "bbox": [
+      317,
+      568,
+      410,
+      654
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f04_p08.png",
+    "pdf_page": 5,
+    "bbox": [
+      410,
+      568,
+      503,
+      654
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f10_p01.png",
+    "pdf_page": 11,
+    "bbox": [
+      112,
+      368,
+      221,
+      457
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f10_p02.png",
+    "pdf_page": 11,
+    "bbox": [
+      221,
+      368,
+      315,
+      457
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f10_p03.png",
+    "pdf_page": 11,
+    "bbox": [
+      315,
+      368,
+      409,
+      457
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f10_p04.png",
+    "pdf_page": 11,
+    "bbox": [
+      409,
+      368,
+      503,
+      457
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f10_p05.png",
+    "pdf_page": 11,
+    "bbox": [
+      112,
+      457,
+      221,
+      544
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f10_p06.png",
+    "pdf_page": 11,
+    "bbox": [
+      221,
+      457,
+      315,
+      544
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f10_p07.png",
+    "pdf_page": 11,
+    "bbox": [
+      315,
+      457,
+      409,
+      544
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f10_p08.png",
+    "pdf_page": 11,
+    "bbox": [
+      409,
+      457,
+      503,
+      544
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f11_p01.png",
+    "pdf_page": 12,
+    "bbox": [
+      112,
+      130,
+      221,
+      217
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f11_p02.png",
+    "pdf_page": 12,
+    "bbox": [
+      221,
+      130,
+      315,
+      217
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f11_p03.png",
+    "pdf_page": 12,
+    "bbox": [
+      315,
+      130,
+      409,
+      217
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f11_p04.png",
+    "pdf_page": 12,
+    "bbox": [
+      409,
+      130,
+      503,
+      217
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f05_p01.png",
+    "pdf_page": 6,
+    "bbox": [
+      112,
+      150,
+      252,
+      237
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f05_p02.png",
+    "pdf_page": 6,
+    "bbox": [
+      252,
+      150,
+      377,
+      237
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f05_p03.png",
+    "pdf_page": 6,
+    "bbox": [
+      377,
+      150,
+      503,
+      237
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f06_p01.png",
+    "pdf_page": 6,
+    "bbox": [
+      112,
+      570,
+      295.0,
+      688
+    ],
+    "scale": 5
+  },
+  {
+    "file": "assets/f06_p02.png",
+    "pdf_page": 6,
+    "bbox": [
+      295.1,
+      570,
+      493,
+      688
+    ],
+    "scale": 5
+  },
+  {
+    "file": "assets/f07_p01.png",
+    "pdf_page": 8,
+    "bbox": [
+      128,
+      80,
+      296,
+      198
+    ],
+    "scale": 5
+  },
+  {
+    "file": "assets/f07_p02.png",
+    "pdf_page": 8,
+    "bbox": [
+      302,
+      80,
+      482,
+      198
+    ],
+    "scale": 5
+  },
+  {
+    "file": "assets/f08_p01.png",
+    "pdf_page": 8,
+    "bbox": [
+      108,
+      249,
+      208,
+      336
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f08_p02.png",
+    "pdf_page": 8,
+    "bbox": [
+      208,
+      249,
+      306,
+      336
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f08_p03.png",
+    "pdf_page": 8,
+    "bbox": [
+      306,
+      249,
+      404,
+      336
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f08_p04.png",
+    "pdf_page": 8,
+    "bbox": [
+      404,
+      249,
+      503,
+      336
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f09_p01.png",
+    "pdf_page": 9,
+    "bbox": [
+      126,
+      80,
+      266,
+      182
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f09_p02.png",
+    "pdf_page": 9,
+    "bbox": [
+      281,
+      80,
+      476,
+      182
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f12_p01.png",
+    "pdf_page": 12,
+    "bbox": [
+      108,
+      400,
+      239,
+      490
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f12_p02.png",
+    "pdf_page": 12,
+    "bbox": [
+      241,
+      400,
+      373,
+      490
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f12_p03.png",
+    "pdf_page": 12,
+    "bbox": [
+      375,
+      400,
+      504,
+      490
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f12_p04.png",
+    "pdf_page": 12,
+    "bbox": [
+      108,
+      490,
+      239,
+      576.3
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f12_p05.png",
+    "pdf_page": 12,
+    "bbox": [
+      241,
+      490,
+      373,
+      576.3
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/f12_p06.png",
+    "pdf_page": 12,
+    "bbox": [
+      375,
+      490,
+      504,
+      576.3
+    ],
+    "scale": 6
+  },
+  {
+    "file": "assets/intro.png",
+    "pdf_page": 1,
+    "bbox": [
+      107,
+      424,
+      505,
+      745
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/objective.png",
+    "pdf_page": 2,
+    "bbox": [
+      106,
+      270,
+      506,
+      535
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/ppd.png",
+    "pdf_page": 2,
+    "bbox": [
+      106,
+      536,
+      506,
+      716
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/finite.png",
+    "pdf_page": 3,
+    "bbox": [
+      106,
+      345,
+      506,
+      542
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/settings.png",
+    "pdf_page": 3,
+    "bbox": [
+      106,
+      492,
+      506,
+      738
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/step.png",
+    "pdf_page": 4,
+    "bbox": [
+      106,
+      260,
+      506,
+      492
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/sine.png",
+    "pdf_page": 4,
+    "bbox": [
+      106,
+      495,
+      506,
+      667
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/mixture.png",
+    "pdf_page": 5,
+    "bbox": [
+      106,
+      252,
+      506,
+      468
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/representability.png",
+    "pdf_page": 6,
+    "bbox": [
+      106,
+      326,
+      506,
+      503
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/misspecified.png",
+    "pdf_page": 7,
+    "bbox": [
+      106,
+      80,
+      506,
+      313
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/support.png",
+    "pdf_page": 7,
+    "bbox": [
+      106,
+      443,
+      506,
+      735
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/rare.png",
+    "pdf_page": 8,
+    "bbox": [
+      106,
+      429,
+      506,
+      580
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/architecture.png",
+    "pdf_page": 8,
+    "bbox": [
+      106,
+      610,
+      506,
+      744
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/counting.png",
+    "pdf_page": 9,
+    "bbox": [
+      106,
+      264,
+      506,
+      442
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/conclusion.png",
+    "pdf_page": 9,
+    "bbox": [
+      106,
+      648,
+      506,
+      744
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/future.png",
+    "pdf_page": 10,
+    "bbox": [
+      106,
+      80,
+      506,
+      204
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/page_01.png",
+    "pdf_page": 1,
+    "bbox": [
+      0,
+      0,
+      612,
+      792
+    ],
+    "scale": 2
+  },
+  {
+    "file": "assets/page_02.png",
+    "pdf_page": 2,
+    "bbox": [
+      0,
+      0,
+      612,
+      792
+    ],
+    "scale": 2
+  },
+  {
+    "file": "assets/page_03.png",
+    "pdf_page": 3,
+    "bbox": [
+      0,
+      0,
+      612,
+      792
+    ],
+    "scale": 2
+  },
+  {
+    "file": "assets/page_04.png",
+    "pdf_page": 4,
+    "bbox": [
+      0,
+      0,
+      612,
+      792
+    ],
+    "scale": 2
+  },
+  {
+    "file": "assets/page_05.png",
+    "pdf_page": 5,
+    "bbox": [
+      0,
+      0,
+      612,
+      792
+    ],
+    "scale": 2
+  },
+  {
+    "file": "assets/page_06.png",
+    "pdf_page": 6,
+    "bbox": [
+      0,
+      0,
+      612,
+      792
+    ],
+    "scale": 2
+  },
+  {
+    "file": "assets/page_07.png",
+    "pdf_page": 7,
+    "bbox": [
+      0,
+      0,
+      612,
+      792
+    ],
+    "scale": 2
+  },
+  {
+    "file": "assets/page_08.png",
+    "pdf_page": 8,
+    "bbox": [
+      0,
+      0,
+      612,
+      792
+    ],
+    "scale": 2
+  },
+  {
+    "file": "assets/page_09.png",
+    "pdf_page": 9,
+    "bbox": [
+      0,
+      0,
+      612,
+      792
+    ],
+    "scale": 2
+  },
+  {
+    "file": "assets/page_10.png",
+    "pdf_page": 10,
+    "bbox": [
+      0,
+      0,
+      612,
+      792
+    ],
+    "scale": 2
+  },
+  {
+    "file": "assets/page_11.png",
+    "pdf_page": 11,
+    "bbox": [
+      0,
+      0,
+      612,
+      792
+    ],
+    "scale": 2
+  },
+  {
+    "file": "assets/page_12.png",
+    "pdf_page": 12,
+    "bbox": [
+      0,
+      0,
+      612,
+      792
+    ],
+    "scale": 2
+  },
+  {
+    "file": "assets/zoom_01_1.png",
+    "pdf_page": 1,
+    "bbox": [
+      106,
+      440,
+      506,
+      505
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_02_1.png",
+    "pdf_page": 1,
+    "bbox": [
+      106,
+      506,
+      506,
+      653
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_03_1.png",
+    "pdf_page": 1,
+    "bbox": [
+      106,
+      654,
+      506,
+      736
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_03_2.png",
+    "pdf_page": 2,
+    "bbox": [
+      106,
+      81,
+      506,
+      120
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_04_1.png",
+    "pdf_page": 2,
+    "bbox": [
+      106,
+      121,
+      506,
+      234
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_05_1.png",
+    "pdf_page": 2,
+    "bbox": [
+      106,
+      245,
+      506,
+      310
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_06_1.png",
+    "pdf_page": 2,
+    "bbox": [
+      106,
+      311,
+      506,
+      416
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_07_1.png",
+    "pdf_page": 2,
+    "bbox": [
+      106,
+      417,
+      506,
+      535
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_08_1.png",
+    "pdf_page": 2,
+    "bbox": [
+      106,
+      540,
+      506,
+      601
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_09_1.png",
+    "pdf_page": 2,
+    "bbox": [
+      106,
+      602,
+      506,
+      684
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_10_1.png",
+    "pdf_page": 2,
+    "bbox": [
+      106,
+      684,
+      506,
+      716
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_11_1.png",
+    "pdf_page": 3,
+    "bbox": [
+      106,
+      243,
+      506,
+      338
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_12_1.png",
+    "pdf_page": 3,
+    "bbox": [
+      106,
+      350,
+      506,
+      460
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_13_1.png",
+    "pdf_page": 3,
+    "bbox": [
+      106,
+      462,
+      506,
+      498
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_14_1.png",
+    "pdf_page": 3,
+    "bbox": [
+      106,
+      503,
+      506,
+      542
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_15_1.png",
+    "pdf_page": 3,
+    "bbox": [
+      106,
+      543,
+      506,
+      604
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_16_1.png",
+    "pdf_page": 3,
+    "bbox": [
+      106,
+      615,
+      506,
+      672
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_16_2.png",
+    "pdf_page": 3,
+    "bbox": [
+      106,
+      678,
+      506,
+      737
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_17_1.png",
+    "pdf_page": 4,
+    "bbox": [
+      106,
+      261,
+      506,
+      322
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_18_1.png",
+    "pdf_page": 4,
+    "bbox": [
+      106,
+      322,
+      506,
+      444
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_19_1.png",
+    "pdf_page": 4,
+    "bbox": [
+      106,
+      443,
+      506,
+      493
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_20_1.png",
+    "pdf_page": 4,
+    "bbox": [
+      106,
+      500,
+      506,
+      562
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_21_1.png",
+    "pdf_page": 4,
+    "bbox": [
+      106,
+      562,
+      506,
+      630
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_22_1.png",
+    "pdf_page": 4,
+    "bbox": [
+      106,
+      629,
+      506,
+      668
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_23_1.png",
+    "pdf_page": 4,
+    "bbox": [
+      106,
+      676,
+      506,
+      737
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_24_1.png",
+    "pdf_page": 5,
+    "bbox": [
+      106,
+      255,
+      506,
+      295
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_25_1.png",
+    "pdf_page": 5,
+    "bbox": [
+      106,
+      295,
+      506,
+      378
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_26_1.png",
+    "pdf_page": 5,
+    "bbox": [
+      106,
+      380,
+      506,
+      420
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_27_1.png",
+    "pdf_page": 5,
+    "bbox": [
+      106,
+      420,
+      506,
+      470
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_28_1.png",
+    "pdf_page": 5,
+    "bbox": [
+      106,
+      682,
+      506,
+      723
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_29_1.png",
+    "pdf_page": 6,
+    "bbox": [
+      106,
+      79,
+      506,
+      144
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_30_1.png",
+    "pdf_page": 6,
+    "bbox": [
+      106,
+      327,
+      506,
+      389
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_31_1.png",
+    "pdf_page": 6,
+    "bbox": [
+      106,
+      389,
+      506,
+      505
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_32_1.png",
+    "pdf_page": 6,
+    "bbox": [
+      106,
+      514,
+      506,
+      561
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_32_2.png",
+    "pdf_page": 7,
+    "bbox": [
+      106,
+      81,
+      506,
+      120
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_33_1.png",
+    "pdf_page": 7,
+    "bbox": [
+      106,
+      120,
+      506,
+      170
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_34_1.png",
+    "pdf_page": 7,
+    "bbox": [
+      106,
+      170,
+      506,
+      242
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_35_1.png",
+    "pdf_page": 7,
+    "bbox": [
+      106,
+      242,
+      506,
+      314
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_36_1.png",
+    "pdf_page": 7,
+    "bbox": [
+      106,
+      335,
+      506,
+      430
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_37_1.png",
+    "pdf_page": 7,
+    "bbox": [
+      106,
+      443,
+      506,
+      525
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_38_1.png",
+    "pdf_page": 7,
+    "bbox": [
+      106,
+      525,
+      506,
+      608
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_39_1.png",
+    "pdf_page": 7,
+    "bbox": [
+      106,
+      607,
+      506,
+      668
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_40_1.png",
+    "pdf_page": 7,
+    "bbox": [
+      106,
+      686,
+      506,
+      737
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_41_1.png",
+    "pdf_page": 8,
+    "bbox": [
+      106,
+      430,
+      506,
+      491
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_42_1.png",
+    "pdf_page": 8,
+    "bbox": [
+      106,
+      491,
+      506,
+      580
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_43_1.png",
+    "pdf_page": 8,
+    "bbox": [
+      106,
+      587,
+      506,
+      648
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_44_1.png",
+    "pdf_page": 8,
+    "bbox": [
+      106,
+      648,
+      506,
+      708
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_45_1.png",
+    "pdf_page": 8,
+    "bbox": [
+      106,
+      709,
+      506,
+      737
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_45_2.png",
+    "pdf_page": 9,
+    "bbox": [
+      106,
+      261,
+      506,
+      346
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_46_1.png",
+    "pdf_page": 9,
+    "bbox": [
+      106,
+      346,
+      506,
+      406
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_47_1.png",
+    "pdf_page": 9,
+    "bbox": [
+      106,
+      406,
+      506,
+      445
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_48_1.png",
+    "pdf_page": 9,
+    "bbox": [
+      106,
+      650,
+      506,
+      737
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_48_2.png",
+    "pdf_page": 10,
+    "bbox": [
+      106,
+      81,
+      506,
+      120
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_49_1.png",
+    "pdf_page": 10,
+    "bbox": [
+      106,
+      120,
+      506,
+      193
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_50_1.png",
+    "pdf_page": 3,
+    "bbox": [
+      106,
+      196,
+      506,
+      226
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_51_1.png",
+    "pdf_page": 4,
+    "bbox": [
+      106,
+      195,
+      506,
+      247
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_52_1.png",
+    "pdf_page": 5,
+    "bbox": [
+      106,
+      195,
+      506,
+      236
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_53_1.png",
+    "pdf_page": 6,
+    "bbox": [
+      106,
+      273,
+      506,
+      315
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_54_1.png",
+    "pdf_page": 6,
+    "bbox": [
+      106,
+      693,
+      506,
+      734
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_55_1.png",
+    "pdf_page": 8,
+    "bbox": [
+      106,
+      201,
+      506,
+      243
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_56_1.png",
+    "pdf_page": 8,
+    "bbox": [
+      106,
+      363,
+      506,
+      416
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_57_1.png",
+    "pdf_page": 9,
+    "bbox": [
+      106,
+      185,
+      506,
+      248
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_58_1.png",
+    "pdf_page": 11,
+    "bbox": [
+      106,
+      572,
+      506,
+      604
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_59_1.png",
+    "pdf_page": 12,
+    "bbox": [
+      106,
+      245,
+      506,
+      298
+    ],
+    "scale": 4
+  },
+  {
+    "file": "assets/zoom_60_1.png",
+    "pdf_page": 12,
+    "bbox": [
+      106,
+      599,
+      506,
+      685
+    ],
+    "scale": 4
+  }
+]
