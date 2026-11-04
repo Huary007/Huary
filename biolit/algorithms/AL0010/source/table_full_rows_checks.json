@@ -1,0 +1,206 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "page": 135,
+      "original_page": 72,
+      "table": 2,
+      "source_page": 19,
+      "old_asset": "assets/t2_top.png",
+      "new_asset": "assets/t2_top_complete8.png",
+      "old_bbox_points": [
+        74,
+        217,
+        572,
+        337.5
+      ],
+      "new_bbox_points": [
+        74,
+        217,
+        572,
+        345.9032897949219
+      ],
+      "old_size_px": [
+        1494,
+        362
+      ],
+      "new_size_px": [
+        1494,
+        387
+      ],
+      "old_display_size_css_px": [
+        1435.0,
+        347.7041499330656
+      ],
+      "new_display_size_css_px": [
+        1435.0,
+        371.7168674698795
+      ],
+      "all_previous_pixels_preserved": true,
+      "display_scale_not_reduced": true,
+      "old_sha256": "00d5a212dcce3257e87387d44633ad9dd40760b4e29d722dce536e22f4c0129c",
+      "new_sha256": "80ce15759c20113696712c9faf4a8d47816f894a423ecd8d4b0350a1a555ed18"
+    },
+    {
+      "page": 142,
+      "original_page": 78,
+      "table": 3,
+      "source_page": 20,
+      "old_asset": "assets/t3_top.png",
+      "new_asset": "assets/t3_top_complete8.png",
+      "old_bbox_points": [
+        74,
+        103,
+        572,
+        223.5
+      ],
+      "new_bbox_points": [
+        74,
+        103,
+        572,
+        231.9323501586914
+      ],
+      "old_size_px": [
+        1494,
+        362
+      ],
+      "new_size_px": [
+        1494,
+        387
+      ],
+      "old_display_size_css_px": [
+        1435.0,
+        347.7041499330656
+      ],
+      "new_display_size_css_px": [
+        1435.0,
+        371.7168674698795
+      ],
+      "all_previous_pixels_preserved": true,
+      "display_scale_not_reduced": true,
+      "old_sha256": "97d5718154f5e0fb39412fc9272b481b7efecb9498d92c37e53066edb3c73af1",
+      "new_sha256": "3fd661c3b09ecba2b87e00339da626e8ea86d38a3d59a56e9ac2ff501235934d"
+    },
+    {
+      "page": 149,
+      "original_page": 84,
+      "table": 4,
+      "source_page": 21,
+      "old_asset": "assets/t4_top.png",
+      "new_asset": "assets/t4_top_complete8.png",
+      "old_bbox_points": [
+        74,
+        103,
+        572,
+        223.5
+      ],
+      "new_bbox_points": [
+        74,
+        103,
+        572,
+        231.9323501586914
+      ],
+      "old_size_px": [
+        1494,
+        362
+      ],
+      "new_size_px": [
+        1494,
+        387
+      ],
+      "old_display_size_css_px": [
+        1435.0,
+        347.7041499330656
+      ],
+      "new_display_size_css_px": [
+        1435.0,
+        371.7168674698795
+      ],
+      "all_previous_pixels_preserved": true,
+      "display_scale_not_reduced": true,
+      "old_sha256": "03a027b598f965922144217362487830e33f41f4d34b614fbe8791a3a5221753",
+      "new_sha256": "28a2781e03145171d5f31b3f2e6967682d168d4f2aa1ca7dc046aa8d829d8fda"
+    },
+    {
+      "page": 156,
+      "original_page": 90,
+      "table": 5,
+      "source_page": 22,
+      "old_asset": "assets/t5_top.png",
+      "new_asset": "assets/t5_top_complete8.png",
+      "old_bbox_points": [
+        74,
+        103,
+        572,
+        223.5
+      ],
+      "new_bbox_points": [
+        74,
+        103,
+        572,
+        231.9323501586914
+      ],
+      "old_size_px": [
+        1494,
+        362
+      ],
+      "new_size_px": [
+        1494,
+        387
+      ],
+      "old_display_size_css_px": [
+        1435.0,
+        347.7041499330656
+      ],
+      "new_display_size_css_px": [
+        1435.0,
+        371.7168674698795
+      ],
+      "all_previous_pixels_preserved": true,
+      "display_scale_not_reduced": true,
+      "old_sha256": "7f0d2f433a0454ebd14bb08055ef58c3ef2ca43a63d7a070507ffa2a3859278d",
+      "new_sha256": "9a03833e7291a022bbbdaa24d5d16d24525a2b269d17a5319f36ec054fd094f8"
+    },
+    {
+      "page": 163,
+      "original_page": 96,
+      "table": 6,
+      "source_page": 23,
+      "old_asset": "assets/t6_top.png",
+      "new_asset": "assets/t6_top_complete8.png",
+      "old_bbox_points": [
+        74,
+        103,
+        572,
+        223.5
+      ],
+      "new_bbox_points": [
+        74,
+        103,
+        572,
+        231.9323501586914
+      ],
+      "old_size_px": [
+        1494,
+        362
+      ],
+      "new_size_px": [
+        1494,
+        387
+      ],
+      "old_display_size_css_px": [
+        1435.0,
+        347.7041499330656
+      ],
+      "new_display_size_css_px": [
+        1435.0,
+        371.7168674698795
+      ],
+      "all_previous_pixels_preserved": true,
+      "display_scale_not_reduced": true,
+      "old_sha256": "5bda76f7dd7176c4b58f6081184dd49ab2938a717e4546a5597b5200018e0266",
+      "new_sha256": "b2565589036f0d7a189c23633fd2577b2bd0d04a0021aa3ac06e08eb9eae4738"
+    }
+  ],
+  "final_visual_review_passed": true
+}

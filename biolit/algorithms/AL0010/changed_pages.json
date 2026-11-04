@@ -1,0 +1,772 @@
+[
+  {
+    "new_page": 5,
+    "after_original_page": 4,
+    "title": "版本与阅读范围：原文1/4",
+    "asset": "rev_text_004_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 6,
+    "after_original_page": 4,
+    "title": "版本与阅读范围：原文2/4",
+    "asset": "rev_text_004_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 7,
+    "after_original_page": 4,
+    "title": "版本与阅读范围：原文3/4",
+    "asset": "rev_text_004_03",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 8,
+    "after_original_page": 4,
+    "title": "版本与阅读范围：原文4/4",
+    "asset": "rev_text_004_04",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 10,
+    "after_original_page": 5,
+    "title": "模型面对的失效条件：原文1/4",
+    "asset": "rev_text_005_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 11,
+    "after_original_page": 5,
+    "title": "模型面对的失效条件：原文2/4",
+    "asset": "rev_text_005_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 12,
+    "after_original_page": 5,
+    "title": "模型面对的失效条件：原文3/4",
+    "asset": "rev_text_005_03",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 13,
+    "after_original_page": 5,
+    "title": "模型面对的失效条件：原文4/4",
+    "asset": "rev_text_005_04",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 17,
+    "after_original_page": 8,
+    "title": "表格任务的输入与输出：原文1/2",
+    "asset": "rev_text_008_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 18,
+    "after_original_page": 8,
+    "title": "表格任务的输入与输出：原文2/2",
+    "asset": "rev_text_008_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 28,
+    "after_original_page": 17,
+    "title": "分类与回归共享主干：原文1/2",
+    "asset": "rev_text_017_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 29,
+    "after_original_page": 17,
+    "title": "分类与回归共享主干：原文2/2",
+    "asset": "rev_text_017_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 31,
+    "after_original_page": 18,
+    "title": "分类概率的教学算例：原文1/2",
+    "asset": "rev_text_018_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 32,
+    "after_original_page": 18,
+    "title": "分类概率的教学算例：原文2/2",
+    "asset": "rev_text_018_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 34,
+    "after_original_page": 19,
+    "title": "回归输出是分布：原文1/2",
+    "asset": "rev_text_019_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 35,
+    "after_original_page": 19,
+    "title": "回归输出是分布：原文2/2",
+    "asset": "rev_text_019_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 37,
+    "after_original_page": 20,
+    "title": "增宽模型与缓存成本：原文1/2",
+    "asset": "rev_text_020_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 38,
+    "after_original_page": 20,
+    "title": "增宽模型与缓存成本：原文2/2",
+    "asset": "rev_text_020_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 40,
+    "after_original_page": 21,
+    "title": "更简单的外部预处理：原文1/2",
+    "asset": "rev_text_021_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 41,
+    "after_original_page": 21,
+    "title": "更简单的外部预处理：原文2/2",
+    "asset": "rev_text_021_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 43,
+    "after_original_page": 22,
+    "title": "先验改变的已知与未知：原文1/2",
+    "asset": "rev_text_022_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 44,
+    "after_original_page": 22,
+    "title": "先验改变的已知与未知：原文2/2",
+    "asset": "rev_text_022_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 46,
+    "after_original_page": 23,
+    "title": "Plus 与 Thinking 的边界：原文1/1",
+    "asset": "rev_text_023_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 50,
+    "after_original_page": 26,
+    "title": "Elo、胜率与可改进度：原文1/2",
+    "asset": "rev_text_026_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 51,
+    "after_original_page": 26,
+    "title": "Elo、胜率与可改进度：原文2/2",
+    "asset": "rev_text_026_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 77,
+    "after_original_page": 51,
+    "title": "STRABLE 的字符串协议：原文1/2",
+    "asset": "rev_text_051_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 78,
+    "after_original_page": 51,
+    "title": "STRABLE 的字符串协议：原文2/2",
+    "asset": "rev_text_051_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 81,
+    "after_original_page": 53,
+    "title": "多模态的输入转换：原文1/2",
+    "asset": "rev_text_053_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 82,
+    "after_original_page": 53,
+    "title": "多模态的输入转换：原文2/2",
+    "asset": "rev_text_053_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 91,
+    "after_original_page": 61,
+    "title": "缓存具体保存什么：原文1/2",
+    "asset": "rev_text_061_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 92,
+    "after_original_page": 61,
+    "title": "缓存具体保存什么：原文2/2",
+    "asset": "rev_text_061_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 100,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行1–5 × 列1–5",
+    "asset": "f10_r01_05_c01_05",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 101,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行1–5 × 列6–10",
+    "asset": "f10_r01_05_c06_10",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 102,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行1–5 × 列11–15",
+    "asset": "f10_r01_05_c11_15",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 103,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行1–5 × 列16–19",
+    "asset": "f10_r01_05_c16_19",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 104,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行6–10 × 列1–5",
+    "asset": "f10_r06_10_c01_05",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 105,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行6–10 × 列6–10",
+    "asset": "f10_r06_10_c06_10",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 106,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行6–10 × 列11–15",
+    "asset": "f10_r06_10_c11_15",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 107,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行6–10 × 列16–19",
+    "asset": "f10_r06_10_c16_19",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 108,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行11–15 × 列1–5",
+    "asset": "f10_r11_15_c01_05",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 109,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行11–15 × 列6–10",
+    "asset": "f10_r11_15_c06_10",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 110,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行11–15 × 列11–15",
+    "asset": "f10_r11_15_c11_15",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 111,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行11–15 × 列16–19",
+    "asset": "f10_r11_15_c16_19",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 112,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行16–19 × 列1–5",
+    "asset": "f10_r16_19_c01_05",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 113,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行16–19 × 列6–10",
+    "asset": "f10_r16_19_c06_10",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 114,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行16–19 × 列11–15",
+    "asset": "f10_r16_19_c11_15",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 115,
+    "after_original_page": 68,
+    "title": "TabArena胜率：行16–19 × 列16–19",
+    "asset": "f10_r16_19_c16_19",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 119,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行1–5 × 列1–5",
+    "asset": "f12_r01_05_c01_05",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 120,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行1–5 × 列6–10",
+    "asset": "f12_r01_05_c06_10",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 121,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行1–5 × 列11–15",
+    "asset": "f12_r01_05_c11_15",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 122,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行1–5 × 列16–19",
+    "asset": "f12_r01_05_c16_19",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 123,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行6–10 × 列1–5",
+    "asset": "f12_r06_10_c01_05",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 124,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行6–10 × 列6–10",
+    "asset": "f12_r06_10_c06_10",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 125,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行6–10 × 列11–15",
+    "asset": "f12_r06_10_c11_15",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 126,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行6–10 × 列16–19",
+    "asset": "f12_r06_10_c16_19",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 127,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行11–15 × 列1–5",
+    "asset": "f12_r11_15_c01_05",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 128,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行11–15 × 列6–10",
+    "asset": "f12_r11_15_c06_10",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 129,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行11–15 × 列11–15",
+    "asset": "f12_r11_15_c11_15",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 130,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行11–15 × 列16–19",
+    "asset": "f12_r11_15_c16_19",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 131,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行16–19 × 列1–5",
+    "asset": "f12_r16_19_c01_05",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 132,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行16–19 × 列6–10",
+    "asset": "f12_r16_19_c06_10",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 133,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行16–19 × 列11–15",
+    "asset": "f12_r16_19_c11_15",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 134,
+    "after_original_page": 71,
+    "title": "TabArena-medium胜率：行16–19 × 列16–19",
+    "asset": "f12_r16_19_c16_19",
+    "reason": "原第66–71页矩阵过密，保留原页并增加行列双向分块；每页最多5×5，独立原行名、原列名及完整色标。"
+  },
+  {
+    "new_page": 136,
+    "after_original_page": 72,
+    "title": "Table 2 总览：前8行完整上下文",
+    "asset": "rev_t2_overview_complete",
+    "reason": "总览截图下缘截行，补完整行上下文"
+  },
+  {
+    "new_page": 143,
+    "after_original_page": 78,
+    "title": "Table 3 总览：前8行完整上下文",
+    "asset": "rev_t3_overview_complete",
+    "reason": "总览截图下缘截行，补完整行上下文"
+  },
+  {
+    "new_page": 150,
+    "after_original_page": 84,
+    "title": "Table 4 总览：前8行完整上下文",
+    "asset": "rev_t4_overview_complete",
+    "reason": "总览截图下缘截行，补完整行上下文"
+  },
+  {
+    "new_page": 157,
+    "after_original_page": 90,
+    "title": "Table 5 总览：前8行完整上下文",
+    "asset": "rev_t5_overview_complete",
+    "reason": "总览截图下缘截行，补完整行上下文"
+  },
+  {
+    "new_page": 164,
+    "after_original_page": 96,
+    "title": "Table 6 总览：前8行完整上下文",
+    "asset": "rev_t6_overview_complete",
+    "reason": "总览截图下缘截行，补完整行上下文"
+  },
+  {
+    "new_page": 173,
+    "after_original_page": 104,
+    "title": "图14 原图逐项放大 · 01–05：两根主导正贡献条",
+    "asset": "f14_group_01_01-05",
+    "reason": "原第104页数据集名称过密；保留原页，新增原图分组柱条及对应完整标签。前两项为原图强调的两项近乎已解AUC任务；其余三项的正向贡献明显较小。"
+  },
+  {
+    "new_page": 174,
+    "after_original_page": 104,
+    "title": "图14 原图逐项放大 · 06–10：继续展开正贡献尾部",
+    "asset": "f14_group_02_06-10",
+    "reason": "原第104页数据集名称过密；保留原页，新增原图分组柱条及对应完整标签。五项均位于零线上方；保留与前组相同的纵轴比例。"
+  },
+  {
+    "new_page": 175,
+    "after_original_page": 104,
+    "title": "图14 原图逐项放大 · 11–15：逐渐减弱的正贡献",
+    "asset": "f14_group_03_11-15",
+    "reason": "原第104页数据集名称过密；保留原页，新增原图分组柱条及对应完整标签。这组正向贡献进一步缩小，不从柱高反推未经原文提供的精确数值。"
+  },
+  {
+    "new_page": 176,
+    "after_original_page": 104,
+    "title": "图14 原图逐项放大 · 16–20：较小的正向贡献",
+    "asset": "f14_group_04_16-20",
+    "reason": "原第104页数据集名称过密；保留原页，新增原图分组柱条及对应完整标签。继续沿原图从左到右查看五项；完整保留两个长标签。"
+  },
+  {
+    "new_page": 177,
+    "after_original_page": 104,
+    "title": "图14 原图逐项放大 · 21–25：接近零的正贡献",
+    "asset": "f14_group_05_21-25",
+    "reason": "原第104页数据集名称过密；保留原页，新增原图分组柱条及对应完整标签。各条仍在零线上方，但在全图共同纵轴上已很小。"
+  },
+  {
+    "new_page": 178,
+    "after_original_page": 104,
+    "title": "图14 原图逐项放大 · 26–30：跨越零线的一组",
+    "asset": "f14_group_06_26-30",
+    "reason": "原第104页数据集名称过密；保留原页，新增原图分组柱条及对应完整标签。这组经过正负贡献交界；近零柱不另改纵轴或人为放大。"
+  },
+  {
+    "new_page": 179,
+    "after_original_page": 104,
+    "title": "图14 原图逐项放大 · 31–35：小幅负向贡献",
+    "asset": "f14_group_07_31-35",
+    "reason": "原第104页数据集名称过密；保留原页，新增原图分组柱条及对应完整标签。这组位于零线下方，对前面累积的正向差距形成抵消。"
+  },
+  {
+    "new_page": 180,
+    "after_original_page": 104,
+    "title": "图14 原图逐项放大 · 36–40：负贡献与最长名称",
+    "asset": "f14_group_08_36-40",
+    "reason": "原第104页数据集名称过密；保留原页，新增原图分组柱条及对应完整标签。完整保留HR_Analytics_Job_Change_of_Data_Scientists等原始长标签。"
+  },
+  {
+    "new_page": 181,
+    "after_original_page": 104,
+    "title": "图14 原图逐项放大 · 41–45：负贡献尾部继续展开",
+    "asset": "f14_group_09_41-45",
+    "reason": "原第104页数据集名称过密；保留原页，新增原图分组柱条及对应完整标签。五项均处在负向贡献区域；沿用原图排序、条形和纵轴刻度。"
+  },
+  {
+    "new_page": 182,
+    "after_original_page": 104,
+    "title": "图14 原图逐项放大 · 46–51：负向贡献的末端六项",
+    "asset": "f14_group_10_46-51",
+    "reason": "原第104页数据集名称过密；保留原页，新增原图分组柱条及对应完整标签。末组三项有更明显的负向贡献；这里的正负均指原纵轴TabPFN-3.5 minus TabFM+。"
+  },
+  {
+    "new_page": 185,
+    "after_original_page": 106,
+    "title": "包袋协议影响拟合时间：原文1/3",
+    "asset": "rev_text_106_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 186,
+    "after_original_page": 106,
+    "title": "包袋协议影响拟合时间：原文2/3",
+    "asset": "rev_text_106_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 187,
+    "after_original_page": 106,
+    "title": "包袋协议影响拟合时间：原文3/3",
+    "asset": "rev_text_106_03",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 189,
+    "after_original_page": 107,
+    "title": "重新计时只覆盖153个划分：原文1/3",
+    "asset": "rev_text_107_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 190,
+    "after_original_page": 107,
+    "title": "重新计时只覆盖153个划分：原文2/3",
+    "asset": "rev_text_107_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 191,
+    "after_original_page": 107,
+    "title": "重新计时只覆盖153个划分：原文3/3",
+    "asset": "rev_text_107_03",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 203,
+    "after_original_page": 118,
+    "title": "组标识改变了实验输入：原文1/4",
+    "asset": "rev_text_118_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 204,
+    "after_original_page": 118,
+    "title": "组标识改变了实验输入：原文2/4",
+    "asset": "rev_text_118_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 205,
+    "after_original_page": 118,
+    "title": "组标识改变了实验输入：原文3/4",
+    "asset": "rev_text_118_03",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 206,
+    "after_original_page": 118,
+    "title": "组标识改变了实验输入：原文4/4",
+    "asset": "rev_text_118_04",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 208,
+    "after_original_page": 119,
+    "title": "暴露组标识的量化影响：原文1/1",
+    "asset": "rev_text_119_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 220,
+    "after_original_page": 130,
+    "title": "TALENT 两种评估集合：原文1/2",
+    "asset": "rev_text_130_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 221,
+    "after_original_page": 130,
+    "title": "TALENT 两种评估集合：原文2/2",
+    "asset": "rev_text_130_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 227,
+    "after_original_page": 135,
+    "title": "时间序列封装保持通用底座：原文1/2",
+    "asset": "rev_text_135_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 228,
+    "after_original_page": 135,
+    "title": "时间序列封装保持通用底座：原文2/2",
+    "asset": "rev_text_135_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 232,
+    "after_original_page": 138,
+    "title": "预测分布不能只看均值：原文1/1",
+    "asset": "rev_text_138_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 236,
+    "after_original_page": 141,
+    "title": "ScoringBench的可比性检查：原文1/2",
+    "asset": "rev_text_141_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 237,
+    "after_original_page": 141,
+    "title": "ScoringBench的可比性检查：原文2/2",
+    "asset": "rev_text_141_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 241,
+    "after_original_page": 144,
+    "title": "代码、权重、论文截图分别许可：原文1/2",
+    "asset": "rev_text_144_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 242,
+    "after_original_page": 144,
+    "title": "代码、权重、论文截图分别许可：原文2/2",
+    "asset": "rev_text_144_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 244,
+    "after_original_page": 145,
+    "title": "获取模型与复现记录：原文1/2",
+    "asset": "rev_text_145_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 245,
+    "after_original_page": 145,
+    "title": "获取模型与复现记录：原文2/2",
+    "asset": "rev_text_145_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 247,
+    "after_original_page": 146,
+    "title": "贡献者与计算资源披露：原文1/4",
+    "asset": "rev_text_146_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 248,
+    "after_original_page": 146,
+    "title": "贡献者与计算资源披露：原文2/4",
+    "asset": "rev_text_146_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 249,
+    "after_original_page": 146,
+    "title": "贡献者与计算资源披露：原文3/4",
+    "asset": "rev_text_146_03",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 250,
+    "after_original_page": 146,
+    "title": "贡献者与计算资源披露：原文4/4",
+    "asset": "rev_text_146_04",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 251,
+    "after_original_page": 146,
+    "title": "计算资源与资助原文1",
+    "asset": "rev_acknowledgements_1",
+    "reason": "补全原贡献者页提及的致谢证据"
+  },
+  {
+    "new_page": 252,
+    "after_original_page": 146,
+    "title": "计算资源与资助原文2",
+    "asset": "rev_acknowledgements_2",
+    "reason": "补全原贡献者页提及的致谢证据"
+  },
+  {
+    "new_page": 256,
+    "after_original_page": 149,
+    "title": "掩膜选择也必须在训练折内：原文1/4",
+    "asset": "rev_text_149_01",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 257,
+    "after_original_page": 149,
+    "title": "掩膜选择也必须在训练折内：原文2/4",
+    "asset": "rev_text_149_02",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 258,
+    "after_original_page": 149,
+    "title": "掩膜选择也必须在训练折内：原文3/4",
+    "asset": "rev_text_149_03",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  },
+  {
+    "new_page": 259,
+    "after_original_page": 149,
+    "title": "掩膜选择也必须在训练折内：原文4/4",
+    "asset": "rev_text_149_04",
+    "reason": "原文截图字号过小，新增完整句分段大图"
+  }
+]

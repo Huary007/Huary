@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "slide_count": 266,
+  "original_slide_count": 156,
+  "added_slide_count": 110,
+  "asset_count": 253,
+  "index_sha256": "12bff17c5140b0f10811ea131bce6633a62f7087f7f97dbee7e515176b84e9d9",
+  "checks": {
+    "exactly_declared_notice_replacements": true,
+    "all_266_pages_preserved": true,
+    "all_original_images_byte_identical": true,
+    "all_embedded_images_byte_identical": true,
+    "source_pdf_byte_identical": true,
+    "scientific_body_and_equations_unchanged": true,
+    "authors_source_urls_original_page_numbers_unchanged": true,
+    "code_and_weight_license_paragraphs_unchanged": true,
+    "css_and_navigation_js_byte_identical": true,
+    "replacement_body_notices_no_longer_than_baseline": true,
+    "node_navigation_tests_pass": true,
+    "isolated_full_rebuild_byte_identical": true
+  },
+  "source_audit": "Original-paper verification completed",
+  "visual_review": "All original 156 slides, all 110 additional slides, the final overview table crops, short-window navigation fix, and public-use notice changes inspected in actual rendered pages.",
+  "experiment_replication": false
+}

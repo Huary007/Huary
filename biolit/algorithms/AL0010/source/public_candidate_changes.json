@@ -1,0 +1,32 @@
+{
+  "baseline_index_sha256": "b43edd136c62c5d63c85aefa6cdd6e36d8dbb86901faf4fe5bb08010a5b7cf80",
+  "purpose": "Noncommercial educational release; changes relative to the reviewed navigation-fix baseline",
+  "visible_changes": [
+    {
+      "pages": "1–266",
+      "field": "footer",
+      "before": "私人研读",
+      "after": "教育交流"
+    },
+    {
+      "page": 240,
+      "field": "third paragraph; use notice",
+      "before": "本课件仅私人研读，不公开发布。若要对外展示或再分发完整截图，应先核实作者/权利人许可。",
+      "after": "课件及原文截图用于非商业教育交流，保留作者、来源和页码。代码、权重仍按各自许可使用。"
+    },
+    {
+      "page": 265,
+      "field": "third paragraph; release status notice",
+      "before": "论文截图未获公开再分发授权。当前是私人学习稿，交叉核查与实际浏览器逐页验收由交付记录另报，不冒称人工同行评审。",
+      "after": "本课件用于非商业教育交流。交叉核查与实际浏览器逐页验收由交付记录另报，不冒称人工同行评审。"
+    }
+  ],
+  "preserved": [
+    "all 266 slides",
+    "all source images and embedded image bytes",
+    "all scientific teaching text and equations",
+    "all authors, source URLs and original page references",
+    "code and weights license statements",
+    "all CSS and JavaScript"
+  ]
+}
