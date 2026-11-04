@@ -1,0 +1,814 @@
+{
+  "base_pages": 130,
+  "pages": 133,
+  "new_pages": [
+    2,
+    29,
+    30
+  ],
+  "mapping": [
+    {
+      "old_page": 1,
+      "new_page": 1,
+      "title": "TabDPT：从真实表格学习预测规则",
+      "content_changes": {}
+    },
+    {
+      "old_page": 2,
+      "new_page": 3,
+      "title": "文献归属以PDF中的完整作者名单为据",
+      "content_changes": {}
+    },
+    {
+      "old_page": 3,
+      "new_page": 4,
+      "title": "三个动作构成同一条预测流程",
+      "content_changes": {}
+    },
+    {
+      "old_page": 4,
+      "new_page": 5,
+      "title": "论文版本和当前软件需要分开",
+      "content_changes": {}
+    },
+    {
+      "old_page": 5,
+      "new_page": 6,
+      "title": "ICL把训练样本放进输入",
+      "content_changes": {}
+    },
+    {
+      "old_page": 6,
+      "new_page": 7,
+      "title": "一行对应一个 token",
+      "content_changes": {}
+    },
+    {
+      "old_page": 7,
+      "new_page": 8,
+      "title": "固定输入宽度把不同表送入同一模型",
+      "content_changes": {}
+    },
+    {
+      "old_page": 8,
+      "new_page": 9,
+      "title": "图2a：一次批训练包含不同表",
+      "content_changes": {}
+    },
+    {
+      "old_page": 9,
+      "new_page": 10,
+      "title": "图2b：标签只加进上下文行",
+      "content_changes": {}
+    },
+    {
+      "old_page": 10,
+      "new_page": 11,
+      "title": "式1把输入、算子和输出写在一起",
+      "content_changes": {}
+    },
+    {
+      "old_page": 11,
+      "new_page": 12,
+      "title": "注意力限制阻断查询标签泄漏",
+      "content_changes": {}
+    },
+    {
+      "old_page": 12,
+      "new_page": 13,
+      "title": "一个二维嵌入计算例",
+      "content_changes": {}
+    },
+    {
+      "old_page": 13,
+      "new_page": 14,
+      "title": "自监督任务来自被拿走的一列",
+      "content_changes": {}
+    },
+    {
+      "old_page": 14,
+      "new_page": 15,
+      "title": "分类和回归目标用不同变换",
+      "content_changes": {}
+    },
+    {
+      "old_page": 15,
+      "new_page": 16,
+      "title": "把一列连续值变成三分类",
+      "content_changes": {}
+    },
+    {
+      "old_page": 16,
+      "new_page": 17,
+      "title": "列子采样改变同一目标的条件信息",
+      "content_changes": {}
+    },
+    {
+      "old_page": 17,
+      "new_page": 18,
+      "title": "检索用相似样本控制上下文长度",
+      "content_changes": {}
+    },
+    {
+      "old_page": 18,
+      "new_page": 19,
+      "title": "检索计算例：距离只来自可用特征",
+      "content_changes": {}
+    },
+    {
+      "old_page": 19,
+      "new_page": 20,
+      "title": "算法1：前向预测之后才更新权重",
+      "content_changes": {}
+    },
+    {
+      "old_page": 20,
+      "new_page": 21,
+      "title": "训练和推理共享局部上下文",
+      "content_changes": {}
+    },
+    {
+      "old_page": 21,
+      "new_page": 22,
+      "title": "超过10类时按位编码类别",
+      "content_changes": {}
+    },
+    {
+      "old_page": 22,
+      "new_page": 23,
+      "title": "集成平均削弱列顺序和类别编号影响",
+      "content_changes": {}
+    },
+    {
+      "old_page": 23,
+      "new_page": 24,
+      "title": "训练数据和测试数据来自不同集合",
+      "content_changes": {}
+    },
+    {
+      "old_page": 24,
+      "new_page": 25,
+      "title": "评估的范围比“所有表格”窄",
+      "content_changes": {}
+    },
+    {
+      "old_page": 25,
+      "new_page": 26,
+      "title": "基线有不同的调参和数据预算",
+      "content_changes": {}
+    },
+    {
+      "old_page": 26,
+      "new_page": 27,
+      "title": "四个指标回答不同问题",
+      "content_changes": {}
+    },
+    {
+      "old_page": 27,
+      "new_page": 28,
+      "title": "R²和交叉熵的手算例",
+      "content_changes": {
+        "caption_note": {
+          "old": null,
+          "new": "原式(2)对应缩放律，并非R²定义；手算数字仅为教学演算。"
+        }
+      }
+    },
+    {
+      "old_page": 28,
+      "new_page": 31,
+      "title": "表1：分类差异主要体现在准确率",
+      "content_changes": {}
+    },
+    {
+      "old_page": 29,
+      "new_page": 32,
+      "title": "表1：回归点估计略高但区间重叠",
+      "content_changes": {}
+    },
+    {
+      "old_page": 30,
+      "new_page": 33,
+      "title": "表1：不给验证集时应换一行比较",
+      "content_changes": {}
+    },
+    {
+      "old_page": 31,
+      "new_page": 34,
+      "title": "表1：树和深度基线也有强项",
+      "content_changes": {}
+    },
+    {
+      "old_page": 32,
+      "new_page": 35,
+      "title": "后续修订补充：2026-01-14的TabArena声明",
+      "content_changes": {}
+    },
+    {
+      "old_page": 33,
+      "new_page": 36,
+      "title": "图3a：每个格子是成对胜率",
+      "content_changes": {}
+    },
+    {
+      "old_page": 34,
+      "new_page": 37,
+      "title": "胜率忽略了胜负的幅度",
+      "content_changes": {}
+    },
+    {
+      "old_page": 35,
+      "new_page": 38,
+      "title": "图3b：越靠左上，部署预算越划算",
+      "content_changes": {}
+    },
+    {
+      "old_page": 36,
+      "new_page": 39,
+      "title": "固定模型在线推理时，树模型可更快",
+      "content_changes": {}
+    },
+    {
+      "old_page": 37,
+      "new_page": 40,
+      "title": "图4a：四种删减都会损伤表现",
+      "content_changes": {}
+    },
+    {
+      "old_page": 38,
+      "new_page": 41,
+      "title": "图4b：没有SSL时真实表会过拟合",
+      "content_changes": {}
+    },
+    {
+      "old_page": 39,
+      "new_page": 42,
+      "title": "真实数据优势有明确的对照范围",
+      "content_changes": {}
+    },
+    {
+      "old_page": 40,
+      "new_page": 43,
+      "title": "图1：模型和数据两个维度共同扩展",
+      "content_changes": {}
+    },
+    {
+      "old_page": 41,
+      "new_page": 44,
+      "title": "式2中每个参数都有职责",
+      "content_changes": {}
+    },
+    {
+      "old_page": 42,
+      "new_page": 45,
+      "title": "扩大一倍只缩小对应的那一项",
+      "content_changes": {}
+    },
+    {
+      "old_page": 43,
+      "new_page": 46,
+      "title": "为何数据规模按单元格计数",
+      "content_changes": {}
+    },
+    {
+      "old_page": 44,
+      "new_page": 47,
+      "title": "表2：每类10个标签，仍有未标注行",
+      "content_changes": {}
+    },
+    {
+      "old_page": 45,
+      "new_page": 48,
+      "title": "表2：平均提升0.80个百分点",
+      "content_changes": {}
+    },
+    {
+      "old_page": 46,
+      "new_page": 49,
+      "title": "表2：dna上的负结果不能藏起来",
+      "content_changes": {}
+    },
+    {
+      "old_page": 47,
+      "new_page": 50,
+      "title": "附录A：复杂预处理没有普遍收益",
+      "content_changes": {}
+    },
+    {
+      "old_page": 48,
+      "new_page": 51,
+      "title": "附录A：缺失标记没有带来预期收益",
+      "content_changes": {}
+    },
+    {
+      "old_page": 49,
+      "new_page": 52,
+      "title": "附录A：更复杂标签表示也会失败",
+      "content_changes": {}
+    },
+    {
+      "old_page": 50,
+      "new_page": 53,
+      "title": "附录A：逐单元格表示增加显存需求",
+      "content_changes": {}
+    },
+    {
+      "old_page": 51,
+      "new_page": 54,
+      "title": "图B.1a：训练表大小跨度很大",
+      "content_changes": {}
+    },
+    {
+      "old_page": 52,
+      "new_page": 55,
+      "title": "图B.1b：123张表的领域组成",
+      "content_changes": {}
+    },
+    {
+      "old_page": 53,
+      "new_page": 56,
+      "title": "表B.1：训练表逐项核对 1",
+      "content_changes": {}
+    },
+    {
+      "old_page": 54,
+      "new_page": 57,
+      "title": "表B.1：训练表逐项核对 2",
+      "content_changes": {}
+    },
+    {
+      "old_page": 55,
+      "new_page": 58,
+      "title": "表B.1：训练表逐项核对 3",
+      "content_changes": {}
+    },
+    {
+      "old_page": 56,
+      "new_page": 59,
+      "title": "表B.1：训练表逐项核对 4",
+      "content_changes": {}
+    },
+    {
+      "old_page": 57,
+      "new_page": 60,
+      "title": "表B.1：训练表逐项核对 5",
+      "content_changes": {}
+    },
+    {
+      "old_page": 58,
+      "new_page": 61,
+      "title": "表B.1：训练表逐项核对 6",
+      "content_changes": {}
+    },
+    {
+      "old_page": 59,
+      "new_page": 62,
+      "title": "表B.1：训练表逐项核对 7",
+      "content_changes": {}
+    },
+    {
+      "old_page": 60,
+      "new_page": 63,
+      "title": "表B.1：训练表逐项核对 8",
+      "content_changes": {}
+    },
+    {
+      "old_page": 61,
+      "new_page": 64,
+      "title": "表B.1：训练表逐项核对 9",
+      "content_changes": {}
+    },
+    {
+      "old_page": 62,
+      "new_page": 65,
+      "title": "表B.1：训练表逐项核对 10",
+      "content_changes": {}
+    },
+    {
+      "old_page": 63,
+      "new_page": 66,
+      "title": "表B.1：训练表逐项核对 11",
+      "content_changes": {}
+    },
+    {
+      "old_page": 64,
+      "new_page": 67,
+      "title": "表B.1：训练表逐项核对 12",
+      "content_changes": {}
+    },
+    {
+      "old_page": 65,
+      "new_page": 68,
+      "title": "表B.1：训练表逐项核对 13",
+      "content_changes": {}
+    },
+    {
+      "old_page": 66,
+      "new_page": 69,
+      "title": "表B.1：训练表逐项核对 14",
+      "content_changes": {}
+    },
+    {
+      "old_page": 67,
+      "new_page": 70,
+      "title": "表B.1：训练表逐项核对 15",
+      "content_changes": {}
+    },
+    {
+      "old_page": 68,
+      "new_page": 71,
+      "title": "表B.1：训练表逐项核对 16",
+      "content_changes": {}
+    },
+    {
+      "old_page": 69,
+      "new_page": 72,
+      "title": "表B.1：训练表逐项核对 17",
+      "content_changes": {}
+    },
+    {
+      "old_page": 70,
+      "new_page": 73,
+      "title": "附录B.1：污染排查用多种指纹",
+      "content_changes": {}
+    },
+    {
+      "old_page": 71,
+      "new_page": 74,
+      "title": "表C.1：论文主干的固定参数",
+      "content_changes": {}
+    },
+    {
+      "old_page": 72,
+      "new_page": 75,
+      "title": "表C.2：七种模型尺寸逐项列出",
+      "content_changes": {}
+    },
+    {
+      "old_page": 73,
+      "new_page": 76,
+      "title": "附录C：两阶段标准化与缺失填补",
+      "content_changes": {}
+    },
+    {
+      "old_page": 74,
+      "new_page": 77,
+      "title": "附录C：标准化后补零等价于均值填补",
+      "content_changes": {}
+    },
+    {
+      "old_page": 75,
+      "new_page": 78,
+      "title": "标准化回归的还原计算",
+      "content_changes": {}
+    },
+    {
+      "old_page": 76,
+      "new_page": 79,
+      "title": "附录C：优化设置决定复现配方",
+      "content_changes": {}
+    },
+    {
+      "old_page": 77,
+      "new_page": 80,
+      "title": "代码块1：创建训练任务数据对象",
+      "content_changes": {}
+    },
+    {
+      "old_page": 78,
+      "new_page": 81,
+      "title": "代码块1：预处理后保存近邻索引",
+      "content_changes": {}
+    },
+    {
+      "old_page": 79,
+      "new_page": 82,
+      "title": "代码块1：随机选择并重排特征",
+      "content_changes": {}
+    },
+    {
+      "old_page": 80,
+      "new_page": 83,
+      "title": "代码块1：先判断是否保留连续目标",
+      "content_changes": {}
+    },
+    {
+      "old_page": 81,
+      "new_page": 84,
+      "title": "代码块1：用随机边界生成类别",
+      "content_changes": {}
+    },
+    {
+      "old_page": 82,
+      "new_page": 85,
+      "title": "代码块1：低基数目标与随机取表",
+      "content_changes": {}
+    },
+    {
+      "old_page": 83,
+      "new_page": 86,
+      "title": "代码块1：随机选种子行和目标列",
+      "content_changes": {}
+    },
+    {
+      "old_page": 84,
+      "new_page": 87,
+      "title": "代码块1：遮蔽目标后提取近邻任务",
+      "content_changes": {}
+    },
+    {
+      "old_page": 85,
+      "new_page": 88,
+      "title": "代码块1：最后输出一个训练任务",
+      "content_changes": {}
+    },
+    {
+      "old_page": 86,
+      "new_page": 89,
+      "title": "代码块2：建立模型和训练循环",
+      "content_changes": {}
+    },
+    {
+      "old_page": 87,
+      "new_page": 90,
+      "title": "代码块2：上下文标签可见，查询标签遮蔽",
+      "content_changes": {}
+    },
+    {
+      "old_page": 88,
+      "new_page": 91,
+      "title": "代码块2：任务损失和反向传播",
+      "content_changes": {}
+    },
+    {
+      "old_page": 89,
+      "new_page": 92,
+      "title": "图E.1a：Elo把多次胜负汇成评分",
+      "content_changes": {}
+    },
+    {
+      "old_page": 90,
+      "new_page": 93,
+      "title": "图E.1b：Glicko2的误差条含评级不确定性",
+      "content_changes": {}
+    },
+    {
+      "old_page": 91,
+      "new_page": 94,
+      "title": "图F.1a：分类按行数分桶",
+      "content_changes": {}
+    },
+    {
+      "old_page": 92,
+      "new_page": 95,
+      "title": "图F.1b：回归也受任务组成影响",
+      "content_changes": {}
+    },
+    {
+      "old_page": 93,
+      "new_page": 96,
+      "title": "图F.2a：高维分类仍需输入压缩",
+      "content_changes": {}
+    },
+    {
+      "old_page": 94,
+      "new_page": 97,
+      "title": "图F.2b：宽表回归出现明显弱点",
+      "content_changes": {}
+    },
+    {
+      "old_page": 95,
+      "new_page": 98,
+      "title": "图F.3a：类别特征比例改变分类任务",
+      "content_changes": {}
+    },
+    {
+      "old_page": 96,
+      "new_page": 99,
+      "title": "图F.3b：类别比例与回归难度一起变化",
+      "content_changes": {}
+    },
+    {
+      "old_page": 97,
+      "new_page": 100,
+      "title": "图G.1：AUC的临界差异图",
+      "content_changes": {}
+    },
+    {
+      "old_page": 98,
+      "new_page": 101,
+      "title": "图G.2：准确率排序更有针对性",
+      "content_changes": {}
+    },
+    {
+      "old_page": 99,
+      "new_page": 102,
+      "title": "图G.3：相关系数也不能替代R²",
+      "content_changes": {}
+    },
+    {
+      "old_page": 100,
+      "new_page": 103,
+      "title": "图G.4：回归误差的排名结构",
+      "content_changes": {}
+    },
+    {
+      "old_page": 101,
+      "new_page": 104,
+      "title": "Checklist 1：主张必须与证据范围一致",
+      "content_changes": {}
+    },
+    {
+      "old_page": 102,
+      "new_page": 105,
+      "title": "Checklist 2：局限应当明确讨论",
+      "content_changes": {}
+    },
+    {
+      "old_page": 103,
+      "new_page": 106,
+      "title": "Checklist 3：没有待证明的理论定理",
+      "content_changes": {}
+    },
+    {
+      "old_page": 104,
+      "new_page": 107,
+      "title": "Checklist 3续：NA的理由来自原文",
+      "content_changes": {}
+    },
+    {
+      "old_page": 105,
+      "new_page": 108,
+      "title": "Checklist 4：方法与实验支持复现",
+      "content_changes": {}
+    },
+    {
+      "old_page": 106,
+      "new_page": 109,
+      "title": "Checklist 5：开放代码、权重与数据",
+      "content_changes": {}
+    },
+    {
+      "old_page": 107,
+      "new_page": 110,
+      "title": "Checklist 6：训练与测试细节",
+      "content_changes": {}
+    },
+    {
+      "old_page": 108,
+      "new_page": 111,
+      "title": "Checklist 7：误差条与统计信息",
+      "content_changes": {}
+    },
+    {
+      "old_page": 109,
+      "new_page": 112,
+      "title": "Checklist 8：完整计算时间没有记录",
+      "content_changes": {}
+    },
+    {
+      "old_page": 110,
+      "new_page": 113,
+      "title": "Checklist 9：伦理准则合规声明",
+      "content_changes": {}
+    },
+    {
+      "old_page": 111,
+      "new_page": 114,
+      "title": "Checklist 10：广泛社会影响回答NA",
+      "content_changes": {}
+    },
+    {
+      "old_page": 112,
+      "new_page": 115,
+      "title": "Checklist 11：高风险发布防护回答NA",
+      "content_changes": {}
+    },
+    {
+      "old_page": 113,
+      "new_page": 116,
+      "title": "Checklist 12：既有资产许可与归属",
+      "content_changes": {
+        "publication_note": "补充本课截图的非商业教育交流用途说明。"
+      }
+    },
+    {
+      "old_page": 114,
+      "new_page": 117,
+      "title": "Checklist 13：新资产的文档",
+      "content_changes": {}
+    },
+    {
+      "old_page": 115,
+      "new_page": 118,
+      "title": "Checklist 14：没有众包或人类受试者",
+      "content_changes": {}
+    },
+    {
+      "old_page": 116,
+      "new_page": 119,
+      "title": "Checklist 15：IRB回答NA",
+      "content_changes": {}
+    },
+    {
+      "old_page": 117,
+      "new_page": 120,
+      "title": "Checklist 16：核心方法没有使用LLM",
+      "content_changes": {}
+    },
+    {
+      "old_page": 118,
+      "new_page": 121,
+      "title": "官方训练代码已经与论文配置分叉",
+      "content_changes": {}
+    },
+    {
+      "old_page": 119,
+      "new_page": 122,
+      "title": "检索前是否遮蔽目标列须复核",
+      "content_changes": {}
+    },
+    {
+      "old_page": 120,
+      "new_page": 123,
+      "title": "预处理参数也需锁到具体版本",
+      "content_changes": {}
+    },
+    {
+      "old_page": 121,
+      "new_page": 124,
+      "title": "复现实验需要固定权重与汇总方式",
+      "content_changes": {}
+    },
+    {
+      "old_page": 122,
+      "new_page": 125,
+      "title": "软件许可与论文截图许可分开核对",
+      "content_changes": {
+        "publication_note": "更新截图复用用途说明，并保留代码、模型和数据分别适用原有条款的说明。"
+      }
+    },
+    {
+      "old_page": 123,
+      "new_page": 126,
+      "title": "微生物拉曼数据可先整理成预测表",
+      "content_changes": {
+        "note": {
+          "old": "DMD若指数字微镜器件：TabDPT处理结果表，不直接控制光路。",
+          "new": "DMD是数字微镜器件：TabDPT处理结果表，不直接控制光路。"
+        }
+      }
+    },
+    {
+      "old_page": 124,
+      "new_page": 127,
+      "title": "DMD压缩测量和表格预测是两层问题",
+      "content_changes": {}
+    },
+    {
+      "old_page": 125,
+      "new_page": 128,
+      "title": "一个分组验证计算例",
+      "content_changes": {}
+    },
+    {
+      "old_page": 126,
+      "new_page": 129,
+      "title": "建议同时比较小样本与跨批次表现",
+      "content_changes": {}
+    },
+    {
+      "old_page": 127,
+      "new_page": 130,
+      "title": "伪标签和域偏移需要单独检查",
+      "content_changes": {}
+    },
+    {
+      "old_page": 128,
+      "new_page": 131,
+      "title": "原始论文承认的能力边界",
+      "content_changes": {}
+    },
+    {
+      "old_page": 129,
+      "new_page": 132,
+      "title": "本课的证据和没有做的事",
+      "content_changes": {
+        "publication_note": "明确未训练模型、未跑基准、未使用微生物实验数据，并保留代码差异和实验结论的适用边界。"
+      }
+    },
+    {
+      "old_page": 130,
+      "new_page": 133,
+      "title": "带走三点",
+      "content_changes": {}
+    }
+  ],
+  "revision": "r2-public",
+  "notes": [
+    "原130页顺序保留，新增第2、29、30页。",
+    "原第27页在新版第28页保留原式(2)截图与正文，并增加说明：该式为缩放律，不是R²定义。",
+    "新版第126页明确DMD指数字微镜器件。",
+    "新版第116、125页说明用户确认截图可公开复用，限非商业教育交流；第132页说明未运行模型或基准。代码、模型和数据各自适用原有条款。"
+  ]
+}

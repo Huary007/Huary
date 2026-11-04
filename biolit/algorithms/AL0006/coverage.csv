@@ -1,0 +1,240 @@
+item,slide,title,image,source_version,source_page,source_url
+题名与作者,1,TabDPT：从真实表格学习预测规则,assets/f2b.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+摘要,1,TabDPT：从真实表格学习预测规则,assets/f2b.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+完整目录与章节页码,2,课程目录：章节与页码,assets/authors.png,arXiv v3（2026-01-17）,1,https://arxiv.org/pdf/2410.18164v3
+作者完整归属,3,文献归属以PDF中的完整作者名单为据,assets/authors.png,arXiv v3（2026-01-17）,1,https://arxiv.org/pdf/2410.18164v3
+版本元数据差异,3,文献归属以PDF中的完整作者名单为据,assets/authors.png,arXiv v3（2026-01-17）,1,https://arxiv.org/pdf/2410.18164v3
+1 引言,4,三个动作构成同一条预测流程,assets/f2a.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+2 相关工作,4,三个动作构成同一条预测流程,assets/f2a.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+3 方法总览,6,ICL把训练样本放进输入,assets/f2b.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+3.1 编码器,6,ICL把训练样本放进输入,assets/f2b.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+3.1 特征维度,8,固定输入宽度把不同表送入同一模型,assets/c1.png,arXiv v3（2026-01-17）,18,https://arxiv.org/pdf/2410.18164v3
+3.4 Features,8,固定输入宽度把不同表送入同一模型,assets/c1.png,arXiv v3（2026-01-17）,18,https://arxiv.org/pdf/2410.18164v3
+Figure 2a,9,图2a：一次批训练包含不同表,assets/f2a.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+Figure 2b,10,图2b：标签只加进上下文行,assets/f2b.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+Equation 1,11,式1把输入、算子和输出写在一起,assets/eq1.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+3.2 SSL,14,自监督任务来自被拿走的一列,assets/f2a.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+SSL 任务构造,15,分类和回归目标用不同变换,assets/code1c.png,arXiv v3（2026-01-17）,19,https://arxiv.org/pdf/2410.18164v3
+SSL 列增强,17,列子采样改变同一目标的条件信息,assets/code1b.png,arXiv v3（2026-01-17）,19,https://arxiv.org/pdf/2410.18164v3
+3.3 Retrieval,18,检索用相似样本控制上下文长度,assets/f2a.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+3.4 Inference,18,检索用相似样本控制上下文长度,assets/f2a.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+Algorithm 1,20,算法1：前向预测之后才更新权重,assets/alg1.png,arXiv v3（2026-01-17）,4,https://arxiv.org/pdf/2410.18164v3
+训练推理对齐,21,训练和推理共享局部上下文,assets/f4a.png,arXiv v3（2026-01-17）,8,https://arxiv.org/pdf/2410.18164v3
+3.4 Classes,22,超过10类时按位编码类别,assets/c1.png,arXiv v3（2026-01-17）,18,https://arxiv.org/pdf/2410.18164v3
+Inference ensemble,23,集成平均削弱列顺序和类别编号影响,assets/f2b.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+4.1 Training data,24,训练数据和测试数据来自不同集合,assets/b1a.png,arXiv v3（2026-01-17）,18,https://arxiv.org/pdf/2410.18164v3
+4.1 Evaluation data,24,训练数据和测试数据来自不同集合,assets/b1a.png,arXiv v3（2026-01-17）,18,https://arxiv.org/pdf/2410.18164v3
+4.2 Baselines,26,基线有不同的调参和数据预算,assets/t1top.png,arXiv v3（2026-01-17）,7,https://arxiv.org/pdf/2410.18164v3
+四项指标,27,四个指标回答不同问题,assets/t1top.png,arXiv v3（2026-01-17）,7,https://arxiv.org/pdf/2410.18164v3
+补充 R²原文指标证据,29,指标补充：原文怎样报告R²,assets/t1top.png,arXiv v3（2026-01-17）,7,https://arxiv.org/pdf/2410.18164v3
+补充 交叉熵原文指标证据,30,指标补充：交叉熵不等于缩放律,assets/metric_loss_text.png,arXiv v3（2026-01-17）,9,https://arxiv.org/pdf/2410.18164v3
+Table 1 分类,31,表1：分类差异主要体现在准确率,assets/t1top.png,arXiv v3（2026-01-17）,7,https://arxiv.org/pdf/2410.18164v3
+Table 1 回归,32,表1：回归点估计略高但区间重叠,assets/t1top.png,arXiv v3（2026-01-17）,7,https://arxiv.org/pdf/2410.18164v3
+Table 1 no val.,33,表1：不给验证集时应换一行比较,assets/t1top.png,arXiv v3（2026-01-17）,7,https://arxiv.org/pdf/2410.18164v3
+Table 1 全部基线行,34,表1：树和深度基线也有强项,assets/t1bottom.png,arXiv v3（2026-01-17）,7,https://arxiv.org/pdf/2410.18164v3
+1 引言 TabArena日期声明,35,后续修订补充：2026-01-14的TabArena声明,assets/leaderboard.png,arXiv v3（2026-01-17）,2,https://arxiv.org/pdf/2410.18164v3
+Figure 3a,36,图3a：每个格子是成对胜率,assets/f3a.png,arXiv v3（2026-01-17）,8,https://arxiv.org/pdf/2410.18164v3
+Figure 3b,38,图3b：越靠左上，部署预算越划算,assets/f3b.png,arXiv v3（2026-01-17）,8,https://arxiv.org/pdf/2410.18164v3
+4.7 Inference speed,38,图3b：越靠左上，部署预算越划算,assets/f3b.png,arXiv v3（2026-01-17）,8,https://arxiv.org/pdf/2410.18164v3
+Figure 4a,40,图4a：四种删减都会损伤表现,assets/f4a.png,arXiv v3（2026-01-17）,8,https://arxiv.org/pdf/2410.18164v3
+Figure 4b,41,图4b：没有SSL时真实表会过拟合,assets/f4b.png,arXiv v3（2026-01-17）,8,https://arxiv.org/pdf/2410.18164v3
+Figure 1,43,图1：模型和数据两个维度共同扩展,assets/f1.png,arXiv v3（2026-01-17）,1,https://arxiv.org/pdf/2410.18164v3
+4.5 Scaling laws,43,图1：模型和数据两个维度共同扩展,assets/f1.png,arXiv v3（2026-01-17）,1,https://arxiv.org/pdf/2410.18164v3
+Equation 2,44,式2中每个参数都有职责,assets/eq2.png,arXiv v3（2026-01-17）,9,https://arxiv.org/pdf/2410.18164v3
+Table 2 设置,47,表2：每类10个标签，仍有未标注行,assets/t2.png,arXiv v3（2026-01-17）,9,https://arxiv.org/pdf/2410.18164v3
+4.6 Few-shot,47,表2：每类10个标签，仍有未标注行,assets/t2.png,arXiv v3（2026-01-17）,9,https://arxiv.org/pdf/2410.18164v3
+Table 2 全部方法,48,表2：平均提升0.80个百分点,assets/t2.png,arXiv v3（2026-01-17）,9,https://arxiv.org/pdf/2410.18164v3
+Table 2 负结果,49,表2：dna上的负结果不能藏起来,assets/t2.png,arXiv v3（2026-01-17）,9,https://arxiv.org/pdf/2410.18164v3
+Appendix A 预处理,50,附录A：复杂预处理没有普遍收益,assets/a_pre.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Appendix A NaN,51,附录A：缺失标记没有带来预期收益,assets/a_nan.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Appendix A 类嵌入,52,附录A：更复杂标签表示也会失败,assets/a_embed.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Appendix A yctx嵌入,52,附录A：更复杂标签表示也会失败,assets/a_embed.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Appendix A cell tokens,53,附录A：逐单元格表示增加显存需求,assets/a_cell.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Figure B.1a,54,图B.1a：训练表大小跨度很大,assets/b1a.png,arXiv v3（2026-01-17）,18,https://arxiv.org/pdf/2410.18164v3
+Figure B.1b,55,图B.1b：123张表的领域组成,assets/b1b.png,arXiv v3（2026-01-17）,18,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 24,56,表B.1：训练表逐项核对 1,assets/tb_15_0.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 30,56,表B.1：训练表逐项核对 1,assets/tb_15_0.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 184,56,表B.1：训练表逐项核对 1,assets/tb_15_0.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 273,56,表B.1：训练表逐项核对 1,assets/tb_15_0.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 312,56,表B.1：训练表逐项核对 1,assets/tb_15_0.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 375,56,表B.1：训练表逐项核对 1,assets/tb_15_0.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 382,56,表B.1：训练表逐项核对 1,assets/tb_15_0.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 389,56,表B.1：训练表逐项核对 1,assets/tb_15_0.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 396,57,表B.1：训练表逐项核对 2,assets/tb_15_8.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 802,57,表B.1：训练表逐项核对 2,assets/tb_15_8.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 816,57,表B.1：训练表逐项核对 2,assets/tb_15_8.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 821,57,表B.1：训练表逐项核对 2,assets/tb_15_8.png,arXiv v3（2026-01-17）,15,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 843,58,表B.1：训练表逐项核对 3,assets/tb_16_0.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 846,58,表B.1：训练表逐项核对 3,assets/tb_16_0.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 871,58,表B.1：训练表逐项核对 3,assets/tb_16_0.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 930,58,表B.1：训练表逐项核对 3,assets/tb_16_0.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 966,58,表B.1：训练表逐项核对 3,assets/tb_16_0.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 981,58,表B.1：训练表逐项核对 3,assets/tb_16_0.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1002,58,表B.1：训练表逐项核对 3,assets/tb_16_0.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1018,58,表B.1：训练表逐项核对 3,assets/tb_16_0.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1036,59,表B.1：训练表逐项核对 4,assets/tb_16_8.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1037,59,表B.1：训练表逐项核对 4,assets/tb_16_8.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1043,59,表B.1：训练表逐项核对 4,assets/tb_16_8.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1044,59,表B.1：训练表逐项核对 4,assets/tb_16_8.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1111,59,表B.1：训练表逐项核对 4,assets/tb_16_8.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1112,59,表B.1：训练表逐项核对 4,assets/tb_16_8.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1116,59,表B.1：训练表逐项核对 4,assets/tb_16_8.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1118,59,表B.1：训练表逐项核对 4,assets/tb_16_8.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1120,60,表B.1：训练表逐项核对 5,assets/tb_16_16.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1130,60,表B.1：训练表逐项核对 5,assets/tb_16_16.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1142,60,表B.1：训练表逐项核对 5,assets/tb_16_16.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1169,60,表B.1：训练表逐项核对 5,assets/tb_16_16.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1444,60,表B.1：训练表逐项核对 5,assets/tb_16_16.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1453,60,表B.1：训练表逐项核对 5,assets/tb_16_16.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1457,60,表B.1：训练表逐项核对 5,assets/tb_16_16.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1459,60,表B.1：训练表逐项核对 5,assets/tb_16_16.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1466,61,表B.1：训练表逐项核对 6,assets/tb_16_24.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1471,61,表B.1：训练表逐项核对 6,assets/tb_16_24.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1476,61,表B.1：训练表逐项核对 6,assets/tb_16_24.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1477,61,表B.1：训练表逐项核对 6,assets/tb_16_24.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1479,61,表B.1：训练表逐项核对 6,assets/tb_16_24.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1481,61,表B.1：训练表逐项核对 6,assets/tb_16_24.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1483,61,表B.1：训练表逐项核对 6,assets/tb_16_24.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1493,61,表B.1：训练表逐项核对 6,assets/tb_16_24.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1503,62,表B.1：训练表逐项核对 7,assets/tb_16_32.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1507,62,表B.1：训练表逐项核对 7,assets/tb_16_32.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1509,62,表B.1：训练表逐项核对 7,assets/tb_16_32.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1567,62,表B.1：训练表逐项核对 7,assets/tb_16_32.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1568,62,表B.1：训练表逐项核对 7,assets/tb_16_32.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 1596,62,表B.1：训练表逐项核对 7,assets/tb_16_32.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 3050,62,表B.1：训练表逐项核对 7,assets/tb_16_32.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 3277,62,表B.1：训练表逐项核对 7,assets/tb_16_32.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 4135,63,表B.1：训练表逐项核对 8,assets/tb_16_40.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 4535,63,表B.1：训练表逐项核对 8,assets/tb_16_40.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 4549,63,表B.1：训练表逐项核对 8,assets/tb_16_40.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 23380,63,表B.1：训练表逐项核对 8,assets/tb_16_40.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 23512,63,表B.1：训练表逐项核对 8,assets/tb_16_40.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 40536,63,表B.1：训练表逐项核对 8,assets/tb_16_40.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 40646,63,表B.1：训练表逐项核对 8,assets/tb_16_40.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 40679,63,表B.1：训练表逐项核对 8,assets/tb_16_40.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 40680,64,表B.1：训练表逐项核对 9,assets/tb_16_48.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 40685,64,表B.1：训练表逐项核对 9,assets/tb_16_48.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 40706,64,表B.1：训练表逐项核对 9,assets/tb_16_48.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 40733,64,表B.1：训练表逐项核对 9,assets/tb_16_48.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 40900,64,表B.1：训练表逐项核对 9,assets/tb_16_48.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41138,64,表B.1：训练表逐项核对 9,assets/tb_16_48.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41142,64,表B.1：训练表逐项核对 9,assets/tb_16_48.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41143,64,表B.1：训练表逐项核对 9,assets/tb_16_48.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41144,65,表B.1：训练表逐项核对 10,assets/tb_16_56.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41145,65,表B.1：训练表逐项核对 10,assets/tb_16_56.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41146,65,表B.1：训练表逐项核对 10,assets/tb_16_56.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41147,65,表B.1：训练表逐项核对 10,assets/tb_16_56.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41150,65,表B.1：训练表逐项核对 10,assets/tb_16_56.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41156,65,表B.1：训练表逐项核对 10,assets/tb_16_56.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41159,65,表B.1：训练表逐项核对 10,assets/tb_16_56.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41161,65,表B.1：训练表逐项核对 10,assets/tb_16_56.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41162,66,表B.1：训练表逐项核对 11,assets/tb_16_64.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41163,66,表B.1：训练表逐项核对 11,assets/tb_16_64.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41164,66,表B.1：训练表逐项核对 11,assets/tb_16_64.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41165,66,表B.1：训练表逐项核对 11,assets/tb_16_64.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41166,66,表B.1：训练表逐项核对 11,assets/tb_16_64.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41167,66,表B.1：训练表逐项核对 11,assets/tb_16_64.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41168,66,表B.1：训练表逐项核对 11,assets/tb_16_64.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41169,66,表B.1：训练表逐项核对 11,assets/tb_16_64.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41434,67,表B.1：训练表逐项核对 12,assets/tb_16_72.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41540,67,表B.1：训练表逐项核对 12,assets/tb_16_72.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 41980,67,表B.1：训练表逐项核对 12,assets/tb_16_72.png,arXiv v3（2026-01-17）,16,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 42563,68,表B.1：训练表逐项核对 13,assets/tb_17_0.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 42572,68,表B.1：训练表逐项核对 13,assets/tb_17_0.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 42705,68,表B.1：训练表逐项核对 13,assets/tb_17_0.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 42724,68,表B.1：训练表逐项核对 13,assets/tb_17_0.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 42727,68,表B.1：训练表逐项核对 13,assets/tb_17_0.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 42728,68,表B.1：训练表逐项核对 13,assets/tb_17_0.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 42730,68,表B.1：训练表逐项核对 13,assets/tb_17_0.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 42732,68,表B.1：训练表逐项核对 13,assets/tb_17_0.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 42734,69,表B.1：训练表逐项核对 14,assets/tb_17_8.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 42742,69,表B.1：训练表逐项核对 14,assets/tb_17_8.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 42746,69,表B.1：训练表逐项核对 14,assets/tb_17_8.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 43071,69,表B.1：训练表逐项核对 14,assets/tb_17_8.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 43072,69,表B.1：训练表逐项核对 14,assets/tb_17_8.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 44055,69,表B.1：训练表逐项核对 14,assets/tb_17_8.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 44056,69,表B.1：训练表逐项核对 14,assets/tb_17_8.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 44061,69,表B.1：训练表逐项核对 14,assets/tb_17_8.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 44063,70,表B.1：训练表逐项核对 15,assets/tb_17_16.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 44065,70,表B.1：训练表逐项核对 15,assets/tb_17_16.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 44068,70,表B.1：训练表逐项核对 15,assets/tb_17_16.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 44069,70,表B.1：训练表逐项核对 15,assets/tb_17_16.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 44089,70,表B.1：训练表逐项核对 15,assets/tb_17_16.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 44122,70,表B.1：训练表逐项核对 15,assets/tb_17_16.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 44136,70,表B.1：训练表逐项核对 15,assets/tb_17_16.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 44137,70,表B.1：训练表逐项核对 15,assets/tb_17_16.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 44145,71,表B.1：训练表逐项核对 16,assets/tb_17_24.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 45020,71,表B.1：训练表逐项核对 16,assets/tb_17_24.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 45022,71,表B.1：训练表逐项核对 16,assets/tb_17_24.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 45026,71,表B.1：训练表逐项核对 16,assets/tb_17_24.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 45032,71,表B.1：训练表逐项核对 16,assets/tb_17_24.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 45038,71,表B.1：训练表逐项核对 16,assets/tb_17_24.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 45039,71,表B.1：训练表逐项核对 16,assets/tb_17_24.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 45041,71,表B.1：训练表逐项核对 16,assets/tb_17_24.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 45043,72,表B.1：训练表逐项核对 17,assets/tb_17_32.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 45045,72,表B.1：训练表逐项核对 17,assets/tb_17_32.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 45046,72,表B.1：训练表逐项核对 17,assets/tb_17_32.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table B.1 row 45047,72,表B.1：训练表逐项核对 17,assets/tb_17_32.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Appendix B.1,73,附录B.1：污染排查用多种指纹,assets/b_contam.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Table C.1,74,表C.1：论文主干的固定参数,assets/c1.png,arXiv v3（2026-01-17）,18,https://arxiv.org/pdf/2410.18164v3
+Table C.2,75,表C.2：七种模型尺寸逐项列出,assets/c2.png,arXiv v3（2026-01-17）,19,https://arxiv.org/pdf/2410.18164v3
+Appendix C.1 preprocessing,76,附录C：两阶段标准化与缺失填补,assets/c_pre.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Appendix C.1 retrieval,76,附录C：两阶段标准化与缺失填补,assets/c_pre.png,arXiv v3（2026-01-17）,17,https://arxiv.org/pdf/2410.18164v3
+Appendix C.1 missing,77,附录C：标准化后补零等价于均值填补,assets/c_nan.png,arXiv v3（2026-01-17）,18,https://arxiv.org/pdf/2410.18164v3
+Appendix C.1 optimizer,79,附录C：优化设置决定复现配方,assets/c_opt.png,arXiv v3（2026-01-17）,18,https://arxiv.org/pdf/2410.18164v3
+Code Block 1 lines 1-7,80,代码块1：创建训练任务数据对象,assets/code1a.png,arXiv v3（2026-01-17）,19,https://arxiv.org/pdf/2410.18164v3
+Code Block 1 lines 8-12,81,代码块1：预处理后保存近邻索引,assets/code1a2.png,arXiv v3（2026-01-17）,19,https://arxiv.org/pdf/2410.18164v3
+Code Block 1 lines 14-19,82,代码块1：随机选择并重排特征,assets/code1b.png,arXiv v3（2026-01-17）,19,https://arxiv.org/pdf/2410.18164v3
+Code Block 1 lines 21-27,83,代码块1：先判断是否保留连续目标,assets/code1c.png,arXiv v3（2026-01-17）,19,https://arxiv.org/pdf/2410.18164v3
+Code Block 1 lines 28-33,84,代码块1：用随机边界生成类别,assets/code1c2.png,arXiv v3（2026-01-17）,19,https://arxiv.org/pdf/2410.18164v3
+Code Block 1 lines 34-43,85,代码块1：低基数目标与随机取表,assets/code1d.png,arXiv v3（2026-01-17）,19,https://arxiv.org/pdf/2410.18164v3
+Code Block 1 lines 44-50,86,代码块1：随机选种子行和目标列,assets/code1e.png,arXiv v3（2026-01-17）,20,https://arxiv.org/pdf/2410.18164v3
+Code Block 1 lines 52-56,87,代码块1：遮蔽目标后提取近邻任务,assets/code1e2.png,arXiv v3（2026-01-17）,20,https://arxiv.org/pdf/2410.18164v3
+Code Block 1 lines 58-64,88,代码块1：最后输出一个训练任务,assets/code1f.png,arXiv v3（2026-01-17）,20,https://arxiv.org/pdf/2410.18164v3
+Code Block 2 lines 1-7,89,代码块2：建立模型和训练循环,assets/code2a.png,arXiv v3（2026-01-17）,20,https://arxiv.org/pdf/2410.18164v3
+Code Block 2 lines 8-12,90,代码块2：上下文标签可见，查询标签遮蔽,assets/code2a2.png,arXiv v3（2026-01-17）,20,https://arxiv.org/pdf/2410.18164v3
+Code Block 2 lines 14-21,91,代码块2：任务损失和反向传播,assets/code2b.png,arXiv v3（2026-01-17）,20,https://arxiv.org/pdf/2410.18164v3
+Figure E.1a,92,图E.1a：Elo把多次胜负汇成评分,assets/e1a.png,arXiv v3（2026-01-17）,21,https://arxiv.org/pdf/2410.18164v3
+Appendix E Elo,92,图E.1a：Elo把多次胜负汇成评分,assets/e1a.png,arXiv v3（2026-01-17）,21,https://arxiv.org/pdf/2410.18164v3
+Figure E.1b,93,图E.1b：Glicko2的误差条含评级不确定性,assets/e1b.png,arXiv v3（2026-01-17）,21,https://arxiv.org/pdf/2410.18164v3
+Appendix E Glicko2,93,图E.1b：Glicko2的误差条含评级不确定性,assets/e1b.png,arXiv v3（2026-01-17）,21,https://arxiv.org/pdf/2410.18164v3
+Figure F.1a,94,图F.1a：分类按行数分桶,assets/F1a.png,arXiv v3（2026-01-17）,22,https://arxiv.org/pdf/2410.18164v3
+Figure F.1b,95,图F.1b：回归也受任务组成影响,assets/F1b.png,arXiv v3（2026-01-17）,22,https://arxiv.org/pdf/2410.18164v3
+Figure F.2a,96,图F.2a：高维分类仍需输入压缩,assets/F2a.png,arXiv v3（2026-01-17）,22,https://arxiv.org/pdf/2410.18164v3
+Figure F.2b,97,图F.2b：宽表回归出现明显弱点,assets/F2b.png,arXiv v3（2026-01-17）,22,https://arxiv.org/pdf/2410.18164v3
+Figure F.3a,98,图F.3a：类别特征比例改变分类任务,assets/F3a.png,arXiv v3（2026-01-17）,22,https://arxiv.org/pdf/2410.18164v3
+Figure F.3b,99,图F.3b：类别比例与回归难度一起变化,assets/F3b.png,arXiv v3（2026-01-17）,22,https://arxiv.org/pdf/2410.18164v3
+Appendix F 缺失图披露,99,图F.3b：类别比例与回归难度一起变化,assets/F3b.png,arXiv v3（2026-01-17）,22,https://arxiv.org/pdf/2410.18164v3
+Figure G.1,100,图G.1：AUC的临界差异图,assets/g1.png,arXiv v3（2026-01-17）,24,https://arxiv.org/pdf/2410.18164v3
+Figure G.2,101,图G.2：准确率排序更有针对性,assets/g2.png,arXiv v3（2026-01-17）,24,https://arxiv.org/pdf/2410.18164v3
+Figure G.3,102,图G.3：相关系数也不能替代R²,assets/g3.png,arXiv v3（2026-01-17）,24,https://arxiv.org/pdf/2410.18164v3
+Figure G.4,103,图G.4：回归误差的排名结构,assets/g4.png,arXiv v3（2026-01-17）,24,https://arxiv.org/pdf/2410.18164v3
+Appendix G,103,图G.4：回归误差的排名结构,assets/g4.png,arXiv v3（2026-01-17）,24,https://arxiv.org/pdf/2410.18164v3
+Checklist 1,104,Checklist 1：主张必须与证据范围一致,assets/ck1.png,作者会议稿（2025-10-24）,15,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 2,105,Checklist 2：局限应当明确讨论,assets/ck2.png,作者会议稿（2025-10-24）,15,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 3 question,106,Checklist 3：没有待证明的理论定理,assets/ck3a.png,作者会议稿（2025-10-24）,15,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 3 justification,107,Checklist 3续：NA的理由来自原文,assets/ck3b.png,作者会议稿（2025-10-24）,16,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 4,108,Checklist 4：方法与实验支持复现,assets/ck4.png,作者会议稿（2025-10-24）,16,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 5,109,Checklist 5：开放代码、权重与数据,assets/ck5.png,作者会议稿（2025-10-24）,17,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 6,110,Checklist 6：训练与测试细节,assets/ck6.png,作者会议稿（2025-10-24）,17,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 7,111,Checklist 7：误差条与统计信息,assets/ck7.png,作者会议稿（2025-10-24）,17,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 8,112,Checklist 8：完整计算时间没有记录,assets/ck8.png,作者会议稿（2025-10-24）,18,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 9,113,Checklist 9：伦理准则合规声明,assets/ck9.png,作者会议稿（2025-10-24）,18,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 10,114,Checklist 10：广泛社会影响回答NA,assets/ck10.png,作者会议稿（2025-10-24）,18,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 11,115,Checklist 11：高风险发布防护回答NA,assets/ck11.png,作者会议稿（2025-10-24）,19,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 12,116,Checklist 12：既有资产许可与归属,assets/ck12.png,作者会议稿（2025-10-24）,19,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 13,117,Checklist 13：新资产的文档,assets/ck13.png,作者会议稿（2025-10-24）,20,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 14,118,Checklist 14：没有众包或人类受试者,assets/ck14.png,作者会议稿（2025-10-24）,20,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 15,119,Checklist 15：IRB回答NA,assets/ck15.png,作者会议稿（2025-10-24）,20,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+Checklist 16,120,Checklist 16：核心方法没有使用LLM,assets/ck16.png,作者会议稿（2025-10-24）,21,https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf
+官方训练配置,121,官方训练代码已经与论文配置分叉,assets/c1.png,arXiv v3（2026-01-17）,18,https://arxiv.org/pdf/2410.18164v3
+官方输出头,121,官方训练代码已经与论文配置分叉,assets/c1.png,arXiv v3（2026-01-17）,18,https://arxiv.org/pdf/2410.18164v3
+论文代码检索差异,122,检索前是否遮蔽目标列须复核,assets/code1e2.png,arXiv v3（2026-01-17）,20,https://arxiv.org/pdf/2410.18164v3
+官方预处理差异,123,预处理参数也需锁到具体版本,assets/f2b.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+官方推理代码,124,复现实验需要固定权重与汇总方式,assets/t1top.png,arXiv v3（2026-01-17）,7,https://arxiv.org/pdf/2410.18164v3
+README数值边界,124,复现实验需要固定权重与汇总方式,assets/t1top.png,arXiv v3（2026-01-17）,7,https://arxiv.org/pdf/2410.18164v3
+许可核验,125,软件许可与论文截图许可分开核对,assets/f2b.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+微生物DMD拉曼适用性,126,微生物拉曼数据可先整理成预测表,assets/f2b.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3
+5 Limitations,131,原始论文承认的能力边界,assets/limits.png,arXiv v3（2026-01-17）,10,https://arxiv.org/pdf/2410.18164v3
+覆盖说明,132,本课的证据和没有做的事,assets/f1.png,arXiv v3（2026-01-17）,1,https://arxiv.org/pdf/2410.18164v3
+末页总结,133,带走三点,assets/f2b.png,arXiv v3（2026-01-17）,5,https://arxiv.org/pdf/2410.18164v3

@@ -1,0 +1,2343 @@
+[
+  {
+    "title": "TabDPT：从真实表格学习预测规则",
+    "key": "f2b",
+    "bullets": [
+      "AL0006 · 中文教学课件",
+      "Ma 等，NeurIPS 2025；正式题名含 on Real Data。",
+      "核心任务：给定新表的已标注行，为未标注行做分类或回归。"
+    ],
+    "section": "课程起点",
+    "note": "固定论文版本；文中计算例均为教学例，不是新实验。",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "题名与作者",
+      "摘要"
+    ],
+    "number": 1
+  },
+  {
+    "title": "课程目录：章节与页码",
+    "key": "authors",
+    "bullets": [
+      "<a href=\"#slide-1\" onclick=\"window.goToSlide(1);return false\">01　开场与阅读路线　<span class=\"toc-range\">第1，3–5页</span></a>",
+      "<a href=\"#slide-6\" onclick=\"window.goToSlide(6);return false\">02　模型、SSL与检索　<span class=\"toc-range\">第6–23页</span></a>",
+      "<a href=\"#slide-24\" onclick=\"window.goToSlide(24);return false\">03　评估设置与指标　<span class=\"toc-range\">第24–30页</span></a>",
+      "<a href=\"#slide-31\" onclick=\"window.goToSlide(31);return false\">04　主结果、胜率与速度　<span class=\"toc-range\">第31–39页</span></a>",
+      "<a href=\"#slide-40\" onclick=\"window.goToSlide(40);return false\">05　消融、缩放与少样本　<span class=\"toc-range\">第40–49页</span></a>",
+      "<a href=\"#slide-50\" onclick=\"window.goToSlide(50);return false\">06　附录A：失败尝试　<span class=\"toc-range\">第50–53页</span></a>",
+      "<a href=\"#slide-54\" onclick=\"window.goToSlide(54);return false\">07　附录B：数据与污染　<span class=\"toc-range\">第54–73页</span></a>",
+      "<a href=\"#slide-74\" onclick=\"window.goToSlide(74);return false\">08　附录C：架构与训练　<span class=\"toc-range\">第74–79页</span></a>",
+      "<a href=\"#slide-80\" onclick=\"window.goToSlide(80);return false\">09　附录D：伪代码逐段　<span class=\"toc-range\">第80–91页</span></a>",
+      "<a href=\"#slide-92\" onclick=\"window.goToSlide(92);return false\">10　附录E–G：排名与分层　<span class=\"toc-range\">第92–103页</span></a>",
+      "<a href=\"#slide-104\" onclick=\"window.goToSlide(104);return false\">11　会议版Checklist　<span class=\"toc-range\">第104–120页</span></a>",
+      "<a href=\"#slide-121\" onclick=\"window.goToSlide(121);return false\">12　官方代码版本与许可　<span class=\"toc-range\">第121–125页</span></a>",
+      "<a href=\"#slide-126\" onclick=\"window.goToSlide(126);return false\">13　DMD拉曼迁移与边界　<span class=\"toc-range\">第126–132页</span></a>",
+      "<a href=\"#slide-133\" onclick=\"window.goToSlide(133);return false\">14　50字内总结　<span class=\"toc-range\">第133页</span></a>"
+    ],
+    "section": "完整目录",
+    "note": "点击章节可跳转。O键打开逐页目录；左右键按顺序翻页。",
+    "layout": "toc",
+    "formula": "",
+    "tags": [
+      "完整目录与章节页码"
+    ],
+    "number": 2
+  },
+  {
+    "title": "文献归属以PDF中的完整作者名单为据",
+    "key": "authors",
+    "bullets": [
+      "正式出版：Advances in Neural Information Processing Systems 38，2025。",
+      "论文PDF列10位作者，机构为Layer 6 AI；Junwei Ma与Valentin Thomas标注共同第一作者。",
+      "正式落地页仅列9位作者，与PDF元数据不一致。此处保留PDF完整名单，不自行删除作者。"
+    ],
+    "section": "文献身份",
+    "note": "DOI：10.52202/085713-5748；arXiv：2410.18164v3。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "作者完整归属",
+      "版本元数据差异"
+    ],
+    "number": 3
+  },
+  {
+    "title": "三个动作构成同一条预测流程",
+    "key": "f2a",
+    "bullets": [
+      "预训练时换一列作目标，利用真实表格内的关系产生任务。",
+      "按相似度检索邻近行，让训练时的上下文接近推理时的上下文。",
+      "以整行作为 token，一次前向传播输出新行的预测。"
+    ],
+    "section": "课程路线",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "1 引言",
+      "2 相关工作"
+    ],
+    "number": 4
+  },
+  {
+    "title": "论文版本和当前软件需要分开",
+    "key": "t1top",
+    "bullets": [
+      "论文采用 NeurIPS 2025 正式版，31页；arXiv v3为2026-01-17、24页。",
+      "科学图截图标注arXiv v3；Checklist截图取作者官网31页会议稿，元数据日期2025-10-24。",
+      "当前推理仓库为1.3代软件，不能用其新指标替换本课的论文表1。"
+    ],
+    "section": "证据边界",
+    "note": "两版存在排版与文字差异；截图逐张标来源，2026年榜单声明另列为后续补充。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [],
+    "number": 5
+  },
+  {
+    "title": "ICL把训练样本放进输入",
+    "key": "f2b",
+    "bullets": [
+      "输入包含上下文 Xctx、已知标签 yctx，以及查询特征 Xqy。",
+      "同一组预训练权重跨新数据集使用；改变上下文即可改变本次任务。",
+      "没有每个数据集的梯度更新，不等于没有用标签，也不等于预训练免费。"
+    ],
+    "section": "原理",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "3 方法总览",
+      "3.1 编码器"
+    ],
+    "number": 6
+  },
+  {
+    "title": "一行对应一个 token",
+    "key": "f2b",
+    "bullets": [
+      "设表有 N 行、F 列。整行编码后为 N×d 矩阵。",
+      "若按单元格/文本展开，序列规模随 N×F×每格token数增加。",
+      "例：2,048行×100列，行编码只有2,048个token；逐格至少204,800个。"
+    ],
+    "section": "原理",
+    "note": "最后一个数量对比是教学计数例，不是运行时实测。",
+    "layout": "split",
+    "formula": "X ∈ ℝ<sup>N×F</sup>，行嵌入 H ∈ ℝ<sup>N×d</sup>",
+    "tags": [],
+    "number": 7
+  },
+  {
+    "title": "固定输入宽度把不同表送入同一模型",
+    "key": "c1",
+    "bullets": [
+      "论文设 Fmax=100。少于100列时补零，多于100列时可用PCA压到100维。",
+      "补零只适配输入宽度，不会新增观测信息。PCA保留高方差方向，也可能丢掉低方差判别信号。",
+      "列顺序通过训练时随机打乱增强；行没有位置编码。"
+    ],
+    "section": "原理",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "3.1 特征维度",
+      "3.4 Features"
+    ],
+    "number": 8
+  },
+  {
+    "title": "图2a：一次批训练包含不同表",
+    "key": "f2a",
+    "bullets": [
+      "B 表示同一批的任务数，N表示每个任务采样的行数。各表补齐为Fmax列。",
+      "不同任务可以来自不同领域、不同目标列、不同标签类型。",
+      "输出批张量 X 的维度为 B×N×Fmax，y 为 B×N。"
+    ],
+    "section": "原理",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure 2a"
+    ],
+    "number": 9
+  },
+  {
+    "title": "图2b：标签只加进上下文行",
+    "key": "f2b",
+    "bullets": [
+      "矩形表示特征嵌入 φx，三角形表示标签嵌入 φy。",
+      "上下文行向量为 φx(x)+φy(y)；查询行只有φx(x)。",
+      "Transformer 后接任务输出分支。分类输出类别分数，回归输出连续值。"
+    ],
+    "section": "原理",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure 2b"
+    ],
+    "number": 10
+  },
+  {
+    "title": "式1把输入、算子和输出写在一起",
+    "key": "eq1",
+    "bullets": [
+      "φx、φy把不同输入映射到同一d维空间。⊕表示逐元素相加。",
+      "方括号表示按上下文/查询划分的序列，不能把它理解成普通无掩码拼接。",
+      "ŷqy为查询预测。真实yqy只计算损失，不作为查询输入。"
+    ],
+    "section": "原理",
+    "note": "",
+    "layout": "split",
+    "formula": "上下文：φx(Xctx) ⊕ φy(yctx)<br>查询：φx(Xqy)",
+    "tags": [
+      "Equation 1"
+    ],
+    "number": 11
+  },
+  {
+    "title": "注意力限制阻断查询标签泄漏",
+    "key": "f2b",
+    "bullets": [
+      "上下文只关注上下文。查询可关注全部上下文。",
+      "只有上下文提供注意力的键和值，查询不成为其他查询的信息源。",
+      "若一次预测多个查询，它们不会借由注意力相互交换测试标签。"
+    ],
+    "section": "原理",
+    "note": "注意力通式是教学展开；掩码语义来自式1后正文。",
+    "layout": "split",
+    "formula": "Attention(Q,K,V)=softmax(QKᵀ/√dₖ)V",
+    "tags": [],
+    "number": 12
+  },
+  {
+    "title": "一个二维嵌入计算例",
+    "key": "eq1",
+    "bullets": [
+      "设 φx(xctx)=(1,2)，φy(yctx)=(0.5,−1)，相加得到(1.5,1)。",
+      "若查询对两条上下文的注意力为(0.75,0.25)，值向量为(2,0)、(0,4)，输出为(1.5,1)。",
+      "这是加权聚合的一层示例。完整网络还含多头、残差、前馈层和输出分支。"
+    ],
+    "section": "原理",
+    "note": "教学手算值，未使用论文模型权重。",
+    "layout": "split",
+    "formula": "0.75×(2,0)+0.25×(0,4)=(1.5,1)",
+    "tags": [],
+    "number": 13
+  },
+  {
+    "title": "自监督任务来自被拿走的一列",
+    "key": "f2a",
+    "bullets": [
+      "原表 D={X,y} 的默认目标很少，反复预测同一个目标容易过拟合。",
+      "随机选列c，将其从输入中删除，把c当作新目标。",
+      "剩余列的随机选择和乱序增加任务变化，训练模型在不同特征关系间迁移。"
+    ],
+    "section": "原理",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "3.2 SSL"
+    ],
+    "number": 14
+  },
+  {
+    "title": "分类和回归目标用不同变换",
+    "key": "code1c",
+    "bullets": [
+      "目标列有较多不同取值时，可保留连续值做回归，也可随机切分成离散类别。",
+      "回归目标标准化；分类目标编码并打乱类别编号，避免编号具有固定含义。",
+      "论文代码块的分支是多于10个唯一值时70%回归；正文缩放实验使用分类/回归等比例任务。"
+    ],
+    "section": "原理",
+    "note": "这两个描述并非同一个采样层级的完整配方，复现时需固定实际代码配置。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "SSL 任务构造"
+    ],
+    "number": 15
+  },
+  {
+    "title": "把一列连续值变成三分类",
+    "key": "code1c2",
+    "bullets": [
+      "教学列c=(1,2,4,7,9)，选择阈值3和6。",
+      "逐个统计该值超过多少阈值，得到标签(0,0,1,2,2)。",
+      "预测输入中删除c。若保留c，模型可以直接读取答案，任务失去意义。"
+    ],
+    "section": "原理",
+    "note": "阈值仅为教学例，论文实际随机抽取边界。",
+    "layout": "wide",
+    "formula": "yᵢ = 𝟙[cᵢ>3] + 𝟙[cᵢ>6]",
+    "tags": [],
+    "number": 16
+  },
+  {
+    "title": "列子采样改变同一目标的条件信息",
+    "key": "code1b",
+    "bullets": [
+      "原表8列，挑1列作目标后剩7列。再抽取其中约一半至全部作为输入。",
+      "不同列组合训练不同条件预测，既扩充任务，也降低依赖单一捷径的机会。",
+      "缺少某些列可能让任务不可预测。SSL增加任务数不等于增加独立数据量。"
+    ],
+    "section": "原理",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "SSL 列增强"
+    ],
+    "number": 17
+  },
+  {
+    "title": "检索用相似样本控制上下文长度",
+    "key": "f2a",
+    "bullets": [
+      "从训练集中找离查询最近的K行作为上下文，而不把整张表塞进模型。",
+      "论文在预处理后的原始特征空间中检索，使用FAISS实现。",
+      "K控制速度与信息量。标签仍来自训练集，不能检索测试集的真实标签。"
+    ],
+    "section": "原理",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "3.3 Retrieval",
+      "3.4 Inference"
+    ],
+    "number": 18
+  },
+  {
+    "title": "检索计算例：距离只来自可用特征",
+    "key": "alg1",
+    "bullets": [
+      "标准化后查询为(0,0)，候选行是(1,0)、(0,2)、(3,0)。",
+      "欧氏距离平方分别为1、4、9。K=2时选择前两行，附上它们的已知标签。",
+      "训练SSL时要排除目标列对检索的直接影响。官方代码与论文伪代码有差异，后文单列。"
+    ],
+    "section": "原理",
+    "note": "教学例用精确距离。论文伪代码把查询目标列置零后作近似检索。",
+    "layout": "split",
+    "formula": "d²(x,z)=Σⱼ(xⱼ−zⱼ)²",
+    "tags": [],
+    "number": 19
+  },
+  {
+    "title": "算法1：前向预测之后才更新权重",
+    "key": "alg1",
+    "bullets": [
+      "先采样数据集和目标，再取相近行并划分上下文、查询。",
+      "仅用上下文标签生成查询预测，把查询预测和真实目标比较。",
+      "分类用交叉熵、回归用均方误差，反向传播更新预训练权重。"
+    ],
+    "section": "原理",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Algorithm 1"
+    ],
+    "number": 20
+  },
+  {
+    "title": "训练和推理共享局部上下文",
+    "key": "f4a",
+    "bullets": [
+      "训练时也检索邻近行，减少“随机训练上下文”和“邻近推理上下文”的差异。",
+      "图4a中移除训练检索使AUC和R²下降，下降小于移除SSL。",
+      "这是一组组件消融的经验结论，不是任何相似度度量都有效的保证。"
+    ],
+    "section": "原理",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "训练推理对齐"
+    ],
+    "number": 21
+  },
+  {
+    "title": "超过10类时按位编码类别",
+    "key": "c1",
+    "bullets": [
+      "论文分类分支最多直接支持10类。C>10时可把类别编号写成十进制各位。",
+      "例：23类用2次十类预测，标签17分解为十位1、个位7。",
+      "所需前向次数为⌈log₁₀C⌉；类别组合与概率合成仍需实现细节。"
+    ],
+    "section": "原理",
+    "note": "该编码绕过输出维数限制，不保证类别越多性能不变。",
+    "layout": "split",
+    "formula": "C=23：⌈log₁₀23⌉=2",
+    "tags": [
+      "3.4 Classes"
+    ],
+    "number": 22
+  },
+  {
+    "title": "集成平均削弱列顺序和类别编号影响",
+    "key": "f2b",
+    "bullets": [
+      "论文主结果采用8个集成成员，每次随机排列特征、分类任务还排列类别编号。",
+      "分类输出先还原到相同类别顺序，再平均概率。",
+      "例：两成员对同一类别给0.7和0.5，平均为0.6；并非投票两次就有置信区间。"
+    ],
+    "section": "原理",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Inference ensemble"
+    ],
+    "number": 23
+  },
+  {
+    "title": "训练数据和测试数据来自不同集合",
+    "key": "b1a",
+    "bullets": [
+      "预训练共123个数据集、约3,200万行、20亿单元格。领域包括生物、金融、工业等。",
+      "评估为CC18的72个分类数据集，加CTR23的35个回归数据集，共107个。",
+      "论文用元数据与特征统计检验潜在重复，人工排查后移除相关训练表。"
+    ],
+    "section": "实验设置",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "4.1 Training data",
+      "4.1 Evaluation data"
+    ],
+    "number": 24
+  },
+  {
+    "title": "评估的范围比“所有表格”窄",
+    "key": "b1a",
+    "bullets": [
+      "CC18/CTR23通常为500至100,000行、少于5,000个特征的策划基准。",
+      "CC18排除简单模型可100%准确的任务；CTR23排除线性模型R²=1的任务。",
+      "结果支持这些基准上的迁移，不直接覆盖时间序列、分层细胞数据或新仪器谱图。"
+    ],
+    "section": "实验设置",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [],
+    "number": 25
+  },
+  {
+    "title": "基线有不同的调参和数据预算",
+    "key": "t1top",
+    "bullets": [
+      "树模型包含XGBoost、LightGBM、CatBoost。深度基线包含TabR、TabM、MLP-PLR、MLP。",
+      "数据集特定模型按每折验证集选参数，部分模型用30轮搜索；TFM直接用预训练权重。",
+      "Tabula-8B只给61个CC18数据集结果，因此在胜率图比较，不进入完整表1。"
+    ],
+    "section": "实验设置",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "4.2 Baselines"
+    ],
+    "number": 26
+  },
+  {
+    "title": "四个指标回答不同问题",
+    "key": "t1top",
+    "bullets": [
+      "AUC衡量排序，Accuracy衡量最终分类正确率。二者越高越好。",
+      "Correlation衡量预测与目标的线性同步程度，R²比较误差与均值基线，均越高越好。",
+      "相关系数高不保证数值校准好。ŷ=2y可完全相关，但会产生明显偏差。"
+    ],
+    "section": "指标教学",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "四项指标"
+    ],
+    "number": 27
+  },
+  {
+    "title": "R²和交叉熵的手算例",
+    "key": "eq2",
+    "bullets": [
+      "真实值(1,2,3)，预测(1,2,2)：平方误差和为1，目标离均值平方和为2，因此R²=0.5。",
+      "分类真实类概率p=0.8时，交叉熵−ln(0.8)≈0.223。",
+      "缩放图用分类交叉熵与回归1−ρ的平均，不能把它直接当R²。"
+    ],
+    "section": "指标教学",
+    "note": "教学计算。原文“标准化向量MSE等价”涉及常数约定，不能由此将MSE数值直接换成1−ρ。",
+    "layout": "split",
+    "formula": "R²=1−Σ(y−ŷ)²/Σ(y−ȳ)²",
+    "tags": [],
+    "caption_note": "原式(2)对应缩放律，并非R²定义；手算数字仅为教学演算。",
+    "number": 28
+  },
+  {
+    "title": "指标补充：原文怎样报告R²",
+    "key": "t1top",
+    "bullets": [
+      "原表1把AUC、Accuracy用于CC18分类，把Correlation和R²用于CTR23回归。R²越高越好。",
+      "前页的y=(1,2,3)、ŷ=(1,2,2)是教学构造：残差平方和为1，围绕真实均值的平方和为2，所以R²=0.5。",
+      "本页截图证实论文使用这些指标；R²定义和手算例为教学说明，不是论文中的实验观测。"
+    ],
+    "section": "指标教学",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "补充 R²原文指标证据"
+    ],
+    "number": 29
+  },
+  {
+    "title": "指标补充：交叉熵不等于缩放律",
+    "key": "metric_loss_text",
+    "bullets": [
+      "原文说明，缩放图纵轴损失平均了分类交叉熵与回归1−ρ；ρ是预测和目标的相关系数。",
+      "教学例中，真实类别概率p=0.8时，单个样本交叉熵−ln(0.8)≈0.223。该数字不是论文表格结果。",
+      "R²、1−ρ和交叉熵是不同量；式(2)拟合的是损失如何随模型与数据规模变化，并非R²或交叉熵的定义。"
+    ],
+    "section": "指标教学",
+    "note": "原文提到标准化向量MSE的等价关系，但有常数约定；不能把MSE数值直接替成1−ρ。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "补充 交叉熵原文指标证据"
+    ],
+    "number": 30
+  },
+  {
+    "title": "表1：分类差异主要体现在准确率",
+    "key": "t1top",
+    "bullets": [
+      "TabDPT：AUC 0.933 [0.929,0.937]，准确率0.884 [0.882,0.887]。",
+      "TabPFN v2：AUC 0.932 [0.928,0.936]，准确率0.872 [0.869,0.875]。",
+      "AUC差0.001，准确率差0.012，即1.2个百分点；区间为95% bootstrap CI。"
+    ],
+    "section": "主结果",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table 1 分类"
+    ],
+    "number": 31
+  },
+  {
+    "title": "表1：回归点估计略高但区间重叠",
+    "key": "t1top",
+    "bullets": [
+      "TabDPT：Correlation 0.837 [0.826,0.848]，R² 0.742 [0.731,0.754]。",
+      "TabPFN v2：0.835 [0.825,0.845]、0.740 [0.729,0.751]。两指标点估计均只差0.002。",
+      "不能用点估计排名宣称每个任务获胜，也不能仅凭CI重叠判定配对差异不显著。"
+    ],
+    "section": "主结果",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table 1 回归"
+    ],
+    "number": 32
+  },
+  {
+    "title": "表1：不给验证集时应换一行比较",
+    "key": "t1top",
+    "bullets": [
+      "默认TabDPT把训练集与验证集合并为上下文。no val.只用训练集。",
+      "no val.准确率0.874，低于TabM的0.878；默认TabDPT是0.884。",
+      "公平问题来自上下文可用标签与调参预算的差别。论文同时报告两种设置，而非一律相同预算。"
+    ],
+    "section": "主结果",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table 1 no val."
+    ],
+    "number": 33
+  },
+  {
+    "title": "表1：树和深度基线也有强项",
+    "key": "t1bottom",
+    "bullets": [
+      "树模型AUC约0.924–0.926，R²约0.703–0.713。TabR的AUC为0.925。",
+      "TabM的R²为0.732，优于TabR的0.714；深度基线之间也并非同一排名。",
+      "TabPFN v1与kNN版没有回归结果，表中N/A不表示回归得分为0。"
+    ],
+    "section": "主结果",
+    "note": "截图承接上页；数值列依次为AUC、Accuracy、Correlation、R²。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table 1 全部基线行"
+    ],
+    "number": 34
+  },
+  {
+    "title": "后续修订补充：2026-01-14的TabArena声明",
+    "key": "leaderboard",
+    "bullets": [
+      "论文另引2026-01-14的外部TabArena榜单：全部任务Elo在全开放TFM中最高，总榜第三。",
+      "正文称默认回归表现最高，调参与集成后接近Real TabPFN-2.5。它不是本课表1的同一评测。",
+      "这是论文记录的历史时点，不代表2026-11-04的当前榜单，也不是本课重新运行所得。"
+    ],
+    "section": "后续arXiv v3补充",
+    "note": "2025-10-24作者会议稿没有该段；不作为原会议实验或当前榜单结果。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "1 引言 TabArena日期声明"
+    ],
+    "number": 35
+  },
+  {
+    "title": "图3a：每个格子是成对胜率",
+    "key": "f3a",
+    "bullets": [
+      "行算法对列算法，在双方都有结果的任务中比较Accuracy或R²。",
+      "TabDPT对TabPFN v2胜率58%，对TabR为69%，对XGBoost为71%。",
+      "对Tabula-8B为100%，但这是报告子集上的对战，不是107项全覆盖的结论。"
+    ],
+    "section": "主结果",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure 3a"
+    ],
+    "number": 36
+  },
+  {
+    "title": "胜率忽略了胜负的幅度",
+    "key": "f3a",
+    "bullets": [
+      "若A在6个任务上各赢0.001、4个任务上各输0.1，胜率仍为60%。",
+      "因此胜率、平均指标和误差分布要一起读。强胜率不代表总误差一定更小。",
+      "图中上下互补，如58%与42%；对角线空白代表不与自己比较。"
+    ],
+    "section": "指标教学",
+    "note": "6胜4负为教学反例。",
+    "layout": "split",
+    "formula": "",
+    "tags": [],
+    "number": 37
+  },
+  {
+    "title": "图3b：越靠左上，部署预算越划算",
+    "key": "f3b",
+    "bullets": [
+      "横轴为每1,000行的秒数，对数坐标。纵轴为Accuracy与R²的平均。",
+      "TabDPT上下文从128增加到2,048，预测指标提高，运行时间也增大。",
+      "图的传统模型时间包含调参、训练和推理。TFM时间包含检索和前向，不含预训练。"
+    ],
+    "section": "速度与代价",
+    "note": "图3b纵轴不能由表1的Accuracy与R²两列直接取平均复算；历史聚合口径待原始结果确认。",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure 3b",
+      "4.7 Inference speed"
+    ],
+    "number": 38
+  },
+  {
+    "title": "固定模型在线推理时，树模型可更快",
+    "key": "f3b",
+    "bullets": [
+      "论文报告传统树模型单纯推理可约0.02–0.10秒/1,000行。",
+      "因此图3b的优势适合“在新表上完成训练/选模并给预测”的总预算。",
+      "若模型已经训练好、长时间重复服务同一任务，不能据此宣称TabDPT每次预测都更快。"
+    ],
+    "section": "速度与代价",
+    "note": "硬件为40GB Nvidia A100；不把当前v1.3加速值并入2025论文。",
+    "layout": "split",
+    "formula": "",
+    "tags": [],
+    "number": 39
+  },
+  {
+    "title": "图4a：四种删减都会损伤表现",
+    "key": "f4a",
+    "bullets": [
+      "蓝色用左轴AUC变化，绿色用右轴R²变化；刻度向上为更负，表示下降更大。",
+      "仅用原监督目标：AUC约−0.023、R²约−0.11。推理不用检索：约−0.028、−0.067。",
+      "训练不用检索与上下文降至256的影响较小。所有近似值都是按图读数。"
+    ],
+    "section": "组件消融",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure 4a"
+    ],
+    "number": 40
+  },
+  {
+    "title": "图4b：没有SSL时真实表会过拟合",
+    "key": "f4b",
+    "bullets": [
+      "横轴训练epoch，纵轴CC18测试交叉熵，越低越好。",
+      "真实数据仅监督目标在约50轮后开始回升；真实数据加SSL持续改进。",
+      "真实SSL曲线低于TabPFN v1合成生成器曲线。结论限于该生成器、该架构与计算预算。"
+    ],
+    "section": "组件消融",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure 4b"
+    ],
+    "number": 41
+  },
+  {
+    "title": "真实数据优势有明确的对照范围",
+    "key": "f4b",
+    "bullets": [
+      "同一架构上比较Real-No SSL、Synthetic、Real-SSL，避免把架构差异误认为数据差异。",
+      "正文说两种可持续训练方法约500轮饱和，并训练到1,024轮确认。",
+      "这组实验不能推出“真实数据始终优于所有合成先验”，也没有逐个现代生成器的比较。"
+    ],
+    "section": "组件消融",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [],
+    "number": 42
+  },
+  {
+    "title": "图1：模型和数据两个维度共同扩展",
+    "key": "f1",
+    "bullets": [
+      "横轴参数量P，纵轴为扣除E后的过量损失，均为对数尺度。",
+      "模型从33K到78M参数；数据从52M到2B单元格，图中五条数据规模曲线。",
+      "固定数据时增大模型仍会受数据项限制。固定模型时增加数据也有模型项下限。"
+    ],
+    "section": "缩放规律",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure 1",
+      "4.5 Scaling laws"
+    ],
+    "number": 43
+  },
+  {
+    "title": "式2中每个参数都有职责",
+    "key": "eq2",
+    "bullets": [
+      "P是参数数目，D是预训练单元格数。A、B给出两项量级。",
+      "α控制增加模型的收益，β控制增加数据的收益，E是拟合的不可约常数。",
+      "论文估计α=0.42、β=0.39。它们是经验拟合，不是理论收敛定理。"
+    ],
+    "section": "缩放规律",
+    "note": "",
+    "layout": "split",
+    "formula": "ℓ̂(P,D)=A·P<sup>−0.42</sup>+B·D<sup>−0.39</sup>+E",
+    "tags": [
+      "Equation 2"
+    ],
+    "number": 44
+  },
+  {
+    "title": "扩大一倍只缩小对应的那一项",
+    "key": "eq2",
+    "bullets": [
+      "P加倍，模型项乘2⁻⁰·⁴²≈0.747，约下降25.3%。",
+      "D加倍，数据项乘2⁻⁰·³⁹≈0.763，约下降23.7%。",
+      "总损失还有另一项和E，不能说“参数加倍就把总误差降低25%”。"
+    ],
+    "section": "缩放规律",
+    "note": "系数0.10与E=0.20为教学假设，不是论文拟合参数。",
+    "layout": "split",
+    "formula": "若两项各0.10且E=0.20：<br>只加倍P，0.40变为约0.375。",
+    "tags": [],
+    "number": 45
+  },
+  {
+    "title": "为何数据规模按单元格计数",
+    "key": "b1a",
+    "bullets": [
+      "不同表的一行可只有几列，也可能有上万列，用行数会忽略信息宽度。",
+      "D以单元格为单位，但并未保证每个单元格含同量有效信息。",
+      "重复行、强相关列和模拟表会影响有效数据量，缩放曲线不能无限外推。"
+    ],
+    "section": "缩放规律",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [],
+    "number": 46
+  },
+  {
+    "title": "表2：每类10个标签，仍有未标注行",
+    "key": "t2",
+    "bullets": [
+      "训练集中每个类别仅10个标注例，其余行保留特征、遮住标签。",
+      "先用少量标注例给未标注行预测，再取最高置信的1,000行及伪标签扩充上下文。",
+      "这是一种半监督适配。没有更新预训练权重，但使用了目标任务的未标注数据。"
+    ],
+    "section": "少样本学习",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table 2 设置",
+      "4.6 Few-shot"
+    ],
+    "number": 47
+  },
+  {
+    "title": "表2：平均提升0.80个百分点",
+    "key": "t2",
+    "bullets": [
+      "TabDPT(semi)平均77.56%，STUNT 76.76%，CACTUs 75.16%，VIME+LR 74.55%。",
+      "TabDPT在cmc、karhunen、optdigit、semeion、pixel五项领先STUNT。",
+      "平均来自50个随机种子；表中未给每项置信区间，不能为0.80个百分点补造显著性。"
+    ],
+    "section": "少样本学习",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table 2 全部方法"
+    ],
+    "number": 48
+  },
+  {
+    "title": "表2：dna上的负结果不能藏起来",
+    "key": "t2",
+    "bullets": [
+      "dna：TabDPT 61.85%，STUNT 80.96%，CACTUs 84.40%。",
+      "diabetes：TabDPT 72.01%，STUNT 72.82%。表中未提供不加伪标签的TabDPT对照。",
+      "对微生物小样本，置信度高的错误伪标签可能自我强化，需要独立验证。"
+    ],
+    "section": "少样本学习",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table 2 负结果"
+    ],
+    "number": 49
+  },
+  {
+    "title": "附录A：复杂预处理没有普遍收益",
+    "key": "a_pre",
+    "bullets": [
+      "更抗离群点的处理、soft clipping变体未改善表现。Robust Scaler和Power Transform拖慢训练。",
+      "这些是作者在真实表ICL训练中的经验；没有逐项数值，不能写成精确的性能下降比例。"
+    ],
+    "section": "附录A 失败尝试",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Appendix A 预处理"
+    ],
+    "number": 50
+  },
+  {
+    "title": "附录A：缺失标记没有带来预期收益",
+    "key": "a_nan",
+    "bullets": [
+      "缺失值专用token未优于均值填补；额外的缺失指示列近乎让特征数翻倍，也未改善表现。",
+      "这不否定所有缺失机制下的指示列。实际缺失是否携带信息，应在真实分组外测中单独比较。"
+    ],
+    "section": "附录A 失败尝试",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Appendix A NaN"
+    ],
+    "number": 51
+  },
+  {
+    "title": "附录A：更复杂标签表示也会失败",
+    "key": "a_embed",
+    "bullets": [
+      "作者尝试类别原型、类别token和查询—类别相似度，效果下降，真实数据上更明显。",
+      "把回归与分类目标用不同嵌入形式表示，较大模型和充足数据下未继续改善。",
+      "论文没有提供这些尝试的完整逐项数值，因此本课只保留定性结论。"
+    ],
+    "section": "附录A 失败尝试",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Appendix A 类嵌入",
+      "Appendix A yctx嵌入"
+    ],
+    "number": 52
+  },
+  {
+    "title": "附录A：逐单元格表示增加显存需求",
+    "key": "a_cell",
+    "bullets": [
+      "单元格token会生成 B×N×F×d 张量，行token只需 B×N×d 的表示张量。",
+      "例：B=1、N=1,024、F=100、d=768，单元格表示的元素数是行表示的100倍。",
+      "这只比较表示张量，不是完整训练显存或吞吐比。作者据此保留更宽的行编码器。"
+    ],
+    "section": "附录A 失败尝试",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Appendix A cell tokens"
+    ],
+    "number": 53
+  },
+  {
+    "title": "图B.1a：训练表大小跨度很大",
+    "key": "b1a",
+    "bullets": [
+      "每个点为一个训练表，横轴行数、纵轴特征数，两轴均为对数尺度。",
+      "从千行级、十列级延伸至千万行与万列级；训练时通过采样和宽度适配处理。",
+      "大表不代表每次前向都读全表。检索把参与预测的上下文限制在K行。"
+    ],
+    "section": "附录B 训练数据",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure B.1a"
+    ],
+    "number": 54
+  },
+  {
+    "title": "图B.1b：123张表的领域组成",
+    "key": "b1b",
+    "bullets": [
+      "人类行为17，金融/人口15，工业11，医疗/人体传感11，生物/生态11。",
+      "模拟/确定性9，视觉音频文本特征7，物理/天文6，计算4，其他科学4，其他/未提供28。",
+      "生物/生态表的存在不等于在微生物DMD拉曼上验证。93张默认分类、29张回归、1张无默认目标。"
+    ],
+    "section": "附录B 训练数据",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure B.1b"
+    ],
+    "number": 55
+  },
+  {
+    "title": "表B.1：训练表逐项核对 1",
+    "key": "tb_15_0",
+    "bullets": [
+      "本页覆盖8个OpenML数据集，ID从24至389。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 24",
+      "Table B.1 row 30",
+      "Table B.1 row 184",
+      "Table B.1 row 273",
+      "Table B.1 row 312",
+      "Table B.1 row 375",
+      "Table B.1 row 382",
+      "Table B.1 row 389"
+    ],
+    "number": 56
+  },
+  {
+    "title": "表B.1：训练表逐项核对 2",
+    "key": "tb_15_8",
+    "bullets": [
+      "本页覆盖4个OpenML数据集，ID从396至821。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 396",
+      "Table B.1 row 802",
+      "Table B.1 row 816",
+      "Table B.1 row 821"
+    ],
+    "number": 57
+  },
+  {
+    "title": "表B.1：训练表逐项核对 3",
+    "key": "tb_16_0",
+    "bullets": [
+      "本页覆盖8个OpenML数据集，ID从843至1018。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 843",
+      "Table B.1 row 846",
+      "Table B.1 row 871",
+      "Table B.1 row 930",
+      "Table B.1 row 966",
+      "Table B.1 row 981",
+      "Table B.1 row 1002",
+      "Table B.1 row 1018"
+    ],
+    "number": 58
+  },
+  {
+    "title": "表B.1：训练表逐项核对 4",
+    "key": "tb_16_8",
+    "bullets": [
+      "本页覆盖8个OpenML数据集，ID从1036至1118。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 1036",
+      "Table B.1 row 1037",
+      "Table B.1 row 1043",
+      "Table B.1 row 1044",
+      "Table B.1 row 1111",
+      "Table B.1 row 1112",
+      "Table B.1 row 1116",
+      "Table B.1 row 1118"
+    ],
+    "number": 59
+  },
+  {
+    "title": "表B.1：训练表逐项核对 5",
+    "key": "tb_16_16",
+    "bullets": [
+      "本页覆盖8个OpenML数据集，ID从1120至1459。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 1120",
+      "Table B.1 row 1130",
+      "Table B.1 row 1142",
+      "Table B.1 row 1169",
+      "Table B.1 row 1444",
+      "Table B.1 row 1453",
+      "Table B.1 row 1457",
+      "Table B.1 row 1459"
+    ],
+    "number": 60
+  },
+  {
+    "title": "表B.1：训练表逐项核对 6",
+    "key": "tb_16_24",
+    "bullets": [
+      "本页覆盖8个OpenML数据集，ID从1466至1493。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 1466",
+      "Table B.1 row 1471",
+      "Table B.1 row 1476",
+      "Table B.1 row 1477",
+      "Table B.1 row 1479",
+      "Table B.1 row 1481",
+      "Table B.1 row 1483",
+      "Table B.1 row 1493"
+    ],
+    "number": 61
+  },
+  {
+    "title": "表B.1：训练表逐项核对 7",
+    "key": "tb_16_32",
+    "bullets": [
+      "本页覆盖8个OpenML数据集，ID从1503至3277。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 1503",
+      "Table B.1 row 1507",
+      "Table B.1 row 1509",
+      "Table B.1 row 1567",
+      "Table B.1 row 1568",
+      "Table B.1 row 1596",
+      "Table B.1 row 3050",
+      "Table B.1 row 3277"
+    ],
+    "number": 62
+  },
+  {
+    "title": "表B.1：训练表逐项核对 8",
+    "key": "tb_16_40",
+    "bullets": [
+      "本页覆盖8个OpenML数据集，ID从4135至40679。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 4135",
+      "Table B.1 row 4535",
+      "Table B.1 row 4549",
+      "Table B.1 row 23380",
+      "Table B.1 row 23512",
+      "Table B.1 row 40536",
+      "Table B.1 row 40646",
+      "Table B.1 row 40679"
+    ],
+    "number": 63
+  },
+  {
+    "title": "表B.1：训练表逐项核对 9",
+    "key": "tb_16_48",
+    "bullets": [
+      "本页覆盖8个OpenML数据集，ID从40680至41143。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 40680",
+      "Table B.1 row 40685",
+      "Table B.1 row 40706",
+      "Table B.1 row 40733",
+      "Table B.1 row 40900",
+      "Table B.1 row 41138",
+      "Table B.1 row 41142",
+      "Table B.1 row 41143"
+    ],
+    "number": 64
+  },
+  {
+    "title": "表B.1：训练表逐项核对 10",
+    "key": "tb_16_56",
+    "bullets": [
+      "本页覆盖8个OpenML数据集，ID从41144至41161。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 41144",
+      "Table B.1 row 41145",
+      "Table B.1 row 41146",
+      "Table B.1 row 41147",
+      "Table B.1 row 41150",
+      "Table B.1 row 41156",
+      "Table B.1 row 41159",
+      "Table B.1 row 41161"
+    ],
+    "number": 65
+  },
+  {
+    "title": "表B.1：训练表逐项核对 11",
+    "key": "tb_16_64",
+    "bullets": [
+      "本页覆盖8个OpenML数据集，ID从41162至41169。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 41162",
+      "Table B.1 row 41163",
+      "Table B.1 row 41164",
+      "Table B.1 row 41165",
+      "Table B.1 row 41166",
+      "Table B.1 row 41167",
+      "Table B.1 row 41168",
+      "Table B.1 row 41169"
+    ],
+    "number": 66
+  },
+  {
+    "title": "表B.1：训练表逐项核对 12",
+    "key": "tb_16_72",
+    "bullets": [
+      "本页覆盖3个OpenML数据集，ID从41434至41980。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 41434",
+      "Table B.1 row 41540",
+      "Table B.1 row 41980"
+    ],
+    "number": 67
+  },
+  {
+    "title": "表B.1：训练表逐项核对 13",
+    "key": "tb_17_0",
+    "bullets": [
+      "本页覆盖8个OpenML数据集，ID从42563至42732。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 42563",
+      "Table B.1 row 42572",
+      "Table B.1 row 42705",
+      "Table B.1 row 42724",
+      "Table B.1 row 42727",
+      "Table B.1 row 42728",
+      "Table B.1 row 42730",
+      "Table B.1 row 42732"
+    ],
+    "number": 68
+  },
+  {
+    "title": "表B.1：训练表逐项核对 14",
+    "key": "tb_17_8",
+    "bullets": [
+      "本页覆盖8个OpenML数据集，ID从42734至44061。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 42734",
+      "Table B.1 row 42742",
+      "Table B.1 row 42746",
+      "Table B.1 row 43071",
+      "Table B.1 row 43072",
+      "Table B.1 row 44055",
+      "Table B.1 row 44056",
+      "Table B.1 row 44061"
+    ],
+    "number": 69
+  },
+  {
+    "title": "表B.1：训练表逐项核对 15",
+    "key": "tb_17_16",
+    "bullets": [
+      "本页覆盖8个OpenML数据集，ID从44063至44137。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 44063",
+      "Table B.1 row 44065",
+      "Table B.1 row 44068",
+      "Table B.1 row 44069",
+      "Table B.1 row 44089",
+      "Table B.1 row 44122",
+      "Table B.1 row 44136",
+      "Table B.1 row 44137"
+    ],
+    "number": 70
+  },
+  {
+    "title": "表B.1：训练表逐项核对 16",
+    "key": "tb_17_24",
+    "bullets": [
+      "本页覆盖8个OpenML数据集，ID从44145至45041。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 44145",
+      "Table B.1 row 45020",
+      "Table B.1 row 45022",
+      "Table B.1 row 45026",
+      "Table B.1 row 45032",
+      "Table B.1 row 45038",
+      "Table B.1 row 45039",
+      "Table B.1 row 45041"
+    ],
+    "number": 71
+  },
+  {
+    "title": "表B.1：训练表逐项核对 17",
+    "key": "tb_17_32",
+    "bullets": [
+      "本页覆盖4个OpenML数据集，ID从45043至45047。列序依次为ID、名称、行数、特征数、单元格、缺失率、目标类型、领域。",
+      "这些是预训练数据，不是每个数据集上的准确率。单元格数包括表中目标列，可能约等于行数×(特征数+1)。",
+      "默认目标类型不限制SSL任务类型；同一张表还可随机产生分类与回归目标。"
+    ],
+    "section": "附录B 数据清单",
+    "note": "原PDF逐行裁切，未重绘或改写表中数值。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Table B.1 row 45043",
+      "Table B.1 row 45045",
+      "Table B.1 row 45046",
+      "Table B.1 row 45047"
+    ],
+    "number": 72
+  },
+  {
+    "title": "附录B.1：污染排查用多种指纹",
+    "key": "b_contam",
+    "bullets": [
+      "作者比较名称、文件哈希、行列数、目标均值/方差、各特征均值/方差/偏度/峰度。",
+      "还比较单变量特征—目标线性拟合系数，用k-d树加速特征统计匹配。",
+      "异常相似的数据对再人工检查并移除相关训练表。未报告独立审计后的漏检率。"
+    ],
+    "section": "附录B 污染排查",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Appendix B.1"
+    ],
+    "number": 73
+  },
+  {
+    "title": "表C.1：论文主干的固定参数",
+    "key": "c1",
+    "bullets": [
+      "4个注意力头，前馈宽度为嵌入维度的2倍，采用Pre-Norm。",
+      "直接支持10类、100个特征，Dropout=0。",
+      "若d=768，则每头192维，前馈中间宽度1,536。尺寸计算不等同于总参数量。"
+    ],
+    "section": "附录C 架构",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Table C.1"
+    ],
+    "number": 74
+  },
+  {
+    "title": "表C.2：七种模型尺寸逐项列出",
+    "key": "c2",
+    "bullets": [
+      "层数/维度为3/32、4/64、5/96、6/256、10/384、12/512、16/768。",
+      "缩放实验同时改变层数与宽度，所以不能把收益单独归因于“更深”。",
+      "主结果为16层、78M参数模型，预训练600K步。"
+    ],
+    "section": "附录C 架构",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Table C.2"
+    ],
+    "number": 75
+  },
+  {
+    "title": "附录C：两阶段标准化与缺失填补",
+    "key": "c_pre",
+    "bullets": [
+      "先把非数值列编码为整数，标准化并截断极端值，再在特征空间检索。",
+      "得到局部上下文后重新标准化；回归标签也标准化，预测后应还原目标单位。",
+      "整数编码的距离不天然表达类别语义；所有数据变换必须遵循训练与测试的边界。"
+    ],
+    "section": "附录C 预处理",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Appendix C.1 preprocessing",
+      "Appendix C.1 retrieval"
+    ],
+    "number": 76
+  },
+  {
+    "title": "附录C：标准化后补零等价于均值填补",
+    "key": "c_nan",
+    "bullets": [
+      "作者试过附加缺失指示列，改善很小但计算成本接近翻倍。最终选择标准化后把缺失值置零。",
+      "由于标准化后的零代表均值，这不是把原始物理测量强行设为零。拉曼强度与缺失标记不能混为一谈。"
+    ],
+    "section": "附录C 预处理",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Appendix C.1 missing"
+    ],
+    "number": 77
+  },
+  {
+    "title": "标准化回归的还原计算",
+    "key": "eq1",
+    "bullets": [
+      "上下文标签均值μ=10、标准差σ=2，模型预测标准化值z=0.75。",
+      "原单位预测为μ+σz=11.5。只报告0.75会丢掉原目标的物理单位。",
+      "若不同菌株批次的分布不同，局部标准化不能替代分组验证或校准。"
+    ],
+    "section": "计算例",
+    "note": "教学参数。论文原始回归分支为点预测。",
+    "layout": "split",
+    "formula": "ŷ = μctx + σctx × ẑ = 10 + 2×0.75 = 11.5",
+    "tags": [],
+    "number": 78
+  },
+  {
+    "title": "附录C：优化设置决定复现配方",
+    "key": "c_opt",
+    "bullets": [
+      "Schedule-Free AdamW，学习率5×10⁻⁴，权重衰减5×10⁻²，标签平滑0.1。",
+      "批量256，附录写上下文和查询长度各1,024，参数采用bfloat16。",
+      "正文600K步与当前仓库默认2048×128次更新不同；不能只运行默认配置就称复现主结果。"
+    ],
+    "section": "附录C 训练",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Appendix C.1 optimizer"
+    ],
+    "number": 79
+  },
+  {
+    "title": "代码块1：创建训练任务数据对象",
+    "key": "code1a",
+    "bullets": [
+      "第1–7行导入数据组件，定义TrainingDataset，并建立保存表格的列表。",
+      "每个数据对象负责从多个真实表格持续生成不同任务，而不是只返回固定的原始标签。",
+      "这是论文伪代码，包含说明性语法；直接执行需以官方仓库为准。"
+    ],
+    "section": "附录D 算法逐段",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Code Block 1 lines 1-7"
+    ],
+    "number": 80
+  },
+  {
+    "title": "代码块1：预处理后保存近邻索引",
+    "key": "code1a2",
+    "bullets": [
+      "第8–12行逐表下载数据，处理缺失值和尺度，再使用FAISS建立近邻索引。",
+      "数据和索引可被后续训练步重复使用，节省反复建立索引的时间。",
+      "这一步仍有存储与建索引成本，不能把模型一次前向的时间当成完整系统成本。"
+    ],
+    "section": "附录D 算法逐段",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Code Block 1 lines 8-12"
+    ],
+    "number": 81
+  },
+  {
+    "title": "代码块1：随机选择并重排特征",
+    "key": "code1b",
+    "bullets": [
+      "第14–19行从约一半到全部特征中选一个数量，再无放回抽样特征索引。",
+      "抽样得到的顺序同时造成列乱序。上下文与查询必须采用同一组列和同一顺序。",
+      "输出仍为二维表，只是列数减少；后续需补齐Fmax。"
+    ],
+    "section": "附录D 算法逐段",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Code Block 1 lines 14-19"
+    ],
+    "number": 82
+  },
+  {
+    "title": "代码块1：先判断是否保留连续目标",
+    "key": "code1c",
+    "bullets": [
+      "第21–27行先数不同取值。超过10个时，随机数大于0.3就保留连续目标。",
+      "均匀随机数的该事件概率为70%，其余30%进入下一页的分类分支。",
+      "这是此伪代码的分支概率，不能代替当前训练仓库调用参数。"
+    ],
+    "section": "附录D 算法逐段",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Code Block 1 lines 21-27"
+    ],
+    "number": 83
+  },
+  {
+    "title": "代码块1：用随机边界生成类别",
+    "key": "code1c2",
+    "bullets": [
+      "第28–33行抽类别数，从有序目标值中抽边界，用超过边界的个数生成整数标签。",
+      "NumPy randint(2,10)上端不含10，因此这一分支产生2至9类。",
+      "最后重新编码并打乱类别编号，让数字编号不固定代表某个数值区间。"
+    ],
+    "section": "附录D 算法逐段",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Code Block 1 lines 28-33"
+    ],
+    "number": 84
+  },
+  {
+    "title": "代码块1：低基数目标与随机取表",
+    "key": "code1d",
+    "bullets": [
+      "第34–37行：已有少量不同取值时直接编码为分类，常数列被断言排除。",
+      "第39–43行：随机选择数据集，取出该表和已建好的近邻索引。",
+      "按数据集抽样不等于按单元格均匀抽样，大表不必按体积占据更多训练步。"
+    ],
+    "section": "附录D 算法逐段",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Code Block 1 lines 34-43"
+    ],
+    "number": 85
+  },
+  {
+    "title": "代码块1：随机选种子行和目标列",
+    "key": "code1e",
+    "bullets": [
+      "第44–50行取得表的行列数，从表中随机选一行复制为查询向量。",
+      "再随机选择一个目标列索引，原默认监督标签不是唯一可用目标。",
+      "种子行决定局部区域，所选列决定本次SSL预测任务。"
+    ],
+    "section": "附录D 算法逐段",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Code Block 1 lines 44-50"
+    ],
+    "number": 86
+  },
+  {
+    "title": "代码块1：遮蔽目标后提取近邻任务",
+    "key": "code1e2",
+    "bullets": [
+      "第52–56行把查询目标坐标置零，再作近似检索；从检索结果取出目标y。",
+      "随后从X删除目标列，避免模型输入直接含有查询答案。",
+      "置零查询坐标不等于从整个索引空间删除该维；这里沿用伪代码的近似检索表述。"
+    ],
+    "section": "附录D 算法逐段",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Code Block 1 lines 52-56"
+    ],
+    "number": 87
+  },
+  {
+    "title": "代码块1：最后输出一个训练任务",
+    "key": "code1f",
+    "bullets": [
+      "第58–64行对检索来的局部表做列采样与乱序，再生成目标任务类型。",
+      "输出是Xnn、ynn和task，供DataLoader聚合成一个批次。",
+      "X和y的行顺序必须一致，所有随机变换需由同一任务实例共享。"
+    ],
+    "section": "附录D 算法逐段",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Code Block 1 lines 58-64"
+    ],
+    "number": 88
+  },
+  {
+    "title": "代码块2：建立模型和训练循环",
+    "key": "code2a",
+    "bullets": [
+      "第1–7行建立Transformer与Schedule-Free AdamW优化器。",
+      "每个epoch进入训练模式，从train_loader取得X、y和任务类型。",
+      "模型在多个表格任务之间共享参数；不是每张表各自训练一个Transformer。"
+    ],
+    "section": "附录D 算法逐段",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Code Block 2 lines 1-7"
+    ],
+    "number": 89
+  },
+  {
+    "title": "代码块2：上下文标签可见，查询标签遮蔽",
+    "key": "code2a2",
+    "bullets": [
+      "第8–12行随机确定eval_pos，前部标签作为上下文，其余标签保留给损失。",
+      "给查询标签位置补零，再与X送入模型。输入标签和真实查询标签有不同用途。",
+      "random.randint的上界含端点；实际实现必须排除空查询，不能照抄len(y)端点。"
+    ],
+    "section": "附录D 算法逐段",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Code Block 2 lines 8-12"
+    ],
+    "number": 90
+  },
+  {
+    "title": "代码块2：任务损失和反向传播",
+    "key": "code2b",
+    "bullets": [
+      "分类采用cross entropy，回归采用MSE。计算损失后清零梯度、反传、更新。",
+      "回归教学例：预测(1,3)，真实(2,3)，MSE=[1²+0²]/2=0.5。",
+      "代码块存在ouput、opitmizer等拼写，说明其目的是讲流程；执行以官方代码为准。"
+    ],
+    "section": "附录D 算法逐段",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Code Block 2 lines 14-21"
+    ],
+    "number": 91
+  },
+  {
+    "title": "图E.1a：Elo把多次胜负汇成评分",
+    "key": "e1a",
+    "bullets": [
+      "每个任务上比较Accuracy或R²构成对局；评级综合胜负与对手强度。",
+      "TabDPT居首，TabPFN v2随后，Tabula-8B最低；纵轴是评分而非准确率。",
+      "作者对比赛顺序重采样来给Elo不确定性。柱高不可直接换成预测误差百分比。"
+    ],
+    "section": "附录E 排名",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure E.1a",
+      "Appendix E Elo"
+    ],
+    "number": 92
+  },
+  {
+    "title": "图E.1b：Glicko2的误差条含评级不确定性",
+    "key": "e1b",
+    "bullets": [
+      "Glicko2模型自身表示评级不确定性，作者观察其较少依赖对局顺序。",
+      "前两名仍为TabDPT与TabPFN v2，但中间方法顺序与Elo不完全一致。",
+      "两个评级系统一致不构成额外独立数据集，它们使用同一组对局结果。"
+    ],
+    "section": "附录E 排名",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure E.1b",
+      "Appendix E Glicko2"
+    ],
+    "number": 93
+  },
+  {
+    "title": "图F.1a：分类按行数分桶",
+    "key": "F1a",
+    "bullets": [
+      "横轴为数据集行数区间，纵轴AUC。不同颜色/形状代表不同算法。",
+      "在最大行数桶，TabDPT仍较强，但相对其他强模型的优势缩小；小样本桶也并非总第一。",
+      "这是不同数据集的横向分桶，不能解释为同一个表增加样本后的因果曲线。"
+    ],
+    "section": "附录F 分层结果",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure F.1a"
+    ],
+    "number": 94
+  },
+  {
+    "title": "图F.1b：回归也受任务组成影响",
+    "key": "F1b",
+    "bullets": [
+      "横轴同样按行数分桶，纵轴改为R²，不能直接和左图AUC高度比较。",
+      "各桶跨模型差异与任务难度一起变化；行数大不一定让这组任务的R²更高。",
+      "图未列每桶数据集数和完整数值，不能从点位构造精确显著性检验。"
+    ],
+    "section": "附录F 分层结果",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure F.1b"
+    ],
+    "number": 95
+  },
+  {
+    "title": "图F.2a：高维分类仍需输入压缩",
+    "key": "F2a",
+    "bullets": [
+      "按特征数分桶，从0–5直到1,000以上，指标为AUC。",
+      "模型直接输入最多100维，较宽表依赖PCA等宽度适配，图中表现包含这类处理。",
+      "不同桶是不同任务集合，不能断言“增加特征会改善准确率”。"
+    ],
+    "section": "附录F 分层结果",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure F.2a"
+    ],
+    "number": 96
+  },
+  {
+    "title": "图F.2b：宽表回归出现明显弱点",
+    "key": "F2b",
+    "bullets": [
+      "100–1,000特征桶中，TabPFN v2约0.42，TabDPT约0.31，均为读图近似。",
+      "50–100特征桶整体R²约0.9以上，换到更宽桶整体下滑，任务组成不可忽略。",
+      "因此“跨设置稳健”不能改写成“任何宽度都领先”。"
+    ],
+    "section": "附录F 分层结果",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure F.2b"
+    ],
+    "number": 97
+  },
+  {
+    "title": "图F.3a：类别特征比例改变分类任务",
+    "key": "F3a",
+    "bullets": [
+      "横轴为类别特征占比四个区间，纵轴AUC。它衡量输入列类型，不是类别数量。",
+      "连续变量为主与类别变量为主的任务呈现不同模型差异。",
+      "整数编码配合欧氏检索会引入任意类别距离，需在真实任务中单独核验。"
+    ],
+    "section": "附录F 分层结果",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure F.3a"
+    ],
+    "number": 98
+  },
+  {
+    "title": "图F.3b：类别比例与回归难度一起变化",
+    "key": "F3b",
+    "bullets": [
+      "同样四个类别特征比例桶，纵轴为R²。占比高于0.5的两个桶，TabPFN v2点估计均最高。",
+      "附录文字还提到missing fraction，但完整PDF只给F.1–F.3三组图。",
+      "因此本课标记“缺失比例图未提供”，不生成一张不存在的附录图。"
+    ],
+    "section": "附录F 分层结果",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure F.3b",
+      "Appendix F 缺失图披露"
+    ],
+    "number": 99
+  },
+  {
+    "title": "图G.1：AUC的临界差异图",
+    "key": "g1",
+    "bullets": [
+      "横轴是跨数据集平均名次，1更好。每条细线连接算法名称与其排名。",
+      "粗横线连接未被该多重检验区分的一组方法；不是模型性能完全相等的证明。",
+      "AUC平均值第一与平均名次第一是不同统计量，需同时看表1。"
+    ],
+    "section": "附录G 统计比较",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure G.1"
+    ],
+    "number": 100
+  },
+  {
+    "title": "图G.2：准确率排序更有针对性",
+    "key": "g2",
+    "bullets": [
+      "图G.2对CC18的Accuracy排名，TabDPT在靠近1的一端。",
+      "它比较折/数据集层面的排名差异，并考虑多重比较，与表1 bootstrap区间的对象不同。",
+      "论文没有在本段明确写出所有检验参数，不能补称某一具体校正方法。"
+    ],
+    "section": "附录G 统计比较",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure G.2"
+    ],
+    "number": 101
+  },
+  {
+    "title": "图G.3：相关系数也不能替代R²",
+    "key": "g3",
+    "bullets": [
+      "图G.3对CTR23的Correlation排名，前部包括TabDPT、TabPFN v2、TabM。",
+      "相关性只反映同步变化，对比例偏差不敏感。连续目标还应审查残差和原单位误差。",
+      "连线所表达的是检验未区分，不是两种方法可互换或校准相同。"
+    ],
+    "section": "附录G 统计比较",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure G.3"
+    ],
+    "number": 102
+  },
+  {
+    "title": "图G.4：回归误差的排名结构",
+    "key": "g4",
+    "bullets": [
+      "图G.4依据R²，前部排序与相关系数图不完全相同，TabM和TabPFN v2位置改变。",
+      "表1图注称average，附录G又提IQM。当前代码默认IQM，仍不能据此确认表1的历史汇总函数。",
+      "原始逐折结果和确切聚合代码是严格复现这些比较的必要条件。"
+    ],
+    "section": "附录G 统计比较",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "Figure G.4",
+      "Appendix G"
+    ],
+    "number": 103
+  },
+  {
+    "title": "Checklist 1：主张必须与证据范围一致",
+    "key": "ck1",
+    "bullets": [
+      "作者回答Yes：摘要和引言谨慎界定贡献，正文支持主要主张。",
+      "教学时仍区分基准胜率、平均指标与具体数据集结果，不把平均优势写成所有任务获胜。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 1"
+    ],
+    "number": 104
+  },
+  {
+    "title": "Checklist 2：局限应当明确讨论",
+    "key": "ck2",
+    "bullets": [
+      "作者回答Yes，理由指向最终的局限部分。",
+      "本课保留i.i.d.矩形数据假设、特征语义过拟合和判别模型边界，迁移拉曼研究需重新验证。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 2"
+    ],
+    "number": 105
+  },
+  {
+    "title": "Checklist 3：没有待证明的理论定理",
+    "key": "ck3a",
+    "bullets": [
+      "作者回答NA。本研究不包含需要证明的理论结果。",
+      "缩放幂律是经验拟合；α、β不应讲成理论收敛率或无限外推保证。"
+    ],
+    "section": "会议版Checklist",
+    "note": "本项理由在下一PDF页，下一课件页展示原文。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 3 question"
+    ],
+    "number": 106
+  },
+  {
+    "title": "Checklist 3续：NA的理由来自原文",
+    "key": "ck3b",
+    "bullets": [
+      "续页明确说明：论文不含需要证明的理论结果。",
+      "NA是“不适用”，不是已有证明但没有展示；模型与实验方法仍应可复核。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 3 justification"
+    ],
+    "number": 107
+  },
+  {
+    "title": "Checklist 4：方法与实验支持复现",
+    "key": "ck4",
+    "bullets": [
+      "作者回答Yes，方法、实验与附录提供主要实验和模型过程，代码及权重公开。",
+      "公开代码是复现起点；当前提交与论文配置已分叉，仍需锁定原权重、split与历史配置。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 4"
+    ],
+    "number": 108
+  },
+  {
+    "title": "Checklist 5：开放代码、权重与数据",
+    "key": "ck5",
+    "bullets": [
+      "作者回答Yes：给出推理、训练仓库，数据来自公开OpenML。",
+      "可获取不等于任意用途。仍需分别核查数据、训练代码、推理代码和模型权重的许可。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 5"
+    ],
+    "number": 109
+  },
+  {
+    "title": "Checklist 6：训练与测试细节",
+    "key": "ck6",
+    "bullets": [
+      "作者回答Yes，理由指向第3、4节与附录的实验设置。",
+      "学习率、上下文长度、集成数、训练/验证划分与随机种子都可能影响复现；不能只复制模型架构。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 6"
+    ],
+    "number": 110
+  },
+  {
+    "title": "Checklist 7：误差条与统计信息",
+    "key": "ck7",
+    "bullets": [
+      "作者回答Yes：在适用位置给置信区间。",
+      "表1有95%区间，表2未给逐项区间；Elo、Glicko2和临界差异图的不确定性含义不同。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 7"
+    ],
+    "number": 111
+  },
+  {
+    "title": "Checklist 8：完整计算时间没有记录",
+    "key": "ck8",
+    "bullets": [
+      "作者回答No：提供硬件与运行时间分析，但没有记录生成全部结果的时间。",
+      "单A100与推理曲线不足以重建整个研究的GPU小时或能耗，不能补造这些数字。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 8"
+    ],
+    "number": 112
+  },
+  {
+    "title": "Checklist 9：伦理准则合规声明",
+    "key": "ck9",
+    "bullets": [
+      "作者回答Yes，称已阅读NeurIPS伦理准则并核对合规。",
+      "这是作者声明，不能替代对未来特定应用的数据治理、偏差和使用风险评估。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 9"
+    ],
+    "number": 113
+  },
+  {
+    "title": "Checklist 10：广泛社会影响回答NA",
+    "key": "ck10",
+    "bullets": [
+      "作者认为研究为非特定用途的表格判别建模，没有需专项讨论的社会影响。",
+      "该理由限定于本论文；若用于医疗、招聘等具体决策，影响与责任需要重新评估。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 10"
+    ],
+    "number": 114
+  },
+  {
+    "title": "Checklist 11：高风险发布防护回答NA",
+    "key": "ck11",
+    "bullets": [
+      "作者认为所用数据与模型没有高滥用风险，因此回答NA。",
+      "不应把这一回答扩写为任何下游用途都没有风险，也不代表已经评估你的实验样本。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 11"
+    ],
+    "number": 115
+  },
+  {
+    "title": "Checklist 12：既有资产许可与归属",
+    "key": "ck12",
+    "bullets": [
+      "作者回答Yes，称对OpenML资产说明许可并提供归属。",
+      "数据资产许可与论文图像复用是不同事项。本课截图由用户确认可公开复用，仅用于非商业教育交流。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 12"
+    ],
+    "number": 116
+  },
+  {
+    "title": "Checklist 13：新资产的文档",
+    "key": "ck13",
+    "bullets": [
+      "作者回答Yes，新资产通过有文档的代码仓库提供。",
+      "本课固定了训练和推理仓库提交；当前README、默认设置与原论文结果应分别记录。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 13"
+    ],
+    "number": 117
+  },
+  {
+    "title": "Checklist 14：没有众包或人类受试者",
+    "key": "ck14",
+    "bullets": [
+      "作者回答NA，研究不涉及众包实验或人类受试者。",
+      "该声明只描述这篇方法论文。未来临床或人体样本研究不能直接沿用此结论。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 14"
+    ],
+    "number": 118
+  },
+  {
+    "title": "Checklist 15：IRB回答NA",
+    "key": "ck15",
+    "bullets": [
+      "作者以未涉及人类受试者为由回答NA。",
+      "如果迁移项目涉及个人健康数据或人体样本，应由实际项目的适用流程判断伦理审查要求。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 15"
+    ],
+    "number": 119
+  },
+  {
+    "title": "Checklist 16：核心方法没有使用LLM",
+    "key": "ck16",
+    "bullets": [
+      "作者回答NA：核心方法开发未把LLM作为重要、原创或非标准组成。",
+      "TabDPT是为表格设计的行Transformer，不能因为使用Transformer就把它等同于文本LLM。"
+    ],
+    "section": "会议版Checklist",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "Checklist 16"
+    ],
+    "number": 120
+  },
+  {
+    "title": "官方训练代码已经与论文配置分叉",
+    "key": "c1",
+    "bullets": [
+      "固定核查提交af0340c：默认12层、512维、8头；论文主模型16层、768维、4头。",
+      "当前默认序列1,536，eval_pos从50至1,024，回归目标有随机非线性增强。",
+      "当前代码使用一组MLP输出10类分数加1个回归值，不能逐字等同于论文所说两个独立MLP头。"
+    ],
+    "section": "官方代码核验",
+    "note": "来源：TabDPT-training/configs/default_config.yaml、model.py、dataset.py。",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "官方训练配置",
+      "官方输出头"
+    ],
+    "number": 121
+  },
+  {
+    "title": "检索前是否遮蔽目标列须复核",
+    "key": "code1e2",
+    "bullets": [
+      "论文代码块1第53行先把查询目标坐标置零，再查近邻。",
+      "当前训练仓库use_knn先用完整x_q检索，随后才提取和删除目标列。",
+      "这是可定位的实现差异，会让邻居选择依赖所选目标坐标。需要复现研究时检查，不能据此证明论文评估集泄漏。"
+    ],
+    "section": "官方代码核验",
+    "note": "来源：训练仓库af0340c，dataset.py的use_knn。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "论文代码检索差异"
+    ],
+    "number": 122
+  },
+  {
+    "title": "预处理参数也需锁到具体版本",
+    "key": "f2b",
+    "bullets": [
+      "论文写先标准化并截断超过10的离群值；当前model.py局部前向用4σ裁剪，归一化前后各一次。",
+      "当前训练数据采样调用cls_prob=0.5，而论文代码块示例用0.3。",
+      "差异可能来自代码演化。没有作者对应提交记录时，不替作者推断哪个版本生成了每张图。"
+    ],
+    "section": "官方代码核验",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "官方预处理差异"
+    ],
+    "number": 123
+  },
+  {
+    "title": "复现实验需要固定权重与汇总方式",
+    "key": "t1top",
+    "bullets": [
+      "当前推理提交bd03b004包含v1.3功能，paper_evaluation.py会合并训练/验证集并评估多个suite。",
+      "analysis.ipynb默认调用IQM，bootstrap重复20,000次。README当前数值与论文表1不一致。",
+      "应记录包版本、权重哈希、数据split、context=2,048、ensemble=8、种子与聚合函数。"
+    ],
+    "section": "官方代码核验",
+    "note": "本课只检查代码，没有运行78M模型或复现107个数据集。",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "官方推理代码",
+      "README数值边界"
+    ],
+    "number": 124
+  },
+  {
+    "title": "软件许可与论文截图许可分开核对",
+    "key": "f2b",
+    "bullets": [
+      "推理仓库LICENSE为Apache-2.0；训练仓库为Toronto-Dominion研究用途许可，明确不许可商业使用。",
+      "用户确认本课原文截图可公开复用，仅用于非商业教育交流。",
+      "本课保留作者、论文与截图页码；代码、模型和数据仍分别适用各自原有条款。"
+    ],
+    "section": "许可与来源",
+    "note": "用途说明更新于2026-11-04；截图复用不扩展为代码、模型或数据的商业授权。",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "许可核验"
+    ],
+    "number": 125
+  },
+  {
+    "title": "微生物拉曼数据可先整理成预测表",
+    "key": "f2b",
+    "bullets": [
+      "迁移设想：每行对应一个独立生物样本或规范化测量单元，每列为谱段/PCA分数/实验条件。",
+      "标签可为菌种、处理类别或连续代谢指标，取决于真实实验定义。",
+      "该论文没有微生物、DMD拉曼或你的数据实验；这里是待验证的研究设计。"
+    ],
+    "section": "与研究的关系",
+    "note": "DMD是数字微镜器件：TabDPT处理结果表，不直接控制光路。",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "微生物DMD拉曼适用性"
+    ],
+    "number": 126
+  },
+  {
+    "title": "DMD压缩测量和表格预测是两层问题",
+    "key": "c1",
+    "bullets": [
+      "DMD编码/光谱重建解决如何获得可用测量，TabDPT解决给定特征后的监督预测。",
+      "原谱常超过100个采样点，可比较峰面积、PCA前100维与物理约束特征。",
+      "PCA必须在训练折拟合。不能把全部样本一起降维后再分训练测试，否则会污染评估。"
+    ],
+    "section": "与研究的关系",
+    "note": "这是方法迁移建议，不是论文对DMD系统的实验结论。",
+    "layout": "split",
+    "formula": "",
+    "tags": [],
+    "number": 127
+  },
+  {
+    "title": "一个分组验证计算例",
+    "key": "b1a",
+    "bullets": [
+      "假设20个培养批次，每批100条谱，合计2,000条。有效独立批次数仍只有20。",
+      "若随机分谱，同批近重复谱可同时进入训练与测试，近邻检索尤其容易受益。",
+      "可按培养批次、菌株或采集日分组：15批开发、5批外测，所有预处理只拟合开发数据。"
+    ],
+    "section": "与研究的关系",
+    "note": "样本数及15/5划分为教学假设，实际需按实验设计确定。",
+    "layout": "split",
+    "formula": "",
+    "tags": [],
+    "number": 128
+  },
+  {
+    "title": "建议同时比较小样本与跨批次表现",
+    "key": "t2",
+    "bullets": [
+      "候选对照：相同分组split上的TabDPT、TabPFN、树模型、线性/PLS等已有基线。",
+      "分类报告macro-F1、平衡准确率、AUC与概率校准；回归报告MAE、RMSE、R²和原单位残差。",
+      "分开测采集时间、重建时间和预测时间。只有整个流程变快才支持DMD平台的时间收益。"
+    ],
+    "section": "与研究的关系",
+    "note": "基线和指标是研究设计建议，未声称这些对照已在论文中完成。",
+    "layout": "split",
+    "formula": "",
+    "tags": [],
+    "number": 129
+  },
+  {
+    "title": "伪标签和域偏移需要单独检查",
+    "key": "f4b",
+    "bullets": [
+      "论文的半监督增益允许提出试验：在训练批未标注谱上扩充上下文。",
+      "先测伪标签精度和各菌种覆盖率，再决定是否用top-1,000。稀有类可能被高置信多数类挤掉。",
+      "仪器、培养条件和采集日变化会改变相似度，不能用一次同域测试代替跨仪器外测。"
+    ],
+    "section": "与研究的关系",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [],
+    "number": 130
+  },
+  {
+    "title": "原始论文承认的能力边界",
+    "key": "limits",
+    "bullets": [
+      "设计面向矩形、近似i.i.d.行，未显式建模时间依赖、层级结构或分布漂移。",
+      "特征名嵌入的初步实验过拟合，文本语义尚未稳定整合。",
+      "当前论文为判别预测模型，不能从其回归点预测推出生成能力、密度估计或可靠置信区间。"
+    ],
+    "section": "限制与使用条件",
+    "note": "",
+    "layout": "wide",
+    "formula": "",
+    "tags": [
+      "5 Limitations"
+    ],
+    "number": 131
+  },
+  {
+    "title": "本课的证据和没有做的事",
+    "key": "f1",
+    "bullets": [
+      "已核对正文、图表子图、附录A–G与官方代码。Checklist 16项已按作者会议稿p.15–21补齐问题、回答与理由的原文截图。",
+      "所有图形均保留原PDF像素。裁切只移除空白与无关内容，读图近似值明确标注。",
+      "未训练模型、未跑基准、未使用微生物实验数据；代码实现差异与实验结论的适用边界均已说明。"
+    ],
+    "section": "证据收束",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "覆盖说明"
+    ],
+    "number": 132
+  },
+  {
+    "title": "带走三点",
+    "key": "f2b",
+    "bullets": [
+      "真实表格SSL",
+      "检索上下文再预测",
+      "分组外测验证迁移"
+    ],
+    "section": "50字内总结",
+    "note": "",
+    "layout": "split",
+    "formula": "",
+    "tags": [
+      "末页总结"
+    ],
+    "number": 133
+  }
+]

@@ -1,0 +1,1132 @@
+{
+  "课程起点": [
+    {
+      "page": 1,
+      "title": "TabDPT：从真实表格学习预测规则",
+      "screenshot_key": "f2b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "完整目录": [
+    {
+      "page": 2,
+      "title": "课程目录：章节与页码",
+      "screenshot_key": "authors",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "1",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "文献身份": [
+    {
+      "page": 3,
+      "title": "文献归属以PDF中的完整作者名单为据",
+      "screenshot_key": "authors",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "1",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "课程路线": [
+    {
+      "page": 4,
+      "title": "三个动作构成同一条预测流程",
+      "screenshot_key": "f2a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "证据边界": [
+    {
+      "page": 5,
+      "title": "论文版本和当前软件需要分开",
+      "screenshot_key": "t1top",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "7",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "原理": [
+    {
+      "page": 6,
+      "title": "ICL把训练样本放进输入",
+      "screenshot_key": "f2b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 7,
+      "title": "一行对应一个 token",
+      "screenshot_key": "f2b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 8,
+      "title": "固定输入宽度把不同表送入同一模型",
+      "screenshot_key": "c1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 9,
+      "title": "图2a：一次批训练包含不同表",
+      "screenshot_key": "f2a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 10,
+      "title": "图2b：标签只加进上下文行",
+      "screenshot_key": "f2b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 11,
+      "title": "式1把输入、算子和输出写在一起",
+      "screenshot_key": "eq1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 12,
+      "title": "注意力限制阻断查询标签泄漏",
+      "screenshot_key": "f2b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 13,
+      "title": "一个二维嵌入计算例",
+      "screenshot_key": "eq1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 14,
+      "title": "自监督任务来自被拿走的一列",
+      "screenshot_key": "f2a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 15,
+      "title": "分类和回归目标用不同变换",
+      "screenshot_key": "code1c",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 16,
+      "title": "把一列连续值变成三分类",
+      "screenshot_key": "code1c2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 17,
+      "title": "列子采样改变同一目标的条件信息",
+      "screenshot_key": "code1b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 18,
+      "title": "检索用相似样本控制上下文长度",
+      "screenshot_key": "f2a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 19,
+      "title": "检索计算例：距离只来自可用特征",
+      "screenshot_key": "alg1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "4",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 20,
+      "title": "算法1：前向预测之后才更新权重",
+      "screenshot_key": "alg1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "4",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 21,
+      "title": "训练和推理共享局部上下文",
+      "screenshot_key": "f4a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "8",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 22,
+      "title": "超过10类时按位编码类别",
+      "screenshot_key": "c1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 23,
+      "title": "集成平均削弱列顺序和类别编号影响",
+      "screenshot_key": "f2b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "实验设置": [
+    {
+      "page": 24,
+      "title": "训练数据和测试数据来自不同集合",
+      "screenshot_key": "b1a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 25,
+      "title": "评估的范围比“所有表格”窄",
+      "screenshot_key": "b1a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 26,
+      "title": "基线有不同的调参和数据预算",
+      "screenshot_key": "t1top",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "7",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "指标教学": [
+    {
+      "page": 27,
+      "title": "四个指标回答不同问题",
+      "screenshot_key": "t1top",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "7",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 28,
+      "title": "R²和交叉熵的手算例",
+      "screenshot_key": "eq2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "9",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 29,
+      "title": "指标补充：原文怎样报告R²",
+      "screenshot_key": "t1top",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "7",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 30,
+      "title": "指标补充：交叉熵不等于缩放律",
+      "screenshot_key": "metric_loss_text",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "9",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 37,
+      "title": "胜率忽略了胜负的幅度",
+      "screenshot_key": "f3a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "8",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "主结果": [
+    {
+      "page": 31,
+      "title": "表1：分类差异主要体现在准确率",
+      "screenshot_key": "t1top",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "7",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 32,
+      "title": "表1：回归点估计略高但区间重叠",
+      "screenshot_key": "t1top",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "7",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 33,
+      "title": "表1：不给验证集时应换一行比较",
+      "screenshot_key": "t1top",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "7",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 34,
+      "title": "表1：树和深度基线也有强项",
+      "screenshot_key": "t1bottom",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "7",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 36,
+      "title": "图3a：每个格子是成对胜率",
+      "screenshot_key": "f3a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "8",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "后续arXiv v3补充": [
+    {
+      "page": 35,
+      "title": "后续修订补充：2026-01-14的TabArena声明",
+      "screenshot_key": "leaderboard",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "2",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "速度与代价": [
+    {
+      "page": 38,
+      "title": "图3b：越靠左上，部署预算越划算",
+      "screenshot_key": "f3b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "8",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 39,
+      "title": "固定模型在线推理时，树模型可更快",
+      "screenshot_key": "f3b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "8",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "组件消融": [
+    {
+      "page": 40,
+      "title": "图4a：四种删减都会损伤表现",
+      "screenshot_key": "f4a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "8",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 41,
+      "title": "图4b：没有SSL时真实表会过拟合",
+      "screenshot_key": "f4b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "8",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 42,
+      "title": "真实数据优势有明确的对照范围",
+      "screenshot_key": "f4b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "8",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "缩放规律": [
+    {
+      "page": 43,
+      "title": "图1：模型和数据两个维度共同扩展",
+      "screenshot_key": "f1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "1",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 44,
+      "title": "式2中每个参数都有职责",
+      "screenshot_key": "eq2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "9",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 45,
+      "title": "扩大一倍只缩小对应的那一项",
+      "screenshot_key": "eq2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "9",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 46,
+      "title": "为何数据规模按单元格计数",
+      "screenshot_key": "b1a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "少样本学习": [
+    {
+      "page": 47,
+      "title": "表2：每类10个标签，仍有未标注行",
+      "screenshot_key": "t2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "9",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 48,
+      "title": "表2：平均提升0.80个百分点",
+      "screenshot_key": "t2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "9",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 49,
+      "title": "表2：dna上的负结果不能藏起来",
+      "screenshot_key": "t2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "9",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "附录A 失败尝试": [
+    {
+      "page": 50,
+      "title": "附录A：复杂预处理没有普遍收益",
+      "screenshot_key": "a_pre",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "15",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 51,
+      "title": "附录A：缺失标记没有带来预期收益",
+      "screenshot_key": "a_nan",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "15",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 52,
+      "title": "附录A：更复杂标签表示也会失败",
+      "screenshot_key": "a_embed",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "15",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 53,
+      "title": "附录A：逐单元格表示增加显存需求",
+      "screenshot_key": "a_cell",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "15",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "附录B 训练数据": [
+    {
+      "page": 54,
+      "title": "图B.1a：训练表大小跨度很大",
+      "screenshot_key": "b1a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 55,
+      "title": "图B.1b：123张表的领域组成",
+      "screenshot_key": "b1b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "附录B 数据清单": [
+    {
+      "page": 56,
+      "title": "表B.1：训练表逐项核对 1",
+      "screenshot_key": "tb_15_0",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "15",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 57,
+      "title": "表B.1：训练表逐项核对 2",
+      "screenshot_key": "tb_15_8",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "15",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 58,
+      "title": "表B.1：训练表逐项核对 3",
+      "screenshot_key": "tb_16_0",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 59,
+      "title": "表B.1：训练表逐项核对 4",
+      "screenshot_key": "tb_16_8",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 60,
+      "title": "表B.1：训练表逐项核对 5",
+      "screenshot_key": "tb_16_16",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 61,
+      "title": "表B.1：训练表逐项核对 6",
+      "screenshot_key": "tb_16_24",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 62,
+      "title": "表B.1：训练表逐项核对 7",
+      "screenshot_key": "tb_16_32",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 63,
+      "title": "表B.1：训练表逐项核对 8",
+      "screenshot_key": "tb_16_40",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 64,
+      "title": "表B.1：训练表逐项核对 9",
+      "screenshot_key": "tb_16_48",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 65,
+      "title": "表B.1：训练表逐项核对 10",
+      "screenshot_key": "tb_16_56",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 66,
+      "title": "表B.1：训练表逐项核对 11",
+      "screenshot_key": "tb_16_64",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 67,
+      "title": "表B.1：训练表逐项核对 12",
+      "screenshot_key": "tb_16_72",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 68,
+      "title": "表B.1：训练表逐项核对 13",
+      "screenshot_key": "tb_17_0",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "17",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 69,
+      "title": "表B.1：训练表逐项核对 14",
+      "screenshot_key": "tb_17_8",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "17",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 70,
+      "title": "表B.1：训练表逐项核对 15",
+      "screenshot_key": "tb_17_16",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "17",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 71,
+      "title": "表B.1：训练表逐项核对 16",
+      "screenshot_key": "tb_17_24",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "17",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 72,
+      "title": "表B.1：训练表逐项核对 17",
+      "screenshot_key": "tb_17_32",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "17",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "附录B 污染排查": [
+    {
+      "page": 73,
+      "title": "附录B.1：污染排查用多种指纹",
+      "screenshot_key": "b_contam",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "17",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "附录C 架构": [
+    {
+      "page": 74,
+      "title": "表C.1：论文主干的固定参数",
+      "screenshot_key": "c1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 75,
+      "title": "表C.2：七种模型尺寸逐项列出",
+      "screenshot_key": "c2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "附录C 预处理": [
+    {
+      "page": 76,
+      "title": "附录C：两阶段标准化与缺失填补",
+      "screenshot_key": "c_pre",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "17",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 77,
+      "title": "附录C：标准化后补零等价于均值填补",
+      "screenshot_key": "c_nan",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "计算例": [
+    {
+      "page": 78,
+      "title": "标准化回归的还原计算",
+      "screenshot_key": "eq1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "附录C 训练": [
+    {
+      "page": 79,
+      "title": "附录C：优化设置决定复现配方",
+      "screenshot_key": "c_opt",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "附录D 算法逐段": [
+    {
+      "page": 80,
+      "title": "代码块1：创建训练任务数据对象",
+      "screenshot_key": "code1a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 81,
+      "title": "代码块1：预处理后保存近邻索引",
+      "screenshot_key": "code1a2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 82,
+      "title": "代码块1：随机选择并重排特征",
+      "screenshot_key": "code1b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 83,
+      "title": "代码块1：先判断是否保留连续目标",
+      "screenshot_key": "code1c",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 84,
+      "title": "代码块1：用随机边界生成类别",
+      "screenshot_key": "code1c2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 85,
+      "title": "代码块1：低基数目标与随机取表",
+      "screenshot_key": "code1d",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 86,
+      "title": "代码块1：随机选种子行和目标列",
+      "screenshot_key": "code1e",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "20",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 87,
+      "title": "代码块1：遮蔽目标后提取近邻任务",
+      "screenshot_key": "code1e2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "20",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 88,
+      "title": "代码块1：最后输出一个训练任务",
+      "screenshot_key": "code1f",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "20",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 89,
+      "title": "代码块2：建立模型和训练循环",
+      "screenshot_key": "code2a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "20",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 90,
+      "title": "代码块2：上下文标签可见，查询标签遮蔽",
+      "screenshot_key": "code2a2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "20",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 91,
+      "title": "代码块2：任务损失和反向传播",
+      "screenshot_key": "code2b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "20",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "附录E 排名": [
+    {
+      "page": 92,
+      "title": "图E.1a：Elo把多次胜负汇成评分",
+      "screenshot_key": "e1a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "21",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 93,
+      "title": "图E.1b：Glicko2的误差条含评级不确定性",
+      "screenshot_key": "e1b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "21",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "附录F 分层结果": [
+    {
+      "page": 94,
+      "title": "图F.1a：分类按行数分桶",
+      "screenshot_key": "F1a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "22",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 95,
+      "title": "图F.1b：回归也受任务组成影响",
+      "screenshot_key": "F1b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "22",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 96,
+      "title": "图F.2a：高维分类仍需输入压缩",
+      "screenshot_key": "F2a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "22",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 97,
+      "title": "图F.2b：宽表回归出现明显弱点",
+      "screenshot_key": "F2b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "22",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 98,
+      "title": "图F.3a：类别特征比例改变分类任务",
+      "screenshot_key": "F3a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "22",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 99,
+      "title": "图F.3b：类别比例与回归难度一起变化",
+      "screenshot_key": "F3b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "22",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "附录G 统计比较": [
+    {
+      "page": 100,
+      "title": "图G.1：AUC的临界差异图",
+      "screenshot_key": "g1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "24",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 101,
+      "title": "图G.2：准确率排序更有针对性",
+      "screenshot_key": "g2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "24",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 102,
+      "title": "图G.3：相关系数也不能替代R²",
+      "screenshot_key": "g3",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "24",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 103,
+      "title": "图G.4：回归误差的排名结构",
+      "screenshot_key": "g4",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "24",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "会议版Checklist": [
+    {
+      "page": 104,
+      "title": "Checklist 1：主张必须与证据范围一致",
+      "screenshot_key": "ck1",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "15",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 105,
+      "title": "Checklist 2：局限应当明确讨论",
+      "screenshot_key": "ck2",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "15",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 106,
+      "title": "Checklist 3：没有待证明的理论定理",
+      "screenshot_key": "ck3a",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "15",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 107,
+      "title": "Checklist 3续：NA的理由来自原文",
+      "screenshot_key": "ck3b",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "16",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 108,
+      "title": "Checklist 4：方法与实验支持复现",
+      "screenshot_key": "ck4",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "16",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 109,
+      "title": "Checklist 5：开放代码、权重与数据",
+      "screenshot_key": "ck5",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "17",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 110,
+      "title": "Checklist 6：训练与测试细节",
+      "screenshot_key": "ck6",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "17",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 111,
+      "title": "Checklist 7：误差条与统计信息",
+      "screenshot_key": "ck7",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "17",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 112,
+      "title": "Checklist 8：完整计算时间没有记录",
+      "screenshot_key": "ck8",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "18",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 113,
+      "title": "Checklist 9：伦理准则合规声明",
+      "screenshot_key": "ck9",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "18",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 114,
+      "title": "Checklist 10：广泛社会影响回答NA",
+      "screenshot_key": "ck10",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "18",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 115,
+      "title": "Checklist 11：高风险发布防护回答NA",
+      "screenshot_key": "ck11",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "19",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 116,
+      "title": "Checklist 12：既有资产许可与归属",
+      "screenshot_key": "ck12",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "19",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 117,
+      "title": "Checklist 13：新资产的文档",
+      "screenshot_key": "ck13",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "20",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 118,
+      "title": "Checklist 14：没有众包或人类受试者",
+      "screenshot_key": "ck14",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "20",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 119,
+      "title": "Checklist 15：IRB回答NA",
+      "screenshot_key": "ck15",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "20",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    },
+    {
+      "page": 120,
+      "title": "Checklist 16：核心方法没有使用LLM",
+      "screenshot_key": "ck16",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "21",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+    }
+  ],
+  "官方代码核验": [
+    {
+      "page": 121,
+      "title": "官方训练代码已经与论文配置分叉",
+      "screenshot_key": "c1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 122,
+      "title": "检索前是否遮蔽目标列须复核",
+      "screenshot_key": "code1e2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "20",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 123,
+      "title": "预处理参数也需锁到具体版本",
+      "screenshot_key": "f2b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 124,
+      "title": "复现实验需要固定权重与汇总方式",
+      "screenshot_key": "t1top",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "7",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "许可与来源": [
+    {
+      "page": 125,
+      "title": "软件许可与论文截图许可分开核对",
+      "screenshot_key": "f2b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "与研究的关系": [
+    {
+      "page": 126,
+      "title": "微生物拉曼数据可先整理成预测表",
+      "screenshot_key": "f2b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 127,
+      "title": "DMD压缩测量和表格预测是两层问题",
+      "screenshot_key": "c1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 128,
+      "title": "一个分组验证计算例",
+      "screenshot_key": "b1a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 129,
+      "title": "建议同时比较小样本与跨批次表现",
+      "screenshot_key": "t2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "9",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    },
+    {
+      "page": 130,
+      "title": "伪标签和域偏移需要单独检查",
+      "screenshot_key": "f4b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "8",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "限制与使用条件": [
+    {
+      "page": 131,
+      "title": "原始论文承认的能力边界",
+      "screenshot_key": "limits",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "10",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "证据收束": [
+    {
+      "page": 132,
+      "title": "本课的证据和没有做的事",
+      "screenshot_key": "f1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "1",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ],
+  "50字内总结": [
+    {
+      "page": 133,
+      "title": "带走三点",
+      "screenshot_key": "f2b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3"
+    }
+  ]
+}

@@ -1,0 +1,2568 @@
+{
+  "id": "AL0006",
+  "title": "TabDPT：真实表格预训练与上下文检索",
+  "release": "r2-public",
+  "release_date": "2026-11-04",
+  "language": "zh-CN",
+  "entrypoint": "index.html",
+  "standalone_html": true,
+  "slides": 133,
+  "html_sha256": "9b578dbb36aa7a7c2f743943ec7f96947f5dda84454373f774b8cb1870f6ea92",
+  "screenshot_assets_embedded": 88,
+  "distinct_screenshot_assets_displayed": 87,
+  "asset_reference_note": "assets/*.png strings identify embedded screenshot assets. Separate PNG files are not needed or included. source_page is the actual page in the PDF specified by source_url; page numbers from different PDF versions are not interchangeable.",
+  "reuse_statement": {
+    "basis": "User confirmation",
+    "statement": "用户确认本课原文截图可公开复用，仅用于非商业教育交流。",
+    "scope": "Non-commercial educational exchange only. Code, models and datasets retain their own terms.",
+    "independent_author_permission_verification": false,
+    "blanket_open_license_granted": false,
+    "details": "RIGHTS.md"
+  },
+  "paper": {
+    "title": "TabDPT: Scaling Tabular Foundation Models on Real Data",
+    "venue": "Advances in Neural Information Processing Systems 38 (NeurIPS 2025)",
+    "doi": "10.52202/085713-5748",
+    "official_landing_page": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/fc0e3f908a2116ba529ad0a1530a3675-Abstract-Conference.html",
+    "official_pdf_url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/fc0e3f908a2116ba529ad0a1530a3675-Paper-Conference.pdf",
+    "official_pdf_pages": 31,
+    "author_attribution": "The deck follows the 10-author list in the paper PDF; slide 3 explains the metadata discrepancy."
+  },
+  "screenshot_sources": [
+    {
+      "source_id": "arxiv_v3",
+      "url": "https://arxiv.org/pdf/2410.18164v3",
+      "version": "2410.18164v3",
+      "version_date": "2026-01-17",
+      "pages": 24,
+      "sha256": "f336b271ffe3df26319bbba823d7f74ba30594a7b97e7247b2eedab58e0ffb47",
+      "purpose": "Scientific figures, tables, formulas, pseudocode and paper excerpts. The January 14, 2026 TabArena statement is presented as a later revision, not as a 2025 experiment or a current ranking."
+    },
+    {
+      "source_id": "author_conference_pdf",
+      "url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "description": "Author-hosted conference manuscript",
+      "pdf_metadata_date": "2025-10-24",
+      "pages": 31,
+      "sha256": "cb94294e9e109924a9eb01463f17ae410294cab0ad897239cb2ed3bfcabc0730",
+      "purpose": "Conference Checklist screenshots from PDF pages 15–21. The metadata date identifies this file and is not claimed to be a separate publication date."
+    }
+  ],
+  "code_versions": [
+    {
+      "repository": "https://github.com/layer6ai-labs/TabDPT-training",
+      "commit": "af0340c5cdebe2ceb6b94c09d6f9564ee80b89df",
+      "version_url": "https://github.com/layer6ai-labs/TabDPT-training/tree/af0340c5cdebe2ceb6b94c09d6f9564ee80b89df",
+      "license_url": "https://github.com/layer6ai-labs/TabDPT-training/blob/af0340c5cdebe2ceb6b94c09d6f9564ee80b89df/LICENSE",
+      "license_description": "Toronto-Dominion research-only license; commercial use not permitted."
+    },
+    {
+      "repository": "https://github.com/layer6ai-labs/TabDPT-inference",
+      "commit": "bd03b004cd66fb45f77539036fdd9c187c3f5493",
+      "version_url": "https://github.com/layer6ai-labs/TabDPT-inference/tree/bd03b004cd66fb45f77539036fdd9c187c3f5493",
+      "license_url": "https://github.com/layer6ai-labs/TabDPT-inference/blob/bd03b004cd66fb45f77539036fdd9c187c3f5493/LICENSE",
+      "license_description": "Apache License 2.0."
+    }
+  ],
+  "version_note": "Scientific figures from arXiv v3; checklist from author-hosted 2025-10-24 conference PDF; the 2026 TabArena paragraph is marked as later revision.",
+  "assets": {
+    "authors": {
+      "embedded_asset_id": "assets/authors.png",
+      "label": "作者与机构",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "1",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        173,
+        508,
+        213
+      ],
+      "sha256": "b8e73f5a1d07367106e702726e2585a3addd57de55d6b20d76ef75f210c9c214",
+      "displayed_on_slides": [
+        2,
+        3
+      ]
+    },
+    "leaderboard": {
+      "embedded_asset_id": "assets/leaderboard.png",
+      "label": "引言中注明日期的TabArena结果",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "2",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        105,
+        609,
+        508,
+        725
+      ],
+      "sha256": "7e12c86bdc57670ac835a6934b3634f02f5e24f2e4d2636c13155ef4f49d3f33",
+      "displayed_on_slides": [
+        35
+      ]
+    },
+    "metric_loss_text": {
+      "embedded_asset_id": "assets/metric_loss_text.png",
+      "label": "第4.5节：交叉熵、1−ρ与缩放图损失",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "9",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        106,
+        391,
+        508,
+        473
+      ],
+      "sha256": "e514a1fb42a8d8ebb54e4546bacf0236ca913a0882a290aa9d630d76734deca1",
+      "displayed_on_slides": [
+        30
+      ]
+    },
+    "a_pre": {
+      "embedded_asset_id": "assets/a_pre.png",
+      "label": "附录A：预处理负结果",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "15",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        133,
+        159,
+        508,
+        195
+      ],
+      "sha256": "37c74f7106f4b756dbb83c9f86cb3552f31d3a359e5c858e0af914e28916841a",
+      "displayed_on_slides": [
+        50
+      ]
+    },
+    "a_embed": {
+      "embedded_asset_id": "assets/a_embed.png",
+      "label": "附录A：标签嵌入负结果",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "15",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        133,
+        196,
+        508,
+        279
+      ],
+      "sha256": "2957923ed751a30e381ec188cd1d3a8ad6bd56e010f061c9a99f6b037811469e",
+      "displayed_on_slides": [
+        52
+      ]
+    },
+    "a_nan": {
+      "embedded_asset_id": "assets/a_nan.png",
+      "label": "附录A：缺失值编码负结果",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "15",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        133,
+        280,
+        508,
+        327
+      ],
+      "sha256": "bd7dcb1ec498ccbec9ee2999187fa5f9ab91d1da5724497e5ce2599aaef5e4e2",
+      "displayed_on_slides": [
+        51
+      ]
+    },
+    "a_cell": {
+      "embedded_asset_id": "assets/a_cell.png",
+      "label": "附录A：逐单元格编码",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "15",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        133,
+        328,
+        508,
+        419
+      ],
+      "sha256": "c096dae62fa6135ad3ac7ff08f8fe73503907d78faf537c48545bd6405356757",
+      "displayed_on_slides": [
+        53
+      ]
+    },
+    "b_contam": {
+      "embedded_asset_id": "assets/b_contam.png",
+      "label": "附录B.1：污染排查",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "17",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        106,
+        456,
+        508,
+        546
+      ],
+      "sha256": "880579f5198e59b98bb2102958a8bf99547d6ee72b17076716022cabaf842bf6",
+      "displayed_on_slides": [
+        73
+      ]
+    },
+    "c_pre": {
+      "embedded_asset_id": "assets/c_pre.png",
+      "label": "附录C.1：预处理",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "17",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        106,
+        655,
+        508,
+        724
+      ],
+      "sha256": "da4bdb111caf9d380ea8bb54491a2a4bf4b80b15dc4ba24ea3da43245a43cdaf",
+      "displayed_on_slides": [
+        76
+      ]
+    },
+    "c_nan": {
+      "embedded_asset_id": "assets/c_nan.png",
+      "label": "附录C.1：缺失值处理",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        106,
+        389,
+        508,
+        447
+      ],
+      "sha256": "54d2067497ba7b711f078b479e6539a49cad70ae2bf916cb53e1e975d9ffe4c3",
+      "displayed_on_slides": [
+        77
+      ]
+    },
+    "c_opt": {
+      "embedded_asset_id": "assets/c_opt.png",
+      "label": "附录C.1：优化设置",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        106,
+        449,
+        508,
+        518
+      ],
+      "sha256": "e9610e51faed8ebf47fa02cd770108a9b2406abbda4e2eb1dcba659ab4aa7609",
+      "displayed_on_slides": [
+        79
+      ]
+    },
+    "limits": {
+      "embedded_asset_id": "assets/limits.png",
+      "label": "第5节：限制与未来工作",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "10",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        106,
+        371,
+        508,
+        474
+      ],
+      "sha256": "27f4c065fb834e1abc18a41293b05d03d306ad4a365985891d6c24df468f9b69",
+      "displayed_on_slides": [
+        131
+      ]
+    },
+    "f1": {
+      "embedded_asset_id": "assets/f1.png",
+      "label": "图1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "1",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        305,
+        497,
+        501,
+        635
+      ],
+      "sha256": "2cb06142e5a55e75b4aa0f5e0b8bad8ef9cd20b8ff83edc0e4d86f580e3f2f34",
+      "displayed_on_slides": [
+        43,
+        132
+      ]
+    },
+    "f2a": {
+      "embedded_asset_id": "assets/f2a.png",
+      "label": "图2a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        108,
+        73,
+        305,
+        160
+      ],
+      "sha256": "2644e282de0c440ce90a2fa6265c067e4fe7eff6cfc6d4411d17a299228ec4ea",
+      "displayed_on_slides": [
+        4,
+        9,
+        14,
+        18
+      ]
+    },
+    "f2b": {
+      "embedded_asset_id": "assets/f2b.png",
+      "label": "图2b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        308,
+        73,
+        504,
+        160
+      ],
+      "sha256": "5ef201d38e14f33db402a3294c3bfb762a528eade54f64d6fab7e64f82efed36",
+      "displayed_on_slides": [
+        1,
+        6,
+        7,
+        10,
+        12,
+        23,
+        123,
+        125,
+        126,
+        133
+      ]
+    },
+    "eq1": {
+      "embedded_asset_id": "assets/eq1.png",
+      "label": "式1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "5",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        193,
+        339,
+        508,
+        359
+      ],
+      "sha256": "19ec1e7a284341c7f19dd9c1f76a001fdbe743f266cee0edc584155f7b0e974b",
+      "displayed_on_slides": [
+        11,
+        13,
+        78
+      ]
+    },
+    "eq2": {
+      "embedded_asset_id": "assets/eq2.png",
+      "label": "式2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "9",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        236,
+        295,
+        509,
+        316
+      ],
+      "sha256": "78c98b90bdd2193b21a5d24a43c3a1d5797820ec88c9dc31038dcc0c727ed291",
+      "displayed_on_slides": [
+        28,
+        44,
+        45
+      ]
+    },
+    "alg1": {
+      "embedded_asset_id": "assets/alg1.png",
+      "label": "算法1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "4",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        276,
+        587,
+        507,
+        709
+      ],
+      "sha256": "069f5808370c4f3849528df2326c6173779d871338967f1dbcf4517e4cb42ed9",
+      "displayed_on_slides": [
+        19,
+        20
+      ]
+    },
+    "t1": {
+      "embedded_asset_id": "assets/t1.png",
+      "label": "表1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "7",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        130,
+        72,
+        480,
+        247
+      ],
+      "sha256": "33965e1a0e61c0246f0c4bc8ec8dc8423afe261d08ec7205b93268c7df5d1595",
+      "displayed_on_slides": []
+    },
+    "t1top": {
+      "embedded_asset_id": "assets/t1top.png",
+      "label": "表1上半：TFM与no val.",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "7",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        130,
+        72,
+        480,
+        159
+      ],
+      "sha256": "6085f0b895415ab681998a6cc85ef1709016903629302152bc9879604bee72bb",
+      "displayed_on_slides": [
+        5,
+        26,
+        27,
+        29,
+        31,
+        32,
+        33,
+        124
+      ]
+    },
+    "t1bottom": {
+      "embedded_asset_id": "assets/t1bottom.png",
+      "label": "表1下半：深度与树基线",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "7",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        130,
+        160,
+        480,
+        247
+      ],
+      "sha256": "93b35d3af4178bdcc2dac3c2fc6b980bff8900a17e31d3a27dfe5f5c15f92551",
+      "displayed_on_slides": [
+        34
+      ]
+    },
+    "t2": {
+      "embedded_asset_id": "assets/t2.png",
+      "label": "表2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "9",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        116,
+        72,
+        493,
+        153
+      ],
+      "sha256": "3710164abab6bb34b0fb5721249a61309596e5c93ee0559b525e79aeaa329185",
+      "displayed_on_slides": [
+        47,
+        48,
+        49,
+        129
+      ]
+    },
+    "f3a": {
+      "embedded_asset_id": "assets/f3a.png",
+      "label": "图3a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "8",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        107,
+        68,
+        298,
+        220
+      ],
+      "sha256": "23d8c92a3c4991d7fe9003e4e2640d1b15953c66377719f3c1090fe4b182d360",
+      "displayed_on_slides": [
+        36,
+        37
+      ]
+    },
+    "f3b": {
+      "embedded_asset_id": "assets/f3b.png",
+      "label": "图3b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "8",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        315,
+        68,
+        495,
+        220
+      ],
+      "sha256": "4ae2a90c49db0bdac9600c0dd84905c9eb971b1d95236598358ebd5ff17ce448",
+      "displayed_on_slides": [
+        38,
+        39
+      ]
+    },
+    "f4a": {
+      "embedded_asset_id": "assets/f4a.png",
+      "label": "图4a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "8",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        105,
+        298,
+        298,
+        442
+      ],
+      "sha256": "f4f0b6786c8027bc7cef5d7bd7b271589c441c357a4a5166f3d399a3e1d057d1",
+      "displayed_on_slides": [
+        21,
+        40
+      ]
+    },
+    "f4b": {
+      "embedded_asset_id": "assets/f4b.png",
+      "label": "图4b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "8",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        326,
+        300,
+        495,
+        435
+      ],
+      "sha256": "47c42788dbe70d419c94e322f48baaa20df77c8dc7aba0fd4eb0398484c079c1",
+      "displayed_on_slides": [
+        41,
+        42,
+        130
+      ]
+    },
+    "b1a": {
+      "embedded_asset_id": "assets/b1a.png",
+      "label": "图B.1a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        119,
+        73,
+        300,
+        194
+      ],
+      "sha256": "4631c91ffb15fea6c0a50b4e1ce5f9a7a405291210d4050b2901f9ec427de3a2",
+      "displayed_on_slides": [
+        24,
+        25,
+        46,
+        54,
+        128
+      ]
+    },
+    "b1b": {
+      "embedded_asset_id": "assets/b1b.png",
+      "label": "图B.1b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        320,
+        73,
+        501,
+        194
+      ],
+      "sha256": "5665f7d6190a4f8b70ba313e97d90c408c323209fd45b474e8ce418420cbe718",
+      "displayed_on_slides": [
+        55
+      ]
+    },
+    "c1": {
+      "embedded_asset_id": "assets/c1.png",
+      "label": "表C.1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "18",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        221,
+        254,
+        390,
+        343
+      ],
+      "sha256": "e944cdc9eb8201097ff7c67f3cd37aff219861b5410c564c709b65afd066ce6e",
+      "displayed_on_slides": [
+        8,
+        22,
+        74,
+        121,
+        127
+      ]
+    },
+    "c2": {
+      "embedded_asset_id": "assets/c2.png",
+      "label": "表C.2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        204,
+        91,
+        407,
+        190
+      ],
+      "sha256": "4d3a1823afcc233bd7d3ec6751e0cc19bc273b7af3aae6a096b0c0a0c119394c",
+      "displayed_on_slides": [
+        75
+      ]
+    },
+    "code1a": {
+      "embedded_asset_id": "assets/code1a.png",
+      "label": "代码块1 第1–7行",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        109,
+        233,
+        499,
+        305
+      ],
+      "sha256": "13351c645f233ca0f9a78facc351947fc2e495a51a37086e738040a5ef3f3559",
+      "displayed_on_slides": [
+        80
+      ]
+    },
+    "code1a2": {
+      "embedded_asset_id": "assets/code1a2.png",
+      "label": "代码块1 第8–12行",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        109,
+        305,
+        499,
+        365
+      ],
+      "sha256": "0a2679d97404858e13df553acd1b97e549fcc2f7cd16dfd7ea2f843d63bfbe56",
+      "displayed_on_slides": [
+        81
+      ]
+    },
+    "code1b": {
+      "embedded_asset_id": "assets/code1b.png",
+      "label": "代码块1 第14–19行",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        109,
+        373,
+        499,
+        445
+      ],
+      "sha256": "c162dc1bf53368b02b4fc40a6b720ce3717a54b73fcbddb3ff7fdf9141956a3e",
+      "displayed_on_slides": [
+        17,
+        82
+      ]
+    },
+    "code1c": {
+      "embedded_asset_id": "assets/code1c.png",
+      "label": "代码块1 第21–27行",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        109,
+        453,
+        499,
+        544
+      ],
+      "sha256": "420afccf4192d6e462117f32ee5f677e83c7d02b29317487a66685a89a0d6726",
+      "displayed_on_slides": [
+        15,
+        83
+      ]
+    },
+    "code1c2": {
+      "embedded_asset_id": "assets/code1c2.png",
+      "label": "代码块1 第28–33行",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        109,
+        544,
+        499,
+        623
+      ],
+      "sha256": "f51f13889b1e7a862614eb613a74f69323a1b022a7166057456bfc36c91362d1",
+      "displayed_on_slides": [
+        16,
+        84
+      ]
+    },
+    "code1d": {
+      "embedded_asset_id": "assets/code1d.png",
+      "label": "代码块1 第34–43行",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "19",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        109,
+        623,
+        499,
+        725
+      ],
+      "sha256": "b1fb3653146079d6ab5eb6275b0ada3766b0d97ce45aa1e934b210c0a60d69bf",
+      "displayed_on_slides": [
+        85
+      ]
+    },
+    "code1e": {
+      "embedded_asset_id": "assets/code1e.png",
+      "label": "代码块1 第44–50行",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "20",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        109,
+        72,
+        499,
+        145
+      ],
+      "sha256": "7b80c78bca1f8b9059913ddeae746b0a05c4c296bc90eb8e0fdbc33bfc2aaea5",
+      "displayed_on_slides": [
+        86
+      ]
+    },
+    "code1e2": {
+      "embedded_asset_id": "assets/code1e2.png",
+      "label": "代码块1 第52–56行",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "20",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        109,
+        154,
+        499,
+        225
+      ],
+      "sha256": "2d7608adde2d04f8dd07fd604a07e43b2f66fb9fce8c0b59c74615493b3db5fd",
+      "displayed_on_slides": [
+        87,
+        122
+      ]
+    },
+    "code1f": {
+      "embedded_asset_id": "assets/code1f.png",
+      "label": "代码块1 第58–64行",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "20",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        109,
+        234,
+        499,
+        307
+      ],
+      "sha256": "6d9be9187b9eb5034f0e6a1d8e81c866fff1a15c2bd9c84efc58203eec3b50b1",
+      "displayed_on_slides": [
+        88
+      ]
+    },
+    "code2a": {
+      "embedded_asset_id": "assets/code2a.png",
+      "label": "代码块2 第1–7行",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "20",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        109,
+        363,
+        499,
+        434
+      ],
+      "sha256": "ad05a0cb274201bcc17bd0395e886b4d27fda89601ea13b5b79ece3228d682fb",
+      "displayed_on_slides": [
+        89
+      ]
+    },
+    "code2a2": {
+      "embedded_asset_id": "assets/code2a2.png",
+      "label": "代码块2 第8–12行",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "20",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        109,
+        434,
+        499,
+        485
+      ],
+      "sha256": "41c26982519d05ea75744fe2f4c4e6dab6faa4b5126a79795add2bd64e2a8b8d",
+      "displayed_on_slides": [
+        90
+      ]
+    },
+    "code2b": {
+      "embedded_asset_id": "assets/code2b.png",
+      "label": "代码块2 第14–21行",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "20",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        109,
+        494,
+        499,
+        577
+      ],
+      "sha256": "22ccdb515b5efa308d7cced74f0463500445daeba2ffae7a5de378cf2feb68d1",
+      "displayed_on_slides": [
+        91
+      ]
+    },
+    "e1a": {
+      "embedded_asset_id": "assets/e1a.png",
+      "label": "图E.1a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "21",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        104,
+        68,
+        286,
+        220
+      ],
+      "sha256": "a4e40fc50bab3f7f76b2041e8976e898fbc8aff41851c299f515334fe3500108",
+      "displayed_on_slides": [
+        92
+      ]
+    },
+    "e1b": {
+      "embedded_asset_id": "assets/e1b.png",
+      "label": "图E.1b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "21",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        321,
+        68,
+        504,
+        220
+      ],
+      "sha256": "d0c2b3d2f8a49f71d6cb1c8eadbcec9bfa94bf3b343b4a4af1a8880e6412bb10",
+      "displayed_on_slides": [
+        93
+      ]
+    },
+    "F1a": {
+      "embedded_asset_id": "assets/F1a.png",
+      "label": "图F.1a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "22",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        104,
+        180,
+        304,
+        313
+      ],
+      "sha256": "c51ba68fd4d86f88b2eb0ec936109ab7fb25f82749cf5f4f5472cf1445771765",
+      "displayed_on_slides": [
+        94
+      ]
+    },
+    "F1b": {
+      "embedded_asset_id": "assets/F1b.png",
+      "label": "图F.1b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "22",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        304,
+        180,
+        505,
+        313
+      ],
+      "sha256": "0b9d5ce07cb9a1770f2bef5bea45ffccb47992ea6e1f72c19f793849a63476e2",
+      "displayed_on_slides": [
+        95
+      ]
+    },
+    "F2a": {
+      "embedded_asset_id": "assets/F2a.png",
+      "label": "图F.2a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "22",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        104,
+        360,
+        304,
+        493
+      ],
+      "sha256": "23b31995043c5da586d62a322fd46e872b0620cbade887f0bebc1fee1e6c7c95",
+      "displayed_on_slides": [
+        96
+      ]
+    },
+    "F2b": {
+      "embedded_asset_id": "assets/F2b.png",
+      "label": "图F.2b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "22",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        304,
+        360,
+        505,
+        493
+      ],
+      "sha256": "6d88ff84e9aaf3caabe43d47928901579327e7ae6497af5b27e6485b53529984",
+      "displayed_on_slides": [
+        97
+      ]
+    },
+    "F3a": {
+      "embedded_asset_id": "assets/F3a.png",
+      "label": "图F.3a",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "22",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        104,
+        540,
+        304,
+        673
+      ],
+      "sha256": "e00a240ac2cdef87053c2566e9823006153e91e3955396c41a4684ff723f87be",
+      "displayed_on_slides": [
+        98
+      ]
+    },
+    "F3b": {
+      "embedded_asset_id": "assets/F3b.png",
+      "label": "图F.3b",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "22",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        304,
+        540,
+        505,
+        673
+      ],
+      "sha256": "f1fc016cf1dbfa0a59583773d6dcd7641d6d1a2d4491c24d63aa64535f989c0a",
+      "displayed_on_slides": [
+        99
+      ]
+    },
+    "g1": {
+      "embedded_asset_id": "assets/g1.png",
+      "label": "图G.1",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "24",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        165,
+        94,
+        449,
+        192
+      ],
+      "sha256": "142b0faf9a62e012bcc23691445c687eafff97222eaa773649197fc23b5412c8",
+      "displayed_on_slides": [
+        100
+      ]
+    },
+    "g2": {
+      "embedded_asset_id": "assets/g2.png",
+      "label": "图G.2",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "24",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        165,
+        264,
+        449,
+        362
+      ],
+      "sha256": "12c5427b5af93ebfe7c54d178c51d13c84d27e904e736c5486881c91b14ede8c",
+      "displayed_on_slides": [
+        101
+      ]
+    },
+    "g3": {
+      "embedded_asset_id": "assets/g3.png",
+      "label": "图G.3",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "24",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        175,
+        433,
+        439,
+        521
+      ],
+      "sha256": "686e308249a915f553d952630bbf0e87b5c52a380cebce80b5fae382ef4a6e05",
+      "displayed_on_slides": [
+        102
+      ]
+    },
+    "g4": {
+      "embedded_asset_id": "assets/g4.png",
+      "label": "图G.4",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "24",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        175,
+        592,
+        439,
+        679
+      ],
+      "sha256": "05f24e1d3370618639bc7658572e89458348ff1c81866d899f35ea1a0beb5325",
+      "displayed_on_slides": [
+        103
+      ]
+    },
+    "ck1": {
+      "embedded_asset_id": "assets/ck1.png",
+      "label": "Checklist 1 Claims",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "15",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        91,
+        509,
+        174
+      ],
+      "sha256": "b16ae6c36384d12bff7f3c4b8cf7c73e00e11b4b0509e57b37f76d33ee8a8f78",
+      "displayed_on_slides": [
+        104
+      ]
+    },
+    "ck2": {
+      "embedded_asset_id": "assets/ck2.png",
+      "label": "Checklist 2 Limitations",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "15",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        296,
+        509,
+        356
+      ],
+      "sha256": "c4dc2b45a7afdfa6fe1d290ca393f95368076ec91f2fa23a51d00d471b3ca656",
+      "displayed_on_slides": [
+        105
+      ]
+    },
+    "ck3a": {
+      "embedded_asset_id": "assets/ck3a.png",
+      "label": "Checklist 3 Theory：问题与回答",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "15",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        670,
+        509,
+        725
+      ],
+      "sha256": "1cdaed6bdf518e422ca6c4d9431953ca15f8853e9388c1526253fe320c3f088d",
+      "displayed_on_slides": [
+        106
+      ]
+    },
+    "ck3b": {
+      "embedded_asset_id": "assets/ck3b.png",
+      "label": "Checklist 3 Theory：理由（续页）",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "16",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        72,
+        509,
+        86
+      ],
+      "sha256": "6e056705ef4c39992451cc005ea58cea63cbad62e4a1bd2162139e14f27325de",
+      "displayed_on_slides": [
+        107
+      ]
+    },
+    "ck4": {
+      "embedded_asset_id": "assets/ck4.png",
+      "label": "Checklist 4 Reproducibility",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "16",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        230,
+        509,
+        334
+      ],
+      "sha256": "2c2a264f7a6a8002c2c1a115fc9848b75e29d1329e0062e325746512b1185a7d",
+      "displayed_on_slides": [
+        108
+      ]
+    },
+    "ck5": {
+      "embedded_asset_id": "assets/ck5.png",
+      "label": "Checklist 5 Open data and code",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "17",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        72,
+        509,
+        160
+      ],
+      "sha256": "89f4315c39554af506449946e30fee52fdb8a27af63a74fac14e11b82bd2a3dd",
+      "displayed_on_slides": [
+        109
+      ]
+    },
+    "ck6": {
+      "embedded_asset_id": "assets/ck6.png",
+      "label": "Checklist 6 Experimental details",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "17",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        399,
+        509,
+        479
+      ],
+      "sha256": "3468b550b992c474eebee1ea3893451cfa162bd21c3a5e5cb1c7c7e4ee7829de",
+      "displayed_on_slides": [
+        110
+      ]
+    },
+    "ck7": {
+      "embedded_asset_id": "assets/ck7.png",
+      "label": "Checklist 7 Statistical significance",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "17",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        557,
+        509,
+        626
+      ],
+      "sha256": "9eabad44bf8a164f5dd724fa57a8c51b01c5d2ac1a7c8e726b218d09fd169a6a",
+      "displayed_on_slides": [
+        111
+      ]
+    },
+    "ck8": {
+      "embedded_asset_id": "assets/ck8.png",
+      "label": "Checklist 8 Compute resources",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "18",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        229,
+        509,
+        343
+      ],
+      "sha256": "28d3f7aff0affc5cac5f1937db02784bbec227c384529b2fe272fb22f10988fa",
+      "displayed_on_slides": [
+        112
+      ]
+    },
+    "ck9": {
+      "embedded_asset_id": "assets/ck9.png",
+      "label": "Checklist 9 Ethics",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "18",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        455,
+        509,
+        525
+      ],
+      "sha256": "7a41ca891ba0cd610b26ff3dbe01b7fb79c79070320fb3a8d9bf3ce3cf20ad8f",
+      "displayed_on_slides": [
+        113
+      ]
+    },
+    "ck10": {
+      "embedded_asset_id": "assets/ck10.png",
+      "label": "Checklist 10 Broader impacts",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "18",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        604,
+        509,
+        696
+      ],
+      "sha256": "91de7355aabdcd25b30cafb91ba3f050ce72ece2ccb3cb5e686144d87c6199e1",
+      "displayed_on_slides": [
+        114
+      ]
+    },
+    "ck11": {
+      "embedded_asset_id": "assets/ck11.png",
+      "label": "Checklist 11 Safeguards",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "19",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        314,
+        509,
+        394
+      ],
+      "sha256": "3bfc80fec22e3c2feb4a78e341edb57460a62fbc953f1f32f8c88882f8b35410",
+      "displayed_on_slides": [
+        115
+      ]
+    },
+    "ck12": {
+      "embedded_asset_id": "assets/ck12.png",
+      "label": "Checklist 12 Existing asset licenses",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "19",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        530,
+        509,
+        621
+      ],
+      "sha256": "63b765541cacf6d4a42da9c2ebde6f3b712e9472d13a0ffc6d3e5d8965ce9110",
+      "displayed_on_slides": [
+        116
+      ]
+    },
+    "ck13": {
+      "embedded_asset_id": "assets/ck13.png",
+      "label": "Checklist 13 New assets",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "20",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        169,
+        509,
+        238
+      ],
+      "sha256": "8a5667605d02a92502c8b572d2bd9c20022f7c23d9355da3c7c541156bdbd143",
+      "displayed_on_slides": [
+        117
+      ]
+    },
+    "ck14": {
+      "embedded_asset_id": "assets/ck14.png",
+      "label": "Checklist 14 Human subjects",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "20",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        353,
+        509,
+        433
+      ],
+      "sha256": "f5add1a3fc37fb9e6a2d0ec10e2566fba40c489d7351156f727cd4a5f7474c15",
+      "displayed_on_slides": [
+        118
+      ]
+    },
+    "ck15": {
+      "embedded_asset_id": "assets/ck15.png",
+      "label": "Checklist 15 IRB",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "20",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        546,
+        509,
+        648
+      ],
+      "sha256": "30770122e563dece6217f7317516d7e312155ceed2cf873bdb88698c5bca7ee0",
+      "displayed_on_slides": [
+        119
+      ]
+    },
+    "ck16": {
+      "embedded_asset_id": "assets/ck16.png",
+      "label": "Checklist 16 LLM usage",
+      "source_label": "作者会议稿（2025-10-24）",
+      "source_page": "21",
+      "source_url": "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf",
+      "crop_rect_pdf_points": [
+        124,
+        133,
+        509,
+        236
+      ],
+      "sha256": "dc7240c9c41bf6bb089e21d6b435423035fc49699b794d8ff3ec40561c50f879",
+      "displayed_on_slides": [
+        120
+      ]
+    },
+    "tb_15_0": {
+      "embedded_asset_id": "assets/tb_15_0.png",
+      "label": "表B.1，ID 24–389",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "15",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        605.5361328125,
+        501,
+        669.997119140625
+      ],
+      "sha256": "9669a075fde4cf0ceef817b0a3397359dcda86d4528c80ee65b5e191ffd1d943",
+      "displayed_on_slides": [
+        56
+      ]
+    },
+    "tb_15_8": {
+      "embedded_asset_id": "assets/tb_15_8.png",
+      "label": "表B.1，ID 396–821",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "15",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        669.297119140625,
+        501,
+        704.7
+      ],
+      "sha256": "4f5874fba140fee7bdda6db872c3a1d317579213e79852c71851bfa84f5c259a",
+      "displayed_on_slides": [
+        57
+      ]
+    },
+    "tb_16_0": {
+      "embedded_asset_id": "assets/tb_16_0.png",
+      "label": "表B.1，ID 843–1018",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        96.1471176147461,
+        501,
+        160.60817260742186
+      ],
+      "sha256": "5f09c80b9135421e07949d852b55b0626c3b281177620d37525bc4bb7dede480",
+      "displayed_on_slides": [
+        58
+      ]
+    },
+    "tb_16_8": {
+      "embedded_asset_id": "assets/tb_16_8.png",
+      "label": "表B.1，ID 1036–1118",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        159.90817260742188,
+        501,
+        224.36915893554686
+      ],
+      "sha256": "3dff72c059efa8d4ea73f3731f09f117c8cd9513bca94cf8f73c229d7d42f67b",
+      "displayed_on_slides": [
+        59
+      ]
+    },
+    "tb_16_16": {
+      "embedded_asset_id": "assets/tb_16_16.png",
+      "label": "表B.1，ID 1120–1459",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        223.66915893554688,
+        501,
+        288.12913818359374
+      ],
+      "sha256": "27d12ef43832f2594fef6c7c3c163d0460d72e338d09fa168eea686c299f9c54",
+      "displayed_on_slides": [
+        60
+      ]
+    },
+    "tb_16_24": {
+      "embedded_asset_id": "assets/tb_16_24.png",
+      "label": "表B.1，ID 1466–1493",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        287.42913818359375,
+        501,
+        359.86015625
+      ],
+      "sha256": "e77901fec90231e3beae90c6802ea71871bd6789fd11f459dce164c5b4bda677",
+      "displayed_on_slides": [
+        61
+      ]
+    },
+    "tb_16_32": {
+      "embedded_asset_id": "assets/tb_16_32.png",
+      "label": "表B.1，ID 1503–3277",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        359.16015625,
+        501,
+        423.621142578125
+      ],
+      "sha256": "b2fdbb8f5a63e7609da66bf603468c8a86bdc18f454c512ce9c4aa2452faf2dc",
+      "displayed_on_slides": [
+        62
+      ]
+    },
+    "tb_16_40": {
+      "embedded_asset_id": "assets/tb_16_40.png",
+      "label": "表B.1，ID 4135–40679",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        422.921142578125,
+        501,
+        495.35216064453124
+      ],
+      "sha256": "81c2f16f47f4f31fee99462821520a18ae7f9ed52d0b0aa50944d016054e0cf0",
+      "displayed_on_slides": [
+        63
+      ]
+    },
+    "tb_16_48": {
+      "embedded_asset_id": "assets/tb_16_48.png",
+      "label": "表B.1，ID 40680–41143",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        494.65216064453125,
+        501,
+        559.1131469726563
+      ],
+      "sha256": "c67b465d17aeafc8b4b2e1f022ab978d62f01de40ff41bbae9103f962ce269d9",
+      "displayed_on_slides": [
+        64
+      ]
+    },
+    "tb_16_56": {
+      "embedded_asset_id": "assets/tb_16_56.png",
+      "label": "表B.1，ID 41144–41161",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        558.4131469726562,
+        501,
+        622.8741333007813
+      ],
+      "sha256": "e69d0d6eff55df91da3e6fc8dc9f0a55e99101a93fa4b76d218f5adeb2998613",
+      "displayed_on_slides": [
+        65
+      ]
+    },
+    "tb_16_64": {
+      "embedded_asset_id": "assets/tb_16_64.png",
+      "label": "表B.1，ID 41162–41169",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        622.1741333007812,
+        501,
+        686.6351196289063
+      ],
+      "sha256": "0f56d108ee21cc33a9273582a8165a571fa2312c097c2a1d793af9f61307af87",
+      "displayed_on_slides": [
+        66
+      ]
+    },
+    "tb_16_72": {
+      "embedded_asset_id": "assets/tb_16_72.png",
+      "label": "表B.1，ID 41434–41980",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "16",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        685.9351196289062,
+        501,
+        719.7
+      ],
+      "sha256": "13d61aa47eab33d30002a34b2ae1799d06e69b85c266f3e9b80cca5c4c541bad",
+      "displayed_on_slides": [
+        67
+      ]
+    },
+    "tb_17_0": {
+      "embedded_asset_id": "assets/tb_17_0.png",
+      "label": "表B.1，ID 42563–42732",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "17",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        96.1471176147461,
+        501,
+        160.60817260742186
+      ],
+      "sha256": "2b4b2b6554b0549558aea41cb4bfc8b6c7ec989fcd6116523805c740882b7069",
+      "displayed_on_slides": [
+        68
+      ]
+    },
+    "tb_17_8": {
+      "embedded_asset_id": "assets/tb_17_8.png",
+      "label": "表B.1，ID 42734–44061",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "17",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        159.90817260742188,
+        501,
+        232.33912963867186
+      ],
+      "sha256": "d0a9321953ac78a01ed44f05cf99ac831ae2e483cff0496d08387e25717cf01d",
+      "displayed_on_slides": [
+        69
+      ]
+    },
+    "tb_17_16": {
+      "embedded_asset_id": "assets/tb_17_16.png",
+      "label": "表B.1，ID 44063–44137",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "17",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        231.63912963867188,
+        501,
+        304.0701477050781
+      ],
+      "sha256": "b0dc82ceb46eb1d8f8eeeb144f5de92e322b3dc304add9d518e3e2461117f4da",
+      "displayed_on_slides": [
+        70
+      ]
+    },
+    "tb_17_24": {
+      "embedded_asset_id": "assets/tb_17_24.png",
+      "label": "表B.1，ID 44145–45041",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "17",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        303.3701477050781,
+        501,
+        367.83116455078124
+      ],
+      "sha256": "95d4e95a8bfe1bab5bce4a8b609fd2e71af692da4c9755ec1c78dd692c7e8240",
+      "displayed_on_slides": [
+        71
+      ]
+    },
+    "tb_17_32": {
+      "embedded_asset_id": "assets/tb_17_32.png",
+      "label": "表B.1，ID 45043–45047",
+      "source_label": "arXiv v3（2026-01-17）",
+      "source_page": "17",
+      "source_url": "https://arxiv.org/pdf/2410.18164v3",
+      "crop_rect_pdf_points": [
+        111,
+        367.13116455078125,
+        501,
+        401.7
+      ],
+      "sha256": "d5565760ab0beaa5d1b77b8e529ef2ce68afe633e4c001f28bca3f32fb37a2d8",
+      "displayed_on_slides": [
+        72
+      ]
+    }
+  },
+  "coverage": [
+    {
+      "item": "题名与作者",
+      "slide": 1
+    },
+    {
+      "item": "摘要",
+      "slide": 1
+    },
+    {
+      "item": "完整目录与章节页码",
+      "slide": 2
+    },
+    {
+      "item": "作者完整归属",
+      "slide": 3
+    },
+    {
+      "item": "版本元数据差异",
+      "slide": 3
+    },
+    {
+      "item": "1 引言",
+      "slide": 4
+    },
+    {
+      "item": "2 相关工作",
+      "slide": 4
+    },
+    {
+      "item": "3 方法总览",
+      "slide": 6
+    },
+    {
+      "item": "3.1 编码器",
+      "slide": 6
+    },
+    {
+      "item": "3.1 特征维度",
+      "slide": 8
+    },
+    {
+      "item": "3.4 Features",
+      "slide": 8
+    },
+    {
+      "item": "Figure 2a",
+      "slide": 9
+    },
+    {
+      "item": "Figure 2b",
+      "slide": 10
+    },
+    {
+      "item": "Equation 1",
+      "slide": 11
+    },
+    {
+      "item": "3.2 SSL",
+      "slide": 14
+    },
+    {
+      "item": "SSL 任务构造",
+      "slide": 15
+    },
+    {
+      "item": "SSL 列增强",
+      "slide": 17
+    },
+    {
+      "item": "3.3 Retrieval",
+      "slide": 18
+    },
+    {
+      "item": "3.4 Inference",
+      "slide": 18
+    },
+    {
+      "item": "Algorithm 1",
+      "slide": 20
+    },
+    {
+      "item": "训练推理对齐",
+      "slide": 21
+    },
+    {
+      "item": "3.4 Classes",
+      "slide": 22
+    },
+    {
+      "item": "Inference ensemble",
+      "slide": 23
+    },
+    {
+      "item": "4.1 Training data",
+      "slide": 24
+    },
+    {
+      "item": "4.1 Evaluation data",
+      "slide": 24
+    },
+    {
+      "item": "4.2 Baselines",
+      "slide": 26
+    },
+    {
+      "item": "四项指标",
+      "slide": 27
+    },
+    {
+      "item": "补充 R²原文指标证据",
+      "slide": 29
+    },
+    {
+      "item": "补充 交叉熵原文指标证据",
+      "slide": 30
+    },
+    {
+      "item": "Table 1 分类",
+      "slide": 31
+    },
+    {
+      "item": "Table 1 回归",
+      "slide": 32
+    },
+    {
+      "item": "Table 1 no val.",
+      "slide": 33
+    },
+    {
+      "item": "Table 1 全部基线行",
+      "slide": 34
+    },
+    {
+      "item": "1 引言 TabArena日期声明",
+      "slide": 35
+    },
+    {
+      "item": "Figure 3a",
+      "slide": 36
+    },
+    {
+      "item": "Figure 3b",
+      "slide": 38
+    },
+    {
+      "item": "4.7 Inference speed",
+      "slide": 38
+    },
+    {
+      "item": "Figure 4a",
+      "slide": 40
+    },
+    {
+      "item": "Figure 4b",
+      "slide": 41
+    },
+    {
+      "item": "Figure 1",
+      "slide": 43
+    },
+    {
+      "item": "4.5 Scaling laws",
+      "slide": 43
+    },
+    {
+      "item": "Equation 2",
+      "slide": 44
+    },
+    {
+      "item": "Table 2 设置",
+      "slide": 47
+    },
+    {
+      "item": "4.6 Few-shot",
+      "slide": 47
+    },
+    {
+      "item": "Table 2 全部方法",
+      "slide": 48
+    },
+    {
+      "item": "Table 2 负结果",
+      "slide": 49
+    },
+    {
+      "item": "Appendix A 预处理",
+      "slide": 50
+    },
+    {
+      "item": "Appendix A NaN",
+      "slide": 51
+    },
+    {
+      "item": "Appendix A 类嵌入",
+      "slide": 52
+    },
+    {
+      "item": "Appendix A yctx嵌入",
+      "slide": 52
+    },
+    {
+      "item": "Appendix A cell tokens",
+      "slide": 53
+    },
+    {
+      "item": "Figure B.1a",
+      "slide": 54
+    },
+    {
+      "item": "Figure B.1b",
+      "slide": 55
+    },
+    {
+      "item": "Table B.1 row 24",
+      "slide": 56
+    },
+    {
+      "item": "Table B.1 row 30",
+      "slide": 56
+    },
+    {
+      "item": "Table B.1 row 184",
+      "slide": 56
+    },
+    {
+      "item": "Table B.1 row 273",
+      "slide": 56
+    },
+    {
+      "item": "Table B.1 row 312",
+      "slide": 56
+    },
+    {
+      "item": "Table B.1 row 375",
+      "slide": 56
+    },
+    {
+      "item": "Table B.1 row 382",
+      "slide": 56
+    },
+    {
+      "item": "Table B.1 row 389",
+      "slide": 56
+    },
+    {
+      "item": "Table B.1 row 396",
+      "slide": 57
+    },
+    {
+      "item": "Table B.1 row 802",
+      "slide": 57
+    },
+    {
+      "item": "Table B.1 row 816",
+      "slide": 57
+    },
+    {
+      "item": "Table B.1 row 821",
+      "slide": 57
+    },
+    {
+      "item": "Table B.1 row 843",
+      "slide": 58
+    },
+    {
+      "item": "Table B.1 row 846",
+      "slide": 58
+    },
+    {
+      "item": "Table B.1 row 871",
+      "slide": 58
+    },
+    {
+      "item": "Table B.1 row 930",
+      "slide": 58
+    },
+    {
+      "item": "Table B.1 row 966",
+      "slide": 58
+    },
+    {
+      "item": "Table B.1 row 981",
+      "slide": 58
+    },
+    {
+      "item": "Table B.1 row 1002",
+      "slide": 58
+    },
+    {
+      "item": "Table B.1 row 1018",
+      "slide": 58
+    },
+    {
+      "item": "Table B.1 row 1036",
+      "slide": 59
+    },
+    {
+      "item": "Table B.1 row 1037",
+      "slide": 59
+    },
+    {
+      "item": "Table B.1 row 1043",
+      "slide": 59
+    },
+    {
+      "item": "Table B.1 row 1044",
+      "slide": 59
+    },
+    {
+      "item": "Table B.1 row 1111",
+      "slide": 59
+    },
+    {
+      "item": "Table B.1 row 1112",
+      "slide": 59
+    },
+    {
+      "item": "Table B.1 row 1116",
+      "slide": 59
+    },
+    {
+      "item": "Table B.1 row 1118",
+      "slide": 59
+    },
+    {
+      "item": "Table B.1 row 1120",
+      "slide": 60
+    },
+    {
+      "item": "Table B.1 row 1130",
+      "slide": 60
+    },
+    {
+      "item": "Table B.1 row 1142",
+      "slide": 60
+    },
+    {
+      "item": "Table B.1 row 1169",
+      "slide": 60
+    },
+    {
+      "item": "Table B.1 row 1444",
+      "slide": 60
+    },
+    {
+      "item": "Table B.1 row 1453",
+      "slide": 60
+    },
+    {
+      "item": "Table B.1 row 1457",
+      "slide": 60
+    },
+    {
+      "item": "Table B.1 row 1459",
+      "slide": 60
+    },
+    {
+      "item": "Table B.1 row 1466",
+      "slide": 61
+    },
+    {
+      "item": "Table B.1 row 1471",
+      "slide": 61
+    },
+    {
+      "item": "Table B.1 row 1476",
+      "slide": 61
+    },
+    {
+      "item": "Table B.1 row 1477",
+      "slide": 61
+    },
+    {
+      "item": "Table B.1 row 1479",
+      "slide": 61
+    },
+    {
+      "item": "Table B.1 row 1481",
+      "slide": 61
+    },
+    {
+      "item": "Table B.1 row 1483",
+      "slide": 61
+    },
+    {
+      "item": "Table B.1 row 1493",
+      "slide": 61
+    },
+    {
+      "item": "Table B.1 row 1503",
+      "slide": 62
+    },
+    {
+      "item": "Table B.1 row 1507",
+      "slide": 62
+    },
+    {
+      "item": "Table B.1 row 1509",
+      "slide": 62
+    },
+    {
+      "item": "Table B.1 row 1567",
+      "slide": 62
+    },
+    {
+      "item": "Table B.1 row 1568",
+      "slide": 62
+    },
+    {
+      "item": "Table B.1 row 1596",
+      "slide": 62
+    },
+    {
+      "item": "Table B.1 row 3050",
+      "slide": 62
+    },
+    {
+      "item": "Table B.1 row 3277",
+      "slide": 62
+    },
+    {
+      "item": "Table B.1 row 4135",
+      "slide": 63
+    },
+    {
+      "item": "Table B.1 row 4535",
+      "slide": 63
+    },
+    {
+      "item": "Table B.1 row 4549",
+      "slide": 63
+    },
+    {
+      "item": "Table B.1 row 23380",
+      "slide": 63
+    },
+    {
+      "item": "Table B.1 row 23512",
+      "slide": 63
+    },
+    {
+      "item": "Table B.1 row 40536",
+      "slide": 63
+    },
+    {
+      "item": "Table B.1 row 40646",
+      "slide": 63
+    },
+    {
+      "item": "Table B.1 row 40679",
+      "slide": 63
+    },
+    {
+      "item": "Table B.1 row 40680",
+      "slide": 64
+    },
+    {
+      "item": "Table B.1 row 40685",
+      "slide": 64
+    },
+    {
+      "item": "Table B.1 row 40706",
+      "slide": 64
+    },
+    {
+      "item": "Table B.1 row 40733",
+      "slide": 64
+    },
+    {
+      "item": "Table B.1 row 40900",
+      "slide": 64
+    },
+    {
+      "item": "Table B.1 row 41138",
+      "slide": 64
+    },
+    {
+      "item": "Table B.1 row 41142",
+      "slide": 64
+    },
+    {
+      "item": "Table B.1 row 41143",
+      "slide": 64
+    },
+    {
+      "item": "Table B.1 row 41144",
+      "slide": 65
+    },
+    {
+      "item": "Table B.1 row 41145",
+      "slide": 65
+    },
+    {
+      "item": "Table B.1 row 41146",
+      "slide": 65
+    },
+    {
+      "item": "Table B.1 row 41147",
+      "slide": 65
+    },
+    {
+      "item": "Table B.1 row 41150",
+      "slide": 65
+    },
+    {
+      "item": "Table B.1 row 41156",
+      "slide": 65
+    },
+    {
+      "item": "Table B.1 row 41159",
+      "slide": 65
+    },
+    {
+      "item": "Table B.1 row 41161",
+      "slide": 65
+    },
+    {
+      "item": "Table B.1 row 41162",
+      "slide": 66
+    },
+    {
+      "item": "Table B.1 row 41163",
+      "slide": 66
+    },
+    {
+      "item": "Table B.1 row 41164",
+      "slide": 66
+    },
+    {
+      "item": "Table B.1 row 41165",
+      "slide": 66
+    },
+    {
+      "item": "Table B.1 row 41166",
+      "slide": 66
+    },
+    {
+      "item": "Table B.1 row 41167",
+      "slide": 66
+    },
+    {
+      "item": "Table B.1 row 41168",
+      "slide": 66
+    },
+    {
+      "item": "Table B.1 row 41169",
+      "slide": 66
+    },
+    {
+      "item": "Table B.1 row 41434",
+      "slide": 67
+    },
+    {
+      "item": "Table B.1 row 41540",
+      "slide": 67
+    },
+    {
+      "item": "Table B.1 row 41980",
+      "slide": 67
+    },
+    {
+      "item": "Table B.1 row 42563",
+      "slide": 68
+    },
+    {
+      "item": "Table B.1 row 42572",
+      "slide": 68
+    },
+    {
+      "item": "Table B.1 row 42705",
+      "slide": 68
+    },
+    {
+      "item": "Table B.1 row 42724",
+      "slide": 68
+    },
+    {
+      "item": "Table B.1 row 42727",
+      "slide": 68
+    },
+    {
+      "item": "Table B.1 row 42728",
+      "slide": 68
+    },
+    {
+      "item": "Table B.1 row 42730",
+      "slide": 68
+    },
+    {
+      "item": "Table B.1 row 42732",
+      "slide": 68
+    },
+    {
+      "item": "Table B.1 row 42734",
+      "slide": 69
+    },
+    {
+      "item": "Table B.1 row 42742",
+      "slide": 69
+    },
+    {
+      "item": "Table B.1 row 42746",
+      "slide": 69
+    },
+    {
+      "item": "Table B.1 row 43071",
+      "slide": 69
+    },
+    {
+      "item": "Table B.1 row 43072",
+      "slide": 69
+    },
+    {
+      "item": "Table B.1 row 44055",
+      "slide": 69
+    },
+    {
+      "item": "Table B.1 row 44056",
+      "slide": 69
+    },
+    {
+      "item": "Table B.1 row 44061",
+      "slide": 69
+    },
+    {
+      "item": "Table B.1 row 44063",
+      "slide": 70
+    },
+    {
+      "item": "Table B.1 row 44065",
+      "slide": 70
+    },
+    {
+      "item": "Table B.1 row 44068",
+      "slide": 70
+    },
+    {
+      "item": "Table B.1 row 44069",
+      "slide": 70
+    },
+    {
+      "item": "Table B.1 row 44089",
+      "slide": 70
+    },
+    {
+      "item": "Table B.1 row 44122",
+      "slide": 70
+    },
+    {
+      "item": "Table B.1 row 44136",
+      "slide": 70
+    },
+    {
+      "item": "Table B.1 row 44137",
+      "slide": 70
+    },
+    {
+      "item": "Table B.1 row 44145",
+      "slide": 71
+    },
+    {
+      "item": "Table B.1 row 45020",
+      "slide": 71
+    },
+    {
+      "item": "Table B.1 row 45022",
+      "slide": 71
+    },
+    {
+      "item": "Table B.1 row 45026",
+      "slide": 71
+    },
+    {
+      "item": "Table B.1 row 45032",
+      "slide": 71
+    },
+    {
+      "item": "Table B.1 row 45038",
+      "slide": 71
+    },
+    {
+      "item": "Table B.1 row 45039",
+      "slide": 71
+    },
+    {
+      "item": "Table B.1 row 45041",
+      "slide": 71
+    },
+    {
+      "item": "Table B.1 row 45043",
+      "slide": 72
+    },
+    {
+      "item": "Table B.1 row 45045",
+      "slide": 72
+    },
+    {
+      "item": "Table B.1 row 45046",
+      "slide": 72
+    },
+    {
+      "item": "Table B.1 row 45047",
+      "slide": 72
+    },
+    {
+      "item": "Appendix B.1",
+      "slide": 73
+    },
+    {
+      "item": "Table C.1",
+      "slide": 74
+    },
+    {
+      "item": "Table C.2",
+      "slide": 75
+    },
+    {
+      "item": "Appendix C.1 preprocessing",
+      "slide": 76
+    },
+    {
+      "item": "Appendix C.1 retrieval",
+      "slide": 76
+    },
+    {
+      "item": "Appendix C.1 missing",
+      "slide": 77
+    },
+    {
+      "item": "Appendix C.1 optimizer",
+      "slide": 79
+    },
+    {
+      "item": "Code Block 1 lines 1-7",
+      "slide": 80
+    },
+    {
+      "item": "Code Block 1 lines 8-12",
+      "slide": 81
+    },
+    {
+      "item": "Code Block 1 lines 14-19",
+      "slide": 82
+    },
+    {
+      "item": "Code Block 1 lines 21-27",
+      "slide": 83
+    },
+    {
+      "item": "Code Block 1 lines 28-33",
+      "slide": 84
+    },
+    {
+      "item": "Code Block 1 lines 34-43",
+      "slide": 85
+    },
+    {
+      "item": "Code Block 1 lines 44-50",
+      "slide": 86
+    },
+    {
+      "item": "Code Block 1 lines 52-56",
+      "slide": 87
+    },
+    {
+      "item": "Code Block 1 lines 58-64",
+      "slide": 88
+    },
+    {
+      "item": "Code Block 2 lines 1-7",
+      "slide": 89
+    },
+    {
+      "item": "Code Block 2 lines 8-12",
+      "slide": 90
+    },
+    {
+      "item": "Code Block 2 lines 14-21",
+      "slide": 91
+    },
+    {
+      "item": "Figure E.1a",
+      "slide": 92
+    },
+    {
+      "item": "Appendix E Elo",
+      "slide": 92
+    },
+    {
+      "item": "Figure E.1b",
+      "slide": 93
+    },
+    {
+      "item": "Appendix E Glicko2",
+      "slide": 93
+    },
+    {
+      "item": "Figure F.1a",
+      "slide": 94
+    },
+    {
+      "item": "Figure F.1b",
+      "slide": 95
+    },
+    {
+      "item": "Figure F.2a",
+      "slide": 96
+    },
+    {
+      "item": "Figure F.2b",
+      "slide": 97
+    },
+    {
+      "item": "Figure F.3a",
+      "slide": 98
+    },
+    {
+      "item": "Figure F.3b",
+      "slide": 99
+    },
+    {
+      "item": "Appendix F 缺失图披露",
+      "slide": 99
+    },
+    {
+      "item": "Figure G.1",
+      "slide": 100
+    },
+    {
+      "item": "Figure G.2",
+      "slide": 101
+    },
+    {
+      "item": "Figure G.3",
+      "slide": 102
+    },
+    {
+      "item": "Figure G.4",
+      "slide": 103
+    },
+    {
+      "item": "Appendix G",
+      "slide": 103
+    },
+    {
+      "item": "Checklist 1",
+      "slide": 104
+    },
+    {
+      "item": "Checklist 2",
+      "slide": 105
+    },
+    {
+      "item": "Checklist 3 question",
+      "slide": 106
+    },
+    {
+      "item": "Checklist 3 justification",
+      "slide": 107
+    },
+    {
+      "item": "Checklist 4",
+      "slide": 108
+    },
+    {
+      "item": "Checklist 5",
+      "slide": 109
+    },
+    {
+      "item": "Checklist 6",
+      "slide": 110
+    },
+    {
+      "item": "Checklist 7",
+      "slide": 111
+    },
+    {
+      "item": "Checklist 8",
+      "slide": 112
+    },
+    {
+      "item": "Checklist 9",
+      "slide": 113
+    },
+    {
+      "item": "Checklist 10",
+      "slide": 114
+    },
+    {
+      "item": "Checklist 11",
+      "slide": 115
+    },
+    {
+      "item": "Checklist 12",
+      "slide": 116
+    },
+    {
+      "item": "Checklist 13",
+      "slide": 117
+    },
+    {
+      "item": "Checklist 14",
+      "slide": 118
+    },
+    {
+      "item": "Checklist 15",
+      "slide": 119
+    },
+    {
+      "item": "Checklist 16",
+      "slide": 120
+    },
+    {
+      "item": "官方训练配置",
+      "slide": 121
+    },
+    {
+      "item": "官方输出头",
+      "slide": 121
+    },
+    {
+      "item": "论文代码检索差异",
+      "slide": 122
+    },
+    {
+      "item": "官方预处理差异",
+      "slide": 123
+    },
+    {
+      "item": "官方推理代码",
+      "slide": 124
+    },
+    {
+      "item": "README数值边界",
+      "slide": 124
+    },
+    {
+      "item": "许可核验",
+      "slide": 125
+    },
+    {
+      "item": "微生物DMD拉曼适用性",
+      "slide": 126
+    },
+    {
+      "item": "5 Limitations",
+      "slide": 131
+    },
+    {
+      "item": "覆盖说明",
+      "slide": 132
+    },
+    {
+      "item": "末页总结",
+      "slide": 133
+    }
+  ]
+}
