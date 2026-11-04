@@ -1,0 +1,3050 @@
+{
+  "paper": {
+    "title": "TabICL: A Tabular Foundation Model for In-Context Learning on Large Data",
+    "authors": [
+      "Jingang Qu",
+      "David Holzmüller",
+      "Gaël Varoquaux",
+      "Marine Le Morvan"
+    ],
+    "publication": "ICML 2025, PMLR 267:50817–50847",
+    "url": "https://proceedings.mlr.press/v267/qu25d.html",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/qu25d/qu25d.pdf",
+    "sha256": "0a8b2b370f55a93af346ab889dd699256def80ef967740cfa876277ff9ae8617",
+    "pages": 31,
+    "supplements": "Appendices A–I embedded in official PDF. PMLR landing lists no separate supplement. OpenReview requires challenge and was not accessed beyond it.",
+    "license": "CC BY 4.0 per PMLR publication agreement",
+    "license_source": "https://proceedings.mlr.press/pmlr-license-agreement.html",
+    "access_date": "2026-11-03"
+  },
+  "assets": {
+    "title": {
+      "file": "assets/title.png",
+      "page": 1,
+      "rectangles": [
+        [
+          54,
+          85,
+          543,
+          156
+        ]
+      ],
+      "locator": "题名及作者",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        213
+      ]
+    },
+    "intro": {
+      "file": "assets/intro.png",
+      "page": 2,
+      "rectangles": [
+        [
+          54,
+          83,
+          294,
+          358
+        ]
+      ],
+      "locator": "§1，分阶段架构的动机",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        825
+      ]
+    },
+    "f1": {
+      "file": "assets/f1.png",
+      "page": 3,
+      "rectangles": [
+        [
+          66,
+          66,
+          529,
+          314
+        ]
+      ],
+      "locator": "图1，完整架构",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1389,
+        744
+      ]
+    },
+    "f1_col": {
+      "file": "assets/f1_col.png",
+      "page": 3,
+      "rectangles": [
+        [
+          66,
+          66,
+          369,
+          151
+        ]
+      ],
+      "locator": "图1，输入与列嵌入",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        909,
+        255
+      ]
+    },
+    "f1_row": {
+      "file": "assets/f1_row.png",
+      "page": 3,
+      "rectangles": [
+        [
+          367,
+          66,
+          530,
+          315
+        ]
+      ],
+      "locator": "图1，行交互与四个CLS",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        489,
+        747
+      ]
+    },
+    "f1_icl": {
+      "file": "assets/f1_icl.png",
+      "page": 3,
+      "rectangles": [
+        [
+          66,
+          151,
+          301,
+          314
+        ]
+      ],
+      "locator": "图1，训练标签与ICL注意力",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        705,
+        489
+      ]
+    },
+    "task": {
+      "file": "assets/task.png",
+      "page": 4,
+      "rectangles": [
+        [
+          54,
+          118,
+          294,
+          211
+        ]
+      ],
+      "locator": "§3，分类输入和输出",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        279
+      ]
+    },
+    "eq12": {
+      "file": "assets/eq12.png",
+      "page": 4,
+      "rectangles": [
+        [
+          54,
+          418,
+          294,
+          594
+        ]
+      ],
+      "locator": "式(1)–(2)，逐单元权重与偏置",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        528
+      ]
+    },
+    "eq36": {
+      "file": "assets/eq36.png",
+      "page": 4,
+      "rectangles": [
+        [
+          54,
+          596,
+          294,
+          721
+        ]
+      ],
+      "locator": "式(3)–(6)，ISAB计算",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        375
+      ]
+    },
+    "columntext": {
+      "file": "assets/columntext.png",
+      "page": 4,
+      "rectangles": [
+        [
+          305,
+          66,
+          545,
+          280
+        ]
+      ],
+      "locator": "§3.2，k、d和仅训练样本作键值",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        642
+      ]
+    },
+    "rowtext": {
+      "file": "assets/rowtext.png",
+      "page": 4,
+      "rectangles": [
+        [
+          305,
+          522,
+          545,
+          665
+        ]
+      ],
+      "locator": "§3.3，行交互与CLS聚合",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        429
+      ]
+    },
+    "f2a": {
+      "file": "assets/f2a.png",
+      "page": 5,
+      "rectangles": [
+        [
+          54,
+          66,
+          316,
+          160
+        ]
+      ],
+      "locator": "图2a，MAB与ISAB",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        786,
+        282
+      ]
+    },
+    "f2b": {
+      "file": "assets/f2b.png",
+      "page": 5,
+      "rectangles": [
+        [
+          316,
+          66,
+          544,
+          160
+        ]
+      ],
+      "locator": "图2b，列超网络",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        684,
+        282
+      ]
+    },
+    "f3a": {
+      "file": "assets/f3a.png",
+      "page": 5,
+      "rectangles": [
+        [
+          83,
+          211,
+          172,
+          313
+        ]
+      ],
+      "locator": "图3左，偏度着色及色标",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        267,
+        306
+      ]
+    },
+    "f3b": {
+      "file": "assets/f3b.png",
+      "page": 5,
+      "rectangles": [
+        [
+          172,
+          211,
+          261,
+          313
+        ]
+      ],
+      "locator": "图3右，峰度着色及色标",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        267,
+        306
+      ]
+    },
+    "f4_hist": {
+      "file": "assets/f4_hist.png",
+      "page": 5,
+      "rectangles": [
+        [
+          323,
+          210,
+          525,
+          271
+        ]
+      ],
+      "locator": "图4上，四列的离散分布",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        606,
+        183
+      ]
+    },
+    "f4_x": {
+      "file": "assets/f4_x.png",
+      "page": 5,
+      "rectangles": [
+        [
+          323,
+          270,
+          390,
+          352
+        ]
+      ],
+      "locator": "图4左下，输入X的t-SNE",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        201,
+        246
+      ]
+    },
+    "f4_rope": {
+      "file": "assets/f4_rope.png",
+      "page": 5,
+      "rectangles": [
+        [
+          390,
+          270,
+          459,
+          352
+        ]
+      ],
+      "locator": "图4中下，使用RoPE的H",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        207,
+        246
+      ]
+    },
+    "f4_no": {
+      "file": "assets/f4_no.png",
+      "page": 5,
+      "rectangles": [
+        [
+          459,
+          270,
+          526,
+          352
+        ]
+      ],
+      "locator": "图4右下，不使用RoPE的H",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        201,
+        246
+      ]
+    },
+    "rope": {
+      "file": "assets/rope.png",
+      "page": 19,
+      "rectangles": [
+        [
+          54,
+          68,
+          543,
+          267
+        ]
+      ],
+      "locator": "附录D，RoPE旋转及注意力公式（未编号）",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        597
+      ]
+    },
+    "icl": {
+      "file": "assets/icl.png",
+      "page": 5,
+      "rectangles": [
+        [
+          306,
+          640,
+          543,
+          737
+        ]
+      ],
+      "locator": "§3.4，标签与ICL层数",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        711,
+        291
+      ]
+    },
+    "iclmask": {
+      "file": "assets/iclmask.png",
+      "page": 6,
+      "rectangles": [
+        [
+          54,
+          66,
+          294,
+          119
+        ]
+      ],
+      "locator": "§3.4续，掩码与输出头",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        159
+      ]
+    },
+    "complex": {
+      "file": "assets/complex.png",
+      "page": 6,
+      "rectangles": [
+        [
+          54,
+          128,
+          294,
+          385
+        ]
+      ],
+      "locator": "§3.5，计算复杂度",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        771
+      ]
+    },
+    "scm": {
+      "file": "assets/scm.png",
+      "page": 6,
+      "rectangles": [
+        [
+          54,
+          418,
+          294,
+          596
+        ],
+        [
+          305,
+          66,
+          545,
+          106
+        ]
+      ],
+      "locator": "§4.1，SCM定义及右栏70%/30%混合比例",
+      "processing": "原PDF区域截图，等比放大；原像素分区纵向拼接，保留原始表头与标签",
+      "pixels": [
+        720,
+        666
+      ]
+    },
+    "activation": {
+      "file": "assets/activation.png",
+      "page": 16,
+      "rectangles": [
+        [
+          54,
+          261,
+          543,
+          623
+        ]
+      ],
+      "locator": "附录C.1，随机激活与随机特征定义",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        1086
+      ]
+    },
+    "tree": {
+      "file": "assets/tree.png",
+      "page": 16,
+      "rectangles": [
+        [
+          54,
+          635,
+          545,
+          727
+        ],
+        [
+          54,
+          518,
+          545,
+          581
+        ]
+      ],
+      "locator": "附录C.2，上段第16页参数分布，下段第18页随机目标生成步骤",
+      "processing": "原PDF区域截图，等比放大；原像素分区纵向拼接，保留原始表头与标签",
+      "pixels": [
+        1473,
+        477
+      ],
+      "source_pages": [
+        16,
+        18
+      ],
+      "page_label": "16、18"
+    },
+    "curriculum": {
+      "file": "assets/curriculum.png",
+      "page": 6,
+      "rectangles": [
+        [
+          305,
+          329,
+          545,
+          630
+        ]
+      ],
+      "locator": "§4.2，三阶段预训练",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        903
+      ]
+    },
+    "trainparams": {
+      "file": "assets/trainparams.png",
+      "page": 19,
+      "rectangles": [
+        [
+          54,
+          542,
+          545,
+          673
+        ]
+      ],
+      "locator": "附录E.1，优化器及学习率",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        393
+      ]
+    },
+    "e1a": {
+      "file": "assets/e1a.png",
+      "page": 20,
+      "rectangles": [
+        [
+          54,
+          66,
+          216,
+          201
+        ]
+      ],
+      "locator": "图E.1a，第一阶段学习率",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        486,
+        405
+      ]
+    },
+    "e1b": {
+      "file": "assets/e1b.png",
+      "page": 20,
+      "rectangles": [
+        [
+          217,
+          66,
+          379,
+          201
+        ]
+      ],
+      "locator": "图E.1b，第二阶段学习率",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        486,
+        405
+      ]
+    },
+    "e1c": {
+      "file": "assets/e1c.png",
+      "page": 20,
+      "rectangles": [
+        [
+          380,
+          66,
+          543,
+          201
+        ]
+      ],
+      "locator": "图E.1c，第三阶段学习率",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        489,
+        405
+      ]
+    },
+    "e2a": {
+      "file": "assets/e2a.png",
+      "page": 21,
+      "rectangles": [
+        [
+          94,
+          86,
+          497,
+          283
+        ]
+      ],
+      "locator": "图E.2a，阶段1全部模型的准确率排名",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1209,
+        591
+      ]
+    },
+    "e2b": {
+      "file": "assets/e2b.png",
+      "page": 21,
+      "rectangles": [
+        [
+          94,
+          285,
+          497,
+          483
+        ]
+      ],
+      "locator": "图E.2b，阶段2全部模型的准确率排名",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1209,
+        594
+      ]
+    },
+    "e2c": {
+      "file": "assets/e2c.png",
+      "page": 21,
+      "rectangles": [
+        [
+          94,
+          484,
+          497,
+          684
+        ]
+      ],
+      "locator": "图E.2c，阶段3全部模型的准确率排名",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1209,
+        600
+      ]
+    },
+    "hierarchy": {
+      "file": "assets/hierarchy.png",
+      "page": 24,
+      "rectangles": [
+        [
+          54,
+          69,
+          545,
+          368
+        ]
+      ],
+      "locator": "附录E.3及式(7)，层级类别概率",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        897
+      ]
+    },
+    "tE1": {
+      "file": "assets/tE1.png",
+      "page": 20,
+      "rectangles": [
+        [
+          189,
+          365,
+          407,
+          446
+        ]
+      ],
+      "locator": "表E.1，三个Transformer的批量与序列维度",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        654,
+        243
+      ]
+    },
+    "memory": {
+      "file": "assets/memory.png",
+      "page": 20,
+      "rectangles": [
+        [
+          54,
+          471,
+          545,
+          667
+        ]
+      ],
+      "locator": "附录E.2，张量变形与显存拟合",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        588
+      ]
+    },
+    "e3a": {
+      "file": "assets/e3a.png",
+      "page": 22,
+      "rectangles": [
+        [
+          78,
+          68,
+          522,
+          258
+        ]
+      ],
+      "locator": "图E.3a，100K×500，无AMP",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1332,
+        570
+      ]
+    },
+    "e3b": {
+      "file": "assets/e3b.png",
+      "page": 22,
+      "rectangles": [
+        [
+          78,
+          267,
+          522,
+          458
+        ]
+      ],
+      "locator": "图E.3b，100K×500，有AMP",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1332,
+        573
+      ]
+    },
+    "e4a": {
+      "file": "assets/e4a.png",
+      "page": 23,
+      "rectangles": [
+        [
+          78,
+          179,
+          523,
+          367
+        ]
+      ],
+      "locator": "图E.4a，500K×500，无AMP",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1335,
+        564
+      ]
+    },
+    "e4b": {
+      "file": "assets/e4b.png",
+      "page": 23,
+      "rectangles": [
+        [
+          78,
+          378,
+          523,
+          568
+        ]
+      ],
+      "locator": "图E.4b，500K×500，有AMP",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1335,
+        570
+      ]
+    },
+    "protocol": {
+      "file": "assets/protocol.png",
+      "page": 7,
+      "rectangles": [
+        [
+          54,
+          499,
+          294,
+          720
+        ]
+      ],
+      "locator": "§5.1，数据与训练/验证/测试划分",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        663
+      ]
+    },
+    "protocol2": {
+      "file": "assets/protocol2.png",
+      "page": 7,
+      "rectangles": [
+        [
+          305,
+          155,
+          545,
+          280
+        ]
+      ],
+      "locator": "§5.1，32次集成、预处理与30K下采样",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        375
+      ]
+    },
+    "f5": {
+      "file": "assets/f5.png",
+      "page": 8,
+      "rectangles": [
+        [
+          54,
+          68,
+          293,
+          359
+        ]
+      ],
+      "locator": "图5，全部方法准确率分布与耗时色标",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        717,
+        873
+      ]
+    },
+    "f6": {
+      "file": "assets/f6.png",
+      "page": 8,
+      "rectangles": [
+        [
+          323,
+          65,
+          526,
+          197
+        ]
+      ],
+      "locator": "图6，相对TabPFNv2加速比",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        609,
+        396
+      ]
+    },
+    "f7": {
+      "file": "assets/f7.png",
+      "page": 8,
+      "rectangles": [
+        [
+          315,
+          234,
+          535,
+          374
+        ]
+      ],
+      "locator": "图7，样本规模与准确率排名",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        660,
+        420
+      ]
+    },
+    "f8": {
+      "file": "assets/f8.png",
+      "page": 9,
+      "rectangles": [
+        [
+          61,
+          64,
+          283,
+          182
+        ]
+      ],
+      "locator": "图8，超过10类的12个数据集",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        666,
+        354
+      ]
+    },
+    "f9a": {
+      "file": "assets/f9a.png",
+      "page": 9,
+      "rectangles": [
+        [
+          64,
+          239,
+          143,
+          375
+        ]
+      ],
+      "locator": "图9左，树先验对准确率的影响",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        237,
+        408
+      ]
+    },
+    "f9b": {
+      "file": "assets/f9b.png",
+      "page": 9,
+      "rectangles": [
+        [
+          141,
+          239,
+          210,
+          375
+        ]
+      ],
+      "locator": "图9中，树先验对AUC的影响",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        207,
+        408
+      ]
+    },
+    "f9c": {
+      "file": "assets/f9c.png",
+      "page": 9,
+      "rectangles": [
+        [
+          212,
+          239,
+          279,
+          375
+        ]
+      ],
+      "locator": "图9右，树先验对Log Loss的影响",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        201,
+        408
+      ]
+    },
+    "f10": {
+      "file": "assets/f10.png",
+      "page": 9,
+      "rectangles": [
+        [
+          310,
+          64,
+          538,
+          210
+        ]
+      ],
+      "locator": "图10，三阶段相对准确率变化",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        684,
+        438
+      ]
+    },
+    "limits": {
+      "file": "assets/limits.png",
+      "page": 9,
+      "rectangles": [
+        [
+          306,
+          350,
+          543,
+          624
+        ]
+      ],
+      "locator": "§6，作者列出的局限",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        711,
+        822
+      ]
+    },
+    "b1": {
+      "file": "assets/b1.png",
+      "page": 14,
+      "rectangles": [
+        [
+          175,
+          234,
+          423,
+          389
+        ]
+      ],
+      "locator": "图B.1，拟合耗时曲线与公式",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        744,
+        465
+      ]
+    },
+    "b2": {
+      "file": "assets/b2.png",
+      "page": 15,
+      "rectangles": [
+        [
+          175,
+          65,
+          423,
+          219
+        ]
+      ],
+      "locator": "图B.2，类别数与排名",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        744,
+        462
+      ]
+    },
+    "b3": {
+      "file": "assets/b3.png",
+      "page": 15,
+      "rectangles": [
+        [
+          175,
+          255,
+          423,
+          409
+        ]
+      ],
+      "locator": "图B.3，特征数与排名",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        744,
+        462
+      ]
+    },
+    "b4": {
+      "file": "assets/b4.png",
+      "page": 16,
+      "rectangles": [
+        [
+          175,
+          65,
+          423,
+          219
+        ]
+      ],
+      "locator": "图B.4，类别特征比例与排名",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        744,
+        462
+      ]
+    },
+    "c1a": {
+      "file": "assets/c1a.png",
+      "page": 17,
+      "rectangles": [
+        [
+          65,
+          68,
+          297,
+          230
+        ]
+      ],
+      "locator": "图C.1左，非随机激活函数",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        696,
+        486
+      ]
+    },
+    "c1b": {
+      "file": "assets/c1b.png",
+      "page": 17,
+      "rectangles": [
+        [
+          301,
+          68,
+          534,
+          230
+        ]
+      ],
+      "locator": "图C.1右，随机激活函数实例",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        699,
+        486
+      ]
+    },
+    "f1_note": {
+      "file": "assets/f1_note.png",
+      "page": 24,
+      "rectangles": [
+        [
+          54,
+          388,
+          543,
+          487
+        ]
+      ],
+      "locator": "附录F，排除开发集的原因",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        297
+      ]
+    },
+    "rf": {
+      "file": "assets/rf.png",
+      "page": 25,
+      "rectangles": [
+        [
+          54,
+          65,
+          545,
+          257
+        ]
+      ],
+      "locator": "附录G，随机森林扩展与剪枝",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        576
+      ]
+    },
+    "g1": {
+      "file": "assets/g1.png",
+      "page": 25,
+      "rectangles": [
+        [
+          120,
+          267,
+          479,
+          438
+        ]
+      ],
+      "locator": "图G.1，53个大数据集的RF扩展排名",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1077,
+        513
+      ]
+    },
+    "h1a": {
+      "file": "assets/h1a.png",
+      "page": 26,
+      "rectangles": [
+        [
+          53,
+          64,
+          291,
+          230
+        ]
+      ],
+      "locator": "图H.1a，TabPFNv2集成规模",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        714,
+        498
+      ]
+    },
+    "h1b": {
+      "file": "assets/h1b.png",
+      "page": 26,
+      "rectangles": [
+        [
+          305,
+          64,
+          544,
+          230
+        ]
+      ],
+      "locator": "图H.1b，TabICL集成规模",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        717,
+        498
+      ]
+    },
+    "stats": {
+      "file": "assets/stats.png",
+      "page": 26,
+      "rectangles": [
+        [
+          54,
+          279,
+          545,
+          380
+        ]
+      ],
+      "locator": "附录I，Wilcoxon–Holm与评价口径",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        303
+      ]
+    },
+    "comparison": {
+      "file": "assets/comparison.png",
+      "page": 13,
+      "rectangles": [
+        [
+          54,
+          68,
+          543,
+          724
+        ]
+      ],
+      "locator": "附录A，架构、预训练与规模对照",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        1968
+      ]
+    },
+    "I.1a": {
+      "file": "assets/I.1a.png",
+      "page": 27,
+      "rectangles": [
+        [
+          54,
+          86,
+          543,
+          282
+        ]
+      ],
+      "locator": "图I.1a，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        588
+      ]
+    },
+    "I.1b": {
+      "file": "assets/I.1b.png",
+      "page": 27,
+      "rectangles": [
+        [
+          54,
+          285,
+          543,
+          481
+        ]
+      ],
+      "locator": "图I.1b，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        588
+      ]
+    },
+    "I.1c": {
+      "file": "assets/I.1c.png",
+      "page": 27,
+      "rectangles": [
+        [
+          54,
+          484,
+          543,
+          682
+        ]
+      ],
+      "locator": "图I.1c，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        594
+      ]
+    },
+    "I.2a": {
+      "file": "assets/I.2a.png",
+      "page": 28,
+      "rectangles": [
+        [
+          54,
+          86,
+          543,
+          282
+        ]
+      ],
+      "locator": "图I.2a，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        588
+      ]
+    },
+    "I.2b": {
+      "file": "assets/I.2b.png",
+      "page": 28,
+      "rectangles": [
+        [
+          54,
+          285,
+          543,
+          481
+        ]
+      ],
+      "locator": "图I.2b，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        588
+      ]
+    },
+    "I.2c": {
+      "file": "assets/I.2c.png",
+      "page": 28,
+      "rectangles": [
+        [
+          54,
+          484,
+          543,
+          682
+        ]
+      ],
+      "locator": "图I.2c，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        594
+      ]
+    },
+    "I.3a": {
+      "file": "assets/I.3a.png",
+      "page": 29,
+      "rectangles": [
+        [
+          54,
+          86,
+          543,
+          282
+        ]
+      ],
+      "locator": "图I.3a，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        588
+      ]
+    },
+    "I.3b": {
+      "file": "assets/I.3b.png",
+      "page": 29,
+      "rectangles": [
+        [
+          54,
+          285,
+          543,
+          481
+        ]
+      ],
+      "locator": "图I.3b，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        588
+      ]
+    },
+    "I.3c": {
+      "file": "assets/I.3c.png",
+      "page": 29,
+      "rectangles": [
+        [
+          54,
+          484,
+          543,
+          682
+        ]
+      ],
+      "locator": "图I.3c，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        594
+      ]
+    },
+    "I.4a": {
+      "file": "assets/I.4a.png",
+      "page": 30,
+      "rectangles": [
+        [
+          54,
+          86,
+          543,
+          282
+        ]
+      ],
+      "locator": "图I.4a，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        588
+      ]
+    },
+    "I.4b": {
+      "file": "assets/I.4b.png",
+      "page": 30,
+      "rectangles": [
+        [
+          54,
+          285,
+          543,
+          481
+        ]
+      ],
+      "locator": "图I.4b，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        588
+      ]
+    },
+    "I.4c": {
+      "file": "assets/I.4c.png",
+      "page": 30,
+      "rectangles": [
+        [
+          54,
+          484,
+          543,
+          682
+        ]
+      ],
+      "locator": "图I.4c，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        594
+      ]
+    },
+    "I.5a": {
+      "file": "assets/I.5a.png",
+      "page": 31,
+      "rectangles": [
+        [
+          54,
+          86,
+          543,
+          282
+        ]
+      ],
+      "locator": "图I.5a，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        588
+      ]
+    },
+    "I.5b": {
+      "file": "assets/I.5b.png",
+      "page": 31,
+      "rectangles": [
+        [
+          54,
+          285,
+          543,
+          481
+        ]
+      ],
+      "locator": "图I.5b，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        588
+      ]
+    },
+    "I.5c": {
+      "file": "assets/I.5c.png",
+      "page": 31,
+      "rectangles": [
+        [
+          54,
+          484,
+          543,
+          682
+        ]
+      ],
+      "locator": "图I.5c，完整排名与显著性连线",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1467,
+        594
+      ]
+    },
+    "C.2_0_0": {
+      "file": "assets/C.2_0_0.png",
+      "page": 17,
+      "rectangles": [
+        [
+          54.8,
+          285.46000000000004,
+          174.7,
+          384.76000000000005
+        ]
+      ],
+      "locator": "图C.2，原图第1–2行、第1–2列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.2_0_1": {
+      "file": "assets/C.2_0_1.png",
+      "page": 17,
+      "rectangles": [
+        [
+          177.232,
+          285.46000000000004,
+          297.132,
+          384.76000000000005
+        ]
+      ],
+      "locator": "图C.2，原图第1–2行、第3–4列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.2_0_2": {
+      "file": "assets/C.2_0_2.png",
+      "page": 17,
+      "rectangles": [
+        [
+          299.664,
+          285.46000000000004,
+          419.56399999999996,
+          384.76000000000005
+        ]
+      ],
+      "locator": "图C.2，原图第1–2行、第5–6列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.2_0_3": {
+      "file": "assets/C.2_0_3.png",
+      "page": 17,
+      "rectangles": [
+        [
+          422.096,
+          285.46000000000004,
+          541.996,
+          384.76000000000005
+        ]
+      ],
+      "locator": "图C.2，原图第1–2行、第7–8列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        360,
+        299
+      ]
+    },
+    "C.2_1_0": {
+      "file": "assets/C.2_1_0.png",
+      "page": 17,
+      "rectangles": [
+        [
+          54.8,
+          387.28000000000003,
+          174.7,
+          486.58000000000004
+        ]
+      ],
+      "locator": "图C.2，原图第3–4行、第1–2列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.2_1_1": {
+      "file": "assets/C.2_1_1.png",
+      "page": 17,
+      "rectangles": [
+        [
+          177.232,
+          387.28000000000003,
+          297.132,
+          486.58000000000004
+        ]
+      ],
+      "locator": "图C.2，原图第3–4行、第3–4列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.2_1_2": {
+      "file": "assets/C.2_1_2.png",
+      "page": 17,
+      "rectangles": [
+        [
+          299.664,
+          387.28000000000003,
+          419.56399999999996,
+          486.58000000000004
+        ]
+      ],
+      "locator": "图C.2，原图第3–4行、第5–6列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.2_1_3": {
+      "file": "assets/C.2_1_3.png",
+      "page": 17,
+      "rectangles": [
+        [
+          422.096,
+          387.28000000000003,
+          541.996,
+          486.58000000000004
+        ]
+      ],
+      "locator": "图C.2，原图第3–4行、第7–8列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        360,
+        299
+      ]
+    },
+    "C.2_2_0": {
+      "file": "assets/C.2_2_0.png",
+      "page": 17,
+      "rectangles": [
+        [
+          54.8,
+          489.1,
+          174.7,
+          588.4
+        ]
+      ],
+      "locator": "图C.2，原图第5–6行、第1–2列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.2_2_1": {
+      "file": "assets/C.2_2_1.png",
+      "page": 17,
+      "rectangles": [
+        [
+          177.232,
+          489.1,
+          297.132,
+          588.4
+        ]
+      ],
+      "locator": "图C.2，原图第5–6行、第3–4列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.2_2_2": {
+      "file": "assets/C.2_2_2.png",
+      "page": 17,
+      "rectangles": [
+        [
+          299.664,
+          489.1,
+          419.56399999999996,
+          588.4
+        ]
+      ],
+      "locator": "图C.2，原图第5–6行、第5–6列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.2_2_3": {
+      "file": "assets/C.2_2_3.png",
+      "page": 17,
+      "rectangles": [
+        [
+          422.096,
+          489.1,
+          541.996,
+          588.4
+        ]
+      ],
+      "locator": "图C.2，原图第5–6行、第7–8列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        360,
+        299
+      ]
+    },
+    "C.2_3_0": {
+      "file": "assets/C.2_3_0.png",
+      "page": 17,
+      "rectangles": [
+        [
+          54.8,
+          590.92,
+          174.7,
+          690.2199999999999
+        ]
+      ],
+      "locator": "图C.2，原图第7–8行、第1–2列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.2_3_1": {
+      "file": "assets/C.2_3_1.png",
+      "page": 17,
+      "rectangles": [
+        [
+          177.232,
+          590.92,
+          297.132,
+          690.2199999999999
+        ]
+      ],
+      "locator": "图C.2，原图第7–8行、第3–4列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.2_3_2": {
+      "file": "assets/C.2_3_2.png",
+      "page": 17,
+      "rectangles": [
+        [
+          299.664,
+          590.92,
+          419.56399999999996,
+          690.2199999999999
+        ]
+      ],
+      "locator": "图C.2，原图第7–8行、第5–6列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.2_3_3": {
+      "file": "assets/C.2_3_3.png",
+      "page": 17,
+      "rectangles": [
+        [
+          422.096,
+          590.92,
+          541.996,
+          690.2199999999999
+        ]
+      ],
+      "locator": "图C.2，原图第7–8行、第7–8列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        360,
+        299
+      ]
+    },
+    "C.3_0_0": {
+      "file": "assets/C.3_0_0.png",
+      "page": 18,
+      "rectangles": [
+        [
+          54.8,
+          66.48,
+          174.7,
+          165.78
+        ]
+      ],
+      "locator": "图C.3，原图第1–2行、第1–2列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.3_0_1": {
+      "file": "assets/C.3_0_1.png",
+      "page": 18,
+      "rectangles": [
+        [
+          177.232,
+          66.48,
+          297.132,
+          165.78
+        ]
+      ],
+      "locator": "图C.3，原图第1–2行、第3–4列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.3_0_2": {
+      "file": "assets/C.3_0_2.png",
+      "page": 18,
+      "rectangles": [
+        [
+          299.664,
+          66.48,
+          419.56399999999996,
+          165.78
+        ]
+      ],
+      "locator": "图C.3，原图第1–2行、第5–6列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.3_0_3": {
+      "file": "assets/C.3_0_3.png",
+      "page": 18,
+      "rectangles": [
+        [
+          422.096,
+          66.48,
+          541.996,
+          165.78
+        ]
+      ],
+      "locator": "图C.3，原图第1–2行、第7–8列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        360,
+        299
+      ]
+    },
+    "C.3_1_0": {
+      "file": "assets/C.3_1_0.png",
+      "page": 18,
+      "rectangles": [
+        [
+          54.8,
+          168.3,
+          174.7,
+          267.6
+        ]
+      ],
+      "locator": "图C.3，原图第3–4行、第1–2列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.3_1_1": {
+      "file": "assets/C.3_1_1.png",
+      "page": 18,
+      "rectangles": [
+        [
+          177.232,
+          168.3,
+          297.132,
+          267.6
+        ]
+      ],
+      "locator": "图C.3，原图第3–4行、第3–4列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.3_1_2": {
+      "file": "assets/C.3_1_2.png",
+      "page": 18,
+      "rectangles": [
+        [
+          299.664,
+          168.3,
+          419.56399999999996,
+          267.6
+        ]
+      ],
+      "locator": "图C.3，原图第3–4行、第5–6列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.3_1_3": {
+      "file": "assets/C.3_1_3.png",
+      "page": 18,
+      "rectangles": [
+        [
+          422.096,
+          168.3,
+          541.996,
+          267.6
+        ]
+      ],
+      "locator": "图C.3，原图第3–4行、第7–8列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        360,
+        299
+      ]
+    },
+    "C.3_2_0": {
+      "file": "assets/C.3_2_0.png",
+      "page": 18,
+      "rectangles": [
+        [
+          54.8,
+          270.12,
+          174.7,
+          369.42
+        ]
+      ],
+      "locator": "图C.3，原图第5–6行、第1–2列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.3_2_1": {
+      "file": "assets/C.3_2_1.png",
+      "page": 18,
+      "rectangles": [
+        [
+          177.232,
+          270.12,
+          297.132,
+          369.42
+        ]
+      ],
+      "locator": "图C.3，原图第5–6行、第3–4列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.3_2_2": {
+      "file": "assets/C.3_2_2.png",
+      "page": 18,
+      "rectangles": [
+        [
+          299.664,
+          270.12,
+          419.56399999999996,
+          369.42
+        ]
+      ],
+      "locator": "图C.3，原图第5–6行、第5–6列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.3_2_3": {
+      "file": "assets/C.3_2_3.png",
+      "page": 18,
+      "rectangles": [
+        [
+          422.096,
+          270.12,
+          541.996,
+          369.42
+        ]
+      ],
+      "locator": "图C.3，原图第5–6行、第7–8列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        360,
+        299
+      ]
+    },
+    "C.3_3_0": {
+      "file": "assets/C.3_3_0.png",
+      "page": 18,
+      "rectangles": [
+        [
+          54.8,
+          371.94,
+          174.7,
+          471.24
+        ]
+      ],
+      "locator": "图C.3，原图第7–8行、第1–2列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.3_3_1": {
+      "file": "assets/C.3_3_1.png",
+      "page": 18,
+      "rectangles": [
+        [
+          177.232,
+          371.94,
+          297.132,
+          471.24
+        ]
+      ],
+      "locator": "图C.3，原图第7–8行、第3–4列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.3_3_2": {
+      "file": "assets/C.3_3_2.png",
+      "page": 18,
+      "rectangles": [
+        [
+          299.664,
+          371.94,
+          419.56399999999996,
+          471.24
+        ]
+      ],
+      "locator": "图C.3，原图第7–8行、第5–6列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        361,
+        299
+      ]
+    },
+    "C.3_3_3": {
+      "file": "assets/C.3_3_3.png",
+      "page": 18,
+      "rectangles": [
+        [
+          422.096,
+          371.94,
+          541.996,
+          471.24
+        ]
+      ],
+      "locator": "图C.3，原图第7–8行、第7–8列，4个完整子图",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        360,
+        299
+      ]
+    },
+    "tF1_0_0": {
+      "file": "assets/tF1_0_0.png",
+      "page": 24,
+      "rectangles": [
+        [
+          54,
+          501,
+          360.2,
+          528
+        ],
+        [
+          54,
+          528.7,
+          360.2,
+          569.3000000000001
+        ]
+      ],
+      "locator": "表F.1，第1–5行，TabICL/TabPFNv2/TabR/ModernNCA",
+      "processing": "原PDF区域截图，等比放大；原像素分区纵向拼接，保留原始表头与标签",
+      "pixels": [
+        919,
+        215
+      ]
+    },
+    "tF1_0_1": {
+      "file": "assets/tF1_0_1.png",
+      "page": 24,
+      "rectangles": [
+        [
+          54,
+          501,
+          360.2,
+          528
+        ],
+        [
+          54,
+          568.5600000000001,
+          360.2,
+          609.1600000000001
+        ]
+      ],
+      "locator": "表F.1，第6–10行，TabICL/TabPFNv2/TabR/ModernNCA",
+      "processing": "原PDF区域截图，等比放大；原像素分区纵向拼接，保留原始表头与标签",
+      "pixels": [
+        919,
+        216
+      ]
+    },
+    "tF1_0_2": {
+      "file": "assets/tF1_0_2.png",
+      "page": 24,
+      "rectangles": [
+        [
+          54,
+          501,
+          360.2,
+          528
+        ],
+        [
+          54,
+          608.4200000000001,
+          360.2,
+          649.0200000000001
+        ]
+      ],
+      "locator": "表F.1，第11–15行，TabICL/TabPFNv2/TabR/ModernNCA",
+      "processing": "原PDF区域截图，等比放大；原像素分区纵向拼接，保留原始表头与标签",
+      "pixels": [
+        919,
+        216
+      ]
+    },
+    "tF1_1_0": {
+      "file": "assets/tF1_1_0.png",
+      "page": 24,
+      "rectangles": [
+        [
+          54,
+          501,
+          119.2,
+          528
+        ],
+        [
+          360.2,
+          501,
+          543,
+          528
+        ],
+        [
+          54,
+          528.7,
+          119.2,
+          569.3000000000001
+        ],
+        [
+          360.2,
+          528.7,
+          543,
+          569.3000000000001
+        ]
+      ],
+      "locator": "表F.1，第1–5行，RealMLP/TabM/CatBoost",
+      "processing": "原PDF区域截图，表头及数据集名原像素重排，数值未修改",
+      "pixels": [
+        1009,
+        284
+      ]
+    },
+    "tF1_1_1": {
+      "file": "assets/tF1_1_1.png",
+      "page": 24,
+      "rectangles": [
+        [
+          54,
+          501,
+          119.2,
+          528
+        ],
+        [
+          360.2,
+          501,
+          543,
+          528
+        ],
+        [
+          54,
+          568.5600000000001,
+          119.2,
+          609.1600000000001
+        ],
+        [
+          360.2,
+          568.5600000000001,
+          543,
+          609.1600000000001
+        ]
+      ],
+      "locator": "表F.1，第6–10行，RealMLP/TabM/CatBoost",
+      "processing": "原PDF区域截图，表头及数据集名原像素重排，数值未修改",
+      "pixels": [
+        1009,
+        283
+      ]
+    },
+    "tF1_1_2": {
+      "file": "assets/tF1_1_2.png",
+      "page": 24,
+      "rectangles": [
+        [
+          54,
+          501,
+          119.2,
+          528
+        ],
+        [
+          360.2,
+          501,
+          543,
+          528
+        ],
+        [
+          54,
+          608.4200000000001,
+          119.2,
+          649.0200000000001
+        ],
+        [
+          360.2,
+          608.4200000000001,
+          543,
+          649.0200000000001
+        ]
+      ],
+      "locator": "表F.1，第11–15行，RealMLP/TabM/CatBoost",
+      "processing": "原PDF区域截图，表头及数据集名原像素重排，数值未修改",
+      "pixels": [
+        1009,
+        284
+      ]
+    },
+    "f5_top": {
+      "file": "assets/f5_top.png",
+      "page": 8,
+      "rectangles": [
+        [
+          54,
+          66,
+          292,
+          173
+        ],
+        [
+          54,
+          284,
+          292,
+          351
+        ]
+      ],
+      "locator": "图5，上半方法及重复完整横轴与耗时色标",
+      "processing": "原PDF区域截图，等比放大；原像素分区纵向拼接，保留原始表头与标签",
+      "pixels": [
+        714,
+        534
+      ]
+    },
+    "f5_bottom": {
+      "file": "assets/f5_bottom.png",
+      "page": 8,
+      "rectangles": [
+        [
+          54,
+          173,
+          292,
+          351
+        ]
+      ],
+      "locator": "图5，下半方法及完整横轴与耗时色标",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        714,
+        534
+      ]
+    },
+    "e2a_large": {
+      "file": "assets/e2a_large.png",
+      "page": 21,
+      "rectangles": [
+        [
+          118.53897094726562,
+          84,
+          478.25689697265625,
+          285
+        ]
+      ],
+      "locator": "图E.2a，阶段1全部模型的准确率排名，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1080,
+        603
+      ]
+    },
+    "e2b_large": {
+      "file": "assets/e2b_large.png",
+      "page": 21,
+      "rectangles": [
+        [
+          118.69657897949219,
+          283,
+          478.0992736816406,
+          485
+        ]
+      ],
+      "locator": "图E.2b，阶段2全部模型的准确率排名，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1079,
+        606
+      ]
+    },
+    "e2c_large": {
+      "file": "assets/e2c_large.png",
+      "page": 21,
+      "rectangles": [
+        [
+          118.69657897949219,
+          482,
+          478.0992736816406,
+          686
+        ]
+      ],
+      "locator": "图E.2c，阶段3全部模型的准确率排名，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1079,
+        612
+      ]
+    },
+    "I.1a_large": {
+      "file": "assets/I.1a_large.png",
+      "page": 27,
+      "rectangles": [
+        [
+          118.96892547607422,
+          84,
+          477.8544921875,
+          284
+        ]
+      ],
+      "locator": "图I.1a，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1078,
+        600
+      ]
+    },
+    "I.1b_large": {
+      "file": "assets/I.1b_large.png",
+      "page": 27,
+      "rectangles": [
+        [
+          119.16877746582031,
+          283,
+          477.6546630859375,
+          483
+        ]
+      ],
+      "locator": "图I.1b，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1076,
+        600
+      ]
+    },
+    "I.1c_large": {
+      "file": "assets/I.1c_large.png",
+      "page": 27,
+      "rectangles": [
+        [
+          118.92889404296875,
+          482,
+          477.8945007324219,
+          684
+        ]
+      ],
+      "locator": "图I.1c，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1078,
+        606
+      ]
+    },
+    "I.2a_large": {
+      "file": "assets/I.2a_large.png",
+      "page": 28,
+      "rectangles": [
+        [
+          118.81131744384766,
+          84,
+          478.0121154785156,
+          284
+        ]
+      ],
+      "locator": "图I.2a，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1079,
+        600
+      ]
+    },
+    "I.2b_large": {
+      "file": "assets/I.2b_large.png",
+      "page": 28,
+      "rectangles": [
+        [
+          119.01116180419922,
+          283,
+          477.8122253417969,
+          483
+        ]
+      ],
+      "locator": "图I.2b，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1077,
+        600
+      ]
+    },
+    "I.2c_large": {
+      "file": "assets/I.2c_large.png",
+      "page": 28,
+      "rectangles": [
+        [
+          118.92889404296875,
+          482,
+          477.8945007324219,
+          684
+        ]
+      ],
+      "locator": "图I.2c，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1078,
+        606
+      ]
+    },
+    "I.3a_large": {
+      "file": "assets/I.3a_large.png",
+      "page": 29,
+      "rectangles": [
+        [
+          118.96892547607422,
+          84,
+          477.8544921875,
+          284
+        ]
+      ],
+      "locator": "图I.3a，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1078,
+        600
+      ]
+    },
+    "I.3b_large": {
+      "file": "assets/I.3b_large.png",
+      "page": 29,
+      "rectangles": [
+        [
+          119.16877746582031,
+          283,
+          477.6546630859375,
+          483
+        ]
+      ],
+      "locator": "图I.3b，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1076,
+        600
+      ]
+    },
+    "I.3c_large": {
+      "file": "assets/I.3c_large.png",
+      "page": 29,
+      "rectangles": [
+        [
+          119.06916809082031,
+          482,
+          477.7542724609375,
+          684
+        ]
+      ],
+      "locator": "图I.3c，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1077,
+        606
+      ]
+    },
+    "I.4a_large": {
+      "file": "assets/I.4a_large.png",
+      "page": 30,
+      "rectangles": [
+        [
+          118.92889404296875,
+          84,
+          477.8945007324219,
+          284
+        ]
+      ],
+      "locator": "图I.4a，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1078,
+        600
+      ]
+    },
+    "I.4b_large": {
+      "file": "assets/I.4b_large.png",
+      "page": 30,
+      "rectangles": [
+        [
+          119.01116180419922,
+          283,
+          477.8122253417969,
+          483
+        ]
+      ],
+      "locator": "图I.4b，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1077,
+        600
+      ]
+    },
+    "I.4c_large": {
+      "file": "assets/I.4c_large.png",
+      "page": 30,
+      "rectangles": [
+        [
+          118.92889404296875,
+          482,
+          477.8945007324219,
+          684
+        ]
+      ],
+      "locator": "图I.4c，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1078,
+        606
+      ]
+    },
+    "I.5a_large": {
+      "file": "assets/I.5a_large.png",
+      "page": 31,
+      "rectangles": [
+        [
+          118.96892547607422,
+          84,
+          477.8544921875,
+          284
+        ]
+      ],
+      "locator": "图I.5a，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1078,
+        600
+      ]
+    },
+    "I.5b_large": {
+      "file": "assets/I.5b_large.png",
+      "page": 31,
+      "rectangles": [
+        [
+          119.16877746582031,
+          283,
+          477.6546630859375,
+          483
+        ]
+      ],
+      "locator": "图I.5b，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1076,
+        600
+      ]
+    },
+    "I.5c_large": {
+      "file": "assets/I.5c_large.png",
+      "page": 31,
+      "rectangles": [
+        [
+          119.16877746582031,
+          482,
+          477.6546630859375,
+          684
+        ]
+      ],
+      "locator": "图I.5c，完整排名与显著性连线，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1076,
+        606
+      ]
+    },
+    "g1_large": {
+      "file": "assets/g1_large.png",
+      "page": 25,
+      "rectangles": [
+        [
+          118.78357696533203,
+          265,
+          478.02606201171875,
+          440
+        ]
+      ],
+      "locator": "图G.1，53个大数据集的RF扩展排名，独立整幅放大",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1079,
+        525
+      ]
+    },
+    "intro_scope": {
+      "file": "assets/intro_scope.png",
+      "page": 2,
+      "rectangles": [
+        [
+          54,
+          83,
+          294,
+          160
+        ]
+      ],
+      "locator": "§1，模型范围与规模目标",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        231
+      ]
+    },
+    "intro_stage1": {
+      "file": "assets/intro_stage1.png",
+      "page": 2,
+      "rectangles": [
+        [
+          54,
+          162,
+          294,
+          261
+        ]
+      ],
+      "locator": "§1，两阶段架构第一段",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        297
+      ]
+    },
+    "intro_stage2": {
+      "file": "assets/intro_stage2.png",
+      "page": 2,
+      "rectangles": [
+        [
+          54,
+          247,
+          294,
+          357
+        ]
+      ],
+      "locator": "§1，两阶段架构续文",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        330
+      ]
+    },
+    "rope_rotation_large": {
+      "file": "assets/rope_rotation_large.png",
+      "page": 19,
+      "rectangles": [
+        [
+          54,
+          65,
+          545,
+          183
+        ]
+      ],
+      "locator": "附录D，二维旋转矩阵及频率定义",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        354
+      ]
+    },
+    "rope_attention_large": {
+      "file": "assets/rope_attention_large.png",
+      "page": 19,
+      "rectangles": [
+        [
+          54,
+          185,
+          545,
+          250
+        ]
+      ],
+      "locator": "附录D，RoPE注意力公式",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        195
+      ]
+    },
+    "complex_setup_large": {
+      "file": "assets/complex_setup_large.png",
+      "page": 6,
+      "rectangles": [
+        [
+          54,
+          128,
+          294,
+          187
+        ]
+      ],
+      "locator": "§3.5，复杂度分析的输入",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        177
+      ]
+    },
+    "complex_modules_large": {
+      "file": "assets/complex_modules_large.png",
+      "page": 6,
+      "rectangles": [
+        [
+          54,
+          188,
+          294,
+          318
+        ]
+      ],
+      "locator": "§3.5，三个模块的复杂度",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        390
+      ]
+    },
+    "complex_comparison_large": {
+      "file": "assets/complex_comparison_large.png",
+      "page": 6,
+      "rectangles": [
+        [
+          54,
+          320,
+          294,
+          386
+        ]
+      ],
+      "locator": "§3.5，TabICL与TabPFNv2总复杂度",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        198
+      ]
+    },
+    "activation_formula_large": {
+      "file": "assets/activation_formula_large.png",
+      "page": 16,
+      "rectangles": [
+        [
+          54,
+          359,
+          545,
+          493
+        ]
+      ],
+      "locator": "附录C.1，随机特征函数完整公式",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        402
+      ]
+    },
+    "activation_gp_large": {
+      "file": "assets/activation_gp_large.png",
+      "page": 16,
+      "rectangles": [
+        [
+          54,
+          491,
+          545,
+          625
+        ]
+      ],
+      "locator": "附录C.1，GP解释及10倍采样概率",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        402
+      ]
+    },
+    "tree_parameters_large": {
+      "file": "assets/tree.png",
+      "page": 16,
+      "rectangles": [
+        [
+          54,
+          635,
+          545,
+          727
+        ],
+        [
+          54,
+          518,
+          545,
+          581
+        ]
+      ],
+      "locator": "附录C.2，上段第16页参数分布，下段第18页随机目标生成步骤，整宽放大",
+      "processing": "原PDF区域截图，等比放大；原像素分区纵向拼接，保留原始表头与标签",
+      "pixels": [
+        1473,
+        477
+      ],
+      "source_pages": [
+        16,
+        18
+      ],
+      "page_label": "16、18"
+    },
+    "curriculum_stages_large": {
+      "file": "assets/curriculum_stages_large.png",
+      "page": 6,
+      "rectangles": [
+        [
+          305,
+          422,
+          545,
+          540
+        ]
+      ],
+      "locator": "§4.2，三阶段训练步骤",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        354
+      ]
+    },
+    "curriculum_budget_large": {
+      "file": "assets/curriculum_budget_large.png",
+      "page": 6,
+      "rectangles": [
+        [
+          305,
+          540,
+          545,
+          629
+        ]
+      ],
+      "locator": "§4.2，每步数据量及训练资源",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        267
+      ]
+    },
+    "hierarchy_tree_large": {
+      "file": "assets/hierarchy_tree_large.png",
+      "page": 24,
+      "rectangles": [
+        [
+          54,
+          67,
+          545,
+          210
+        ]
+      ],
+      "locator": "附录E.3，层级分类树",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        429
+      ]
+    },
+    "hierarchy_product_large": {
+      "file": "assets/hierarchy_product_large.png",
+      "page": 24,
+      "rectangles": [
+        [
+          54,
+          210,
+          545,
+          368
+        ]
+      ],
+      "locator": "附录E.3及式(7)，路径概率",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        474
+      ]
+    },
+    "memory_shapes_large": {
+      "file": "assets/memory_shapes_large.png",
+      "page": 20,
+      "rectangles": [
+        [
+          54,
+          470,
+          545,
+          549
+        ]
+      ],
+      "locator": "附录E.2，三个模块的张量变形",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        237
+      ]
+    },
+    "memory_fit_large": {
+      "file": "assets/memory_fit_large.png",
+      "page": 20,
+      "rectangles": [
+        [
+          54,
+          549,
+          545,
+          668
+        ]
+      ],
+      "locator": "附录E.2，三个显存拟合公式",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        357
+      ]
+    },
+    "stats_large": {
+      "file": "assets/stats_large.png",
+      "page": 26,
+      "rectangles": [
+        [
+          54,
+          277,
+          545,
+          380
+        ]
+      ],
+      "locator": "附录I，排名、检验与模型池",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        309
+      ]
+    },
+    "rf_route_large": {
+      "file": "assets/rf_route_large.png",
+      "page": 25,
+      "rectangles": [
+        [
+          54,
+          65,
+          545,
+          148
+        ]
+      ],
+      "locator": "附录G，测试路由和叶节点预测",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        249
+      ]
+    },
+    "rf_prune_large": {
+      "file": "assets/rf_prune_large.png",
+      "page": 25,
+      "rectangles": [
+        [
+          54,
+          149,
+          545,
+          257
+        ]
+      ],
+      "locator": "附录G，自适应剪枝及实验设置",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        324
+      ]
+    },
+    "development_exclusion_large": {
+      "file": "assets/development_exclusion_large.png",
+      "page": 24,
+      "rectangles": [
+        [
+          54,
+          388,
+          545,
+          475
+        ]
+      ],
+      "locator": "附录F，开发集排除原因",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        1473,
+        261
+      ]
+    },
+    "limits_first_large": {
+      "file": "assets/limits_first_large.png",
+      "page": 9,
+      "rectangles": [
+        [
+          305,
+          350,
+          545,
+          486
+        ]
+      ],
+      "locator": "§6，局限前半段",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        408
+      ]
+    },
+    "limits_second_large": {
+      "file": "assets/limits_second_large.png",
+      "page": 9,
+      "rectangles": [
+        [
+          305,
+          460,
+          545,
+          620
+        ]
+      ],
+      "locator": "§6，局限后半段",
+      "processing": "原PDF区域截图，等比放大",
+      "pixels": [
+        720,
+        480
+      ]
+    }
+  },
+  "unresolved_original_issues": [
+    "200 minus 15 does not directly equal 171 plus 12; article does not reconcile every analysis denominator",
+    "small and large dataset denominators 116+53=169 differ from headline 171",
+    "Appendix D prose uses 10000 frequency text while formula/main text use 100000; use formula/main text without silently changing screenshot"
+  ],
+  "review_status": "Accepted after independent source review and full rendered-page review on 2026-11-03"
+}
