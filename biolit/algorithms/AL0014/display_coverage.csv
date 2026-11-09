@@ -1,0 +1,186 @@
+unit_id,status,source_locator,slide_ids,explanation
+F01,covered,PDF 2: Figure 1,S097,该图是三个代理模型的定性示例。FT-PFN无需在线重拟合；预测质量的定量证据见表1。
+F01-r1c1,covered,PDF 2: Figure 1 / Ground truth curves,S098,同一任务的真实学习曲线；圆点是所有模型共用的已观测上下文。
+F01-r1c2,covered,PDF 2: Figure 1 / FT-PFN,S099,FT-PFN利用上下文直接外推后续性能，并给出不确定性。
+F01-r1c3,covered,PDF 2: Figure 1 / Deep Power Laws Ensembles,S100,DPL的幂律外推较集中；该示例中的末端预测可能偏离真实曲线。
+F01-r1c4,covered,PDF 2: Figure 1 / Deep Kernel Gaussian Process,S101,DyHPO的外推呈现更宽的不确定区间；此单例不能代表所有任务。
+F01-r2c2,covered,PDF 2: Figure 1 / FT-PFN at b=50,S102,FT-PFN末端预测分布与真实值星号一起展示。
+F01-r2c3,covered,PDF 2: Figure 1 / Deep Power Laws Ensembles at b=50,S103,DPL末端分布可见尖峰，部分峰与对应真实值分离。
+F01-r2c4,covered,PDF 2: Figure 1 / Deep Kernel Gaussian Process at b=50,S104,DyHPO末端预测较分散，不能仅凭宽度判定其校准水平。
+F02,covered,PDF 5: Figure 2,S105,随机初始化的配置网络将超参数映射到曲线参数；基函数混合与噪声共同生成训练FT-PFN的合成曲线。
+F02-left,covered,PDF 5: Figure 2 / configuration network π_config,S106,π_config随机初始化，不是在每个HPO任务上训练的代理模型。
+F02-right,covered,PDF 5: Figure 2 / curve mixture π_curve,S107,红、蓝基函数混合成粉色均值，再加入配置相关高斯噪声。
+F03,covered,PDF 8: Figure 3,S108,每个任务采用1000步总预算与10个随机种子。ifBO在LCBench、Taskset汇总结果较好，在PD1与强基线接近。
+F03-r1c1,covered,PDF 8: Figure 3 / LCBench / Normalized regret,S109,ifBO在LCBench的汇总归一化遗憾随预算降低，后段低于所列基线。
+F03-r1c2,covered,PDF 8: Figure 3 / PD1 / Normalized regret,S110,PD1上ifBO与DPL、DyHPO接近，差距小于另两个基准族。
+F03-r1c3,covered,PDF 8: Figure 3 / Taskset / Normalized regret,S111,Taskset上ifBO后段遗憾低于DPL、DyHPO，传统调度基线更高。
+F03-r2c1,covered,PDF 8: Figure 3 / LCBench / Rank,S112,ifBO在LCBench的平均秩后段最低；秩只反映相对次序。
+F03-r2c2,covered,PDF 8: Figure 3 / PD1 / Rank,S113,PD1上ifBO后段平均秩较低，但不能解释为每个任务都获胜。
+F03-r2c3,covered,PDF 8: Figure 3 / Taskset / Rank,S114,Taskset上ifBO后段平均秩下降，DPL和DyHPO随后。
+F04,covered,PDF 8: Figure 4,S115,固定FT-PFN代理，替换采集函数。结果说明代理的预测质量不能单独决定HPO效果。
+F04-r1c1,covered,PDF 8: Figure 4 / LCBench / Normalized regret,S116,LCBench上MFPI-random后段遗憾较低，只有随机化部分参数的变体未稳定超过它。
+F04-r1c2,covered,PDF 8: Figure 4 / PD1 / Normalized regret,S117,PD1上多种采集函数接近，MFPI-random后段仍处于低遗憾组。
+F04-r1c3,covered,PDF 8: Figure 4 / Taskset / Normalized regret,S118,Taskset上one-step EI/PI明显偏高，长时域或随机化采集更合适。
+F04-r2c1,covered,PDF 8: Figure 4 / LCBench / Rank,S119,LCBench上采集函数次序随预算变化；MFPI-random后段平均秩低。
+F04-r2c2,covered,PDF 8: Figure 4 / PD1 / Rank,S120,PD1上MFPI-random后段平均秩较低，早期排序并非固定。
+F04-r2c3,covered,PDF 8: Figure 4 / Taskset / Rank,S121,Taskset上one-step EI较差，MFPI-random与若干长时域变体接近。
+F05,covered,PDF 14: Figure 5,S122,先验同时覆盖平台、配置相关性、噪声、交叉和后期下降；这些是合成训练分布的示例，不是21个真实HPO任务结果。
+F05-r1c1,covered,PDF 14: Figure 5 / prior draw 1 (source has no panel title),S123,多数曲线在较高起点附近缓慢上升，配置间差异较小。
+F05-r1c2,covered,PDF 14: Figure 5 / prior draw 2 (source has no panel title),S124,曲线迅速上升后在不同水平收敛，少数在中途出现下降或折点。
+F05-r1c3,covered,PDF 14: Figure 5 / prior draw 3 (source has no panel title),S125,多数曲线有明显噪声，不同配置在多个性能层级分离。
+F05-r2c1,covered,PDF 14: Figure 5 / prior draw 4 (source has no panel title),S126,多条曲线在早期下降，随后形成低平台；也有持续波动的较高曲线。
+F05-r2c2,covered,PDF 14: Figure 5 / prior draw 5 (source has no panel title),S127,曲线起点接近，但部分配置在中后段突然下降，体现分歧和失稳。
+F05-r2c3,covered,PDF 14: Figure 5 / prior draw 6 (source has no panel title),S128,曲线几乎重叠并缓慢上升，配置相关性很强。
+F05-r3c1,covered,PDF 14: Figure 5 / prior draw 7 (source has no panel title),S129,各曲线早期迅速上升，再停留于不同平台，呈现共同形状与不同上限。
+F05-r3c2,covered,PDF 14: Figure 5 / prior draw 8 (source has no panel title),S130,曲线噪声较强且跨配置分层不明显，整体变化较小。
+F05-r3c3,covered,PDF 14: Figure 5 / prior draw 9 (source has no panel title),S131,曲线在不同性能带内波动，配置间最终表现差别较大。
+F05-r4c1,covered,PDF 14: Figure 5 / prior draw 10 (source has no panel title),S132,多数曲线接近低平台，个别曲线先跌落后稳定。
+F05-r4c2,covered,PDF 14: Figure 5 / prior draw 11 (source has no panel title),S133,不同曲线以不同速度上升，噪声与配置相关斜率同时可见。
+F05-r4c3,covered,PDF 14: Figure 5 / prior draw 12 (source has no panel title),S134,多数配置停留低水平，但一条曲线迅速上升后处于高平台。
+F05-r5c1,covered,PDF 14: Figure 5 / prior draw 13 (source has no panel title),S135,多数曲线在低平台附近，少数先高后低或发生突降。
+F05-r5c2,covered,PDF 14: Figure 5 / prior draw 14 (source has no panel title),S136,曲线高度重叠，快速上升后趋于共同平台。
+F05-r5c3,covered,PDF 14: Figure 5 / prior draw 15 (source has no panel title),S137,曲线共享上升趋势，最终水平相近但略有差异。
+F05-r6c1,covered,PDF 14: Figure 5 / prior draw 16 (source has no panel title),S138,多数曲线低且接近平坦，少数强噪声曲线发生明显下降。
+F05-r6c2,covered,PDF 14: Figure 5 / prior draw 17 (source has no panel title),S139,曲线在低到中等性能区间波动，部分配置有突降。
+F05-r6c3,covered,PDF 14: Figure 5 / prior draw 18 (source has no panel title),S140,曲线以较高水平起步，部分平滑，部分噪声较强。
+F05-r7c1,covered,PDF 14: Figure 5 / prior draw 19 (source has no panel title),S141,多条曲线早期接近高平台，中后期逐渐下滑，体现发散形状。
+F05-r7c2,covered,PDF 14: Figure 5 / prior draw 20 (source has no panel title),S142,一组曲线早期上升后回落，另一些一直停留于低平台。
+F05-r7c3,covered,PDF 14: Figure 5 / prior draw 21 (source has no panel title),S143,不同配置在早期抬升到不同水平，随后分层或缓慢回落。
+F06,covered,PDF 16: Figure 6,S144,"左图给出局部观测和外推，右图把不同(h,T)对应的选择画成颜色分区。均匀抽样是在指定坐标尺度下进行，因此颜色面积对应选择概率。"
+F06-left,covered,PDF 16: Figure 6 / partial curves and continuations,S145,已经表现好的曲线与潜在上限较高的曲线，在不同时间尺度下都可能被继续。
+F06-right,covered,PDF 16: Figure 6 / MFPI choice map,S146,阈值与时域改变时，胜出配置改变；亮红色代表启动一条新曲线。
+F07,covered,PDF 19: Figure 7,S147,在训练先验中加入可能下降的曲线后，预测log-likelihood的相对秩和HPO遗憾的相对秩整体更好。
+F07-left,covered,PDF 19: Figure 7 / Rank (log-likelihood),S148,随上下文变大，包含发散曲线的模型平均秩进一步降低。
+F07-right,covered,PDF 19: Figure 7 / Rank (HPO regret),S149,HPO约200步以后，包含发散曲线的版本平均秩较低；早期差距不稳定。
+F08,covered,PDF 20: Figure 8,S150,配对平均秩将ifBO与DyHPO、DPL分别比较，再比较三者。后段ifBO平均秩较低。
+F08-r1c1,covered,PDF 20: Figure 8 / ifBO vs DyHPO,S151,ifBO在所示预算范围内平均秩低于DyHPO。
+F08-r1c2,covered,PDF 20: Figure 8 / ifBO vs DPL,S152,ifBO相对DPL的优势在早期之后形成；不是从第一步起都占优。
+F08-r1c3,covered,PDF 20: Figure 8 / ifBO vs DPL vs DyHPO,S153,三方法合并比较，ifBO后段处于最低平均秩。
+F09,covered,PDF 20: Figure 9,S154,随机化不能脱离代理的外推能力单独评价。ifBO与DPL受益，DyHPO仍最适合其单步设置。
+F09-r1c1,covered,PDF 20: Figure 9 / ifBO,S155,ifBO配合随机时域与随机阈值，后段平均秩较低。
+F09-r1c2,covered,PDF 20: Figure 9 / DPL,S156,DPL早期受益于双随机化，后期与固定最大时域等变体的差距收窄。
+F09-r1c3,covered,PDF 20: Figure 9 / DyHPO,S157,DyHPO的one-step变体明显较低；长时域并非对所有代理都有利。
+F10,covered,PDF 21: Figure 10,S158,所有代理使用同一MFPI-random后，ifBO仍有较低平均秩，支持代理本身对总体表现有贡献。
+F10-r1c1,covered,"PDF 21: Figure 10 / ifBO vs DyHPO, shared MFPI-random",S159,共享采集后ifBO相对DyHPO仍较低。
+F10-r1c2,covered,"PDF 21: Figure 10 / ifBO vs DPL, shared MFPI-random",S160,共享采集后ifBO在早期之后平均秩低于DPL。
+F10-r1c3,covered,"PDF 21: Figure 10 / three surrogates, shared MFPI-random",S161,三者使用相同采集函数时，ifBO后段平均秩最低。
+F11,covered,PDF 21: Figure 11,S162,把预算轴改为基准记录的累计训练时间后，ifBO总体仍较低；Taskset早期存在DPL领先。
+F11-r1c1,covered,PDF 21: Figure 11 / LCBench,S163,LCBench上ifBO在大部分图示时间段平均秩低于两基线。
+F11-r1c2,covered,PDF 21: Figure 11 / PD1,S164,PD1上ifBO大部分时间平均秩较低，后期与DyHPO差距收窄。
+F11-r1c3,covered,PDF 21: Figure 11 / Taskset,S165,Taskset上DPL早期更好，ifBO在更多时间预算后改善。
+F11-r1c4,covered,PDF 21: Figure 11 / All,S166,全部基准汇总后，ifBO大部分时间平均秩较低。
+F12,covered,PDF 22: Figure 12,S172;S173;S174;S175;S176;S177;S178;S179;S180;S181;S182;S183,逐任务面板显示跨任务异质性；保留ifBO未领先、接近和领先的情形，不能把汇总优势改写成每个任务都获胜。
+ifBO-F12-r1c1,covered,PDF 22: Figure 12 / lcbench-tabular-adult-balanced,S172,各方法早期下降较快；ifBO、DPL与DyHPO的后期曲线靠近下缘，随机搜索与ASHA较高。
+ifBO-F12-r1c2,covered,PDF 22: Figure 12 / lcbench-tabular-airlines-balanced,S173,DPL后期曲线低于ifBO；ifBO、DyHPO与Freeze-Thaw的后期差距较小，随机搜索较高。
+ifBO-F12-r1c3,covered,PDF 22: Figure 12 / lcbench-tabular-albert-balanced,S174,ifBO、DyHPO与Freeze-Thaw较早接近低位；DPL随后下降并靠近这些曲线。
+ifBO-F12-r2c1,covered,PDF 22: Figure 12 / lcbench-tabular-Amazon-balanced,S175,ifBO与DPL在中后期持续下降，后期曲线低于DyHPO及其余基线。
+ifBO-F12-r2c2,covered,PDF 22: Figure 12 / lcbench-tabular-APSFailure-balanced,S176,ifBO、DPL与DyHPO后期接近；Freeze-Thaw停在略高的平台，随机搜索较高。
+ifBO-F12-r2c3,covered,PDF 22: Figure 12 / lcbench-tabular-Australian-balanced,S177,各方法早期明显下降；ifBO、DPL与DyHPO后期靠近低位，随机搜索较晚出现阶梯下降。
+ifBO-F12-r3c1,covered,PDF 22: Figure 12 / lcbench-tabular-bank-balanced,S178,ifBO与DPL较早接近低位；DyHPO和Freeze-Thaw随后靠近，随机搜索与ASHA仍较高。
+ifBO-F12-r3c2,covered,PDF 22: Figure 12 / lcbench-tabular-blood-balanced,S179,方法间的后期曲线较接近，ifBO位于低位曲线群；随机搜索保持略高的平台。
+ifBO-F12-r3c3,covered,PDF 22: Figure 12 / lcbench-tabular-car-balanced,S180,ifBO后期继续下降，末端曲线低于DPL与DyHPO；随机搜索和ASHA较高。
+ifBO-F12-r4c1,covered,PDF 22: Figure 12 / lcbench-tabular-christine-balanced,S181,ifBO与DPL后期靠近低位；Freeze-Thaw的平台高于其余自适应方法。
+ifBO-F12-r4c2,covered,PDF 22: Figure 12 / lcbench-tabular-cnae-balanced,S182,ifBO、DyHPO与DPL后期靠近低位；随机搜索和ASHA的下降较慢。
+ifBO-F12-r4c3,covered,PDF 22: Figure 12 / lcbench-tabular-connect-balanced,S183,ifBO早期下降较快并先接近低位；DPL后期追近，DyHPO在较高位置进入平台。
+F13,covered,PDF 23: Figure 13,S184;S185;S186;S187;S188;S189;S190;S191;S192;S193;S194;S195,逐任务面板显示跨任务异质性；保留ifBO未领先、接近和领先的情形，不能把汇总优势改写成每个任务都获胜。
+ifBO-F13-r1c1,covered,PDF 23: Figure 13 / lcbench-tabular-covertype-balanced,S184,ifBO、DyHPO与Freeze-Thaw后期接近低位；DPL仍略高，HyperBand与ASHA明显更高。
+ifBO-F13-r1c2,covered,PDF 23: Figure 13 / lcbench-tabular-credit-balanced,S185,ifBO与DPL后期接近低位，其余方法依次停在更高的平台。
+ifBO-F13-r1c3,covered,PDF 23: Figure 13 / lcbench-tabular-dionis-balanced,S186,ifBO较早接近低位；DPL和Freeze-Thaw随后追近，HyperBand与ASHA保持较高曲线。
+ifBO-F13-r2c1,covered,PDF 23: Figure 13 / lcbench-tabular-fabert-balanced,S187,各方法很快下降后聚集在相近的窄范围内，后期可见差异很小。
+ifBO-F13-r2c2,covered,PDF 23: Figure 13 / lcbench-tabular-Fashion-balanced,S188,DyHPO在中期较早到达低位；ifBO、DPL与Freeze-Thaw后期靠近。
+ifBO-F13-r2c3,covered,PDF 23: Figure 13 / lcbench-tabular-helena-balanced,S189,ifBO后期曲线低于DPL、DyHPO和Freeze-Thaw；随机搜索与ASHA较高。
+ifBO-F13-r3c1,covered,PDF 23: Figure 13 / lcbench-tabular-higgs-balanced,S190,ifBO早期下降较快；其他自适应方法后期逐渐靠近其低位曲线。
+ifBO-F13-r3c2,covered,PDF 23: Figure 13 / lcbench-tabular-jannis-balanced,S191,ifBO、DPL、DyHPO与Freeze-Thaw后期靠近；HyperBand与ASHA停在更高位置。
+ifBO-F13-r3c3,covered,PDF 23: Figure 13 / lcbench-tabular-jasmine-balanced,S192,多种方法早期下降后很快进入平台；ifBO与DPL在低位，随机搜索和ASHA较高。
+ifBO-F13-r4c1,covered,PDF 23: Figure 13 / lcbench-tabular-jungle-balanced,S193,DyHPO与DPL早期下降较快，Freeze-Thaw稍后出现明显下降；这些方法与ifBO最终接近。
+ifBO-F13-r4c2,covered,PDF 23: Figure 13 / lcbench-tabular-kc1-balanced,S194,ifBO与DPL较早进入低位平台，随机搜索后期仍较高；整体曲线差距较小。
+ifBO-F13-r4c3,covered,PDF 23: Figure 13 / lcbench-tabular-KDDCup09-balanced,S195,ifBO与DPL后期靠近低位；DyHPO和Freeze-Thaw随后接近，随机搜索较高。
+F14,covered,PDF 24: Figure 14,S196;S197;S198;S199;S200;S201;S202;S203;S204;S205;S206,逐任务面板显示跨任务异质性；保留ifBO未领先、接近和领先的情形，不能把汇总优势改写成每个任务都获胜。
+ifBO-F14-r1c1,covered,PDF 24: Figure 14 / lcbench-tabular-kr-balanced,S196,ifBO在后期继续阶梯下降，末端低于DPL、DyHPO和Freeze-Thaw。
+ifBO-F14-r1c2,covered,PDF 24: Figure 14 / lcbench-tabular-mfeat-balanced,S197,ifBO与DPL后期接近低位；随机搜索和ASHA保持较高的平台。
+ifBO-F14-r1c3,covered,PDF 24: Figure 14 / lcbench-tabular-MiniBooNE-balanced,S198,多种自适应方法迅速下降并靠近相同低位；HyperBand、ASHA与随机搜索保持更高曲线。
+ifBO-F14-r2c1,covered,PDF 24: Figure 14 / lcbench-tabular-nomao-balanced,S199,DPL较早下降至低位，ifBO、DyHPO与Freeze-Thaw后期逐渐靠近。
+ifBO-F14-r2c2,covered,PDF 24: Figure 14 / lcbench-tabular-numerai-balanced,S200,纵轴覆盖很窄的范围；DPL后期低于ifBO，随机搜索和ASHA较高。
+ifBO-F14-r2c3,covered,PDF 24: Figure 14 / lcbench-tabular-phoneme-balanced,S201,DPL后期曲线低于ifBO与DyHPO；各方法在后期逐渐进入平台。
+ifBO-F14-r3c1,covered,PDF 24: Figure 14 / lcbench-tabular-segment-balanced,S202,Freeze-Thaw和DyHPO较早接近低位；ifBO与DPL随后追近，随机搜索和ASHA较高。
+ifBO-F14-r3c2,covered,PDF 24: Figure 14 / lcbench-tabular-shuttle-balanced,S203,ifBO中后期出现较大的阶梯下降；DPL和DyHPO后期也继续下降，阴影范围较宽。
+ifBO-F14-r3c3,covered,PDF 24: Figure 14 / lcbench-tabular-sylvine-balanced,S204,ifBO、DPL与DyHPO后期靠近低位；Freeze-Thaw稍后下降，ASHA与随机搜索较高。
+ifBO-F14-r4c1,covered,PDF 24: Figure 14 / lcbench-tabular-vehicle-balanced,S205,ifBO、DPL与DyHPO较早接近低位；Freeze-Thaw随后追近，HyperBand与ASHA较高。
+ifBO-F14-r4c2,covered,PDF 24: Figure 14 / lcbench-tabular-volkert-balanced,S206,DyHPO早期下降较快；ifBO和DPL后期追近，ifBO末端仍继续下降。
+F15,covered,PDF 25: Figure 15,S207;S208;S209;S210;S211;S212;S213;S214;S215;S216;S217;S218;S219;S220;S221,逐任务面板显示跨任务异质性；保留ifBO未领先、接近和领先的情形，不能把汇总优势改写成每个任务都获胜。
+ifBO-F15-r1c1,covered,PDF 25: Figure 15 / pd1-tabular-cifar100_wideresnet_2048,S207,各方法早期迅速下降，随后逐渐聚集到相近平台；后期曲线差异较小。
+ifBO-F15-r1c2,covered,PDF 25: Figure 15 / pd1-tabular-cifar100_wideresnet_256,S208,Freeze-Thaw先维持较高平台，再在中期快速下降；其余方法更早接近低位。
+ifBO-F15-r1c3,covered,PDF 25: Figure 15 / pd1-tabular-cifar10_wideresnet_2048,S209,各方法早期迅速下降，后期逐渐靠近相似的低位平台。
+ifBO-F15-r2c1,covered,PDF 25: Figure 15 / pd1-tabular-cifar10_wideresnet_256,S210,DPL和DyHPO早期下降较快；Freeze-Thaw前期较慢，后期曲线低于其他方法。
+ifBO-F15-r2c2,covered,PDF 25: Figure 15 / pd1-tabular-fashion_simplecnn_2048,S211,各方法很快接近低位并在后期基本重合，图上难以区分稳定的后期排序。
+ifBO-F15-r2c3,covered,PDF 25: Figure 15 / pd1-tabular-fashion_simplecnn_256,S212,随机搜索早期出现较晚的阶梯下降；Freeze-Thaw后期曲线低于ifBO和DPL。
+ifBO-F15-r3c1,covered,PDF 25: Figure 15 / pd1-tabular-imagenet_resnet_1024-1,S213,DPL早期较快进入低位，DyHPO随后追近；ifBO在中后期逐渐靠近这些曲线。
+ifBO-F15-r3c2,covered,PDF 25: Figure 15 / pd1-tabular-imagenet_resnet_256-1,S214,DyHPO后期曲线低于ifBO和DPL；ifBO的中期曲线较高，随后持续下降。
+ifBO-F15-r3c3,covered,PDF 25: Figure 15 / pd1-tabular-imagenet_resnet_512-1,S215,DyHPO与DPL后期处于低位；ifBO较接近，Freeze-Thaw在较晚阶段才持续下降至附近。
+ifBO-F15-r4c1,covered,PDF 25: Figure 15 / pd1-tabular-lm1b_transformer_2048,S216,各方法早期下降后形成接近的平台；随机搜索略高，ifBO与DPL靠近下缘。
+ifBO-F15-r4c2,covered,PDF 25: Figure 15 / pd1-tabular-mnist_simplecnn_2048,S217,各方法早期下降后很快接近同一低位，后期差异很小。
+ifBO-F15-r4c3,covered,PDF 25: Figure 15 / pd1-tabular-mnist_simplecnn_256,S218,随机搜索早期较晚下降；后期各方法聚集在相近的低位平台。
+ifBO-F15-r5c1,covered,PDF 25: Figure 15 / pd1-tabular-svhn_wideresnet_1024,S219,各方法早期迅速下降并在后期靠近，Freeze-Thaw中期略高。
+ifBO-F15-r5c2,covered,PDF 25: Figure 15 / pd1-tabular-svhn_wideresnet_256,S220,各方法早期迅速下降后靠近同一平台，后期难以辨别稳定排序。
+ifBO-F15-r5c3,covered,PDF 25: Figure 15 / pd1-tabular-translate_xformertranslate_64-1,S221,DyHPO早期下降较快；ifBO在中后期继续下降并低于DyHPO与DPL。
+F16,covered,PDF 26: Figure 16,S222;S223;S224;S225;S226;S227;S228;S229;S230;S231;S232;S233,逐任务面板显示跨任务异质性；保留ifBO未领先、接近和领先的情形，不能把汇总优势改写成每个任务都获胜。
+ifBO-F16-r1c1,covered,PDF 26: Figure 16 / taskset-tabular-normalized-nlp-10-4p,S222,DyHPO早期下降较快；ifBO与DPL后期靠近其低位曲线，Freeze-Thaw停在较高平台。
+ifBO-F16-r1c2,covered,PDF 26: Figure 16 / taskset-tabular-normalized-nlp-10-8p,S223,DPL先明显下降，ifBO稍晚持续下降并在后期低于DPL；DyHPO与Freeze-Thaw近乎保持高位平台。
+ifBO-F16-r1c3,covered,PDF 26: Figure 16 / taskset-tabular-normalized-nlp-11-4p,S224,ifBO、DPL与DyHPO后期接近低位；Freeze-Thaw、ASHA和随机搜索保持较高曲线。
+ifBO-F16-r2c1,covered,PDF 26: Figure 16 / taskset-tabular-normalized-nlp-11-8p,S225,ifBO与DPL在前中期低于DyHPO；三者后期靠近，HyperBand和ASHA较高。
+ifBO-F16-r2c2,covered,PDF 26: Figure 16 / taskset-tabular-normalized-nlp-12-4p,S226,ifBO较早接近低位，DyHPO与DPL后期追近；Freeze-Thaw保持较高平台。
+ifBO-F16-r2c3,covered,PDF 26: Figure 16 / taskset-tabular-normalized-nlp-12-8p,S227,DPL前期下降较快；ifBO与DyHPO后期靠近，三者阴影有明显重叠。
+ifBO-F16-r3c1,covered,PDF 26: Figure 16 / taskset-tabular-normalized-nlp-1-4p,S228,ifBO与DyHPO后期持续下降并靠近；DPL后期曲线较高，Freeze-Thaw保持较高平台。
+ifBO-F16-r3c2,covered,PDF 26: Figure 16 / taskset-tabular-normalized-nlp-1-8p,S229,DyHPO前期下降较快，ifBO中期追近；两者后期低于DPL。
+ifBO-F16-r3c3,covered,PDF 26: Figure 16 / taskset-tabular-normalized-nlp-2-4p,S230,ifBO在中后期进一步下降，与其他方法的较高平台拉开可见距离。
+ifBO-F16-r4c1,covered,PDF 26: Figure 16 / taskset-tabular-normalized-nlp-2-8p,S231,DPL前期下降较快，ifBO后期追近；两者后期低于其余方法。
+ifBO-F16-r4c2,covered,PDF 26: Figure 16 / taskset-tabular-normalized-nlp-3-4p,S232,ifBO中后期持续下降，末端低于DPL与DyHPO；Freeze-Thaw保持较高曲线。
+ifBO-F16-r4c3,covered,PDF 26: Figure 16 / taskset-tabular-normalized-nlp-3-8p,S233,ifBO较早接近低位，DPL中期出现阶梯下降；ifBO末端仍低于DPL。
+F17,covered,PDF 27: Figure 17,S234;S235;S236;S237;S238;S239;S240;S241;S242;S243;S244;S245,逐任务面板显示跨任务异质性；保留ifBO未领先、接近和领先的情形，不能把汇总优势改写成每个任务都获胜。
+ifBO-F17-r1c1,covered,PDF 27: Figure 17 / taskset-tabular-normalized-nlp-4-4p,S234,ifBO中期低于DPL和DyHPO，三者后期逐渐靠近；其余基线较高。
+ifBO-F17-r1c2,covered,PDF 27: Figure 17 / taskset-tabular-normalized-nlp-4-8p,S235,DPL前期下降较快，ifBO中后期追近并继续下降；DyHPO较早进入平台。
+ifBO-F17-r1c3,covered,PDF 27: Figure 17 / taskset-tabular-normalized-nlp-5-4p,S236,DyHPO、ifBO和DPL前期接近；后期DyHPO与ifBO低于DPL。
+ifBO-F17-r2c1,covered,PDF 27: Figure 17 / taskset-tabular-normalized-nlp-5-8p,S237,DPL前期下降较快，ifBO中后期继续下降并低于DyHPO与DPL。
+ifBO-F17-r2c2,covered,PDF 27: Figure 17 / taskset-tabular-normalized-nlp-6-4p,S238,ifBO较早接近低位；DyHPO后期追近，DPL仍略高。
+ifBO-F17-r2c3,covered,PDF 27: Figure 17 / taskset-tabular-normalized-nlp-6-8p,S239,ifBO、DyHPO与DPL前期接近；ifBO后期继续下降并位于低位曲线群。
+ifBO-F17-r3c1,covered,PDF 27: Figure 17 / taskset-tabular-normalized-nlp-7-4p,S240,前中期方法曲线接近，ifBO与DPL后期低于DyHPO及其余基线。
+ifBO-F17-r3c2,covered,PDF 27: Figure 17 / taskset-tabular-normalized-nlp-7-8p,S241,方法间差距较小；ifBO后期仍缓慢下降，末端位于低位。
+ifBO-F17-r3c3,covered,PDF 27: Figure 17 / taskset-tabular-normalized-nlp-8-4p,S242,DyHPO中期较早进入低位，ifBO后期追近；DPL后期停在更高平台。
+ifBO-F17-r4c1,covered,PDF 27: Figure 17 / taskset-tabular-normalized-nlp-8-8p,S243,DPL前期下降较快，ifBO和DyHPO后期追近；三者末端靠近。
+ifBO-F17-r4c2,covered,PDF 27: Figure 17 / taskset-tabular-normalized-nlp-9-4p,S244,ifBO中后期继续下降，后期低于DyHPO和DPL；Freeze-Thaw保持较高平台。
+ifBO-F17-r4c3,covered,PDF 27: Figure 17 / taskset-tabular-normalized-nlp-9-8p,S245,DPL前期较快下降，ifBO随后追近；两者后期低于DyHPO与其余基线。
+T01,covered,PDF 7: Table 1,S081;S082;S083;S084;S085,FT-PFN在所有列出的上下文规模具有较高log-likelihood，并大幅缩短表中在线拟合加推理耗时；PD1上不含超参数的变体在若干行更好，不能宣称超参数输入必然有益。
+T02,covered,PDF 13: Table 2,S038;S039;S040;S041,四种增长基函数pow4、exp4、ilog4、hill4经饱和时间变换后组合，可表达平台和后期下降。
+T03,covered,PDF 17: Table 3,S065,批大小、学习率、网络宽深、动量、dropout和权重衰减共同构成该基准的搜索空间。
+T04,covered,PDF 17: Table 4,S069,四维变体调整优化器动量、数值稳定项和学习率。
+T05,covered,PDF 17: Table 5,S070,八维变体在四维空间基础上加入衰减和正则化。
+T06,covered,PDF 18: Table 6,S073,PD1统一调整初始学习率、学习率衰减、幂次与优化器动量。
+A01,covered,PDF 4: Algorithm 1,S020,一次随机启动后，每轮只推进一个配置一步；FT-PFN通过把历史当作上下文省去在线重拟合。最终返回历史中表现最好的配置。
+A02,covered,PDF 16: Algorithm 2,S054,每轮只抽一次时域与阈值，再对所有候选使用同一抽样参数，选择超过阈值概率最高者。
+EQ01,covered,PDF 4: EQ01,S024,在合成先验数据上学习条件预测分布；部署时用上下文，不更新权重。
+EQ02,covered,PDF 5: EQ02,S027,随机配置网络输出曲线参数，基函数混合定义均值，再加噪声。
+EQ03,covered,PDF 5: EQ03,S049,预测继续h步后超过T的概率，并用剩余最大预算截断预测位置。
+EQ04,covered,PDF 6: EQ04,S052,阈值是当前最好性能到1之间剩余空间的随机比例；每轮重新抽样。
+EQ-U01,covered,PDF 4: EQ-U01,S090,预测的是在给定合成先验和上下文下的条件分布，不是保证真实数据处处符合该先验。
+EQ-U02,covered,PDF 4: EQ-U02,S093,每个token是一项配置、时间与性能观测，不是一个完整任务。
+EQ-A1-1,covered,PDF 13: EQ-A1-1,S096,宽幅版有利于读清混合项和配置网络的关系。
+EQ-A1-2,covered,PDF 13: EQ-A1-2,S034,任务共享起点和上限，同时让不同配置有不同终值。
+EQ-A1-3,covered,PDF 13: EQ-A1-3,S034,归一化正权重构成基函数凸组合，噪声尺度为对数正态。
+EQ-A1-4,covered,PDF 13: EQ-A1-4,S036,饱和后的速度可变；r_sat可以为负，从而让性能后期下降。
+EQ-A2-1,covered,PDF 15: EQ-A2-1,S042,用Dirichlet权重生成从广而浅到窄而深的多种预算分配历史。
+APP-A,covered,"PDF [13, 16]: A",S042;S045;S047;S086;S088,包括先验、合成数据、模型训练与采集伪代码。
+APP-A.1,covered,"PDF [13, 14]: A.1",S034;S036;S032;S038,表2四种基函数、饱和变换及图5的21组样本。
+APP-A.2,covered,PDF [15]: A.2,S042,上下文和查询合计1000点，任务维数不超过10。
+APP-A.3,covered,PDF [15]: A.3,S045;S047;S086;S088,6层、512维嵌入、4头、1024隐层、14.69M参数；2.0M合成数据集、约8 RTX2080 GPU小时。
+APP-A.4,covered,"PDF [15, 16]: A.4",S054;S049,算法2与图6展示共享随机时域、随机阈值。
+APP-B,covered,"PDF [16, 17, 18]: B",S063;S066;S071;S065;S069;S070;S073,35 LCBench、正文声明16 PD1、24 Taskset任务；可见逐任务图仅15 PD1。
+APP-C,covered,"PDF [18, 19]: C",S074;S077;S256,全部在共同NePS实现框架中比较；不是直接调用所有原论文结果。
+APP-C.1,covered,"PDF [18, 19]: C.1",S077,Random Search、Hyperband、ASHA。
+APP-C.2,covered,PDF [19]: C.2,S074,GP、DyHPO与DPL及实现配置。
+APP-D,covered,"PDF [19, 20, 21]: D",S147;S150;S154;S158,先验发散、配对比较、采集随机化与统一采集后的代理比较。
+APP-D.1,covered,PDF [19]: D.1,S147,图7。
+APP-D.2,covered,PDF [20]: D.2,S150,图8。
+APP-D.3,covered,PDF [20]: D.3,S154,图9，DyHPO更适合单步预测。
+APP-D.4,covered,"PDF [20, 21]: D.4",S158;S254,图10，检验代理差异。
+APP-E,covered,PDF [21]: E,S162,图11仅将已记录的训练成本累计为横轴。
+APP-F,covered,"PDF [21, 22, 23, 24, 25, 26, 27]: F",S172;S173;S174;S175;S176;S177;S178;S179;S180;S181;S182;S183;S184;S185;S186;S187;S188;S189;S190;S191;S192;S193;S194;S195;S196;S197;S198;S199;S200;S201;S202;S203;S204;S205;S206;S207;S208;S209;S210;S211;S212;S213;S214;S215;S216;S217;S218;S219;S220;S221;S222;S223;S224;S225;S226;S227;S228;S229;S230;S231;S232;S233;S234;S235;S236;S237;S238;S239;S240;S241;S242;S243;S244;S245,图12–17，10种子平均，实际74面板。

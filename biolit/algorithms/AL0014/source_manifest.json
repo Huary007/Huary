@@ -1,0 +1,99 @@
+{
+  "id": "AL0014",
+  "title": "In-Context Freeze-Thaw Bayesian Optimization for Hyperparameter Optimization",
+  "official_publication": "ICML 2024, PMLR 235:41982–42008",
+  "article_url": "https://proceedings.mlr.press/v235/rakotoarison24a.html",
+  "pdf_url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/rakotoarison24a/rakotoarison24a.pdf",
+  "pdf_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d",
+  "pdf_pages": 27,
+  "author_metadata_discrepancy": "PMLR metadata: Eddie Bergman; PDF and arXiv: Edward Bergman",
+  "supplement_scope": "All appendices A–F are in the 27-page official PDF. PMLR source metadata extras: []. No separate supplement is listed in official PMLR record. OpenReview attachments not independently acquired.",
+  "arxiv_version": "2404.16795v3, last revised 2024-08-12; metadata checked, slides use PMLR PDF only",
+  "code_url": "https://github.com/automl/ifBO/tree/icml-2024",
+  "model_version": "Author branch README identifies 0.0.1 for paper experiments; not independently executed",
+  "scope_counts": {
+    "figures": 17,
+    "figure_subpanels": 133,
+    "tables": 6,
+    "algorithms": 2,
+    "numbered_equations": 4,
+    "important_unnumbered_equation_groups": 7,
+    "appendix_sections_and_subsections": 16,
+    "visible_per_task_panels": 74,
+    "prior_draw_panels": 21,
+    "paper_stated_tasks": 75,
+    "count_discrepancy": "16 PD1 tasks stated; 15 PD1 panels shown."
+  },
+  "source_anomalies": [
+    {
+      "id": "AN01",
+      "pages": [
+        18,
+        25
+      ],
+      "detail_zh": "Appendix B声称16个PD1任务，但Figure15只有15个可见面板。"
+    },
+    {
+      "id": "AN02",
+      "pages": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "detail_zh": "嵌入的底层栅格含旧图例，PDF用覆盖图像修正名称；必须裁切最终渲染页。"
+    },
+    {
+      "id": "AN03",
+      "pages": [
+        4
+      ],
+      "detail_zh": "正文存在Section ??交叉引用占位；式1的负号被文本提取误识别为9，原图为负号。"
+    },
+    {
+      "id": "AN04",
+      "pages": [
+        7,
+        20
+      ],
+      "detail_zh": "Section5.3描述random horizon变体为T=0，Appendix D.3描述为best observed value；这两种表述不一致，未检查代码前不能自行解决。"
+    },
+    {
+      "id": "AN05",
+      "pages": [
+        6,
+        16
+      ],
+      "detail_zh": "式4的tau是正比例，算法2的tau是对数比例，两种记号需明确。"
+    },
+    {
+      "id": "AN06",
+      "pages": [
+        17
+      ],
+      "detail_zh": "Taskset正文关于4维/8维superset的句子存在方向问题；以表4、5的维度列表为准。"
+    },
+    {
+      "id": "AN07",
+      "pages": [
+        2,
+        8,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "detail_zh": "未找到阴影/误差带的统计定义，禁止默认标注95%CI。"
+    }
+  ],
+  "license_evidence": "https://proceedings.mlr.press/pmlr-license-agreement.html",
+  "checked_utc": "2026-11-03",
+  "verification": "AI source inspection completed; independent deck content review and root full browser visual review pending"
+}

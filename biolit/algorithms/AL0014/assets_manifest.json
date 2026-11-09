@@ -1,0 +1,4845 @@
+{
+  "title": {
+    "file": "assets/title.png",
+    "page": 1,
+    "rectangles": [
+      [
+        140,
+        85,
+        455,
+        185
+      ]
+    ],
+    "locator": "题名与作者",
+    "pixels": [
+      945,
+      300
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "intro": {
+    "file": "assets/intro.png",
+    "page": 1,
+    "rectangles": [
+      [
+        305,
+        350,
+        545,
+        705
+      ]
+    ],
+    "locator": "§1，多保真与freeze-thaw动机",
+    "pixels": [
+      720,
+      1065
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "intro_multifidelity": {
+    "file": "assets/intro_multifidelity.png",
+    "page": 1,
+    "rectangles": [
+      [
+        305,
+        349,
+        545,
+        509
+      ]
+    ],
+    "locator": "§1，多保真方法的完整段落",
+    "pixels": [
+      720,
+      480
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "intro_freezethaw": {
+    "file": "assets/intro_freezethaw.png",
+    "page": 1,
+    "rectangles": [
+      [
+        305,
+        510,
+        545,
+        706
+      ]
+    ],
+    "locator": "§1，freeze-thaw方法局限的完整段落",
+    "pixels": [
+      720,
+      588
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "task": {
+    "file": "assets/task.png",
+    "page": 3,
+    "rectangles": [
+      [
+        305,
+        179,
+        545,
+        390
+      ]
+    ],
+    "locator": "§3.1，HPO定义及预算约束",
+    "pixels": [
+      720,
+      633
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "freeze": {
+    "file": "assets/freeze.png",
+    "page": 3,
+    "rectangles": [
+      [
+        305,
+        416,
+        545,
+        719
+      ]
+    ],
+    "locator": "§3.2，freeze-thaw及preemptive假设",
+    "pixels": [
+      720,
+      909
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "alg1": {
+    "file": "assets/alg1.png",
+    "page": 4,
+    "rectangles": [
+      [
+        53,
+        66,
+        293,
+        360
+      ]
+    ],
+    "locator": "Algorithm 1，全部输入、循环和输出",
+    "pixels": [
+      720,
+      882
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "loss": {
+    "file": "assets/loss.png",
+    "page": 4,
+    "rectangles": [
+      [
+        305,
+        65,
+        545,
+        160
+      ]
+    ],
+    "locator": "式(1)，PFN交叉熵与KL解释",
+    "pixels": [
+      720,
+      285
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "f2": {
+    "file": "assets/f2.png",
+    "page": 5,
+    "rectangles": [
+      [
+        53,
+        65,
+        293,
+        283
+      ]
+    ],
+    "locator": "图2，先验生成模型与完整图注",
+    "pixels": [
+      720,
+      654
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "eq2": {
+    "file": "assets/eq2.png",
+    "page": 5,
+    "rectangles": [
+      [
+        53,
+        585,
+        293,
+        721
+      ]
+    ],
+    "locator": "式(2)，曲线均值与噪声",
+    "pixels": [
+      720,
+      408
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "prior": {
+    "file": "assets/prior.png",
+    "page": 5,
+    "rectangles": [
+      [
+        53,
+        350,
+        293,
+        584
+      ]
+    ],
+    "locator": "§4.1，πconfig与πcurve",
+    "pixels": [
+      720,
+      702
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "cdf": {
+    "file": "assets/cdf.png",
+    "page": 13,
+    "rectangles": [
+      [
+        53,
+        190,
+        544,
+        282
+      ]
+    ],
+    "locator": "附录A.1，边缘CDF变换",
+    "pixels": [
+      1473,
+      276
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "params": {
+    "file": "assets/params.png",
+    "page": 13,
+    "rectangles": [
+      [
+        70,
+        285,
+        545,
+        365
+      ]
+    ],
+    "locator": "附录A.1，y0、y∞、σ、wk未编号公式",
+    "pixels": [
+      1425,
+      240
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "break": {
+    "file": "assets/break.png",
+    "page": 13,
+    "rectangles": [
+      [
+        53,
+        369,
+        545,
+        503
+      ]
+    ],
+    "locator": "附录A.1，分段时间变换与Ψk定义",
+    "pixels": [
+      1476,
+      402
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "t2_pow4": {
+    "file": "assets/t2_pow4.png",
+    "page": 13,
+    "rectangles": [
+      [
+        65,
+        585,
+        542,
+        684
+      ]
+    ],
+    "locator": "表2全表，重点讲解pow4行与共享参数列",
+    "pixels": [
+      1431,
+      297
+    ],
+    "processing": "原文PDF裁剪、等比放大；原像素分区纵向拼接",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "t2_exp4": {
+    "file": "assets/t2_exp4.png",
+    "page": 13,
+    "rectangles": [
+      [
+        65,
+        585,
+        542,
+        684
+      ]
+    ],
+    "locator": "表2全表，重点讲解exp4行与共享参数列",
+    "pixels": [
+      1431,
+      297
+    ],
+    "processing": "原文PDF裁剪、等比放大；原像素分区纵向拼接",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "t2_ilog4": {
+    "file": "assets/t2_ilog4.png",
+    "page": 13,
+    "rectangles": [
+      [
+        65,
+        585,
+        542,
+        684
+      ]
+    ],
+    "locator": "表2全表，重点讲解ilog4行与共享参数列",
+    "pixels": [
+      1431,
+      297
+    ],
+    "processing": "原文PDF裁剪、等比放大；原像素分区纵向拼接",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "t2_hill4": {
+    "file": "assets/t2_hill4.png",
+    "page": 13,
+    "rectangles": [
+      [
+        65,
+        585,
+        542,
+        684
+      ]
+    ],
+    "locator": "表2全表，重点讲解hill4行与共享参数列",
+    "pixels": [
+      1431,
+      297
+    ],
+    "processing": "原文PDF裁剪、等比放大；原像素分区纵向拼接",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "generation": {
+    "file": "assets/generation.png",
+    "page": 15,
+    "rectangles": [
+      [
+        53,
+        84,
+        545,
+        255
+      ]
+    ],
+    "locator": "附录A.2，训练任务与预算采样",
+    "pixels": [
+      1476,
+      513
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "arch": {
+    "file": "assets/arch.png",
+    "page": 15,
+    "rectangles": [
+      [
+        53,
+        338,
+        545,
+        466
+      ]
+    ],
+    "locator": "附录A.3，模型结构与训练设置",
+    "pixels": [
+      1476,
+      384
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "mfpi": {
+    "file": "assets/mfpi.png",
+    "page": 5,
+    "rectangles": [
+      [
+        305,
+        449,
+        545,
+        690
+      ]
+    ],
+    "locator": "式(3)，MFPI及h、T定义",
+    "pixels": [
+      720,
+      723
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "random": {
+    "file": "assets/random.png",
+    "page": 6,
+    "rectangles": [
+      [
+        53,
+        286,
+        293,
+        390
+      ]
+    ],
+    "locator": "式(4)，MFPI-random采样",
+    "pixels": [
+      720,
+      312
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "alg2": {
+    "file": "assets/alg2.png",
+    "page": 16,
+    "rectangles": [
+      [
+        53,
+        336,
+        545,
+        501
+      ]
+    ],
+    "locator": "Algorithm 2，MFPI-random完整伪代码",
+    "pixels": [
+      1476,
+      495
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "eval": {
+    "file": "assets/eval.png",
+    "page": 6,
+    "rectangles": [
+      [
+        305,
+        203,
+        545,
+        401
+      ]
+    ],
+    "locator": "§5.1，预测评估方案与CPU",
+    "pixels": [
+      720,
+      594
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "hpoeval": {
+    "file": "assets/hpoeval.png",
+    "page": 7,
+    "rectangles": [
+      [
+        53,
+        375,
+        293,
+        649
+      ]
+    ],
+    "locator": "§5.2，1000步、10种子与归一化后悔值",
+    "pixels": [
+      720,
+      822
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "lcb": {
+    "file": "assets/lcb.png",
+    "page": 16,
+    "rectangles": [
+      [
+        53,
+        550,
+        545,
+        701
+      ]
+    ],
+    "locator": "附录B，基准性质与LCBench",
+    "pixels": [
+      1476,
+      453
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "t3": {
+    "file": "assets/t3.png",
+    "page": 17,
+    "rectangles": [
+      [
+        193,
+        71,
+        403,
+        193
+      ]
+    ],
+    "locator": "表3，LCBench搜索空间",
+    "pixels": [
+      630,
+      366
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "taskset": {
+    "file": "assets/taskset.png",
+    "page": 17,
+    "rectangles": [
+      [
+        65,
+        217,
+        545,
+        407
+      ]
+    ],
+    "locator": "附录B，Taskset与损失裁剪",
+    "pixels": [
+      1440,
+      570
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "t4": {
+    "file": "assets/t4.png",
+    "page": 17,
+    "rectangles": [
+      [
+        188,
+        419,
+        410,
+        505
+      ]
+    ],
+    "locator": "表4，Taskset四个参数",
+    "pixels": [
+      666,
+      258
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "t5": {
+    "file": "assets/t5.png",
+    "page": 17,
+    "rectangles": [
+      [
+        180,
+        537,
+        418,
+        671
+      ]
+    ],
+    "locator": "表5，Taskset八个参数",
+    "pixels": [
+      714,
+      402
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "pd1": {
+    "file": "assets/pd1.png",
+    "page": 18,
+    "rectangles": [
+      [
+        73,
+        289,
+        545,
+        434
+      ]
+    ],
+    "locator": "附录B，PD1任务和预算",
+    "pixels": [
+      1416,
+      435
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "t6": {
+    "file": "assets/t6.png",
+    "page": 18,
+    "rectangles": [
+      [
+        188,
+        184,
+        405,
+        271
+      ]
+    ],
+    "locator": "表6，PD1超参数",
+    "pixels": [
+      651,
+      261
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "baseline": {
+    "file": "assets/baseline.png",
+    "page": 19,
+    "rectangles": [
+      [
+        53,
+        119,
+        545,
+        356
+      ]
+    ],
+    "locator": "附录C.2，freeze-thaw基线与实现",
+    "pixels": [
+      1476,
+      711
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "generic": {
+    "file": "assets/generic.png",
+    "page": 18,
+    "rectangles": [
+      [
+        53,
+        560,
+        545,
+        704
+      ]
+    ],
+    "locator": "附录C.1，Random Search与Hyperband",
+    "pixels": [
+      1476,
+      432
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "failure": {
+    "file": "assets/failure.png",
+    "page": 8,
+    "rectangles": [
+      [
+        305,
+        599,
+        545,
+        712
+      ]
+    ],
+    "locator": "§5.3，EI失败与代理不确定性",
+    "pixels": [
+      720,
+      339
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "limits": {
+    "file": "assets/limits.png",
+    "page": 9,
+    "rectangles": [
+      [
+        53,
+        400,
+        293,
+        691
+      ]
+    ],
+    "locator": "§6，局限与未来工作",
+    "pixels": [
+      720,
+      873
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "t1_400": {
+    "file": "assets/t1_400.png",
+    "page": 7,
+    "rectangles": [
+      [
+        58,
+        98,
+        539,
+        128
+      ],
+      [
+        58,
+        129,
+        539,
+        175
+      ]
+    ],
+    "locator": "表1，400观测组，全部模型/数据集/耗时",
+    "pixels": [
+      1443,
+      248
+    ],
+    "processing": "原文PDF裁剪、等比放大；原像素分区纵向拼接",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "t1_800": {
+    "file": "assets/t1_800.png",
+    "page": 7,
+    "rectangles": [
+      [
+        58,
+        98,
+        539,
+        128
+      ],
+      [
+        58,
+        175,
+        539,
+        220
+      ]
+    ],
+    "locator": "表1，800观测组，全部模型/数据集/耗时",
+    "pixels": [
+      1443,
+      245
+    ],
+    "processing": "原文PDF裁剪、等比放大；原像素分区纵向拼接",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "t1_1000": {
+    "file": "assets/t1_1000.png",
+    "page": 7,
+    "rectangles": [
+      [
+        58,
+        98,
+        539,
+        128
+      ],
+      [
+        58,
+        219,
+        539,
+        264
+      ]
+    ],
+    "locator": "表1，1000观测组，全部模型/数据集/耗时",
+    "pixels": [
+      1443,
+      245
+    ],
+    "processing": "原文PDF裁剪、等比放大；原像素分区纵向拼接",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "t1_1400": {
+    "file": "assets/t1_1400.png",
+    "page": 7,
+    "rectangles": [
+      [
+        58,
+        98,
+        539,
+        128
+      ],
+      [
+        58,
+        264,
+        539,
+        309
+      ]
+    ],
+    "locator": "表1，1400观测组，全部模型/数据集/耗时",
+    "pixels": [
+      1443,
+      245
+    ],
+    "processing": "原文PDF裁剪、等比放大；原像素分区纵向拼接",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "t1_1800": {
+    "file": "assets/t1_1800.png",
+    "page": 7,
+    "rectangles": [
+      [
+        58,
+        98,
+        539,
+        128
+      ],
+      [
+        58,
+        308,
+        539,
+        354
+      ]
+    ],
+    "locator": "表1，1800观测组，全部模型/数据集/耗时",
+    "pixels": [
+      1443,
+      248
+    ],
+    "processing": "原文PDF裁剪、等比放大；原像素分区纵向拼接",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "research": {
+    "file": "assets/research.png",
+    "page": 9,
+    "rectangles": [
+      [
+        53,
+        400,
+        293,
+        691
+      ]
+    ],
+    "locator": "§6，额外先验、任务迁移与扩大模型的讨论",
+    "pixels": [
+      720,
+      873
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "design": {
+    "file": "assets/design.png",
+    "page": 20,
+    "rectangles": [
+      [
+        53,
+        663,
+        545,
+        719
+      ]
+    ],
+    "locator": "附录D.4，固定采集函数比较代理",
+    "pixels": [
+      1476,
+      168
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "repro": {
+    "file": "assets/repro.png",
+    "page": 18,
+    "rectangles": [
+      [
+        53,
+        463,
+        545,
+        535
+      ]
+    ],
+    "locator": "附录C，官方实验代码分支",
+    "pixels": [
+      1476,
+      216
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ppd": {
+    "file": "assets/ppd.png",
+    "page": 4,
+    "rectangles": [
+      [
+        53,
+        485,
+        293,
+        721
+      ]
+    ],
+    "locator": "§3.3，未编号后验预测式",
+    "pixels": [
+      720,
+      708
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "taskunion": {
+    "file": "assets/taskunion.png",
+    "page": 4,
+    "rectangles": [
+      [
+        305,
+        367,
+        545,
+        602
+      ]
+    ],
+    "locator": "§4.1，未编号学习曲线集合公式",
+    "pixels": [
+      720,
+      705
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "eq2_appendix": {
+    "file": "assets/eq2_appendix.png",
+    "page": 13,
+    "rectangles": [
+      [
+        90,
+        125,
+        510,
+        190
+      ],
+      [
+        53,
+        540,
+        545,
+        581
+      ]
+    ],
+    "locator": "附录A.1，式(2)展开与[0,1]裁剪原句",
+    "pixels": [
+      1476,
+      338
+    ],
+    "processing": "原文PDF裁剪、等比放大；原像素分区纵向拼接",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F01": {
+    "file": "assets/F01.png",
+    "page": 2,
+    "rectangles": [
+      [
+        53,
+        64,
+        545,
+        237
+      ]
+    ],
+    "locator": "Figure 1，完整原图与共享图例",
+    "pixels": [
+      1476,
+      519
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F01-r1c1": {
+    "file": "assets/F01-r1c1.png",
+    "page": 2,
+    "rectangles": [
+      [
+        53,
+        64,
+        169,
+        155
+      ]
+    ],
+    "locator": "Figure 1，Ground truth curves",
+    "pixels": [
+      348,
+      273
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F01-r1c2": {
+    "file": "assets/F01-r1c2.png",
+    "page": 2,
+    "rectangles": [
+      [
+        170,
+        64,
+        293,
+        237
+      ]
+    ],
+    "locator": "Figure 1，FT-PFN，保留对应列上下图与完整轴标签",
+    "pixels": [
+      369,
+      519
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F01-r1c3": {
+    "file": "assets/F01-r1c3.png",
+    "page": 2,
+    "rectangles": [
+      [
+        293,
+        64,
+        417,
+        237
+      ]
+    ],
+    "locator": "Figure 1，Deep Power Laws Ensembles，保留对应列上下图与完整轴标签",
+    "pixels": [
+      372,
+      519
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F01-r1c4": {
+    "file": "assets/F01-r1c4.png",
+    "page": 2,
+    "rectangles": [
+      [
+        417,
+        64,
+        545,
+        237
+      ]
+    ],
+    "locator": "Figure 1，Deep Kernel Gaussian Process，保留对应列上下图与完整轴标签",
+    "pixels": [
+      384,
+      519
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F01-r2c2": {
+    "file": "assets/F01-r2c2.png",
+    "page": 2,
+    "rectangles": [
+      [
+        170,
+        64,
+        293,
+        237
+      ]
+    ],
+    "locator": "Figure 1，FT-PFN at b=50，保留对应列上下图与完整轴标签",
+    "pixels": [
+      369,
+      519
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F01-r2c3": {
+    "file": "assets/F01-r2c3.png",
+    "page": 2,
+    "rectangles": [
+      [
+        293,
+        64,
+        417,
+        237
+      ]
+    ],
+    "locator": "Figure 1，Deep Power Laws Ensembles at b=50",
+    "pixels": [
+      372,
+      519
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F01-r2c4": {
+    "file": "assets/F01-r2c4.png",
+    "page": 2,
+    "rectangles": [
+      [
+        417,
+        64,
+        545,
+        237
+      ]
+    ],
+    "locator": "Figure 1，Deep Kernel Gaussian Process at b=50",
+    "pixels": [
+      384,
+      519
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F02": {
+    "file": "assets/F02.png",
+    "page": 5,
+    "rectangles": [
+      [
+        55.44,
+        67.063,
+        277.197,
+        180.447
+      ]
+    ],
+    "locator": "Figure 2，完整原图与共享图例",
+    "pixels": [
+      666,
+      341
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F02-left": {
+    "file": "assets/F02-left.png",
+    "page": 5,
+    "rectangles": [
+      [
+        55.44,
+        67.063,
+        141.0,
+        180.447
+      ]
+    ],
+    "locator": "Figure 2，configuration network π_config",
+    "pixels": [
+      257,
+      341
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F02-right": {
+    "file": "assets/F02-right.png",
+    "page": 5,
+    "rectangles": [
+      [
+        141.0,
+        67.063,
+        277.197,
+        180.447
+      ]
+    ],
+    "locator": "Figure 2，curve mixture π_curve",
+    "pixels": [
+      409,
+      341
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F03": {
+    "file": "assets/F03.png",
+    "page": 8,
+    "rectangles": [
+      [
+        55.44,
+        67.059,
+        541.472,
+        278.745
+      ]
+    ],
+    "locator": "Figure 3，完整原图与共享图例",
+    "pixels": [
+      1459,
+      636
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F03-r1c1": {
+    "file": "assets/F03-r1c1.png",
+    "page": 8,
+    "rectangles": [
+      [
+        55.025,
+        84.239,
+        215.025,
+        182.239
+      ]
+    ],
+    "locator": "Figure 3，LCBench / Normalized regret",
+    "pixels": [
+      481,
+      295
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F03-r1c2": {
+    "file": "assets/F03-r1c2.png",
+    "page": 8,
+    "rectangles": [
+      [
+        218.326,
+        84.239,
+        378.326,
+        182.239
+      ]
+    ],
+    "locator": "Figure 3，PD1 / Normalized regret",
+    "pixels": [
+      481,
+      295
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F03-r1c3": {
+    "file": "assets/F03-r1c3.png",
+    "page": 8,
+    "rectangles": [
+      [
+        381.627,
+        84.239,
+        541.627,
+        182.239
+      ]
+    ],
+    "locator": "Figure 3，Taskset / Normalized regret",
+    "pixels": [
+      481,
+      295
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F03-r2c1": {
+    "file": "assets/F03-r2c1.png",
+    "page": 8,
+    "rectangles": [
+      [
+        55.025,
+        182.22,
+        215.025,
+        280.22
+      ]
+    ],
+    "locator": "Figure 3，LCBench / Rank",
+    "pixels": [
+      481,
+      295
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F03-r2c2": {
+    "file": "assets/F03-r2c2.png",
+    "page": 8,
+    "rectangles": [
+      [
+        218.326,
+        182.22,
+        378.326,
+        280.22
+      ]
+    ],
+    "locator": "Figure 3，PD1 / Rank",
+    "pixels": [
+      481,
+      295
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F03-r2c3": {
+    "file": "assets/F03-r2c3.png",
+    "page": 8,
+    "rectangles": [
+      [
+        381.627,
+        182.22,
+        541.627,
+        280.22
+      ]
+    ],
+    "locator": "Figure 3，Taskset / Rank",
+    "pixels": [
+      481,
+      295
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F04": {
+    "file": "assets/F04.png",
+    "page": 8,
+    "rectangles": [
+      [
+        55.44,
+        335.48,
+        541.472,
+        547.166
+      ]
+    ],
+    "locator": "Figure 4，完整原图与共享图例",
+    "pixels": [
+      1459,
+      636
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F04-r1c1": {
+    "file": "assets/F04-r1c1.png",
+    "page": 8,
+    "rectangles": [
+      [
+        55.025,
+        352.66,
+        215.025,
+        450.66
+      ]
+    ],
+    "locator": "Figure 4，LCBench / Normalized regret",
+    "pixels": [
+      481,
+      295
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F04-r1c2": {
+    "file": "assets/F04-r1c2.png",
+    "page": 8,
+    "rectangles": [
+      [
+        218.326,
+        352.66,
+        378.326,
+        450.66
+      ]
+    ],
+    "locator": "Figure 4，PD1 / Normalized regret",
+    "pixels": [
+      481,
+      295
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F04-r1c3": {
+    "file": "assets/F04-r1c3.png",
+    "page": 8,
+    "rectangles": [
+      [
+        381.627,
+        352.66,
+        541.627,
+        450.66
+      ]
+    ],
+    "locator": "Figure 4，Taskset / Normalized regret",
+    "pixels": [
+      481,
+      295
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F04-r2c1": {
+    "file": "assets/F04-r2c1.png",
+    "page": 8,
+    "rectangles": [
+      [
+        55.025,
+        450.641,
+        215.025,
+        548.641
+      ]
+    ],
+    "locator": "Figure 4，LCBench / Rank",
+    "pixels": [
+      481,
+      295
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F04-r2c2": {
+    "file": "assets/F04-r2c2.png",
+    "page": 8,
+    "rectangles": [
+      [
+        218.326,
+        450.641,
+        378.326,
+        548.641
+      ]
+    ],
+    "locator": "Figure 4，PD1 / Rank",
+    "pixels": [
+      481,
+      295
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F04-r2c3": {
+    "file": "assets/F04-r2c3.png",
+    "page": 8,
+    "rectangles": [
+      [
+        381.627,
+        450.641,
+        541.627,
+        548.641
+      ]
+    ],
+    "locator": "Figure 4，Taskset / Rank",
+    "pixels": [
+      481,
+      295
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05": {
+    "file": "assets/F05.png",
+    "page": 14,
+    "rectangles": [
+      [
+        55.44,
+        77.391,
+        541.44,
+        648.987
+      ]
+    ],
+    "locator": "Figure 5，完整原图与共享图例",
+    "pixels": [
+      1459,
+      1715
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r1c1": {
+    "file": "assets/F05-r1c1.png",
+    "page": 14,
+    "rectangles": [
+      [
+        55.852,
+        78.626,
+        215.931,
+        158.871
+      ]
+    ],
+    "locator": "Figure 5，prior draw 1 (source has no panel title)",
+    "pixels": [
+      481,
+      242
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r1c2": {
+    "file": "assets/F05-r1c2.png",
+    "page": 14,
+    "rectangles": [
+      [
+        218.4,
+        78.626,
+        378.48,
+        158.871
+      ]
+    ],
+    "locator": "Figure 5，prior draw 2 (source has no panel title)",
+    "pixels": [
+      481,
+      242
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r1c3": {
+    "file": "assets/F05-r1c3.png",
+    "page": 14,
+    "rectangles": [
+      [
+        380.949,
+        78.626,
+        541.029,
+        158.871
+      ]
+    ],
+    "locator": "Figure 5，prior draw 3 (source has no panel title)",
+    "pixels": [
+      482,
+      242
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r2c1": {
+    "file": "assets/F05-r2c1.png",
+    "page": 14,
+    "rectangles": [
+      [
+        55.852,
+        159.694,
+        215.931,
+        240.352
+      ]
+    ],
+    "locator": "Figure 5，prior draw 4 (source has no panel title)",
+    "pixels": [
+      481,
+      243
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r2c2": {
+    "file": "assets/F05-r2c2.png",
+    "page": 14,
+    "rectangles": [
+      [
+        218.4,
+        159.694,
+        378.48,
+        240.352
+      ]
+    ],
+    "locator": "Figure 5，prior draw 5 (source has no panel title)",
+    "pixels": [
+      481,
+      243
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r2c3": {
+    "file": "assets/F05-r2c3.png",
+    "page": 14,
+    "rectangles": [
+      [
+        380.949,
+        159.694,
+        541.029,
+        240.352
+      ]
+    ],
+    "locator": "Figure 5，prior draw 6 (source has no panel title)",
+    "pixels": [
+      482,
+      243
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r3c1": {
+    "file": "assets/F05-r3c1.png",
+    "page": 14,
+    "rectangles": [
+      [
+        55.852,
+        241.175,
+        215.931,
+        321.832
+      ]
+    ],
+    "locator": "Figure 5，prior draw 7 (source has no panel title)",
+    "pixels": [
+      481,
+      243
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r3c2": {
+    "file": "assets/F05-r3c2.png",
+    "page": 14,
+    "rectangles": [
+      [
+        218.4,
+        241.175,
+        378.48,
+        321.832
+      ]
+    ],
+    "locator": "Figure 5，prior draw 8 (source has no panel title)",
+    "pixels": [
+      481,
+      243
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r3c3": {
+    "file": "assets/F05-r3c3.png",
+    "page": 14,
+    "rectangles": [
+      [
+        380.949,
+        241.175,
+        541.029,
+        321.832
+      ]
+    ],
+    "locator": "Figure 5，prior draw 9 (source has no panel title)",
+    "pixels": [
+      482,
+      243
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r4c1": {
+    "file": "assets/F05-r4c1.png",
+    "page": 14,
+    "rectangles": [
+      [
+        55.852,
+        322.655,
+        215.931,
+        403.312
+      ]
+    ],
+    "locator": "Figure 5，prior draw 10 (source has no panel title)",
+    "pixels": [
+      481,
+      243
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r4c2": {
+    "file": "assets/F05-r4c2.png",
+    "page": 14,
+    "rectangles": [
+      [
+        218.4,
+        322.655,
+        378.48,
+        403.312
+      ]
+    ],
+    "locator": "Figure 5，prior draw 11 (source has no panel title)",
+    "pixels": [
+      481,
+      243
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r4c3": {
+    "file": "assets/F05-r4c3.png",
+    "page": 14,
+    "rectangles": [
+      [
+        380.949,
+        322.655,
+        541.029,
+        403.312
+      ]
+    ],
+    "locator": "Figure 5，prior draw 12 (source has no panel title)",
+    "pixels": [
+      482,
+      243
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r5c1": {
+    "file": "assets/F05-r5c1.png",
+    "page": 14,
+    "rectangles": [
+      [
+        55.852,
+        404.135,
+        215.931,
+        484.792
+      ]
+    ],
+    "locator": "Figure 5，prior draw 13 (source has no panel title)",
+    "pixels": [
+      481,
+      243
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r5c2": {
+    "file": "assets/F05-r5c2.png",
+    "page": 14,
+    "rectangles": [
+      [
+        218.4,
+        404.135,
+        378.48,
+        484.792
+      ]
+    ],
+    "locator": "Figure 5，prior draw 14 (source has no panel title)",
+    "pixels": [
+      481,
+      243
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r5c3": {
+    "file": "assets/F05-r5c3.png",
+    "page": 14,
+    "rectangles": [
+      [
+        380.949,
+        404.135,
+        541.029,
+        484.792
+      ]
+    ],
+    "locator": "Figure 5，prior draw 15 (source has no panel title)",
+    "pixels": [
+      482,
+      243
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r6c1": {
+    "file": "assets/F05-r6c1.png",
+    "page": 14,
+    "rectangles": [
+      [
+        55.852,
+        485.615,
+        215.931,
+        565.861
+      ]
+    ],
+    "locator": "Figure 5，prior draw 16 (source has no panel title)",
+    "pixels": [
+      481,
+      242
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r6c2": {
+    "file": "assets/F05-r6c2.png",
+    "page": 14,
+    "rectangles": [
+      [
+        218.4,
+        485.615,
+        378.48,
+        565.861
+      ]
+    ],
+    "locator": "Figure 5，prior draw 17 (source has no panel title)",
+    "pixels": [
+      481,
+      242
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r6c3": {
+    "file": "assets/F05-r6c3.png",
+    "page": 14,
+    "rectangles": [
+      [
+        380.949,
+        485.615,
+        541.029,
+        565.861
+      ]
+    ],
+    "locator": "Figure 5，prior draw 18 (source has no panel title)",
+    "pixels": [
+      482,
+      242
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r7c1": {
+    "file": "assets/F05-r7c1.png",
+    "page": 14,
+    "rectangles": [
+      [
+        55.852,
+        567.095,
+        215.931,
+        647.341
+      ]
+    ],
+    "locator": "Figure 5，prior draw 19 (source has no panel title)",
+    "pixels": [
+      481,
+      242
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r7c2": {
+    "file": "assets/F05-r7c2.png",
+    "page": 14,
+    "rectangles": [
+      [
+        218.4,
+        567.095,
+        378.48,
+        647.341
+      ]
+    ],
+    "locator": "Figure 5，prior draw 20 (source has no panel title)",
+    "pixels": [
+      481,
+      242
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F05-r7c3": {
+    "file": "assets/F05-r7c3.png",
+    "page": 14,
+    "rectangles": [
+      [
+        380.949,
+        567.095,
+        541.029,
+        647.341
+      ]
+    ],
+    "locator": "Figure 5，prior draw 21 (source has no panel title)",
+    "pixels": [
+      482,
+      242
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F06": {
+    "file": "assets/F06.png",
+    "page": 16,
+    "rectangles": [
+      [
+        104.04,
+        67.062,
+        492.844,
+        236.649
+      ]
+    ],
+    "locator": "Figure 6，完整原图与共享图例",
+    "pixels": [
+      1167,
+      509
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F06-left": {
+    "file": "assets/F06-left.png",
+    "page": 16,
+    "rectangles": [
+      [
+        104.04,
+        67.062,
+        329.0,
+        236.649
+      ]
+    ],
+    "locator": "Figure 6，partial curves and continuations",
+    "pixels": [
+      675,
+      509
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F06-right": {
+    "file": "assets/F06-right.png",
+    "page": 16,
+    "rectangles": [
+      [
+        345.0,
+        84.0,
+        492.844,
+        218.0
+      ]
+    ],
+    "locator": "Figure 6，MFPI choice map",
+    "pixels": [
+      444,
+      402
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F07": {
+    "file": "assets/F07.png",
+    "page": 19,
+    "rectangles": [
+      [
+        64.827,
+        472.907,
+        532.054,
+        632.523
+      ]
+    ],
+    "locator": "Figure 7，完整原图与共享图例",
+    "pixels": [
+      1403,
+      480
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F07-left": {
+    "file": "assets/F07-left.png",
+    "page": 19,
+    "rectangles": [
+      [
+        64.827,
+        472.907,
+        294.5,
+        608.0
+      ]
+    ],
+    "locator": "Figure 7，Rank (log-likelihood)",
+    "pixels": [
+      690,
+      406
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F07-right": {
+    "file": "assets/F07-right.png",
+    "page": 19,
+    "rectangles": [
+      [
+        299.0,
+        472.907,
+        532.054,
+        608.0
+      ]
+    ],
+    "locator": "Figure 7，Rank (HPO regret)",
+    "pixels": [
+      700,
+      406
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F08": {
+    "file": "assets/F08.png",
+    "page": 20,
+    "rectangles": [
+      [
+        55.44,
+        151.452,
+        541.443,
+        269.481
+      ]
+    ],
+    "locator": "Figure 8，完整原图与共享图例",
+    "pixels": [
+      1459,
+      355
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F08-r1c1": {
+    "file": "assets/F08-r1c1.png",
+    "page": 20,
+    "rectangles": [
+      [
+        55.44,
+        151.452,
+        221.078,
+        269.481
+      ]
+    ],
+    "locator": "Figure 8，ifBO vs DyHPO",
+    "pixels": [
+      498,
+      355
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F08-r1c2": {
+    "file": "assets/F08-r1c2.png",
+    "page": 20,
+    "rectangles": [
+      [
+        214.578,
+        151.452,
+        386.716,
+        269.481
+      ]
+    ],
+    "locator": "Figure 8，ifBO vs DPL",
+    "pixels": [
+      518,
+      355
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F08-r1c3": {
+    "file": "assets/F08-r1c3.png",
+    "page": 20,
+    "rectangles": [
+      [
+        380.216,
+        151.452,
+        541.443,
+        269.481
+      ]
+    ],
+    "locator": "Figure 8，ifBO vs DPL vs DyHPO",
+    "pixels": [
+      485,
+      355
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F09": {
+    "file": "assets/F09.png",
+    "page": 20,
+    "rectangles": [
+      [
+        79.742,
+        478.237,
+        517.142,
+        603.924
+      ]
+    ],
+    "locator": "Figure 9，完整原图与共享图例",
+    "pixels": [
+      1313,
+      378
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F09-r1c1": {
+    "file": "assets/F09-r1c1.png",
+    "page": 20,
+    "rectangles": [
+      [
+        79.742,
+        489.5,
+        222,
+        604
+      ]
+    ],
+    "locator": "Figure 9，ifBO",
+    "pixels": [
+      427,
+      344
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F09-r1c2": {
+    "file": "assets/F09-r1c2.png",
+    "page": 20,
+    "rectangles": [
+      [
+        224,
+        489.5,
+        369,
+        604
+      ]
+    ],
+    "locator": "Figure 9，DPL",
+    "pixels": [
+      435,
+      344
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F09-r1c3": {
+    "file": "assets/F09-r1c3.png",
+    "page": 20,
+    "rectangles": [
+      [
+        372,
+        489.5,
+        519,
+        604
+      ]
+    ],
+    "locator": "Figure 9，DyHPO",
+    "pixels": [
+      441,
+      344
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F10": {
+    "file": "assets/F10.png",
+    "page": 21,
+    "rectangles": [
+      [
+        79.742,
+        67.06,
+        517.148,
+        173.287
+      ]
+    ],
+    "locator": "Figure 10，完整原图与共享图例",
+    "pixels": [
+      1313,
+      319
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F10-r1c1": {
+    "file": "assets/F10-r1c1.png",
+    "page": 21,
+    "rectangles": [
+      [
+        79.742,
+        67.06,
+        228.817,
+        173.287
+      ]
+    ],
+    "locator": "Figure 10，ifBO vs DyHPO, shared MFPI-random",
+    "pixels": [
+      448,
+      319
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F10-r1c2": {
+    "file": "assets/F10-r1c2.png",
+    "page": 21,
+    "rectangles": [
+      [
+        222.317,
+        67.06,
+        377.892,
+        173.287
+      ]
+    ],
+    "locator": "Figure 10，ifBO vs DPL, shared MFPI-random",
+    "pixels": [
+      468,
+      319
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F10-r1c3": {
+    "file": "assets/F10-r1c3.png",
+    "page": 21,
+    "rectangles": [
+      [
+        371.392,
+        67.06,
+        517.148,
+        173.287
+      ]
+    ],
+    "locator": "Figure 10，three surrogates, shared MFPI-random",
+    "pixels": [
+      438,
+      319
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F11": {
+    "file": "assets/F11.png",
+    "page": 21,
+    "rectangles": [
+      [
+        55.44,
+        305.352,
+        541.44,
+        415.432
+      ]
+    ],
+    "locator": "Figure 11，完整原图与共享图例",
+    "pixels": [
+      1459,
+      331
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F11-r1c1": {
+    "file": "assets/F11-r1c1.png",
+    "page": 21,
+    "rectangles": [
+      [
+        55.44,
+        305.352,
+        176.0,
+        400.0
+      ]
+    ],
+    "locator": "Figure 11，LCBench",
+    "pixels": [
+      362,
+      284
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F11-r1c2": {
+    "file": "assets/F11-r1c2.png",
+    "page": 21,
+    "rectangles": [
+      [
+        177.578,
+        305.352,
+        298.138,
+        400.0
+      ]
+    ],
+    "locator": "Figure 11，PD1",
+    "pixels": [
+      363,
+      284
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F11-r1c3": {
+    "file": "assets/F11-r1c3.png",
+    "page": 21,
+    "rectangles": [
+      [
+        299.716,
+        305.352,
+        420.276,
+        400.0
+      ]
+    ],
+    "locator": "Figure 11，Taskset",
+    "pixels": [
+      362,
+      284
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "F11-r1c4": {
+    "file": "assets/F11-r1c4.png",
+    "page": 21,
+    "rectangles": [
+      [
+        421.854,
+        305.352,
+        542.414,
+        400.0
+      ]
+    ],
+    "locator": "Figure 11，All",
+    "pixels": [
+      363,
+      284
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "threshold_text": {
+    "file": "assets/threshold_text.png",
+    "page": 7,
+    "rectangles": [
+      [
+        305,
+        525,
+        545,
+        710
+      ]
+    ],
+    "locator": "§5.3，随机时域变体的T=0原句",
+    "pixels": [
+      720,
+      555
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "threshold_app": {
+    "file": "assets/threshold_app.png",
+    "page": 20,
+    "rectangles": [
+      [
+        53,
+        345,
+        545,
+        462
+      ]
+    ],
+    "locator": "附录D.3，random horizon阈值原句",
+    "pixels": [
+      1476,
+      351
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F12-r1c1": {
+    "file": "assets/ifBO-F12-r1c1.png",
+    "page": 22,
+    "rectangles": [
+      [
+        80.844,
+        74.212,
+        226.343,
+        223.718
+      ]
+    ],
+    "locator": "图12，第1行第1列；lcbench-tabular-adult-balanced",
+    "pixels": [
+      438,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F12-r1c2": {
+    "file": "assets/ifBO-F12-r1c2.png",
+    "page": 22,
+    "rectangles": [
+      [
+        229.425,
+        74.212,
+        377.39,
+        223.718
+      ]
+    ],
+    "locator": "图12，第1行第2列；lcbench-tabular-airlines-balanced",
+    "pixels": [
+      445,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F12-r1c3": {
+    "file": "assets/ifBO-F12-r1c3.png",
+    "page": 22,
+    "rectangles": [
+      [
+        378.931,
+        74.212,
+        527.512,
+        223.718
+      ]
+    ],
+    "locator": "图12，第1行第3列；lcbench-tabular-albert-balanced",
+    "pixels": [
+      447,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F12-r2c1": {
+    "file": "assets/ifBO-F12-r2c1.png",
+    "page": 22,
+    "rectangles": [
+      [
+        80.844,
+        224.951,
+        226.343,
+        374.457
+      ]
+    ],
+    "locator": "图12，第2行第1列；lcbench-tabular-Amazon-balanced",
+    "pixels": [
+      438,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F12-r2c2": {
+    "file": "assets/ifBO-F12-r2c2.png",
+    "page": 22,
+    "rectangles": [
+      [
+        229.425,
+        224.951,
+        377.39,
+        374.457
+      ]
+    ],
+    "locator": "图12，第2行第2列；lcbench-tabular-APSFailure-balanced",
+    "pixels": [
+      445,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F12-r2c3": {
+    "file": "assets/ifBO-F12-r2c3.png",
+    "page": 22,
+    "rectangles": [
+      [
+        378.931,
+        224.951,
+        527.512,
+        374.457
+      ]
+    ],
+    "locator": "图12，第2行第3列；lcbench-tabular-Australian-balanced",
+    "pixels": [
+      447,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F12-r3c1": {
+    "file": "assets/ifBO-F12-r3c1.png",
+    "page": 22,
+    "rectangles": [
+      [
+        80.844,
+        375.69,
+        226.343,
+        525.196
+      ]
+    ],
+    "locator": "图12，第3行第1列；lcbench-tabular-bank-balanced",
+    "pixels": [
+      438,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F12-r3c2": {
+    "file": "assets/ifBO-F12-r3c2.png",
+    "page": 22,
+    "rectangles": [
+      [
+        229.425,
+        375.69,
+        377.39,
+        525.196
+      ]
+    ],
+    "locator": "图12，第3行第2列；lcbench-tabular-blood-balanced",
+    "pixels": [
+      445,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F12-r3c3": {
+    "file": "assets/ifBO-F12-r3c3.png",
+    "page": 22,
+    "rectangles": [
+      [
+        378.931,
+        375.69,
+        527.512,
+        525.196
+      ]
+    ],
+    "locator": "图12，第3行第3列；lcbench-tabular-car-balanced",
+    "pixels": [
+      447,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F12-r4c1": {
+    "file": "assets/ifBO-F12-r4c1.png",
+    "page": 22,
+    "rectangles": [
+      [
+        80.844,
+        526.429,
+        226.343,
+        683.95
+      ]
+    ],
+    "locator": "图12，第4行第1列；lcbench-tabular-christine-balanced",
+    "pixels": [
+      438,
+      473
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F12-r4c2": {
+    "file": "assets/ifBO-F12-r4c2.png",
+    "page": 22,
+    "rectangles": [
+      [
+        229.425,
+        526.429,
+        377.39,
+        683.95
+      ]
+    ],
+    "locator": "图12，第4行第2列；lcbench-tabular-cnae-balanced",
+    "pixels": [
+      445,
+      473
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F12-r4c3": {
+    "file": "assets/ifBO-F12-r4c3.png",
+    "page": 22,
+    "rectangles": [
+      [
+        378.931,
+        526.429,
+        527.512,
+        683.95
+      ]
+    ],
+    "locator": "图12，第4行第3列；lcbench-tabular-connect-balanced",
+    "pixels": [
+      447,
+      473
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F13-r1c1": {
+    "file": "assets/ifBO-F13-r1c1.png",
+    "page": 23,
+    "rectangles": [
+      [
+        80.846,
+        74.212,
+        226.345,
+        223.718
+      ]
+    ],
+    "locator": "图13，第1行第1列；lcbench-tabular-covertype-balanced",
+    "pixels": [
+      438,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F13-r1c2": {
+    "file": "assets/ifBO-F13-r1c2.png",
+    "page": 23,
+    "rectangles": [
+      [
+        229.427,
+        74.212,
+        377.392,
+        223.718
+      ]
+    ],
+    "locator": "图13，第1行第2列；lcbench-tabular-credit-balanced",
+    "pixels": [
+      445,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F13-r1c3": {
+    "file": "assets/ifBO-F13-r1c3.png",
+    "page": 23,
+    "rectangles": [
+      [
+        378.933,
+        74.212,
+        527.514,
+        223.718
+      ]
+    ],
+    "locator": "图13，第1行第3列；lcbench-tabular-dionis-balanced",
+    "pixels": [
+      447,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F13-r2c1": {
+    "file": "assets/ifBO-F13-r2c1.png",
+    "page": 23,
+    "rectangles": [
+      [
+        80.846,
+        224.951,
+        226.345,
+        374.457
+      ]
+    ],
+    "locator": "图13，第2行第1列；lcbench-tabular-fabert-balanced",
+    "pixels": [
+      438,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F13-r2c2": {
+    "file": "assets/ifBO-F13-r2c2.png",
+    "page": 23,
+    "rectangles": [
+      [
+        229.427,
+        224.951,
+        377.392,
+        374.457
+      ]
+    ],
+    "locator": "图13，第2行第2列；lcbench-tabular-Fashion-balanced",
+    "pixels": [
+      445,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F13-r2c3": {
+    "file": "assets/ifBO-F13-r2c3.png",
+    "page": 23,
+    "rectangles": [
+      [
+        378.933,
+        224.951,
+        527.514,
+        374.457
+      ]
+    ],
+    "locator": "图13，第2行第3列；lcbench-tabular-helena-balanced",
+    "pixels": [
+      447,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F13-r3c1": {
+    "file": "assets/ifBO-F13-r3c1.png",
+    "page": 23,
+    "rectangles": [
+      [
+        80.846,
+        375.69,
+        226.345,
+        525.196
+      ]
+    ],
+    "locator": "图13，第3行第1列；lcbench-tabular-higgs-balanced",
+    "pixels": [
+      438,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F13-r3c2": {
+    "file": "assets/ifBO-F13-r3c2.png",
+    "page": 23,
+    "rectangles": [
+      [
+        229.427,
+        375.69,
+        377.392,
+        525.196
+      ]
+    ],
+    "locator": "图13，第3行第2列；lcbench-tabular-jannis-balanced",
+    "pixels": [
+      445,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F13-r3c3": {
+    "file": "assets/ifBO-F13-r3c3.png",
+    "page": 23,
+    "rectangles": [
+      [
+        378.933,
+        375.69,
+        527.514,
+        525.196
+      ]
+    ],
+    "locator": "图13，第3行第3列；lcbench-tabular-jasmine-balanced",
+    "pixels": [
+      447,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F13-r4c1": {
+    "file": "assets/ifBO-F13-r4c1.png",
+    "page": 23,
+    "rectangles": [
+      [
+        80.846,
+        526.429,
+        226.345,
+        683.95
+      ]
+    ],
+    "locator": "图13，第4行第1列；lcbench-tabular-jungle-balanced",
+    "pixels": [
+      438,
+      473
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F13-r4c2": {
+    "file": "assets/ifBO-F13-r4c2.png",
+    "page": 23,
+    "rectangles": [
+      [
+        229.427,
+        526.429,
+        377.392,
+        683.95
+      ]
+    ],
+    "locator": "图13，第4行第2列；lcbench-tabular-kc1-balanced",
+    "pixels": [
+      445,
+      473
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F13-r4c3": {
+    "file": "assets/ifBO-F13-r4c3.png",
+    "page": 23,
+    "rectangles": [
+      [
+        378.933,
+        526.429,
+        527.514,
+        683.95
+      ]
+    ],
+    "locator": "图13，第4行第3列；lcbench-tabular-KDDCup09-balanced",
+    "pixels": [
+      447,
+      473
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F14-r1c1": {
+    "file": "assets/ifBO-F14-r1c1.png",
+    "page": 24,
+    "rectangles": [
+      [
+        80.846,
+        74.441,
+        226.345,
+        223.946
+      ]
+    ],
+    "locator": "图14，第1行第1列；lcbench-tabular-kr-balanced",
+    "pixels": [
+      438,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F14-r1c2": {
+    "file": "assets/ifBO-F14-r1c2.png",
+    "page": 24,
+    "rectangles": [
+      [
+        221.721,
+        74.441,
+        377.392,
+        223.946
+      ]
+    ],
+    "locator": "图14，第1行第2列；lcbench-tabular-mfeat-balanced",
+    "pixels": [
+      468,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F14-r1c3": {
+    "file": "assets/ifBO-F14-r1c3.png",
+    "page": 24,
+    "rectangles": [
+      [
+        378.933,
+        74.441,
+        527.514,
+        223.946
+      ]
+    ],
+    "locator": "图14，第1行第3列；lcbench-tabular-MiniBooNE-balanced",
+    "pixels": [
+      447,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F14-r2c1": {
+    "file": "assets/ifBO-F14-r2c1.png",
+    "page": 24,
+    "rectangles": [
+      [
+        80.846,
+        225.18,
+        222,
+        374.685
+      ]
+    ],
+    "locator": "图14，第2行第1列；lcbench-tabular-nomao-balanced",
+    "pixels": [
+      424,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F14-r2c2": {
+    "file": "assets/ifBO-F14-r2c2.png",
+    "page": 24,
+    "rectangles": [
+      [
+        221.721,
+        225.18,
+        377.392,
+        374.685
+      ]
+    ],
+    "locator": "图14，第2行第2列；lcbench-tabular-numerai-balanced",
+    "pixels": [
+      468,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F14-r2c3": {
+    "file": "assets/ifBO-F14-r2c3.png",
+    "page": 24,
+    "rectangles": [
+      [
+        378.933,
+        225.18,
+        527.514,
+        374.685
+      ]
+    ],
+    "locator": "图14，第2行第3列；lcbench-tabular-phoneme-balanced",
+    "pixels": [
+      447,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F14-r3c1": {
+    "file": "assets/ifBO-F14-r3c1.png",
+    "page": 24,
+    "rectangles": [
+      [
+        80.846,
+        375.918,
+        226.345,
+        525.424
+      ]
+    ],
+    "locator": "图14，第3行第1列；lcbench-tabular-segment-balanced",
+    "pixels": [
+      438,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F14-r3c2": {
+    "file": "assets/ifBO-F14-r3c2.png",
+    "page": 24,
+    "rectangles": [
+      [
+        221.721,
+        375.918,
+        377.392,
+        525.424
+      ]
+    ],
+    "locator": "图14，第3行第2列；lcbench-tabular-shuttle-balanced",
+    "pixels": [
+      468,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F14-r3c3": {
+    "file": "assets/ifBO-F14-r3c3.png",
+    "page": 24,
+    "rectangles": [
+      [
+        378.933,
+        375.918,
+        527.514,
+        525.424
+      ]
+    ],
+    "locator": "图14，第3行第3列；lcbench-tabular-sylvine-balanced",
+    "pixels": [
+      447,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F14-r4c1": {
+    "file": "assets/ifBO-F14-r4c1.png",
+    "page": 24,
+    "rectangles": [
+      [
+        80.846,
+        526.657,
+        226.345,
+        684.178
+      ]
+    ],
+    "locator": "图14，第4行第1列；lcbench-tabular-vehicle-balanced",
+    "pixels": [
+      438,
+      474
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F14-r4c2": {
+    "file": "assets/ifBO-F14-r4c2.png",
+    "page": 24,
+    "rectangles": [
+      [
+        221.721,
+        526.657,
+        377.392,
+        684.178
+      ]
+    ],
+    "locator": "图14，第4行第2列；lcbench-tabular-volkert-balanced",
+    "pixels": [
+      468,
+      474
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r1c1": {
+    "file": "assets/ifBO-F15-r1c1.png",
+    "page": 25,
+    "rectangles": [
+      [
+        126.287,
+        77.358,
+        242.424,
+        195.872
+      ]
+    ],
+    "locator": "图15，第1行第1列；pd1-tabular-cifar100_wideresnet_2048",
+    "pixels": [
+      350,
+      356
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r1c2": {
+    "file": "assets/ifBO-F15-r1c2.png",
+    "page": 25,
+    "rectangles": [
+      [
+        244.504,
+        77.358,
+        361.235,
+        195.872
+      ]
+    ],
+    "locator": "图15，第1行第2列；pd1-tabular-cifar100_wideresnet_256",
+    "pixels": [
+      351,
+      356
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r1c3": {
+    "file": "assets/ifBO-F15-r1c3.png",
+    "page": 25,
+    "rectangles": [
+      [
+        362.72,
+        77.358,
+        477.966,
+        195.872
+      ]
+    ],
+    "locator": "图15，第1行第3列；pd1-tabular-cifar10_wideresnet_2048",
+    "pixels": [
+      346,
+      356
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r2c1": {
+    "file": "assets/ifBO-F15-r2c1.png",
+    "page": 25,
+    "rectangles": [
+      [
+        126.287,
+        196.763,
+        242.424,
+        315.276
+      ]
+    ],
+    "locator": "图15，第2行第1列；pd1-tabular-cifar10_wideresnet_256",
+    "pixels": [
+      350,
+      356
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r2c2": {
+    "file": "assets/ifBO-F15-r2c2.png",
+    "page": 25,
+    "rectangles": [
+      [
+        244.504,
+        196.763,
+        361.235,
+        315.276
+      ]
+    ],
+    "locator": "图15，第2行第2列；pd1-tabular-fashion_simplecnn_2048",
+    "pixels": [
+      351,
+      356
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r2c3": {
+    "file": "assets/ifBO-F15-r2c3.png",
+    "page": 25,
+    "rectangles": [
+      [
+        362.72,
+        196.763,
+        477.966,
+        315.276
+      ]
+    ],
+    "locator": "图15，第2行第3列；pd1-tabular-fashion_simplecnn_256",
+    "pixels": [
+      346,
+      356
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r3c1": {
+    "file": "assets/ifBO-F15-r3c1.png",
+    "page": 25,
+    "rectangles": [
+      [
+        126.287,
+        316.464,
+        242.424,
+        434.681
+      ]
+    ],
+    "locator": "图15，第3行第1列；pd1-tabular-imagenet_resnet_1024-1",
+    "pixels": [
+      350,
+      356
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r3c2": {
+    "file": "assets/ifBO-F15-r3c2.png",
+    "page": 25,
+    "rectangles": [
+      [
+        244.504,
+        316.464,
+        361.235,
+        434.681
+      ]
+    ],
+    "locator": "图15，第3行第2列；pd1-tabular-imagenet_resnet_256-1",
+    "pixels": [
+      351,
+      356
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r3c3": {
+    "file": "assets/ifBO-F15-r3c3.png",
+    "page": 25,
+    "rectangles": [
+      [
+        362.72,
+        316.464,
+        477.966,
+        434.681
+      ]
+    ],
+    "locator": "图15，第3行第3列；pd1-tabular-imagenet_resnet_512-1",
+    "pixels": [
+      346,
+      356
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r4c1": {
+    "file": "assets/ifBO-F15-r4c1.png",
+    "page": 25,
+    "rectangles": [
+      [
+        126.287,
+        435.869,
+        242.424,
+        554.086
+      ]
+    ],
+    "locator": "图15，第4行第1列；pd1-tabular-lm1b_transformer_2048",
+    "pixels": [
+      350,
+      356
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r4c2": {
+    "file": "assets/ifBO-F15-r4c2.png",
+    "page": 25,
+    "rectangles": [
+      [
+        244.504,
+        435.869,
+        361.235,
+        554.086
+      ]
+    ],
+    "locator": "图15，第4行第2列；pd1-tabular-mnist_simplecnn_2048",
+    "pixels": [
+      351,
+      356
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r4c3": {
+    "file": "assets/ifBO-F15-r4c3.png",
+    "page": 25,
+    "rectangles": [
+      [
+        362.72,
+        435.869,
+        477.966,
+        554.086
+      ]
+    ],
+    "locator": "图15，第4行第3列；pd1-tabular-mnist_simplecnn_256",
+    "pixels": [
+      346,
+      356
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r5c1": {
+    "file": "assets/ifBO-F15-r5c1.png",
+    "page": 25,
+    "rectangles": [
+      [
+        126.287,
+        555.274,
+        242.424,
+        680.322
+      ]
+    ],
+    "locator": "图15，第5行第1列；pd1-tabular-svhn_wideresnet_1024",
+    "pixels": [
+      350,
+      376
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r5c2": {
+    "file": "assets/ifBO-F15-r5c2.png",
+    "page": 25,
+    "rectangles": [
+      [
+        244.504,
+        555.274,
+        361.235,
+        680.322
+      ]
+    ],
+    "locator": "图15，第5行第2列；pd1-tabular-svhn_wideresnet_256",
+    "pixels": [
+      351,
+      376
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F15-r5c3": {
+    "file": "assets/ifBO-F15-r5c3.png",
+    "page": 25,
+    "rectangles": [
+      [
+        362.72,
+        555.274,
+        477.966,
+        680.322
+      ]
+    ],
+    "locator": "图15，第5行第3列；pd1-tabular-translate_xformertranslate_64-1",
+    "pixels": [
+      346,
+      376
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F16-r1c1": {
+    "file": "assets/ifBO-F16-r1c1.png",
+    "page": 26,
+    "rectangles": [
+      [
+        80.846,
+        73.984,
+        226.345,
+        223.489
+      ]
+    ],
+    "locator": "图16，第1行第1列；taskset-tabular-normalized-nlp-10-4p",
+    "pixels": [
+      438,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F16-r1c2": {
+    "file": "assets/ifBO-F16-r1c2.png",
+    "page": 26,
+    "rectangles": [
+      [
+        229.427,
+        73.984,
+        377.392,
+        223.489
+      ]
+    ],
+    "locator": "图16，第1行第2列；taskset-tabular-normalized-nlp-10-8p",
+    "pixels": [
+      445,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F16-r1c3": {
+    "file": "assets/ifBO-F16-r1c3.png",
+    "page": 26,
+    "rectangles": [
+      [
+        378.933,
+        73.984,
+        527.514,
+        223.489
+      ]
+    ],
+    "locator": "图16，第1行第3列；taskset-tabular-normalized-nlp-11-4p",
+    "pixels": [
+      447,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F16-r2c1": {
+    "file": "assets/ifBO-F16-r2c1.png",
+    "page": 26,
+    "rectangles": [
+      [
+        80.846,
+        224.722,
+        226.345,
+        374.228
+      ]
+    ],
+    "locator": "图16，第2行第1列；taskset-tabular-normalized-nlp-11-8p",
+    "pixels": [
+      438,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F16-r2c2": {
+    "file": "assets/ifBO-F16-r2c2.png",
+    "page": 26,
+    "rectangles": [
+      [
+        229.427,
+        224.722,
+        377.392,
+        374.228
+      ]
+    ],
+    "locator": "图16，第2行第2列；taskset-tabular-normalized-nlp-12-4p",
+    "pixels": [
+      445,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F16-r2c3": {
+    "file": "assets/ifBO-F16-r2c3.png",
+    "page": 26,
+    "rectangles": [
+      [
+        378.933,
+        224.722,
+        527.514,
+        374.228
+      ]
+    ],
+    "locator": "图16，第2行第3列；taskset-tabular-normalized-nlp-12-8p",
+    "pixels": [
+      447,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F16-r3c1": {
+    "file": "assets/ifBO-F16-r3c1.png",
+    "page": 26,
+    "rectangles": [
+      [
+        80.846,
+        375.461,
+        226.345,
+        524.966
+      ]
+    ],
+    "locator": "图16，第3行第1列；taskset-tabular-normalized-nlp-1-4p",
+    "pixels": [
+      438,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F16-r3c2": {
+    "file": "assets/ifBO-F16-r3c2.png",
+    "page": 26,
+    "rectangles": [
+      [
+        229.427,
+        375.461,
+        377.392,
+        524.966
+      ]
+    ],
+    "locator": "图16，第3行第2列；taskset-tabular-normalized-nlp-1-8p",
+    "pixels": [
+      445,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F16-r3c3": {
+    "file": "assets/ifBO-F16-r3c3.png",
+    "page": 26,
+    "rectangles": [
+      [
+        378.933,
+        375.461,
+        527.514,
+        524.966
+      ]
+    ],
+    "locator": "图16，第3行第3列；taskset-tabular-normalized-nlp-2-4p",
+    "pixels": [
+      447,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F16-r4c1": {
+    "file": "assets/ifBO-F16-r4c1.png",
+    "page": 26,
+    "rectangles": [
+      [
+        80.846,
+        526.199,
+        226.345,
+        683.719
+      ]
+    ],
+    "locator": "图16，第4行第1列；taskset-tabular-normalized-nlp-2-8p",
+    "pixels": [
+      438,
+      474
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F16-r4c2": {
+    "file": "assets/ifBO-F16-r4c2.png",
+    "page": 26,
+    "rectangles": [
+      [
+        229.427,
+        526.199,
+        377.392,
+        683.719
+      ]
+    ],
+    "locator": "图16，第4行第2列；taskset-tabular-normalized-nlp-3-4p",
+    "pixels": [
+      445,
+      474
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F16-r4c3": {
+    "file": "assets/ifBO-F16-r4c3.png",
+    "page": 26,
+    "rectangles": [
+      [
+        378.933,
+        526.199,
+        527.514,
+        683.719
+      ]
+    ],
+    "locator": "图16，第4行第3列；taskset-tabular-normalized-nlp-3-8p",
+    "pixels": [
+      447,
+      474
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F17-r1c1": {
+    "file": "assets/ifBO-F17-r1c1.png",
+    "page": 27,
+    "rectangles": [
+      [
+        80.846,
+        74.212,
+        226.345,
+        223.718
+      ]
+    ],
+    "locator": "图17，第1行第1列；taskset-tabular-normalized-nlp-4-4p",
+    "pixels": [
+      438,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F17-r1c2": {
+    "file": "assets/ifBO-F17-r1c2.png",
+    "page": 27,
+    "rectangles": [
+      [
+        229.427,
+        74.212,
+        377.392,
+        223.718
+      ]
+    ],
+    "locator": "图17，第1行第2列；taskset-tabular-normalized-nlp-4-8p",
+    "pixels": [
+      445,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F17-r1c3": {
+    "file": "assets/ifBO-F17-r1c3.png",
+    "page": 27,
+    "rectangles": [
+      [
+        378.933,
+        74.212,
+        527.514,
+        223.718
+      ]
+    ],
+    "locator": "图17，第1行第3列；taskset-tabular-normalized-nlp-5-4p",
+    "pixels": [
+      447,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F17-r2c1": {
+    "file": "assets/ifBO-F17-r2c1.png",
+    "page": 27,
+    "rectangles": [
+      [
+        80.846,
+        224.951,
+        226.345,
+        374.457
+      ]
+    ],
+    "locator": "图17，第2行第1列；taskset-tabular-normalized-nlp-5-8p",
+    "pixels": [
+      438,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F17-r2c2": {
+    "file": "assets/ifBO-F17-r2c2.png",
+    "page": 27,
+    "rectangles": [
+      [
+        229.427,
+        224.951,
+        377.392,
+        374.457
+      ]
+    ],
+    "locator": "图17，第2行第2列；taskset-tabular-normalized-nlp-6-4p",
+    "pixels": [
+      445,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F17-r2c3": {
+    "file": "assets/ifBO-F17-r2c3.png",
+    "page": 27,
+    "rectangles": [
+      [
+        378.933,
+        224.951,
+        527.514,
+        374.457
+      ]
+    ],
+    "locator": "图17，第2行第3列；taskset-tabular-normalized-nlp-6-8p",
+    "pixels": [
+      447,
+      450
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F17-r3c1": {
+    "file": "assets/ifBO-F17-r3c1.png",
+    "page": 27,
+    "rectangles": [
+      [
+        80.846,
+        375.69,
+        226.345,
+        525.196
+      ]
+    ],
+    "locator": "图17，第3行第1列；taskset-tabular-normalized-nlp-7-4p",
+    "pixels": [
+      438,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F17-r3c2": {
+    "file": "assets/ifBO-F17-r3c2.png",
+    "page": 27,
+    "rectangles": [
+      [
+        229.427,
+        375.69,
+        377.392,
+        525.196
+      ]
+    ],
+    "locator": "图17，第3行第2列；taskset-tabular-normalized-nlp-7-8p",
+    "pixels": [
+      445,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F17-r3c3": {
+    "file": "assets/ifBO-F17-r3c3.png",
+    "page": 27,
+    "rectangles": [
+      [
+        378.933,
+        375.69,
+        527.514,
+        525.196
+      ]
+    ],
+    "locator": "图17，第3行第3列；taskset-tabular-normalized-nlp-8-4p",
+    "pixels": [
+      447,
+      449
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F17-r4c1": {
+    "file": "assets/ifBO-F17-r4c1.png",
+    "page": 27,
+    "rectangles": [
+      [
+        80.846,
+        526.429,
+        226.345,
+        683.95
+      ]
+    ],
+    "locator": "图17，第4行第1列；taskset-tabular-normalized-nlp-8-8p",
+    "pixels": [
+      438,
+      473
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F17-r4c2": {
+    "file": "assets/ifBO-F17-r4c2.png",
+    "page": 27,
+    "rectangles": [
+      [
+        229.427,
+        526.429,
+        377.392,
+        683.95
+      ]
+    ],
+    "locator": "图17，第4行第2列；taskset-tabular-normalized-nlp-9-4p",
+    "pixels": [
+      445,
+      473
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "ifBO-F17-r4c3": {
+    "file": "assets/ifBO-F17-r4c3.png",
+    "page": 27,
+    "rectangles": [
+      [
+        378.933,
+        526.429,
+        527.514,
+        683.95
+      ]
+    ],
+    "locator": "图17，第4行第3列；taskset-tabular-normalized-nlp-9-8p",
+    "pixels": [
+      447,
+      473
+    ],
+    "processing": "原文PDF裁剪、等比放大",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_003_1": {
+    "file": "assets/read198_003_1.png",
+    "page": 1,
+    "rectangles": [
+      [
+        305,
+        350.0,
+        545,
+        506.3333333333333
+      ]
+    ],
+    "locator": "§1，多保真与freeze-thaw动机；原198版第3页对应原文；分段1/3",
+    "pixels": [
+      720,
+      469
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_003_2": {
+    "file": "assets/read198_003_2.png",
+    "page": 1,
+    "rectangles": [
+      [
+        305,
+        471.6666666666667,
+        545,
+        632.0
+      ]
+    ],
+    "locator": "§1，多保真与freeze-thaw动机；原198版第3页对应原文；分段2/3",
+    "pixels": [
+      720,
+      481
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_003_3": {
+    "file": "assets/read198_003_3.png",
+    "page": 1,
+    "rectangles": [
+      [
+        305,
+        597.0,
+        545,
+        705.0
+      ]
+    ],
+    "locator": "§1，多保真与freeze-thaw动机；原198版第3页对应原文；分段3/3",
+    "pixels": [
+      720,
+      324
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_004_1": {
+    "file": "assets/read198_004_1.png",
+    "page": 1,
+    "rectangles": [
+      [
+        305,
+        349.0,
+        545,
+        506.3333333333333
+      ]
+    ],
+    "locator": "§1，多保真方法的完整段落；原198版第4页对应原文；分段1/2",
+    "pixels": [
+      720,
+      472
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_004_2": {
+    "file": "assets/read198_004_2.png",
+    "page": 1,
+    "rectangles": [
+      [
+        305,
+        471.6666666666667,
+        545,
+        509.0
+      ]
+    ],
+    "locator": "§1，多保真方法的完整段落；原198版第4页对应原文；分段2/2",
+    "pixels": [
+      720,
+      112
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_005_1": {
+    "file": "assets/read198_005_1.png",
+    "page": 1,
+    "rectangles": [
+      [
+        305,
+        510.0,
+        545,
+        668.0
+      ]
+    ],
+    "locator": "§1，freeze-thaw方法局限的完整段落；原198版第5页对应原文；分段1/2",
+    "pixels": [
+      720,
+      474
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_005_2": {
+    "file": "assets/read198_005_2.png",
+    "page": 1,
+    "rectangles": [
+      [
+        305,
+        633.0,
+        545,
+        706.0
+      ]
+    ],
+    "locator": "§1，freeze-thaw方法局限的完整段落；原198版第5页对应原文；分段2/2",
+    "pixels": [
+      720,
+      219
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_006_1": {
+    "file": "assets/read198_006_1.png",
+    "page": 3,
+    "rectangles": [
+      [
+        305,
+        179.0,
+        545,
+        339.0
+      ]
+    ],
+    "locator": "§3.1，HPO定义及预算约束；原198版第6页对应原文；分段1/2",
+    "pixels": [
+      720,
+      480
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_006_2": {
+    "file": "assets/read198_006_2.png",
+    "page": 3,
+    "rectangles": [
+      [
+        305,
+        291.6666666666667,
+        545,
+        390.0
+      ]
+    ],
+    "locator": "§3.1，HPO定义及预算约束；原198版第6页对应原文；分段2/2",
+    "pixels": [
+      720,
+      295
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_007_1": {
+    "file": "assets/read198_007_1.png",
+    "page": 3,
+    "rectangles": [
+      [
+        305,
+        416.0,
+        545,
+        574.3333333333334
+      ]
+    ],
+    "locator": "§3.2，freeze-thaw及preemptive假设；原198版第7页对应原文；分段1/3",
+    "pixels": [
+      720,
+      475
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_007_2": {
+    "file": "assets/read198_007_2.png",
+    "page": 3,
+    "rectangles": [
+      [
+        305,
+        539.3333333333334,
+        545,
+        705.6666666666666
+      ]
+    ],
+    "locator": "§3.2，freeze-thaw及preemptive假设；原198版第7页对应原文；分段2/3",
+    "pixels": [
+      720,
+      499
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_007_3": {
+    "file": "assets/read198_007_3.png",
+    "page": 3,
+    "rectangles": [
+      [
+        305,
+        670.6666666666666,
+        545,
+        719.0
+      ]
+    ],
+    "locator": "§3.2，freeze-thaw及preemptive假设；原198版第7页对应原文；分段3/3",
+    "pixels": [
+      720,
+      145
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_008_1": {
+    "file": "assets/read198_008_1.png",
+    "page": 4,
+    "rectangles": [
+      [
+        53,
+        66.0,
+        293,
+        205.66666666666666
+      ]
+    ],
+    "locator": "Algorithm 1，全部输入、循环和输出；原198版第8页对应原文；分段1/3",
+    "pixels": [
+      720,
+      419
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_008_2": {
+    "file": "assets/read198_008_2.png",
+    "page": 4,
+    "rectangles": [
+      [
+        53,
+        187.33333333333334,
+        293,
+        337.0
+      ]
+    ],
+    "locator": "Algorithm 1，全部输入、循环和输出；原198版第8页对应原文；分段2/3",
+    "pixels": [
+      720,
+      449
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_008_3": {
+    "file": "assets/read198_008_3.png",
+    "page": 4,
+    "rectangles": [
+      [
+        53,
+        295.0,
+        293,
+        360.6666666666667
+      ]
+    ],
+    "locator": "Algorithm 1，全部输入、循环和输出；原198版第8页对应原文；分段3/3",
+    "pixels": [
+      720,
+      197
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_009_1": {
+    "file": "assets/read198_009_1.png",
+    "page": 4,
+    "rectangles": [
+      [
+        305,
+        65.0,
+        545,
+        160.0
+      ]
+    ],
+    "locator": "式(1)，PFN交叉熵与KL解释；原198版第9页对应原文；分段1/1",
+    "pixels": [
+      720,
+      285
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_011_1": {
+    "file": "assets/read198_011_1.png",
+    "page": 5,
+    "rectangles": [
+      [
+        53,
+        585.0,
+        295,
+        721.0
+      ]
+    ],
+    "locator": "式(2)，曲线均值与噪声；原198版第11页对应原文；分段1/1",
+    "pixels": [
+      726,
+      408
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_012_1": {
+    "file": "assets/read198_012_1.png",
+    "page": 5,
+    "rectangles": [
+      [
+        53,
+        350.0,
+        293,
+        510.0
+      ]
+    ],
+    "locator": "§4.1，πconfig与πcurve；原198版第12页对应原文；分段1/2",
+    "pixels": [
+      720,
+      480
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_012_2": {
+    "file": "assets/read198_012_2.png",
+    "page": 5,
+    "rectangles": [
+      [
+        53,
+        475.3333333333333,
+        293,
+        584.0
+      ]
+    ],
+    "locator": "§4.1，πconfig与πcurve；原198版第12页对应原文；分段2/2",
+    "pixels": [
+      720,
+      326
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_013_1": {
+    "file": "assets/read198_013_1.png",
+    "page": 13,
+    "rectangles": [
+      [
+        53,
+        190.0,
+        544,
+        282.0
+      ]
+    ],
+    "locator": "附录A.1，边缘CDF变换；原198版第13页对应原文；分段1/1",
+    "pixels": [
+      1473,
+      276
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_014_1": {
+    "file": "assets/read198_014_1.png",
+    "page": 13,
+    "rectangles": [
+      [
+        70,
+        285.0,
+        545,
+        365.0
+      ]
+    ],
+    "locator": "附录A.1，y0、y∞、σ、wk未编号公式；原198版第14页对应原文；分段1/1",
+    "pixels": [
+      1425,
+      240
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_015_1": {
+    "file": "assets/read198_015_1.png",
+    "page": 13,
+    "rectangles": [
+      [
+        53,
+        362.0,
+        545,
+        503.0
+      ]
+    ],
+    "locator": "附录A.1，分段时间变换与Ψk定义；原198版第15页对应原文；分段1/1",
+    "pixels": [
+      1476,
+      423
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_020_1": {
+    "file": "assets/read198_020_1.png",
+    "page": 15,
+    "rectangles": [
+      [
+        53,
+        84.0,
+        545,
+        250.0
+      ]
+    ],
+    "locator": "附录A.2，训练任务与预算采样；原198版第20页对应原文；分段1/2",
+    "pixels": [
+      1476,
+      498
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_020_2": {
+    "file": "assets/read198_020_2.png",
+    "page": 15,
+    "rectangles": [
+      [
+        53,
+        200.66666666666666,
+        545,
+        255.0
+      ]
+    ],
+    "locator": "附录A.2，训练任务与预算采样；原198版第20页对应原文；分段2/2",
+    "pixels": [
+      1476,
+      163
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_021_1": {
+    "file": "assets/read198_021_1.png",
+    "page": 15,
+    "rectangles": [
+      [
+        53,
+        338.0,
+        545,
+        466.0
+      ]
+    ],
+    "locator": "附录A.3，模型结构与训练设置；原198版第21页对应原文；分段1/1",
+    "pixels": [
+      1476,
+      384
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_022_1": {
+    "file": "assets/read198_022_1.png",
+    "page": 15,
+    "rectangles": [
+      [
+        53,
+        338.0,
+        545,
+        466.0
+      ]
+    ],
+    "locator": "附录A.3，模型结构与训练设置；原198版第22页对应原文；分段1/1",
+    "pixels": [
+      1476,
+      384
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_023_1": {
+    "file": "assets/read198_023_1.png",
+    "page": 5,
+    "rectangles": [
+      [
+        305,
+        449.0,
+        545,
+        604.6666666666666
+      ]
+    ],
+    "locator": "式(3)，MFPI及h、T定义；原198版第23页对应原文；分段1/2",
+    "pixels": [
+      720,
+      467
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_023_2": {
+    "file": "assets/read198_023_2.png",
+    "page": 5,
+    "rectangles": [
+      [
+        305,
+        576.3333333333334,
+        545,
+        690.0
+      ]
+    ],
+    "locator": "式(3)，MFPI及h、T定义；原198版第23页对应原文；分段2/2",
+    "pixels": [
+      720,
+      341
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_024_1": {
+    "file": "assets/read198_024_1.png",
+    "page": 6,
+    "rectangles": [
+      [
+        53,
+        286.0,
+        293,
+        390.0
+      ]
+    ],
+    "locator": "式(4)，MFPI-random采样；原198版第24页对应原文；分段1/1",
+    "pixels": [
+      720,
+      312
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_025_1": {
+    "file": "assets/read198_025_1.png",
+    "page": 16,
+    "rectangles": [
+      [
+        53,
+        336.0,
+        545,
+        495.6666666666667
+      ]
+    ],
+    "locator": "Algorithm 2，MFPI-random完整伪代码；原198版第25页对应原文；分段1/2",
+    "pixels": [
+      1476,
+      479
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_025_2": {
+    "file": "assets/read198_025_2.png",
+    "page": 16,
+    "rectangles": [
+      [
+        53,
+        443.3333333333333,
+        545,
+        501.0
+      ]
+    ],
+    "locator": "Algorithm 2，MFPI-random完整伪代码；原198版第25页对应原文；分段2/2",
+    "pixels": [
+      1476,
+      173
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_026_1": {
+    "file": "assets/read198_026_1.png",
+    "page": 6,
+    "rectangles": [
+      [
+        305,
+        203.0,
+        545,
+        351.6666666666667
+      ]
+    ],
+    "locator": "§5.1，预测评估方案与CPU；原198版第26页对应原文；分段1/2",
+    "pixels": [
+      720,
+      446
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_026_2": {
+    "file": "assets/read198_026_2.png",
+    "page": 6,
+    "rectangles": [
+      [
+        305,
+        316.6666666666667,
+        545,
+        401.0
+      ]
+    ],
+    "locator": "§5.1，预测评估方案与CPU；原198版第26页对应原文；分段2/2",
+    "pixels": [
+      720,
+      253
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_027_1": {
+    "file": "assets/read198_027_1.png",
+    "page": 7,
+    "rectangles": [
+      [
+        53,
+        375.0,
+        293,
+        527.3333333333334
+      ]
+    ],
+    "locator": "§5.2，1000步、10种子与归一化后悔值；原198版第27页对应原文；分段1/2",
+    "pixels": [
+      720,
+      457
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_027_2": {
+    "file": "assets/read198_027_2.png",
+    "page": 7,
+    "rectangles": [
+      [
+        53,
+        492.3333333333333,
+        293,
+        649.0
+      ]
+    ],
+    "locator": "§5.2，1000步、10种子与归一化后悔值；原198版第27页对应原文；分段2/2",
+    "pixels": [
+      720,
+      470
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_028_1": {
+    "file": "assets/read198_028_1.png",
+    "page": 16,
+    "rectangles": [
+      [
+        53,
+        550.0,
+        545,
+        701.0
+      ]
+    ],
+    "locator": "附录B，基准性质与LCBench；原198版第28页对应原文；分段1/1",
+    "pixels": [
+      1476,
+      453
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_030_1": {
+    "file": "assets/read198_030_1.png",
+    "page": 17,
+    "rectangles": [
+      [
+        65,
+        217.0,
+        545,
+        380.0
+      ]
+    ],
+    "locator": "附录B，Taskset与损失裁剪；原198版第30页对应原文；分段1/2",
+    "pixels": [
+      1440,
+      489
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_030_2": {
+    "file": "assets/read198_030_2.png",
+    "page": 17,
+    "rectangles": [
+      [
+        65,
+        345.3333333333333,
+        545,
+        407.0
+      ]
+    ],
+    "locator": "附录B，Taskset与损失裁剪；原198版第30页对应原文；分段2/2",
+    "pixels": [
+      1440,
+      185
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_033_1": {
+    "file": "assets/read198_033_1.png",
+    "page": 18,
+    "rectangles": [
+      [
+        73,
+        289.0,
+        545,
+        434.0
+      ]
+    ],
+    "locator": "附录B，PD1任务和预算；原198版第33页对应原文；分段1/1",
+    "pixels": [
+      1416,
+      435
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_035_1": {
+    "file": "assets/read198_035_1.png",
+    "page": 19,
+    "rectangles": [
+      [
+        53,
+        119.0,
+        545,
+        250.66666666666666
+      ]
+    ],
+    "locator": "附录C.2，freeze-thaw基线与实现；原198版第35页对应原文；分段1/2",
+    "pixels": [
+      1476,
+      395
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_035_2": {
+    "file": "assets/read198_035_2.png",
+    "page": 19,
+    "rectangles": [
+      [
+        53,
+        225.66666666666666,
+        545,
+        356.0
+      ]
+    ],
+    "locator": "附录C.2，freeze-thaw基线与实现；原198版第35页对应原文；分段2/2",
+    "pixels": [
+      1476,
+      391
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_036_1": {
+    "file": "assets/read198_036_1.png",
+    "page": 18,
+    "rectangles": [
+      [
+        53,
+        560.0,
+        545,
+        705.3333333333334
+      ]
+    ],
+    "locator": "附录C.1，Random Search与Hyperband；原198版第36页对应原文；分段1/1",
+    "pixels": [
+      1476,
+      436
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_037_1": {
+    "file": "assets/read198_037_1.png",
+    "page": 8,
+    "rectangles": [
+      [
+        305,
+        599.0,
+        545,
+        712.0
+      ]
+    ],
+    "locator": "§5.3，EI失败与代理不确定性；原198版第37页对应原文；分段1/1",
+    "pixels": [
+      720,
+      339
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_043_1": {
+    "file": "assets/read198_043_1.png",
+    "page": 15,
+    "rectangles": [
+      [
+        53,
+        338.0,
+        545,
+        466.0
+      ]
+    ],
+    "locator": "附录A.3，模型结构与训练设置；原198版第43页对应原文；分段1/1",
+    "pixels": [
+      1476,
+      384
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_044_1": {
+    "file": "assets/read198_044_1.png",
+    "page": 15,
+    "rectangles": [
+      [
+        53,
+        338.0,
+        545,
+        466.0
+      ]
+    ],
+    "locator": "附录A.3，模型结构与训练设置；原198版第44页对应原文；分段1/1",
+    "pixels": [
+      1476,
+      384
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_045_1": {
+    "file": "assets/read198_045_1.png",
+    "page": 4,
+    "rectangles": [
+      [
+        53,
+        485.0,
+        293,
+        634.3333333333334
+      ]
+    ],
+    "locator": "§3.3，未编号后验预测式；原198版第45页对应原文；分段1/2",
+    "pixels": [
+      720,
+      448
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_045_2": {
+    "file": "assets/read198_045_2.png",
+    "page": 4,
+    "rectangles": [
+      [
+        53,
+        606.0,
+        293,
+        721.0
+      ]
+    ],
+    "locator": "§3.3，未编号后验预测式；原198版第45页对应原文；分段2/2",
+    "pixels": [
+      720,
+      345
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_046_1": {
+    "file": "assets/read198_046_1.png",
+    "page": 4,
+    "rectangles": [
+      [
+        305,
+        367.0,
+        545,
+        524.6666666666666
+      ]
+    ],
+    "locator": "§4.1，未编号学习曲线集合公式；原198版第46页对应原文；分段1/2",
+    "pixels": [
+      720,
+      473
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_046_2": {
+    "file": "assets/read198_046_2.png",
+    "page": 4,
+    "rectangles": [
+      [
+        305,
+        490.0,
+        545,
+        602.0
+      ]
+    ],
+    "locator": "§4.1，未编号学习曲线集合公式；原198版第46页对应原文；分段2/2",
+    "pixels": [
+      720,
+      336
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_118_1": {
+    "file": "assets/read198_118_1.png",
+    "page": 7,
+    "rectangles": [
+      [
+        305,
+        525.0,
+        545,
+        684.0
+      ]
+    ],
+    "locator": "§5.3，随机时域变体的T=0原句；原198版第118页对应原文；分段1/2",
+    "pixels": [
+      720,
+      477
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_118_2": {
+    "file": "assets/read198_118_2.png",
+    "page": 7,
+    "rectangles": [
+      [
+        305,
+        649.0,
+        545,
+        710.0
+      ]
+    ],
+    "locator": "§5.3，随机时域变体的T=0原句；原198版第118页对应原文；分段2/2",
+    "pixels": [
+      720,
+      183
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_119_1": {
+    "file": "assets/read198_119_1.png",
+    "page": 20,
+    "rectangles": [
+      [
+        53,
+        345.0,
+        545,
+        462.0
+      ]
+    ],
+    "locator": "附录D.3，random horizon阈值原句；原198版第119页对应原文；分段1/1",
+    "pixels": [
+      1476,
+      351
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_194_1": {
+    "file": "assets/read198_194_1.png",
+    "page": 9,
+    "rectangles": [
+      [
+        53,
+        400.0,
+        293,
+        558.3333333333334
+      ]
+    ],
+    "locator": "§6，局限与未来工作；原198版第194页对应原文；分段1/3",
+    "pixels": [
+      720,
+      475
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_194_2": {
+    "file": "assets/read198_194_2.png",
+    "page": 9,
+    "rectangles": [
+      [
+        53,
+        523.3333333333334,
+        293,
+        688.0
+      ]
+    ],
+    "locator": "§6，局限与未来工作；原198版第194页对应原文；分段2/3",
+    "pixels": [
+      720,
+      494
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_194_3": {
+    "file": "assets/read198_194_3.png",
+    "page": 9,
+    "rectangles": [
+      [
+        53,
+        655.0,
+        293,
+        691.0
+      ]
+    ],
+    "locator": "§6，局限与未来工作；原198版第194页对应原文；分段3/3",
+    "pixels": [
+      720,
+      108
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_195_1": {
+    "file": "assets/read198_195_1.png",
+    "page": 9,
+    "rectangles": [
+      [
+        53,
+        400.0,
+        293,
+        558.3333333333334
+      ]
+    ],
+    "locator": "§6，额外先验、任务迁移与扩大模型的讨论；原198版第195页对应原文；分段1/3",
+    "pixels": [
+      720,
+      475
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_195_2": {
+    "file": "assets/read198_195_2.png",
+    "page": 9,
+    "rectangles": [
+      [
+        53,
+        523.3333333333334,
+        293,
+        688.0
+      ]
+    ],
+    "locator": "§6，额外先验、任务迁移与扩大模型的讨论；原198版第195页对应原文；分段2/3",
+    "pixels": [
+      720,
+      494
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_195_3": {
+    "file": "assets/read198_195_3.png",
+    "page": 9,
+    "rectangles": [
+      [
+        53,
+        655.0,
+        293,
+        691.0
+      ]
+    ],
+    "locator": "§6，额外先验、任务迁移与扩大模型的讨论；原198版第195页对应原文；分段3/3",
+    "pixels": [
+      720,
+      108
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_196_1": {
+    "file": "assets/read198_196_1.png",
+    "page": 20,
+    "rectangles": [
+      [
+        53,
+        663.0,
+        545,
+        719.0
+      ]
+    ],
+    "locator": "附录D.4，固定采集函数比较代理；原198版第196页对应原文；分段1/1",
+    "pixels": [
+      1476,
+      168
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  },
+  "read198_197_1": {
+    "file": "assets/read198_197_1.png",
+    "page": 18,
+    "rectangles": [
+      [
+        53,
+        463.0,
+        545,
+        535.0
+      ]
+    ],
+    "locator": "附录C，官方实验代码分支；原198版第197页对应原文；分段1/1",
+    "pixels": [
+      1476,
+      216
+    ],
+    "processing": "原PDF连续区域裁剪；上下边界位于原PDF墨迹行间空白；相邻分段保留完整重叠行；等比展示，不重排原文",
+    "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d"
+  }
+}

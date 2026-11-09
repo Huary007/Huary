@@ -1,0 +1,4216 @@
+{
+  "schema_version": "1.0",
+  "source": "/workspace/shared/AL0014_ifBO/source/rakotoarison24a.pdf",
+  "source_sha256": "1f4307331e3383aabb1972f070e812eb3a2930cf9912ddde2c2282eca32d843d",
+  "created_utc": "2026-11-03",
+  "creator": "inspect_ifbo_task_panels agent",
+  "human_reviewer": null,
+  "coordinate_system": {
+    "units": "PDF points",
+    "origin": "top-left",
+    "page_size": [
+      612,
+      792
+    ],
+    "bbox_format": [
+      "x0",
+      "y0",
+      "x1",
+      "y1"
+    ],
+    "precision_note": "Coordinates mapped from the original embedded raster geometry to PDF points, with crop margins around local text; 0.001-point serialization does not imply subpixel measurement accuracy."
+  },
+  "source_count_audit": {
+    "requested_expected": {
+      "LCBench": 35,
+      "PD1": 16,
+      "Taskset": 24,
+      "total": 75
+    },
+    "actual_visible": {
+      "LCBench": 35,
+      "PD1": 15,
+      "Taskset": 24,
+      "total": 74
+    },
+    "by_figure": {
+      "12": 12,
+      "13": 12,
+      "14": 11,
+      "15": 15,
+      "16": 12,
+      "17": 12
+    },
+    "discrepancy": "Figure 15 has 5×3=15 PD1 panels; no sixteenth panel appears on PDF pages 22–27. This inventory does not fabricate a missing task.",
+    "empty_grid_cells": [
+      {
+        "figure": 14,
+        "row": 4,
+        "column": 3
+      }
+    ]
+  },
+  "global_method_note": "Benchmark task curves are 10-seed means, per parent task context. These per-task figure captions alone do not define the shading. Parent must retain source-method provenance for mean/band definitions.",
+  "provenance_notes": [
+    "Read no-ai-slop SKILL.md and eval.md; read scientific-writing references figures_tables.md and evidence_workflow.md.",
+    "Manual visual review used official composited PDF page renders; embedded images used only to inspect title spelling and pixel geometry.",
+    "No missing source data reconstructed. No numerical curves digitized. Original files unchanged.",
+    "All 74 tight panel crops preserve the local printed title and tick labels. Figure-level labels are shared and must be supplied separately if a panel is isolated.",
+    "Underlying embedded raster has historical legend terms Uniform BB, MF-BO, CL-FT-BO. The official PDF overlays Random Search, Freeze-Thaw (GPs), ifBO. Only rendered composite is valid for reuse."
+  ],
+  "legend_visible": [
+    "Random Search",
+    "HyperBand",
+    "ASHA",
+    "Freeze-Thaw (GPs)",
+    "DyHPO",
+    "DPL",
+    "ifBO"
+  ],
+  "panels": [
+    {
+      "panel_id": "ifBO-F12-r1c1",
+      "figure": 12,
+      "pdf_page_1based": 22,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-adult-balanced",
+      "row_1based": 1,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.844,
+        74.212,
+        226.343,
+        223.718
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        106.122,
+        82.844,
+        220.794,
+        215.395
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.589,
+        72.055,
+        529.978,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "各方法早期下降较快；ifBO、DPL与DyHPO的后期曲线靠近下缘，随机搜索与ASHA较高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p22.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F12-r1c2",
+      "figure": 12,
+      "pdf_page_1based": 22,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-airlines-balanced",
+      "row_1based": 1,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.425,
+        74.212,
+        377.39,
+        223.718
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        255.627,
+        82.844,
+        370.3,
+        215.395
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.589,
+        72.055,
+        529.978,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DPL后期曲线低于ifBO；ifBO、DyHPO与Freeze-Thaw的后期差距较小，随机搜索较高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p22.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F12-r1c3",
+      "figure": 12,
+      "pdf_page_1based": 22,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-albert-balanced",
+      "row_1based": 1,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.931,
+        74.212,
+        527.512,
+        223.718
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        405.133,
+        82.844,
+        519.806,
+        215.395
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.589,
+        72.055,
+        529.978,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO、DyHPO与Freeze-Thaw较早接近低位；DPL随后下降并靠近这些曲线。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p22.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F12-r2c1",
+      "figure": 12,
+      "pdf_page_1based": 22,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-Amazon-balanced",
+      "row_1based": 2,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.844,
+        224.951,
+        226.343,
+        374.457
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        106.122,
+        233.583,
+        220.794,
+        366.134
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.589,
+        72.055,
+        529.978,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO与DPL在中后期持续下降，后期曲线低于DyHPO及其余基线。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p22.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F12-r2c2",
+      "figure": 12,
+      "pdf_page_1based": 22,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-APSFailure-balanced",
+      "row_1based": 2,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.425,
+        224.951,
+        377.39,
+        374.457
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        255.627,
+        233.583,
+        370.3,
+        366.134
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.589,
+        72.055,
+        529.978,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO、DPL与DyHPO后期接近；Freeze-Thaw停在略高的平台，随机搜索较高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p22.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F12-r2c3",
+      "figure": 12,
+      "pdf_page_1based": 22,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-Australian-balanced",
+      "row_1based": 2,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.931,
+        224.951,
+        527.512,
+        374.457
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        405.133,
+        233.583,
+        519.806,
+        366.134
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.589,
+        72.055,
+        529.978,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "各方法早期明显下降；ifBO、DPL与DyHPO后期靠近低位，随机搜索较晚出现阶梯下降。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p22.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F12-r3c1",
+      "figure": 12,
+      "pdf_page_1based": 22,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-bank-balanced",
+      "row_1based": 3,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.844,
+        375.69,
+        226.343,
+        525.196
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        106.122,
+        384.322,
+        220.794,
+        516.873
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.589,
+        72.055,
+        529.978,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO与DPL较早接近低位；DyHPO和Freeze-Thaw随后靠近，随机搜索与ASHA仍较高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p22.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F12-r3c2",
+      "figure": 12,
+      "pdf_page_1based": 22,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-blood-balanced",
+      "row_1based": 3,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.425,
+        375.69,
+        377.39,
+        525.196
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        255.627,
+        384.322,
+        370.3,
+        516.873
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.589,
+        72.055,
+        529.978,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "方法间的后期曲线较接近，ifBO位于低位曲线群；随机搜索保持略高的平台。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p22.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F12-r3c3",
+      "figure": 12,
+      "pdf_page_1based": 22,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-car-balanced",
+      "row_1based": 3,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.931,
+        375.69,
+        527.512,
+        525.196
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        405.133,
+        384.322,
+        519.806,
+        516.873
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.589,
+        72.055,
+        529.978,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO后期继续下降，末端曲线低于DPL与DyHPO；随机搜索和ASHA较高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p22.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F12-r4c1",
+      "figure": 12,
+      "pdf_page_1based": 22,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-christine-balanced",
+      "row_1based": 4,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.844,
+        526.429,
+        226.343,
+        683.95
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        106.122,
+        535.06,
+        220.794,
+        667.304
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.589,
+        72.055,
+        529.978,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO与DPL后期靠近低位；Freeze-Thaw的平台高于其余自适应方法。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p22.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F12-r4c2",
+      "figure": 12,
+      "pdf_page_1based": 22,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-cnae-balanced",
+      "row_1based": 4,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.425,
+        526.429,
+        377.39,
+        683.95
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        255.627,
+        535.06,
+        370.3,
+        667.304
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.589,
+        72.055,
+        529.978,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO、DyHPO与DPL后期靠近低位；随机搜索和ASHA的下降较慢。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p22.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F12-r4c3",
+      "figure": 12,
+      "pdf_page_1based": 22,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-connect-balanced",
+      "row_1based": 4,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.931,
+        526.429,
+        527.512,
+        683.95
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        405.133,
+        535.06,
+        519.806,
+        667.304
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.589,
+        72.055,
+        529.978,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO早期下降较快并先接近低位；DPL后期追近，DyHPO在较高位置进入平台。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p22.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F13-r1c1",
+      "figure": 13,
+      "pdf_page_1based": 23,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-covertype-balanced",
+      "row_1based": 1,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        74.212,
+        226.345,
+        223.718
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        82.844,
+        220.796,
+        215.395
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO、DyHPO与Freeze-Thaw后期接近低位；DPL仍略高，HyperBand与ASHA明显更高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p23.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F13-r1c2",
+      "figure": 13,
+      "pdf_page_1based": 23,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-credit-balanced",
+      "row_1based": 1,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.427,
+        74.212,
+        377.392,
+        223.718
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        251.622,
+        82.844,
+        370.302,
+        215.395
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO与DPL后期接近低位，其余方法依次停在更高的平台。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p23.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F13-r1c3",
+      "figure": 13,
+      "pdf_page_1based": 23,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-dionis-balanced",
+      "row_1based": 1,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        74.212,
+        527.514,
+        223.718
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        401.128,
+        82.844,
+        519.808,
+        215.395
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO较早接近低位；DPL和Freeze-Thaw随后追近，HyperBand与ASHA保持较高曲线。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p23.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F13-r2c1",
+      "figure": 13,
+      "pdf_page_1based": 23,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-fabert-balanced",
+      "row_1based": 2,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        224.951,
+        226.345,
+        374.457
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        233.583,
+        220.796,
+        366.134
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "各方法很快下降后聚集在相近的窄范围内，后期可见差异很小。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p23.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F13-r2c2",
+      "figure": 13,
+      "pdf_page_1based": 23,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-Fashion-balanced",
+      "row_1based": 2,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.427,
+        224.951,
+        377.392,
+        374.457
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        251.622,
+        233.583,
+        370.302,
+        366.134
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DyHPO在中期较早到达低位；ifBO、DPL与Freeze-Thaw后期靠近。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p23.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F13-r2c3",
+      "figure": 13,
+      "pdf_page_1based": 23,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-helena-balanced",
+      "row_1based": 2,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        224.951,
+        527.514,
+        374.457
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        401.128,
+        233.583,
+        519.808,
+        366.134
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO后期曲线低于DPL、DyHPO和Freeze-Thaw；随机搜索与ASHA较高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p23.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F13-r3c1",
+      "figure": 13,
+      "pdf_page_1based": 23,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-higgs-balanced",
+      "row_1based": 3,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        375.69,
+        226.345,
+        525.196
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        384.322,
+        220.796,
+        516.873
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO早期下降较快；其他自适应方法后期逐渐靠近其低位曲线。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p23.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F13-r3c2",
+      "figure": 13,
+      "pdf_page_1based": 23,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-jannis-balanced",
+      "row_1based": 3,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.427,
+        375.69,
+        377.392,
+        525.196
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        251.622,
+        384.322,
+        370.302,
+        516.873
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO、DPL、DyHPO与Freeze-Thaw后期靠近；HyperBand与ASHA停在更高位置。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p23.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F13-r3c3",
+      "figure": 13,
+      "pdf_page_1based": 23,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-jasmine-balanced",
+      "row_1based": 3,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        375.69,
+        527.514,
+        525.196
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        401.128,
+        384.322,
+        519.808,
+        516.873
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "多种方法早期下降后很快进入平台；ifBO与DPL在低位，随机搜索和ASHA较高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p23.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F13-r4c1",
+      "figure": 13,
+      "pdf_page_1based": 23,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-jungle-balanced",
+      "row_1based": 4,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        526.429,
+        226.345,
+        683.95
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        535.06,
+        220.796,
+        667.304
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DyHPO与DPL早期下降较快，Freeze-Thaw稍后出现明显下降；这些方法与ifBO最终接近。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p23.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F13-r4c2",
+      "figure": 13,
+      "pdf_page_1based": 23,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-kc1-balanced",
+      "row_1based": 4,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.427,
+        526.429,
+        377.392,
+        683.95
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        251.622,
+        535.06,
+        370.302,
+        667.304
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO与DPL较早进入低位平台，随机搜索后期仍较高；整体曲线差距较小。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p23.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F13-r4c3",
+      "figure": 13,
+      "pdf_page_1based": 23,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-KDDCup09-balanced",
+      "row_1based": 4,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        526.429,
+        527.514,
+        683.95
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        401.128,
+        535.06,
+        519.808,
+        667.304
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO与DPL后期靠近低位；DyHPO和Freeze-Thaw随后接近，随机搜索较高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p23.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F14-r1c1",
+      "figure": 14,
+      "pdf_page_1based": 24,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-kr-balanced",
+      "row_1based": 1,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        74.441,
+        226.345,
+        223.946
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        83.072,
+        214.631,
+        215.623
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.283,
+        529.98,
+        688.802
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO在后期继续阶梯下降，末端低于DPL、DyHPO和Freeze-Thaw。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p24.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F14-r1c2",
+      "figure": 14,
+      "pdf_page_1based": 24,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-mfeat-balanced",
+      "row_1based": 1,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        221.721,
+        74.441,
+        377.392,
+        223.946
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        254.705,
+        83.072,
+        367.219,
+        215.623
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.283,
+        529.98,
+        688.802
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO与DPL后期接近低位；随机搜索和ASHA保持较高的平台。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p24.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F14-r1c3",
+      "figure": 14,
+      "pdf_page_1based": 24,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-MiniBooNE-balanced",
+      "row_1based": 1,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        74.441,
+        527.514,
+        223.946
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        407.293,
+        83.072,
+        519.808,
+        215.623
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.283,
+        529.98,
+        688.802
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "多种自适应方法迅速下降并靠近相同低位；HyperBand、ASHA与随机搜索保持更高曲线。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p24.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F14-r2c1",
+      "figure": 14,
+      "pdf_page_1based": 24,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-nomao-balanced",
+      "row_1based": 2,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        225.18,
+        226.345,
+        374.685
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        233.811,
+        214.631,
+        366.362
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.283,
+        529.98,
+        688.802
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DPL较早下降至低位，ifBO、DyHPO与Freeze-Thaw后期逐渐靠近。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p24.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F14-r2c2",
+      "figure": 14,
+      "pdf_page_1based": 24,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-numerai-balanced",
+      "row_1based": 2,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        221.721,
+        225.18,
+        377.392,
+        374.685
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        254.705,
+        233.811,
+        367.219,
+        366.362
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.283,
+        529.98,
+        688.802
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "纵轴覆盖很窄的范围；DPL后期低于ifBO，随机搜索和ASHA较高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p24.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F14-r2c3",
+      "figure": 14,
+      "pdf_page_1based": 24,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-phoneme-balanced",
+      "row_1based": 2,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        225.18,
+        527.514,
+        374.685
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        407.293,
+        233.811,
+        519.808,
+        366.362
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.283,
+        529.98,
+        688.802
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DPL后期曲线低于ifBO与DyHPO；各方法在后期逐渐进入平台。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p24.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F14-r3c1",
+      "figure": 14,
+      "pdf_page_1based": 24,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-segment-balanced",
+      "row_1based": 3,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        375.918,
+        226.345,
+        525.424
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        384.55,
+        214.631,
+        517.101
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.283,
+        529.98,
+        688.802
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "Freeze-Thaw和DyHPO较早接近低位；ifBO与DPL随后追近，随机搜索和ASHA较高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p24.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F14-r3c2",
+      "figure": 14,
+      "pdf_page_1based": 24,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-shuttle-balanced",
+      "row_1based": 3,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        221.721,
+        375.918,
+        377.392,
+        525.424
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        254.705,
+        384.55,
+        367.219,
+        517.101
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.283,
+        529.98,
+        688.802
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO中后期出现较大的阶梯下降；DPL和DyHPO后期也继续下降，阴影范围较宽。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p24.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F14-r3c3",
+      "figure": 14,
+      "pdf_page_1based": 24,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-sylvine-balanced",
+      "row_1based": 3,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        375.918,
+        527.514,
+        525.424
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        407.293,
+        384.55,
+        519.808,
+        517.101
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.283,
+        529.98,
+        688.802
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO、DPL与DyHPO后期靠近低位；Freeze-Thaw稍后下降，ASHA与随机搜索较高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p24.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F14-r4c1",
+      "figure": 14,
+      "pdf_page_1based": 24,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-vehicle-balanced",
+      "row_1based": 4,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        526.657,
+        226.345,
+        684.178
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        535.289,
+        214.631,
+        667.532
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.283,
+        529.98,
+        688.802
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO、DPL与DyHPO较早接近低位；Freeze-Thaw随后追近，HyperBand与ASHA较高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p24.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F14-r4c2",
+      "figure": 14,
+      "pdf_page_1based": 24,
+      "benchmark": "LCBench",
+      "printed_title": "lcbench-tabular-volkert-balanced",
+      "row_1based": 4,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        221.721,
+        526.657,
+        377.392,
+        684.178
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        254.705,
+        535.289,
+        367.219,
+        667.532
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.283,
+        529.98,
+        688.802
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DyHPO早期下降较快；ifBO和DPL后期追近，ifBO末端仍继续下降。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p24.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r1c1",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-cifar100_wideresnet_2048",
+      "row_1based": 1,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        126.287,
+        77.358,
+        242.424,
+        195.872
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        143.218,
+        84.487,
+        237.078,
+        189.634
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "各方法早期迅速下降，随后逐渐聚集到相近平台；后期曲线差异较小。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r1c2",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-cifar100_wideresnet_256",
+      "row_1based": 1,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        244.504,
+        77.358,
+        361.235,
+        195.872
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        261.434,
+        84.487,
+        354.997,
+        189.634
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "Freeze-Thaw先维持较高平台，再在中期快速下降；其余方法更早接近低位。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r1c3",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-cifar10_wideresnet_2048",
+      "row_1based": 1,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        362.72,
+        77.358,
+        477.966,
+        195.872
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        379.353,
+        84.487,
+        473.213,
+        189.634
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "各方法早期迅速下降，后期逐渐靠近相似的低位平台。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r2c1",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-cifar10_wideresnet_256",
+      "row_1based": 2,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        126.287,
+        196.763,
+        242.424,
+        315.276
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        143.218,
+        203.891,
+        237.078,
+        309.039
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DPL和DyHPO早期下降较快；Freeze-Thaw前期较慢，后期曲线低于其他方法。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r2c2",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-fashion_simplecnn_2048",
+      "row_1based": 2,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        244.504,
+        196.763,
+        361.235,
+        315.276
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        261.434,
+        203.891,
+        354.997,
+        309.039
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "各方法很快接近低位并在后期基本重合，图上难以区分稳定的后期排序。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r2c3",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-fashion_simplecnn_256",
+      "row_1based": 2,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        362.72,
+        196.763,
+        477.966,
+        315.276
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        379.353,
+        203.891,
+        473.213,
+        309.039
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "随机搜索早期出现较晚的阶梯下降；Freeze-Thaw后期曲线低于ifBO和DPL。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r3c1",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-imagenet_resnet_1024-1",
+      "row_1based": 3,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        126.287,
+        316.464,
+        242.424,
+        434.681
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        143.218,
+        323.296,
+        237.078,
+        428.443
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DPL早期较快进入低位，DyHPO随后追近；ifBO在中后期逐渐靠近这些曲线。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r3c2",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-imagenet_resnet_256-1",
+      "row_1based": 3,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        244.504,
+        316.464,
+        361.235,
+        434.681
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        261.434,
+        323.296,
+        354.997,
+        428.443
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DyHPO后期曲线低于ifBO和DPL；ifBO的中期曲线较高，随后持续下降。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r3c3",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-imagenet_resnet_512-1",
+      "row_1based": 3,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        362.72,
+        316.464,
+        477.966,
+        434.681
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        379.353,
+        323.296,
+        473.213,
+        428.443
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DyHPO与DPL后期处于低位；ifBO较接近，Freeze-Thaw在较晚阶段才持续下降至附近。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r4c1",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-lm1b_transformer_2048",
+      "row_1based": 4,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        126.287,
+        435.869,
+        242.424,
+        554.086
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        143.218,
+        442.701,
+        237.078,
+        547.848
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "各方法早期下降后形成接近的平台；随机搜索略高，ifBO与DPL靠近下缘。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r4c2",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-mnist_simplecnn_2048",
+      "row_1based": 4,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        244.504,
+        435.869,
+        361.235,
+        554.086
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        261.434,
+        442.701,
+        354.997,
+        547.848
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "各方法早期下降后很快接近同一低位，后期差异很小。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r4c3",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-mnist_simplecnn_256",
+      "row_1based": 4,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        362.72,
+        435.869,
+        477.966,
+        554.086
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        379.353,
+        442.701,
+        473.213,
+        547.848
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "随机搜索早期较晚下降；后期各方法聚集在相近的低位平台。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r5c1",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-svhn_wideresnet_1024",
+      "row_1based": 5,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        126.287,
+        555.274,
+        242.424,
+        680.322
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        143.218,
+        562.402,
+        237.078,
+        667.253
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "各方法早期迅速下降并在后期靠近，Freeze-Thaw中期略高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r5c2",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-svhn_wideresnet_256",
+      "row_1based": 5,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        244.504,
+        555.274,
+        361.235,
+        680.322
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        261.434,
+        562.402,
+        354.997,
+        667.253
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "各方法早期迅速下降后靠近同一平台，后期难以辨别稳定排序。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F15-r5c3",
+      "figure": 15,
+      "pdf_page_1based": 25,
+      "benchmark": "PD1",
+      "printed_title": "pd1-tabular-translate_xformertranslate_64-1",
+      "row_1based": 5,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        362.72,
+        555.274,
+        477.966,
+        680.322
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        379.353,
+        562.402,
+        473.213,
+        667.253
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        116.189,
+        75.873,
+        481.233,
+        684.183
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DyHPO早期下降较快；ifBO在中后期继续下降并低于DyHPO与DPL。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p25.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F16-r1c1",
+      "figure": 16,
+      "pdf_page_1based": 26,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-10-4p",
+      "row_1based": 1,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        73.984,
+        226.345,
+        223.489
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        82.616,
+        220.796,
+        215.166
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        71.826,
+        529.98,
+        688.343
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DyHPO早期下降较快；ifBO与DPL后期靠近其低位曲线，Freeze-Thaw停在较高平台。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p26.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F16-r1c2",
+      "figure": 16,
+      "pdf_page_1based": 26,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-10-8p",
+      "row_1based": 1,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.427,
+        73.984,
+        377.392,
+        223.489
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        251.622,
+        82.616,
+        370.302,
+        215.166
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        71.826,
+        529.98,
+        688.343
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DPL先明显下降，ifBO稍晚持续下降并在后期低于DPL；DyHPO与Freeze-Thaw近乎保持高位平台。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p26.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F16-r1c3",
+      "figure": 16,
+      "pdf_page_1based": 26,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-11-4p",
+      "row_1based": 1,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        73.984,
+        527.514,
+        223.489
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        401.128,
+        82.616,
+        519.808,
+        215.166
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        71.826,
+        529.98,
+        688.343
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO、DPL与DyHPO后期接近低位；Freeze-Thaw、ASHA和随机搜索保持较高曲线。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p26.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F16-r2c1",
+      "figure": 16,
+      "pdf_page_1based": 26,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-11-8p",
+      "row_1based": 2,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        224.722,
+        226.345,
+        374.228
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        233.354,
+        220.796,
+        365.905
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        71.826,
+        529.98,
+        688.343
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO与DPL在前中期低于DyHPO；三者后期靠近，HyperBand和ASHA较高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p26.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F16-r2c2",
+      "figure": 16,
+      "pdf_page_1based": 26,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-12-4p",
+      "row_1based": 2,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.427,
+        224.722,
+        377.392,
+        374.228
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        251.622,
+        233.354,
+        370.302,
+        365.905
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        71.826,
+        529.98,
+        688.343
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO较早接近低位，DyHPO与DPL后期追近；Freeze-Thaw保持较高平台。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p26.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F16-r2c3",
+      "figure": 16,
+      "pdf_page_1based": 26,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-12-8p",
+      "row_1based": 2,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        224.722,
+        527.514,
+        374.228
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        401.128,
+        233.354,
+        519.808,
+        365.905
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        71.826,
+        529.98,
+        688.343
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DPL前期下降较快；ifBO与DyHPO后期靠近，三者阴影有明显重叠。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p26.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F16-r3c1",
+      "figure": 16,
+      "pdf_page_1based": 26,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-1-4p",
+      "row_1based": 3,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        375.461,
+        226.345,
+        524.966
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        384.092,
+        220.796,
+        516.643
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        71.826,
+        529.98,
+        688.343
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO与DyHPO后期持续下降并靠近；DPL后期曲线较高，Freeze-Thaw保持较高平台。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p26.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F16-r3c2",
+      "figure": 16,
+      "pdf_page_1based": 26,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-1-8p",
+      "row_1based": 3,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.427,
+        375.461,
+        377.392,
+        524.966
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        251.622,
+        384.092,
+        370.302,
+        516.643
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        71.826,
+        529.98,
+        688.343
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DyHPO前期下降较快，ifBO中期追近；两者后期低于DPL。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p26.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F16-r3c3",
+      "figure": 16,
+      "pdf_page_1based": 26,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-2-4p",
+      "row_1based": 3,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        375.461,
+        527.514,
+        524.966
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        401.128,
+        384.092,
+        519.808,
+        516.643
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        71.826,
+        529.98,
+        688.343
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO在中后期进一步下降，与其他方法的较高平台拉开可见距离。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p26.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F16-r4c1",
+      "figure": 16,
+      "pdf_page_1based": 26,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-2-8p",
+      "row_1based": 4,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        526.199,
+        226.345,
+        683.719
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        534.83,
+        220.796,
+        667.073
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        71.826,
+        529.98,
+        688.343
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DPL前期下降较快，ifBO后期追近；两者后期低于其余方法。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p26.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F16-r4c2",
+      "figure": 16,
+      "pdf_page_1based": 26,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-3-4p",
+      "row_1based": 4,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.427,
+        526.199,
+        377.392,
+        683.719
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        251.622,
+        534.83,
+        370.302,
+        667.073
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        71.826,
+        529.98,
+        688.343
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO中后期持续下降，末端低于DPL与DyHPO；Freeze-Thaw保持较高曲线。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p26.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F16-r4c3",
+      "figure": 16,
+      "pdf_page_1based": 26,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-3-8p",
+      "row_1based": 4,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        526.199,
+        527.514,
+        683.719
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        401.128,
+        534.83,
+        519.808,
+        667.073
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        71.826,
+        529.98,
+        688.343
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO较早接近低位，DPL中期出现阶梯下降；ifBO末端仍低于DPL。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p26.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F17-r1c1",
+      "figure": 17,
+      "pdf_page_1based": 27,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-4-4p",
+      "row_1based": 1,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        74.212,
+        226.345,
+        223.718
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        82.844,
+        220.796,
+        215.395
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO中期低于DPL和DyHPO，三者后期逐渐靠近；其余基线较高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p27.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F17-r1c2",
+      "figure": 17,
+      "pdf_page_1based": 27,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-4-8p",
+      "row_1based": 1,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.427,
+        74.212,
+        377.392,
+        223.718
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        251.622,
+        82.844,
+        370.302,
+        215.395
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DPL前期下降较快，ifBO中后期追近并继续下降；DyHPO较早进入平台。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p27.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F17-r1c3",
+      "figure": 17,
+      "pdf_page_1based": 27,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-5-4p",
+      "row_1based": 1,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        74.212,
+        527.514,
+        223.718
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        401.128,
+        82.844,
+        519.808,
+        215.395
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DyHPO、ifBO和DPL前期接近；后期DyHPO与ifBO低于DPL。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p27.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F17-r2c1",
+      "figure": 17,
+      "pdf_page_1based": 27,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-5-8p",
+      "row_1based": 2,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        224.951,
+        226.345,
+        374.457
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        233.583,
+        220.796,
+        366.134
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DPL前期下降较快，ifBO中后期继续下降并低于DyHPO与DPL。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p27.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F17-r2c2",
+      "figure": 17,
+      "pdf_page_1based": 27,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-6-4p",
+      "row_1based": 2,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.427,
+        224.951,
+        377.392,
+        374.457
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        251.622,
+        233.583,
+        370.302,
+        366.134
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO较早接近低位；DyHPO后期追近，DPL仍略高。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p27.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F17-r2c3",
+      "figure": 17,
+      "pdf_page_1based": 27,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-6-8p",
+      "row_1based": 2,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        224.951,
+        527.514,
+        374.457
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        401.128,
+        233.583,
+        519.808,
+        366.134
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO、DyHPO与DPL前期接近；ifBO后期继续下降并位于低位曲线群。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p27.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F17-r3c1",
+      "figure": 17,
+      "pdf_page_1based": 27,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-7-4p",
+      "row_1based": 3,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        375.69,
+        226.345,
+        525.196
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        384.322,
+        220.796,
+        516.873
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "前中期方法曲线接近，ifBO与DPL后期低于DyHPO及其余基线。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p27.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F17-r3c2",
+      "figure": 17,
+      "pdf_page_1based": 27,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-7-8p",
+      "row_1based": 3,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.427,
+        375.69,
+        377.392,
+        525.196
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        251.622,
+        384.322,
+        370.302,
+        516.873
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "方法间差距较小；ifBO后期仍缓慢下降，末端位于低位。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p27.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F17-r3c3",
+      "figure": 17,
+      "pdf_page_1based": 27,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-8-4p",
+      "row_1based": 3,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        375.69,
+        527.514,
+        525.196
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        401.128,
+        384.322,
+        519.808,
+        516.873
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DyHPO中期较早进入低位，ifBO后期追近；DPL后期停在更高平台。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p27.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F17-r4c1",
+      "figure": 17,
+      "pdf_page_1based": 27,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-8-8p",
+      "row_1based": 4,
+      "column_1based": 1,
+      "bbox_pdf_points_top_left": [
+        80.846,
+        526.429,
+        226.345,
+        683.95
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        102.116,
+        535.06,
+        220.796,
+        667.304
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DPL前期下降较快，ifBO和DyHPO后期追近；三者末端靠近。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p27.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F17-r4c2",
+      "figure": 17,
+      "pdf_page_1based": 27,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-9-4p",
+      "row_1based": 4,
+      "column_1based": 2,
+      "bbox_pdf_points_top_left": [
+        229.427,
+        526.429,
+        377.392,
+        683.95
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        251.622,
+        535.06,
+        370.302,
+        667.304
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "ifBO中后期继续下降，后期低于DyHPO和DPL；Freeze-Thaw保持较高平台。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p27.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    },
+    {
+      "panel_id": "ifBO-F17-r4c3",
+      "figure": 17,
+      "pdf_page_1based": 27,
+      "benchmark": "Taskset",
+      "printed_title": "taskset-tabular-normalized-nlp-9-8p",
+      "row_1based": 4,
+      "column_1based": 3,
+      "bbox_pdf_points_top_left": [
+        378.933,
+        526.429,
+        527.514,
+        683.95
+      ],
+      "plot_area_bbox_pdf_points_top_left": [
+        401.128,
+        535.06,
+        519.808,
+        667.304
+      ],
+      "crop_includes": "Exact visible panel title, plot, legend, all local tick labels; shared figure-level axis labels are not repeated within each panel. See shared_axis_labels and figure_context_bbox.",
+      "figure_context_bbox_pdf_points_top_left": [
+        67.591,
+        72.055,
+        529.98,
+        688.574
+      ],
+      "x_axis": {
+        "label": "Total epochs spent",
+        "scale": "linear",
+        "visible_tick_range": [
+          0,
+          1000
+        ],
+        "tick_step": 200,
+        "unit": "epochs; cumulative across configurations"
+      },
+      "y_axis": {
+        "label": "Normalized regret",
+        "scale": "logarithmic",
+        "direction": "lower is better",
+        "limits": "Panel-specific; retain original ticks. No digitized endpoints supplied."
+      },
+      "shared_axis_labels": {
+        "x": "Total epochs spent",
+        "y": "Normalized regret",
+        "placement": "x label centered below the bottom row; y label at left of the figure, vertically centered",
+        "standalone_crop_requirement": "A tight rectangular panel crop cannot retain both distant shared labels without including neighboring panels. Repeat these two labels in the slide caption, or retain the full figure as context. Do not claim the local crop itself contains both shared labels."
+      },
+      "observation_zh": "DPL前期较快下降，ifBO随后追近；两者后期低于DyHPO与其余基线。",
+      "numerical_caveat_zh": "仅据论文可见曲线描述；不从图像反推精确数值或提升比例。曲线为10个随机种子的均值，阴影重叠与否均不能用于断言统计显著性。纵轴为对数刻度且各子图范围不同，不能直接比较视觉距离。",
+      "statistical_interpretation": "Descriptive visual comparison only. No significance claim. Band definition must be supplied from paper methods by the parent inventory.",
+      "source_render": "/workspace/shared/AL0014_ifBO/source/inventory_renders/p27.png",
+      "render_requirement": "Crop the composited PDF rendering, never the extracted background raster: the PDF overlays corrected algorithm legends.",
+      "verification_status": "AI visual inspection completed; accountable human verification still required."
+    }
+  ]
+}
